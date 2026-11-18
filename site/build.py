@@ -165,7 +165,7 @@ def page_index():
 <p class="kicker">{e(C["name"])}, an open research group</p>
 <h1 id="claim">Chemistry can make each step toward life. Nobody has joined the steps up.</h1>
 <p class="state">Our goal: {e(C["goal"][0].lower() + C["goal"][1:])}. In public, with every result rerunnable from code.</p>
-<div class="actions"><a class="btn primary" href="contribute.html">Help test a route</a><a class="btn" href="findings.html">Read the findings</a></div>
+<div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a><a class="btn" href="findings.html">Read the findings</a></div>
 </div>{ART.hero()}</section>'''
     s1 = block("01", "The problem", "h-problem", "Each step has been shown on its own, but never joined to the next", f'''
 <div class="split"><div class="say">
@@ -200,7 +200,7 @@ def page_index():
 <p>The audit found and fixed 5 wrong claims and 2 wrong attributions in our own plan and site.</p>{files}</div>{ledger}</div>''', "broad")
     s7 = block("07", "Help", "h-help", "The fastest help is an AI agent working an open task", f'''
 <div class="say"><p>Point a capable AI agent at an open task on the board. Wet labs can run a test we seal in advance, and holders of sample data can share tables.</p></div>
-{FIG.fig_board(TASKS)}<div class="actions"><a class="btn primary" href="contribute.html">Find a way to help</a></div>''', "broad")
+{FIG.fig_board(TASKS)}<div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a></div>''', "broad")
     return hero + s1 + s2 + s3 + s4 + s5 + s6 + s7
 
 
@@ -499,10 +499,10 @@ def news_rss():
 
 # ---------------------------------------------------------------- contribute
 def agent_prompt(t):
-    return (f"You are joining Open Origins. Read docs/AGENT_BRIEF.md and board/README.md, then run\n"
-            f"python3 -I board/board.py show {t['id']}\n"
-            f"and claim task #{t['id']} ({t['title']}). Seal your plan in docs/prereg before you look at outcomes, "
-            f"work only in experiments/<your_folder>/, and write RESULTS.md with the verdict first.")
+    return (f"You are contributing to Open Origins, https://github.com/HarshInvader/open-origins. Clone it.\n"
+            f"Read docs/AGENT_BRIEF.md and follow its rules of evidence. Then do task #{t['id']} ({t['title']}) from board/TASKS.md.\n"
+            f"Seal your plan and pass mark in docs/prereg/ (sha256 into HASHES.txt) before you look at any outcome, check a planted answer first, "
+            f"work only in experiments/<your_folder>/, write RESULTS.md with the verdict first whichever way it goes, and open a pull request.")
 
 
 def page_contribute():
@@ -516,11 +516,11 @@ def page_contribute():
                 f'<p>Give your agent this:</p><pre class="code"><code>{e(agent_prompt(t))}</code></pre></div></details></li>')
     starters = "".join(starter(t, t in ready) for t in open_t)
     claimed = "".join(f'<li><b>#{t["id"]} {e(t["title"])}</b><span>Claimed by {e(t["owner"] or "an agent")}. Do not duplicate it.</span></li>' for t in TASKS if t["status"] == "claimed")
-    head = page_head("Contribute", "The fastest help is an AI agent working an open task",
-                     f"{len(open_t)} tasks are open on the board, {len(ready)} of them ready to start now. Wet labs and holders of sample data can do what no agent can: produce the measurements that confirm or refute a sealed prediction.",
-                     [("h-tasks", "Tasks for agents"), ("h-labs", "Wet labs"), ("h-data", "Data holders"), ("h-other", "Other ways")])
+    head = page_head("Contribute", "Donate your tokens: point your AI agent at an open task",
+                     f"Run an agent on your own subscription, give it one task and our rules, and send back the result as a pull request. {len(open_t)} tasks are open, {len(ready)} of them ready now. The steps are in <a href=\"https://github.com/HarshInvader/open-origins/blob/main/CONTRIBUTING.md\">CONTRIBUTING.md</a>. Wet labs and holders of sample data can do what no agent can: produce the measurements that confirm or refute a sealed prediction.",
+                     [("h-tasks", "Donate your tokens"), ("h-labs", "Wet labs"), ("h-data", "Data holders"), ("h-other", "Other ways")])
     s1 = block("01", "Agents", "h-tasks", f"{len(ready)} tasks an agent can start today", f'''
-<p class="intro">Each task comes from the live board. Agents follow the same loop: claim, seal the plan, test against a planted answer and a null, then land the result, positive or negative.</p>
+<p class="intro">Open an issue named <code>Taking #id</code> so nobody duplicates it, then give your agent the prompt under the task. It seals its plan, tests against a planted answer and a null, and lands the result, positive or negative, as a pull request.</p>
 <ol class="starters">{starters}</ol><h3 class="key-h">Already in progress</h3><ul class="asks">{claimed}</ul>''')
     labs = [("Run a sealed test.", "Our predictions are public and dated, and a lab result is the only thing that can confirm one."),
             ("Open a paywalled step.", "Three map steps count as unread because we could not open Powner et al. 2009 or the full text of Šimonis et al. 2026."),
