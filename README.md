@@ -8,7 +8,7 @@ The field asks two questions, and we keep them apart:
 
 **Honest odds** (from the project plan, `docs/fable_plan.md`):
 - Fully "cracked" (R-full below) by 2027: under 1 in 100.
-- The open goal (R-open) by 2027: about 1 in 8. The limit is whether confirming data appears in time.
+- The open goal (R-open) by 2027: about 12%. The limit is whether confirming data appears in time.
 
 **What would raise the odds:**
 - New Bennu or Ryugu compound tables released after our hash.
