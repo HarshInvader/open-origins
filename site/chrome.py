@@ -14,13 +14,13 @@ E = html.escape
 
 # Wordmark: each project's name, outlined from the body typeface by site/make_logo.py into site/logo_paths.json
 # (font units, baseline at y=0, y down). Each project picks its own words, weights and colours; only the build is shared.
-def lockup(paths, words, mark, inline=True, colors=None, mark_role="accent", show_mark=True, cls="wordmark"):
+def lockup(paths, words, mark, inline=True, colors=None, mark_role="accent", show_mark=True, cls="wordmark", stroke=2.3):
     """words: [(key in paths, role)], role is a colour role. colors: {role: css colour} for files; inline uses CSS vars."""
     roles = {"ink": "var(--ink)", "soft": "var(--muted)", "accent": "var(--accent)", "motif": "var(--motif, var(--accent))", "rust": "var(--rust)"}
     col = (lambda r: roles[r]) if inline else (lambda r: colors[r])
     parts, x = [], 0
     if show_mark:
-        parts.append(f'<g transform="translate(-40 -860) scale(31)" fill="none" stroke="{col(mark_role)}" stroke-width="2.3" '
+        parts.append(f'<g transform="translate(-40 -860) scale(31)" fill="none" stroke="{col(mark_role)}" stroke-width="{stroke}" '
                      f'stroke-linecap="round" stroke-linejoin="round">{mark}</g>')
         x = 952 + 140
     for i, (key, role) in enumerate(words):

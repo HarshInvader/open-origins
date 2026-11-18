@@ -57,12 +57,12 @@ ART = load_module("oo_art", SITE / "art.py")
 FIG = load_module("oo_figures", SITE / "figures.py")
 CH = load_module("oo_chrome", SITE / "chrome.py")
 LOGO = json.loads((SITE / "logo_paths.json").read_text())
-LOGO_WORDS = [("open|Bold", "ink"), ("origins|Bold", "accent")]  # lower case, "origins" in sea teal, the hairpin in rust
+LOGO_WORDS = [("Open|Regular", "ink"), ("Origins|Regular", "ink")]  # title case, regular weight; the fine-line stromatolite in teal
 LOGO_FILE_COLORS = {"ink": "#1C1B17", "accent": "#1D6670", "rust": "#A4512B"}
 
 
 def logo(cls="wordmark", show_mark=True):
-    return CH.lockup(LOGO, LOGO_WORDS, ART.MARK, cls=cls, show_mark=show_mark, mark_role="rust")
+    return CH.lockup(LOGO, LOGO_WORDS, ART.MARK, cls=cls, show_mark=show_mark, mark_role="accent", stroke=1.35)
 
 C = json.loads((SITE / "content.json").read_text())
 F = json.loads((SITE / "findings.json").read_text())
@@ -562,17 +562,17 @@ def page_contribute():
 def wordmark_svg(inline=False):
     if inline:
         return logo("word-big")
-    return CH.lockup(LOGO, LOGO_WORDS, ART.MARK, inline=False, colors=LOGO_FILE_COLORS, mark_role="rust")
+    return CH.lockup(LOGO, LOGO_WORDS, ART.MARK, inline=False, colors=LOGO_FILE_COLORS, mark_role="accent", stroke=1.35)
 
 
 def mark_file():
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="#1D6670" stroke-width="2.6" '
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="#1D6670" stroke-width="1.5" '
             f'stroke-linecap="round" stroke-linejoin="round">{ART.MARK}</svg>')
 
 
 def favicon_file():
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><style>g{stroke:#1D6670}@media (prefers-color-scheme: dark){g{stroke:#79C2C9}}</style>'
-            f'<g fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">{ART.MARK}</g></svg>')
+            f'<g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">{ART.MARK}</g></svg>')
 
 
 def page_resources():
@@ -580,7 +580,7 @@ def page_resources():
                      "Download the mark and wordmark, the data behind every figure, and the list of research files in the repository.",
                      [("h-logo", "Logo"), ("h-files", "Research files"), ("h-data", "Data")])
     s1 = block("01", "Logo", "h-logo", f"The mark is {ART.NAME_MARK}", f'''
-<p class="intro">One strand of RNA folded back on itself: the molecule that may once have both carried information and copied it. Use it on light backgrounds as drawn; on dark ones, use the lighter teal from the site's dark theme.</p>
+<p class="intro">Thin layers laid down one on another by mats of microbes: stromatolites are among the oldest widely accepted signs of life. Use it on light backgrounds as drawn; on dark ones, use the lighter teal from the site's dark theme.</p>
 <div class="logo-show"><div class="logo-tile">{mark_svg("mark-big")}</div><div class="logo-tile wide">{wordmark_svg(True)}</div></div>
 <ul class="dl"><li><a href="assets/downloads/open-origins-mark.svg" download>open-origins-mark.svg</a><span>The mark alone</span></li>
 <li><a href="assets/downloads/open-origins-wordmark.svg" download>open-origins-wordmark.svg</a><span>Mark and name; the name is outlined from our body typeface, so it needs no font</span></li></ul>''')
