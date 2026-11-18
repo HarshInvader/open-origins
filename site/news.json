@@ -1,5 +1,5 @@
 {
- "_about": "News page. Add new items at the top of items. verified=true only after someone opened the DOI/URL and checked who, venue, date and every number in gist/plain/tech. Fields: gist (one line), plain (a short story for anyone), tech (for specialists), borrow (what this project takes from it or tests), status (planned, running, done, or context for background items with no test of ours). url is a https://doi.org/ link.",
+ "_about": "News page. Add new items at the top of items. verified=true only after someone opened the DOI/URL and checked who, venue, date and every number in gist/plain/tech. Fields: gist (one line), plain (a short story for anyone), tech (for specialists), borrow (what this project takes from it or tests), status (planned, running, done, or context for background items with no test of ours). url is a https://doi.org/ link. topic: one of the names in topics (add a new topic only when five or more items need it).",
  "items": [
   {
    "id": "assembly-theory-collapses-to-dictionary-compression",
@@ -15,7 +15,8 @@
    "plain": "Assembly theory proposes a number, the assembly index, that counts how many joining steps a molecule needs; its authors say high values in large amounts mean life. In 2025 they argued the index is not just a file-compression score. This reply reruns and extends their examples and says that, once proper comparisons are added, the index behaves like ordinary dictionary compression and adds nothing new.",
    "tech": "Reply to Kempes et al. 2025 (npj Complexity 2:27, doi:10.1038/s44260-025-00049-9), which argued the assembly index sits in a different computational complexity class from Shannon entropy, Huffman and LZW. Ozelim et al. say the defence's experiments are incomplete as controls, that extended versions overlap with dictionary-based statistical compression, and restate their earlier claim of equivalence to the Shannon entropy rate (Abrahão et al. 2024, PLOS Complex Systems, doi:10.1371/journal.pcsy.0000014). Earlier rounds: Hazen et al. 2024 (minerals up to index 21) and the Walker et al. 2024 reply (doi:10.1098/rsif.2024.0367).",
    "borrow": "Both sides argue in theory. Our task #7 settles one part with data: does assembly index separate biotic from abiotic mass-spec samples better than molecular weight or LZ complexity alone?",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Telling life apart"
   },
   {
    "id": "de-novo-protocell-membranes-without-a-template",
@@ -31,7 +32,8 @@
    "plain": "Every cell membrane today grows from an older membrane, which raises a chicken-and-egg question for the first cell. This team built lipid tails from two simple molecules, acetate and cysteine, using enzymes dissolved in water. The new lipids assembled themselves into bubbles with two-layer walls, and some of these bubbles could hold a difference in acidity between inside and outside.",
    "tech": "De novo bilayer formation without pre-existing membranes, membrane proteins or lipid templates. Lipid tails are made by soluble enzymes from acetate and cysteine and form diacyl lipids that assemble into vesicles. Pore-forming peptides let precursors in, so new lipid keeps forming; glycolipid compartments maintain proton gradients. The route uses enzymes, so it is not a prebiotic pathway.",
    "borrow": "Evidence for the lipid-world row and the compartment step of the pathway map. Because it relies on enzymes, we score it as 'shown with biological catalysts', not as a prebiotic step.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Vents and first cells"
   },
   {
    "id": "all-five-nucleobases-in-ryugu",
@@ -47,7 +49,8 @@
    "plain": "Japan's Hayabusa2 brought back grains of asteroid Ryugu. Uracil was found in them in 2023; this study now reports all five nucleobases, the 'letters' of DNA and RNA. Ryugu has roughly equal amounts of the two families of bases, unlike Bennu and the Orgueil meteorite, which lean one way. The balance tracks how much ammonia each body had, which hints that the bases formed by one shared chemistry under different local conditions.",
    "tech": "Adenine, guanine, cytosine, thymine and uracil in Ryugu samples. Purines and pyrimidines are near equal in Ryugu; Murchison is purine-rich; Bennu and Orgueil pyrimidine-rich. Across Ryugu, Bennu and Orgueil the purine-to-pyrimidine ratio correlates negatively with ammonia.",
    "borrow": "A ratio-versus-ammonia trend is exactly the kind of relationship task #11 can extend into a sealed prediction for compounds not yet reported from returned samples.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "From space"
   },
   {
    "id": "a-small-polymerase-ribozyme-that-can-synthesize",
@@ -63,7 +66,8 @@
    "plain": "RNA-world ideas need an RNA that copies RNA. The known RNA copiers were large, too big to arise by chance. QT45 is only 45 letters long and was fished out of random sequences. Working in slightly alkaline ice and fed three-letter RNA pieces, it copied its partner strand and, with chosen pieces, itself. The yields are tiny, about 0.2% after 72 days, but the find suggests such copiers may be less rare than thought.",
    "tech": "QT45 (45 nt) from random pools catalyses general RNA-templated RNA synthesis from trinucleotide triphosphates in mildly alkaline eutectic ice. Complementary-strand synthesis with a random triplet pool at 94.1% per-nucleotide fidelity; self-synthesis with defined substrates; both ~0.2% yield in 72 days. Triplets are pre-activated and supplied. Online 12 Feb 2026, issue dated March 2026.",
    "borrow": "The closest result to the step from template copying (L2) to self-replication (L3). Task #2 extracts its numbers; task #12 seals a prediction for its untested double mutants. The founding plan's second-hand '0.02% over 72 days' was wrong; the paper says about 0.2%.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "RNA world"
   },
   {
    "id": "sugars-including-ribose-in-bennu-samples-furukaw",
@@ -79,7 +83,8 @@
    "plain": "With ribose found, every part of RNA has now been detected in Bennu's returned grains. The team also found glucose, the most plentiful sugar in the sample, and several other sugars. They did not find deoxyribose, the sugar in DNA. That fits the idea that RNA came before DNA, though it does not prove it.",
    "tech": "Ribose 0.097 ± 0.014 nmol/g, lyxose 0.018 ± 0.007, arabinose 0.11 ± 0.03, xylose 0.079 ± 0.033, glucose 0.35 ± 0.05, galactose 0.014 ± 0.004 nmol/g. Total sugars 0.668 nmol/g, about 1 mol% of Bennu amino acids. 2-Deoxyribose not found. Online 2 Dec 2025, issue January 2026.",
    "borrow": "Supports an RNA-first chemistry. Sugar ratios feed the Bennu abundance prediction (task #11).",
-   "status": "planned"
+   "status": "planned",
+   "topic": "From space"
   },
   {
    "id": "prebiotic-aminoacylation-of-rna-by-thioesters-si",
@@ -95,7 +100,8 @@
    "plain": "Cells make proteins by first loading amino acids onto transfer RNAs, a job done by enzymes. This study shows a chemical way to do the loading without enzymes: amino acids bound to thiols, sulfur compounds still used by cells, stick to the right spot on RNA rather than linking up into random chains. Several prebiotic starting materials make these thiol compounds in water.",
    "tech": "Aminoacyl-thiols react selectively with RNA 2',3'-diols over amines, so aminoacylation beats non-coded peptide bonding; scope covers 14 proteinogenic amino acids. Prebiotic nitriles, N-carboxyanhydrides and amino-acid anhydrides react with thiols (including CoA and coenzyme M) to give aminoacyl-thiols. Switching to thioacid activation favours peptides; one-pot peptidyl-RNA at neutral pH.",
    "borrow": "A concrete step toward linking amino acids to RNA, which coding needs. It enters the pathway map as the activation step, with its conditions recorded.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "RNA world"
   },
   {
    "id": "joint-reanalysis-of-k2-18b-jwst-spectra-luque-et",
@@ -111,7 +117,8 @@
    "plain": "A 2025 claim said JWST had seen a gas on the planet K2-18 b that on Earth comes only from life. This team analysed all three JWST instruments' data together, using several processing pipelines and two retrieval codes. The evidence for the gas was not significant, and other simple molecules fit the data as well.",
    "tech": "Joint 0.6-12 µm NIRISS, NIRSpec and MIRI analysis with three reductions and two retrieval codes. No statistically significant evidence for DMS or DMDS; methyl-bearing molecules such as ethane fit as well. With the best-fitting DMS/DMDS model, about 25 more MIRI transits are needed for a 3-sigma rejection of a flat line. arXiv:2505.13407.",
    "borrow": "A reminder of how biosignature claims fail under proper alternatives. Off the origin-of-life path, so no test planned.",
-   "status": "context"
+   "status": "context",
+   "topic": "From space"
   },
   {
    "id": "carbon-reduction-under-vent-conditions",
@@ -127,7 +134,8 @@
    "plain": "The alkaline-vent idea says the first metabolism ran on the difference in acidity between vent fluid and seawater, across thin mineral walls. This team built a bench-scale wall from iron-sulfide minerals with hydrogen-rich alkaline fluid on one side and CO2-rich acidic water on the other. Small amounts of formic and acetic acid, the first two steps of an ancient carbon-fixing pathway, appeared on the seawater side.",
    "tech": "FeS, Ni-FeS and FeS2 barriers produced micromolar formic and acetic acid on the ocean side (pH 5.7, CO2) against an H2, pH 11 vent side; e.g. FeS2 at 25 °C gave 4.2 µM formic and 2.5 µM acetic acid after 24 h, none on the vent side. Currents of 10 nA to 10 µA sufficed. At 75 °C on both sides Ni-FeS gave about 816 µM formic acid. Builds on Hudson et al. 2020 (PNAS, doi:10.1073/pnas.2002659117).",
    "borrow": "Vent step tables (task #4) record these yields with their conditions. Products still stop at two carbons.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Vents and first cells"
   },
   {
    "id": "wet-dry-cycling-polymerizes-cyclic-nucleotides",
@@ -143,7 +151,8 @@
    "plain": "Warm-pond theories say pools that dry by day and refill by night could join RNA letters into chains. Here, nucleotides in a ring-shaped form joined up on their own when only water was added each cycle, at room temperature and mildly alkaline pH. The chains were short: a few percent reached four letters and about one in a thousand reached ten.",
    "tech": "2',3'-cyclic nucleotides of A, U, G and C oligomerise without external activators under wet-dry cycling. Yields reach about 70% for G and at least 20% for the others; at pH 11 polymerisation is near-balanced across the four bases with Y = 36%. Products include up to 6% 4-mers and 0.1% 10-mers; growth and hydrolysis balance after about 10 cycles.",
    "borrow": "First entry for the warm-pond row. The pond step table records that wet-dry cycling gives short mixed oligomers; the gap to copyable lengths is named.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "RNA world"
   },
   {
    "id": "trinucleotides-enable-exponential-rna-replication",
@@ -159,7 +168,8 @@
    "plain": "Copied RNA strands stick to their templates so tightly that copying stalls. This team found that the three-letter RNA pieces used as building blocks also hold the separated strands apart. Combined with cycles of freezing, thawing and acidity changes, an RNA polymerase ribozyme could replicate both strands of short RNAs over and over, including a fragment of the ribozyme itself. Started from random RNA, the system produced either a few winning replicators or slowly drifting mixtures.",
    "tech": "Triplets bind and kinetically trap dissociated strands while serving as substrates, overcoming the strand-separation problem. With coupled pH and freeze-thaw cycles: exponential replication of (+) and (-) strands of dsRNAs, including a ribozyme fragment. Open-ended replication of random pools yielded defined replicators or diverse pools from partial ribozyme self-replication, drifting toward hypothesised primordial codons. Substrates are supplied by the experimenter.",
    "borrow": "Corrects our site, which said 'no exponential growth yet' for RNA world. Ladder level L3 still needs the whole replicator copied from a setting's own feedstocks.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "RNA world"
   },
   {
    "id": "amino-acids-and-nucleobases-in-asteroid-bennu-sa",
@@ -175,7 +185,8 @@
    "plain": "NASA's OSIRIS-REx brought back dust and pebbles from asteroid Bennu, kept away from Earth's air and life. They hold 33 amino acids, 14 of them used in proteins, all five DNA and RNA bases and lots of ammonia. Amino acids come in left- and right-handed forms; life uses only left-handed ones. The Bennu amino acids whose handedness could be measured come in equal amounts, which weakens the idea that meteorites gave Earth its bias.",
    "tech": "Bennu is richer in carbon, nitrogen and ammonia than Ryugu and most meteorites; 15N enrichments point to a cold outer-disc origin. 33 amino acids identified plus unidentified C6-C7 aliphatic ones; at least 23 N-heterocycles including all five canonical nucleobases; about 10,000 N-bearing species. All enantiomerically resolvable chiral non-protein amino acids (e.g. isovaline, norvaline) were racemic or near racemic, and racemic alanine and aspartic acid indicate negligible contamination.",
    "borrow": "Building blocks were common in the early Solar System; the racemic result counts against a meteoritic origin of life's handedness. Feeds task #11.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "From space"
   },
   {
    "id": "the-nature-of-the-last-universal-common-ancestor",
@@ -191,7 +202,8 @@
    "plain": "LUCA is the most recent ancestor shared by all living things. Using gene families that duplicated before LUCA, this team dated it to about 4.2 billion years ago, early in Earth's history. They reconstruct it as a microbe as complex as modern bacteria, living without oxygen, making acetate, and already part of a community of other organisms.",
    "tech": "Age about 4.2 Ga (4.09-4.33 Ga) from divergence times of pre-LUCA paralogues under cross-bracing calibration. Reconciliation suggests a genome of at least 2.5 Mb (2.49-2.99) encoding around 2,600 proteins; a prokaryote-grade anaerobic acetogen with an early immune system, embedded in an ecosystem.",
    "borrow": "A headline claim we re-test for robustness to its modelling choices (tasks #9 and #10). LUCA is late: it constrains the end of the origin story, not its start.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Vents and first cells"
   },
   {
    "id": "heat-flows-enrich-prebiotic-building-blocks",
@@ -207,7 +219,8 @@
    "plain": "Most origin-of-life chemistry works only because chemists purify the product of one step before the next. This team showed that warm water in thin rock cracks, heated on one side, can sort more than 50 building blocks out of a mixture. In one test the sorting boosted a reaction joining two glycines by a factor of about 100,000.",
    "tech": "Thermophoresis in crack-like geo-compartments separates more than 50 prebiotically relevant compounds (amino acids, nucleobases, nucleotides, polyphosphates, 2-aminoazoles) and raises concentration ratios up to three orders of magnitude. Selective enrichment of trimetaphosphate increased glycine dimerisation yields by five orders of magnitude. Robust across crack sizes, pH, solvents and temperatures.",
    "borrow": "A named physical process that may stand in for a purified hand-off. The compatibility rule (task #3) must say whether such processes count.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Building blocks"
   },
   {
    "id": "rna-catalyzed-evolution-of-catalytic-rna",
@@ -223,7 +236,8 @@
    "plain": "Evolution needs copies that are mostly right. Here an RNA enzyme repeatedly copied a smaller RNA enzyme, and the copies that still worked were kept each round. With an older, sloppier copier the population drifted into nonsense. With an improved copier, new and fitter variants evolved. The copier itself was not evolving, so this is not yet open-ended evolution.",
    "tech": "A higher-fidelity polymerase replicates the hammerhead ribozyme by reciprocal synthesis of both strands, with selection for cleavage. Two parallel lineages: the low-fidelity one lost hammerhead function; the high-fidelity one evolved variants with improved fitness from mutations that raised replicability, at a small cost in activity. Deep sequencing tracked the succession.",
    "borrow": "The nearest result to ladder level L4. Our 'functional RNAs are common' bench uses the same kind of deep-sequencing counts.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "RNA world"
   },
   {
    "id": "molecular-assembly-indices-of-mineral-heteropoly",
@@ -239,7 +253,8 @@
    "plain": "Assembly theory says molecules needing 15 or more joining steps, found in many copies, are a sign of life. This team calculated the score for clusters of atoms that form in water and build some minerals. The most complex, in the rare minerals ewingite and ilmajokite, scored 21, so a high score alone cannot mean life.",
    "tech": "Heteropolyanions range from assembly index 2 (H2CO3, Si(OH)4) to 21 (ewingite, ilmajokite). Reply by Walker, Mathis, Marshall and Cronin (J. R. Soc. Interface 21:20240367, 2024): the ~15 threshold comes from experimentally measured covalent organic molecules, while these indices are theoretical, from crystal structures of charged units not isolable in solution. Counter-reply: Hazen et al., 21:20240622.",
    "borrow": "A direct challenge to assembly index as a biosignature; task #7 tests it against a size-only classifier.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Telling life apart"
   },
   {
    "id": "joyce-polymerase-ribozyme-lineage",
@@ -255,7 +270,8 @@
    "plain": "In 2001 the Bartel lab evolved an RNA that could extend another RNA along a template. Joyce's lab built two RNAs that made each other and grew exponentially (2009), then evolved a polymerase that amplified RNA more than 10,000-fold in an all-RNA version of PCR (2016). By 2020 it could make its own ancestor in three pieces, but copying errors left few of those working.",
    "tech": "Johnston et al. 2001, Science 292:1319 (doi:10.1126/science.1060786): class I polymerase, accurate general RNA-templated primer extension. Lincoln & Joyce 2009, Science 323:1229 (doi:10.1126/science.1167856): cross-replicating ligases, self-sustained exponential amplification, doubling time about 1 h. Horning & Joyce 2016, PNAS 113:9786 (doi:10.1073/pnas.1610103113): >10,000-fold amplification of short templates. Tjhung et al. 2020, PNAS 117:2906 (doi:10.1073/pnas.1914282117): synthesises the class I ligase as three strands, most assembled ligases inactive because of copying errors.",
    "borrow": "The baseline for the L2 to L3 gap. The fidelity numbers set the error threshold any ribozyme model in tasks #2 and #12 must respect.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "RNA world"
   },
   {
    "id": "the-physiology-and-habitat-of-luca",
@@ -271,7 +287,8 @@
    "plain": "This team sorted 6.1 million genes from bacteria and archaea into families and kept only 355 whose family trees reach back to the common ancestor. Those genes describe a heat-loving microbe that lived without oxygen, fed on hydrogen and CO2 and relied on iron-sulfur chemistry.",
    "tech": "From 286,514 protein clusters, 355 families (~0.1%) trace to LUCA by phylogenetic criteria: anaerobic, CO2-fixing, H2-dependent with a Wood-Ljungdahl pathway, N2-fixing and thermophilic, rich in FeS clusters and radical mechanisms. Clostridia and methanogens are basal.",
    "borrow": "One of the two gene sets our LUCA robustness scan (task #10) compares with Moody et al. 2024.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Vents and first cells"
   },
   {
    "id": "activated-pyrimidine-ribonucleotides",
@@ -287,7 +304,8 @@
    "plain": "Joining a base to ribose sugar, the obvious way to make an RNA letter, does not work for C and U. This team found a side route from simple starting molecules that builds the sugar and base together and ends with an activated nucleotide. Phosphate, though only added into the product at the end, steers several earlier steps.",
    "tech": "Feedstocks cyanamide, cyanoacetylene, glycolaldehyde, glyceraldehyde and inorganic phosphate; route via arabinose amino-oxazoline and anhydronucleoside intermediates to activated pyrimidine ribonucleotides. Phosphate acts as general acid/base catalyst, nucleophilic catalyst and pH and chemical buffer.",
    "borrow": "The root of the cyanosulfidic step table. Task #4 records which steps used purified intermediates.",
-   "status": "planned"
+   "status": "planned",
+   "topic": "Building blocks"
   },
   {
    "id": "miller-1953-amino-acids-from-a-spark",
@@ -303,7 +321,15 @@
    "plain": "Stanley Miller circulated gases then thought to make up the early atmosphere, with water, and passed electric sparks through them for a week. Amino acids, building blocks of proteins, appeared. Later work suggests the early atmosphere was less reactive than Miller assumed, but the experiment started laboratory origin-of-life chemistry.",
    "tech": "Spark discharge through CH4, NH3, H2O and H2 in circulating apparatus; amino acids identified by paper chromatography. Full text not opened (paywalled); details here from the bibliographic record and summaries, so no yields are quoted.",
    "borrow": "Historical anchor for ladder level L0.",
-   "status": "context"
+   "status": "context",
+   "topic": "Building blocks"
   }
+ ],
+ "topics": [
+  "RNA world",
+  "Building blocks",
+  "From space",
+  "Vents and first cells",
+  "Telling life apart"
  ]
 }

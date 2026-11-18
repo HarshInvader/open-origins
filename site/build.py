@@ -465,9 +465,46 @@ def thumb(n, cls="nthumb", eager=False):
             f'{"" if eager else " loading=lazy"} decoding="async">')
 
 
+# ---- news: topic filter and newsletter signup (same block in Open Mind and Open Origins) ----
+SIGNUP_URL = "https://opencitizenscience.pages.dev/api/subscribe"
+
+
+def news_tools(items, topics, slug, project):
+    import html as _h
+    q = _h.escape
+    count = {t: sum(1 for n in items if n.get("topic") == t) for t in topics}
+    btns = f'<button type="button" data-t="" aria-pressed="true">All <span>{len(items)}</span></button>' + "".join(
+        f'<button type="button" data-t="{q(t)}" aria-pressed="false">{q(t)} <span>{count[t]}</span></button>' for t in topics if count[t])
+    filt = f'<div class="nfilter" role="group" aria-label="Show papers about">{btns}</div>'
+    form = (f'<form class="nsignup" action="{SIGNUP_URL}" method="post" data-slug="{q(slug)}">'
+            f'<div class="nsu-text"><p class="nsu-h">Get the important new papers by email</p>'
+            f'<p class="nsu-p">Every couple of weeks: only the papers that matter for {q(project)}, in plain words, and what we did with them. No spam; unsubscribe in one click.</p></div>'
+            f'<div class="nsu-row"><label class="vh" for="nsu-email">Email address</label>'
+            f'<input id="nsu-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">'
+            f'<input type="hidden" name="projects" value="{q(slug)}"><input type="hidden" name="source" value="{q(slug)}/news">'
+            f'<input class="nsu-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">'
+            f'<button type="submit">Subscribe</button></div><p class="nsu-msg" role="status" aria-live="polite"></p></form>')
+    return filt, form
+
+
+NEWS_TOOLS_JS = r"""<script>(function(){
+var f=document.querySelector('.nfilter');
+if(f){f.addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;var t=b.getAttribute('data-t');
+f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+document.querySelectorAll('.ncard').forEach(function(c){c.hidden=!!t&&c.getAttribute('data-topic')!==t});
+document.querySelectorAll('[data-newsblock]').forEach(function(s){s.hidden=!s.querySelector('.ncard:not([hidden])')});});}
+var s=document.querySelector('.nsignup');
+if(s){s.addEventListener('submit',function(ev){ev.preventDefault();var m=s.querySelector('.nsu-msg'),b=s.querySelector('button');b.disabled=true;m.textContent='Saving…';
+var d={};new FormData(s).forEach(function(v,k){d[k]=v});
+fetch(s.action,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){return r.json()}).then(function(r){
+if(r.ok){m.textContent='Thanks. You’re on the list.';s.classList.add('done');}else{m.textContent=r.error||'Something went wrong. Please try again.';b.disabled=false;}
+}).catch(function(){m.textContent='Could not reach the server. Please try again.';b.disabled=false;});});}
+})();</script>"""
+
+
 def news_card(n):
     st = n.get("status", "")
-    return (f'<article class="ncard" id="{e(n["id"])}"><p class="nmeta"><span class="nkind">{e(n.get("kind", "Paper"))}</span><time datetime="{e(n["date"])}">{news_date(n["date"])}</time></p>'
+    return (f'<article class="ncard" id="{e(n["id"])}" data-topic="{e(n.get("topic", ""))}"><p class="nmeta"><span class="nkind">{e(n.get("kind", "Paper"))}</span><time datetime="{e(n["date"])}">{news_date(n["date"])}</time></p>'
             f'<div class="nrow">{thumb(n)}<div class="nbody"><h3 class="nh"><a href="news-{e(n["id"])}.html">{e(news_head(n["head"]))}</a></h3>'
             f'<p class="nsrc">{e(n.get("who", ""))} · <a href="{e(n["url"])}">{e(n["venue"])}</a></p>'
             f'<p class="z z-gist">{md(n["gist"])}</p><p class="z z-plain">{md(n.get("plain") or n["gist"])}</p><p class="z z-tech">{md(n.get("tech") or n["gist"])}</p>'
@@ -483,12 +520,14 @@ def page_news():
                      "Every source was checked against its DOI.", [("latest", "Latest"), ("landmarks", "Landmarks")])
     head = head.replace("</nav></div>", '</nav><p class="illustration-note">Pictures are illustrations drawn for this site, not figures from the papers.</p><div class="actions"><a class="btn" href="news.xml">Follow the feed (RSS)</a></div></div>', 1)
     zoom = ('<div class="zoombar" role="group" aria-label="How much detail"><div class="zoom-controls"><span>Detail</span>'
-            '<button type="button" data-zoom="gist" aria-pressed="false">In a sentence</button><button type="button" data-zoom="plain" aria-pressed="true">Plain words</button>'
+            '<button type="button" data-zoom="gist" aria-pressed="true">In a sentence</button><button type="button" data-zoom="plain" aria-pressed="false">Plain words</button>'
             '<button type="button" data-zoom="tech" aria-pressed="false">Technical</button></div></div>')
-    s1 = f'<section class="block wrap news-feed" data-zoom="plain" aria-labelledby="latest"><p class="rail"><span>01</span>Latest</p><div class="content"><h2 id="latest">Latest papers, newest first</h2>{latest}</div></section>'
-    s2 = (f'<section class="block wrap news-feed" data-zoom="plain" aria-labelledby="landmarks"><p class="rail"><span>02</span>Landmarks</p><div class="content">'
-          f'<h2 id="landmarks">The papers that set the terms of the question</h2>{land}</div></section>')
-    return head + f'<div class="news-feeds">{zoom}{s1}{s2}</div>'
+    s1 = f'<section class="block wrap news-feed" data-zoom="gist" aria-labelledby="latest"><p class="rail"><span>01</span>Latest</p><div class="content"><h2 id="latest">Latest papers, newest first</h2><div class="ngrid">{latest}</div></div></section>'
+    s2 = (f'<section class="block wrap news-feed" data-zoom="gist" aria-labelledby="landmarks"><p class="rail"><span>02</span>Landmarks</p><div class="content">'
+          f'<h2 id="landmarks">The papers that set the terms of the question</h2><div class="ngrid">{land}</div></div></section>')
+    _filt, _form = news_tools(NEWS, json.loads((ROOT / "site" / "news.json").read_text()).get("topics", []), "origins", "Open Origins")
+    s1 = s1.replace('<section class="block', '<section data-newsblock class="newsblock block', 1); s2 = s2.replace('<section class="block', '<section data-newsblock class="newsblock block', 1)
+    return head + f'<div class="wrap news-tools">{_form}{_filt}</div>' + f'<div class="news-feeds">{zoom}{s1}{s2}</div>' + NEWS_TOOLS_JS
 
 
 def news_article(n, prev, nxt):
