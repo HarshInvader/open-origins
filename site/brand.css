@@ -21,11 +21,8 @@
   --img-edge: rgb(255 255 255 / 0.1);
   color-scheme: dark; }
 
-/* divider: a strip of banded iron formation, rust and chert in thin wavy layers */
-.block::before {
-  background: linear-gradient(var(--band-a) 0 30%, var(--band-b) 30% 48%, var(--band-a) 48% 66%, var(--band-c) 66% 100%);
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M0 2c25 0 25 2 50 2s25-3 50-3 25 2 50 2 25-1 50-1v9c-25 0-25-2-50-2s-25 2-50 2-25-3-50-3S25 10 0 10z'/%3E%3C/svg%3E") repeat-x left center / 200px 12px;
-          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M0 2c25 0 25 2 50 2s25-3 50-3 25 2 50 2 25-1 50-1v9c-25 0-25-2-50-2s-25 2-50 2-25-3-50-3S25 10 0 10z'/%3E%3C/svg%3E") repeat-x left center / 200px 12px; }
+/* divider: a plain hairline between sections */
+.block::before { height: 1px; background: var(--line); }
 
 /* list marker: a five-sided ribose ring, the sugar in RNA */
 .mk > li::before { width: 10px; height: 10px; top: 0.5em; background: var(--rust);
