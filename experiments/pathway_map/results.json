@@ -1,0 +1,352 @@
+{
+  "task": [
+    4,
+    5,
+    17,
+    18
+  ],
+  "rule_sha256": "bfa572ed574fe6da17482750f4003d338718a856356ad594f2f02bdd8f61dd77",
+  "ranking": [
+    "alkaline_vent",
+    "ice_rna",
+    "warm_pond",
+    "cyanosulfidic"
+  ],
+  "routes": {
+    "alkaline_vent": {
+      "n_steps": 6,
+      "n_handoffs": 5,
+      "n_unexplained": 5,
+      "n_hard_fail_handoffs": 0,
+      "n_blocked_by_missing": 5,
+      "n_unverified": 0,
+      "n_continuous": 0,
+      "n_warnings": 0,
+      "n_unassessed_checks": 33,
+      "n_demonstrated": 1,
+      "n_demonstrated_purified": 0,
+      "n_missing": 5,
+      "n_unread": 0,
+      "hard_fail_codes": [],
+      "entry_flags": [],
+      "continuous": false,
+      "scorer_raw": {
+        "n_hard_fail_handoffs": 5,
+        "n_warnings": 0,
+        "n_missing_steps": 5,
+        "n_purified_steps": 0
+      },
+      "stages_with_yield": [
+        "S1"
+      ],
+      "stages_missing": [
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ]
+    },
+    "ice_rna": {
+      "n_steps": 5,
+      "n_handoffs": 4,
+      "n_unexplained": 4,
+      "n_hard_fail_handoffs": 2,
+      "n_blocked_by_missing": 2,
+      "n_unverified": 0,
+      "n_continuous": 0,
+      "n_warnings": 1,
+      "n_unassessed_checks": 25,
+      "n_demonstrated": 0,
+      "n_demonstrated_purified": 2,
+      "n_missing": 3,
+      "n_unread": 0,
+      "hard_fail_codes": [
+        "F4",
+        "F6"
+      ],
+      "entry_flags": [
+        "F4"
+      ],
+      "continuous": false,
+      "scorer_raw": {
+        "n_hard_fail_handoffs": 5,
+        "n_warnings": 1,
+        "n_missing_steps": 3,
+        "n_purified_steps": 2
+      },
+      "stages_with_yield": [
+        "S4"
+      ],
+      "stages_missing": [
+        "S2",
+        "S3",
+        "S5"
+      ]
+    },
+    "warm_pond": {
+      "n_steps": 5,
+      "n_handoffs": 4,
+      "n_unexplained": 4,
+      "n_hard_fail_handoffs": 2,
+      "n_blocked_by_missing": 2,
+      "n_unverified": 0,
+      "n_continuous": 0,
+      "n_warnings": 0,
+      "n_unassessed_checks": 27,
+      "n_demonstrated": 0,
+      "n_demonstrated_purified": 1,
+      "n_missing": 3,
+      "n_unread": 1,
+      "hard_fail_codes": [
+        "F4",
+        "F6"
+      ],
+      "entry_flags": [
+        "F4"
+      ],
+      "continuous": false,
+      "scorer_raw": {
+        "n_hard_fail_handoffs": 5,
+        "n_warnings": 0,
+        "n_missing_steps": 4,
+        "n_purified_steps": 1
+      },
+      "stages_with_yield": [
+        "S3"
+      ],
+      "stages_missing": [
+        "S2",
+        "S4",
+        "S5"
+      ]
+    },
+    "cyanosulfidic": {
+      "n_steps": 10,
+      "n_handoffs": 9,
+      "n_unexplained": 8,
+      "n_hard_fail_handoffs": 5,
+      "n_blocked_by_missing": 3,
+      "n_unverified": 1,
+      "n_continuous": 0,
+      "n_warnings": 4,
+      "n_unassessed_checks": 45,
+      "n_demonstrated": 1,
+      "n_demonstrated_purified": 5,
+      "n_missing": 2,
+      "n_unread": 2,
+      "hard_fail_codes": [
+        "F3",
+        "F4",
+        "F6"
+      ],
+      "entry_flags": [],
+      "continuous": false,
+      "scorer_raw": {
+        "n_hard_fail_handoffs": 8,
+        "n_warnings": 4,
+        "n_missing_steps": 4,
+        "n_purified_steps": 5
+      },
+      "stages_with_yield": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "stages_missing": [
+        "S4",
+        "S5"
+      ]
+    }
+  },
+  "n_gaps": 27,
+  "top_gaps": [
+    {
+      "rank": 1,
+      "route": "alkaline_vent",
+      "where": "V6",
+      "stage": "S5",
+      "kind": "missing_step",
+      "codes": [],
+      "routes_with_any_yield_at_stage": 0
+    },
+    {
+      "rank": 2,
+      "route": "cyanosulfidic",
+      "where": "C10",
+      "stage": "S5",
+      "kind": "missing_step",
+      "codes": [],
+      "routes_with_any_yield_at_stage": 0
+    },
+    {
+      "rank": 3,
+      "route": "ice_rna",
+      "where": "I5",
+      "stage": "S5",
+      "kind": "missing_step",
+      "codes": [],
+      "routes_with_any_yield_at_stage": 0
+    },
+    {
+      "rank": 4,
+      "route": "warm_pond",
+      "where": "P4",
+      "stage": "S5",
+      "kind": "missing_step",
+      "codes": [],
+      "routes_with_any_yield_at_stage": 0
+    },
+    {
+      "rank": 5,
+      "route": "alkaline_vent",
+      "where": "V3",
+      "stage": "S2",
+      "kind": "missing_step",
+      "codes": [],
+      "routes_with_any_yield_at_stage": 1
+    },
+    {
+      "rank": 6,
+      "route": "ice_rna",
+      "where": "I1",
+      "stage": "S2",
+      "kind": "missing_step",
+      "codes": [],
+      "routes_with_any_yield_at_stage": 1
+    },
+    {
+      "rank": 7,
+      "route": "warm_pond",
+      "where": "P0",
+      "stage": "S2",
+      "kind": "missing_step",
+      "codes": [],
+      "routes_with_any_yield_at_stage": 1
+    },
+    {
+      "rank": 8,
+      "route": "cyanosulfidic",
+      "where": "C5",
+      "stage": "S2",
+      "kind": "unread_step",
+      "codes": [],
+      "routes_with_any_yield_at_stage": 1
+    },
+    {
+      "rank": 9,
+      "route": "cyanosulfidic",
+      "where": "C7",
+      "stage": "S2",
+      "kind": "unread_step",
+      "codes": [],
+      "routes_with_any_yield_at_stage": 1
+    },
+    {
+      "rank": 10,
+      "route": "warm_pond",
+      "where": "P1",
+      "stage": "S2",
+      "kind": "unread_step",
+      "codes": [],
+      "routes_with_any_yield_at_stage": 1
+    },
+    {
+      "rank": 11,
+      "route": "cyanosulfidic",
+      "where": "C5->C6",
+      "stage": "S2",
+      "kind": "hard_fail",
+      "codes": [
+        "F3",
+        "F6"
+      ],
+      "routes_with_any_yield_at_stage": 1
+    },
+    {
+      "rank": 12,
+      "route": "cyanosulfidic",
+      "where": "C6->C7",
+      "stage": "S2",
+      "kind": "hard_fail",
+      "codes": [
+        "F3"
+      ],
+      "routes_with_any_yield_at_stage": 1
+    },
+    {
+      "rank": 13,
+      "route": "ice_rna",
+      "where": "entry->I1",
+      "stage": "S2",
+      "kind": "hard_fail",
+      "codes": [
+        "F4"
+      ],
+      "routes_with_any_yield_at_stage": 1
+    },
+    {
+      "rank": 14,
+      "route": "warm_pond",
+      "where": "entry->P0",
+      "stage": "S2",
+      "kind": "hard_fail",
+      "codes": [
+        "F4"
+      ],
+      "routes_with_any_yield_at_stage": 1
+    },
+    {
+      "rank": 15,
+      "route": "warm_pond",
+      "where": "P0->P1",
+      "stage": "S2",
+      "kind": "hard_fail",
+      "codes": [
+        "F6"
+      ],
+      "routes_with_any_yield_at_stage": 1
+    }
+  ],
+  "any_route_continuous": false,
+  "net_replication": {
+    "task": 18,
+    "qt45": {
+      "conditions": "eutectic ice -7 C, pH 9 (CHES-KOH), 0.4 mM MgCl2, 1.2 mM KCl, 8 nM template, 80 nM ribozyme, 50 nM each triplet; (+) and (-) synthesised in separate tubes",
+      "gross_synthesis_factor_per_72d": 1.002021942361899,
+      "survival_per_72d": 0.6527558488549048,
+      "net_factor_per_72d": 0.6540756835576819,
+      "net_factor_per_72d_functional_only": 0.6530426853250558,
+      "net_factor_per_72d_rate_corrected_for_ribozyme_decay": 0.6543774980607571,
+      "synthesis_rate_per_day": 2.8054180384339104e-05,
+      "decay_rate_per_day": 0.005924334876580729,
+      "fold_rate_increase_needed": 211.1747623854274,
+      "fold_rate_increase_needed_functional_only": 970.9210132723999,
+      "doubling_time_years_if_no_decay": 67.6453037620671,
+      "verdict": "below 1",
+      "caveats": [
+        "half-life measured in 'standard reaction conditions' (fig. S8, not read); the low-Mg self-synthesis buffer may differ",
+        "yields are 72-day endpoints, so rates are averages; the decay correction changes the gap by ~1.2x",
+        "(+) synthesis needed a pre-made hexamer and defined triplets; (-) used all 64 triplets",
+        "no cycling: these are single 72-day incubations, so 'cycle' = 72 days"
+      ]
+    },
+    "attwater2025": {
+      "conditions": "pH-freeze-thaw cycles (~1 per day): +HCl, 80 C 2 min, +KOH, -7 C ~24 h; 0.4 mM MgCl2, 1.8 mM KCl, pH 9; 20 nM TPR ribozyme, 100 nM each triplet; twofold dilution into fresh ribozyme and substrates every 4th cycle",
+      "short_templates_per_cycle_range": [
+        1.2,
+        1.4622845894342245
+      ],
+      "AD_duplex_per_cycle": [
+        1.1102994367447667,
+        1.1776526766641087
+      ],
+      "ribozyme_fragment_29nt_per_cycle_max": 1.26,
+      "whole_replicase_per_cycle": null,
+      "verdict": "above 1 for short templates (1.11-1.46 per cycle) and a 29-nt ribozyme fragment (up to 1.26), with fresh ribozyme supplied; not measured for the whole ribozyme, which is supplied, not copied"
+    },
+    "sources": {
+      "qt45": "10.1126/science.adt2760",
+      "attwater2025": "10.1038/s41557-025-01830-y"
+    }
+  }
+}

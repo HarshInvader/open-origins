@@ -1,0 +1,1044 @@
+{
+ "task": 7,
+ "prereg": "docs/prereg/assembly_index_size_null.md",
+ "verdict": {
+  "T7a_MA_adds_beyond_size": true,
+  "T7a_MA_beats_compression": true,
+  "T7a_supports_AT_direction": false,
+  "T7b_peaks_beat_mz": false,
+  "T7c": "descriptive: mineral subunits sit far below the organic MA-HA trend"
+ },
+ "T7a": {
+  "n_M_MW": 1778,
+  "n_M_HA": 2164,
+  "window": {
+   "n_bio": 2039,
+   "n_abio": 1349,
+   "n_timeout_dropped": 0,
+   "HA_values": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    14,
+    15,
+    16,
+    17
+   ]
+  },
+  "primary_delta_auc": 0.06101039957181953,
+  "primary_ci": [
+   0.03708383998400652,
+   0.08942953243049347
+  ],
+  "auc_MW_HA": 0.5845795569142158,
+  "auc_MW_HA_MA": 0.6455899564860353,
+  "auc_MW_HA_LZ": 0.5913344071586103,
+  "auc_MW_HA_MA_LZ": 0.6615872537867524,
+  "S1_delta_vs_LZ": 0.054255549327425046,
+  "S1_ci": [
+   0.0202053659209359,
+   0.0852657654294902
+  ],
+  "S2_single_M_HA": {
+   "MA": {
+    "auc": 0.43621084047136643,
+    "ci": [
+     0.41116711752727375,
+     0.46001825579726735
+    ]
+   },
+   "LZ": {
+    "auc": 0.5609225573235025,
+    "ci": [
+     0.5373245850431015,
+     0.5850171774047512
+    ]
+   },
+   "MW": {
+    "auc": 0.5485562779954968,
+    "ci": [
+     0.5240480783685992,
+     0.5718164891981372
+    ]
+   },
+   "HA": {
+    "auc": 0.5,
+    "ci": [
+     0.47557601108373965,
+     0.5242818866786707
+    ]
+   }
+  },
+  "S3_single_unmatched": {
+   "MA": {
+    "auc": 0.6416943362765581,
+    "ci": [
+     0.6230315100899401,
+     0.6610124350553386
+    ]
+   },
+   "LZ": {
+    "auc": 0.7212777451991574,
+    "ci": [
+     0.7043537008686434,
+     0.738934699417693
+    ]
+   },
+   "MW": {
+    "auc": 0.7431716080536288,
+    "ci": [
+     0.7256075604656566,
+     0.7604250337470474
+    ]
+   },
+   "HA": {
+    "auc": 0.7129617746747904,
+    "ci": [
+     0.6944649979586354,
+     0.7308333675681512
+    ]
+   }
+  },
+  "S4_MA_bio_minus_abio": {
+   "mean": -0.5194085027726433,
+   "ci": [
+    -0.6044362292051755,
+    -0.4362292051756008
+   ]
+  },
+  "S5_kekule": {
+   "n_changed": 4,
+   "auc_S": 0.5845795569142158,
+   "auc_SMA": 0.6455671809302801,
+   "auc_SLZ": 0.5913344071586103,
+   "delta_primary": 0.06098762401606428,
+   "delta_primary_ci_oofboot": [
+    0.03686484668887696,
+    0.08492701067034777
+   ]
+  },
+  "MA_ge15": {
+   "bio": 0,
+   "abio": 2
+  },
+  "exploratory_not_prereg": {
+   "note": "descriptive, computed after reading the primary",
+   "abiotic_GDB": {
+    "rings_mean": 1.348,
+    "frac_rings_ge2": 0.368,
+    "hetero_frac": 0.285,
+    "MA_per_HA": 0.668
+   },
+   "biotic_Rhea": {
+    "rings_mean": 0.598,
+    "frac_rings_ge2": 0.081,
+    "hetero_frac": 0.333,
+    "MA_per_HA": 0.625
+   }
+  }
+ },
+ "planted": {
+  "P1a_oof": {
+   "power": 0.16,
+   "ci_covers0": 0.76,
+   "mean_gain": 0.0014766847855006437,
+   "reps": 50
+  },
+  "P1a_oof_pass": false,
+  "P1a_refit": {
+   "check": "P1a_refit size_only_b1",
+   "method": "refit bootstrap (molecules resampled, 10-fold CV refit, nboot=300)",
+   "n_M_MW": 1778,
+   "reps": 50,
+   "ci_covers0": 1.0,
+   "false_pos_rate": 0.0,
+   "mean_gain": 0.0014766847855006437,
+   "pass_mark": 0.9,
+   "passed": true,
+   "mean_ci_width": 0.010058496711860843,
+   "seconds": 2407
+  },
+  "P1b_ma_planted": {
+   "size_only_b1": {
+    "power": 0.16,
+    "ci_covers0": 0.76,
+    "mean_gain": 0.0014766847855006437,
+    "reps": 50
+   },
+   "ma_resid_g0.1": {
+    "power": 0.3,
+    "ci_covers0": 0.7,
+    "mean_gain": 0.020677733438968587,
+    "reps": 50
+   },
+   "ma_resid_g0.2": {
+    "power": 0.88,
+    "ci_covers0": 0.12,
+    "mean_gain": 0.05318885798684879,
+    "reps": 50
+   },
+   "ma_resid_g0.3": {
+    "power": 0.98,
+    "ci_covers0": 0.02,
+    "mean_gain": 0.07817164872893893,
+    "reps": 50
+   },
+   "ma_resid_g0.5": {
+    "power": 1.0,
+    "ci_covers0": 0.0,
+    "mean_gain": 0.13495884724518936,
+    "reps": 50
+   }
+  },
+  "detectable_gain_auc": "~0.05 (gamma=0.2: power 0.88 by OOF bootstrap; refit CI is wider, so this is optimistic)",
+  "P2": {
+   "note": "delta in units of between-sample SD of log-peak residual",
+   "samp_sd": 0.6175243276103906,
+   "resid_sd": 0.7531173958830099,
+   "results": {
+    "0.0": {
+     "power": 0.0,
+     "ci_covers0": 0.95,
+     "reps": 40
+    },
+    "0.5": {
+     "power": 0.0,
+     "ci_covers0": 1.0,
+     "reps": 40
+    },
+    "1.0": {
+     "power": 0.0,
+     "ci_covers0": 1.0,
+     "reps": 40
+    },
+    "1.5": {
+     "power": 0.2,
+     "ci_covers0": 0.8,
+     "reps": 40
+    },
+    "2.0": {
+     "power": 0.5,
+     "ci_covers0": 0.5,
+     "reps": 40
+    }
+   }
+  },
+  "P2a_pass": true,
+  "ordering": "refit planted check ran after the primary had run but before it was read (lead ruling)"
+ },
+ "validation": {
+  "checks": {
+   "n": 15,
+   "agree": 0.8666666666666667,
+   "mean_diff": 0.0,
+   "n_timeout": 0
+  },
+  "coconut_55": {
+   "n": 55,
+   "agree": 0.9272727272727272,
+   "mean_diff": -0.07272727272727272,
+   "n_timeout": 0
+  },
+  "gdb13_1201": {
+   "n": 1201,
+   "agree": 0.9991673605328892,
+   "mean_diff": -0.0008326394671107411,
+   "n_timeout": 0
+  },
+  "gdb17_200": {
+   "n": 200,
+   "agree": 0.985,
+   "mean_diff": 0.005,
+   "n_timeout": 0
+  },
+  "reaxys": {
+   "n": 300,
+   "agree": 0.03,
+   "mean_diff": -1.3666666666666667,
+   "n_timeout": 0
+  }
+ },
+ "T7b": {
+  "n_pos": 13,
+  "n_neg": 12,
+  "auc_peaks": 0.8269230769230771,
+  "auc_mz": 0.7115384615384616,
+  "delta": 0.11538461538461553,
+  "delta_ci": [
+   -0.1858974358974359,
+   0.41666666666666663
+  ],
+  "ion_binned_auc_peaks": 0.5653957056073459,
+  "ion_binned_auc_mz": 0.48381904202010023,
+  "loso_mz": 0.4551282051282051,
+  "loso_mz_peaks": 0.75,
+  "frac_estMA_ge15_bio": 0.7692307692307693,
+  "frac_estMA_ge15_nonbio": 0.08333333333333333
+ },
+ "T7b_sensitivity": {
+  "sens_formose_neg": {
+   "n_pos": 12,
+   "n_neg": 13,
+   "auc_peaks": 0.7884615384615383,
+   "auc_mz": 0.782051282051282,
+   "delta": 0.0064102564102562765,
+   "delta_ci": [
+    -0.28846153846153844,
+    0.3076923076923077
+   ],
+   "ion_binned_auc_peaks": 0.5703819580237256,
+   "ion_binned_auc_mz": 0.49352105331769003,
+   "loso_mz": 0.641025641025641,
+   "loso_mz_peaks": 0.7564102564102565,
+   "frac_estMA_ge15_bio": 0.75,
+   "frac_estMA_ge15_nonbio": 0.15384615384615385,
+   "samples": [
+    {
+     "sample": "Aberarie 0y",
+     "y": 1,
+     "maxpk": 21.712,
+     "maxmz": 461.82,
+     "n": 49,
+     "estMA": 17.304
+    },
+    {
+     "sample": "Aeromonas veronii",
+     "y": 1,
+     "maxpk": 22.576,
+     "maxmz": 475.911,
+     "n": 443,
+     "estMA": 17.758
+    },
+    {
+     "sample": "Ala_Arg",
+     "y": 0,
+     "maxpk": 15.0,
+     "maxmz": 492.3,
+     "n": 2,
+     "estMA": 13.775
+    },
+    {
+     "sample": "Ardberg 10y",
+     "y": 1,
+     "maxpk": 17.972,
+     "maxmz": 467.322,
+     "n": 39,
+     "estMA": 15.337
+    },
+    {
+     "sample": "Beer",
+     "y": 1,
+     "maxpk": 83.0,
+     "maxmz": 499.23,
+     "n": 15,
+     "estMA": 49.527
+    },
+    {
+     "sample": "Coal",
+     "y": 0,
+     "maxpk": 11.0,
+     "maxmz": 448.15,
+     "n": 12,
+     "estMA": 11.672
+    },
+    {
+     "sample": "Ecoli",
+     "y": 1,
+     "maxpk": 65.006,
+     "maxmz": 488.769,
+     "n": 45,
+     "estMA": 40.066
+    },
+    {
+     "sample": "Formose Mineral Mixture",
+     "y": 0,
+     "maxpk": 13.0,
+     "maxmz": 445.116,
+     "n": 14,
+     "estMA": 12.723
+    },
+    {
+     "sample": "Formose Reaction Mixture",
+     "y": 0,
+     "maxpk": 14.0,
+     "maxmz": 399.168,
+     "n": 12,
+     "estMA": 13.249
+    },
+    {
+     "sample": "Formose Recursive Cycle",
+     "y": 0,
+     "maxpk": 28.0,
+     "maxmz": 377.077,
+     "n": 12,
+     "estMA": 20.61
+    },
+    {
+     "sample": "Glengoyne 10y",
+     "y": 1,
+     "maxpk": 5.516,
+     "maxmz": 478.069,
+     "n": 38,
+     "estMA": 8.788
+    },
+    {
+     "sample": "Glengoyne 18y",
+     "y": 1,
+     "maxpk": 10.0,
+     "maxmz": 451.345,
+     "n": 40,
+     "estMA": 11.146
+    },
+    {
+     "sample": "Glengoyne 25y",
+     "y": 1,
+     "maxpk": 13.468,
+     "maxmz": 486.066,
+     "n": 33,
+     "estMA": 12.969
+    },
+    {
+     "sample": "GlyArg",
+     "y": 0,
+     "maxpk": 8.0,
+     "maxmz": 464.27,
+     "n": 2,
+     "estMA": 10.094
+    },
+    {
+     "sample": "Granite",
+     "y": 0,
+     "maxpk": 18.734,
+     "maxmz": 450.327,
+     "n": 19,
+     "estMA": 15.738
+    },
+    {
+     "sample": "Limestone",
+     "y": 0,
+     "maxpk": 9.348,
+     "maxmz": 489.606,
+     "n": 35,
+     "estMA": 10.803
+    },
+    {
+     "sample": "MU_15",
+     "y": 0,
+     "maxpk": 16.0,
+     "maxmz": 462.15,
+     "n": 7,
+     "estMA": 14.301
+    },
+    {
+     "sample": "Quartz",
+     "y": 0,
+     "maxpk": 9.0,
+     "maxmz": 448.15,
+     "n": 7,
+     "estMA": 10.62
+    },
+    {
+     "sample": "Sandstone",
+     "y": 0,
+     "maxpk": 12.0,
+     "maxmz": 445.12,
+     "n": 5,
+     "estMA": 12.198
+    },
+    {
+     "sample": "Seawater",
+     "y": 1,
+     "maxpk": 38.314,
+     "maxmz": 483.25,
+     "n": 160,
+     "estMA": 26.032
+    },
+    {
+     "sample": "Taxol",
+     "y": 1,
+     "maxpk": 71.0,
+     "maxmz": 855.86,
+     "n": 1,
+     "estMA": 43.218
+    },
+    {
+     "sample": "Urinary Peptides",
+     "y": 1,
+     "maxpk": 52.202,
+     "maxmz": 482.379,
+     "n": 32,
+     "estMA": 33.334
+    },
+    {
+     "sample": "Yeast",
+     "y": 1,
+     "maxpk": 48.0,
+     "maxmz": 383.08,
+     "n": 11,
+     "estMA": 31.125
+    },
+    {
+     "sample": "Yeast_200",
+     "y": 0,
+     "maxpk": 15.0,
+     "maxmz": 445.12,
+     "n": 12,
+     "estMA": 13.775
+    },
+    {
+     "sample": "Yeast_400",
+     "y": 0,
+     "maxpk": 12.888,
+     "maxmz": 444.001,
+     "n": 16,
+     "estMA": 12.664
+    }
+   ]
+  },
+  "sens_abiotic_only": {
+   "n_pos": 13,
+   "n_neg": 5,
+   "auc_peaks": 0.8153846153846155,
+   "auc_mz": 0.6461538461538462,
+   "delta": 0.1692307692307693,
+   "delta_ci": [
+    -0.18461538461538463,
+    0.523076923076923
+   ],
+   "ion_binned_auc_peaks": 0.5816304810557684,
+   "ion_binned_auc_mz": 0.4858982545764155,
+   "loso_mz": 0.07692307692307693,
+   "loso_mz_peaks": 0.6,
+   "frac_estMA_ge15_bio": 0.7692307692307693,
+   "frac_estMA_ge15_nonbio": 0.0,
+   "samples": [
+    {
+     "sample": "Aberarie 0y",
+     "y": 1,
+     "maxpk": 22.23,
+     "maxmz": 459.397,
+     "n": 49,
+     "estMA": 17.576
+    },
+    {
+     "sample": "Aeromonas veronii",
+     "y": 1,
+     "maxpk": 22.062,
+     "maxmz": 477.412,
+     "n": 443,
+     "estMA": 17.488
+    },
+    {
+     "sample": "Ala_Arg",
+     "y": 0,
+     "maxpk": 15.0,
+     "maxmz": 492.3,
+     "n": 2,
+     "estMA": 13.775
+    },
+    {
+     "sample": "Ardberg 10y",
+     "y": 1,
+     "maxpk": 18.6,
+     "maxmz": 467.396,
+     "n": 39,
+     "estMA": 15.668
+    },
+    {
+     "sample": "Beer",
+     "y": 1,
+     "maxpk": 83.0,
+     "maxmz": 499.23,
+     "n": 15,
+     "estMA": 49.527
+    },
+    {
+     "sample": "Ecoli",
+     "y": 1,
+     "maxpk": 64.642,
+     "maxmz": 488.936,
+     "n": 45,
+     "estMA": 39.875
+    },
+    {
+     "sample": "Formose Mineral Mixture",
+     "y": 0,
+     "maxpk": 13.0,
+     "maxmz": 445.116,
+     "n": 14,
+     "estMA": 12.723
+    },
+    {
+     "sample": "Formose Reaction Mixture",
+     "y": 0,
+     "maxpk": 14.0,
+     "maxmz": 399.168,
+     "n": 12,
+     "estMA": 13.249
+    },
+    {
+     "sample": "Formose Recursive Cycle",
+     "y": 1,
+     "maxpk": 28.0,
+     "maxmz": 377.077,
+     "n": 12,
+     "estMA": 20.61
+    },
+    {
+     "sample": "Glengoyne 10y",
+     "y": 1,
+     "maxpk": 5.51,
+     "maxmz": 477.388,
+     "n": 38,
+     "estMA": 8.785
+    },
+    {
+     "sample": "Glengoyne 18y",
+     "y": 1,
+     "maxpk": 10.008,
+     "maxmz": 452.821,
+     "n": 40,
+     "estMA": 11.15
+    },
+    {
+     "sample": "Glengoyne 25y",
+     "y": 1,
+     "maxpk": 13.354,
+     "maxmz": 485.752,
+     "n": 33,
+     "estMA": 12.909
+    },
+    {
+     "sample": "GlyArg",
+     "y": 0,
+     "maxpk": 8.0,
+     "maxmz": 464.27,
+     "n": 2,
+     "estMA": 10.094
+    },
+    {
+     "sample": "MU_15",
+     "y": 0,
+     "maxpk": 16.0,
+     "maxmz": 462.15,
+     "n": 7,
+     "estMA": 14.301
+    },
+    {
+     "sample": "Seawater",
+     "y": 1,
+     "maxpk": 38.198,
+     "maxmz": 483.746,
+     "n": 160,
+     "estMA": 25.971
+    },
+    {
+     "sample": "Taxol",
+     "y": 1,
+     "maxpk": 71.0,
+     "maxmz": 855.86,
+     "n": 1,
+     "estMA": 43.218
+    },
+    {
+     "sample": "Urinary Peptides",
+     "y": 1,
+     "maxpk": 51.896,
+     "maxmz": 482.378,
+     "n": 32,
+     "estMA": 33.173
+    },
+    {
+     "sample": "Yeast",
+     "y": 1,
+     "maxpk": 48.0,
+     "maxmz": 383.08,
+     "n": 11,
+     "estMA": 31.125
+    }
+   ]
+  },
+  "sens_no_subsample": {
+   "n_pos": 13,
+   "n_neg": 12,
+   "auc_peaks": 0.8653846153846153,
+   "auc_mz": 0.7884615384615384,
+   "delta": 0.07692307692307687,
+   "delta_ci": [
+    -0.18613782051282052,
+    0.3590544871794868
+   ],
+   "ion_binned_auc_peaks": 0.5653957056073459,
+   "ion_binned_auc_mz": 0.48381904202010023,
+   "loso_mz": 0.717948717948718,
+   "loso_mz_peaks": 0.8076923076923077,
+   "frac_estMA_ge15_bio": 0.7692307692307693,
+   "frac_estMA_ge15_nonbio": 0.08333333333333333,
+   "samples": [
+    {
+     "sample": "Aberarie 0y",
+     "y": 1,
+     "maxpk": 28,
+     "maxmz": 499.33,
+     "n": 49,
+     "estMA": 20.61
+    },
+    {
+     "sample": "Aeromonas veronii",
+     "y": 1,
+     "maxpk": 55,
+     "maxmz": 496.96,
+     "n": 443,
+     "estMA": 34.805
+    },
+    {
+     "sample": "Ala_Arg",
+     "y": 0,
+     "maxpk": 15,
+     "maxmz": 492.3,
+     "n": 2,
+     "estMA": 13.775
+    },
+    {
+     "sample": "Ardberg 10y",
+     "y": 1,
+     "maxpk": 24,
+     "maxmz": 497.24,
+     "n": 39,
+     "estMA": 18.507
+    },
+    {
+     "sample": "Beer",
+     "y": 1,
+     "maxpk": 83,
+     "maxmz": 499.23,
+     "n": 15,
+     "estMA": 49.527
+    },
+    {
+     "sample": "Coal",
+     "y": 0,
+     "maxpk": 11,
+     "maxmz": 448.15,
+     "n": 12,
+     "estMA": 11.672
+    },
+    {
+     "sample": "Ecoli",
+     "y": 1,
+     "maxpk": 74,
+     "maxmz": 497.23,
+     "n": 45,
+     "estMA": 44.795
+    },
+    {
+     "sample": "Formose Mineral Mixture",
+     "y": 0,
+     "maxpk": 13,
+     "maxmz": 445.116,
+     "n": 14,
+     "estMA": 12.723
+    },
+    {
+     "sample": "Formose Reaction Mixture",
+     "y": 0,
+     "maxpk": 14,
+     "maxmz": 399.168,
+     "n": 12,
+     "estMA": 13.249
+    },
+    {
+     "sample": "Formose Recursive Cycle",
+     "y": 1,
+     "maxpk": 28,
+     "maxmz": 377.077,
+     "n": 12,
+     "estMA": 20.61
+    },
+    {
+     "sample": "Glengoyne 10y",
+     "y": 1,
+     "maxpk": 6,
+     "maxmz": 497.24,
+     "n": 38,
+     "estMA": 9.043
+    },
+    {
+     "sample": "Glengoyne 18y",
+     "y": 1,
+     "maxpk": 13,
+     "maxmz": 491.19,
+     "n": 40,
+     "estMA": 12.723
+    },
+    {
+     "sample": "Glengoyne 25y",
+     "y": 1,
+     "maxpk": 15,
+     "maxmz": 491.19,
+     "n": 33,
+     "estMA": 13.775
+    },
+    {
+     "sample": "GlyArg",
+     "y": 0,
+     "maxpk": 8,
+     "maxmz": 464.27,
+     "n": 2,
+     "estMA": 10.094
+    },
+    {
+     "sample": "Granite",
+     "y": 0,
+     "maxpk": 19,
+     "maxmz": 467.1,
+     "n": 19,
+     "estMA": 15.878
+    },
+    {
+     "sample": "Limestone",
+     "y": 0,
+     "maxpk": 10,
+     "maxmz": 497.24,
+     "n": 35,
+     "estMA": 11.146
+    },
+    {
+     "sample": "MU_15",
+     "y": 0,
+     "maxpk": 16,
+     "maxmz": 462.15,
+     "n": 7,
+     "estMA": 14.301
+    },
+    {
+     "sample": "Quartz",
+     "y": 0,
+     "maxpk": 9,
+     "maxmz": 448.15,
+     "n": 7,
+     "estMA": 10.62
+    },
+    {
+     "sample": "Sandstone",
+     "y": 0,
+     "maxpk": 12,
+     "maxmz": 445.12,
+     "n": 5,
+     "estMA": 12.198
+    },
+    {
+     "sample": "Seawater",
+     "y": 1,
+     "maxpk": 61,
+     "maxmz": 499.91,
+     "n": 160,
+     "estMA": 37.96
+    },
+    {
+     "sample": "Taxol",
+     "y": 1,
+     "maxpk": 71,
+     "maxmz": 855.86,
+     "n": 1,
+     "estMA": 43.218
+    },
+    {
+     "sample": "Urinary Peptides",
+     "y": 1,
+     "maxpk": 58,
+     "maxmz": 487.21,
+     "n": 32,
+     "estMA": 36.383
+    },
+    {
+     "sample": "Yeast",
+     "y": 1,
+     "maxpk": 48,
+     "maxmz": 383.08,
+     "n": 11,
+     "estMA": 31.125
+    },
+    {
+     "sample": "Yeast_200",
+     "y": 0,
+     "maxpk": 15,
+     "maxmz": 445.12,
+     "n": 12,
+     "estMA": 13.775
+    },
+    {
+     "sample": "Yeast_400",
+     "y": 0,
+     "maxpk": 13,
+     "maxmz": 445.12,
+     "n": 16,
+     "estMA": 12.723
+    }
+   ]
+  },
+  "blinded": [
+   {
+    "sample": "Antartic Dust",
+    "y": 0,
+    "maxpk": 24.0,
+    "maxmz": 395.28,
+    "n": 8,
+    "estMA": 18.51
+   },
+   {
+    "sample": "NASA_A",
+    "y": 0,
+    "maxpk": 15.0,
+    "maxmz": 447.29,
+    "n": 8,
+    "estMA": 13.77
+   },
+   {
+    "sample": "NASA_B",
+    "y": 0,
+    "maxpk": 11.0,
+    "maxmz": 447.29,
+    "n": 3,
+    "estMA": 11.67
+   },
+   {
+    "sample": "NASA_C",
+    "y": 0,
+    "maxpk": 20.75,
+    "maxmz": 434.77,
+    "n": 19,
+    "estMA": 16.8
+   },
+   {
+    "sample": "NASA_D",
+    "y": 0,
+    "maxpk": 61.97,
+    "maxmz": 459.97,
+    "n": 17,
+    "estMA": 38.47
+   },
+   {
+    "sample": "NASA_E",
+    "y": 0,
+    "maxpk": 64.5,
+    "maxmz": 486.71,
+    "n": 19,
+    "estMA": 39.8
+   }
+  ]
+ },
+ "T7c": {
+  "organic_fit_MA_on_HA": [
+   0.5417491131449578,
+   0.8104061359726167
+  ],
+  "organic_HA_range": [
+   4,
+   17
+  ],
+  "minerals": [
+   {
+    "mineral": "calcite",
+    "HA": 4,
+    "SBMA": 3,
+    "EMA": 2,
+    "organic_trend_MA": 2.9774025885524478,
+    "EMA_per_HA": 0.5
+   },
+   {
+    "mineral": "forsterite",
+    "HA": 5,
+    "SBMA": 3,
+    "EMA": 2,
+    "organic_trend_MA": 3.5191517016974054,
+    "EMA_per_HA": 0.4
+   },
+   {
+    "mineral": "akermanite",
+    "HA": 9,
+    "SBMA": 5,
+    "EMA": 3,
+    "organic_trend_MA": 5.6861481542772365,
+    "EMA_per_HA": 0.3333333333333333
+   },
+   {
+    "mineral": "beryl",
+    "HA": 24,
+    "SBMA": 6,
+    "EMA": 5,
+    "organic_trend_MA": 13.812384851451604,
+    "EMA_per_HA": 0.20833333333333334
+   },
+   {
+    "mineral": "vesuvianite",
+    "HA": 19,
+    "SBMA": 10,
+    "EMA": 8,
+    "organic_trend_MA": 11.103639285726814,
+    "EMA_per_HA": 0.42105263157894735
+   },
+   {
+    "mineral": "fluor-uvite",
+    "HA": 48,
+    "SBMA": 14,
+    "EMA": 11,
+    "organic_trend_MA": 26.81436356693059,
+    "EMA_per_HA": 0.22916666666666666
+   },
+   {
+    "mineral": "eudialyte_a",
+    "HA": 108,
+    "SBMA": 12,
+    "EMA": 10,
+    "organic_trend_MA": 59.31931035562806,
+    "EMA_per_HA": 0.09259259259259259
+   },
+   {
+    "mineral": "eudialyte_b",
+    "HA": 102,
+    "SBMA": 12,
+    "EMA": 10,
+    "organic_trend_MA": 56.068815676758305,
+    "EMA_per_HA": 0.09803921568627451
+   },
+   {
+    "mineral": "vanarsite",
+    "HA": 70,
+    "SBMA": 16,
+    "EMA": 11,
+    "organic_trend_MA": 38.73284405611966,
+    "EMA_per_HA": 0.15714285714285714
+   },
+   {
+    "mineral": "paddlewheelite",
+    "HA": 68,
+    "SBMA": 17,
+    "EMA": 13,
+    "organic_trend_MA": 37.64934582982974,
+    "EMA_per_HA": 0.19117647058823528
+   },
+   {
+    "mineral": "ewingite",
+    "HA": 196,
+    "SBMA": 20,
+    "EMA": 18,
+    "organic_trend_MA": 106.99323231238434,
+    "EMA_per_HA": 0.09183673469387756
+   },
+   {
+    "mineral": "ilmajokite",
+    "HA": 98,
+    "SBMA": 21,
+    "EMA": 18,
+    "organic_trend_MA": 53.90181922417848,
+    "EMA_per_HA": 0.1836734693877551
+   }
+  ],
+  "organic_MA_per_HA_median": 0.625
+ }
+}

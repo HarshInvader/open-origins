@@ -1,0 +1,313 @@
+{
+ "name": "Open Origins",
+ "favicon": "%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Cpath%20d%3D%27M16%203%20L28%2026%20H4%20Z%27%20fill%3D%27none%27%20stroke%3D%27%231F6F78%27%20stroke-width%3D%273%27%20stroke-linejoin%3D%27round%27/%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%2719%27%20r%3D%273.5%27%20fill%3D%27%231F6F78%27/%3E%3C/svg%3E",
+ "tokens": ":root { --paper: #F2F1EC; --surface: #FAF9F5; --ink: #1A1B18; --muted: #555A52; --line: #DCDBD2; --line-strong: #BDBBAE; --accent: #1F6F78; --ok: #1D6A44; --ok-soft: #DCEFE4; --warn: #7A5200; --warn-soft: #F3E6C8; --bad: #9B2C2C; --bad-soft: #F6DEDC; color-scheme: light; }\n@media (prefers-color-scheme: dark) { :root:not([data-theme=\"light\"]) { --paper: #10120F; --surface: #181B17; --ink: #E8E9E3; --muted: #9CA196; --line: #282C26; --line-strong: #3B4038; --accent: #7CC6CD; --ok: #7FD1A5; --ok-soft: #15281F; --warn: #E3B862; --warn-soft: #2E2512; --bad: #EE9A94; --bad-soft: #341A19; color-scheme: dark; } }\n:root[data-theme=\"dark\"] { --paper: #10120F; --surface: #181B17; --ink: #E8E9E3; --muted: #9CA196; --line: #282C26; --line-strong: #3B4038; --accent: #7CC6CD; --ok: #7FD1A5; --ok-soft: #15281F; --warn: #E3B862; --warn-soft: #2E2512; --bad: #EE9A94; --bad-soft: #341A19; color-scheme: dark; }",
+ "kicker": "Open Origins · open research, started November 2026",
+ "goal": "Map and test every route to the origin of life, by 2027",
+ "lede": "Chemists have shown many single steps from simple molecules toward life. Nobody has joined them into one continuous route. We score each proposed route step by step, re-test published claims against chance, and seal predictions that future data can confirm.",
+ "odds": [
+  [
+   "Fully cracked by end of 2027",
+   "under 1%"
+  ],
+  [
+   "The open goal: scored map, 10 claims benched, 3 predictions confirmed",
+   "about 1 in 8"
+  ]
+ ],
+ "raise_odds": [
+  "New Bennu or Ryugu compound tables released after we seal predictions about them.",
+  "A lab reporting sustained exponential replication by a small ribozyme, which we model before the result is out.",
+  "One wet lab agreeing to run a test we pre-register."
+ ],
+ "criteria_intro": "Two questions, kept apart: can chemistry do it at all, and what actually happened on Earth? \"Cracked\" means one stated setting and one route from its raw materials to a system that copies itself with heritable variation, where:",
+ "criteria": [
+  "**Every step has a published yield** from a lab other than us.",
+  "**Every step follows from the last** by a named physical process, under a compatibility rule we hash in advance, with no purified hand-offs.",
+  "**The route predicts new data:** a kinetic model fitted on the earlier steps predicts at least 3 measurements published after the hash.",
+  "**It survives a red team** that did not build it."
+ ],
+ "ladder_intro": "From building blocks to evolution. A separate track asks what happened on Earth (LUCA, timing, setting).",
+ "ladder": [
+  [
+   "L0",
+   "Building blocks",
+   "Made from a stated setting. Bennu's returned sample holds 33 amino acids, all five nucleobases and ribose.",
+   "Largely met"
+  ],
+  [
+   "L1",
+   "Activation and polymers",
+   "Joined into chains under compatible conditions, without purifying between steps.",
+   "Partly met"
+  ],
+  [
+   "L2",
+   "Template copying",
+   "A molecule copies function-length sequences. The 45-nucleotide QT45 ribozyme copied itself and its complement (Science 2026), under engineered conditions.",
+   "Partly met"
+  ],
+  [
+   "L3",
+   "Sustained self-replication",
+   "Exponential growth from the setting's own feedstocks.",
+   "Not met"
+  ],
+  [
+   "L4",
+   "Darwinian evolution",
+   "Open-ended evolution in a compartment.",
+   "Not met"
+  ]
+ ],
+ "not_claimed": [
+  "**That a working route is what happened.** Showing a route is possible is not showing it is the one Earth took.",
+  "**Wet-lab results of our own.** We compute and reanalyse; only labs and sample-return missions can confirm.",
+  "**Any citation we have not checked.** Every reference passes a DOI audit before it appears here."
+ ],
+ "theories_nav": "Theories",
+ "theories_title": "Theory scoreboard",
+ "theories_lede": "Each origin-of-life theory, the prediction it can least afford to get wrong, and the evidence from 2023-2026.",
+ "theory_cols": [
+  "Riskiest prediction",
+  "Evidence so far",
+  "Status"
+ ],
+ "as_of": "November 2026",
+ "theories": [
+  {
+   "name": "RNA world",
+   "who": "",
+   "prediction": "Small polymerase ribozymes are common in sequence space and can run a closed copying cycle.",
+   "evidence": "For: QT45 (Gianni, Holliger et al., Science 2026) copies itself from triplet building blocks in alkaline ice. Against: the building blocks are pre-activated and supplied by the experimenters; there is no exponential growth yet.",
+   "status": "Partial"
+  },
+  {
+   "name": "Alkaline vents / metabolism first",
+   "who": "Lane, Russell",
+   "prediction": "Natural pH gradients across iron-sulfur barriers drive CO2 reduction well past formate.",
+   "evidence": "Formate depends on the gradient (Hudson et al., PNAS 2020); micromolar formic and acetic acid reported (Altair et al., JACS 2025). Nothing beyond two-carbon products yet.",
+   "status": "Strained"
+  },
+  {
+   "name": "Warm ponds / wet-dry cycling",
+   "who": "Deamer, Damer",
+   "prediction": "Repeated drying makes long, copyable polymers faster than water breaks them.",
+   "evidence": "Not yet reviewed; first item in our research sweep.",
+   "status": "Untested"
+  },
+  {
+   "name": "Cyanosulfidic chemistry",
+   "who": "Sutherland",
+   "prediction": "One UV-lit surface setting supplies nucleotide, amino acid and lipid precursors without incompatible steps.",
+   "evidence": "Strong step by step; needs reagents delivered in a set order, which strains continuity.",
+   "status": "Strained"
+  },
+  {
+   "name": "Peptide-RNA co-evolution",
+   "who": "Powner and others",
+   "prediction": "Amino acids attach to RNA in a selective way without enzymes, a first step toward coding.",
+   "evidence": "Thioester-driven aminoacylation of RNA near neutral pH (Singh, Powner et al., Nature 2025). Coding itself is unexplained.",
+   "status": "Partial"
+  },
+  {
+   "name": "Autocatalytic sets (RAF)",
+   "who": "Hordijk, Steel, Xavier",
+   "prediction": "Self-sustaining reaction sets in real metabolism are more than an artefact of network size.",
+   "evidence": "A maxRAF of 1,335 reactions in an ancient anaerobic network (Xavier et al., 2020). Never tested against randomised networks.",
+   "status": "Untested"
+  },
+  {
+   "name": "Assembly theory",
+   "who": "Cronin, Walker",
+   "prediction": "Molecules with assembly index above about 15, in many copies, occur only with life.",
+   "evidence": "Minerals score above 15 (Hazen et al., J R Soc Interface 2024); assembly index argued to be a compression measure (Uthamacumaran et al., 2024). Proponents dispute both.",
+   "status": "Contested"
+  },
+  {
+   "name": "Homochirality",
+   "who": "",
+   "prediction": "A physical process biases one handedness strongly enough to be amplified.",
+   "evidence": "Bennu's amino acids are racemic, like Ryugu's, which counts against delivery from space. A magnetite spin route (Ozturk et al., 2023) gives about 35% excess after recrystallisation.",
+   "status": "Strained"
+  }
+ ],
+ "bench": [
+  [
+   "Autocatalytic sets in metabolism",
+   "does the real maxRAF fall outside what degree-preserving random networks and random food sets give?"
+  ],
+  [
+   "Assembly index as a biosignature",
+   "does it beat molecular weight and atom count at separating biotic from abiotic samples?"
+  ],
+  [
+   "LUCA as an anaerobic acetogen (Moody et al. 2024)",
+   "how much of the gene set survives changes to cutoffs, taxon sampling and the gene-transfer model?"
+  ],
+  [
+   "'Functional RNAs are common'",
+   "does the claim survive the selection bias of the starting library?"
+  ],
+  [
+   "Pathway completeness",
+   "scored step by step for compatible conditions, not by counting products made."
+  ],
+  [
+   "Meteoritic chirality",
+   "reported excess against contamination indicators, with Bennu and Ryugu as clean controls."
+  ]
+ ],
+ "approach_lede": "The same rules as our Indus script project, plus one more: every citation is checked, because AI agents invent references.",
+ "rules": [
+  [
+   "Seal it before you look.",
+   "Predictions, tests and pass marks are SHA-256 hashed before any result is seen. So is the rule for what makes two steps compatible."
+  ],
+  [
+   "Use nulls that respect the data.",
+   "Random networks keep each molecule's number of reactions; size-matched controls for assembly index; shuffled gene patterns for LUCA."
+  ],
+  [
+   "Plant an answer first.",
+   "A method must find a planted autocatalytic core, a planted ancestor or a planted incompatible step before its real output counts."
+  ],
+  [
+   "Let someone else try to break it.",
+   "Every positive result goes to a red team that did not produce it."
+  ],
+  [
+   "Publish it either way.",
+   "Failed routes are written up with the size of effect the test could have caught."
+  ]
+ ],
+ "traps": [
+  [
+   "Possible is not historical.",
+   "Several routes may all work; that does not say which one happened."
+  ],
+  [
+   "'Prebiotically plausible' is a judgement.",
+   "So we fix the rule in advance."
+  ],
+  [
+   "Yields hide hand-offs.",
+   "Most published steps start from purified chemicals; we mark every one."
+  ],
+  [
+   "Topology is not kinetics.",
+   "A network that contains an autocatalytic set may never run."
+  ],
+  [
+   "Databases record modern life.",
+   "Metabolic networks are biased toward today's enzymes; our nulls account for it."
+  ]
+ ],
+ "milestones": [
+  [
+   "M1",
+   "Latest research sweep"
+  ],
+  [
+   "M2",
+   "Pathway map"
+  ],
+  [
+   "M3",
+   "Bench published claims"
+  ],
+  [
+   "M4",
+   "Planted controls"
+  ],
+  [
+   "M5",
+   "Sealed predictions"
+  ],
+  [
+   "M6",
+   "Red team"
+  ]
+ ],
+ "map": {
+  "nav": "Pathway map",
+  "title": "Pathway map",
+  "lede": "The route from geochemistry to evolving life, one step per row. A step counts as shown only if it works under conditions the previous step could provide.",
+  "steps": [
+   [
+    "Feedstocks (HCN, formaldehyde, phosphate, sulfides) in a stated setting",
+    "Several settings proposed; each supplies a different subset.",
+    "Partial"
+   ],
+   [
+    "Amino acids and nucleobases",
+    "Made in many routes; found in Bennu and Ryugu samples (2025).",
+    "Met"
+   ],
+   [
+    "Ribose and nucleotides",
+    "Ribose found in Bennu (Furukawa et al. 2025); nucleotide routes need ordered steps (Sutherland).",
+    "Partial"
+   ],
+   [
+    "Activation (energy-carrying building blocks)",
+    "Thioester routes near neutral pH (Singh et al. 2025).",
+    "Partial"
+   ],
+   [
+    "Polymers long enough to fold",
+    "Shown with purified inputs; continuity unscored.",
+    "Partial"
+   ],
+   [
+    "Template copying",
+    "QT45 copies itself and its complement in ice (2026).",
+    "Partial"
+   ],
+   [
+    "Exponential self-replication",
+    "Not shown.",
+    "Not met"
+   ],
+   [
+    "Compartments that grow and divide with their contents",
+    "Not yet reviewed.",
+    "Untested"
+   ],
+   [
+    "Darwinian evolution",
+    "RNA-catalysed evolution of a catalytic RNA (Papastavrou, Horning & Joyce, PNAS 2024), not open-ended.",
+    "Not met"
+   ]
+  ],
+  "note": "These statuses come from the literature. Our own scoring, under a compatibility rule hashed in advance, replaces them as the step tables land (tracker tasks #3-#5).",
+  "scenarios": [
+   {
+    "name": "Alkaline hydrothermal vents",
+    "explains": "a natural energy source (pH gradients) and CO2 reduction to formate and acetate.",
+    "gap": "anything beyond two-carbon products; nucleotides."
+   },
+   {
+    "name": "Surface ponds with wet-dry cycles",
+    "explains": "concentration and polymerisation by drying.",
+    "gap": "not yet reviewed (first sweep task)."
+   },
+   {
+    "name": "Cyanosulfidic surface chemistry",
+    "explains": "common origins for nucleotide, amino acid and lipid precursors under UV light.",
+    "gap": "needs reagents delivered in a set order."
+   },
+   {
+    "name": "Ice (eutectic freezing)",
+    "explains": "concentrates RNA and slows breakdown; QT45 works here.",
+    "gap": "where the activated triplets come from."
+   }
+  ]
+ },
+ "contribute": [
+  "**Rerun a test.** Every result has code and a sealed pre-registration in the repository.",
+  "**Attack a result.** Red-team tasks are open on the tracker.",
+  "**Fix a step.** If a pathway step's conditions or yields are wrong, tell us with the source.",
+  "**Run a sealed test in your lab.** Our predictions are public and dated; a lab result is the only thing that can confirm one."
+ ]
+}

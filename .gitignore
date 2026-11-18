@@ -1,0 +1,58 @@
+# --- Environments, caches, binaries
+.venv/
+__pycache__/
+__pyphi_cache__/
+*.pyc
+*.pkl
+*.npz
+*.npy
+*.zip
+*.edf
+*.set
+*.fdt
+*.mat
+*.h5
+*.parquet
+.DS_Store
+*.log
+*.err
+pyphi.log
+node_modules/
+.wrangler/
+.env
+.env.*
+*.db-shm
+*.db-wal
+/tmp/
+
+# --- Private
+# Draft emails with addresses and named contacts
+/docs/outreach/
+# Account list (services and dates only, still private)
+/docs/ACCOUNTS.md
+# Live team board: agent notes, local paths, outreach status
+/board/board.db
+# Fable briefs and raw logs contain local paths
+/docs/fable_brief*.md
+/docs/fable_plan.log
+
+# --- Third-party data and downloads (not ours to republish)
+/data/
+experiments/*/raw/
+experiments/*/cache/
+experiments/*/work/
+experiments/*/ext/
+experiments/*/features/
+experiments/*/roi/
+experiments/**/raw_ft/
+experiments/**/ft_*.log
+**/.git/
+
+# Agent operating notes (inbox address, account steps) and owner to-do list
+/board/README.md
+/docs/HUMAN_LEADS.md
+/experiments/data_access/
+# Third-party index with researchers' personal emails
+experiments/dataset_audit/dream_datasets_index.csv
+# Large derived feature tables (rebuilt by each experiment)
+experiments/*/features.jsonl

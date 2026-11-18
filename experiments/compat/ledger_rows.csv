@@ -1,0 +1,2 @@
+id,claim,area,file,statistic,p_value,p_source,ci,n,distinct_text_unit,split,mode,family,family_size,replicated_independently,readme_claim,q_global,q_area,q_hier,q_all,note
+compat_planted1,Compatibility scorer (rule v1) flags the planted pH 2 -> pH 10 hand-off and every other planted violation with exactly its own code,compat,experiments/compat/RESULTS.md,28/28 planted cases correct (16/16 violations; 12/12 compliant twins clean),,not a significance test,,28 cases,no,none,control,M4:planted-controls,1,no,,,,,,method control on a toy scenario; no real pathway scored

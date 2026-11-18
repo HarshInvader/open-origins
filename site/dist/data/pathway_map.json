@@ -1,0 +1,3048 @@
+{
+ "format": "open-origins pathway map v1",
+ "rule_file": "docs/prereg/compatibility_rule.md",
+ "rule_sha256": "bfa572ed574fe6da17482750f4003d338718a856356ad594f2f02bdd8f61dd77",
+ "scorer": "experiments/compat/scorer.py",
+ "built_by": "experiments/pathway_map/score_map.py",
+ "stages": {
+  "S1": "C-C chemistry from feedstocks (sugars, C1-C2 acids)",
+  "S2": "nucleotides (activated or cyclic)",
+  "S3": "oligomers (non-templated polymerisation)",
+  "S4": "template copying / ribozyme polymerase",
+  "S5": "sustained replication of the replicator (net > 1 per cycle)"
+ },
+ "check_names": {
+  "F1": "pH",
+  "F2": "temperature",
+  "F3": "solvent",
+  "F4": "input source",
+  "F5": "concentration",
+  "F6": "purified hand-off",
+  "F7": "process validity",
+  "F8": "redox",
+  "F9": "setting",
+  "W1": "untested interference",
+  "W2": "thin concentration",
+  "W3": "claimed separation"
+ },
+ "legend": {
+  "yield_status": {
+   "demonstrated": "yield published by another lab from unpurified inputs",
+   "demonstrated_purified": "yield published, but from purified or commercial inputs",
+   "missing": "no published step known to us",
+   "unread": "published, but we could not open the full text"
+  },
+  "handoff_verdict": {
+   "continuous": "no hard fail, every check assessable",
+   "unverified": "no hard fail, but some checks lack numbers",
+   "blocked_by_missing_step": "one side is a missing/unread step",
+   "broken": "at least one hard fail (F1-F9)"
+  }
+ },
+ "ranking": [
+  "alkaline_vent",
+  "ice_rna",
+  "warm_pond",
+  "cyanosulfidic"
+ ],
+ "routes": [
+  {
+   "id": "cyanosulfidic",
+   "label": "Cyanosulfidic (Sutherland/Powner)",
+   "note": "Encoded via the readable 2-thiooxazole branch (Stairs 2017) because the canonical 2-aminooxazole route (Powner 2009) is paywalled; Powner steps C5 and C7 are 'unread'. Continues into Caimi 2025 polymerisation, which is pond chemistry inside the same surface-pool scenario.",
+   "summary": {
+    "n_steps": 10,
+    "n_handoffs": 9,
+    "n_unexplained": 8,
+    "n_hard_fail_handoffs": 5,
+    "n_blocked_by_missing": 3,
+    "n_unverified": 1,
+    "n_continuous": 0,
+    "n_warnings": 4,
+    "n_unassessed_checks": 45,
+    "n_demonstrated": 1,
+    "n_demonstrated_purified": 5,
+    "n_missing": 2,
+    "n_unread": 2,
+    "hard_fail_codes": [
+     "F3",
+     "F4",
+     "F6"
+    ],
+    "entry_flags": [],
+    "continuous": false,
+    "scorer_raw": {
+     "n_hard_fail_handoffs": 8,
+     "n_warnings": 4,
+     "n_missing_steps": 4,
+     "n_purified_steps": 5
+    },
+    "stages_with_yield": [
+     "S1",
+     "S2",
+     "S3"
+    ],
+    "stages_missing": [
+     "S4",
+     "S5"
+    ]
+   },
+   "scenario": {
+    "name": "cyanosulfidic",
+    "t_range": [
+     0,
+     150
+    ],
+    "uv": true,
+    "redox": "reducing",
+    "settings": [
+     "surface_pool",
+     "evaporite"
+    ],
+    "feedstocks": {
+     "HCN": "unstated",
+     "Cu(I)": "unstated",
+     "HSCN": "unstated",
+     "cyanoacetylene": "unstated",
+     "NH3": "unstated",
+     "phosphate": "unstated",
+     "H2S": "unstated",
+     "cyanamide": "unstated",
+     "urea": "unstated"
+    },
+    "streams": {
+     "rain": {
+      "ph": 7.0,
+      "t": 23.0,
+      "solvent": "water",
+      "redox": "neutral",
+      "species": {}
+     }
+    },
+    "basis": "Patel 2015 (10.1038/nchem.2202, 'Towards a geochemical scenario', Fig. 2): post-impact surface streams and pools leaching a thermally metamorphosed evaporite: HCN and NaCN/KCN, CaNCN -> cyanamide, CaC2 -> acetylene -> cyanoacetylene (Cu-catalysed, >25%), Mg3N2 -> NH3, phosphate from schreibersite/vivianite, hydrosulfide from metal sulfides, Cu(I) cyanocuprates; solar UV; sequential delivery by flow. Urea: Patel 2015 calls it a by-product of the cyanamide step. HSCN from HCN + sulfur per Stairs 2017 (10.1038/ncomms15270). Upper T 150 C: the scenario invokes geothermal/impact heating of dry evaporite; no step here runs above 100 C. Feedstock concentrations are not stated by the sources (INF). Rain stream pH is our assumption."
+   },
+   "steps": [
+    {
+     "id": "C1",
+     "name": "HCN -> glycolaldehyde and glyceraldehyde (trapped as cyanate oxazolidinones), Cu(I) photoredox",
+     "stage": "S1",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "HCN",
+       "conc": null,
+       "purified": false,
+       "note": "13C-KCN; concentration in SI, not read"
+      },
+      {
+       "species": "Cu(I)",
+       "conc": null,
+       "purified": false,
+       "note": "catalytic CuCN"
+      }
+     ],
+     "conditions": {
+      "ph": 7.0,
+      "t": null,
+      "solvent": "water",
+      "redox": "reducing"
+     },
+     "outputs": {
+      "species": {
+       "glycolaldehyde_oxazolidinone": null,
+       "glyceraldehyde_oxazolidinone": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "water",
+      "redox": "reducing"
+     },
+     "purified_inputs": false,
+     "yield_status": "demonstrated",
+     "yield_text": "oxazolidinone 13 (from glycolaldehyde) ~15% on average per 4 HCN; 14 (from glyceraldehyde) 1-5%; ~30% of HCN lost to a black polymer",
+     "source_doi": "10.1038/nchem.1467",
+     "source_url": "https://doi.org/10.1038/nchem.1467",
+     "where": "main text, 'neutralized by the addition of hydrochloric acid', 254 nm, 7 h; yields paragraph",
+     "notes": "The sugars are sequestered by cyanate as oxazolidinones; free glycolaldehyde is not the accumulated product. Temperature and concentrations are in the SI (not read). pH: 'neutralized' (recorded as 7). Patel 2015 reports an H2S-driven variant that gives the free sugars, but its main text gives no yields for it.",
+     "assumptions": []
+    },
+    {
+     "id": "C2",
+     "name": "glycolaldehyde + thiocyanic acid -> 2-thiooxazole",
+     "stage": "S1",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "glycolaldehyde",
+       "conc": 0.1,
+       "purified": true,
+       "note": "commercial glycolaldehyde (methods: 1 g, 16.7 mmol)"
+      },
+      {
+       "species": "HSCN",
+       "conc": 0.5,
+       "purified": false,
+       "note": "KSCN + HCl"
+      }
+     ],
+     "conditions": {
+      "ph": 0.0,
+      "t": 80.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "2-thiooxazole": 0.085
+      },
+      "ph": 0.0,
+      "t": 80.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "purified_inputs": true,
+     "yield_status": "demonstrated_purified",
+     "yield_text": "85% (isolated)",
+     "source_doi": "10.1038/ncomms15270",
+     "source_url": "https://doi.org/10.1038/ncomms15270",
+     "where": "Results 'Oxazole 4a...'; Methods (glycolaldehyde 1 g, KSCN 3.24 g, water 3 ml, 37% HCl 2.10 ml, RT 2 h then 80 C, 24 h)",
+     "notes": "pH not reported. From the stated amounts (about 25 mmol HCl in about 5 ml) we calculate pH below 1; recorded as 0 (a bound, our calculation). Product extracted into ethyl acetate and crystallised; the paper notes 2-thiooxazole can also crystallise directly from water and sublime.",
+     "assumptions": [
+      "pH 0 is our calculation from reagent amounts, not a measurement"
+     ]
+    },
+    {
+     "id": "C3",
+     "name": "2-thiooxazole + glyceraldehyde -> pentose oxazolidinone thiones (1a)",
+     "stage": "S1",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "2-thiooxazole",
+       "conc": 0.25,
+       "purified": true,
+       "note": "crystallised 4b"
+      },
+      {
+       "species": "glyceraldehyde",
+       "conc": 0.5,
+       "purified": true,
+       "note": "0.5-1 M; commercial"
+      }
+     ],
+     "conditions": {
+      "ph": 7.0,
+      "t": 60.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "thione_1a": 0.185
+      },
+      "ph": 7.0,
+      "t": 60.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "purified_inputs": true,
+     "yield_status": "demonstrated_purified",
+     "yield_text": "up to 74% thione 1a in 24 h (70% ribo+arabino 1:1, 30% lyxo/xylo)",
+     "source_doi": "10.1038/ncomms15270",
+     "source_url": "https://doi.org/10.1038/ncomms15270",
+     "where": "Results: 'near neutral pH (pH 4-9)... 60 C... up to 74% thione 1a in 24 h'",
+     "notes": "Works at pH 4-9; sluggish below 6, faster above 7. Recorded at pH 7.",
+     "assumptions": []
+    },
+    {
+     "id": "C4",
+     "name": "thione 1a + cyanoacetylene + ammonia -> arabino- and ribo-aminooxazoline (10a)",
+     "stage": "S2",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "thione_1a",
+       "conc": 0.24,
+       "purified": true,
+       "note": "isolated thione"
+      },
+      {
+       "species": "cyanoacetylene",
+       "conc": 0.25,
+       "purified": false,
+       "note": ""
+      },
+      {
+       "species": "NH3",
+       "conc": 1.0,
+       "purified": false,
+       "note": "as NH4Cl 1 M"
+      }
+     ],
+     "conditions": {
+      "ph": 9.0,
+      "t": 25.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "arabino_aminooxazoline": 0.108,
+       "ribo_aminooxazoline": 0.0792
+      },
+      "ph": 9.0,
+      "t": 25.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "purified_inputs": true,
+     "yield_status": "demonstrated_purified",
+     "yield_text": "15-23% 10a per pass from cyanovinyl thione 1b with NH4Cl 1 M at pH 8.5-10.5; 45% arabino + 33% ribo over two cyanovinylation/ammonolysis cycles at pH 10.5",
+     "source_doi": "10.1038/ncomms15270",
+     "source_url": "https://doi.org/10.1038/ncomms15270",
+     "where": "Results 'Aminooxazoline synthesis' (0.24 M 1a, 0.25 M cyanoacetylene, pH 7-10.5; repeated cycles at pH 10.5)",
+     "notes": "Room temperature (recorded as 25 C). ribo-10a crystallises spontaneously after two cycles. Encoded at pH 9 (inside the 8.5-10.5 range where a yield is reported) to give the route its most favourable reading; output concentrations use the two-cycle pH 10.5 yields, which is generous.",
+     "assumptions": [
+      "pH 9 chosen inside the source's 8.5-10.5 range; the 45/33% yield was at pH 10.5"
+     ]
+    },
+    {
+     "id": "C5",
+     "name": "arabino-aminooxazoline + cyanoacetylene -> 2,2'-anhydrocytidine",
+     "stage": "S2",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "arabino_aminooxazoline",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      },
+      {
+       "species": "cyanoacetylene",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      },
+      {
+       "species": "phosphate",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": 7.0,
+      "t": null,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "anhydrocytidine": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "unread",
+     "yield_text": "published (Powner 2009) but full text paywalled; not read",
+     "source_doi": "10.1038/nature08013",
+     "source_url": "https://doi.org/10.1038/nature08013",
+     "where": "abstract only; conditions from Stairs 2017's description",
+     "notes": "Stairs 2017 (10.1038/ncomms15270) states this step needs stoichiometric phosphate to keep pH < 7 and stop hydrolysis of the anhydronucleoside (which hydrolyses readily above pH 6.5). pH recorded as the bound 7.",
+     "assumptions": [
+      "pH 7 is the upper bound '< 7' from Stairs 2017"
+     ]
+    },
+    {
+     "id": "C6",
+     "name": "anhydrocytidine + phosphate + urea in formamide -> cytidine-2',3'-cyclic phosphate",
+     "stage": "S2",
+     "setting": "evaporite",
+     "inputs": [
+      {
+       "species": "anhydrocytidine",
+       "conc": 0.05,
+       "purified": true,
+       "note": "ancitabine, commercial; 0.03 mmol in 0.6 ml"
+      },
+      {
+       "species": "phosphate",
+       "conc": 0.1,
+       "purified": false,
+       "note": "NH4H2PO4 0.06 mmol"
+      },
+      {
+       "species": "urea",
+       "conc": 1.0,
+       "purified": false,
+       "note": "0.6 mmol"
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": 100.0,
+      "solvent": "formamide",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "cCMP": 0.022
+      },
+      "ph": null,
+      "t": 100.0,
+      "solvent": "formamide",
+      "redox": "unknown"
+     },
+     "purified_inputs": true,
+     "yield_status": "demonstrated_purified",
+     "yield_text": "44% (co-phosphorylated with 8,2'-anhydro-adenosine, 34%); formamide, 100 C, 72 h",
+     "source_doi": "10.1038/ncomms15270",
+     "source_url": "https://doi.org/10.1038/ncomms15270",
+     "where": "Results last paragraph ('44% and 34%'); Methods, phosphorylation Method V",
+     "notes": "pH not stated. Stairs 2017 also notes significant hydrolysis of 11 under urea-mediated phosphorylation. Powner 2009 phosphorylated by drying an aqueous solution with urea and phosphate (not read).",
+     "assumptions": []
+    },
+    {
+     "id": "C7",
+     "name": "UV: cytidine-2',3'-cyclic phosphate -> uridine-2',3'-cyclic phosphate (partial)",
+     "stage": "S2",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "cCMP",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "cUMP": null,
+       "cCMP": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "unread",
+     "yield_text": "published (Powner 2009, Fig. 5) but full text paywalled; not read",
+     "source_doi": "10.1038/nature08013",
+     "source_url": "https://doi.org/10.1038/nature08013",
+     "where": "abstract and figure titles only; Patel 2015 main text says UV 'partially converts'",
+     "notes": "Patel 2015 (10.1038/nchem.2202) intro: UV partially converts C>p to U>p and destroys stereoisomeric impurities.",
+     "assumptions": []
+    },
+    {
+     "id": "C8",
+     "name": "wet-dry polymerisation of 2',3'-cyclic nucleotides (A, U, G, C) -> RNA oligomers",
+     "stage": "S3",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "cAMP",
+       "conc": 0.0125,
+       "purified": true,
+       "note": "BioLog, sodium salt"
+      },
+      {
+       "species": "cUMP",
+       "conc": 0.0125,
+       "purified": true,
+       "note": "BioLog"
+      },
+      {
+       "species": "cGMP",
+       "conc": 0.0125,
+       "purified": true,
+       "note": "BioLog"
+      },
+      {
+       "species": "cCMP",
+       "conc": 0.0125,
+       "purified": true,
+       "note": "BioLog"
+      }
+     ],
+     "conditions": {
+      "ph": 11.0,
+      "t": 23.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "RNA_oligomers": 0.018,
+       "RNA_10mer": 5e-05
+      },
+      "ph": 11.0,
+      "t": 23.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "purified_inputs": true,
+     "yield_status": "demonstrated_purified",
+     "yield_text": "AUGC at pH 11: Y = 36% into oligomers; 6% 4-mer, 0.1% 10-mer (10 cycles)",
+     "source_doi": "10.1021/acscentsci.5c00488",
+     "source_url": "https://doi.org/10.1021/acscentsci.5c00488",
+     "where": "Abstract; Methods (50 mM total, KOH, 23 C, slow evaporation 8-10 h, water only per cycle)",
+     "notes": "Concentrations are per nucleotide (50 mM equimolar AUGC). RNA_oligomers is in nucleotide equivalents (36% of 50 mM).",
+     "assumptions": []
+    },
+    {
+     "id": "C9",
+     "name": "template-directed copying of oligomers under the same conditions",
+     "stage": "S4",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "RNA_oligomers",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "RNA_copies": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "Caimi 2025 proposes templated ligation 'under the same pH' as a next step; not shown.",
+     "assumptions": []
+    },
+    {
+     "id": "C10",
+     "name": "sustained replication of a replicator made from these oligomers",
+     "stage": "S5",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "RNA_copies",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "replicator": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "No source.",
+     "assumptions": []
+    }
+   ],
+   "handoffs": [
+    {
+     "id": "entry->C1",
+     "from_step": null,
+     "to_step": "C1",
+     "processes": [],
+     "verdict": "unverified",
+     "unexplained": false,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F5",
+       "species": "HCN",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "F5",
+       "species": "Cu(I)",
+       "reason": "source concentration not reported"
+      }
+     ],
+     "why": "Feedstocks of the scenario."
+    },
+    {
+     "id": "C1->C2",
+     "from_step": "C1",
+     "to_step": "C2",
+     "processes": [
+      {
+       "process": "heating",
+       "t_after": 80.0
+      }
+     ],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F4"
+     ],
+     "notes": [
+      "F4 glycolaldehyde not produced earlier nor a feedstock/stream species"
+     ],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "HSCN",
+       "reason": "scenario feedstock with no stated concentration"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Glycolaldehyde would have to be released from its oxazolidinone and the pot acidified; no named process does either."
+    },
+    {
+     "id": "C2->C3",
+     "from_step": "C2",
+     "to_step": "C3",
+     "processes": [
+      {
+       "process": "selective_separation",
+       "species": "2-thiooxazole",
+       "property": "crystallisation",
+       "demonstrated_by": "10.1038/ncomms15270"
+      },
+      {
+       "process": "drying"
+      },
+      {
+       "process": "rehydration",
+       "stream": "rain",
+       "f": 0.5,
+       "ph_after": 6.0
+      },
+      {
+       "process": "evaporation",
+       "factor": 6.0
+      },
+      {
+       "process": "heating",
+       "t_after": 60.0
+      }
+     ],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F4"
+     ],
+     "notes": [
+      "F4 glyceraldehyde not produced earlier nor a feedstock/stream species"
+     ],
+     "unassessed": [
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      }
+     ],
+     "why": "Most favourable reading: 2-thiooxazole crystallises from water (Stairs 2017), the crystals are redissolved by rain (acid left in the mother liquor; pH 6 stated by us, inside the rule's [0, 7] bound), concentrated 6x and warmed. Glyceraldehyde is still not available as a free sugar."
+    },
+    {
+     "id": "C3->C4",
+     "from_step": "C3",
+     "to_step": "C4",
+     "processes": [
+      {
+       "process": "selective_separation",
+       "species": "thione_1a",
+       "property": "crystallisation",
+       "demonstrated_by": "10.1038/ncomms15270"
+      },
+      {
+       "process": "cooling",
+       "t_after": 25.0
+      },
+      {
+       "process": "gas_exchange",
+       "ph_after": 9.0
+      }
+     ],
+     "verdict": "unverified",
+     "unexplained": false,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "cyanoacetylene",
+       "reason": "scenario feedstock with no stated concentration"
+      },
+      {
+       "code": "F5",
+       "species": "NH3",
+       "reason": "scenario feedstock with no stated concentration"
+      }
+     ],
+     "why": "Stairs 2017 crystallised all thione diastereomers (a lab crystallisation, counted as demonstrated; red-team target). NH3 uptake (gas exchange) raises pH by 2 units to 9 (the rule's cap)."
+    },
+    {
+     "id": "C4->C5",
+     "from_step": "C4",
+     "to_step": "C5",
+     "processes": [
+      {
+       "process": "gas_exchange",
+       "ph_after": 7.0
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [
+      "W1"
+     ],
+     "notes": [
+      "W1 thione_1a at 0.185 M untested (main input arabino_aminooxazoline 0.108 M)",
+      "W1 ribo_aminooxazoline at 0.0792 M untested (main input arabino_aminooxazoline 0.108 M)"
+     ],
+     "unassessed": [
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T needed not reported"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "arabino_aminooxazoline",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "F5",
+       "species": "cyanoacetylene",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "F5",
+       "species": "phosphate",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Phosphate-buffered pH < 7 is needed; CO2 uptake (gas exchange) lowers pH by 2 units to 7."
+    },
+    {
+     "id": "C5->C6",
+     "from_step": "C5",
+     "to_step": "C6",
+     "processes": [
+      {
+       "process": "drying"
+      },
+      {
+       "process": "transport",
+       "to_setting": "evaporite",
+       "dilution": 1.0
+      },
+      {
+       "process": "heating",
+       "t_after": 100.0
+      }
+     ],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F3",
+      "F6"
+     ],
+     "notes": [
+      "F3 solvent dry vs formamide",
+      "F6 anhydrocytidine purified by the source, no selective_separation"
+     ],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "anhydrocytidine",
+       "reason": "carried concentration unknown (earlier step did not report it)"
+      },
+      {
+       "code": "F5",
+       "species": "phosphate",
+       "reason": "scenario feedstock with no stated concentration"
+      },
+      {
+       "code": "F5",
+       "species": "urea",
+       "reason": "scenario feedstock with no stated concentration"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Drying onto evaporite and heating; the source step runs in formamide, which no listed process supplies."
+    },
+    {
+     "id": "C6->C7",
+     "from_step": "C6",
+     "to_step": "C7",
+     "processes": [
+      {
+       "process": "transport",
+       "to_setting": "surface_pool",
+       "dilution": 1.0
+      }
+     ],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F3",
+      "W1"
+     ],
+     "notes": [
+      "F3 solvent formamide vs water",
+      "W1 thione_1a at 0.185 M untested (main input cCMP 0.022 M)",
+      "W1 arabino_aminooxazoline at 0.108 M untested (main input cCMP 0.022 M)",
+      "W1 ribo_aminooxazoline at 0.0792 M untested (main input cCMP 0.022 M)"
+     ],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T needed not reported"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "cCMP",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Back to the pool for UV; formamide has to be removed, which no listed process does."
+    },
+    {
+     "id": "C7->C8",
+     "from_step": "C7",
+     "to_step": "C8",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F4",
+      "F6",
+      "W1"
+     ],
+     "notes": [
+      "F4 cAMP not produced earlier nor a feedstock/stream species",
+      "F6 cUMP purified by the source, no selective_separation",
+      "F4 cGMP not produced earlier nor a feedstock/stream species",
+      "F6 cCMP purified by the source, no selective_separation",
+      "W1 thione_1a at 0.185 M untested (main input cAMP 0 M)",
+      "W1 arabino_aminooxazoline at 0.108 M untested (main input cAMP 0 M)",
+      "W1 ribo_aminooxazoline at 0.0792 M untested (main input cAMP 0 M)"
+     ],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "cUMP",
+       "reason": "carried concentration unknown (earlier step did not report it)"
+      },
+      {
+       "code": "F5",
+       "species": "cCMP",
+       "reason": "carried concentration unknown (earlier step did not report it)"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Same pool; purines (cAMP, cGMP) are not made by this route."
+    },
+    {
+     "id": "C8->C9",
+     "from_step": "C8",
+     "to_step": "C9",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [
+      "W1"
+     ],
+     "notes": [
+      "W1 thione_1a at 0.185 M untested (main input RNA_oligomers 0.018 M)",
+      "W1 arabino_aminooxazoline at 0.108 M untested (main input RNA_oligomers 0.018 M)",
+      "W1 ribo_aminooxazoline at 0.0792 M untested (main input RNA_oligomers 0.018 M)"
+     ],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH needed not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T needed not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "RNA_oligomers",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Into a missing step."
+    },
+    {
+     "id": "C9->C10",
+     "from_step": "C9",
+     "to_step": "C10",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "RNA_copies",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Into a missing step."
+    }
+   ]
+  },
+  {
+   "id": "alkaline_vent",
+   "label": "Alkaline hydrothermal vent",
+   "note": "Only the first step (CO2 -> formate/acetate) has a published yield.",
+   "summary": {
+    "n_steps": 6,
+    "n_handoffs": 5,
+    "n_unexplained": 5,
+    "n_hard_fail_handoffs": 0,
+    "n_blocked_by_missing": 5,
+    "n_unverified": 0,
+    "n_continuous": 0,
+    "n_warnings": 0,
+    "n_unassessed_checks": 33,
+    "n_demonstrated": 1,
+    "n_demonstrated_purified": 0,
+    "n_missing": 5,
+    "n_unread": 0,
+    "hard_fail_codes": [],
+    "entry_flags": [],
+    "continuous": false,
+    "scorer_raw": {
+     "n_hard_fail_handoffs": 5,
+     "n_warnings": 0,
+     "n_missing_steps": 5,
+     "n_purified_steps": 0
+    },
+    "stages_with_yield": [
+     "S1"
+    ],
+    "stages_missing": [
+     "S2",
+     "S3",
+     "S4",
+     "S5"
+    ]
+   },
+   "scenario": {
+    "name": "alkaline_vent",
+    "t_range": [
+     0,
+     100
+    ],
+    "uv": false,
+    "redox": "reducing",
+    "settings": [
+     "vent_chimney",
+     "porous_rock"
+    ],
+    "feedstocks": {
+     "CO2": "unstated",
+     "H2": "unstated"
+    },
+    "streams": {
+     "vent_fluid": {
+      "ph": 11.0,
+      "t": 75.0,
+      "solvent": "water",
+      "redox": "reducing",
+      "species": {
+       "Na2S": 0.1,
+       "K2HPO4": 0.01,
+       "Na2Si3O7": 0.01
+      }
+     },
+     "ocean": {
+      "ph": 5.7,
+      "t": 6.0,
+      "solvent": "water",
+      "redox": "neutral",
+      "species": {
+       "Na2Si3O7": 0.01
+      }
+     }
+    },
+    "basis": "Altair 2025 (10.1021/jacs.5c01948, Tables 1-2): vent-simulant fluid Na2S 100 mM, K2HPO4 10 mM, Na2Si3O7 10 mM, H2-purged, pH 11, 75 C; ocean simulant Na2Si3O7 10 mM, CO2-purged, pH 5.7, 6 C. Hudson 2020 (10.1073/pnas.2002659117) uses the same vent fluid (pH 12.3) vs ocean pH 3.9. Thermophoresis allowed in vent_chimney/porous_rock (rule), cap 1000x (Matreux 2024, 10.1038/s41586-024-07193-7). The ocean stream's redox class (neutral) is our classification."
+   },
+   "steps": [
+    {
+     "id": "V1",
+     "name": "CO2 + H2 -> formate + acetate across Ni-FeS under pH and thermal gradients",
+     "stage": "S1",
+     "setting": "vent_chimney",
+     "inputs": [
+      {
+       "species": "CO2",
+       "conc": null,
+       "purified": false,
+       "note": "ocean side CO2-purged"
+      },
+      {
+       "species": "H2",
+       "conc": null,
+       "purified": false,
+       "note": "vent side H2-purged"
+      }
+     ],
+     "conditions": {
+      "ph": 5.7,
+      "t": 6.0,
+      "solvent": "water",
+      "redox": "reducing"
+     },
+     "outputs": {
+      "species": {
+       "formate": 0.0007359,
+       "acetate": 1.115e-05
+      },
+      "ph": 5.7,
+      "t": 6.0,
+      "solvent": "water",
+      "redox": "reducing"
+     },
+     "purified_inputs": false,
+     "yield_status": "demonstrated",
+     "yield_text": "formic acid 735.9 uM, acetic acid 11.15 uM after 18 h (ocean 6 C pH 5.7 / vent 75 C pH 11, Ni-FeS)",
+     "source_doi": "10.1021/jacs.5c01948",
+     "source_url": "https://doi.org/10.1021/jacs.5c01948",
+     "where": "Table 2 entry 3 (temperature-gradient 'fuel cell' arrangement)",
+     "notes": "Engineered set-up: Nafion membrane between compartments, mineral-painted Fe electrodes joined by a wire. At 25 C (Table 1) FeS2 gave 4.2 uM formic + 2.5 uM acetic acid. Hudson 2020 (10.1073/pnas.2002659117) microfluidic, pH 12.3/3.9, room temperature: 1.5 uM formate, none without the pH gradient. Conditions recorded are the ocean side, where product forms.",
+     "assumptions": []
+    },
+    {
+     "id": "V2",
+     "name": "formate/acetate -> C2-C3 sugars or aldehydes under vent conditions",
+     "stage": "S1",
+     "setting": "porous_rock",
+     "inputs": [
+      {
+       "species": "formate",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      },
+      {
+       "species": "acetate",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "C2_C3_sugars": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "No vent source in PAPERS.csv or found by us.",
+     "assumptions": []
+    },
+    {
+     "id": "V3",
+     "name": "-> nucleobases and ribonucleotides under vent conditions",
+     "stage": "S2",
+     "setting": "porous_rock",
+     "inputs": [
+      {
+       "species": "C2_C3_sugars",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "activated_nucleotides": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "No source.",
+     "assumptions": []
+    },
+    {
+     "id": "V4",
+     "name": "nucleotide polymerisation in vent pores",
+     "stage": "S3",
+     "setting": "porous_rock",
+     "inputs": [
+      {
+       "species": "activated_nucleotides",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "RNA_oligomers": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "Thermophoresis enriches nucleotides (Matreux 2024) but polymerisation in vent pores is not shown in sources read.",
+     "assumptions": []
+    },
+    {
+     "id": "V5",
+     "name": "template copying",
+     "stage": "S4",
+     "setting": "porous_rock",
+     "inputs": [
+      {
+       "species": "RNA_oligomers",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "RNA_copies": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "No source.",
+     "assumptions": []
+    },
+    {
+     "id": "V6",
+     "name": "sustained replication",
+     "stage": "S5",
+     "setting": "porous_rock",
+     "inputs": [
+      {
+       "species": "RNA_copies",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "replicator": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "No source.",
+     "assumptions": []
+    }
+   ],
+   "handoffs": [
+    {
+     "id": "entry->V1",
+     "from_step": null,
+     "to_step": "V1",
+     "processes": [],
+     "verdict": "unverified",
+     "unexplained": false,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F5",
+       "species": "CO2",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "F5",
+       "species": "H2",
+       "reason": "source concentration not reported"
+      }
+     ],
+     "why": "Feedstocks of the scenario."
+    },
+    {
+     "id": "V1->V2",
+     "from_step": "V1",
+     "to_step": "V2",
+     "processes": [
+      {
+       "process": "transport",
+       "to_setting": "porous_rock",
+       "dilution": 1.0
+      },
+      {
+       "process": "thermophoresis",
+       "factor": 1000.0
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH needed not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T needed not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "formate",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "F5",
+       "species": "acetate",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Thermophoretic enrichment in rock cracks, at the rule's 1000x cap (Matreux 2024)."
+    },
+    {
+     "id": "V2->V3",
+     "from_step": "V2",
+     "to_step": "V3",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "C2_C3_sugars",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Between missing steps."
+    },
+    {
+     "id": "V3->V4",
+     "from_step": "V3",
+     "to_step": "V4",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "activated_nucleotides",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Between missing steps."
+    },
+    {
+     "id": "V4->V5",
+     "from_step": "V4",
+     "to_step": "V5",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "RNA_oligomers",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Between missing steps."
+    },
+    {
+     "id": "V5->V6",
+     "from_step": "V5",
+     "to_step": "V6",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "RNA_copies",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Between missing steps."
+    }
+   ]
+  },
+  {
+   "id": "warm_pond",
+   "label": "Warm pond / wet-dry",
+   "note": "Absorbs task #17 (Caimi 2025 + Simonis 2026).",
+   "summary": {
+    "n_steps": 5,
+    "n_handoffs": 4,
+    "n_unexplained": 4,
+    "n_hard_fail_handoffs": 2,
+    "n_blocked_by_missing": 2,
+    "n_unverified": 0,
+    "n_continuous": 0,
+    "n_warnings": 0,
+    "n_unassessed_checks": 27,
+    "n_demonstrated": 0,
+    "n_demonstrated_purified": 1,
+    "n_missing": 3,
+    "n_unread": 1,
+    "hard_fail_codes": [
+     "F4",
+     "F6"
+    ],
+    "entry_flags": [
+     "F4"
+    ],
+    "continuous": false,
+    "scorer_raw": {
+     "n_hard_fail_handoffs": 5,
+     "n_warnings": 0,
+     "n_missing_steps": 4,
+     "n_purified_steps": 1
+    },
+    "stages_with_yield": [
+     "S3"
+    ],
+    "stages_missing": [
+     "S2",
+     "S4",
+     "S5"
+    ]
+   },
+   "scenario": {
+    "name": "warm_pond",
+    "t_range": [
+     0,
+     100
+    ],
+    "uv": true,
+    "redox": "neutral",
+    "settings": [
+     "surface_pool"
+    ],
+    "feedstocks": {},
+    "streams": {
+     "rain": {
+      "ph": 7.0,
+      "t": 23.0,
+      "solvent": "water",
+      "redox": "neutral",
+      "species": {}
+     }
+    },
+    "basis": "Caimi 2025 (10.1021/acscentsci.5c00488): pond with day-night wet-dry cycles, only water added each cycle, room temperature, pH set with KOH. Simonis 2026 (10.1177/15311074261427257, abstract only): Icelandic hot-spring waters (Seltun destructive, Hveradalir benign). Range 0-100 C = liquid water at the surface (our convention). No nucleotide feedstock is supplied by the pond sources."
+   },
+   "steps": [
+    {
+     "id": "P0",
+     "name": "nucleotide synthesis in the pond",
+     "stage": "S2",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "nucleotide_precursors",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "AMP_5": null,
+       "UMP_5": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "The pond sources start from laboratory nucleotides.",
+     "assumptions": []
+    },
+    {
+     "id": "P1",
+     "name": "wet-dry cycling of 5'-AMP / 5'-UMP in hot-spring water -> cyclic mononucleotides, U dimers",
+     "stage": "S2",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "AMP_5",
+       "conc": null,
+       "purified": true,
+       "note": "laboratory nucleotides"
+      },
+      {
+       "species": "UMP_5",
+       "conc": null,
+       "purified": true,
+       "note": "laboratory nucleotides"
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "cAMP": null,
+       "cUMP": null,
+       "UpU": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "purified_inputs": true,
+     "yield_status": "unread",
+     "yield_text": "abstract reports synthesis of cyclic mononucleotides and U dimers; no yield in abstract; full text not opened",
+     "source_doi": "10.1177/15311074261427257",
+     "source_url": "https://doi.org/10.1177/15311074261427257",
+     "where": "abstract (Europe PMC)",
+     "notes": "Abstract: Seltun (SE) water degraded AMP 95% and UMP 63% over 16 cycles and destroyed ~90% of A10/U10 in 4 cycles; Hveradalir (HV) water was as benign as nuclease-free water; cyclic mononucleotides formed. Isomer (2',3' vs 3',5') not stated in the abstract: the cAMP/cUMP outputs here are provisional.",
+     "assumptions": [
+      "cyclic products assumed to be the 2',3' isomers Caimi uses (F4 on cAMP/cUMP marked unassessed)"
+     ]
+    },
+    {
+     "id": "P2",
+     "name": "wet-dry polymerisation of 2',3'-cyclic nucleotides (A, U, G, C) -> RNA oligomers",
+     "stage": "S3",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "cAMP",
+       "conc": 0.0125,
+       "purified": true,
+       "note": "BioLog"
+      },
+      {
+       "species": "cUMP",
+       "conc": 0.0125,
+       "purified": true,
+       "note": "BioLog"
+      },
+      {
+       "species": "cGMP",
+       "conc": 0.0125,
+       "purified": true,
+       "note": "BioLog"
+      },
+      {
+       "species": "cCMP",
+       "conc": 0.0125,
+       "purified": true,
+       "note": "BioLog"
+      }
+     ],
+     "conditions": {
+      "ph": 11.0,
+      "t": 23.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "RNA_oligomers": 0.018,
+       "RNA_10mer": 5e-05
+      },
+      "ph": 11.0,
+      "t": 23.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "purified_inputs": true,
+     "yield_status": "demonstrated_purified",
+     "yield_text": "AUGC at pH 11: Y = 36%; 6% 4-mer, 0.1% 10-mer; G alone up to ~70% at pH 10",
+     "source_doi": "10.1021/acscentsci.5c00488",
+     "source_url": "https://doi.org/10.1021/acscentsci.5c00488",
+     "where": "Abstract; Table 1; Methods",
+     "notes": "Only water added per cycle. Natural Seltun spring water destroys ~90% of 10-mers in 4 cycles (Simonis 2026 abstract): not scored by the rule.",
+     "assumptions": []
+    },
+    {
+     "id": "P3",
+     "name": "template-directed copying / ligation at pond pH",
+     "stage": "S4",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "RNA_oligomers",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "RNA_copies": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "Proposed by Caimi 2025; not shown.",
+     "assumptions": []
+    },
+    {
+     "id": "P4",
+     "name": "sustained replication",
+     "stage": "S5",
+     "setting": "surface_pool",
+     "inputs": [
+      {
+       "species": "RNA_copies",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "replicator": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "No source.",
+     "assumptions": []
+    }
+   ],
+   "handoffs": [
+    {
+     "id": "entry->P0",
+     "from_step": null,
+     "to_step": "P0",
+     "processes": [],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F4"
+     ],
+     "notes": [
+      "F4 nucleotide_precursors not produced earlier nor a feedstock/stream species"
+     ],
+     "unassessed": [],
+     "why": "Feedstocks of the scenario."
+    },
+    {
+     "id": "P0->P1",
+     "from_step": "P0",
+     "to_step": "P1",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F6"
+     ],
+     "notes": [
+      "F6 AMP_5 purified by the source, no selective_separation",
+      "F6 UMP_5 purified by the source, no selective_separation"
+     ],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "AMP_5",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "F5",
+       "species": "UMP_5",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "From a missing step."
+    },
+    {
+     "id": "P1->P2",
+     "from_step": "P1",
+     "to_step": "P2",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F4",
+      "F6"
+     ],
+     "notes": [
+      "F6 cAMP purified by the source, no selective_separation",
+      "F6 cUMP purified by the source, no selective_separation",
+      "F4 cGMP not produced earlier nor a feedstock/stream species",
+      "F4 cCMP not produced earlier nor a feedstock/stream species"
+     ],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "cAMP",
+       "reason": "carried concentration unknown (earlier step did not report it)"
+      },
+      {
+       "code": "F5",
+       "species": "cUMP",
+       "reason": "carried concentration unknown (earlier step did not report it)"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      },
+      {
+       "code": "F4",
+       "species": "cAMP",
+       "reason": "isomer not stated in the Simonis abstract"
+      },
+      {
+       "code": "F4",
+       "species": "cUMP",
+       "reason": "isomer not stated in the Simonis abstract"
+      }
+     ],
+     "why": "Same pond. G and C cyclic nucleotides are not made by P1 (only A and U tested); P1's conditions are unread."
+    },
+    {
+     "id": "P2->P3",
+     "from_step": "P2",
+     "to_step": "P3",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH needed not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T needed not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "RNA_oligomers",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Into a missing step."
+    },
+    {
+     "id": "P3->P4",
+     "from_step": "P3",
+     "to_step": "P4",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "RNA_copies",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Into a missing step."
+    }
+   ]
+  },
+  {
+   "id": "ice_rna",
+   "label": "Ice / RNA (QT45, Attwater)",
+   "note": "Only route with demonstrated template copying; every RNA input is supplied purified.",
+   "summary": {
+    "n_steps": 5,
+    "n_handoffs": 4,
+    "n_unexplained": 4,
+    "n_hard_fail_handoffs": 2,
+    "n_blocked_by_missing": 2,
+    "n_unverified": 0,
+    "n_continuous": 0,
+    "n_warnings": 1,
+    "n_unassessed_checks": 25,
+    "n_demonstrated": 0,
+    "n_demonstrated_purified": 2,
+    "n_missing": 3,
+    "n_unread": 0,
+    "hard_fail_codes": [
+     "F4",
+     "F6"
+    ],
+    "entry_flags": [
+     "F4"
+    ],
+    "continuous": false,
+    "scorer_raw": {
+     "n_hard_fail_handoffs": 5,
+     "n_warnings": 1,
+     "n_missing_steps": 3,
+     "n_purified_steps": 2
+    },
+    "stages_with_yield": [
+     "S4"
+    ],
+    "stages_missing": [
+     "S2",
+     "S3",
+     "S5"
+    ]
+   },
+   "scenario": {
+    "name": "ice_freeze_thaw",
+    "t_range": [
+     -10,
+     80
+    ],
+    "uv": true,
+    "redox": "neutral",
+    "settings": [
+     "ice"
+    ],
+    "feedstocks": {
+     "Mg2+": "unstated"
+    },
+    "streams": {},
+    "basis": "Gianni 2026 (10.1126/science.adt2760) and Attwater 2025 (10.1038/s41557-025-01830-y): eutectic ice at -7 C, pH 9 (CHES-KOH), 0.4 mM MgCl2; Attwater cycles add HCl (to ~pH 3.6), heat to 80 C for 2 min, add KOH and refreeze. The range -10..80 C is set to the experiments' span; no geological source for this combination was read by us (Attwater cite a geothermal-ice setting; not checked). Mg2+ concentration in a natural setting is not stated (INF)."
+   },
+   "steps": [
+    {
+     "id": "I1",
+     "name": "prebiotic synthesis of trinucleotide triphosphates (pppNNN)",
+     "stage": "S2",
+     "setting": "ice",
+     "inputs": [
+      {
+       "species": "activated_nucleotides",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "pppNNN": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "Both ice papers use triplets prepared in the laboratory; no prebiotic route was in the sources read.",
+     "assumptions": []
+    },
+    {
+     "id": "I2",
+     "name": "abiotic emergence of a 45-nt polymerase ribozyme (QT45)",
+     "stage": "S3",
+     "setting": "ice",
+     "inputs": [
+      {
+       "species": "pppNNN",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "QT45_plus": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "QT45 was selected from transcribed random pools; abiotic oligomers reach ~10 nt at 0.1% (Caimi 2025).",
+     "assumptions": []
+    },
+    {
+     "id": "I3",
+     "name": "QT45 copies its complementary strand and itself from triplets in eutectic ice",
+     "stage": "S4",
+     "setting": "ice",
+     "inputs": [
+      {
+       "species": "QT45_plus",
+       "conc": 8e-08,
+       "purified": true,
+       "note": "in vitro transcribed ribozyme, 80 nM"
+      },
+      {
+       "species": "pppNNN",
+       "conc": 5e-08,
+       "purified": true,
+       "note": "50 nM each triplet; 15 defined or all 64"
+      },
+      {
+       "species": "primer",
+       "conc": 8e-09,
+       "purified": true,
+       "note": "8 nM primer BCy3P10 (template carries a primer-binding site)"
+      },
+      {
+       "species": "hexamer_pppAUUGAU",
+       "conc": 5e-08,
+       "purified": true,
+       "note": "needed for full-length (+) synthesis"
+      },
+      {
+       "species": "Mg2+",
+       "conc": 0.0004,
+       "purified": false,
+       "note": "0.4 mM MgCl2"
+      }
+     ],
+     "conditions": {
+      "ph": 9.0,
+      "t": -7.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "QT45_minus": 1.9e-11,
+       "QT45_plus_copy": 1.4e-11
+      },
+      "ph": 9.0,
+      "t": -7.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "purified_inputs": true,
+     "yield_status": "demonstrated_purified",
+     "yield_text": "(-) strand 0.24% and (+) strand 0.17% of template in 72 days; fidelity 94.1%/nt (64-triplet pool); 10.9% perfect full-length (-), 43.4% perfect (+) with defined triplets",
+     "source_doi": "10.1126/science.adt2760",
+     "source_url": "https://doi.org/10.1126/science.adt2760",
+     "where": "Abstract; Results 'self-synthesis'; Fig. 4 legend (8 nM primer and template, 80 nM ribozyme, 50 nM each substrate, 0.4 mM MgCl2, 1.2 mM KCl, 1 mM CHES-KOH pH 9, 72 days at -7 C)",
+     "notes": "(-) and (+) syntheses ran in separate tubes; (+) synthesis needed one pre-formed hexamer and one pH-heat-freeze cycle. Output concentrations = yield x 8 nM template (our arithmetic).",
+     "assumptions": []
+    },
+    {
+     "id": "I4",
+     "name": "pH-freeze-thaw cycling: triplet-based exponential replication of short dsRNA by the TPR ribozyme",
+     "stage": "S4",
+     "setting": "ice",
+     "inputs": [
+      {
+       "species": "TPR_ribozyme",
+       "conc": 2e-08,
+       "purified": true,
+       "note": "20 nM triplet polymerase ribozyme (5TU + t1 heterodimer); resupplied at each dilution"
+      },
+      {
+       "species": "pppNNN",
+       "conc": 1e-07,
+       "purified": true,
+       "note": "100 nM each"
+      },
+      {
+       "species": "primer",
+       "conc": 1e-07,
+       "purified": true,
+       "note": "100 nM each primer"
+      },
+      {
+       "species": "short_dsRNA_template",
+       "conc": 8e-09,
+       "purified": true,
+       "note": "up to 1 pmol per 125 ul"
+      },
+      {
+       "species": "Mg2+",
+       "conc": 0.0004,
+       "purified": false,
+       "note": "0.4 mM MgCl2"
+      }
+     ],
+     "conditions": {
+      "ph": 9.0,
+      "t": -7.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "short_dsRNA_copies": null
+      },
+      "ph": 9.0,
+      "t": -7.0,
+      "solvent": "water",
+      "redox": "unknown"
+     },
+     "purified_inputs": true,
+     "yield_status": "demonstrated_purified",
+     "yield_text": "1.2-1.46-fold per cycle for short (+8 to +14 nt) products; 29-nt ribozyme fragment up to 1.26-fold per cycle; A_D duplex 9x (+) and 31x (-) over 21 cycles",
+     "source_doi": "10.1038/s41557-025-01830-y",
+     "source_url": "https://doi.org/10.1038/s41557-025-01830-y",
+     "where": "Results 'Open-ended RNA amplification', Fig. 3 legend, 'Fragmentary self-replication'; Methods 'Replication cycling'",
+     "notes": "Each cycle: +0.6 mM HCl, 80 C 2 min, +KOH, flash-freeze in liquid N2, -7 C ~24 h. Freezing concentrates solutes ~440x. A different ribozyme (TPR) from QT45; the whole replicase is not replicated.",
+     "assumptions": []
+    },
+    {
+     "id": "I5",
+     "name": "exponential replication of a whole polymerase ribozyme by itself",
+     "stage": "S5",
+     "setting": "ice",
+     "inputs": [
+      {
+       "species": "QT45_plus",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      },
+      {
+       "species": "pppNNN",
+       "conc": null,
+       "purified": false,
+       "note": ""
+      }
+     ],
+     "conditions": {
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "outputs": {
+      "species": {
+       "replicator": null
+      },
+      "ph": null,
+      "t": null,
+      "solvent": "unknown",
+      "redox": "unknown"
+     },
+     "purified_inputs": false,
+     "yield_status": "missing",
+     "yield_text": "no published step known to us",
+     "source_doi": null,
+     "source_url": null,
+     "where": "",
+     "notes": "QT45 makes each strand at ~0.2% per 72 days (task #18 in RESULTS.md); the TPR replicates fragments only.",
+     "assumptions": []
+    }
+   ],
+   "handoffs": [
+    {
+     "id": "entry->I1",
+     "from_step": null,
+     "to_step": "I1",
+     "processes": [],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F4"
+     ],
+     "notes": [
+      "F4 activated_nucleotides not produced earlier nor a feedstock/stream species"
+     ],
+     "unassessed": [],
+     "why": "Feedstocks of the scenario."
+    },
+    {
+     "id": "I1->I2",
+     "from_step": "I1",
+     "to_step": "I2",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "pppNNN",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Between missing steps."
+    },
+    {
+     "id": "I2->I3",
+     "from_step": "I2",
+     "to_step": "I3",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F4",
+      "F6"
+     ],
+     "notes": [
+      "F6 QT45_plus purified by the source, no selective_separation",
+      "F6 pppNNN purified by the source, no selective_separation",
+      "F4 primer not produced earlier nor a feedstock/stream species",
+      "F4 hexamer_pppAUUGAU not produced earlier nor a feedstock/stream species"
+     ],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH after hand-off not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T after hand-off not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "QT45_plus",
+       "reason": "carried concentration unknown (earlier step did not report it)"
+      },
+      {
+       "code": "F5",
+       "species": "pppNNN",
+       "reason": "carried concentration unknown (earlier step did not report it)"
+      },
+      {
+       "code": "F5",
+       "species": "Mg2+",
+       "reason": "scenario feedstock with no stated concentration"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "From a missing step."
+    },
+    {
+     "id": "I3->I4",
+     "from_step": "I3",
+     "to_step": "I4",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "broken",
+     "unexplained": true,
+     "flags": [
+      "F4",
+      "F6",
+      "W1"
+     ],
+     "notes": [
+      "F4 TPR_ribozyme not produced earlier nor a feedstock/stream species",
+      "F6 pppNNN purified by the source, no selective_separation",
+      "F4 primer not produced earlier nor a feedstock/stream species",
+      "F4 short_dsRNA_template not produced earlier nor a feedstock/stream species",
+      "W1 QT45_minus at 1.9e-11 M untested (main input TPR_ribozyme 0 M)",
+      "W1 QT45_plus_copy at 1.4e-11 M untested (main input TPR_ribozyme 0 M)"
+     ],
+     "unassessed": [
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "pppNNN",
+       "reason": "carried concentration unknown (earlier step did not report it)"
+      },
+      {
+       "code": "F5",
+       "species": "Mg2+",
+       "reason": "scenario feedstock with no stated concentration"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Same ice; Attwater's replicator is a different ribozyme with primers and a template supplied."
+    },
+    {
+     "id": "I4->I5",
+     "from_step": "I4",
+     "to_step": "I5",
+     "processes": [
+      {
+       "process": "same_pot"
+      }
+     ],
+     "verdict": "blocked_by_missing_step",
+     "unexplained": true,
+     "flags": [],
+     "notes": [],
+     "unassessed": [
+      {
+       "code": "F1",
+       "species": "",
+       "reason": "pH needed not reported"
+      },
+      {
+       "code": "F2",
+       "species": "",
+       "reason": "T needed not reported"
+      },
+      {
+       "code": "F3",
+       "species": "",
+       "reason": "solvent not stated"
+      },
+      {
+       "code": "F8",
+       "species": "",
+       "reason": "redox class not stated by the source"
+      },
+      {
+       "code": "F5",
+       "species": "QT45_plus",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "F5",
+       "species": "pppNNN",
+       "reason": "source concentration not reported"
+      },
+      {
+       "code": "W1",
+       "species": "*",
+       "reason": "some carried or main-input concentrations unknown"
+      }
+     ],
+     "why": "Into a missing step."
+    }
+   ]
+  }
+ ],
+ "gaps": [
+  {
+   "route": "alkaline_vent",
+   "where": "V6",
+   "stage": "S5",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "sustained replication. No source.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 0,
+   "rank": 1
+  },
+  {
+   "route": "cyanosulfidic",
+   "where": "C10",
+   "stage": "S5",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "sustained replication of a replicator made from these oligomers. No source.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 0,
+   "rank": 2
+  },
+  {
+   "route": "ice_rna",
+   "where": "I5",
+   "stage": "S5",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "exponential replication of a whole polymerase ribozyme by itself. QT45 makes each strand at ~0.2% per 72 days (task #18 in RESULTS.md); the TPR replicates fragments only.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 0,
+   "rank": 3
+  },
+  {
+   "route": "warm_pond",
+   "where": "P4",
+   "stage": "S5",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "sustained replication. No source.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 0,
+   "rank": 4
+  },
+  {
+   "route": "alkaline_vent",
+   "where": "V3",
+   "stage": "S2",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "-> nucleobases and ribonucleotides under vent conditions. No source.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 5
+  },
+  {
+   "route": "ice_rna",
+   "where": "I1",
+   "stage": "S2",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "prebiotic synthesis of trinucleotide triphosphates (pppNNN). Both ice papers use triplets prepared in the laboratory; no prebiotic route was in the sources read.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 6
+  },
+  {
+   "route": "warm_pond",
+   "where": "P0",
+   "stage": "S2",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "nucleotide synthesis in the pond. The pond sources start from laboratory nucleotides.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 7
+  },
+  {
+   "route": "cyanosulfidic",
+   "where": "C5",
+   "stage": "S2",
+   "kind": "unread_step",
+   "codes": [],
+   "detail": "arabino-aminooxazoline + cyanoacetylene -> 2,2'-anhydrocytidine. Stairs 2017 (10.1038/ncomms15270) states this step needs stoichiometric phosphate to keep pH < 7 and stop hydrolysis of the anhydronucleoside (which hydrolyses readily above pH 6.5). pH recorded as the bound 7.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 8
+  },
+  {
+   "route": "cyanosulfidic",
+   "where": "C7",
+   "stage": "S2",
+   "kind": "unread_step",
+   "codes": [],
+   "detail": "UV: cytidine-2',3'-cyclic phosphate -> uridine-2',3'-cyclic phosphate (partial). Patel 2015 (10.1038/nchem.2202) intro: UV partially converts C>p to U>p and destroys stereoisomeric impurities.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 9
+  },
+  {
+   "route": "warm_pond",
+   "where": "P1",
+   "stage": "S2",
+   "kind": "unread_step",
+   "codes": [],
+   "detail": "wet-dry cycling of 5'-AMP / 5'-UMP in hot-spring water -> cyclic mononucleotides, U dimers. Abstract: Seltun (SE) water degraded AMP 95% and UMP 63% over 16 cycles and destroyed ~90% of A10/U10 in 4 cycles; Hveradalir (HV) water was as benign as nuclease-free water; cyclic mononucleotides formed. Isomer (2',3' vs 3',5') not stated in the abstract: the cAMP/cUMP outputs here are provisional.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 10
+  },
+  {
+   "route": "cyanosulfidic",
+   "where": "C5->C6",
+   "stage": "S2",
+   "kind": "hard_fail",
+   "codes": [
+    "F3",
+    "F6"
+   ],
+   "detail": "F3 solvent dry vs formamide | F6 anhydrocytidine purified by the source, no selective_separation. Hand-off: Drying onto evaporite and heating; the source step runs in formamide, which no listed process supplies.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 11
+  },
+  {
+   "route": "cyanosulfidic",
+   "where": "C6->C7",
+   "stage": "S2",
+   "kind": "hard_fail",
+   "codes": [
+    "F3"
+   ],
+   "detail": "F3 solvent formamide vs water | W1 thione_1a at 0.185 M untested (main input cCMP 0.022 M) | W1 arabino_aminooxazoline at 0.108 M untested (main input cCMP 0.022 M) | W1 ribo_aminooxazoline at 0.0792 M untested (main input cCMP 0.022 M). Hand-off: Back to the pool for UV; formamide has to be removed, which no listed process does.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 12
+  },
+  {
+   "route": "ice_rna",
+   "where": "entry->I1",
+   "stage": "S2",
+   "kind": "hard_fail",
+   "codes": [
+    "F4"
+   ],
+   "detail": "F4 activated_nucleotides not produced earlier nor a feedstock/stream species. Hand-off: Feedstocks of the scenario.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 13
+  },
+  {
+   "route": "warm_pond",
+   "where": "entry->P0",
+   "stage": "S2",
+   "kind": "hard_fail",
+   "codes": [
+    "F4"
+   ],
+   "detail": "F4 nucleotide_precursors not produced earlier nor a feedstock/stream species. Hand-off: Feedstocks of the scenario.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 14
+  },
+  {
+   "route": "warm_pond",
+   "where": "P0->P1",
+   "stage": "S2",
+   "kind": "hard_fail",
+   "codes": [
+    "F6"
+   ],
+   "detail": "F6 AMP_5 purified by the source, no selective_separation | F6 UMP_5 purified by the source, no selective_separation. Hand-off: From a missing step.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 15
+  },
+  {
+   "route": "alkaline_vent",
+   "where": "V5",
+   "stage": "S4",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "template copying. No source.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 16
+  },
+  {
+   "route": "cyanosulfidic",
+   "where": "C9",
+   "stage": "S4",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "template-directed copying of oligomers under the same conditions. Caimi 2025 proposes templated ligation 'under the same pH' as a next step; not shown.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 17
+  },
+  {
+   "route": "warm_pond",
+   "where": "P3",
+   "stage": "S4",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "template-directed copying / ligation at pond pH. Proposed by Caimi 2025; not shown.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 18
+  },
+  {
+   "route": "ice_rna",
+   "where": "I2->I3",
+   "stage": "S4",
+   "kind": "hard_fail",
+   "codes": [
+    "F4",
+    "F6"
+   ],
+   "detail": "F6 QT45_plus purified by the source, no selective_separation | F6 pppNNN purified by the source, no selective_separation | F4 primer not produced earlier nor a feedstock/stream species | F4 hexamer_pppAUUGAU not produced earlier nor a feedstock/stream species. Hand-off: From a missing step.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 19
+  },
+  {
+   "route": "ice_rna",
+   "where": "I3->I4",
+   "stage": "S4",
+   "kind": "hard_fail",
+   "codes": [
+    "F4",
+    "F6"
+   ],
+   "detail": "F4 TPR_ribozyme not produced earlier nor a feedstock/stream species | F6 pppNNN purified by the source, no selective_separation | F4 primer not produced earlier nor a feedstock/stream species | F4 short_dsRNA_template not produced earlier nor a feedstock/stream species | W1 QT45_minus at 1.9e-11 M untested (main input TPR_ribozyme 0 M) | W1 QT45_plus_copy at 1.4e-11 M untested (main input TPR_ribozyme 0 M). Hand-off: Same ice; Attwater's replicator is a different ribozyme with primers and a template supplied.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 1,
+   "rank": 20
+  },
+  {
+   "route": "alkaline_vent",
+   "where": "V4",
+   "stage": "S3",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "nucleotide polymerisation in vent pores. Thermophoresis enriches nucleotides (Matreux 2024) but polymerisation in vent pores is not shown in sources read.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 2,
+   "rank": 21
+  },
+  {
+   "route": "ice_rna",
+   "where": "I2",
+   "stage": "S3",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "abiotic emergence of a 45-nt polymerase ribozyme (QT45). QT45 was selected from transcribed random pools; abiotic oligomers reach ~10 nt at 0.1% (Caimi 2025).",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 2,
+   "rank": 22
+  },
+  {
+   "route": "cyanosulfidic",
+   "where": "C7->C8",
+   "stage": "S3",
+   "kind": "hard_fail",
+   "codes": [
+    "F4",
+    "F6"
+   ],
+   "detail": "F4 cAMP not produced earlier nor a feedstock/stream species | F6 cUMP purified by the source, no selective_separation | F4 cGMP not produced earlier nor a feedstock/stream species | F6 cCMP purified by the source, no selective_separation | W1 thione_1a at 0.185 M untested (main input cAMP 0 M) | W1 arabino_aminooxazoline at 0.108 M untested (main input cAMP 0 M) | W1 ribo_aminooxazoline at 0.0792 M untested (main input cAMP 0 M). Hand-off: Same pool; purines (cAMP, cGMP) are not made by this route.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 2,
+   "rank": 23
+  },
+  {
+   "route": "warm_pond",
+   "where": "P1->P2",
+   "stage": "S3",
+   "kind": "hard_fail",
+   "codes": [
+    "F4",
+    "F6"
+   ],
+   "detail": "F6 cAMP purified by the source, no selective_separation | F6 cUMP purified by the source, no selective_separation | F4 cGMP not produced earlier nor a feedstock/stream species | F4 cCMP not produced earlier nor a feedstock/stream species. Hand-off: Same pond. G and C cyclic nucleotides are not made by P1 (only A and U tested); P1's conditions are unread.",
+   "routes_blocked_at_stage": 4,
+   "routes_with_unpurified_yield_at_stage": 0,
+   "routes_with_any_yield_at_stage": 2,
+   "rank": 24
+  },
+  {
+   "route": "alkaline_vent",
+   "where": "V2",
+   "stage": "S1",
+   "kind": "missing_step",
+   "codes": [],
+   "detail": "formate/acetate -> C2-C3 sugars or aldehydes under vent conditions. No vent source in PAPERS.csv or found by us.",
+   "routes_blocked_at_stage": 2,
+   "routes_with_unpurified_yield_at_stage": 2,
+   "routes_with_any_yield_at_stage": 2,
+   "rank": 25
+  },
+  {
+   "route": "cyanosulfidic",
+   "where": "C1->C2",
+   "stage": "S1",
+   "kind": "hard_fail",
+   "codes": [
+    "F4"
+   ],
+   "detail": "F4 glycolaldehyde not produced earlier nor a feedstock/stream species. Hand-off: Glycolaldehyde would have to be released from its oxazolidinone and the pot acidified; no named process does either.",
+   "routes_blocked_at_stage": 2,
+   "routes_with_unpurified_yield_at_stage": 2,
+   "routes_with_any_yield_at_stage": 2,
+   "rank": 26
+  },
+  {
+   "route": "cyanosulfidic",
+   "where": "C2->C3",
+   "stage": "S1",
+   "kind": "hard_fail",
+   "codes": [
+    "F4"
+   ],
+   "detail": "F4 glyceraldehyde not produced earlier nor a feedstock/stream species. Hand-off: Most favourable reading: 2-thiooxazole crystallises from water (Stairs 2017), the crystals are redissolved by rain (acid left in the mother liquor; pH 6 stated by us, inside the rule's [0, 7] bound), concentrated 6x and warmed. Glyceraldehyde is still not available as a free sugar.",
+   "routes_blocked_at_stage": 2,
+   "routes_with_unpurified_yield_at_stage": 2,
+   "routes_with_any_yield_at_stage": 2,
+   "rank": 27
+  }
+ ]
+}

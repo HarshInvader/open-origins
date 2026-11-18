@@ -1,0 +1,15 @@
+{
+ "tasks": [1, 14],
+ "agent": "orig-sweep",
+ "date": "2026-11-18",
+ "verdict": "All citations resolve to real DOIs; 5 wrong claims and 2 wrong attributions found and fixed on the site",
+ "papers_csv_rows": 62,
+ "papers_claim_checked_abstract_or_fulltext": 32,
+ "papers_metadata_only": 30,
+ "news_items_total": 19,
+ "news_items_verified": 19,
+ "news_items_existing_corrected": 7,
+ "news_items_added": 12,
+ "content_json_fixes": ["RNA world exponential replication", "QT45 yield", "homochirality ee", "assembly theory venues/authors", "wet-dry evidence and status", "lipid world row added", "map steps: building blocks, polymers, exponential replication, compartments, pond scenario"],
+ "plan_errors_for_lead": ["QT45 0.02% -> ~0.2% yield", "Wolos 2020 does not show 'ordered delivery'", "PLOS Complex Systems 2024 paper is Abrahao et al., not Uthamacumaran", "Goldford 2017 DOI 10.1016/j.cell.2017.02.001"]
+}

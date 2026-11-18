@@ -1,0 +1,15 @@
+{
+ "task": 2,
+ "agent": "orig-2",
+ "verdict": "negative: net replication below 1 per cycle",
+ "lambda_cycle": 0.42931503916306835,
+ "lambda_cycle_perfect": 0.42796171499650487,
+ "lambda_no_decay": 1.004043881975345,
+ "fold_improvement_needed": 262.0348895314534,
+ "breakeven_yield_per_72d": 0.529284532169215,
+ "per_ribozyme_yield_minus": 0.00023999999999999998,
+ "planted_pass": true,
+ "source_doi": "10.1126/science.adt2760",
+ "prereg": "docs/prereg/qt45_net_replication.md",
+ "details": "results_calc.json"
+}

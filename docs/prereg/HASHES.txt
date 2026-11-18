@@ -1,0 +1,5 @@
+bfa572ed574fe6da17482750f4003d338718a856356ad594f2f02bdd8f61dd77  docs/prereg/compatibility_rule.md  2026-11-18  orig-1  task#3 step-compatibility rule v1
+b60f5f12adf90262ae8a1cd5dc0e6b88b6bb2274ea4e62cd02a49cbb04d9609d  docs/prereg/assembly_index_size_null.md  orig-2  2026-11-18T06:52:16Z
+22e3ab3f6ec717eabe324dab5cb4fcbd64fc5898c7349196bebe7bdff9762053  docs/prereg/raf_null_xavier2020.md  2026-11-18  orig-1  task#6 RAF null test on Xavier 2020 dataset S4
+063f366d049ea21653f308a8a5015771dddc139123860d2e8becad3c15496672  docs/prereg/qt45_net_replication.md  orig-2  2026-11-18T07:07:46Z  task#2 (inputs read before writing; disclosed)
+4b4aff1067cc727e3d5e938962365c1822af7f837e7fff38b7bf80489d6b9854  docs/prereg/luca_planted_recovery.md  orig-2  2026-11-18T07:12:12Z  task#9 simulation

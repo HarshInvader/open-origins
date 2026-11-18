@@ -1,0 +1,18 @@
+{
+ "checks": {
+  "n": 15,
+  "agree_original_molfile": 1.0
+ },
+ "coconut_55": {
+  "n": 55,
+  "agree_original_molfile": 1.0
+ },
+ "gdb13_1201": {
+  "n": 1201,
+  "agree_original_molfile": 1.0
+ },
+ "gdb17_200": {
+  "n": 200,
+  "agree_original_molfile": 1.0
+ }
+}

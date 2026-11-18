@@ -1,0 +1,81 @@
+{
+ "inputs": {
+  "Y_minus": 0.0024,
+  "Y_plus": 0.0017,
+  "T_days": 72.0,
+  "perfect_minus": 0.109,
+  "perfect_plus": 0.434,
+  "fid_minus": 0.941,
+  "primer_nM": 8.0,
+  "template_nM": 8.0,
+  "ribozyme_nM": 80.0,
+  "k_decay_per_day": 0.0059,
+  "HH_yield_defined": 0.0188,
+  "HH_yield_NNN": 0.0039,
+  "HH_days": 65.0
+ },
+ "copies_per_template_72d_minus": 0.0024,
+ "copies_per_ribozyme_72d_minus": 0.00023999999999999998,
+ "copies_per_ribozyme_72d_plus": 0.00016999999999999999,
+ "survival_72d": 0.6539005521631407,
+ "survival_cycle_144d": 0.42758593211926027,
+ "lambda_per_72d_any_fulllength": 0.6552213665342945,
+ "lambda_per_cycle_144d_any_fulllength": 0.42931503916306835,
+ "lambda_per_cycle_144d_perfect_copies": 0.42796171499650487,
+ "lambda_per_cycle_no_decay": 1.004043881975345,
+ "new_plus_per_plus_per_cycle_no_decay": 4.079999999999999e-06,
+ "breakeven_geomean_yield_per_72d": 0.529284532169215,
+ "fold_improvement_needed": 262.0348895314534,
+ "synthesis_rate_per_day_geomean": 2.8054180384339104e-05,
+ "decay_to_synthesis_ratio": 210.30733812824562,
+ "sensitivity_half_life_days": {
+  "117": {
+   "lambda_cycle": 0.4278132566867172,
+   "breakeven_yield": 0.5319663573359739
+  },
+  "234": {
+   "lambda_cycle": 0.65539551646639,
+   "breakeven_yield": 0.23772628530542805
+  },
+  "500": {
+   "lambda_cycle": 0.8223487855994489,
+   "breakeven_yield": 0.1049644847999116
+  },
+  "1000": {
+   "lambda_cycle": 0.9086662022057282,
+   "breakeven_yield": 0.05117290908770644
+  },
+  "5000": {
+   "lambda_cycle": 0.984199251232045,
+   "breakeven_yield": 0.010031298917315468
+  },
+  "1000000000.0": {
+   "lambda_cycle": 1.004043781758523,
+   "breakeven_yield": 4.990659818737697e-08
+  }
+ },
+ "halflife_needed_for_lambda1_days": 24732.392105535826,
+ "eigen_s_min_recomputed": 165.37567587122962,
+ "perfect_genome_copy_prob_q^L": 0.006046838476890965,
+ "planted_check": {
+  "Yp0.0017_Ym0.0024_k0.0059": {
+   "ode_lambda_72d": 0.6552409189688357,
+   "analytic_lambda_72d": 0.6552227013900285,
+   "matrix_formula": 0.6552213665342945,
+   "rel_err_ode_vs_analytic": 2.7803644117670335e-05
+  },
+  "Yp0.3_Ym0.5_k0.001": {
+   "ode_lambda_72d": 1.370668172578736,
+   "analytic_lambda_72d": 1.370668167733882,
+   "matrix_formula": 1.2909239620720325,
+   "rel_err_ode_vs_analytic": 3.5346659297504678e-09
+  },
+  "Yp0.9_Ym0.7_k0.0059": {
+   "ode_lambda_72d": 1.4461797049924978,
+   "analytic_lambda_72d": 1.4461797049824354,
+   "matrix_formula": 1.1729180251205875,
+   "rel_err_ode_vs_analytic": 6.957914930433805e-12
+  }
+ },
+ "planted_pass": true
+}

@@ -1,0 +1,21 @@
+{
+  "task": 3,
+  "rule_file": "docs/prereg/compatibility_rule.md",
+  "rule_sha256": "bfa572ed574fe6da17482750f4003d338718a856356ad594f2f02bdd8f61dd77",
+  "n_cases": 28,
+  "n_correct": 28,
+  "sensitivity": 1.0,
+  "n_violation_cases": 16,
+  "specificity": 1.0,
+  "n_compliant_cases": 12,
+  "planted_pH2_to_pH10": {
+    "flagged": true,
+    "got": {
+      "1->2": [
+        "F1"
+      ]
+    },
+    "notes": "F1 pH 2 after hand-off, step needs 10"
+  },
+  "passed": true
+}

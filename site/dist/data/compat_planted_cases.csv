@@ -1,0 +1,29 @@
+case,expected,got,ok,notes
+baseline,{},{},True,
+PLANTED pH2->pH10 same_pot,"{""1->2"": [""F1""]}","{""1->2"": [""F1""]}",True,"F1 pH 2 after hand-off, step needs 10"
+twin: mixing with pH12 stream,{},{},True,
+"mixing claims pH outside range (invalid process not applied, so pH also fails)","{""1->2"": [""F1"", ""F7""]}","{""1->2"": [""F1"", ""F7""]}",True,"F7 mixing: pH 13 not between 7 and 12 | F1 pH 7 after hand-off, step needs 13"
+"F2 T jump, no heating","{""1->2"": [""F2""]}","{""1->2"": [""F2""]}",True,"F2 T 25 after hand-off, step needs 90"
+twin: heating,{},{},True,
+"F3 solvent change, no process","{""1->2"": [""F3""]}","{""1->2"": [""F3""]}",True,F3 solvent water vs dry
+twin: drying,{},{},True,
+F4 input from nowhere,"{""1->2"": [""F4""]}","{""1->2"": [""F4""]}",True,F4 Q not produced earlier nor a feedstock/stream species
+twin: input is a feedstock,{},{},True,
+F5 1000x short,"{""1->2"": [""F5""]}","{""1->2"": [""F5""]}",True,F5 X: available 0.01 M vs used 10 M
+twin: evaporation 1000x,{},{},True,
+W2 20x short,"{""1->2"": [""W2""]}","{""1->2"": [""W2""]}",True,W2 X: available 0.01 M vs used 0.2 M
+twin: evaporation 100x,{},{},True,
+F6 purified input,"{""1->2"": [""F6""]}","{""1->2"": [""F6""]}",True,"F6 X purified by the source, no selective_separation"
+twin: demonstrated crystallisation,{},{},True,
+W3 separation not demonstrated,"{""1->2"": [""W3""]}","{""1->2"": [""W3""]}",True,
+F7 unknown process,"{""1->2"": [""F7""]}","{""1->2"": [""F7""]}",True,F7 process 'magic_filter' not on the closed list
+F7 evaporation over cap,"{""1->2"": [""F7""]}","{""1->2"": [""F7""]}",True,"F7 evaporation factor 100000.0 outside [1,1000.0]"
+twin: evaporation at cap,{},{},True,
+F7 thermophoresis in a pool,"{""1->2"": [""F7""]}","{""1->2"": [""F7""]}",True,F7 thermophoresis in setting 'surface_pool' without a thermal gradient
+twin: transport to porous rock first,{},{},True,
+F7 UV where there is none,"{""1->2"": [""F7""]}","{""1->2"": [""F7""]}",True,F7 uv_irradiation in a scenario without UV
+F8 redox mismatch,"{""1->2"": [""F8""]}","{""1->2"": [""F8""]}",True,F8 redox reducing vs oxidizing
+twin: mixing with oxic seep,{},{},True,
+"F9 setting change, no transport","{""1->2"": [""F9""]}","{""1->2"": [""F9""]}",True,F9 setting surface_pool vs porous_rock
+twin: transport,{},{},True,
+W1 untested carried species,"{""2->3"": [""W1""]}","{""2->3"": [""W1""]}",True,W1 X at 0.01 M untested (main input Y 0.001 M)

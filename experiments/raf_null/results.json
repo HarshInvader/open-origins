@@ -1,0 +1,89 @@
+{
+  "task": 6,
+  "observed": {
+    "prereg_sha256": "22e3ab3f6ec717eabe324dab5cb4fcbd64fc5898c7349196bebe7bdff9762053",
+    "n_reactions": 6039,
+    "n_directed": 9231,
+    "n_molecules": 5740,
+    "n_food": 68,
+    "n_pooling": 45,
+    "observed_maxraf": 1357,
+    "published_maxraf": 1335,
+    "reproduces": false,
+    "pooling_reactions_in_maxraf": 22,
+    "maxraf_excluding_pooling": 1335,
+    "reproduction_note": "1357 within the pre-registered 2% tolerance (1308-1362); excluding the 22 Pooling bookkeeping reactions gives exactly the published 1335"
+  },
+  "nulls": {
+    "N1": {
+      "n": 999,
+      "null_min": 3309,
+      "null_lo": 3393.95,
+      "null_median": 3495.0,
+      "null_hi": 3583.05,
+      "null_max": 3633,
+      "p_upper": 1.0,
+      "p_lower": 0.001,
+      "above": false,
+      "below": true,
+      "effect_iqr": -33.669291338582674,
+      "dist_to_nearer_bound": 2036.9499999999998,
+      "frac_zero": 0.0,
+      "decisive": true
+    },
+    "N2": {
+      "n": 999,
+      "null_min": 1172,
+      "null_lo": 1307.85,
+      "null_median": 1521.0,
+      "null_hi": 1748.4999999999995,
+      "null_max": 1953,
+      "p_upper": 0.917,
+      "p_lower": 0.086,
+      "above": false,
+      "below": false,
+      "effect_iqr": -1.0789473684210527,
+      "dist_to_nearer_bound": 49.15000000000009,
+      "frac_zero": 0.0,
+      "decisive": false
+    },
+    "N3": {
+      "n": 999,
+      "null_min": 0,
+      "null_lo": 0.0,
+      "null_median": 3.0,
+      "null_hi": 34.09999999999991,
+      "null_max": 194,
+      "p_upper": 0.001,
+      "p_lower": 1.0,
+      "above": true,
+      "below": false,
+      "effect_iqr": 338.5,
+      "dist_to_nearer_bound": 1322.9,
+      "frac_zero": 0.12812812812812813,
+      "decisive": false
+    },
+    "N3m": {
+      "n": 999,
+      "null_min": 371,
+      "null_lo": 704.9,
+      "null_median": 1073.0,
+      "null_hi": 1403.0,
+      "null_max": 1531,
+      "p_upper": 0.064,
+      "p_lower": 0.938,
+      "above": false,
+      "below": false,
+      "effect_iqr": 1.0986460348162477,
+      "dist_to_nearer_bound": 46.0,
+      "frac_zero": 0.0,
+      "decisive": true
+    }
+  },
+  "decisive_nulls": [
+    "N1",
+    "N3m"
+  ],
+  "verdict": "within null",
+  "n3m_detectable": "a maxRAF of 1404 or more (3.4% above observed) would have been above the N3m 95% range"
+}

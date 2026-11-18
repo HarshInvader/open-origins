@@ -1,0 +1,27 @@
+route,handoff,verdict,hard_fails,warnings,n_unassessed,processes,notes
+cyanosulfidic,entry->C1,unverified,,,2,,
+cyanosulfidic,C1->C2,broken,F4,,4,heating,F4 glycolaldehyde not produced earlier nor a feedstock/stream species
+cyanosulfidic,C2->C3,broken,F4,,1,selective_separation; drying; rehydration; evaporation; heating,F4 glyceraldehyde not produced earlier nor a feedstock/stream species
+cyanosulfidic,C3->C4,unverified,,,3,selective_separation; cooling; gas_exchange,
+cyanosulfidic,C4->C5,blocked_by_missing_step,,W1,6,gas_exchange,W1 thione_1a at 0.185 M untested (main input arabino_aminooxazoline 0.108 M) | W1 ribo_aminooxazoline at 0.0792 M untested (main input arabino_aminooxazoline 0.108 M)
+cyanosulfidic,C5->C6,broken,F3 F6,,6,drying; transport; heating,"F3 solvent dry vs formamide | F6 anhydrocytidine purified by the source, no selective_separation"
+cyanosulfidic,C6->C7,broken,F3,W1,5,transport,F3 solvent formamide vs water | W1 thione_1a at 0.185 M untested (main input cCMP 0.022 M) | W1 arabino_aminooxazoline at 0.108 M untested (main input cCMP 0.022 M) | W1 ribo_aminooxazoline at 0.0792 M untested (main input cCMP 0.022 M)
+cyanosulfidic,C7->C8,broken,F4 F6,W1,6,same_pot,"F4 cAMP not produced earlier nor a feedstock/stream species | F6 cUMP purified by the source, no selective_separation | F4 cGMP not produced earlier nor a feedstock/stream species | F6 cCMP purified by the source, no selective_separation | W1 thione_1a at 0.185 M untested (main input cAMP 0 M) | W1 arabino_aminooxazoline at 0.108 M untested (main input cAMP 0 M) | W1 ribo_aminooxazoline at 0.0792 M untested (main input cAMP 0 M)"
+cyanosulfidic,C8->C9,blocked_by_missing_step,,W1,6,same_pot,W1 thione_1a at 0.185 M untested (main input RNA_oligomers 0.018 M) | W1 arabino_aminooxazoline at 0.108 M untested (main input RNA_oligomers 0.018 M) | W1 ribo_aminooxazoline at 0.0792 M untested (main input RNA_oligomers 0.018 M)
+cyanosulfidic,C9->C10,blocked_by_missing_step,,,6,same_pot,
+alkaline_vent,entry->V1,unverified,,,2,,
+alkaline_vent,V1->V2,blocked_by_missing_step,,,7,transport; thermophoresis,
+alkaline_vent,V2->V3,blocked_by_missing_step,,,6,same_pot,
+alkaline_vent,V3->V4,blocked_by_missing_step,,,6,same_pot,
+alkaline_vent,V4->V5,blocked_by_missing_step,,,6,same_pot,
+alkaline_vent,V5->V6,blocked_by_missing_step,,,6,same_pot,
+warm_pond,entry->P0,broken,F4,,0,,F4 nucleotide_precursors not produced earlier nor a feedstock/stream species
+warm_pond,P0->P1,broken,F6,,7,same_pot,"F6 AMP_5 purified by the source, no selective_separation | F6 UMP_5 purified by the source, no selective_separation"
+warm_pond,P1->P2,broken,F4 F6,,8,same_pot,"F6 cAMP purified by the source, no selective_separation | F6 cUMP purified by the source, no selective_separation | F4 cGMP not produced earlier nor a feedstock/stream species | F4 cCMP not produced earlier nor a feedstock/stream species"
+warm_pond,P2->P3,blocked_by_missing_step,,,6,same_pot,
+warm_pond,P3->P4,blocked_by_missing_step,,,6,same_pot,
+ice_rna,entry->I1,broken,F4,,0,,F4 activated_nucleotides not produced earlier nor a feedstock/stream species
+ice_rna,I1->I2,blocked_by_missing_step,,,6,same_pot,
+ice_rna,I2->I3,broken,F4 F6,,8,same_pot,"F6 QT45_plus purified by the source, no selective_separation | F6 pppNNN purified by the source, no selective_separation | F4 primer not produced earlier nor a feedstock/stream species | F4 hexamer_pppAUUGAU not produced earlier nor a feedstock/stream species"
+ice_rna,I3->I4,broken,F4 F6,W1,4,same_pot,"F4 TPR_ribozyme not produced earlier nor a feedstock/stream species | F6 pppNNN purified by the source, no selective_separation | F4 primer not produced earlier nor a feedstock/stream species | F4 short_dsRNA_template not produced earlier nor a feedstock/stream species | W1 QT45_minus at 1.9e-11 M untested (main input TPR_ribozyme 0 M) | W1 QT45_plus_copy at 1.4e-11 M untested (main input TPR_ribozyme 0 M)"
+ice_rna,I4->I5,blocked_by_missing_step,,,7,same_pot,

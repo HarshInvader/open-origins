@@ -1,0 +1,451 @@
+{
+ "validation": {
+  "checks": {
+   "n": 15,
+   "agree": 0.8666666666666667,
+   "mean_diff": 0.0,
+   "n_timeout": 0
+  },
+  "coconut_55": {
+   "n": 55,
+   "agree": 0.9272727272727272,
+   "mean_diff": -0.07272727272727272,
+   "n_timeout": 0
+  },
+  "gdb13_1201": {
+   "n": 1201,
+   "agree": 0.9991673605328892,
+   "mean_diff": -0.0008326394671107411,
+   "n_timeout": 0
+  },
+  "gdb17_200": {
+   "n": 200,
+   "agree": 0.985,
+   "mean_diff": 0.005,
+   "n_timeout": 0
+  },
+  "reaxys": {
+   "n": 300,
+   "agree": 0.03,
+   "mean_diff": -1.3666666666666667,
+   "n_timeout": 0
+  }
+ },
+ "gate_pass": false,
+ "window": {
+  "n_bio": 2039,
+  "n_abio": 1349,
+  "n_timeout_dropped": 0,
+  "HA_values": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   14,
+   15,
+   16,
+   17
+  ]
+ },
+ "M_HA_n": 2164,
+ "M_MW_n": 1778,
+ "planted_P1": {
+  "size_only_b1": {
+   "power": 0.16,
+   "ci_covers0": 0.76,
+   "mean_gain": 0.0014766847855006437,
+   "reps": 50
+  },
+  "ma_resid_g0.1": {
+   "power": 0.3,
+   "ci_covers0": 0.7,
+   "mean_gain": 0.020677733438968587,
+   "reps": 50
+  },
+  "ma_resid_g0.2": {
+   "power": 0.88,
+   "ci_covers0": 0.12,
+   "mean_gain": 0.05318885798684879,
+   "reps": 50
+  },
+  "ma_resid_g0.3": {
+   "power": 0.98,
+   "ci_covers0": 0.02,
+   "mean_gain": 0.07817164872893893,
+   "reps": 50
+  },
+  "ma_resid_g0.5": {
+   "power": 1.0,
+   "ci_covers0": 0.0,
+   "mean_gain": 0.13495884724518936,
+   "reps": 50
+  }
+ },
+ "P1a_pass": 0.0,
+ "primary_M_MW": {
+  "auc_S": 0.5845795569142158,
+  "auc_SMA": 0.6455899564860353,
+  "auc_SLZ": 0.5913344071586103,
+  "auc_SMALZ": 0.6615872537867524,
+  "delta_primary": 0.06101039957181953,
+  "delta_primary_ci": [
+   0.03708383998400652,
+   0.08942953243049347
+  ],
+  "delta_S1": 0.054255549327425046,
+  "delta_S1_ci": [
+   0.0202053659209359,
+   0.0852657654294902
+  ]
+ },
+ "S5_kekule_sensitivity": {
+  "n_changed": 4,
+  "auc_S": 0.5845795569142158,
+  "auc_SMA": 0.6455671809302801,
+  "auc_SLZ": 0.5913344071586103,
+  "delta_primary": 0.06098762401606428,
+  "delta_primary_ci_oofboot": [
+   0.03686484668887696,
+   0.08492701067034777
+  ]
+ },
+ "S2_single_M_HA": {
+  "MA": {
+   "auc": 0.43621084047136643,
+   "ci": [
+    0.41116711752727375,
+    0.46001825579726735
+   ]
+  },
+  "LZ": {
+   "auc": 0.5609225573235025,
+   "ci": [
+    0.5373245850431015,
+    0.5850171774047512
+   ]
+  },
+  "MW": {
+   "auc": 0.5485562779954968,
+   "ci": [
+    0.5240480783685992,
+    0.5718164891981372
+   ]
+  },
+  "HA": {
+   "auc": 0.5,
+   "ci": [
+    0.47557601108373965,
+    0.5242818866786707
+   ]
+  }
+ },
+ "S3_single_unmatched": {
+  "MA": {
+   "auc": 0.6416943362765581,
+   "ci": [
+    0.6230315100899401,
+    0.6610124350553386
+   ]
+  },
+  "LZ": {
+   "auc": 0.7212777451991574,
+   "ci": [
+    0.7043537008686434,
+    0.738934699417693
+   ]
+  },
+  "MW": {
+   "auc": 0.7431716080536288,
+   "ci": [
+    0.7256075604656566,
+    0.7604250337470474
+   ]
+  },
+  "HA": {
+   "auc": 0.7129617746747904,
+   "ci": [
+    0.6944649979586354,
+    0.7308333675681512
+   ]
+  }
+ },
+ "S4_MA_bio_minus_abio_M_HA": {
+  "mean": -0.5194085027726433,
+  "ci": [
+   -0.6044362292051755,
+   -0.4362292051756008
+  ]
+ },
+ "per_HA": [
+  {
+   "HA": 4,
+   "label": 0,
+   "n": 29,
+   "MA_mean": 2.1,
+   "LZ_mean": 13.45
+  },
+  {
+   "HA": 4,
+   "label": 1,
+   "n": 40,
+   "MA_mean": 2.02,
+   "LZ_mean": 15.02
+  },
+  {
+   "HA": 5,
+   "label": 0,
+   "n": 133,
+   "MA_mean": 3.01,
+   "LZ_mean": 14.86
+  },
+  {
+   "HA": 5,
+   "label": 1,
+   "n": 54,
+   "MA_mean": 2.94,
+   "LZ_mean": 17.81
+  },
+  {
+   "HA": 6,
+   "label": 0,
+   "n": 191,
+   "MA_mean": 3.79,
+   "LZ_mean": 16.57
+  },
+  {
+   "HA": 6,
+   "label": 1,
+   "n": 99,
+   "MA_mean": 3.73,
+   "LZ_mean": 19.22
+  },
+  {
+   "HA": 7,
+   "label": 0,
+   "n": 198,
+   "MA_mean": 4.72,
+   "LZ_mean": 18.21
+  },
+  {
+   "HA": 7,
+   "label": 1,
+   "n": 123,
+   "MA_mean": 4.36,
+   "LZ_mean": 20.57
+  },
+  {
+   "HA": 8,
+   "label": 0,
+   "n": 200,
+   "MA_mean": 5.55,
+   "LZ_mean": 20.22
+  },
+  {
+   "HA": 8,
+   "label": 1,
+   "n": 179,
+   "MA_mean": 5.22,
+   "LZ_mean": 21.68
+  },
+  {
+   "HA": 9,
+   "label": 0,
+   "n": 198,
+   "MA_mean": 6.2,
+   "LZ_mean": 21.74
+  },
+  {
+   "HA": 9,
+   "label": 1,
+   "n": 245,
+   "MA_mean": 5.8,
+   "LZ_mean": 23.22
+  },
+  {
+   "HA": 10,
+   "label": 0,
+   "n": 200,
+   "MA_mean": 6.94,
+   "LZ_mean": 23.64
+  },
+  {
+   "HA": 10,
+   "label": 1,
+   "n": 324,
+   "MA_mean": 6.34,
+   "LZ_mean": 24.65
+  },
+  {
+   "HA": 14,
+   "label": 0,
+   "n": 50,
+   "MA_mean": 8.96,
+   "LZ_mean": 31.0
+  },
+  {
+   "HA": 14,
+   "label": 1,
+   "n": 286,
+   "MA_mean": 8.62,
+   "LZ_mean": 31.2
+  },
+  {
+   "HA": 15,
+   "label": 0,
+   "n": 50,
+   "MA_mean": 9.62,
+   "LZ_mean": 32.04
+  },
+  {
+   "HA": 15,
+   "label": 1,
+   "n": 260,
+   "MA_mean": 8.2,
+   "LZ_mean": 30.65
+  },
+  {
+   "HA": 16,
+   "label": 0,
+   "n": 50,
+   "MA_mean": 10.18,
+   "LZ_mean": 33.9
+  },
+  {
+   "HA": 16,
+   "label": 1,
+   "n": 248,
+   "MA_mean": 9.04,
+   "LZ_mean": 32.99
+  },
+  {
+   "HA": 17,
+   "label": 0,
+   "n": 50,
+   "MA_mean": 11.22,
+   "LZ_mean": 35.32
+  },
+  {
+   "HA": 17,
+   "label": 1,
+   "n": 181,
+   "MA_mean": 9.65,
+   "LZ_mean": 32.96
+  }
+ ],
+ "MA_ge15": {
+  "bio": 0,
+  "abio": 2
+ },
+ "T7c_hazen": {
+  "organic_fit_MA_on_HA": [
+   0.5417491131449578,
+   0.8104061359726167
+  ],
+  "organic_HA_range": [
+   4,
+   17
+  ],
+  "minerals": [
+   {
+    "mineral": "calcite",
+    "HA": 4,
+    "SBMA": 3,
+    "EMA": 2,
+    "organic_trend_MA": 2.9774025885524478,
+    "EMA_per_HA": 0.5
+   },
+   {
+    "mineral": "forsterite",
+    "HA": 5,
+    "SBMA": 3,
+    "EMA": 2,
+    "organic_trend_MA": 3.5191517016974054,
+    "EMA_per_HA": 0.4
+   },
+   {
+    "mineral": "akermanite",
+    "HA": 9,
+    "SBMA": 5,
+    "EMA": 3,
+    "organic_trend_MA": 5.6861481542772365,
+    "EMA_per_HA": 0.3333333333333333
+   },
+   {
+    "mineral": "beryl",
+    "HA": 24,
+    "SBMA": 6,
+    "EMA": 5,
+    "organic_trend_MA": 13.812384851451604,
+    "EMA_per_HA": 0.20833333333333334
+   },
+   {
+    "mineral": "vesuvianite",
+    "HA": 19,
+    "SBMA": 10,
+    "EMA": 8,
+    "organic_trend_MA": 11.103639285726814,
+    "EMA_per_HA": 0.42105263157894735
+   },
+   {
+    "mineral": "fluor-uvite",
+    "HA": 48,
+    "SBMA": 14,
+    "EMA": 11,
+    "organic_trend_MA": 26.81436356693059,
+    "EMA_per_HA": 0.22916666666666666
+   },
+   {
+    "mineral": "eudialyte_a",
+    "HA": 108,
+    "SBMA": 12,
+    "EMA": 10,
+    "organic_trend_MA": 59.31931035562806,
+    "EMA_per_HA": 0.09259259259259259
+   },
+   {
+    "mineral": "eudialyte_b",
+    "HA": 102,
+    "SBMA": 12,
+    "EMA": 10,
+    "organic_trend_MA": 56.068815676758305,
+    "EMA_per_HA": 0.09803921568627451
+   },
+   {
+    "mineral": "vanarsite",
+    "HA": 70,
+    "SBMA": 16,
+    "EMA": 11,
+    "organic_trend_MA": 38.73284405611966,
+    "EMA_per_HA": 0.15714285714285714
+   },
+   {
+    "mineral": "paddlewheelite",
+    "HA": 68,
+    "SBMA": 17,
+    "EMA": 13,
+    "organic_trend_MA": 37.64934582982974,
+    "EMA_per_HA": 0.19117647058823528
+   },
+   {
+    "mineral": "ewingite",
+    "HA": 196,
+    "SBMA": 20,
+    "EMA": 18,
+    "organic_trend_MA": 106.99323231238434,
+    "EMA_per_HA": 0.09183673469387756
+   },
+   {
+    "mineral": "ilmajokite",
+    "HA": 98,
+    "SBMA": 21,
+    "EMA": 18,
+    "organic_trend_MA": 53.90181922417848,
+    "EMA_per_HA": 0.1836734693877551
+   }
+  ],
+  "organic_MA_per_HA_median": 0.625
+ }
+}
