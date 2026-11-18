@@ -655,6 +655,17 @@ h3 { font-family: var(--fam-text); font-size: 20px; font-weight: 700; letter-spa
 .plate figcaption { margin-top: 10px; font-size: 13px; color: var(--muted); line-height: 1.45; }
 .plate figcaption .cat { display: block; color: var(--ink); font-size: 12.5px; letter-spacing: 0.02em; }
 
+/* Family banner at the foot of every page: names the parent site, Open Citizen Science. */
+.ocs-banner { display: flex; align-items: center; gap: 14px; margin-top: 28px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); text-decoration: none; }
+.ocs-banner:hover { border-color: var(--muted); }
+.ocs-banner > svg { width: 30px; height: 30px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; }
+.ocs-banner > svg .dot { fill: currentColor; stroke: none; }
+.ocs-banner .ocs-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.ocs-banner b { font-weight: 700; font-size: 16px; }
+.ocs-banner small { font-size: 14px; color: var(--muted); }
+.ocs-banner .ocs-go { display: inline-flex; align-items: center; gap: 6px; font-size: 14.5px; white-space: nowrap; flex: none; }
+@media (max-width: 640px) { .ocs-banner { flex-wrap: wrap; align-items: flex-start; } .ocs-banner .ocs-txt { flex-basis: calc(100% - 44px); } .ocs-banner .ocs-go { margin-left: 44px; } }
+
 /* Open Origins brand: deep time in rock. Pale limestone paper, basalt-dark text, deep-sea teal for links and data.
    Iron-oxide rust is the one motif colour (ribose-ring list markers, the current page, a first break). Section dividers
    are a strip of banded iron formation, the way Open Indus uses brick courses. Appended after site.css by build.py. */
