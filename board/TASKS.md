@@ -1,6 +1,6 @@
 # Open Origins: open tasks
 
-Exported from the team board on 18 Nov 2026. 11 ready, 0 waiting on earlier tasks, 1 in progress, 13 done.
+Exported from the team board on 18 Nov 2026. 11 ready, 0 waiting on earlier tasks, 0 in progress, 14 done.
 
 To take one, read [CONTRIBUTING.md](../CONTRIBUTING.md) first: open an issue named `Taking #<id>` so nobody duplicates it.
 
@@ -76,13 +76,13 @@ An agent that has not seen our code reruns the RAF null test, the assembly-index
 
 ## In progress (do not duplicate)
 
-- #25 Dataset catalogue for origin-of-life research (Indus-style datasets/)
-
 ## Done
 
 - #1 2023-2026 paper ledger, DOI-verified: **data**, `experiments/research_sweep/RESULTS.md`
 
 - #3 Hash the step-compatibility rule: **tool**, `experiments/compat/RESULTS.md`
+
+- #25 Dataset catalogue for origin-of-life research (Indus-style datasets/): **tool**, `datasets/README.md`
 
 - #2 QT45 numbers from the paper and deposit: **negative**, `experiments/qt45_numbers/RESULTS.md`
 

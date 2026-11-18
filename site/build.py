@@ -87,7 +87,7 @@ N_CLAIMED = sum(1 for t in TASKS if t["status"] == "claimed")
 N_OPEN = sum(1 for t in TASKS if t["status"] == "open")
 
 PAGES = [("findings.html", "Findings"), ("map.html", "Pathway map"), ("theories.html", "Theories"), ("approach.html", "Approach"),
-         ("tracker.html", "Tracker"), ("news.html", "News"), ("contribute.html", "Contribute"), ("resources.html", "Resources")]
+         ("tracker.html", "Tracker"), ("news.html", "News"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources")]
 
 
 def md(s):
@@ -108,7 +108,8 @@ NAV_GROUPS = (
                   ("approach.html", "Approach", "How every idea gets tested", "approach"),
                   ("news.html", "News", "New papers, summarised", "news"),
                   ("tracker.html", "Tracker", "Progress and the live task board", "tracker"))),
-    ("Resources", (("resources.html#h-data", "Open data", "Result files and the paper ledger", "data"),
+    ("Resources", (("data.html", "Datasets", "Every open dataset, used or not", "data"),
+                   ("resources.html#h-data", "Open data", "Result files and the paper ledger", "data"),
                    ("resources.html#h-logo", "Logo", "Free to download", "logo"),
                    ("resources.html#h-files", "Research files", "Notes, plans and results", "files"),
                    (REPO, "Code on GitHub", "Everything we run, in the open", "code"),
@@ -164,6 +165,7 @@ DATA_FILES = [  # (published name, source, what it is)
     ("pathway_handoffs.csv", EXP / "pathway_map" / "handoffs.csv", "Every hand-off with its verdict and flags"),
     ("qt45_results_calc.json", EXP / "qt45_numbers" / "results_calc.json", "QT45 growth-factor calculation"),
     ("compat_planted_cases.csv", EXP / "compat" / "planted_cases.csv", "The 28 planted cases for the compatibility rule"),
+    ("catalog.csv", ROOT / "datasets" / "catalog.csv", "Dataset catalogue: every relevant dataset, its terms, and whether we use it"),
 ]
 
 
@@ -220,10 +222,10 @@ def page_index():
                '<div class="say"><p>We write each test and its pass mark down and fingerprint it before we look. Every method must first find an answer we planted, and someone else must try to break every positive result.</p></div>'
                f'{FIG.fig_pipeline(len(HASHES), COMPAT["n_cases"])}<p class="more-link"><a href="approach.html">Our approach and what counts as done</a></p>', "broad")
     ledger, files = FIG.fig_ledger(PAPERS, data_list())
-    s5 = block("05", "Open data", "h-data", "Every paper and result file, free in one place", f"""
+    s5 = block("05", "Open data", "h-data", "All origin-of-life data, free in one place", f"""
 <div class="split"><div class="say"><p>Every paper we cite resolves to a real DOI, checked against its text where we could read it.</p>
-<p>Our result tables are free to download, and each one can be rebuilt from code.</p>
-<div class="actions"><a class="btn" href="resources.html#h-data">Get the data</a></div></div>{ledger}</div>""", "broad")
+<p>We list 92 datasets, where each lives and under which terms. Our own tables are free, and one script fetches the rest.</p>
+<div class="actions"><a class="btn" href="data.html">Get the data</a></div></div>{ledger}</div>""", "broad")
     s6 = block("06", "Help", "h-help", "The fastest help is an AI agent working an open task",
                '<div class="say"><p>Donate your tokens: point a Claude Fable or Opus class agent at an open task. Wet labs can run a test we seal in advance.</p></div>'
                '<div class="actions"><a class="btn primary" href="contribute.html">Find a way to help</a></div>', "broad")
@@ -605,6 +607,64 @@ def page_resources():
     return head + s1 + s2 + s3
 
 
+
+# ---------------------------------------------------------------- data catalogue
+TIER_TEXT = {
+    "included": ("In this repository", "Tables this project made, in datasets/open/ (CC BY 4.0)"),
+    "fetch": ("Public, fetch it yourself", "Open deposits: datasets/fetch.py gets the subsets our results use; the rest link to their source"),
+    "request": ("On request", "Physical samples lent after a reviewed proposal; only the human lead applies"),
+    "reference-only": ("Reference only", "Paywalled, unlicensed or web-only: cited, not reusable as data"),
+}
+WANTED = [
+    "Yields and rates for each prebiotic step run on the previous step's crude output, not on purified inputs. This decides whether any route runs end to end.",
+    "Any per-cycle measurement of a replicator whose copies outgrow its decay. QT45 shrinks by about half per cycle on its own numbers.",
+    "QT45 double-mutant fitness, which our sealed prediction (task #12) is waiting for.",
+    "A non-enumerated abiotic reference set: formula lists from meteorite and spark-discharge mass spectrometry. Schmitt-Kopplin 2010 has no deposit.",
+    "A downloadable prebiotic reaction network. NOEL and the Wołos 2020 network can only be browsed; KEGG and MetaCyc need a subscription.",
+    "Harmonised compound-abundance tables for Bennu and Ryugu. The instrument data are open but raw, tens of GB per bundle.",
+    "Any open dataset on vesicles or membranes under prebiotic conditions, and one open compilation of banded-iron and stromatolite records. We found neither.",
+]
+CATALOG = ROOT / "datasets" / "catalog.csv"
+
+
+def page_data():
+    rows = list(csv.DictReader(open(CATALOG, newline="", encoding="utf-8")))
+    by = {t: [r for r in rows if r["tier"] == t] for t in TIER_TEXT}
+    ver = sum(r["verified"] == "yes" for r in rows)
+    used = sum(r["used_by_us"] == "yes" for r in rows)
+    head = page_head("Data", "Most origin-of-life data is open; the data that would confirm a route does not exist yet",
+                     f"We list {len(rows)} datasets: {len(by['included'])} we made, {len(by['fetch'])} public sets anyone can fetch, "
+                     f"{len(by['request'])} sample collections on request and {len(by['reference-only'])} that are cited but not reusable. "
+                     f"We opened {ver} of them at their DOI, API or landing page on 18 Nov 2026. {used} feed our results today.",
+                     [("h-included", "Catalogue"), ("h-wanted", "Missing"), ("h-get", "Get it")])
+    secs = []
+    for t, (label, intro) in TIER_TEXT.items():
+        trs = []
+        for r in sorted(by[t], key=lambda r: (r["used_by_us"] != "yes", r["title"].lower())):
+            o = r["origin"]
+            name = f'<a href="{e(o)}">{e(r["title"])}</a>' if o.startswith("http") else e(r["title"])
+            marks = ('<span class="chip chip-ok">used by us</span> ' if r["used_by_us"] == "yes" else "") + \
+                    ("" if r["verified"] == "yes" else '<span class="chip chip-warn">not verified</span>')
+            trs.append(f'<tr><th scope="row">{name}<span class="sub">{e(r["id"])} · {e(r["kind"])}</span></th>'
+                       f'<td>{e(r["terms"])}</td><td>{e(r["size"]) or "–"}</td><td>{e(r["serves_tasks"]) or "–"}</td><td>{marks or "–"}</td></tr>')
+        table = ('<div class="tablewrap"><table class="score"><thead><tr><th scope="col">Dataset</th><th scope="col">Terms</th>'
+                 '<th scope="col">Size</th><th scope="col">Tasks</th><th scope="col">Status</th></tr></thead>'
+                 f'<tbody>{"".join(trs)}</tbody></table></div>')
+        secs.append(block(f"{len(secs) + 1:02d}", label, f"h-{t}", f"{len(by[t])} {label.lower()}", f'<p class="intro">{e(intro)}.</p>{table}'))
+    unver = ", ".join(r["id"] for r in rows if r["verified"] != "yes")
+    wanted = "".join(f"<li>{md(w)}</li>" for w in WANTED)
+    secs.append(block(f"{len(secs) + 1:02d}", "Missing", "h-wanted", "Missing, and wanted",
+                      '<p class="intro">No archive holds the measurements that would confirm or close a route, because nobody has made them. '
+                      'If you hold any of these, the <a href="contribute.html">Contribute</a> page says how to share them.</p>'
+                      f'<ul class="mk">{wanted}</ul><p class="note">Not verified: {e(unver)}. Each catalogue row says why.</p>'))
+    secs.append(block(f"{len(secs) + 1:02d}", "Get it", "h-get", "One file lists them all; one script fetches what we use",
+                      f'<ul class="dl"><li><a href="data/catalog.csv" download>catalog.csv</a><span>Every row, with how it was checked · {size_of(CATALOG)}</span></li></ul>'
+                      f'<p class="note">In the <a href="{REPO}/tree/main/datasets">repository</a>, <code>python3 -I datasets/fetch.py list</code> prints the catalogue '
+                      'and <code>fetch &lt;id&gt;</code> downloads a subset into <code>datasets/local/</code>. Downloads stay under 1.5 GB in total. '
+                      'Nothing third-party is republished here.</p>'))
+    return head + "".join(secs)
+
+
 # ---------------------------------------------------------------- link check
 class _Links(HTMLParser):
     def __init__(self):
@@ -684,6 +744,7 @@ def main():
     render("tracker.html", f"Tracker · {C['name']}", "The live task board.", "tracker.html", page_tracker())
     render("news.html", f"News · {C['name']}", "New research on how life began, summarised.", "news.html", page_news())
     render("contribute.html", f"Contribute · {C['name']}", "Open tasks for AI agents, and asks for wet labs and data holders.", "contribute.html", page_contribute())
+    render("data.html", f"Data · {C['name']}", "Every open dataset on the origin of life, its terms, and whether we use it.", "data.html", page_data())
     render("resources.html", f"Resources · {C['name']}", "Logos, research files and data downloads.", "resources.html", page_resources())
     for i, n in enumerate(NEWS):
         prev = NEWS[i - 1] if i > 0 else None

@@ -1,0 +1,14 @@
+file,rows,columns,description,made_by,columns_removed
+papers_ledger.csv,64,10,"Every cited paper, resolved by DOI, with the claim and what it was checked against",docs/PAPERS.csv,
+bench_ledger.csv,23,22,"One row per test from every experiment, with an `experiment` column",experiments/*/ledger_rows.csv,
+pathway_map.json,,11,"Four routes as step tables, hand-offs, verdicts and ranked gaps",experiments/pathway_map/map.json,
+pathway_handoffs.csv,26,8,Every hand-off with its verdict and flags,experiments/pathway_map/handoffs.csv,
+compat_planted_cases.csv,28,5,Planted cases for the step-compatibility rule,experiments/compat/planted_cases.csv,
+qt45_growth_calc.json,,21,QT45 net replication per cycle: inputs and growth factors,experiments/qt45_numbers/results_calc.json,
+raf_planted_results.json,,6,Planted autocatalytic cores: recovery and null false-positive rates,experiments/raf/results.json,
+raf_null_observed.json,,9,"Xavier 2020 network as reproduced, and its observed maxRAF",experiments/raf_null/observed.json,
+raf_null_sizes.jsonl,3996,,maxRAF size of every null replicate,experiments/raf_null/null_sizes.jsonl,
+luca_planted_grid.csv,60,14,Planted LUCA recovery: precision and recall per rule and grid cell,experiments/luca_planted/grid_summary.csv,
+assembly_molecules.csv,4486,8,"Assembly index, mass, heavy atoms, compression length: Rhea vs GDB molecules",experiments/assembly_null/out/molecules.csv,smiles
+assembly_mixtures.json,,8,"Marshall 2021 mixtures as we read them: peak counts, m/z, labels",experiments/assembly_null/out/mixtures.json,
+assembly_results.json,,9,"Assembly-index test results: AUCs, deltas and CIs",experiments/assembly_null/results.json,

@@ -56,3 +56,6 @@ experiments/**/ft_*.log
 experiments/dataset_audit/dream_datasets_index.csv
 # Large derived feature tables (rebuilt by each experiment)
 experiments/*/features.jsonl
+
+# --- Dataset downloads (datasets/fetch.py), never committed
+/datasets/local/

@@ -1,0 +1,11 @@
+{
+  "prereg_sha256": "22e3ab3f6ec717eabe324dab5cb4fcbd64fc5898c7349196bebe7bdff9762053",
+  "n_reactions": 6039,
+  "n_directed": 9231,
+  "n_molecules": 5740,
+  "n_food": 68,
+  "n_pooling": 45,
+  "observed_maxraf": 1357,
+  "published_maxraf": 1335,
+  "reproduces": false
+}
