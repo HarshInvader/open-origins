@@ -55,6 +55,7 @@ def load_module(name, path):
 
 ART = load_module("oo_art", SITE / "art.py")
 FIG = load_module("oo_figures", SITE / "figures.py")
+CH = load_module("oo_chrome", SITE / "chrome.py")
 
 C = json.loads((SITE / "content.json").read_text())
 F = json.loads((SITE / "findings.json").read_text())
@@ -99,14 +100,30 @@ def mark_svg(cls="mark"):
     return f'<svg class="{cls}" viewBox="0 0 32 32" aria-hidden="true" focusable="false">{ART.MARK}</svg>'
 
 
+REPO = "https://github.com/HarshInvader/open-origins"
+NAV_GROUPS = (
+    ("Research", (("findings.html", "Findings", "What is known, and what we found", "find"),
+                  ("map.html", "Pathway map", "Four routes, scored step by step", "map"),
+                  ("theories.html", "Theories", "The proposed origins we score", "theory"),
+                  ("approach.html", "Approach", "How every idea gets tested", "approach"),
+                  ("news.html", "News", "New papers, summarised", "news"),
+                  ("tracker.html", "Tracker", "Progress and the live task board", "tracker"))),
+    ("Resources", (("resources.html#h-data", "Open data", "Result files and the paper ledger", "data"),
+                   ("resources.html#h-logo", "Logo", "Free to download", "logo"),
+                   ("resources.html#h-files", "Research files", "Notes, plans and results", "files"),
+                   (REPO, "Code on GitHub", "Everything we run, in the open", "code"),
+                   ("../index.html", "Open Citizen Science", "Our sister projects", "family"))),
+)
+
+
 def render(name, title, desc, current, main, body_class=""):
     tpl = (SITE / "templates" / "layout.html").read_text()
-    nav = "".join(f'<li><a href="{f}"{" aria-current=page" if f == current else ""}>{e(n)}</a></li>' for f, n in PAGES)
+    nav = CH.nav_items(NAV_GROUPS, current)
     foot = "".join(f'<a href="{f}">{e(n)}</a>' for f, n in [("index.html", "Home")] + PAGES)
-    note = (f"Part of <a href=\"../index.html\">Open Citizen Science</a>. Figures marked Real data are drawn from the project's result files at build time; "
+    note = (f"Figures marked Real data are drawn from the project's result files at build time; "
             f"pictures marked Illustration are drawn for this site. The code is on <a href=\"https://github.com/HarshInvader/open-origins\">GitHub</a>. Built {time.strftime('%d %b %Y').lstrip('0')}.")
     fills = {"TITLE": e(title), "DESC": e(desc), "ROOT": "", "BODY_CLASS": body_class, "MARK": mark_svg(), "NAME": e(C["name"]),
-             "NAV": nav, "MAIN": main, "GOAL": e(C["goal"]), "FOOT_PAGES": foot, "FOOT_NOTE": note}
+             "NAV": nav, "MAIN": main, "WORDMARK": CH.wordmark_svg(C["name"]), "REPO": REPO, "GOAL": e(C["goal"]), "FOOT_PAGES": foot, "FOOT_NOTE": note}
     out = re.sub(r"\{\{([A-Z_]+)\}\}", lambda m: fills[m.group(1)], tpl)
     assert "{{" not in out, f"unfilled placeholder in {name}"
     (DIST / name).write_text(out)
@@ -160,48 +177,57 @@ def data_list():
 
 
 # ---------------------------------------------------------------- home
+SIGNS = [  # the frieze: signs of early Earth and early life, each in a 48-unit box
+    '<path d="M18 44V22M30 44V22M18 22a9 9 0 1 1 12 0M18 29h12M18 36h12"/>',  # RNA hairpin
+    '<path d="M24 8l15 11-6 18H15L9 19z"/><circle cx="24" cy="8" r="2.5"/>',  # ribose ring
+    '<path d="M4 40h40M7 40c0-14 8-24 17-24s17 10 17 24M13 40c0-9 5-16 11-16s11 7 11 16M19 40c0-5 2-9 5-9s5 4 5 9"/>',  # stromatolite
+    '<path d="M17 44l4-24h6l4 24M22 16c-3-4 3-6 0-11M27 16c3-4-3-6 0-11"/>',  # vent chimney
+    '<circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="13"/><circle cx="20" cy="21" r="2.5"/><circle cx="28" cy="28" r="2"/>',  # protocell
+    '<path d="M9 33l10-9 10 9 10-9"/><circle cx="9" cy="33" r="3"/><circle cx="19" cy="24" r="3"/><circle cx="29" cy="33" r="3"/><circle cx="39" cy="24" r="3"/>',  # a small molecule
+    '<path d="M28 4L14 26h10l-4 18 14-24H24z"/>',  # the spark
+    '<path d="M24 6c8 10 12 17 12 24a12 12 0 0 1-24 0c0-7 4-14 12-24z"/>',  # water
+]
+
+
 def page_index():
-    hero = f'''<section class="hero wrap" aria-labelledby="claim"><div class="hero-text">
-<p class="kicker">{e(C["name"])}, an open research group</p>
-<h1 id="claim">Chemistry can make each step toward life. Nobody has joined the steps up.</h1>
-<p class="state">Our goal: {e(C["goal"][0].lower() + C["goal"][1:])}. In public, with every result rerunnable from code.</p>
-<div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a><a class="btn" href="findings.html">Read the findings</a></div>
-</div>{ART.hero()}</section>'''
-    s1 = block("01", "The problem", "h-problem", "Each step has been shown on its own, but never joined to the next", f'''
+    art = ART.hero().replace('<figure class="hero-art">', '<figure class="hero-art plate">', 1)
+    art = re.sub(r"<figcaption>.*?</figcaption>",
+                 '<figcaption><span class="cat">Pl. 1 · A stromatolite, cut in half</span>Illustration. Each layer was laid down by a mat of microbes. '
+                 'Rocks like this, 3.4 billion years old, are among the oldest signs of life.</figcaption>', art, flags=re.S)
+    hero = (f'<section class="hero home-hero wrap" aria-labelledby="claim"><div class="hero-text">'
+            f'<p class="kicker">{e(C["name"])}, an open research group</p>'
+            '<h1 id="claim">Map and test every route to the origin of life by 2027</h1>'
+            '<p class="state">An open-source effort, run in public. All our code and data are free.</p>'
+            '<div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a><a class="btn" href="findings.html">Read the findings</a></div>'
+            f'</div>{art}</section>')
+    band = CH.frieze(SIGNS, "A band of the signs of this project: an RNA hairpin, a ribose ring, a stromatolite, a vent chimney, a protocell, a molecule, a spark and a drop of water")
+    s1 = block("01", "The question", "h-question", "Chemistry can make each step toward life, but nobody has joined them up", f"""
 <div class="split"><div class="say">
-<p>Chemists have made amino acids with electric sparks (1953), RNA letters without free ribose (2009) and a small RNA that copies itself (2026).</p>
-<p>Most of those steps start from chemicals a lab bought or purified. Nobody has run them one after another, in one setting, using only what the step before left behind.</p>
-<p>That gap is the open question. We test it step by step, with a rule we sealed before we looked.</p>
+<p>Life began on Earth about four billion years ago, from chemistry alone. Nobody knows how.</p>
+<p>Labs have made amino acids, RNA letters and an RNA that copies itself. Each step worked on its own, mostly with chemicals bought pure.</p>
+<p>Nobody has run the steps one after another, in one setting, using only what the step before left behind. That gap is the question.</p>
 <p class="more-link"><a href="findings.html">What is known and what has been tried</a></p></div>
-{FIG.fig_steps_vs_joins(MAP)}</div>''', "broad")
-    ladder_rows = "".join(f'<li><span class="lv">{e(l)}</span><div><b>{e(n)}</b><p>{md(d)}</p></div>{chip(s)}</li>' for l, n, d, s in C["ladder"])
-    s2 = block("02", "Where we are", "h-where", "We know where the building blocks come from, not how copying got going", f'''
-<p class="intro">{md(C["ladder_intro"])}</p>{FIG.fig_ladder(C["ladder"])}
-<details class="tech"><summary>What each level means</summary><ol class="ladder-list">{ladder_rows}</ol></details>
-<p class="more-link"><a href="tracker.html">Track the progress</a></p>''', "broad")
-    s3 = block("03", "Pathway map", "h-map", "We scored four proposed routes. None gets from raw materials to self-copying RNA.", f'''
-<div class="say"><p>Each route is a chain of published steps, from the setting's raw materials toward a molecule that copies itself. We checked every hand-off between steps against a rule we sealed in advance.</p></div>
-{FIG.fig_map_compact(MAP)}<p class="more-link"><a href="map.html">The full map, step by step</a></p>''', "broad")
-    fb = findings_by_n()
-    cards = []
-    for n in (1, 2, 3):
-        f = fb.get(n)
-        if f:
-            cards.append(f'<li class="fcard">{mini_for(n)}<div class="fh"><h3 class="ft">{e(f["head"])}</h3><p class="fg">{md(f["gist"])}</p>'
-                         f'<p class="more-link"><a href="findings.html#f{n}">Evidence and caveats</a></p></div></li>')
-    s4 = block("04", "Found so far", "h-found", "Three results so far: a rule that works, a ribozyme that cannot keep up, and no complete route",
-               f'<ol class="found-list">{"".join(cards)}</ol><p class="more-link"><a href="findings.html#h-ours">All findings</a></p>', "broad")
-    s5 = block("05", "How we test", "h-how", "Every test is sealed before anyone sees the data", f'''
-<div class="say"><p>We write down the test and its pass mark, hash it, and only then look. Each method must first find an answer we planted, and someone else must try to break every positive result.</p></div>
-{FIG.fig_pipeline(len(HASHES), COMPAT["n_cases"])}<p class="more-link"><a href="approach.html">Our approach and what counts as done</a></p>''', "broad")
+{FIG.fig_steps_vs_joins(MAP)}</div>""", "broad")
+    s2 = block("02", "Where we are", "h-where", "We know where the building blocks come from, not how copying began",
+               f'{FIG.fig_ladder(C["ladder"])}<p class="more-link"><a href="tracker.html">Track the progress</a></p>', "broad")
+    s3 = block("03", "Found so far", "h-found", "What we have found so far", """
+<ul class="found">
+<li><b>No proposed route joins up.</b> We scored four published routes hand-off by hand-off. None of the 22 hand-offs passes cleanly.</li>
+<li><b>The best self-copying RNA cannot keep up.</b> On its published numbers, QT45 copies itself more slowly than it breaks down. A population would shrink each round.</li>
+<li><b>Simple shortcuts cannot rebuild the first cell's genes.</b> On simulated family trees with a planted answer, no rule based only on which genes are present found the true set.</li>
+</ul><p class="more-link"><a href="findings.html">All findings, with their evidence</a></p>""", "broad")
+    s4 = block("04", "How we work", "h-how", "How we test a route",
+               '<div class="say"><p>We write each test and its pass mark down and fingerprint it before we look. Every method must first find an answer we planted, and someone else must try to break every positive result.</p></div>'
+               f'{FIG.fig_pipeline(len(HASHES), COMPAT["n_cases"])}<p class="more-link"><a href="approach.html">Our approach and what counts as done</a></p>', "broad")
     ledger, files = FIG.fig_ledger(PAPERS, data_list())
-    s6 = block("06", "Data and papers", "h-data", "Every paper we cite resolves to a real DOI, and our result files are free to download", f'''
-<div class="split"><div class="say"><p>Each paper in our ledger was resolved by its DOI. Where we could read the abstract or full text, we checked the claim we cite against it.</p>
-<p>The audit found and fixed 5 wrong claims and 2 wrong attributions in our own plan and site.</p>{files}</div>{ledger}</div>''', "broad")
-    s7 = block("07", "Help", "h-help", "The fastest help is an AI agent working an open task", f'''
-<div class="say"><p>Point a capable AI agent at an open task on the board. Wet labs can run a test we seal in advance, and holders of sample data can share tables.</p></div>
-{FIG.fig_board(TASKS)}<div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a></div>''', "broad")
-    return hero + s1 + s2 + s3 + s4 + s5 + s6 + s7
+    s5 = block("05", "Open data", "h-data", "Every paper and result file, free in one place", f"""
+<div class="split"><div class="say"><p>Every paper we cite resolves to a real DOI, checked against its text where we could read it.</p>
+<p>Our result tables are free to download, and each one can be rebuilt from code.</p>
+<div class="actions"><a class="btn" href="resources.html#h-data">Get the data</a></div></div>{ledger}</div>""", "broad")
+    s6 = block("06", "Help", "h-help", "The fastest help is an AI agent working an open task",
+               '<div class="say"><p>Donate your tokens: point a Claude Fable or Opus class agent at an open task. Wet labs can run a test we seal in advance.</p></div>'
+               '<div class="actions"><a class="btn primary" href="contribute.html">Find a way to help</a></div>', "broad")
+    return hero + band + s1 + s2 + s3 + s4 + s5 + s6
 
 
 # ---------------------------------------------------------------- findings
@@ -538,11 +564,11 @@ def page_contribute():
 
 # ---------------------------------------------------------------- resources
 def wordmark_svg(inline=False):
-    stroke = "var(--accent)" if inline else "#1D6670"
-    ink = "var(--ink)" if inline else "#1C1B17"
-    return (f'<svg {"class=word-big " if inline else ""}xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 48" role="img" aria-label="Open Origins">'
-            f'<g transform="translate(4 4) scale(1.25)" fill="none" stroke="{stroke}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">{ART.MARK}</g>'
-            f'<text x="56" y="33" font-family="-apple-system, Inter, Helvetica, Arial, sans-serif" font-size="27" font-weight="700" letter-spacing="-0.5" fill="{ink}">Open Origins</text></svg>')
+    if inline:
+        return (f'<svg class="word-big" viewBox="-10 -14 {150 + CH.wordmark_inner(C["name"])[1] + 20} 128" role="img" aria-label="{e(C["name"])}">'
+                f'<g transform="translate(-6 -14) scale(4)" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{ART.MARK}</g>'
+                f'<g transform="translate(150 0)" fill="none" stroke="var(--ink)" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round">{CH.wordmark_inner(C["name"])[0]}</g></svg>')
+    return CH.lockup_svg(C["name"], ART.MARK, color="#1C1B17", mark_color="#1D6670")
 
 
 def mark_file():
@@ -638,7 +664,8 @@ def main():
         shutil.rmtree(DIST)
     (DIST / "assets" / "downloads").mkdir(parents=True)
     (DIST / "data").mkdir()
-    (DIST / "assets" / "site.css").write_text((SITE / "site.css").read_text() + "\n" + (SITE / "brand.css").read_text())
+    (DIST / "assets" / "site.css").write_text((SITE / "site.css").read_text() + "\n" + (SITE / "family.css").read_text() + "\n" + (SITE / "brand.css").read_text())
+    shutil.copytree(SITE / "assets" / "fonts", DIST / "assets" / "fonts")
     shutil.copy2(SITE / "assets" / "site.js", DIST / "assets" / "site.js")
     (DIST / "assets" / "favicon.svg").write_text(favicon_file())
     (DIST / "assets" / "downloads" / "open-origins-mark.svg").write_text(mark_file())

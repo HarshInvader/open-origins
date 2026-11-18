@@ -30,8 +30,21 @@
     menu.addEventListener('click', function () { setMenu(menu.getAttribute('aria-expanded') !== 'true'); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') setMenu(false, true); });
     document.addEventListener('click', function (e) { if (!head.contains(e.target)) setMenu(false); });
-    window.matchMedia('(min-width: 1101px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
+    window.matchMedia('(min-width: 901px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
   }
+
+  // Grouped menus (Research, Resources): open on hover (CSS) or a tap; one open at a time; Escape or a tap elsewhere closes.
+  var dds = [].slice.call(document.querySelectorAll('.site-nav .dd'));
+  function ddClose(d) { d.classList.remove('open'); d.querySelector('button').setAttribute('aria-expanded', 'false'); }
+  dds.forEach(function (d) {
+    var b = d.querySelector('button');
+    b.addEventListener('click', function (e) {
+      e.stopPropagation(); var on = !d.classList.contains('open'); dds.forEach(ddClose);
+      if (on) { d.classList.add('open'); b.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+  document.addEventListener('click', function (e) { dds.forEach(function (d) { if (!d.contains(e.target)) ddClose(d); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dds.forEach(ddClose); });
 
   // News: one detail level for the whole feed (a sentence, plain words, technical); remembered per viewer.
   var zb = [].slice.call(document.querySelectorAll('.zoombar button'));
