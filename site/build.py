@@ -104,7 +104,7 @@ def render(name, title, desc, current, main, body_class=""):
     nav = "".join(f'<li><a href="{f}"{" aria-current=page" if f == current else ""}>{e(n)}</a></li>' for f, n in PAGES)
     foot = "".join(f'<a href="{f}">{e(n)}</a>' for f, n in [("index.html", "Home")] + PAGES)
     note = (f"Part of <a href=\"../index.html\">Open Citizen Science</a>. Figures marked Real data are drawn from the project's result files at build time; "
-            f"pictures marked Illustration are drawn for this site. The repository is not public yet. Built {time.strftime('%d %b %Y').lstrip('0')}.")
+            f"pictures marked Illustration are drawn for this site. The code is on <a href=\"https://github.com/HarshInvader/open-origins\">GitHub</a>. Built {time.strftime('%d %b %Y').lstrip('0')}.")
     fills = {"TITLE": e(title), "DESC": e(desc), "ROOT": "", "BODY_CLASS": body_class, "MARK": mark_svg(), "NAME": e(C["name"]),
              "NAV": nav, "MAIN": main, "GOAL": e(C["goal"]), "FOOT_PAGES": foot, "FOOT_NOTE": note}
     out = re.sub(r"\{\{([A-Z_]+)\}\}", lambda m: fills[m.group(1)], tpl)
@@ -532,7 +532,7 @@ def page_contribute():
             ("Mass spectra with assembly indices.", "The data behind assembly-index claims, to test them against a size-only baseline (task #7).")]
     s3 = block("03", "Data", "h-data", "Data released after we seal a prediction is worth the most", '<ul class="asks">' + "".join(f"<li><b>{e(a)}</b><span>{e(b)}</span></li>" for a, b in data) + "</ul>")
     ways = "".join(f"<li>{md(w)}</li>" for w in C["contribute"])
-    s4 = block("04", "Other ways", "h-other", "Rerun, attack or correct anything we publish", f'<ul class="mk">{ways}</ul><p class="note">The repository is not public yet, and there is no public contact route yet. Until there is, the task board and these pages are the record.</p>')
+    s4 = block("04", "Other ways", "h-other", "Rerun, attack or correct anything we publish", f'<ul class="mk">{ways}</ul><p class="note">Everything is on <a href="https://github.com/HarshInvader/open-origins">GitHub</a>: open an issue to challenge a result or a pull request to correct one.</p>')
     return head + s1 + s2 + s3 + s4
 
 
@@ -567,13 +567,13 @@ def page_resources():
     rows = []
     for d in sorted(p for p in EXP.iterdir() if p.is_dir() and (p / "RESULTS.md").exists()):
         first = (d / "RESULTS.md").read_text().splitlines()[0].lstrip("# ").strip()
-        rows.append(f'<li><code>experiments/{e(d.name)}/RESULTS.md</code><span>{e(first)}</span></li>')
+        rows.append(f'<li><a href="https://github.com/HarshInvader/open-origins/blob/main/experiments/{e(d.name)}/RESULTS.md"><code>experiments/{e(d.name)}/RESULTS.md</code></a><span>{e(first)}</span></li>')
     docs = [("docs/PLAN.md", "The research plan and the 2027 targets"), ("docs/AGENT_BRIEF.md", "Rules of evidence every agent follows"),
             ("docs/PAPERS.csv", "The paper ledger"), ("docs/NEGATIVE_ATLAS.md", "Closed routes, each with the effect size its test could have caught; empty so far"),
-            ("docs/prereg/", "Sealed plans; their hashes are in HASHES.txt"), ("board/README.md", "How the agent team works")]
-    rows += [f'<li><code>{e(p)}</code><span>{e(w)}</span></li>' for p, w in docs if (ROOT / p).exists()]
+            ("docs/prereg/", "Sealed plans; their hashes are in HASHES.txt")]
+    rows += [f'<li><a href="https://github.com/HarshInvader/open-origins/blob/main/{e(p)}"><code>{e(p)}</code></a><span>{e(w)}</span></li>' for p, w in docs if (ROOT / p).exists()]
     s2 = block("02", "Files", "h-files", "Every result has a file you can rerun", f'''
-<p class="intro">The repository is not public yet, so these are paths inside it rather than links.</p><ul class="dl">{"".join(rows)}</ul>''')
+<p class="intro">Each path links to the file in the <a href="https://github.com/HarshInvader/open-origins">public repository</a>.</p><ul class="dl">{"".join(rows)}</ul>''')
     files = "".join(f'<li><a href="{e(h)}" download>{e(n)}</a><span>{e(w)} · {e(s)}</span></li>' for n, h, w, s in data_list())
     s3 = block("03", "Data", "h-data", "The data behind every figure, free to download", f'<ul class="dl">{files}</ul>')
     return head + s1 + s2 + s3
