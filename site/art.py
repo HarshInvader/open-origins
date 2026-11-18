@@ -8,7 +8,7 @@ layers laid down by mats of microbes, among the oldest widely accepted signs of 
 import math, random
 
 NAME_MARK = "the layers of a stromatolite"
-MARK = ('<path d="M3 27C8 27 10 19.5 16 19.5S24 27 29 27M3 23.8C8 23.8 10 16.3 16 16.3S24 23.8 29 23.8M3 20.6C8 20.6 10 13.1 16 13.1S24 20.6 29 20.6M3 17.4C8 17.4 10 9.9 16 9.9S24 17.4 29 17.4M3 14.2C8 14.2 10 6.7 16 6.7S24 14.2 29 14.2"/><path d="M3 29.5h26"/>')
+MARK = ('<path d="M3 27C8 27 10 19.5 16 19.5S24 27 29 27M3 23.8C8 23.8 10 16.3 16 16.3S24 23.8 29 23.8M3 20.6C8 20.6 10 13.1 16 13.1S24 20.6 29 20.6M3 17.4C8 17.4 10 9.9 16 9.9S24 17.4 29 17.4M3 14.2C8 14.2 10 6.7 16 6.7S24 14.2 29 14.2"/>')
 
 W, H = 560, 300
 HEADS = [(110, 74, 1.0), (285, 92, 1.25), (452, 70, 0.95)]  # centre x, half-width, growth rate of each dome
