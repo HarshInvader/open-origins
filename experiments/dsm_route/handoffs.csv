@@ -1,0 +1,12 @@
+route,handoff,verdict,flags,n_unassessed,notes
+dsm,entry->D1,unverified,,3,
+dsm,D1->D2,blocked_by_missing_step,,7,
+dsm,D2->D3,broken,F6,8,"F6 ribose purified by the source, no selective_separation"
+dsm,D3->D4,unverified,W1,5,W1 phosphate at 0.8 M untested (main input RCP 0.0529 M)
+dsm,D4->D5,broken,F4 W1,9,F4 adenosine not produced earlier nor a feedstock/stream species | W1 RCP at 0.0265 M untested (main input adenosine 0 M) | W1 DAP at 0.0097 M untested (main input adenosine 0 M) | W1 phosphate at 0.4 M untested (main input adenosine 0 M)
+dsm,D5->D6,broken,F6,9,"F6 ATP purified by the source, no selective_separation | F6 UTP purified by the source, no selective_separation | F6 GTP purified by the source, no selective_separation | F6 CTP purified by the source, no selective_separation"
+dsm_b,entry->D1,unverified,,3,
+dsm_b,D1->D2,blocked_by_missing_step,,7,
+dsm_b,D2->D3,broken,F6,8,"F6 ribose purified by the source, no selective_separation"
+dsm_b,D3->D4,unverified,W1,5,W1 phosphate at 0.8 M untested (main input RCP 0.0529 M)
+dsm_b,D4->P2,broken,F4 F6,4,"F6 cAMP purified by the source, no selective_separation | F4 cUMP not produced earlier nor a feedstock/stream species | F4 cGMP not produced earlier nor a feedstock/stream species | F4 cCMP not produced earlier nor a feedstock/stream species"
