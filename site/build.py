@@ -56,6 +56,13 @@ def load_module(name, path):
 ART = load_module("oo_art", SITE / "art.py")
 FIG = load_module("oo_figures", SITE / "figures.py")
 CH = load_module("oo_chrome", SITE / "chrome.py")
+LOGO = json.loads((SITE / "logo_paths.json").read_text())
+LOGO_WORDS = [("open|Bold", "ink"), ("origins|Bold", "accent")]  # lower case, "origins" in sea teal, the hairpin in rust
+LOGO_FILE_COLORS = {"ink": "#1C1B17", "accent": "#1D6670", "rust": "#A4512B"}
+
+
+def logo(cls="wordmark", show_mark=True):
+    return CH.lockup(LOGO, LOGO_WORDS, ART.MARK, cls=cls, show_mark=show_mark, mark_role="rust")
 
 C = json.loads((SITE / "content.json").read_text())
 F = json.loads((SITE / "findings.json").read_text())
@@ -124,7 +131,7 @@ def render(name, title, desc, current, main, body_class=""):
     note = (f"Figures marked Real data are drawn from the project's result files at build time; "
             f"pictures marked Illustration are drawn for this site. The code is on <a href=\"https://github.com/HarshInvader/open-origins\">GitHub</a>. Built {time.strftime('%d %b %Y').lstrip('0')}.")
     fills = {"TITLE": e(title), "DESC": e(desc), "ROOT": "", "BODY_CLASS": body_class, "MARK": mark_svg(), "NAME": e(C["name"]),
-             "NAV": nav, "MAIN": main, "WORDMARK": CH.wordmark_svg(C["name"]), "REPO": REPO, "GOAL": e(C["goal"]), "FOOT_PAGES": foot, "FOOT_NOTE": note}
+             "NAV": nav, "MAIN": main, "WORDMARK": logo(), "REPO": REPO, "GOAL": e(C["goal"]), "FOOT_PAGES": foot, "FOOT_NOTE": note}
     out = re.sub(r"\{\{([A-Z_]+)\}\}", lambda m: fills[m.group(1)], tpl)
     assert "{{" not in out, f"unfilled placeholder in {name}"
     (DIST / name).write_text(out)
@@ -200,7 +207,7 @@ def page_index():
             f'<p class="kicker">{e(C["name"])}, an open research group</p>'
             '<h1 id="claim">Map and test every route to the origin of life by 2027</h1>'
             '<p class="state">An open-source effort, run in public. All our code and data are free.</p>'
-            '<div class="actions"><a class="btn primary" href="contribute.html">Donate your tokens</a><a class="btn" href="findings.html">Read the findings</a></div>'
+            '<div class="actions"><a class="btn primary" href="contribute.html">Contribute</a><a class="btn" href="findings.html">Read the findings</a></div>'
             f'</div>{art}</section>')
     band = CH.frieze(SIGNS, "A band of the signs of this project: an RNA hairpin, a ribose ring, a stromatolite, a vent chimney, a protocell, a molecule, a spark and a drop of water")
     s1 = block("01", "The question", "h-question", "Chemistry can make each step toward life, but nobody has joined them up", f"""
@@ -227,7 +234,7 @@ def page_index():
 <p>We list 92 datasets, where each lives and under which terms. Our own tables are free, and one script fetches the rest.</p>
 <div class="actions"><a class="btn" href="data.html">Get the data</a></div></div>{ledger}</div>""", "broad")
     s6 = block("06", "Help", "h-help", "The fastest help is an AI agent working an open task",
-               '<div class="say"><p>Donate your tokens: point a Claude Fable or Opus class agent at an open task. Wet labs can run a test we seal in advance.</p></div>'
+               '<div class="say"><p>Point a Claude Fable or Opus class agent at an open task. Wet labs can run a test we seal in advance.</p></div>'
                '<div class="actions"><a class="btn primary" href="contribute.html">Find a way to help</a></div>', "broad")
     return hero + band + s1 + s2 + s3 + s4 + s5 + s6
 
@@ -567,10 +574,8 @@ def page_contribute():
 # ---------------------------------------------------------------- resources
 def wordmark_svg(inline=False):
     if inline:
-        return (f'<svg class="word-big" viewBox="-10 -14 {150 + CH.wordmark_inner(C["name"])[1] + 20} 128" role="img" aria-label="{e(C["name"])}">'
-                f'<g transform="translate(-6 -14) scale(4)" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{ART.MARK}</g>'
-                f'<g transform="translate(150 0)" fill="none" stroke="var(--ink)" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round">{CH.wordmark_inner(C["name"])[0]}</g></svg>')
-    return CH.lockup_svg(C["name"], ART.MARK, color="#1C1B17", mark_color="#1D6670")
+        return logo("word-big")
+    return CH.lockup(LOGO, LOGO_WORDS, ART.MARK, inline=False, colors=LOGO_FILE_COLORS, mark_role="rust")
 
 
 def mark_file():
@@ -591,7 +596,7 @@ def page_resources():
 <p class="intro">One strand of RNA folded back on itself: the molecule that may once have both carried information and copied it. Use it on light backgrounds as drawn; on dark ones, use the lighter teal from the site's dark theme.</p>
 <div class="logo-show"><div class="logo-tile">{mark_svg("mark-big")}</div><div class="logo-tile wide">{wordmark_svg(True)}</div></div>
 <ul class="dl"><li><a href="assets/downloads/open-origins-mark.svg" download>open-origins-mark.svg</a><span>The mark alone</span></li>
-<li><a href="assets/downloads/open-origins-wordmark.svg" download>open-origins-wordmark.svg</a><span>Mark and name; the name uses the system sans</span></li></ul>''')
+<li><a href="assets/downloads/open-origins-wordmark.svg" download>open-origins-wordmark.svg</a><span>Mark and name; the name is outlined from our body typeface, so it needs no font</span></li></ul>''')
     rows = []
     for d in sorted(p for p in EXP.iterdir() if p.is_dir() and (p / "RESULTS.md").exists()):
         first = (d / "RESULTS.md").read_text().splitlines()[0].lstrip("# ").strip()

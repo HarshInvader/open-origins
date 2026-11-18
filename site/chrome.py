@@ -1,8 +1,8 @@
 """Site chrome shared by the Open Citizen Science projects, modelled on Open Indus.
 
 The same file sits in open-mind/site and open-origins/site; keep them identical. It draws:
-- the wordmark: the project name in single-stroke capitals on a 100-unit cap height (the same letter system as the Open
-  Indus wordmark, with a round O), so it needs no font and scales cleanly;
+- the wordmark lockup: the project's mark beside its name, outlined from the body typeface (each project sets its own
+  words, weights and colours, so the logos differ);
 - the header navigation: two grouped menus (Research, Resources) whose items carry a small line icon and a one-line
   description, then a filled call-to-action pill;
 - the frieze: a band of the project's own signs under the home hero, the way Open Indus runs a band of Indus signs.
@@ -12,56 +12,27 @@ import html
 
 E = html.escape
 
-# Single-stroke capitals, (width, path), in a box 100 units tall. Letters are set 37 units apart; a space is 88.
-LETTERS = {
-    "O": (62, "M31 0C12 0 2 22 2 50S12 100 31 100 60 78 60 50 50 0 31 0Z"),
-    "P": (46, "M0 100V0H22C40 0 46 12 46 26C46 40 40 52 22 52H0"),
-    "E": (42, "M42 0H0V100H42M0 50H34"),
-    "N": (50, "M0 100V0L50 100V0"),
-    "M": (62, "M0 100V0L31 64L62 0V100"),
-    "I": (0, "M0 0V100"),
-    "D": (52, "M0 0V100H8C38 92 52 70 52 50C52 30 38 8 8 0H0"),
-    "R": (48, "M0 100V0H22C40 0 46 12 46 26C46 40 40 52 22 52H0M20 52L48 100"),
-    "G": (60, "M57 16C51 5 42 0 31 0C12 0 2 22 2 50S12 100 31 100C49 100 59 88 59 68V56H34"),
-    "S": (46, "M45 14C40 5 32 0 23 0C10 0 2 8 2 23C2 52 46 44 46 74C46 91 36 100 22 100C12 100 4 95 0 86"),
-}
-GAP, SPACE = 37, 88
-
-
-def wordmark_inner(text):
-    """Return (paths, width) for `text` in the 100-unit letter space."""
-    x, parts = 0, []
-    for ch in text.upper():
-        if ch == " ":
-            x += SPACE - GAP
-            continue
-        w, d = LETTERS[ch]
-        parts.append(f'<path transform="translate({x} 0)" d="{d}"/>')
-        x += w + GAP
-    return "".join(parts), x - GAP
-
-
-def wordmark_svg(text, inline=True, color="currentColor", width=10.5):
-    """Inline: a header wordmark that takes the text colour. File: a standalone SVG for downloads."""
-    inner, w = wordmark_inner(text)
-    pad = 9
-    vb = f"{-pad} {-pad} {w + 2 * pad} {100 + 2 * pad}"
-    attrs = (f'fill="none" stroke="{color}" stroke-width="{width}" stroke-linecap="round" stroke-linejoin="round"')
+# Wordmark: each project's name, outlined from the body typeface by site/make_logo.py into site/logo_paths.json
+# (font units, baseline at y=0, y down). Each project picks its own words, weights and colours; only the build is shared.
+def lockup(paths, words, mark, inline=True, colors=None, mark_role="accent", show_mark=True, cls="wordmark"):
+    """words: [(key in paths, role)], role is a colour role. colors: {role: css colour} for files; inline uses CSS vars."""
+    roles = {"ink": "var(--ink)", "soft": "var(--muted)", "accent": "var(--accent)", "motif": "var(--motif, var(--accent))", "rust": "var(--rust)"}
+    col = (lambda r: roles[r]) if inline else (lambda r: colors[r])
+    parts, x = [], 0
+    if show_mark:
+        parts.append(f'<g transform="translate(-40 -860) scale(31)" fill="none" stroke="{col(mark_role)}" stroke-width="2.3" '
+                     f'stroke-linecap="round" stroke-linejoin="round">{mark}</g>')
+        x = 952 + 140
+    for i, (key, role) in enumerate(words):
+        w = paths[key]
+        parts.append(f'<path transform="translate({x} 0)" fill="{col(role)}" d="{w["d"]}"/>')
+        x += w["w"] + (230 if i < len(words) - 1 else 0)
+    vb = f"-30 -870 {x + 60} 1120"
+    name = " ".join(k.split("|")[0] for k, _ in words)
     if inline:
-        return f'<svg class="wordmark" viewBox="{vb}" aria-hidden="true" focusable="false" {attrs}>{inner}</svg>'
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vb}" width="{(w + 2 * pad) / 2:.0f}" height="{(100 + 2 * pad) / 2:.0f}" '
-            f'role="img" aria-label="{E(text)} wordmark" {attrs}><title>{E(text)}</title>{inner}</svg>\n')
-
-
-def lockup_svg(text, mark_paths, color="#1C1B17", mark_color=None):
-    """Mark and wordmark side by side, as one downloadable SVG."""
-    inner, w = wordmark_inner(text)
-    mark_color = mark_color or color
-    total = 150 + w
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -14 {total + 20} 128" width="{(total + 20) / 2:.0f}" height="64" '
-            f'role="img" aria-label="{E(text)}"><title>{E(text)}</title>'
-            f'<g transform="translate(-6 -14) scale(4)" fill="none" stroke="{mark_color}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{mark_paths}</g>'
-            f'<g transform="translate(150 0)" fill="none" stroke="{color}" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round">{inner}</g></svg>\n')
+        return f'<svg class="{cls}" viewBox="{vb}" aria-hidden="true" focusable="false">{"".join(parts)}</svg>'
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vb}" width="{(x + 60) / 8:.0f}" height="130" role="img" '
+            f'aria-label="{E(name)}"><title>{E(name)}</title>{"".join(parts)}</svg>\n')
 
 
 # ---------------------------------------------------------------- navigation
@@ -85,7 +56,7 @@ ICONS = {
 }
 
 
-def nav_items(groups, current, cta=("contribute.html", "Donate tokens")):
+def nav_items(groups, current, cta=("contribute.html", "Contribute")):
     """groups: [(label, [(href, title, line, icon), ...]), ...]. External links (http) get a small arrow."""
     out = []
     for gi, (label, items) in enumerate(groups):
