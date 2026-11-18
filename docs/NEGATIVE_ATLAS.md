@@ -20,3 +20,10 @@ Closed routes, each with the effect size the test could have caught. Empty until
 - **Detectable.** A maxRAF of 1,404 or more would have been flagged under N3m. Under N1, cores smaller than about 30% of the background maxRAF are not detectable by size (task #8).
 - **Scope.** KEGG-derived network as deposited, one food set. A Rhea-built network is open as task #23.
 - **Details.** experiments/raf_null/RESULTS.md.
+
+## "Metabolic assembly strata follow enzyme age and metal catalysis" fails within pathways (orig-paper, task #28)
+- **Test.** Mrnjavac et al. 2026 (doi:10.1126/sciadv.aef3128) give 408 reactions in 49 strata. I asked whether, within the same pathway, reactions with LUCA enzymes, Moody 2024 LUCA KOs, or reactions shown to run on metals without enzymes sit in earlier strata. Labels were permuted within pathways; prereg sha `406b3e37`.
+- **Result.** None of the three holds within pathways (Holm p 0.39, 0.66, 0.40). Across the whole network, metal-catalysed and Moody-LUCA reactions are earlier (p 0.003, 0.0003), but that comes from which pathway they are in. The paper's own LUCA label shows no ordering even across the whole network: mean stratum 22.7 LUCA vs 22.0 lineage. Strata 1-7 hold more lineage-specific enzymes than LUCA ones.
+- **Detectable.** With labels tilted 0.7/0.3 within pathways, power is 0.995.
+- **Not closed.** An exploratory within-pathway rank-percentile signal for age (p ≈ 0.01) would need a fresh sealed test on another stratified network.
+- **Details.** experiments/metabolic_strata/RESULTS.md.

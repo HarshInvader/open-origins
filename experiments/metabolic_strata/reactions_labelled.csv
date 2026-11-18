@@ -1,0 +1,409 @@
+rid,stratum,pathway,age,age_gray,cats,grade,moody
+R00134,1,"Carbon fixation, WL",LUCA,LUCA,LUCA,C,False
+R00149,1,Arginine,,,,,False
+R01195,1,"Carbon fixation, WL",LUCA,LUCA,LUCA,A,
+R03015,1,"Carbon fixation, WL",lineage,lineage,"LACA,gray LACA",C,True
+R07157,1,"Carbon fixation, WL",lineage,lineage,LACA,C,True
+R10092,1,Carbon fixation,LUCA,LUCA,"LBCA,LUCA,gray LBCA",,False
+R00019,2,"Carbon fixation, WL",LUCA,LUCA,"LBCA,LUCA,gray LACA",A,True
+R00943,2,"Carbon fixation, WL",lineage,lineage,LBCA,C,True
+R03390,2,"Carbon fixation, WL",lineage,lineage,LACA,C,False
+R01655,3,"Carbon fixation, WL",LUCA,LUCA,LUCA,C,False
+R03464,3,"Carbon fixation, WL",lineage,lineage,LACA,C,True
+R01220,4,"Carbon fixation, WL",,,,C,False
+R04455,4,"Carbon fixation, WL",,,,C,False
+R04456,4,"Carbon fixation, WL",lineage,lineage,LACA,C,False
+R03025,5,"Carbon fixation, WL",,,,,
+R04464,5,"Carbon fixation, WL",lineage,lineage,LACA,C,True
+R07168,5,"Carbon fixation, WL",lineage,lineage,LBCA,C,False
+R09096,6,"Carbon fixation, WL",,,,,
+R10243,6,"Carbon fixation, WL",lineage,lineage,"LACA,LBCA",C,True
+R00230,7,"Carbon fixation, WL",lineage,lineage,LBCA,,False
+R00742,7,Carbon fixation,LUCA,LUCA,LUCA,,False
+R01196,7,"Carbon fixation, rTCA",LUCA,LUCA,LUCA,C,True
+R10866,7,"Carbon fixation, rTCA",,,,,
+R00199,8,"Carbon fixation, rTCA",LUCA,LUCA,LUCA,,False
+R00206,8,"Carbon fixation, rTCA",lineage,lineage,LBCA,,False
+R00226,8,"Valine,Isoleucine",LUCA,LUCA,LUCA,,False
+R00344,8,"Carbon fixation, rTCA",LUCA,LUCA,LUCA,,True
+R00396,8,Alanine,LUCA,LUCA,"LBCA,LUCA",A,False
+R01626,8,Biotin,LUCA,LUCA,"LBCA,LUCA",,False
+R07399,8,Isoleucine,LUCA,LUCA,LUCA,C,False
+R00341,9,Glycolysis/gluconeogenesis,lineage,lineage,LBCA,,False
+R00342,9,"Carbon fixation, rTCA",LUCA,LUCA,LUCA,A,True
+R00345,9,"Carbon fixation, rTCA",lineage,lineage,LACA,,False
+R00431,9,Glycolysis/gluconeogenesis,LUCA,LUCA,LUCA,,True
+R00658,9,Glycolysis/gluconeogenesis,LUCA,LUCA,LUCA,B,False
+R03896,9,Isoleucine,,,,B,False
+R04439,9,CoA,LUCA,LUCA,LUCA,,False
+R05071,9,"Valine,Isoleucine",LUCA,LUCA,LUCA,,False
+R07476,9,CoM,,,,,False
+R09543,9,Biotin,,lineage,gray LBCA,,False
+R01082,10,"Carbon fixation, rTCA",LUCA,LUCA,"LBCA,LUCA",A,True
+R01518,10,Glycolysis/gluconeogenesis,LUCA,LUCA,"LBCA,LUCA",,False
+R03898,10,Isoleucine,,,,B,False
+R04440,10,"Valine,Isoleucine",LUCA,LUCA,LUCA,B,False
+R04441,10,"Valine,Isoleucine",LUCA,LUCA,LUCA,B,False
+R05789,10,CoM,lineage,lineage,LBCA,,True
+R10115,10,Biotin,lineage,lineage,LBCA,,False
+R00402,11,"Carbon fixation, rTCA",,,,A,False
+R00994,11,Isoleucine,LUCA,LUCA,LUCA,,True
+R01213,11,Leucine,LUCA,LUCA,LUCA,,False
+R01512,11,Glycolysis/gluconeogenesis,LUCA,LUCA,LUCA,B,False
+R01513,11,Serine,LUCA,LUCA,LUCA,B,False
+R07136,11,CoM,LUCA,LUCA,LUCA,B,True
+R10116,11,Biotin,LUCA,LUCA,LUCA,B,False
+R00405,12,"Carbon fixation, rTCA",LUCA,LUCA,LUCA,,False
+R01061,12,Glycolysis/gluconeogenesis,LUCA,LUCA,LUCA,,False
+R01063,12,Glycolysis/gluconeogenesis,LUCA,LUCA,LUCA,,False
+R03968,12,Leucine,LUCA,LUCA,LUCA,B,False
+R05774,12,CoM,lineage,lineage,LACA,B,False
+R08648,12,Isoleucine,LUCA,LUCA,LUCA,,False
+R10117,12,Biotin,lineage,lineage,LBCA,B,False
+R01015,13,Glycolysis/gluconeogenesis,LUCA,LUCA,LUCA,A,False
+R01058,13,Glycolysis/gluconeogenesis,LUCA,LUCA,LUCA,C,True
+R01197,13,"Carbon fixation, rTCA",LUCA,LUCA,LUCA,,True
+R04001,13,Leucine,LUCA,LUCA,LUCA,B,False
+R05069,13,Isoleucine,LUCA,LUCA,LUCA,,False
+R05636,13,Thiamine diphosphate,lineage,lineage,LBCA,,False
+R07159,13,Glycolysis/gluconeogenesis,lineage,lineage,LACA,C,False
+R09153,13,CoM,,,,,
+R10118,13,Biotin,lineage,lineage,LBCA,B,False
+R10935,13,Methanofuran,lineage,lineage,LACA,,False
+R00243,14,Glutamate,LUCA,LUCA,LUCA,A,False
+R00248,14,Glutamate,LUCA,LUCA,LUCA,A,False
+R00267,14,"Carbon fixation, rTCA",LUCA,LUCA,LUCA,C,False
+R00271,14,Lysine,lineage,lineage,LACA,,True
+R01070,14,Glycolysis/gluconeogenesis,LUCA,LUCA,"LACA,LUCA",B,False
+R04426,14,Leucine,LUCA,LUCA,LUCA,B,True
+R05068,14,Isoleucine,LUCA,LUCA,LUCA,B,False
+R10119,14,Biotin,lineage,lineage,LBCA,,False
+R11038,14,Methanofuran,,,,,
+R00239,15,Proline,lineage,lineage,LBCA,B,False
+R00253,15,Glutamine,LUCA,LUCA,LUCA,,True
+R00258,15,Alanine,LUCA,LUCA,LUCA,A,False
+R00259,15,Arginine,LUCA,LUCA,"LUCA,gray LBCA",,False
+R00355,15,Aspartate,LUCA,LUCA,LUCA,B,False
+R00479,15,Carbon fixation,,,,,
+R01214,15,CoA,,,,,
+R01652,15,Leucine,LUCA,LUCA,LUCA,B,
+R01900,15,"Carbon fixation, rTCA",LUCA,LUCA,"LBCA,LUCA,gray LBCA",A,False
+R02073,15,Glycolysis/gluconeogenesis,lineage,lineage,LBCA,A,True
+R03444,15,Lysine,,,,B,False
+R04173,15,Serine,lineage,lineage,LBCA,B,False
+R04780,15,Glycolysis/gluconeogenesis,lineage,lineage,"LBCA,gray LBCA",A,False
+R05070,15,Isoleucine,LUCA,LUCA,LUCA,B,False
+R10120,15,Biotin,LUCA,LUCA,LUCA,B,False
+R11039,15,Methanofuran,,,,,
+R00372,16,Glycine,LUCA,LUCA,LUCA,A,False
+R00400,16,Alanine,,,,,
+R00480,16,"Lysine,Threonine,Methionine",LUCA,LUCA,LUCA,B,False
+R00482,16,Asparagine,,,,,
+R00483,16,Asparagine,LUCA,LUCA,"LBCA,LUCA,gray LBCA",,False
+R00489,16,CoA,lineage,lineage,"LBCA,gray LBCA",A,True
+R00575,16,Pyrimidine,LUCA,LUCA,LUCA,,False
+R00578,16,Asparagine,LUCA,LUCA,"LBCA,LUCA,gray LBCA",,False
+R00582,16,Serine,LUCA,LUCA,LUCA,,True
+R00764,16,Glycolysis/gluconeogenesis,lineage,lineage,LBCA,A,True
+R01088,16,Leucine,lineage,lineage,LBCA,A,False
+R01090,16,Leucine,LUCA,LUCA,LUCA,A,False
+R01325,16,"Carbon fixation, rTCA",LUCA,LUCA,"LBCA,LUCA,gray LBCA",A,False
+R01397,16,Pyrimidine,LUCA,LUCA,LUCA,C,True
+R02199,16,Isoleucine,LUCA,LUCA,LUCA,B,False
+R02272,16,"F430,Cobalamin",LUCA,LUCA,LUCA,,False
+R02649,16,Arginine,LUCA,LUCA,LUCA,B,False
+R02740,16,Pentose phosphate pathway,lineage,lineage,LBCA,A,False
+R03313,16,Proline,lineage,lineage,LBCA,,False
+R04371,16,Lysine,,,,B,True
+R04779,16,Glycolysis/gluconeogenesis,lineage,lineage,LBCA,A,True
+R07274,16,Cysteine,LUCA,LUCA,LUCA,,False
+R07407,16,NAD,lineage,lineage,LACA,,True
+R07410,16,NAD,lineage,lineage,LACA,,True
+R09084,16,Glycolysis/gluconeogenesis,,lineage,gray LACA,A,False
+R09780,16,Pentose phosphate pathway,lineage,lineage,LACA,,True
+R10121,16,Biotin,lineage,lineage,LBCA,B,False
+R00036,17,"F430,Cobalamin",LUCA,LUCA,LUCA,,False
+R00352,17,"Carbon fixation, rTCA",,,,,False
+R00369,17,Alanine,LUCA,LUCA,LUCA,A,False
+R00371,17,Glycine,LUCA,LUCA,LUCA,,False
+R00586,17,Cysteine,LUCA,LUCA,LUCA,,False
+R00756,17,Glycolysis/gluconeogenesis,lineage,lineage,LBCA,A,True
+R00959,17,Glycolysis/gluconeogenesis,LUCA,LUCA,LUCA,,False
+R01322,17,"Carbon fixation, rTCA",,,,,
+R01788,17,Glycolysis/gluconeogenesis,,,,,
+R01934,17,Lysine,,,,,False
+R01993,17,Pyrimidine,LUCA,LUCA,LUCA,C,False
+R02291,17,"Lysine,Threonine,Methionine",LUCA,LUCA,LUCA,,False
+R02739,17,Pentose phosphate pathway,lineage,lineage,"LBCA,gray LBCA",,False
+R03314,17,Proline,,,,,
+R03443,17,Arginine,LUCA,LUCA,LUCA,,False
+R04292,17,NAD,LUCA,LUCA,LUCA,,False
+R05338,17,Pentose phosphate pathway,lineage,lineage,LACA,,True
+R05805,17,Glycolysis/gluconeogenesis,,lineage,gray LACA,A,False
+R07460,17,Thiamine diphosphate,LUCA,LUCA,LUCA,,False
+R10122,17,Biotin,lineage,lineage,LBCA,B,False
+R12342,17,Cysteine,,,,A,False
+R00084,18,"F430,Cobalamin",LUCA,LUCA,LUCA,,False
+R00354,18,"Carbon fixation, rTCA",lineage,lineage,"LBCA,gray LBCA",,False
+R00897,18,Cysteine,LUCA,LUCA,LUCA,,False
+R00947,18,Glycolysis/gluconeogenesis,,,,,False
+R01056,18,Pentose phosphate pathway,LUCA,LUCA,"LBCA,LUCA",A,False
+R01248,18,Proline,LUCA,LUCA,LUCA,,False
+R01251,18,Proline,LUCA,LUCA,LUCA,,False
+R01529,18,Pentose phosphate pathway,lineage,lineage,LBCA,,False
+R01602,18,Glycolysis/gluconeogenesis,lineage,lineage,LBCA,,False
+R01773,18,"Methionine,Threonine",LUCA,LUCA,LUCA,B,False
+R01775,18,"Methionine,Threonine",LUCA,LUCA,LUCA,B,False
+R01786,18,Glycolysis/gluconeogenesis,lineage,lineage,LBCA,B,False
+R01867,18,Pyrimidine,,,,C,False
+R01869,18,Pyrimidine,LUCA,LUCA,LUCA,C,True
+R02283,18,Arginine,,,,,
+R02736,18,Pentose phosphate pathway,lineage,lineage,LBCA,B,False
+R03758,18,Glycine,lineage,lineage,LBCA,B,
+R07281,18,"Flavin,FMN",lineage,lineage,LACA,C,False
+R08331,18,CoB,,,,,
+R09085,18,Glycolysis/gluconeogenesis,,lineage,gray LACA,B,False
+R09725,18,Biotin,,lineage,gray LBCA,,False
+R10147,18,Lysine,LUCA,LUCA,LUCA,,False
+R10907,18,Pentose phosphate pathway,lineage,lineage,LBCA,B,False
+R00299,19,Glycolysis/gluconeogenesis,lineage,lineage,LBCA,B,False
+R00669,19,Arginine,lineage,lineage,LBCA,B,True
+R01049,19,Pentose phosphate pathway,LUCA,LUCA,LUCA,,False
+R01600,19,Glycolysis/gluconeogenesis,lineage,lineage,LBCA,B,False
+R01641,19,Pentose phosphate pathway,LUCA,LUCA,LUCA,B,False
+R01771,19,Threonine,LUCA,LUCA,"LUCA,gray LBCA",B,False
+R01777,19,Methionine,LUCA,LUCA,"LBCA,LUCA",,False
+R02035,19,Pentose phosphate pathway,lineage,lineage,LBCA,,False
+R03165,19,"F430,Cobalamin",,lineage,gray LACA,,False
+R03759,19,Glycine,lineage,lineage,LBCA,B,
+R04198,19,Lysine,LUCA,LUCA,LUCA,,False
+R04199,19,Lysine,LUCA,LUCA,LUCA,,False
+R05804,19,Glycolysis/gluconeogenesis,,,,B,False
+R07245,19,Arginine,lineage,lineage,LBCA,B,False
+R09086,19,Glycolysis/gluconeogenesis,,lineage,gray LACA,B,False
+R10089,19,PLP,LUCA,LUCA,LUCA,,True
+R10124,19,Biotin,,,,,
+R10392,19,CoB,,,,B,False
+R00667,20,Proline,,,,B,False
+R01072,20,Purine,LUCA,LUCA,LUCA,,False
+R01398,20,Arginine,LUCA,LUCA,LUCA,B,False
+R01466,20,Threonine,LUCA,LUCA,LUCA,,False
+R01528,20,Pentose phosphate pathway,lineage,lineage,LBCA,A,False
+R01827,20,Pentose phosphate pathway,LUCA,LUCA,LUCA,,False
+R01870,20,Pyrimidine,LUCA,LUCA,LUCA,,False
+R03194,20,"F430,Cobalamin",LUCA,LUCA,LUCA,,False
+R03260,20,Methionine,,lineage,gray LACA,,False
+R03348,20,NAD,LUCA,LUCA,LUCA,,False
+R04336,20,Lysine,,,,,
+R04364,20,Lysine,lineage,lineage,LBCA,,False
+R04365,20,Lysine,lineage,lineage,LBCA,,False
+R07613,20,Lysine,LUCA,LUCA,LUCA,,False
+R09107,20,Arginine,lineage,lineage,LBCA,B,True
+R10221,20,Pentose phosphate pathway,lineage,lineage,LBCA,A,False
+R10393,20,CoB,,,,B,False
+R00751,21,Glycine,lineage,lineage,LBCA,,False
+R00965,21,Pyrimidine,LUCA,LUCA,LUCA,B,False
+R00996,21,Isoleucine,LUCA,LUCA,LUCA,,False
+R01001,21,Cysteine,,lineage,gray LBCA,,False
+R01286,21,Methionine,lineage,lineage,LBCA,,False
+R01465,21,Glycine,,,,B,True
+R01826,21,"Tryptothan,Phenylalanine,Tyrosine",LUCA,LUCA,LUCA,,False
+R01830,21,Pentose phosphate pathway,LUCA,LUCA,LUCA,B,False
+R01954,21,Arginine,LUCA,LUCA,LUCA,,False
+R02735,21,Lysine,LUCA,LUCA,LUCA,,False
+R02755,21,Lysine,,,,B,False
+R03947,21,"F430,Cobalamin",,,,B,False
+R04144,21,Purine,LUCA,LUCA,LUCA,B,False
+R04467,21,Lysine,,,,,
+R04475,21,Lysine,,,,B,False
+R08214,21,CoB,,,,,
+R00158,22,Pyrimidine,LUCA,LUCA,LUCA,B,False
+R00451,22,Lysine,LUCA,LUCA,LUCA,B,False
+R00946,22,Methionine,lineage,lineage,LBCA,,False
+R01086,22,Arginine,LUCA,LUCA,LUCA,,False
+R01290,22,Cysteine,LUCA,LUCA,"LUCA,gray LBCA",,False
+R02733,22,Lysine,,,,,
+R02734,22,Lysine,lineage,lineage,LBCA,B,False
+R03083,22,"Tryptothan,Phenylalanine,Tyrosine",LUCA,LUCA,LUCA,,False
+R04325,22,Purine,,,,,
+R05807,22,Cobalamin,,lineage,gray LACA,,False
+R08332,22,CoB,,,,,
+R10305,22,Cysteine,,,,,
+R11626,22,F430,lineage,lineage,LACA,,False
+R00156,23,Pyrimidine,LUCA,LUCA,LUCA,B,False
+R00551,23,Arginine,,lineage,gray LBCA,,False
+R03084,23,"Tryptothan,Phenylalanine,Tyrosine",lineage,lineage,"LACA,LBCA",,False
+R04463,23,Purine,LUCA,LUCA,LUCA,,False
+R05808,23,Cobalamin,LUCA,LUCA,"LBCA,LUCA",,False
+R10395,23,CoB,,,,B,False
+R10699,23,Biotin,,lineage,gray LBCA,B,False
+R11627,23,F430,,,,,False
+R00571,24,Pyrimidine,LUCA,LUCA,LUCA,B,True
+R00573,24,Pyrimidine,LUCA,LUCA,LUCA,B,True
+R02413,24,"Tryptothan,Phenylalanine,Tyrosine",LUCA,LUCA,LUCA,B,False
+R03182,24,Biotin,lineage,lineage,LBCA,,False
+R04208,24,Purine,LUCA,LUCA,LUCA,,False
+R08716,24,Cobalamin,,,,,
+R10396,24,CoB,,,,B,False
+R11580,24,Cobalamin,LUCA,LUCA,LUCA,,False
+R11628,24,F430,LUCA,LUCA,"LACA,LUCA",,False
+R02412,25,"Tryptothan,Phenylalanine,Tyrosine",lineage,lineage,"LACA,LBCA",B,False
+R04209,25,Purine,,,,B,False
+R05809,25,Cobalamin,,,,,
+R05810,25,Cobalamin,,,,,False
+R07404,25,Purine,LUCA,LUCA,LUCA,,False
+R08215,25,CoB,,,,,
+R11629,25,F430,,,,,
+R11636,25,Pyrimidine,,,,,
+R02325,26,Pyrimidine,LUCA,LUCA,LUCA,,False
+R03460,26,"Tryptothan,Phenylalanine,Tyrosine",LUCA,LUCA,LUCA,,False
+R04591,26,Purine,LUCA,LUCA,LUCA,B,False
+R07405,26,Purine,LUCA,LUCA,LUCA,,False
+R07772,26,Cobalamin,,lineage,gray LACA,,False
+R08328,26,CoB,,,,,
+R01714,27,"Tryptothan,Phenylalanine,Tyrosine",LUCA,LUCA,LUCA,,False
+R02100,27,Pyrimidine,LUCA,LUCA,LUCA,,False
+R04559,27,Purine,LUCA,LUCA,LUCA,,True
+R07773,27,Cobalamin,LUCA,LUCA,LUCA,,False
+R10397,27,CoB,,,,,
+R00985,28,Tryptophan,LUCA,LUCA,LUCA,,True
+R00986,28,Tryptophan,LUCA,LUCA,LUCA,,True
+R01302,28,THMPT,,,,,False
+R01715,28,"Tyrosine,Phenylalanine",lineage,lineage,LBCA,,True
+R01716,28,THF,lineage,lineage,LBCA,,False
+R02101,28,Pyrimidine,lineage,lineage,LBCA,,False
+R04560,28,Purine,LUCA,LUCA,"LUCA,gray LBCA",,False
+R05812,28,Cobalamin,,lineage,gray LBCA,,False
+R06975,28,Purine,lineage,lineage,LACA,B,True
+R08323,28,CoB,,,,,
+R01073,29,Tryptophan,LUCA,LUCA,LUCA,,True
+R01127,29,Purine,lineage,lineage,LACA,,False
+R01373,29,Phenylalanine,LUCA,LUCA,"LBCA,LUCA,gray LBCA",,True
+R01728,29,Tyrosine,,,,,False
+R01730,29,Tyrosine,,,,,
+R01731,29,"Tyrosine,Phenylalanine",LUCA,LUCA,LUCA,B,False
+R02094,29,Pyrimidine,LUCA,LUCA,LUCA,B,False
+R05553,29,THF,,,,,False
+R07276,29,Phenylalanine,,,,B,False
+R07774,29,Cobalamin,lineage,lineage,LACA,,False
+R08217,29,CoB,,,,,
+R11102,29,THMPT,lineage,lineage,LACA,,False
+R00691,30,Phenylalanine,LUCA,LUCA,"LBCA,LUCA,gray LBCA",A,True
+R00694,30,Phenylalanine,LUCA,LUCA,LUCA,B,False
+R00732,30,Tyrosine,,,,,
+R00733,30,Tyrosine,,,,,
+R00734,30,Tyrosine,LUCA,LUCA,LUCA,B,False
+R01130,30,"Purine,GTP",LUCA,LUCA,LUCA,,False
+R01135,30,"Purine,ATP",LUCA,LUCA,LUCA,,False
+R02093,30,Pyrimidine,LUCA,LUCA,LUCA,B,False
+R03509,30,Tryptophan,LUCA,LUCA,LUCA,,False
+R07775,30,Cobalamin,,,,,
+R00736,31,Methanofuran,LUCA,LUCA,LUCA,B,True
+R01083,31,"Purine,ATP",LUCA,LUCA,LUCA,,True
+R01230,31,"Purine,GTP",LUCA,LUCA,"LBCA,LUCA",B,False
+R01231,31,"Purine,GTP",LUCA,LUCA,"LBCA,LUCA",B,False
+R03508,31,Tryptophan,LUCA,LUCA,LUCA,,False
+R05814,31,Cobalamin,LUCA,LUCA,LUCA,,False
+R00127,32,"Purine,ATP",LUCA,LUCA,LUCA,A,False
+R00332,32,"Purine,GTP",lineage,lineage,LBCA,B,False
+R02722,32,Tryptophan,LUCA,LUCA,LUCA,,True
+R05815,32,Cobalamin,LUCA,LUCA,LUCA,,False
+R10902,32,Methanofuran,,,,,
+R00200,33,"Purine,ATP",LUCA,LUCA,LUCA,A,False
+R00315,33,"Carbon fixation, WL",lineage,lineage,LBCA,A,True
+R00330,33,"Purine,GTP",LUCA,LUCA,LUCA,B,False
+R00430,33,"Purine,GTP",LUCA,LUCA,LUCA,A,False
+R05218,33,Cobalamin,,,,,
+R11040,33,Methanofuran,,,,,
+R00177,34,"Cysteine,SAM",LUCA,LUCA,LUCA,A,False
+R00425,34,"THF,FMN",lineage,lineage,LBCA,,False
+R00428,34,THF,LUCA,LUCA,"LBCA,LUCA",,False
+R01071,34,Histidine,LUCA,LUCA,LUCA,,False
+R03005,34,NAD,LUCA,LUCA,LUCA,,True
+R05220,34,Cobalamin,LUCA,LUCA,LUCA,,False
+R05705,34,Cobalamin,LUCA,LUCA,"LUCA,gray LBCA",,False
+R05706,34,Cobalamin,LUCA,LUCA,"LUCA,gray LBCA",,False
+R07459,34,Thiamine diphosphate,LUCA,LUCA,LUCA,,False
+R11633,34,Purine,,,,,
+R11634,34,Purine,,,,,
+R00189,35,NAD,LUCA,LUCA,LUCA,,False
+R00257,35,NAD,LUCA,LUCA,LUCA,,False
+R01078,35,Biotin,lineage,lineage,LBCA,,False
+R03231,35,Biotin,lineage,lineage,LBCA,B,False
+R03459,35,"Flavin,FMN",LUCA,LUCA,LUCA,,False
+R03472,35,Thiamine diphosphate,LUCA,LUCA,LUCA,,False
+R04035,35,Histidine,LUCA,LUCA,LUCA,,False
+R05046,35,THF,LUCA,LUCA,"LBCA,LUCA",B,False
+R05225,35,Cobalamin,LUCA,LUCA,LUCA,,False
+R07461,35,Thiamine diphosphate,LUCA,LUCA,LUCA,,True
+R09394,35,MoCo,LUCA,LUCA,LUCA,,False
+R10246,35,Thiamine diphosphate,lineage,lineage,LBCA,,False
+R11072,35,THF,,,,,
+R11919,35,Cobalamin,,,,,
+R00104,36,NADP,LUCA,LUCA,LUCA,B,False
+R00194,36,Cysteine,lineage,lineage,LBCA,,False
+R03458,36,"Flavin,FMN",,,,,
+R04037,36,Histidine,LUCA,LUCA,LUCA,,False
+R04509,36,Thiamine diphosphate,LUCA,LUCA,LUCA,B,False
+R04621,36,THF,,,,,
+R05048,36,THF,LUCA,LUCA,"LBCA,LUCA",,False
+R07302,36,Cobalamin,LUCA,LUCA,LUCA,B,False
+R10247,36,Thiamine diphosphate,lineage,lineage,LBCA,,False
+R11372,36,MoCo,LUCA,LUCA,LUCA,,False
+R12026,36,Thiamine diphosphate,lineage,lineage,LACA,,False
+R12854,36,Cobalamin,,,,,
+R01291,37,Cysteine,lineage,lineage,LBCA,,False
+R03504,37,THF,lineage,lineage,"LACA,gray LBCA",,False
+R04639,37,THF,LUCA,LUCA,"LBCA,LUCA",,False
+R04640,37,Histidine,LUCA,LUCA,LUCA,,False
+R05221,37,Cobalamin,,,,,
+R06558,37,Cobalamin,,,,,
+R07280,37,"Flavin,FMN",,,,,False
+R09395,37,MoCo,lineage,lineage,LBCA,,False
+R09977,37,Thiamine diphosphate,,,,,
+R12855,37,Cobalamin,,,,,
+R03066,38,THF,LUCA,LUCA,LUCA,,False
+R03503,38,THF,lineage,lineage,"LACA,LBCA",,False
+R04457,38,"Flavin,FMN",LUCA,LUCA,LUCA,A,False
+R04558,38,Histidine,LUCA,LUCA,LUCA,,False
+R04620,38,THF,,lineage,gray LBCA,,False
+R04638,38,THF,,,,,False
+R05222,38,Cobalamin,lineage,lineage,"LBCA,gray LACA,gray LBCA",,False
+R09726,38,MoCo,LUCA,LUCA,LUCA,,False
+R10712,38,Thiamine diphosphate,LUCA,LUCA,LUCA,,False
+R11719,38,THF,,,,,
+R12161,38,F420,LUCA,LUCA,LUCA,,False
+R12856,38,Cobalamin,,,,,
+R00066,39,"Flavin,FMN",lineage,lineage,"LACA,LBCA",A,False
+R00617,39,Thiamine diphosphate,LUCA,LUCA,LUCA,B,False
+R02237,39,THF,lineage,lineage,"LBCA,gray LBCA",B,False
+R03067,39,THF,LUCA,LUCA,LUCA,,False
+R03457,39,Histidine,LUCA,LUCA,LUCA,B,False
+R04148,39,Cobalamin,lineage,lineage,LBCA,,False
+R09735,39,MoCo,,,,,False
+R10339,39,THMPT,,,,,
+R12162,39,F420,lineage,lineage,LACA,,False
+R00549,40,"Flavin,FMN",lineage,lineage,LBCA,B,False
+R00936,40,THF,lineage,lineage,LBCA,,False
+R00939,40,THF,lineage,lineage,LBCA,,False
+R03243,40,Histidine,LUCA,LUCA,LUCA,B,False
+R04594,40,Cobalamin,,,,,False
+R00161,41,"Flavin,FAD",lineage,lineage,LACA,,False
+R00945,41,Glycine,LUCA,LUCA,LUCA,,False
+R03013,41,Histidine,,lineage,gray LBCA,,False
+R03388,41,THMPT,,,,,
+R05223,41,Cobalamin,LUCA,LUCA,LUCA,,False
+R10802,41,THMPT,lineage,lineage,LACA,,False
+R01226,42,CoA,LUCA,LUCA,LUCA,,False
+R03012,42,Histidine,LUCA,LUCA,LUCA,B,False
+R09399,42,F420,lineage,lineage,"LACA,gray LBCA",B,False
+R01163,43,Histidine,LUCA,LUCA,LUCA,B,False
+R02472,43,CoA,LUCA,LUCA,LUCA,B,False
+R09400,43,F420,,,,,
+R02473,44,CoA,lineage,lineage,LBCA,B,False
+R03018,45,CoA,lineage,lineage,LBCA,B,True
+R04230,46,CoA,,,,,
+R04231,46,CoA,,,,,
+R03269,47,CoA,LUCA,LUCA,"LBCA,LUCA,gray LBCA",B,False
+R03035,48,CoA,LUCA,LUCA,LUCA,,False
+R00130,49,CoA,lineage,lineage,LBCA,B,False
