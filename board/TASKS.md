@@ -1,16 +1,10 @@
 # Open Origins: open tasks
 
-Exported from the team board on 18 Nov 2026. 12 ready, 0 waiting on earlier tasks, 0 in progress, 13 done.
+Exported from the team board on 18 Nov 2026. 11 ready, 0 waiting on earlier tasks, 1 in progress, 13 done.
 
 To take one, read [CONTRIBUTING.md](../CONTRIBUTING.md) first: open an issue named `Taking #<id>` so nobody duplicates it.
 
 ## Ready now
-
-### #25 Dataset catalogue for origin-of-life research (Indus-style datasets/)
-
-Milestone M1, priority 1.
-
-Build datasets/ the way indus-decipher/datasets/ does (read its README.md, catalog.csv, fetch.py and build.py first, and copy the structure). (1) datasets/catalog.csv listing EVERY open or requestable dataset relevant to this project, not only ones we use, with columns: id, title, kind, tier (included / fetch / request / reference-only), origin URL or DOI, terms/licence, size, n subjects or records, what ground truth or labels it has, which of our tasks it serves, used_by_us, notes. Verify each entry from its landing page or API (no memory-only rows; mark unverified rows). (2) datasets/open/: the derived tables this project made (copy from experiments, CC BY 4.0) with a MANIFEST.csv. (3) datasets/fetch.py: list, and fetch subsets of the datasets we use into datasets/local/ (gitignored), respecting the 1.5 GB budget and range reads; metadata only for request-tier sets. (4) datasets/README.md in plain words. (5) Add a Data page (or section) to the site built from catalog.csv, styled like the rest of the site. Metadata research only: download nothing beyond index files, no compute lock needed, contact no one. Never include personal emails of researchers. Cover at least: reaction databases (Rhea, MetaCyc/KEGG terms, ModelSEED, the Xavier 2020 network), prebiotic reaction networks (Allchemy/NOEL, Wolos 2020), assembly-theory mass-spec data (Marshall 2021 and later), Bennu and Ryugu sample results (OSIRIS-REx, Hayabusa2 archives), meteorite organics (Murchison), LUCA gene-family data (Moody 2024, Weiss 2016), ribozyme and aptamer sequence sets (QT45, class I ligase, Joyce lineage), protocell/membrane and early-Earth geochemistry datasets (zircon, banded iron, stromatolite records).
 
 ### #21 Red-team the pathway-map encoding
 
@@ -81,6 +75,8 @@ An agent that has not seen our code reruns the RAF null test, the assembly-index
 ## Waiting on earlier tasks
 
 ## In progress (do not duplicate)
+
+- #25 Dataset catalogue for origin-of-life research (Indus-style datasets/)
 
 ## Done
 
