@@ -21,6 +21,24 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 
+
+MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+def news_date(s):
+    """2026-05-28 -> 28 May 2026; 2026-06 -> Jun 2026; anything else (2001-2020) as given."""
+    p = s.split("-")
+    if len(p) == 3 and all(x.isdigit() for x in p):
+        return f"{int(p[2])}\u00a0{MONTHS[int(p[1]) - 1]} {p[0]}"
+    if len(p) == 2 and len(p[1]) == 2 and p[1].isdigit():
+        return f"{MONTHS[int(p[1]) - 1]} {p[0]}"
+    return s
+
+
+def news_head(s):
+    """Drop a trailing author list in brackets: the card already shows the authors."""
+    return re.sub(r"\s*\((?=[^()]*(,|et al))[^()]*\)\s*$", "", s)
+
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 DIST = SITE / "dist"
@@ -86,7 +104,7 @@ def render(name, title, desc, current, main, body_class=""):
     nav = "".join(f'<li><a href="{f}"{" aria-current=page" if f == current else ""}>{e(n)}</a></li>' for f, n in PAGES)
     foot = "".join(f'<a href="{f}">{e(n)}</a>' for f, n in [("index.html", "Home")] + PAGES)
     note = (f"Part of <a href=\"../index.html\">Open Citizen Science</a>. Figures marked Real data are drawn from the project's result files at build time; "
-            f"pictures marked Illustration are drawn for this site. The repository is not public yet. Built {time.strftime('%Y-%m-%d')}.")
+            f"pictures marked Illustration are drawn for this site. The repository is not public yet. Built {time.strftime('%d %b %Y').lstrip('0')}.")
     fills = {"TITLE": e(title), "DESC": e(desc), "ROOT": "", "BODY_CLASS": body_class, "MARK": mark_svg(), "NAME": e(C["name"]),
              "NAV": nav, "MAIN": main, "GOAL": e(C["goal"]), "FOOT_PAGES": foot, "FOOT_NOTE": note}
     out = re.sub(r"\{\{([A-Z_]+)\}\}", lambda m: fills[m.group(1)], tpl)
@@ -399,7 +417,7 @@ def page_tracker():
     s2 = block("02", "Milestones", "h-ms", "Progress by milestone", FIG.fig_milestones(TASKS, C["milestones"], title))
     tname = {t["id"]: t["title"] for t in TASKS}
     lands = "".join(f'<li><span class="id">#{l["task"]}</span><div><p class="lt"><b>{e(tname.get(l["task"], ""))}</b><span class="tag">{e(l["verdict"])}</span>'
-                    f'<span>{time.strftime("%Y-%m-%d", time.gmtime(l["ts"]))}</span></p><p>{e(l["summary"])}</p><p class="where"><code>{e(l["path"])}</code></p></div></li>' for l in LANDED)
+                    f'<span>{time.strftime("%d %b %Y", time.gmtime(l["ts"])).lstrip("0")}</span></p><p>{e(l["summary"])}</p><p class="where"><code>{e(l["path"])}</code></p></div></li>' for l in LANDED)
     s3 = block("03", "Landed", "h-landed", f"{len(LANDED)} results landed, newest first", f'<ol class="landed">{lands}</ol>')
     ms = dict(C["milestones"])
     groups = []
@@ -428,8 +446,8 @@ def thumb(n, cls="nthumb", eager=False):
 
 def news_card(n):
     st = n.get("status", "")
-    return (f'<article class="ncard" id="{e(n["id"])}"><p class="nmeta"><span class="nkind">{e(n.get("kind", "Paper"))}</span><span>{e(n["date"])}</span></p>'
-            f'<div class="nrow">{thumb(n)}<div class="nbody"><h3 class="nh"><a href="news-{e(n["id"])}.html">{e(n["head"])}</a></h3>'
+    return (f'<article class="ncard" id="{e(n["id"])}"><p class="nmeta"><span class="nkind">{e(n.get("kind", "Paper"))}</span><time datetime="{e(n["date"])}">{news_date(n["date"])}</time></p>'
+            f'<div class="nrow">{thumb(n)}<div class="nbody"><h3 class="nh"><a href="news-{e(n["id"])}.html">{e(news_head(n["head"]))}</a></h3>'
             f'<p class="nsrc">{e(n.get("who", ""))} · <a href="{e(n["url"])}">{e(n["venue"])}</a></p>'
             f'<p class="z z-gist">{md(n["gist"])}</p><p class="z z-plain">{md(n.get("plain") or n["gist"])}</p><p class="z z-tech">{md(n.get("tech") or n["gist"])}</p>'
             f'<div class="nborrow"><span class="tag {"part" if st == "planned" else "open"}">{e(STATUS_WORD.get(st, st))}</span><p><b>What we take from it.</b> {md(n["borrow"])}</p></div></div></div></article>')
@@ -461,7 +479,7 @@ def news_article(n, prev, nxt):
         if x:
             nb += f'<a href="news-{e(x["id"])}.html"><small>{lab}</small>{e(x["head"])}</a>'
     return f'''<article class="news-article wrap">
-<header><a class="nback" href="news.html">Back to News</a><p class="kicker">{e(n.get("kind", "Paper"))} · {e(n["date"])}</p><h1>{e(n["head"])}</h1>
+<header><a class="nback" href="news.html">Back to News</a><p class="kicker">{e(n.get("kind", "Paper"))} · {news_date(n["date"])}</p><h1>{e(news_head(n["head"]))}</h1>
 <p class="article-source">{e(n.get("who", ""))} · <a href="{e(n["url"])}">{e(n["venue"])}</a></p></header>{vis}
 <section aria-labelledby="sentence"><h2 id="sentence">In a sentence</h2><p>{md(n["gist"])}</p></section>
 <section aria-labelledby="plain"><h2 id="plain">In plain words</h2><p>{md(n.get("plain") or n["gist"])}</p></section>
