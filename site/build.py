@@ -186,18 +186,6 @@ def data_list():
 
 
 # ---------------------------------------------------------------- home
-SIGNS = [  # the frieze: signs of early Earth and early life, each in a 48-unit box
-    '<path d="M18 44V22M30 44V22M18 22a9 9 0 1 1 12 0M18 29h12M18 36h12"/>',  # RNA hairpin
-    '<path d="M24 8l15 11-6 18H15L9 19z"/><circle cx="24" cy="8" r="2.5"/>',  # ribose ring
-    '<path d="M4 40h40M7 40c0-14 8-24 17-24s17 10 17 24M13 40c0-9 5-16 11-16s11 7 11 16M19 40c0-5 2-9 5-9s5 4 5 9"/>',  # stromatolite
-    '<path d="M17 44l4-24h6l4 24M22 16c-3-4 3-6 0-11M27 16c3-4-3-6 0-11"/>',  # vent chimney
-    '<circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="13"/><circle cx="20" cy="21" r="2.5"/><circle cx="28" cy="28" r="2"/>',  # protocell
-    '<path d="M9 33l10-9 10 9 10-9"/><circle cx="9" cy="33" r="3"/><circle cx="19" cy="24" r="3"/><circle cx="29" cy="33" r="3"/><circle cx="39" cy="24" r="3"/>',  # a small molecule
-    '<path d="M28 4L14 26h10l-4 18 14-24H24z"/>',  # the spark
-    '<path d="M24 6c8 10 12 17 12 24a12 12 0 0 1-24 0c0-7 4-14 12-24z"/>',  # water
-]
-
-
 def page_index():
     art = ART.hero().replace('<figure class="hero-art">', '<figure class="hero-art plate">', 1)
     art = re.sub(r"<figcaption>.*?</figcaption>",
@@ -209,7 +197,6 @@ def page_index():
             '<p class="state">An open-source effort, run in public. All our code and data are free.</p>'
             '<div class="actions"><a class="btn primary" href="contribute.html">Contribute</a><a class="btn" href="findings.html">Read the findings</a></div>'
             f'</div>{art}</section>')
-    band = CH.frieze(SIGNS, "A band of the signs of this project: an RNA hairpin, a ribose ring, a stromatolite, a vent chimney, a protocell, a molecule, a spark and a drop of water")
     s1 = block("01", "The question", "h-question", "Chemistry can make each step toward life, but nobody has joined them up", f"""
 <div class="split"><div class="say">
 <p>Life began on Earth about four billion years ago, from chemistry alone. Nobody knows how.</p>
@@ -236,7 +223,7 @@ def page_index():
     s6 = block("06", "Help", "h-help", "The fastest help is an AI agent working an open task",
                '<div class="say"><p>Point a Claude Fable or Opus class agent at an open task. Wet labs can run a test we seal in advance.</p></div>'
                '<div class="actions"><a class="btn primary" href="contribute.html">Find a way to help</a></div>', "broad")
-    return hero + band + s1 + s2 + s3 + s4 + s5 + s6
+    return hero + s1 + s2 + s3 + s4 + s5 + s6
 
 
 # ---------------------------------------------------------------- findings
