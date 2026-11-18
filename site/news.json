@@ -217,7 +217,7 @@
    "verified": true,
    "gist": "Heat flowing through rock cracks sorts a mixed prebiotic soup, doing the purification chemists normally do by hand.",
    "plain": "Most origin-of-life chemistry works only because chemists purify the product of one step before the next. This team showed that warm water in thin rock cracks, heated on one side, can sort more than 50 building blocks out of a mixture. In one test the sorting boosted a reaction joining two glycines by a factor of about 100,000.",
-   "tech": "Thermophoresis in crack-like geo-compartments separates more than 50 prebiotically relevant compounds (amino acids, nucleobases, nucleotides, polyphosphates, 2-aminoazoles) and raises concentration ratios up to three orders of magnitude. Selective enrichment of trimetaphosphate increased glycine dimerisation yields by five orders of magnitude. Robust across crack sizes, pH, solvents and temperatures.",
+   "tech": "Thermophoresis in crack-like geo-compartments separates more than 50 prebiotically relevant compounds (amino acids, nucleobases, nucleotides, polyphosphates, 2-aminoazoles) Experiments in single and three-chamber set-ups gave enrichments such as 23-fold; the up-to-three-orders-of-magnitude concentration ratios and the five-orders-of-magnitude rise in glycine dimerisation yield come from simulated 20 x 20 crack networks. Robust across crack sizes, pH, solvents and temperatures.",
    "borrow": "A named physical process that may stand in for a purified hand-off. The compatibility rule (task #3) must say whether such processes count.",
    "status": "planned",
    "topic": "Building blocks"
