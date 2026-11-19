@@ -62,3 +62,4 @@ experiments/*/features.jsonl
 experiments/reporting_audit/texts/
 experiments/luca_calib/ext/
 experiments/luca_calib/smoke/
+experiments/luca_calib/results/

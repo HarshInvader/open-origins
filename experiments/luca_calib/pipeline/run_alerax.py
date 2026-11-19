@@ -73,10 +73,13 @@ def main():
                     help="passed to AleRax; its default (4) would silently drop small families")
     ap.add_argument("--extra", default="", help="extra AleRax arguments, space separated")
     ap.add_argument("--tag", default="", help="suffix for the run directory")
+    ap.add_argument("--max-fams", type=int, default=0, help="smoke only: first N reconcilable families")
+    ap.add_argument("--name", default="", help="run directory name (overrides the default)")
+    ap.add_argument("--np", type=int, default=1, help="MPI ranks (mpiexec -np); 1 = plain call")
     a = ap.parse_args()
 
     sim = os.path.abspath(a.simdir)
-    name = "alerax_%s_%s_%s%s" % (a.trees, a.parametrization, a.origination, ("_" + a.tag) if a.tag else "")
+    name = a.name or "alerax_%s_%s_%s%s" % (a.trees, a.parametrization, a.origination, ("_" + a.tag) if a.tag else "")
     rdir = os.path.join(sim, name)
     if os.path.isdir(rdir):
         shutil.rmtree(rdir)
@@ -99,11 +102,15 @@ def main():
             if ngenes < a.min_genes or not os.path.exists(tp):
                 unrec.append(fam)
                 continue
+            if a.max_fams and len(fams) >= a.max_fams:
+                unrec.append(fam)
+                continue
             fams.append(fam)
             f.write("- f%s\ngene_tree = %s\nmapping = %s\n" % (fam, tp, os.path.join(sim, "sample", "mappings", fam + ".map")))
 
     out = os.path.join(rdir, "out")
-    cmd = [ALERAX, "-f", os.path.join(rdir, "families.txt"), "-s", sp_path, "-p", out,
+    mpi = [os.path.join(os.path.dirname(ALERAX), "mpiexec"), "-np", str(a.np)] if a.np > 1 else []
+    cmd = mpi + [ALERAX, "-f", os.path.join(rdir, "families.txt"), "-s", sp_path, "-p", out,
            "--rec-model", a.rec_model, "--model-parametrization", a.parametrization,
            "--origination", a.origination, "--gene-tree-samples", str(a.samples), "--seed", str(a.seed),
            "--species-tree-search", "SKIP", "--min-covered-species", str(a.min_covered_species)] + a.extra.split()

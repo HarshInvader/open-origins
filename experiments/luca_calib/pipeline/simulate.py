@@ -1,7 +1,7 @@
 """Simulate one planted-LUCA dataset with Zombi (T -> Ti -> Gm -> Su), then sample, prune and write the truth.
 
 Usage:
-    python simulate.py <outdir> <config.json> [--set section.key=value ...]
+    python simulate.py <outdir> <config.json> [--set section.key=value ...] [--su-workers k] [--su-all]
 
 Every rate, size and count comes from the config (defaults below) or a --set override.
 Zombi is called unmodified from ext/zombi; this script only writes its parameter and CustomRates files.
@@ -15,7 +15,20 @@ Steps
     Zombi's own SCALE_TREE only writes side files that G mode does not read, hence Ti.
  3. Zombi Gm: per-family D/T/L rates drawn by Zombi from the distributions we write
     (f:x when genome.family_rate_sigma == 0, else l:mu;sigma with mean equal to the rate).
- 4. Zombi Su with CustomRates/{ST,GT}_Substitution_rates.tsv written here (lognormal, seeded).
+ 4. Zombi Su with CustomRates/{ST,GT}_Substitution_rates.tsv written here (lognormal, seeded; the
+    multipliers are drawn for every family, so the draws do not depend on the subset below).
+    By default Su runs only on families with >= 2 genes in the sampled genomes (the only ones whose
+    sequences are used), split into --su-workers chunks that run in parallel. Each chunk is a fresh
+    Zombi experiment folder holding a copy of T, the CustomRates files and the chunk's gene trees,
+    with Su SEED = seed * 1000 + chunk. --su-all runs Su on every family in one Zombi call, as before.
+ 3b. Arm L (prereg v4 A), genome.mode = "Gu": Zombi Gu (user rates, CustomRates/Event_rates.tsv,
+    Extension_rates.tsv, Transfer_rates.tsv) instead of Gm. Zombi's Gu rates are per lineage
+    (genome-wide), not per gene, and Gu has no per-family rates, so family heterogeneity is dropped
+    (logged in sim_summary). Per-lineage rates: D = duplication * N, T = transfer * N, O = origination,
+    L = D + T + O (zero expected change in genome size) and L * lineage_loss.multiplier on every
+    lineage below the fast clade's crown node in the complete tree (the crown's own stem excluded),
+    with N = genome.gu_reference_genes. The fast clade is clades.fast_clade on domain B's sampled
+    tips with seed = config seed. Transfer weights are 1 between every pair of lineages alive together.
  5. Sample n_per_domain extant tips per domain; write species tree, pruned true gene trees,
     FASTA, AleRax mapping files, copy-number matrix and truth (MRCA genome, cross-checked
     against the per-family event files).
@@ -186,7 +199,8 @@ def step_species_tree(cfg, out, logs):
             "n_extant": len(ext), "n_complete_leaves": len(comp)}
 
 
-def step_genomes(cfg, out, logs):
+def step_genomes(cfg, out, logs, gene_trees=True):
+    """Zombi Gm. gene_trees=False (stage F, genome sizes only) skips writing gene trees."""
     g = cfg["genome"]
     s = g["family_rate_sigma"]
     params = os.path.join(out, "params", "GenomeParameters.tsv")
@@ -205,7 +219,7 @@ def step_genomes(cfg, out, logs):
         ("ASSORTATIVE_TRANSFER", "False"), ("ALPHA", 100),
         ("INITIAL_GENOME_SIZE", g["initial_genome_size"]),
         ("MIN_GENOME_SIZE", g["min_genome_size"]),
-        ("EVENTS_PER_BRANCH", 0), ("PROFILES", 1), ("GENE_TREES", 1), ("RECONCILED_TREES", 0),
+        ("EVENTS_PER_BRANCH", 0), ("PROFILES", 1), ("GENE_TREES", 1 if gene_trees else 0), ("RECONCILED_TREES", 0),
         ("VERBOSE", 0), ("SCALE_TREE", 0),
         ("GENE_LENGTH", "f:100"), ("INTERGENE_LENGTH", 100), ("PSEUDOGENIZATION", 0.5),
         ("RATE_FILE", "False"), ("SCALE_RATES", "False"),
@@ -213,7 +227,9 @@ def step_genomes(cfg, out, logs):
     zombi("Gm", params, os.path.join(out, "zombi"), os.path.join(logs, "zombi_Gm.log"))
 
 
-def step_sequences(cfg, out, logs, mrca, sampled):
+def step_sequences(cfg, out, logs, mrca, sampled, families=None, workers=1):
+    """families=None: Su on every family in zombi/ (one call). Otherwise Su only on `families`, in
+    `workers` parallel chunk folders under <out>/su_chunks, merged back into zombi/S."""
     sq = cfg["sequence"]
     zdir = os.path.join(out, "zombi")
     rng = np.random.default_rng(cfg["seed"] + 7919)
@@ -249,7 +265,10 @@ def step_sequences(cfg, out, logs, mrca, sampled):
         ("SEQUENCE", "amino-acid"), ("AA_MODEL", sq["aa_model"]),
         ("CODON_MODEL", "MG"), ("ALPHA", 1.0), ("BETA", 0.5), ("KAPPA", 1.0),
         ("VERBOSE", 0), ("SEED", cfg["seed"])])
-    zombi("Su", params, zdir, os.path.join(logs, "zombi_Su.log"))
+    if families is None:
+        zombi("Su", params, zdir, os.path.join(logs, "zombi_Su.log"))
+    else:
+        run_su_chunks(cfg, out, logs, sorted(families, key=int), workers, scaling)
 
     # realised mean MRCA->tip distance (lineage multipliers only; family multipliers have mean 1)
     m = comp & mrca
@@ -262,6 +281,106 @@ def step_sequences(cfg, out, logs, mrca, sampled):
         rtt.append(d * scaling)
     return {"scaling": scaling, "mean_mrca_to_tip_subs": float(np.mean(rtt)),
             "mean_mrca_to_tip_time": float(np.mean([m.get_distance(comp & l) for l in sampled]))}
+
+
+def step_genomes_gu(cfg, out, logs, clade):
+    """Zombi Gu with per-lineage rates (arm L). Returns a summary dict."""
+    g = cfg["genome"]
+    ll = cfg.get("lineage_loss", {})
+    mult = float(ll.get("multiplier", 1.6))
+    N = float(g["gu_reference_genes"])
+    zdir = os.path.join(out, "zombi")
+    comp = read_tree(os.path.join(zdir, "T", "CompleteTree.nwk"))
+    comp.get_tree_root().name = "Root"
+    inside = set()
+    if clade is not None:
+        inside = {x.name for x in (comp & clade).traverse() if x.name != clade}
+    D, T, O = g["duplication"] * N, g["transfer"] * N, float(g["origination"])
+    L = D + T + O
+    crd = os.path.join(zdir, "CustomRates")
+    os.makedirs(crd, exist_ok=True)
+    names = [x.name for x in comp.traverse("preorder")]
+    with open(os.path.join(crd, "Event_rates.tsv"), "w") as f:
+        f.write("lineage\tD\tT\tL\tI\tC\tO\n")
+        for nm in names:
+            f.write("%s\t%r\t%r\t%r\t0.0\t0.0\t%r\n" % (nm, D, T, L * (mult if nm in inside else 1.0), O))
+    with open(os.path.join(crd, "Extension_rates.tsv"), "w") as f:
+        f.write("lineage\tD\tT\tL\tI\tC\n")
+        for nm in names:
+            f.write("%s\t%s\t%s\t%s\tg:1\tg:1\n" % (nm, g["duplication_extension"], g["transfer_extension"], g["loss_extension"]))
+    # lifespans: a lineage is alive from its parent's time to its own node time
+    t_of = {}
+    for x in comp.traverse("preorder"):
+        t_of[x] = 0.0 if x.up is None else t_of[x.up] + x.dist
+    stem = float(open(os.path.join(zdir, "T", "CompleteTree.nwk")).read().strip().rstrip(";").split(":")[-1]) \
+        if ")Root:" in open(os.path.join(zdir, "T", "CompleteTree.nwk")).read() else 0.0
+    span = [(x.name, (t_of[x.up] if x.up is not None else -stem), t_of[x]) for x in comp.traverse()]
+    span.sort(key=lambda v: v[1])
+    n_pairs = 0
+    with open(os.path.join(crd, "Transfer_rates.tsv"), "w") as f:
+        f.write("donor\trecipient\tweight\n")
+        for i, (a, s0, e0) in enumerate(span):
+            for b, s1, e1 in span:
+                if a != b and s1 < e0 and s0 < e1:
+                    f.write("%s\t%s\t1\n" % (a, b))
+                    n_pairs += 1
+    params = os.path.join(out, "params", "GenomeParameters.tsv")
+    write_params(params, [
+        ("DUPLICATION", "f:0"), ("TRANSFER", "f:0"), ("LOSS", "f:0"),
+        ("INVERSION", "f:0"), ("TRANSPOSITION", "f:0"), ("ORIGINATION", "f:0"),
+        ("DUPLICATION_EXTENSION", g["duplication_extension"]),
+        ("TRANSFER_EXTENSION", g["transfer_extension"]),
+        ("LOSS_EXTENSION", g["loss_extension"]),
+        ("INVERSION_EXTENSION", "g:1"), ("TRANSPOSITION_EXTENSION", "g:1"),
+        ("REPLACEMENT_TRANSFER", g["replacement_transfer"]),
+        ("ASSORTATIVE_TRANSFER", "False"), ("ALPHA", 100),
+        ("INITIAL_GENOME_SIZE", g["initial_genome_size"]),
+        ("MIN_GENOME_SIZE", g["min_genome_size"]),
+        ("EVENTS_PER_BRANCH", 0), ("PROFILES", 1), ("GENE_TREES", 1), ("RECONCILED_TREES", 0),
+        ("VERBOSE", 0), ("SCALE_TREE", 0),
+        ("GENE_LENGTH", "f:100"), ("INTERGENE_LENGTH", 100), ("PSEUDOGENIZATION", 0.5),
+        ("RATE_FILE", "False"), ("SCALE_RATES", "False"),
+        ("SEED", cfg["seed"])])
+    zombi("Gu", params, zdir, os.path.join(logs, "zombi_Gu.log"))
+    return {"mode": "Gu", "fast_clade": clade, "lineage_loss_multiplier": mult, "n_lineages_fast": len(inside),
+            "per_lineage_rates": {"D": D, "T": T, "L": L, "O": O, "N_reference": N},
+            "family_rate_heterogeneity": "dropped (Zombi Gu has no per-family rates)", "transfer_pairs": n_pairs}
+
+
+def run_su_chunks(cfg, out, logs, families, workers, scaling):
+    from concurrent.futures import ThreadPoolExecutor
+    sq = cfg["sequence"]
+    zdir = os.path.join(out, "zombi")
+    root = os.path.join(out, "su_chunks")
+    shutil.rmtree(root, ignore_errors=True)
+    os.makedirs(os.path.join(zdir, "S"), exist_ok=True)
+    k = max(1, min(workers, len(families)))
+    chunks = [families[i::k] for i in range(k)]
+
+    def one(i):
+        cz = os.path.join(root, str(i), "zombi")
+        os.makedirs(os.path.join(cz, "G", "Gene_trees"))
+        shutil.copytree(os.path.join(zdir, "T"), os.path.join(cz, "T"))
+        shutil.copytree(os.path.join(zdir, "CustomRates"), os.path.join(cz, "CustomRates"))
+        for fam in chunks[i]:
+            for kind in ("completetree", "prunedtree"):
+                shutil.copy(os.path.join(zdir, "G", "Gene_trees", "%s_%s.nwk" % (fam, kind)),
+                            os.path.join(cz, "G", "Gene_trees"))
+        params = os.path.join(root, str(i), "SequenceParameters.tsv")
+        write_params(params, [
+            ("SCALING", repr(scaling)), ("SEQUENCE_SIZE", sq["sequence_size"]),
+            ("SEQUENCE", "amino-acid"), ("AA_MODEL", sq["aa_model"]),
+            ("CODON_MODEL", "MG"), ("ALPHA", 1.0), ("BETA", 0.5), ("KAPPA", 1.0),
+            ("VERBOSE", 0), ("SEED", cfg["seed"] * 1000 + i)])
+        zombi("Su", params, cz, os.path.join(logs, "zombi_Su_chunk%d.log" % i))
+        for f in os.listdir(os.path.join(cz, "S")):
+            if f.endswith(".fasta"):
+                os.replace(os.path.join(cz, "S", f), os.path.join(zdir, "S", f))
+
+    if chunks:
+        with ThreadPoolExecutor(max_workers=k) as ex:
+            list(ex.map(one, range(len(chunks))))
+    shutil.rmtree(root, ignore_errors=True)
 
 
 def read_genome(path):
@@ -287,6 +406,16 @@ def mrca_copies_from_events(events_path, mrca):
     return n
 
 
+def sample_species(cfg, ext):
+    """Sample n_per_domain extant tips from each child of the extant root (rng seeded with cfg seed)."""
+    mrca, doms, dom_roots = domains_of(ext)
+    rng = np.random.default_rng(cfg["seed"])
+    n_dom = cfg["sampling"]["n_per_domain"]
+    sampled_by_dom = [sorted(rng.choice(d, size=n_dom, replace=False).tolist(), key=lambda x: int(x[1:]))
+                      for d in doms]
+    return mrca, doms, dom_roots, sampled_by_dom
+
+
 # ----------------------------------------------------------------------------------------------
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -294,6 +423,8 @@ def main():
     ap.add_argument("config")
     ap.add_argument("--set", action="append", default=[], help="override, e.g. genome.transfer=1.0")
     ap.add_argument("--force", action="store_true", help="delete outdir first")
+    ap.add_argument("--su-workers", type=int, default=1, help="parallel Zombi Su chunks (default 1)")
+    ap.add_argument("--su-all", action="store_true", help="run Su on every family (old behaviour)")
     a = ap.parse_args()
 
     cfg = load_config(a.config, a.set)
@@ -315,11 +446,7 @@ def main():
 
     zdir = os.path.join(out, "zombi")
     ext = read_tree(os.path.join(zdir, "T", "ExtantTree.nwk"))
-    mrca, doms, dom_roots = domains_of(ext)
-    rng = np.random.default_rng(cfg["seed"])
-    n_dom = cfg["sampling"]["n_per_domain"]
-    sampled_by_dom = [sorted(rng.choice(d, size=n_dom, replace=False).tolist(), key=lambda x: int(x[1:]))
-                      for d in doms]
+    mrca, doms, dom_roots, sampled_by_dom = sample_species(cfg, ext)
     sampled = sampled_by_dom[0] + sampled_by_dom[1]
     dom_of = {s: "A" for s in sampled_by_dom[0]}
     dom_of.update({s: "B" for s in sampled_by_dom[1]})
@@ -338,12 +465,31 @@ def main():
     log("MRCA %s, domain roots %s, sampled %d" % (mrca, dom_roots, len(sampled)))
 
     t = time.time()
-    step_genomes(cfg, out, logs)
+    if cfg["genome"].get("mode", "Gm") == "Gu":
+        import clades
+        clade, cinfo = (None, None)
+        if cfg.get("lineage_loss", {}).get("multiplier", 1.6) != 1.0:
+            clade, cinfo = clades.fast_clade(sp, sampled_by_dom[1], cfg["seed"])
+        summary["genome_model"] = step_genomes_gu(cfg, out, logs, clade)
+        summary["genome_model"]["fast_clade_info"] = cinfo
+        log("Gu (arm L): fast clade %s %s" % (clade, cinfo))
+    else:
+        step_genomes(cfg, out, logs)
+        summary["genome_model"] = {"mode": "Gm"}
     update_timings(out, "zombi_Gm", time.time() - t)
     log("Gm done in %.1fs" % (time.time() - t))
 
     t = time.time()
-    summary["sequence"] = step_sequences(cfg, out, logs, mrca, sampled)
+    su_fams = None
+    if not a.su_all:
+        gdir0 = os.path.join(zdir, "G", "Genomes")
+        tot = {}
+        for s_ in sampled:
+            for fam, c in read_genome(os.path.join(gdir0, s_ + "_GENOME.tsv")).items():
+                tot[fam] = tot.get(fam, 0) + c
+        su_fams = [f for f, c in tot.items() if c >= 2]
+    summary["sequence"] = step_sequences(cfg, out, logs, mrca, sampled, su_fams, a.su_workers)
+    summary["sequence"]["su_families"] = "all" if su_fams is None else len(su_fams)
     update_timings(out, "zombi_Su", time.time() - t)
     log("Su done in %.1fs" % (time.time() - t))
 
