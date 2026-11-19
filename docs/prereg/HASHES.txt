@@ -5,3 +5,4 @@ b60f5f12adf90262ae8a1cd5dc0e6b88b6bb2274ea4e62cd02a49cbb04d9609d  docs/prereg/as
 4b4aff1067cc727e3d5e938962365c1822af7f837e7fff38b7bf80489d6b9854  docs/prereg/luca_planted_recovery.md  orig-2  2026-11-18T07:12:12Z  task#9 simulation
 30dcc2800393c760da35cd63137290308970253401385b516e0f6070c4059087  docs/prereg/dsm_route_score.md  orig-paper  2026-11-18T21:18:10Z  task#26 DSM route under rule v1
 406b3e3779f2b15b54fb5758a2e88b5f9e245a48a106ba481cd7737714ed8abe  docs/prereg/metabolic_strata_age.md  orig-paper  2026-11-18T21:47:56Z  task#28 strata vs age/metal (Mrnjavac 2026)
+528b9d13b327de96a1c0b554b51c4fee509acae56603c1c6620c4640562addc4  docs/prereg/intervention_ledger.md  orig-paper  2026-11-19T05:36:12Z  task#29 intervention ledger, 6 new routes
