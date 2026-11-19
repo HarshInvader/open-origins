@@ -567,15 +567,46 @@ html:not(.js) .z-plain { display: block; }
 .ngrid .nborrow { flex-direction: column; gap: 6px; }
 .ngrid .nborrow p { font-size: 14px; }
 
-/* the field now (news page) */
-.field-now .fronts { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 20px 28px; grid-template-columns: minmax(0, 1fr); counter-reset: fr; }
-@media (min-width: 760px) { .field-now .fronts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.field-now .front { border-top: 2px solid var(--accent); padding-top: 12px; counter-increment: fr; }
-.field-now .front h3 { font-size: 18px; line-height: 1.3; margin: 0 0 6px; }
-.field-now .front h3::before { content: counter(fr) ". "; color: var(--accent); }
-.field-now .front p { margin: 0 0 8px; font-size: 15.5px; }
-.field-now .front-refs { font-size: 14px; color: var(--muted); }
-.field-now .front-refs span { font-weight: 600; }
+/* the landscape snapshot (news page; site/landscape_view.py) */
+.landscape { --ls-sans: var(--sans); --ls-mono: var(--mono); --ls-track: var(--line); --ls-up: var(--ok); --ls-down: var(--bad); }
+.landscape { container-type: inline-size; }
+.ls-kicker { font-family: var(--ls-sans); font-weight: 600; font-size: 12.5px; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 8px; }
+.landscape h2 { margin: 0 0 8px; font-size: clamp(20px, 2.3vw, 25px); line-height: 1.25; max-width: 36ch; }
+.ls-meta { color: var(--muted); font-size: 14.5px; margin: 0 0 4px; max-width: 80ch; }
+.ls-how summary, .ls-q summary { cursor: pointer; font-family: var(--ls-sans); font-weight: 600; font-size: 13.5px; color: var(--accent); width: fit-content; }
+.ls-how p { font-size: 14.5px; color: var(--muted); margin: 6px 0 0; max-width: 80ch; }
+.ls-list { list-style: none; margin: 14px 0 0; padding: 0; }
+.ls-row { max-width: none; display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px 28px; padding: 16px 0 14px; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
+.ls-name h3 { margin: 0; font-size: 17px; line-height: 1.3; display: flex; gap: 10px; align-items: baseline; }
+.ls-rank { font: 600 12px/1 var(--ls-mono); color: var(--muted); min-width: 1.4em; flex: none; }
+.ls-bet { margin: 4px 0 0; font-size: 15px; line-height: 1.5; color: var(--muted); }
+.ls-bar { height: 10px; border-radius: 999px; background: var(--ls-track); overflow: hidden; }
+.ls-bar span { display: block; height: 100%; border-radius: 999px; background: var(--accent); }
+.ls-num { margin: 6px 0 0; font-family: var(--ls-sans); font-size: 14px; line-height: 1.45; font-variant-numeric: tabular-nums; }
+.ls-num b { font-size: 16px; } .ls-num span { color: var(--muted); }
+.ls-trend { display: grid; grid-template-columns: 120px auto; column-gap: 12px; align-items: center; }
+.ls-spark { width: 120px; height: 34px; display: block; overflow: visible; }
+.ls-sl, .ls-sp { fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.ls-sp { stroke-dasharray: 2.5 3; opacity: 0.85; }
+.ls-sa { fill: var(--accent); opacity: 0.12; stroke: none; }
+.ls-sd { fill: var(--accent); } .ls-so { fill: var(--surface); stroke: var(--accent); stroke-width: 1.4; }
+.ls-years { grid-column: 1; display: flex; justify-content: space-between; font: 11px/1.3 var(--ls-mono); color: var(--muted); }
+.ls-tw { grid-column: 2; grid-row: 1; margin: 0; font-family: var(--ls-sans); font-weight: 600; font-size: 12.5px; line-height: 1.3; color: var(--muted); }
+.ls-tw span { display: block; font-weight: 400; color: var(--muted); }
+.ls-rising { color: var(--ls-up); } .ls-falling { color: var(--ls-down); }
+.ls-more { display: grid; gap: 5px; font-size: 14.5px; line-height: 1.5; }
+.ls-more p { margin: 0; max-width: 100ch; }
+.ls-k { font-family: var(--ls-sans); font-weight: 600; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin-right: 8px; }
+.ls-inst { color: var(--muted); }
+.ls-q p { font-size: 13.5px; color: var(--muted); margin: 4px 0; } .ls-q code { font-size: 12.5px; }
+@container (min-width: 700px) {
+  .ls-row { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) 124px; align-items: start; }
+  .ls-bet { margin-left: calc(1.4em + 10px); }
+  .ls-size { padding-top: 6px; }
+  .ls-trend { grid-template-columns: 120px; }
+  .ls-tw { grid-column: 1; grid-row: auto; margin-top: 2px; }
+  .ls-more { grid-column: 1 / -1; margin-left: calc(1.4em + 10px); }
+}
 
 /* library page */
 .ltools { display: grid; gap: 12px; margin-bottom: 8px; }

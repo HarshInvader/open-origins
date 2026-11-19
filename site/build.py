@@ -12,7 +12,7 @@ Inputs (read-only):
   experiments/qt45_numbers/results_calc.json                  QT45 growth factor (task #2)
   experiments/compat/results.json, planted_cases.csv          compatibility rule control (task #3)
   docs/PAPERS.csv                                             paper ledger (tasks #1, #14)
-  docs/library/library.json                                   paper library (library.html; field_now on the news page)
+  docs/library/library.json                                   paper library (library.html; landscape links on the news page)
   docs/prereg/HASHES.txt                                      sealed plans
   board/board.db                                              task board (opened read-only)
   site/assets/news/*.webp                                     news pictures (made by site/illustrate_news.py)
@@ -540,17 +540,15 @@ def page_news():
 
 
 def field_now():
-    fn = NEWS_JSON.get("field_now")
-    if not fn:
+    """The landscape snapshot (who works on what, roughly how many) from news.json "landscape",
+    written by open-citizen-science/tools/paperwatch/landscape.py; this build only renders it."""
+    L = NEWS_JSON.get("landscape")
+    if not L:
         return ""
-    lib = {p["id"]: p for p in LIB}
-    cards = []
-    for f in fn["fronts"]:
-        refs = ", ".join(f'<a href="library.html#{e(i)}">{e(lib[i]["authors"].split(",")[0].split()[0])} {e(str(lib[i]["year"]))}</a>' for i in f["library_ids"] if i in lib)
-        cards.append(f'<li class="front"><h3>{e(f["title"])}</h3><p>{md(f["what"])}</p><p class="front-refs"><span>Papers:</span> {refs}</p></li>')
-    return (f'<section class="block wrap field-now" aria-labelledby="h-field-now"><p class="rail"><span>00</span>The field now</p><div class="content">'
-            f'<h2 id="h-field-now">Where the field stands</h2><p class="note">Updated {news_date(fn["updated"])}. A short summary drawn from the papers in our '
-            f'<a href="library.html">library</a>; each front links to the papers behind it.</p><ol class="fronts">{"".join(cards)}</ol></div></section>')
+    lib = {p["id"]: f'{p["authors"].split(",")[0].split()[0]} {p["year"]}' for p in LIB}
+    inner = load_module("oo_landscape_view", SITE / "landscape_view.py").render(L, lib, tag="div")
+    return (f'<section class="block wrap field-now" aria-label="Who is working on what"><p class="rail"><span>00</span>The field now</p>'
+            f'<div class="content">{inner}</div></section>')
 
 
 # ---------------------------------------------------------------- library

@@ -1,66 +1,705 @@
 {
   "_about": "News page. Add new items at the top of items. verified=true only after someone opened the DOI/URL and checked who, venue, date and every number in gist/plain/tech. Fields: gist (one line), plain (a short story for anyone), tech (for specialists), borrow (what this project takes from it or tests), status (planned, running, done, or context for background items with no test of ours). url is a https://doi.org/ link. topic: one of the names in topics (add a new topic only when five or more items need it). field_now: a short summary of where the field stands (fronts with library ids from docs/library/library.json).",
-  "field_now": {
+  "landscape": {
     "updated": "2026-11-19",
-    "fronts": [
+    "method": "Counts are estimates from keyword matches in OpenAlex titles and abstracts, journal articles and reviews only, for the 12 months to the update date. A paper can match more than one direction, and the headline removes people counted twice. Distinct authors and institutions are exact up to 400 papers per direction and extrapolated from the newest 400 above that. Each direction lists its exact query so anyone can check it.",
+    "headline": "Roughly 4,100 researchers published journal papers on how life began in the past year, across these 10 directions.",
+    "totals": {
+      "authors": 4129,
+      "works_sum": 1075,
+      "overlap_ratio": 0.789
+    },
+    "directions": [
       {
-        "title": "How big was LUCA, and can the methods tell?",
-        "what": "Reconciliation methods put a large genome at the root of life, about 2,600 proteins in Moody et al. 2024. Csűrös argued in 2026 that the method overcalls transfers and that LUCA shrinks to a few dozen genes; Szöllősi and colleagues reply that deep-node methods miss far more genes than they invent. Huang et al. now show that letting loss rates differ between lineages moves the archaeal root and changes the ancestor, but nobody has yet tested these methods on simulated genomes with a known answer at that depth.",
-        "library_ids": [
-          "moody-2024-luca",
-          "csuros-2026-gld-ancient-genomes",
-          "szollosi-williams-2026-gld-threshold-letter",
-          "gagnon-csuros-2026-reply",
-          "szollosi-2026-gene-content-grammar",
-          "huang-2026-laca-methanogen-reconciliation",
-          "selcuk-2026-lbca-complete-flagellum",
-          "koldaeva-2026-noisy-genomes-phenotype"
-        ]
+        "id": "prebiotic",
+        "name": "Prebiotic chemistry",
+        "bet": "Find plausible reactions on the early Earth that make life's building blocks: nucleotides, amino acids, lipids.",
+        "works": 245,
+        "authors": 1077,
+        "institutions": 479,
+        "estimated": false,
+        "trend": {
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "counts": [
+            171,
+            187,
+            202,
+            212,
+            217,
+            218
+          ],
+          "partial_last": true,
+          "word": "rising",
+          "growth": 0.062
+        },
+        "query": {
+          "search": "(\"prebiotic chemistry\" OR \"prebiotic synthesis\" OR \"prebiotically plausible\" OR \"prebiotic conditions\" OR \"origin of life\" OR \"origins of life\") AND (synthesis OR reaction OR nucleotide OR \"amino acid\" OR peptide OR phosphorylation)",
+          "filter": "type:article|review,primary_location.source.type:journal",
+          "window": [
+            "2025-11-20",
+            "2026-11-19"
+          ],
+          "url": "https://api.openalex.org/works?filter=title_and_abstract.search:(\"prebiotic+chemistry\"+OR+\"prebiotic+synthesis\"+OR+\"prebiotically+plausible\"+OR+\"prebiotic+conditions\"+OR+\"origin+of+life\"+OR+\"origins+of+life\")+AND+(synthesis+OR+reaction+OR+nucleotide+OR+\"amino+acid\"+OR+peptide+OR+phosphorylation),type:article|review,primary_location.source.type:journal,from_publication_date:2025-11-20,to_publication_date:2026-11-19"
+        },
+        "groups": [
+          {
+            "name": "Joseph Moran",
+            "inst": "University of Strasbourg"
+          },
+          {
+            "name": "Matthew W. Powner",
+            "inst": "University College London"
+          },
+          {
+            "name": "John D. Sutherland",
+            "inst": "MRC Laboratory of Molecular Biology"
+          },
+          {
+            "name": "Dieter Braun",
+            "inst": "LMU Munich"
+          },
+          {
+            "name": "David C. Catling",
+            "inst": "University of Washington"
+          }
+        ],
+        "now": "Cyanosulfidic chemistry keeps adding steps, such as phosphate activation and protecting groups. Wet-dry and heat-flow setups test where those steps could run.",
+        "now_ids": [
+          "marinic-2026-n-cyanoimidazole",
+          "liu-2026-thioformyl-protecting-group",
+          "capera-aragones-2026-wet-dry-ratchet"
+        ],
+        "us": "Our pathway map found no route that stays continuous under our sealed step-compatibility rule."
       },
       {
-        "title": "RNA copiers can now be seen and tuned",
-        "what": "The first 3D structures of lab-evolved polymerase ribozymes appeared in 2026, and one already led to a faster enzyme. Directed evolution raised copying accuracy to 94% per letter, which is still far from what self-copying needs. Mirror-image letters stop nonenzymatic copying outright, so handedness had to be sorted out first.",
-        "library_ids": [
-          "szokoli-2026-tc19z-cryoem",
-          "strutzenberg-2026-polymerase-complex",
+        "id": "space",
+        "name": "Organics from space",
+        "bet": "Asteroid samples (Bennu, Ryugu) and meteorites show which building blocks space delivered to the young Earth.",
+        "works": 164,
+        "authors": 965,
+        "institutions": 402,
+        "estimated": false,
+        "trend": {
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "counts": [
+            104,
+            118,
+            114,
+            123,
+            120,
+            151
+          ],
+          "partial_last": true,
+          "word": "steady",
+          "growth": 0.033
+        },
+        "query": {
+          "search": "(Bennu OR Ryugu OR \"carbonaceous chondrite\" OR \"carbonaceous chondrites\" OR meteorite OR meteorites OR cometary) AND (\"amino acids\" OR nucleobases OR organics OR \"organic matter\" OR prebiotic)",
+          "filter": "type:article|review,primary_location.source.type:journal",
+          "window": [
+            "2025-11-20",
+            "2026-11-19"
+          ],
+          "url": "https://api.openalex.org/works?filter=title_and_abstract.search:(Bennu+OR+Ryugu+OR+\"carbonaceous+chondrite\"+OR+\"carbonaceous+chondrites\"+OR+meteorite+OR+meteorites+OR+cometary)+AND+(\"amino+acids\"+OR+nucleobases+OR+organics+OR+\"organic+matter\"+OR+prebiotic),type:article|review,primary_location.source.type:journal,from_publication_date:2025-11-20,to_publication_date:2026-11-19"
+        },
+        "groups": [
+          {
+            "name": "Hiroshi Naraoka",
+            "inst": "Kyushu University"
+          },
+          {
+            "name": "Yuichi Tsuda",
+            "inst": "ISAS, JAXA"
+          },
+          {
+            "name": "Tomohiro Usui",
+            "inst": "ISAS, JAXA"
+          },
+          {
+            "name": "Dante S. Lauretta",
+            "inst": "University of Arizona"
+          },
+          {
+            "name": "Yoshihiro Furukawa",
+            "inst": "Tohoku University"
+          }
+        ],
+        "now": "Samples returned from Ryugu and Bennu now show all five nucleobases, sugars, ammonia and brines, and comets look less likely as a source of cyanide. Large mission teams inflate the author count here.",
+        "now_ids": [
+          "koga-2026-l0-samples",
+          "furukawa-2025-l0-samples",
+          "anslow-2026-comets-unlikely-hcn"
+        ],
+        "us": ""
+      },
+      {
+        "id": "lifeelsewhere",
+        "name": "Origins and life detection beyond Earth",
+        "bet": "Origin-of-life theory guides where to look for life elsewhere and how to tell it from chemistry.",
+        "works": 149,
+        "authors": 955,
+        "institutions": 385,
+        "estimated": false,
+        "trend": {
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "counts": [
+            62,
+            77,
+            94,
+            82,
+            125,
+            130
+          ],
+          "partial_last": true,
+          "word": "rising",
+          "growth": 0.158
+        },
+        "query": {
+          "search": "(astrobiology OR biosignature OR biosignatures OR \"life detection\" OR \"agnostic biosignature\") AND (\"origin of life\" OR \"origins of life\" OR abiogenesis OR prebiotic OR habitability)",
+          "filter": "type:article|review,primary_location.source.type:journal",
+          "window": [
+            "2025-11-20",
+            "2026-11-19"
+          ],
+          "url": "https://api.openalex.org/works?filter=title_and_abstract.search:(astrobiology+OR+biosignature+OR+biosignatures+OR+\"life+detection\"+OR+\"agnostic+biosignature\")+AND+(\"origin+of+life\"+OR+\"origins+of+life\"+OR+abiogenesis+OR+prebiotic+OR+habitability),type:article|review,primary_location.source.type:journal,from_publication_date:2025-11-20,to_publication_date:2026-11-19"
+        },
+        "groups": [
+          {
+            "name": "Tyler D. Robinson",
+            "inst": "University of Arizona"
+          },
+          {
+            "name": "Renyu Hu",
+            "inst": "Caltech"
+          },
+          {
+            "name": "Kathryn M. Stack",
+            "inst": "Jet Propulsion Laboratory"
+          },
+          {
+            "name": "Tanja Bosak",
+            "inst": "MIT"
+          },
+          {
+            "name": "Felipe Gómez",
+            "inst": "Centro de Astrobiología"
+          },
+          {
+            "name": "Elisabeth M. Hausrath",
+            "inst": "University of Nevada, Las Vegas"
+          }
+        ],
+        "now": "The claim of sulfur gases on K2-18 b drew rebuttals, and Mars rover teams report organic-mineral pairings at Jezero. Others are defining the abiotic background that a sign of life has to beat.",
+        "now_ids": [
+          "luque-2025-biosignature",
+          "davila-2026-abiotic-background",
+          "barge-2026-emergence-of-biosignatures"
+        ],
+        "us": ""
+      },
+      {
+        "id": "protocells",
+        "name": "Protocells and compartments",
+        "bet": "Early life needed a container: fatty-acid vesicles or droplets that grow, divide and keep their contents together.",
+        "works": 163,
+        "authors": 624,
+        "institutions": 261,
+        "estimated": false,
+        "trend": {
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "counts": [
+            102,
+            99,
+            121,
+            134,
+            134,
+            150
+          ],
+          "partial_last": true,
+          "word": "rising",
+          "growth": 0.089
+        },
+        "query": {
+          "search": "(protocell OR protocells OR coacervate OR coacervates OR \"fatty acid vesicles\" OR \"prebiotic compartments\" OR \"minimal cell\") AND (\"origin of life\" OR \"origins of life\" OR prebiotic OR protocell)",
+          "filter": "type:article|review,primary_location.source.type:journal",
+          "window": [
+            "2025-11-20",
+            "2026-11-19"
+          ],
+          "url": "https://api.openalex.org/works?filter=title_and_abstract.search:(protocell+OR+protocells+OR+coacervate+OR+coacervates+OR+\"fatty+acid+vesicles\"+OR+\"prebiotic+compartments\"+OR+\"minimal+cell\")+AND+(\"origin+of+life\"+OR+\"origins+of+life\"+OR+prebiotic+OR+protocell),type:article|review,primary_location.source.type:journal,from_publication_date:2025-11-20,to_publication_date:2026-11-19"
+        },
+        "groups": [
+          {
+            "name": "Yan Qiao",
+            "inst": "Chinese Academy of Sciences"
+          },
+          {
+            "name": "Stephen Mann",
+            "inst": "University of Bristol"
+          },
+          {
+            "name": "Evan Spruijt",
+            "inst": "Radboud University"
+          },
+          {
+            "name": "Job Boekhoven",
+            "inst": "Technical University of Munich"
+          },
+          {
+            "name": "Neal K. Devaraj",
+            "inst": "UC San Diego"
+          }
+        ],
+        "now": "Topics include protocells that form from scratch, vesicles that grow with peptides, and protocells that mimic the shapes of early microfossils.",
+        "now_ids": [
+          "khanal-2026-lipid-world",
+          "baba-2026-lipid-world",
+          "gillet-de-chalonge-2026-protocell-microfossils"
+        ],
+        "us": ""
+      },
+      {
+        "id": "eukaryogenesis",
+        "name": "Eukaryogenesis and Asgard archaea",
+        "bet": "Complex cells arose when an Asgard-like archaeon took in a bacterium; the Asgard genomes show how.",
+        "works": 78,
+        "authors": 399,
+        "institutions": 217,
+        "estimated": false,
+        "trend": {
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "counts": [
+            57,
+            88,
+            50,
+            59,
+            78,
+            66
+          ],
+          "partial_last": true,
+          "word": "steady",
+          "growth": 0.023
+        },
+        "query": {
+          "search": "\"Asgard archaea\" OR Asgardarchaeota OR eukaryogenesis OR \"origin of eukaryotes\" OR \"origin of the eukaryotic cell\" OR \"first eukaryotic common ancestor\" OR \"last eukaryotic common ancestor\"",
+          "filter": "type:article|review,primary_location.source.type:journal",
+          "window": [
+            "2025-11-20",
+            "2026-11-19"
+          ],
+          "url": "https://api.openalex.org/works?filter=title_and_abstract.search:\"Asgard+archaea\"+OR+Asgardarchaeota+OR+eukaryogenesis+OR+\"origin+of+eukaryotes\"+OR+\"origin+of+the+eukaryotic+cell\"+OR+\"first+eukaryotic+common+ancestor\"+OR+\"last+eukaryotic+common+ancestor\",type:article|review,primary_location.source.type:journal,from_publication_date:2025-11-20,to_publication_date:2026-11-19"
+        },
+        "groups": [
+          {
+            "name": "Thijs J. G. Ettema",
+            "inst": "Wageningen University"
+          },
+          {
+            "name": "Anja Spang",
+            "inst": "NIOZ"
+          },
+          {
+            "name": "Tom A. Williams",
+            "inst": "University of Bristol"
+          },
+          {
+            "name": "Brett J. Baker",
+            "inst": "University of Texas at Austin"
+          },
+          {
+            "name": "Laura Eme",
+            "inst": "Université Paris-Saclay"
+          },
+          {
+            "name": "Eugene V. Koonin",
+            "inst": "NCBI, National Library of Medicine"
+          }
+        ],
+        "now": "Genomics of Asgard archaea keeps finding prokaryotic roots for proteins once thought to be unique to eukaryotes.",
+        "now_ids": [
+          "liu-2026-commd-prokaryotic-origins",
+          "souza-2026-aha-archaeal-hibernation"
+        ],
+        "us": ""
+      },
+      {
+        "id": "dating",
+        "name": "Molecular dating and the earliest record",
+        "bet": "Put dates on the tree with molecular clocks calibrated by fossils and geochemical traces of the earliest life.",
+        "works": 52,
+        "authors": 278,
+        "institutions": 187,
+        "estimated": false,
+        "trend": {
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "counts": [
+            48,
+            51,
+            43,
+            61,
+            50,
+            44
+          ],
+          "partial_last": true,
+          "word": "steady",
+          "growth": 0.026
+        },
+        "query": {
+          "search": "(\"molecular clock\" OR \"molecular dating\" OR \"divergence time\" OR microfossil OR microfossils OR stromatolite OR stromatolites OR \"earliest life\" OR \"early life\") AND (Archean OR Archaean OR Hadean OR Precambrian OR Paleoproterozoic OR \"early Earth\")",
+          "filter": "type:article|review,primary_location.source.type:journal",
+          "window": [
+            "2025-11-20",
+            "2026-11-19"
+          ],
+          "url": "https://api.openalex.org/works?filter=title_and_abstract.search:(\"molecular+clock\"+OR+\"molecular+dating\"+OR+\"divergence+time\"+OR+microfossil+OR+microfossils+OR+stromatolite+OR+stromatolites+OR+\"earliest+life\"+OR+\"early+life\")+AND+(Archean+OR+Archaean+OR+Hadean+OR+Precambrian+OR+Paleoproterozoic+OR+\"early+Earth\"),type:article|review,primary_location.source.type:journal,from_publication_date:2025-11-20,to_publication_date:2026-11-19"
+        },
+        "groups": [
+          {
+            "name": "Philip C. J. Donoghue",
+            "inst": "University of Bristol"
+          },
+          {
+            "name": "Martin J. Van Kranendonk",
+            "inst": "UNSW Sydney"
+          },
+          {
+            "name": "Shuhai Xiao",
+            "inst": "Virginia Tech"
+          },
+          {
+            "name": "Emmanuelle J. Javaux",
+            "inst": "University of Liège"
+          },
+          {
+            "name": "Eva E. Stüeken",
+            "inst": "University of St Andrews"
+          },
+          {
+            "name": "Betül Kaçar",
+            "inst": "University of Wisconsin–Madison"
+          }
+        ],
+        "now": "Molecular clocks for early life are being recalibrated against the rock record, and how fossil calibrations are chosen is under scrutiny.",
+        "now_ids": [
+          "davin-2025-bacterial-timescale",
+          "alvarez-carretero-2026-literalist-fossil-critique",
+          "davies-2026-calibration-strategy-crocodylia"
+        ],
+        "us": "Our LUCA calibration study measures how far the dates move with calibration choices."
+      },
+      {
+        "id": "vents",
+        "name": "Metabolism first and hydrothermal settings",
+        "bet": "Life began as self-sustaining chemistry driven by energy gradients in vents or hot springs; genes came later.",
+        "works": 62,
+        "authors": 276,
+        "institutions": 164,
+        "estimated": false,
+        "trend": {
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "counts": [
+            45,
+            27,
+            36,
+            40,
+            36,
+            54
+          ],
+          "partial_last": true,
+          "word": "steady",
+          "growth": -0.005
+        },
+        "query": {
+          "search": "(\"hydrothermal vent\" OR \"hydrothermal vents\" OR \"alkaline vent\" OR \"hot spring\" OR \"metabolism-first\" OR protometabolism OR \"prebiotic metabolism\" OR \"geochemical\") AND (\"origin of life\" OR \"origins of life\" OR prebiotic OR abiogenesis)",
+          "filter": "type:article|review,primary_location.source.type:journal",
+          "window": [
+            "2025-11-20",
+            "2026-11-19"
+          ],
+          "url": "https://api.openalex.org/works?filter=title_and_abstract.search:(\"hydrothermal+vent\"+OR+\"hydrothermal+vents\"+OR+\"alkaline+vent\"+OR+\"hot+spring\"+OR+\"metabolism-first\"+OR+protometabolism+OR+\"prebiotic+metabolism\"+OR+\"geochemical\")+AND+(\"origin+of+life\"+OR+\"origins+of+life\"+OR+prebiotic+OR+abiogenesis),type:article|review,primary_location.source.type:journal,from_publication_date:2025-11-20,to_publication_date:2026-11-19"
+        },
+        "groups": [
+          {
+            "name": "Harun Tüysüz",
+            "inst": "Max Planck Institute for Coal Research"
+          },
+          {
+            "name": "William F. Martin",
+            "inst": "Heinrich Heine University Düsseldorf"
+          },
+          {
+            "name": "Martin J. Van Kranendonk",
+            "inst": "UNSW Sydney"
+          },
+          {
+            "name": "Laura M. Barge",
+            "inst": "Jet Propulsion Laboratory"
+          },
+          {
+            "name": "Matthew A. Pasek",
+            "inst": "University of South Florida"
+          }
+        ],
+        "now": "Metal catalysts are driving phosphorylation and CO2 reduction under vent-like conditions, while others say the classic alkaline-vent picture needs rethinking.",
+        "now_ids": [
+          "schlikker-2026-hydrothermal-phosphorylation",
+          "martin-2026-shiny-metal-catalysts",
+          "tutolo-2026-rethinking-alkaline-vents"
+        ],
+        "us": ""
+      },
+      {
+        "id": "theory",
+        "name": "Theory: autocatalysis, assembly and information",
+        "bet": "General laws for how chemistry becomes life: autocatalytic networks, assembly theory, selection before genes.",
+        "works": 53,
+        "authors": 274,
+        "institutions": 158,
+        "estimated": false,
+        "trend": {
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "counts": [
+            39,
+            29,
+            47,
+            31,
+            47,
+            49
+          ],
+          "partial_last": true,
+          "word": "steady",
+          "growth": 0.045
+        },
+        "query": {
+          "search": "(\"autocatalytic set\" OR \"autocatalytic sets\" OR \"autocatalytic network\" OR \"autocatalytic networks\" OR \"assembly theory\" OR \"assembly index\" OR \"chemical evolution\") AND (\"origin of life\" OR \"origins of life\" OR abiogenesis OR prebiotic)",
+          "filter": "type:article|review,primary_location.source.type:journal",
+          "window": [
+            "2025-11-20",
+            "2026-11-19"
+          ],
+          "url": "https://api.openalex.org/works?filter=title_and_abstract.search:(\"autocatalytic+set\"+OR+\"autocatalytic+sets\"+OR+\"autocatalytic+network\"+OR+\"autocatalytic+networks\"+OR+\"assembly+theory\"+OR+\"assembly+index\"+OR+\"chemical+evolution\")+AND+(\"origin+of+life\"+OR+\"origins+of+life\"+OR+abiogenesis+OR+prebiotic),type:article|review,primary_location.source.type:journal,from_publication_date:2025-11-20,to_publication_date:2026-11-19"
+        },
+        "groups": [
+          {
+            "name": "Moran Frenkel-Pinter",
+            "inst": "Hebrew University of Jerusalem"
+          },
+          {
+            "name": "Loren Dean Williams",
+            "inst": "Georgia Institute of Technology"
+          },
+          {
+            "name": "Cole Mathis",
+            "inst": "Arizona State University"
+          },
+          {
+            "name": "Ken Takai",
+            "inst": "JAMSTEC"
+          },
+          {
+            "name": "Yufen Zhao",
+            "inst": "Ningbo University"
+          }
+        ],
+        "now": "Assembly theory is under heavy fire: critics say it reduces to compression. Autocatalytic-set theory is being tied to real chemistry.",
+        "now_ids": [
+          "ozelim-2026-assembly-theory",
+          "cronin-2026-alife-assembly-theory",
+          "golnik-2026-raf-stoichiometric-autocatalysis"
+        ],
+        "us": ""
+      },
+      {
+        "id": "rnaworld",
+        "name": "RNA world and self-copying molecules",
+        "bet": "Life started with RNA that both carried information and copied itself, before proteins and DNA.",
+        "works": 61,
+        "authors": 198,
+        "institutions": 114,
+        "estimated": false,
+        "trend": {
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "counts": [
+            55,
+            61,
+            47,
+            61,
+            54,
+            57
+          ],
+          "partial_last": true,
+          "word": "steady",
+          "growth": -0.004
+        },
+        "query": {
+          "search": "\"RNA world\" OR \"polymerase ribozyme\" OR \"nonenzymatic replication\" OR \"non-enzymatic replication\" OR \"nonenzymatic primer extension\" OR \"non-enzymatic primer extension\" OR \"nonenzymatic RNA copying\" OR \"non-enzymatic RNA copying\" OR \"ribozyme evolution\"",
+          "filter": "type:article|review,primary_location.source.type:journal",
+          "window": [
+            "2025-11-20",
+            "2026-11-19"
+          ],
+          "url": "https://api.openalex.org/works?filter=title_and_abstract.search:\"RNA+world\"+OR+\"polymerase+ribozyme\"+OR+\"nonenzymatic+replication\"+OR+\"non-enzymatic+replication\"+OR+\"nonenzymatic+primer+extension\"+OR+\"non-enzymatic+primer+extension\"+OR+\"nonenzymatic+RNA+copying\"+OR+\"non-enzymatic+RNA+copying\"+OR+\"ribozyme+evolution\",type:article|review,primary_location.source.type:journal,from_publication_date:2025-11-20,to_publication_date:2026-11-19"
+        },
+        "groups": [
+          {
+            "name": "Jack W. Szostak",
+            "inst": "Howard Hughes Medical Institute"
+          },
+          {
+            "name": "Philipp Holliger",
+            "inst": "MRC Laboratory of Molecular Biology"
+          },
+          {
+            "name": "Gerald F. Joyce",
+            "inst": "Salk Institute"
+          },
+          {
+            "name": "Irene A. Chen",
+            "inst": "UCLA"
+          },
+          {
+            "name": "Dieter Braun",
+            "inst": "LMU Munich"
+          }
+        ],
+        "now": "A small polymerase ribozyme that can make itself and its complementary strand (2026), and more accurate polymerases, bring self-copying RNA closer.",
+        "now_ids": [
+          "gianni-2026-rna-world",
           "horning-2026-polymerase-fidelity",
-          "essex-2026-l-nucleotides-copying",
-          "davisson-2026-aminoacylation-chirality"
-        ]
+          "essex-2026-l-nucleotides-copying"
+        ],
+        "us": "Our QT45 check found net replication far below one copy per cycle, and epistasis did not predict contacts."
       },
       {
-        "title": "Is assembly index a life detector?",
-        "what": "Assembly index can now be estimated from the simple mass spectra a space probe would record. No paper has yet compared living and non-living samples at matched molecular size, which is the test that matters. Abiotic protocells that pass fossil tests are a reminder that every life-detection claim needs look-alike controls.",
-        "library_ids": [
-          "rutter-2026-ma-biosignature-ms",
-          "pagel-2026-natural-products-assembly-spaces",
-          "jirasek-2026-directedness-exploration-ratio",
-          "champagne-ruel-2026-spatial-patterning-assembly",
-          "gillet-de-chalonge-2026-protocell-microfossils",
-          "ozelim-2026-assembly-theory"
-        ]
-      },
-      {
-        "title": "Vents under pressure, phosphorus from rocks",
-        "what": "A geochemist argues that ancient alkaline vents lacked the hot pH gradients and sulfide that vent theories need. At the same time, ordinary volcanic rocks turn out to carry reactive phosphite, and phosphite can drive phosphorylation on palladium metal. Where the chemistry happened is open again, and the supply of reactive phosphorus looks less of a barrier.",
-        "library_ids": [
-          "tutolo-2026-rethinking-alkaline-vents",
-          "baidya-2026-mafic-rocks-phosphite",
-          "hoffmann-2026-phosphite-pd-phosphorylation",
-          "mrnjavac-2026-incomplete-luca-metabolism",
-          "lowe-2026-cation-competition-membranes"
-        ]
-      },
-      {
-        "title": "What space did and did not deliver",
-        "what": "A sugar has been found in interstellar gas for the first time, and irradiated lab ices make the simplest dipeptide. Meteorites show that brines inside their parent bodies reworked the organics before delivery. But simulations suggest comets almost never left enough cyanide in one place on early Earth, so it was probably made locally.",
-        "library_ids": [
-          "jimenez-serra-2026-erythrulose-ism",
-          "anslow-2026-comets-unlikely-hcn",
-          "haenecour-2026-bennu-brine-stardust",
-          "jenniskens-2026-hillsborough-cm-brines",
-          "hopkinson-2026-interstellar-peptide-ice"
-        ]
+        "id": "luca",
+        "name": "LUCA and the deep tree of life",
+        "bet": "Rebuild the last universal common ancestor from the genes all living things share, and place the root of the tree.",
+        "works": 48,
+        "authors": 187,
+        "institutions": 133,
+        "estimated": false,
+        "trend": {
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "counts": [
+            48,
+            36,
+            38,
+            42,
+            40,
+            42
+          ],
+          "partial_last": true,
+          "word": "steady",
+          "growth": -0.021
+        },
+        "query": {
+          "search": "\"last universal common ancestor\" OR \"universal common ancestor\" OR \"root of the tree of life\" OR \"deep phylogeny\" OR \"deep phylogenomics\" OR \"early evolution of life\"",
+          "filter": "type:article|review,primary_location.source.type:journal",
+          "window": [
+            "2025-11-20",
+            "2026-11-19"
+          ],
+          "url": "https://api.openalex.org/works?filter=title_and_abstract.search:\"last+universal+common+ancestor\"+OR+\"universal+common+ancestor\"+OR+\"root+of+the+tree+of+life\"+OR+\"deep+phylogeny\"+OR+\"deep+phylogenomics\"+OR+\"early+evolution+of+life\",type:article|review,primary_location.source.type:journal,from_publication_date:2025-11-20,to_publication_date:2026-11-19"
+        },
+        "groups": [
+          {
+            "name": "Tom A. Williams",
+            "inst": "University of Bristol"
+          },
+          {
+            "name": "Philip C. J. Donoghue",
+            "inst": "University of Bristol"
+          },
+          {
+            "name": "Anja Spang",
+            "inst": "NIOZ"
+          },
+          {
+            "name": "William F. Martin",
+            "inst": "Heinrich Heine University Düsseldorf"
+          },
+          {
+            "name": "Eva E. Stüeken",
+            "inst": "University of St Andrews"
+          }
+        ],
+        "now": "The 2024 reconstruction of a fairly complex LUCA, about 4.2 billion years ago, is being debated over gene-content thresholds and dating.",
+        "now_ids": [
+          "moody-2024-luca",
+          "szollosi-williams-2026-gld-threshold-letter",
+          "gagnon-csuros-2026-reply"
+        ],
+        "us": "Our LUCA calibration study tests how far that date moves with the choice of calibrations."
       }
     ]
   },
