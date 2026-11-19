@@ -60,3 +60,4 @@ experiments/*/features.jsonl
 # --- Dataset downloads (datasets/fetch.py), never committed
 /datasets/local/
 experiments/reporting_audit/texts/
+experiments/luca_calib/ext/
