@@ -24,3 +24,8 @@ Written before the pilot, as v3 and v4 require. None of these changes a predicti
    - The flat sensitivity analysis uses O_R fixed at 1, as v3 states.
 5. **ALE build.** ALE's own CMake builds Bio++ 2.4.1, because ALE does not work with Bio++ 3.0. ALE commit b59dfaf3.
 6. **Moody's `read_file` and `rell` are used unchanged and hash-checked.** On synthetic input they match a numpy reference to 3.6e-15.
+7. **Laptop rules of 2026-11-19 (code change before the pilot).**
+   - The runners now default to the Origins lock, `compute.lock.origins`.
+   - Workers are capped at 3.
+   - A memory guard waits while free memory is under 20%. It runs before each stage, IQ-TREE family, ALE family, Su chunk and fit point.
+   - The manifest was resealed after these changes. They affect scheduling only, not results.

@@ -40,7 +40,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import EXP, log, read_tsv, update_timings, write_json
+from common import EXP, wait_for_memory, log, read_tsv, update_timings, write_json
 from ete3 import Tree
 
 ALE_BIN = os.environ.get("LUCA_ALE_BIN", os.path.join(EXP, "ext", "ale_build", "bin"))
@@ -161,6 +161,7 @@ def write_species_tree(sim, out):
 
 def run_family(fam, tree_src, out, samples, seed, nice):
     """ALEobserve + ALEml_undated for one family in out/fams/<fam>/. Returns (fam, status, secs)."""
+    wait_for_memory()
     t0 = time.time()
     final = os.path.join(out, "uml_rec", "%s_%s%s.ale.uml_rec" % (S_NAME, PREFIX, fam))
     if os.path.exists(final):

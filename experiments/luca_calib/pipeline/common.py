@@ -14,6 +14,25 @@ IQTREE = os.environ.get("LUCA_IQTREE", os.path.join(HOME, "mamba/envs/phylo/bin/
 ALERAX = os.environ.get("LUCA_ALERAX", os.path.join(HOME, "mamba/envs/alerax/bin/alerax"))
 
 
+def free_memory_pct():
+    """System-wide free memory percentage from macOS memory_pressure; None if unavailable."""
+    try:
+        out = subprocess.run(["memory_pressure"], capture_output=True, text=True, timeout=30).stdout
+        return int(out.strip().splitlines()[-1].split(":")[1].strip().rstrip("%"))
+    except Exception:
+        return None
+
+
+def wait_for_memory(min_pct=20, poll=60):
+    """Laptop rule: before each new chunk, wait while free memory is under min_pct percent."""
+    while True:
+        p = free_memory_pct()
+        if p is None or p >= min_pct:
+            return
+        print(time.strftime("[%H:%M:%S] ") + "free memory %d%% < %d%%; waiting" % (p, min_pct), flush=True)
+        time.sleep(poll)
+
+
 def log(msg):
     print(time.strftime("[%H:%M:%S] ") + msg, flush=True)
 

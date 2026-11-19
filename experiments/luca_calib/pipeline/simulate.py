@@ -46,7 +46,7 @@ import numpy as np
 from ete3 import Tree
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (ZOMBI_DIR, PHYLO_PY, log, run, read_fasta, write_fasta, gene_species,
+from common import (wait_for_memory, ZOMBI_DIR, PHYLO_PY, log, run, read_fasta, write_fasta, gene_species,
                     write_json, update_timings)
 
 DEFAULTS = {
@@ -358,6 +358,7 @@ def run_su_chunks(cfg, out, logs, families, workers, scaling):
     chunks = [families[i::k] for i in range(k)]
 
     def one(i):
+        wait_for_memory()
         cz = os.path.join(root, str(i), "zombi")
         os.makedirs(os.path.join(cz, "G", "Gene_trees"))
         shutil.copytree(os.path.join(zdir, "T"), os.path.join(cz, "T"))

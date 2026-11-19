@@ -20,7 +20,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from ete3 import Tree
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import IQTREE, log, read_fasta, update_timings
+from common import IQTREE, wait_for_memory, log, read_fasta, update_timings
 
 
 def small_topology(names):
@@ -47,6 +47,7 @@ def check_trees(path, names):
 
 
 def run_iqtree(fam, fasta, workdir, args):
+    wait_for_memory()
     prefix = os.path.join(workdir, fam)
     cmd = [IQTREE, "-s", fasta, "-m", args.model, "-B", str(args.bootstraps), "--wbtl", "-T", "1",
            "--prefix", prefix, "-seed", str(args.seed), "-quiet", "-redo"] + args.iqtree_extra.split()

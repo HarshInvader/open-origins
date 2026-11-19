@@ -2,10 +2,10 @@
 # LUCA calibration pilot on this laptop (prereg v3). Checkpointed and idempotent: each stage writes
 # results/<stage>.done and is skipped when the marker exists; rerun the script to resume.
 #
-# Usage: WORKERS=4 run_pilot.sh            (WORKERS: default 4, capped at 4)
+# Usage: WORKERS=3 run_pilot.sh            (WORKERS: default 3, capped at 3 (Origins cap))
 #
 # Refuses to start (and stops between stages) unless the shared compute lock is held by us:
-#   $COMPUTE_LOCK/owner (the shared lock) exists and starts
+#   $COMPUTE_LOCK/owner (default: the Origins lock, open-citizen-science/.local/compute.lock.origins) exists and starts
 #   with "origins". This script never takes or removes the lock.
 # Every heavy command runs under `taskpolicy -b nice -n 20`.
 #
@@ -24,14 +24,14 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PIPE="$(cd "$HERE/.." && pwd)"
 EXP="$(cd "$PIPE/.." && pwd)"
 RES="${RESULTS_DIR:-$EXP/results}"
-LOCK_OWNER="${COMPUTE_LOCK:?set COMPUTE_LOCK to the shared lock directory}/owner"
+LOCK_OWNER="${COMPUTE_LOCK:-$EXP/../../../open-citizen-science/.local/compute.lock.origins}/owner"
 PY="$HOME/mamba/envs/phylo/bin/python"
 NICE=(taskpolicy -b nice -n 20)
 
-WORKERS="${WORKERS:-4}"
+WORKERS="${WORKERS:-3}"
 case "$WORKERS" in ''|*[!0-9]*) echo "WORKERS must be a positive integer" >&2; exit 2;; esac
 [ "$WORKERS" -lt 1 ] && { echo "WORKERS must be >= 1" >&2; exit 2; }
-[ "$WORKERS" -gt 4 ] && WORKERS=4
+[ "$WORKERS" -gt 3 ] && WORKERS=3
 
 mkdir -p "$RES"
 LOG="$RES/run_pilot.log"
@@ -39,6 +39,12 @@ STATUS="$RES/status.txt"
 TIMES="$RES/timings.tsv"
 [ -f "$TIMES" ] || printf "stage\tseconds\tworkers\tfinished\n" > "$TIMES"
 
+mem_wait() {  # laptop rule: wait while free memory < 20% before starting a chunk
+  local p
+  while p=$(memory_pressure 2>/dev/null | tail -1 | sed -E 's/[^0-9]*([0-9]+)%.*/\1/') && [ -n "$p" ] && [ "$p" -lt 20 ]; do
+    echo "[$(date '+%H:%M:%S')] free memory ${p}% < 20%; waiting" >&2; sleep 60
+  done
+}
 say() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG"; }
 
 lock_ok() { [ -f "$LOCK_OWNER" ] && head -c 7 "$LOCK_OWNER" | grep -q '^origins'; }
@@ -64,7 +70,7 @@ write_status() {
 run_stage() {
   local name="$1" fn="$2"
   if [ -f "$RES/$name.done" ]; then say "skip $name (done)"; return 0; fi
-  need_lock "$name"
+  need_lock "$name"; mem_wait
   say "start $name"
   write_status "running $name"
   local t0=$SECONDS
@@ -85,7 +91,7 @@ run_stage() {
 sub() {
   local name="$1"; shift
   if [ -f "$RES/sub_$name.done" ]; then echo "skip sub-step $name"; return 0; fi
-  need_lock "$name"
+  need_lock "$name"; mem_wait
   local t0=$SECONDS
   echo "+ $*"
   "$@" || return 1

@@ -37,7 +37,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import EXP, log, write_json
+from common import EXP, wait_for_memory, log, write_json
 import simulate as S
 
 REAL_STATS = os.path.join(EXP, "real_stats.json")
@@ -85,6 +85,7 @@ def run_gm(cfg, pdir, k, sampled_by_dom):
 
 
 def fit_point(i, L, TL, base, outdir, seed, real_share, target, tol, o_start, max_evals):
+    wait_for_memory()
     pdir = os.path.join(outdir, "points", "%02d" % i)
     done = os.path.join(pdir, "point.json")
     if os.path.exists(done):

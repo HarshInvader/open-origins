@@ -2,12 +2,12 @@
 # LUCA calibration main grid, arm L and arm H on this laptop (prereg v2 change 3, v3, v4 A-D).
 # Checkpointed and idempotent: every step writes results/main/<step>.done and is skipped when present.
 #
-# Usage: N_PER_DOMAIN=40 WORKERS=4 run_main.sh
+# Usage: N_PER_DOMAIN=40 WORKERS=3 run_main.sh
 #   N_PER_DOMAIN  required: 40 or 30, the coordinator's v3 decision from the timing pilot.
-#   WORKERS       default 4, capped at 4.
+#   WORKERS       default 3, capped at 3 (Origins cap).
 # Needs results/fit/fit.json and results/seqscale/pilot_config.json from run_pilot.sh.
 # Same lock rule as run_pilot.sh: runs only while
-#   $COMPUTE_LOCK/owner (the shared lock) starts with "origins",
+#   $COMPUTE_LOCK/owner (default: the Origins lock, open-citizen-science/.local/compute.lock.origins) starts with "origins",
 # re-checked before every step; never takes or removes the lock. Heavy commands: taskpolicy -b nice -n 20.
 #
 # Simulations (results/main/sims/<name>/):
@@ -25,19 +25,25 @@ PIPE="$(cd "$HERE/.." && pwd)"
 EXP="$(cd "$PIPE/.." && pwd)"
 RES="${RESULTS_DIR:-$EXP/results}"
 OUT="$RES/main"
-LOCK_OWNER="${COMPUTE_LOCK:?set COMPUTE_LOCK to the shared lock directory}/owner"
+LOCK_OWNER="${COMPUTE_LOCK:-$EXP/../../../open-citizen-science/.local/compute.lock.origins}/owner"
 PY="$HOME/mamba/envs/phylo/bin/python"
 NICE=(taskpolicy -b nice -n 20)
 
-WORKERS="${WORKERS:-4}"
+WORKERS="${WORKERS:-3}"
 case "$WORKERS" in ''|*[!0-9]*) echo "WORKERS must be a positive integer" >&2; exit 2;; esac
 [ "$WORKERS" -lt 1 ] && { echo "WORKERS must be >= 1" >&2; exit 2; }
-[ "$WORKERS" -gt 4 ] && WORKERS=4
+[ "$WORKERS" -gt 3 ] && WORKERS=3
 case "${N_PER_DOMAIN:-}" in 40|30) ;; *) echo "set N_PER_DOMAIN to 40 or 30 (v3 rule, decided from the pilot)" >&2; exit 2;; esac
 
 mkdir -p "$OUT/sims" "$OUT/configs"
 LOG="$OUT/run_main.log"; STATUS="$OUT/status.txt"; TIMES="$OUT/timings.tsv"
 [ -f "$TIMES" ] || printf "step\tseconds\tworkers\tfinished\n" > "$TIMES"
+mem_wait() {  # laptop rule: wait while free memory < 20% before starting a chunk
+  local p
+  while p=$(memory_pressure 2>/dev/null | tail -1 | sed -E 's/[^0-9]*([0-9]+)%.*/\1/') && [ -n "$p" ] && [ "$p" -lt 20 ]; do
+    echo "[$(date '+%H:%M:%S')] free memory ${p}% < 20%; waiting" >&2; sleep 60
+  done
+}
 say() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG"; }
 lock_ok() { [ -f "$LOCK_OWNER" ] && head -c 7 "$LOCK_OWNER" | grep -q '^origins'; }
 status() { { echo "updated $(date '+%Y-%m-%d %H:%M:%S') workers $WORKERS n_per_domain $N_PER_DOMAIN: $1";
@@ -48,7 +54,7 @@ step() {
   local name="$1"; shift
   [ -f "$OUT/$name.done" ] && return 0
   if ! lock_ok; then say "lock not held by origins; stopping before $name"; status "stopped (lock) before $name"; exit 3; fi
-  say "start $name"; status "running $name"
+  mem_wait; say "start $name"; status "running $name"
   local t0=$SECONDS
   echo "+ $*" >> "$LOG"
   if "$@" >> "$LOG" 2>&1; then
