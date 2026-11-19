@@ -34,3 +34,10 @@ Written before the pilot, as v3 and v4 require. None of these changes a predicti
    - `ale_boost_shim.cmake` now provides an empty `Boost::mpi` target. ALE's own files are still unedited.
    - ALEobserve and ALEml_undated linked without undefined symbols, so neither uses MPI.
    - The manifest was resealed.
+9. **Zombi Ti's window for counting tips as alive.**
+   - Zombi `Ti` treats every leaf within 0.1% of the farthest leaf as alive. At 600 extant lineages, extinct lineages that died inside that window came back as 1–5 extra extant tips, and the pipeline's own consistency check stopped stage F.
+   - `step_species_tree` now ends such extinct leaves just before the window, moving each by ≤ 0.11% of tree height. A leaf born inside the window is removed instead.
+   - Counts are recorded per simulation (`ti_guard_shortened`, `ti_guard_removed`). Zombi itself is unedited.
+   - Test on seeds 100, 105, 107, 109 and 115: 3–6 leaves shortened, at most 1 removed, and the extant tree was rebuilt exactly.
+   - The ale_smoke stage ran before this fix. It is plumbing only and is not rerun.
+   - The manifest was resealed.

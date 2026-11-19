@@ -185,6 +185,34 @@ def step_species_tree(cfg, out, logs):
         n.dist = n.dist * f
     comp.name = "Root"
     comp.dist = comp_root_dist * f
+    # Zombi Ti (AuxiliarFunctions.generate_events) calls every leaf within 0.1% of the farthest leaf
+    # "alive". Extinct lineages that died inside that window would come back as extra extant tips.
+    # End each such extinct leaf just before the window (shift <= 0.11% of the tree height); if it
+    # was born inside the window, remove it (its parent is collapsed, branch lengths preserved).
+    extant_names = set(ext.get_leaf_names())
+    total = comp.get_farthest_leaf()[1]
+    cutoff = total * (1 - 0.0011)
+    n_shortened, n_removed = 0, 0
+    for leaf in list(comp.get_leaves()):
+        if leaf.name in extant_names:
+            continue
+        d = leaf.get_distance(comp)
+        if d <= cutoff:
+            continue
+        start = d - leaf.dist
+        if start < cutoff * (1 - 1e-6):
+            leaf.dist -= (d - cutoff)
+            n_shortened += 1
+        else:
+            parent = leaf.up
+            leaf.detach()
+            if parent is not None and parent is not comp and len(parent.children) == 1:
+                child = parent.children[0]
+                child.dist += parent.dist
+                parent.delete(preserve_branch_length=False)
+            n_removed += 1
+    if n_shortened or n_removed:
+        log("Ti guard: %d extinct leaves ended before the 0.1%% window, %d removed" % (n_shortened, n_removed))
     nwk = comp.write(format=1, format_root_node=True)  # ends with ")Root:<stem>;" (Ti reads the stem from it)
     scaled = os.path.join(pdir, "CompleteTree_scaled.nwk")
     with open(scaled, "w") as fh:
@@ -196,7 +224,8 @@ def step_species_tree(cfg, out, logs):
             ext2.robinson_foulds(ext, unrooted_trees=False)[0] != 0:
         raise RuntimeError("Ti rebuild changed the extant tree")
     return {"t_seed": tseed, "raw_height": height, "scale_factor": f, "stem_length": comp_root_dist * f,
-            "n_extant": len(ext), "n_complete_leaves": len(comp)}
+            "n_extant": len(ext), "n_complete_leaves": len(comp),
+            "ti_guard_shortened": n_shortened, "ti_guard_removed": n_removed}
 
 
 def step_genomes(cfg, out, logs, gene_trees=True):
