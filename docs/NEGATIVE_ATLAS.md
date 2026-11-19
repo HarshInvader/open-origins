@@ -27,3 +27,10 @@ Closed routes, each with the effect size the test could have caught. Empty until
 - **Detectable.** With labels tilted 0.7/0.3 within pathways, power is 0.995.
 - **Not closed.** An exploratory within-pathway rank-percentile signal for age (p ≈ 0.01) would need a fresh sealed test on another stratified network.
 - **Details.** experiments/metabolic_strata/RESULTS.md.
+
+## "An intervention ledger of prebiotic RNA routes can be scored reproducibly from published methods" fails (orig-paper, task #29)
+- **Test.** Two blind encoders scored six new routes (Becker 2018/2019, Xu 2020, Yi 2020, Ritson 2022, Gibard 2018) under sealed rule v1. Prereg sha `528b9d13`; the sealed kill rule was kappa < 0.6.
+- **Result.** Kappa 0.22 on the 7 hand-offs that could be aligned. The encoders cut 4 of the 6 routes into different numbers of steps. The sealed prediction P3 (at least 90% of breaks are F3/F4/F6) failed in both encodings (12%, 27%), because process errors driven by unreported pH dominate.
+- **What remains.** pH continuity can be checked at only 2-4 of 17-20 hand-offs, so "breaks are never pH" mostly reflects what papers do not report.
+- **Not closed.** It reopens with author-fixed step lists and a reporting checklist.
+- **Details.** experiments/ledger/RESULTS.md.

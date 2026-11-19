@@ -1,0 +1,1599 @@
+{
+ "task": 29,
+ "prereg": "528b9d13",
+ "planted": null,
+ "summary": {
+  "A_primary": {
+   "n": 17,
+   "broken": 16,
+   "no_hard_fail": 1,
+   "passes_not_blocked": 1,
+   "passes_same_pot": 0,
+   "passes": [
+    "R6:B1->B2:selective_separation/drying/transport/heating"
+   ],
+   "frac_only_F346": 0.125,
+   "ph_t_only": 1,
+   "any_F1": 2,
+   "any_F2": 2,
+   "pH_assessed": 4,
+   "T_assessed": 15,
+   "code_counts": {
+    "F1": 2,
+    "F2": 2,
+    "F3": 8,
+    "F4": 4,
+    "F5": 0,
+    "F6": 3,
+    "F7": 13,
+    "F8": 0,
+    "F9": 0
+   },
+   "verdicts": {
+    "broken": 16,
+    "unverified": 1
+   }
+  },
+  "A_patch": {
+   "n": 17,
+   "broken": 12,
+   "no_hard_fail": 5,
+   "passes_not_blocked": 5,
+   "passes_same_pot": 0,
+   "passes": [
+    "R6:B1->B2:selective_separation/drying/transport/heating",
+    "R6:B2->B3:rehydration/selective_separation/transport/rehydration/heating",
+    "R7:P1->P2:same_pot/mixing/heating",
+    "R7:P3->P4:rehydration",
+    "R8b:X5->X6:selective_separation/rehydration/drying/transport/heating"
+   ],
+   "frac_only_F346": 0.3333333333333333,
+   "ph_t_only": 2,
+   "any_F1": 1,
+   "any_F2": 1,
+   "pH_assessed": 4,
+   "T_assessed": 14,
+   "code_counts": {
+    "F1": 1,
+    "F2": 1,
+    "F3": 1,
+    "F4": 4,
+    "F5": 0,
+    "F6": 3,
+    "F7": 4,
+    "F8": 2,
+    "F9": 0
+   },
+   "verdicts": {
+    "broken": 12,
+    "unverified": 5
+   }
+  },
+  "B_primary": {
+   "n": 20,
+   "broken": 11,
+   "no_hard_fail": 9,
+   "passes_not_blocked": 7,
+   "passes_same_pot": 0,
+   "passes": [
+    "r6:B1->B2:selective_separation/drying/heating",
+    "r6:B3->B4:mixing/selective_separation",
+    "r7:Y1->Y2:mixing/heating",
+    "r7:Y4->Y5:same_pot/cooling",
+    "r8:X1->X2:cooling/selective_separation/drying",
+    "r9:N1->N2:same_pot/heating",
+    "r9:N2->N3:same_pot/heating"
+   ],
+   "frac_only_F346": 0.2727272727272727,
+   "ph_t_only": 0,
+   "any_F1": 1,
+   "any_F2": 0,
+   "pH_assessed": 2,
+   "T_assessed": 11,
+   "code_counts": {
+    "F1": 1,
+    "F2": 0,
+    "F3": 6,
+    "F4": 3,
+    "F5": 1,
+    "F6": 4,
+    "F7": 7,
+    "F8": 0,
+    "F9": 0
+   },
+   "verdicts": {
+    "blocked_by_missing_step": 2,
+    "broken": 11,
+    "unverified": 7
+   }
+  },
+  "B_patch": {
+   "n": 20,
+   "broken": 6,
+   "no_hard_fail": 14,
+   "passes_not_blocked": 12,
+   "passes_same_pot": 0,
+   "passes": [
+    "r6:B1->B2:selective_separation/drying/heating",
+    "r6:B3->B4:mixing/selective_separation",
+    "r6:B4->B5:mixing/selective_separation/rehydration/drying",
+    "r6:B5->B6:rehydration",
+    "r7:Y1->Y2:mixing/heating",
+    "r7:Y2->Y3:selective_separation/rehydration/heating",
+    "r7:Y4->Y5:same_pot/cooling",
+    "r8:X1->X2:cooling/selective_separation/drying",
+    "r8:X3->X4:rehydration/uv_irradiation",
+    "r8:X4->X5:mixing",
+    "r9:N1->N2:same_pot/heating",
+    "r9:N2->N3:same_pot/heating"
+   ],
+   "frac_only_F346": 0.6666666666666666,
+   "ph_t_only": 0,
+   "any_F1": 0,
+   "any_F2": 0,
+   "pH_assessed": 2,
+   "T_assessed": 11,
+   "code_counts": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 1,
+    "F4": 3,
+    "F5": 1,
+    "F6": 4,
+    "F7": 0,
+    "F8": 1,
+    "F9": 0
+   },
+   "verdicts": {
+    "blocked_by_missing_step": 2,
+    "broken": 6,
+    "unverified": 12
+   }
+  }
+ },
+ "rows": {
+  "A": {
+   "false": [
+    {
+     "route": "R6",
+     "handoff": "B1->B2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "drying",
+      "transport",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R6",
+     "handoff": "B2->B3",
+     "verdict": "broken",
+     "hard": [
+      "F2",
+      "F3",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration",
+      "selective_separation",
+      "transport",
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R6",
+     "handoff": "B3->B4",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "drying",
+      "rehydration",
+      "selective_separation",
+      "selective_separation",
+      "rehydration",
+      "gas_exchange",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R6",
+     "handoff": "B4->B5",
+     "verdict": "broken",
+     "hard": [
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "drying",
+      "rehydration",
+      "selective_separation",
+      "selective_separation",
+      "rehydration",
+      "drying",
+      "transport",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R6",
+     "handoff": "B5->B6",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F4",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "transport",
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R7",
+     "handoff": "P1->P2",
+     "verdict": "broken",
+     "hard": [
+      "F1",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "same_pot",
+      "mixing",
+      "heating"
+     ],
+     "unassessed": [
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "R7",
+     "handoff": "P2->P3",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration",
+      "selective_separation",
+      "selective_separation",
+      "rehydration",
+      "heating",
+      "drying"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "R7",
+     "handoff": "P3->P4",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R7",
+     "handoff": "P4->P5",
+     "verdict": "broken",
+     "hard": [
+      "F4",
+      "F6",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R7",
+     "handoff": "P5->P6",
+     "verdict": "broken",
+     "hard": [
+      "F6"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "same_pot",
+      "cooling"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R8",
+     "handoff": "X1->X2",
+     "verdict": "broken",
+     "hard": [
+      "F4",
+      "F6"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "drying",
+      "transport",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "R8",
+     "handoff": "X2->X3",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "transport",
+      "rehydration",
+      "uv_irradiation"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R8",
+     "handoff": "X3->X4",
+     "verdict": "broken",
+     "hard": [
+      "F1",
+      "F3",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "drying",
+      "rehydration"
+     ],
+     "unassessed": [
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R8b",
+     "handoff": "X5->X6",
+     "verdict": "broken",
+     "hard": [
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "rehydration",
+      "drying",
+      "transport",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R9",
+     "handoff": "Y1->Y2",
+     "verdict": "broken",
+     "hard": [
+      "F2"
+     ],
+     "same_pot_only": true,
+     "procs": [
+      "same_pot"
+     ],
+     "unassessed": [
+      "F8"
+     ]
+    },
+    {
+     "route": "R9",
+     "handoff": "Y2->Y3",
+     "verdict": "broken",
+     "hard": [
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "heating"
+     ],
+     "unassessed": [
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "R10",
+     "handoff": "T1->T2",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F4",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "drying",
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    }
+   ],
+   "true": [
+    {
+     "route": "R6",
+     "handoff": "B1->B2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "drying",
+      "transport",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R6",
+     "handoff": "B2->B3",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration",
+      "selective_separation",
+      "transport",
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R6",
+     "handoff": "B3->B4",
+     "verdict": "broken",
+     "hard": [
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "drying",
+      "rehydration",
+      "selective_separation",
+      "selective_separation",
+      "rehydration",
+      "gas_exchange",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R6",
+     "handoff": "B4->B5",
+     "verdict": "broken",
+     "hard": [
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "drying",
+      "rehydration",
+      "selective_separation",
+      "selective_separation",
+      "rehydration",
+      "drying",
+      "transport",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R6",
+     "handoff": "B5->B6",
+     "verdict": "broken",
+     "hard": [
+      "F4"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "transport",
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R7",
+     "handoff": "P1->P2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "same_pot",
+      "mixing",
+      "heating"
+     ],
+     "unassessed": [
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "R7",
+     "handoff": "P2->P3",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration",
+      "selective_separation",
+      "selective_separation",
+      "rehydration",
+      "heating",
+      "drying"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "R7",
+     "handoff": "P3->P4",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R7",
+     "handoff": "P4->P5",
+     "verdict": "broken",
+     "hard": [
+      "F4",
+      "F6",
+      "F8"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "W1"
+     ]
+    },
+    {
+     "route": "R7",
+     "handoff": "P5->P6",
+     "verdict": "broken",
+     "hard": [
+      "F6"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "same_pot",
+      "cooling"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R8",
+     "handoff": "X1->X2",
+     "verdict": "broken",
+     "hard": [
+      "F4",
+      "F6"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "drying",
+      "transport",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "R8",
+     "handoff": "X2->X3",
+     "verdict": "broken",
+     "hard": [
+      "F8"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "transport",
+      "rehydration",
+      "uv_irradiation"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "W1"
+     ]
+    },
+    {
+     "route": "R8",
+     "handoff": "X3->X4",
+     "verdict": "broken",
+     "hard": [
+      "F1"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "drying",
+      "rehydration"
+     ],
+     "unassessed": [
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R8b",
+     "handoff": "X5->X6",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "rehydration",
+      "drying",
+      "transport",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "R9",
+     "handoff": "Y1->Y2",
+     "verdict": "broken",
+     "hard": [
+      "F2"
+     ],
+     "same_pot_only": true,
+     "procs": [
+      "same_pot"
+     ],
+     "unassessed": [
+      "F8"
+     ]
+    },
+    {
+     "route": "R9",
+     "handoff": "Y2->Y3",
+     "verdict": "broken",
+     "hard": [
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "heating"
+     ],
+     "unassessed": [
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "R10",
+     "handoff": "T1->T2",
+     "verdict": "broken",
+     "hard": [
+      "F4"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "drying",
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    }
+   ]
+  },
+  "B": {
+   "false": [
+    {
+     "route": "r6",
+     "handoff": "B1->B2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "drying",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r6",
+     "handoff": "B2->B3",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F4",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "cooling",
+      "rehydration",
+      "selective_separation"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r6",
+     "handoff": "B3->B4",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "mixing",
+      "selective_separation"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r6",
+     "handoff": "B4->B5",
+     "verdict": "broken",
+     "hard": [
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "mixing",
+      "selective_separation",
+      "rehydration",
+      "drying"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r6",
+     "handoff": "B5->B6",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r7",
+     "handoff": "Y1->Y2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "mixing",
+      "heating"
+     ],
+     "unassessed": [
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "r7",
+     "handoff": "Y2->Y3",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "r7",
+     "handoff": "Y3->Y4",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F6",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r7",
+     "handoff": "Y4->Y5",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "same_pot",
+      "cooling"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r8",
+     "handoff": "X1->X2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "cooling",
+      "selective_separation",
+      "drying"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r8",
+     "handoff": "X2->X3",
+     "verdict": "broken",
+     "hard": [
+      "F4",
+      "F6"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r8",
+     "handoff": "X3->X4",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration",
+      "uv_irradiation"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r8",
+     "handoff": "X4->X5",
+     "verdict": "broken",
+     "hard": [
+      "F1",
+      "F7"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "mixing"
+     ],
+     "unassessed": [
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r9",
+     "handoff": "N1->N2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "same_pot",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r9",
+     "handoff": "N2->N3",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "same_pot",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r10",
+     "handoff": "C1->C2",
+     "verdict": "blocked_by_missing_step",
+     "hard": [],
+     "same_pot_only": true,
+     "procs": [
+      "same_pot"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r10",
+     "handoff": "C2->C3",
+     "verdict": "broken",
+     "hard": [
+      "F6"
+     ],
+     "same_pot_only": true,
+     "procs": [
+      "same_pot"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r10",
+     "handoff": "C3->C4",
+     "verdict": "blocked_by_missing_step",
+     "hard": [],
+     "same_pot_only": true,
+     "procs": [
+      "same_pot"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r10",
+     "handoff": "C4->C5",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F5",
+      "F6"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "drying",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r11",
+     "handoff": "G1->G2",
+     "verdict": "broken",
+     "hard": [
+      "F4"
+     ],
+     "same_pot_only": true,
+     "procs": [
+      "same_pot"
+     ],
+     "unassessed": [
+      "F1",
+      "F3",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    }
+   ],
+   "true": [
+    {
+     "route": "r6",
+     "handoff": "B1->B2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "drying",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r6",
+     "handoff": "B2->B3",
+     "verdict": "broken",
+     "hard": [
+      "F4"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "cooling",
+      "rehydration",
+      "selective_separation"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r6",
+     "handoff": "B3->B4",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "mixing",
+      "selective_separation"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r6",
+     "handoff": "B4->B5",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "mixing",
+      "selective_separation",
+      "rehydration",
+      "drying"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r6",
+     "handoff": "B5->B6",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r7",
+     "handoff": "Y1->Y2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "mixing",
+      "heating"
+     ],
+     "unassessed": [
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "r7",
+     "handoff": "Y2->Y3",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8"
+     ]
+    },
+    {
+     "route": "r7",
+     "handoff": "Y3->Y4",
+     "verdict": "broken",
+     "hard": [
+      "F6",
+      "F8"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "W1"
+     ]
+    },
+    {
+     "route": "r7",
+     "handoff": "Y4->Y5",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "same_pot",
+      "cooling"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r8",
+     "handoff": "X1->X2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "cooling",
+      "selective_separation",
+      "drying"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r8",
+     "handoff": "X2->X3",
+     "verdict": "broken",
+     "hard": [
+      "F4",
+      "F6"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r8",
+     "handoff": "X3->X4",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "rehydration",
+      "uv_irradiation"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r8",
+     "handoff": "X4->X5",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "mixing"
+     ],
+     "unassessed": [
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r9",
+     "handoff": "N1->N2",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "same_pot",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r9",
+     "handoff": "N2->N3",
+     "verdict": "unverified",
+     "hard": [],
+     "same_pot_only": false,
+     "procs": [
+      "same_pot",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r10",
+     "handoff": "C1->C2",
+     "verdict": "blocked_by_missing_step",
+     "hard": [],
+     "same_pot_only": true,
+     "procs": [
+      "same_pot"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r10",
+     "handoff": "C2->C3",
+     "verdict": "broken",
+     "hard": [
+      "F6"
+     ],
+     "same_pot_only": true,
+     "procs": [
+      "same_pot"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r10",
+     "handoff": "C3->C4",
+     "verdict": "blocked_by_missing_step",
+     "hard": [],
+     "same_pot_only": true,
+     "procs": [
+      "same_pot"
+     ],
+     "unassessed": [
+      "F1",
+      "F2",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r10",
+     "handoff": "C4->C5",
+     "verdict": "broken",
+     "hard": [
+      "F3",
+      "F5",
+      "F6"
+     ],
+     "same_pot_only": false,
+     "procs": [
+      "selective_separation",
+      "drying",
+      "heating"
+     ],
+     "unassessed": [
+      "F1",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    },
+    {
+     "route": "r11",
+     "handoff": "G1->G2",
+     "verdict": "broken",
+     "hard": [
+      "F4"
+     ],
+     "same_pot_only": true,
+     "procs": [
+      "same_pot"
+     ],
+     "unassessed": [
+      "F1",
+      "F3",
+      "F5",
+      "F8",
+      "W1"
+     ]
+    }
+   ]
+  }
+ }
+}
