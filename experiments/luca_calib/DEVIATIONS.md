@@ -29,3 +29,8 @@ Written before the pilot, as v3 and v4 require. None of these changes a predicti
    - Workers are capped at 3.
    - A memory guard waits while free memory is under 20%. It runs before each stage, IQ-TREE family, ALE family, Su chunk and fit point.
    - The manifest was resealed after these changes. They affect scheduling only, not results.
+8. **ALE link fix.**
+   - ALE's CMake links `Boost::mpi` into its exODT library. conda-forge Boost 1.85 has no boost_mpi library, so the link failed.
+   - `ale_boost_shim.cmake` now provides an empty `Boost::mpi` target. ALE's own files are still unedited.
+   - ALEobserve and ALEml_undated linked without undefined symbols, so neither uses MPI.
+   - The manifest was resealed.

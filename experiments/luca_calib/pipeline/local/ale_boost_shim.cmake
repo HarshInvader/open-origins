@@ -7,3 +7,9 @@ foreach(_c algorithm math)
     set_target_properties(Boost::${_c} PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${ALE_ENV_PREFIX}/include")
   endif()
 endforeach()
+# ALE's exODT also links Boost::mpi, but ALEobserve and ALEml_undated (the only targets built) use no MPI
+# symbols; conda-forge's boost build has no boost_mpi library. Provide an empty target so the link
+# succeeds; any real MPI use would fail at link time with undefined symbols.
+if(NOT TARGET Boost::mpi)
+  add_library(Boost::mpi INTERFACE IMPORTED GLOBAL)
+endif()
