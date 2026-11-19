@@ -42,3 +42,14 @@ Closed routes, each with the effect size the test could have caught. Empty until
 - **Detectable.** Positive controls are recovered where coverage allows: C11-U35 ranks 1 of 718 pairs, C8-G39 rank 3, G7-C40 rank 5. But three of the eight published pairs (G10-C36, G18-C30, C17-G31) have fewer than 3 informative doubles, so the method cannot see known core interactions.
 - **Not closed.** It reopens with a deeper or less saturating selection, more than one library, or a non-WC filter that is not self-emptying. A QT45 structure would also make it checkable: RCSB has no QT45 entry as of 2026-11-19.
 - **Details.** experiments/qt45_epistasis/RESULTS.md.
+
+## "Prebiotic multi-step papers under-report step-end conditions" fails within papers (audit, task #31)
+- **Test.** A sealed audit (prereg sha `fd412e97`) of 40 open-access prebiotic papers and 20 Beilstein J Org Chem multi-step papers. Both sets were randomly sampled (seed 0) from fixed Europe PMC queries and scored per hand-off for end pH, T, concentration, solvent, carried-vs-fresh and workup. A blind second coder agreed with mean kappa 0.95.
+- **Result.**
+  - P1 fails: the median paper reports pH at 100% of its aqueous hand-offs; overall 68% of 57.
+  - P2 fails: 90% of papers state carried/isolated/fresh for every input.
+  - P3 fails: all four numeric items in 28.1% vs 28.9% of hand-offs, diff −0.008, CI −0.17 to 0.16.
+- **Detectable.** A gap of about 0.23 between sets at 80% power.
+- **What remains.** Exploratory, not sealed: the concentration of the carried product is reported less often in prebiotic papers (59% vs 89%, CI on diff −0.47 to −0.12). The pH gap #29 found sits *between* papers stitched into one route, not within single papers.
+- **Not closed.** The sealed pH item counts a stated buffer pH. A "measured end pH" item, and a cross-paper route audit with fixed step lists, remain open.
+- **Details.** experiments/reporting_audit/RESULTS.md.
