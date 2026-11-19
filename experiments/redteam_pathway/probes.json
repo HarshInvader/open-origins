@@ -1,0 +1,220 @@
+{
+ "baseline": [
+  {
+   "handoff": "C1->C2",
+   "verdict": "broken",
+   "flags": [
+    "F4"
+   ],
+   "notes": [
+    "F4 glycolaldehyde not produced earlier nor a feedstock/stream species"
+   ]
+  },
+  {
+   "handoff": "C2->C3",
+   "verdict": "broken",
+   "flags": [
+    "F4"
+   ],
+   "notes": [
+    "F4 glyceraldehyde not produced earlier nor a feedstock/stream species"
+   ]
+  },
+  {
+   "handoff": "C3->C4",
+   "verdict": "unverified",
+   "flags": [],
+   "notes": []
+  },
+  {
+   "handoff": "C5->C6",
+   "verdict": "broken",
+   "flags": [
+    "F3",
+    "F6"
+   ],
+   "notes": [
+    "F3 solvent dry vs formamide",
+    "F6 anhydrocytidine purified by the source, no selective_separation"
+   ]
+  },
+  {
+   "handoff": "C6->C7",
+   "verdict": "broken",
+   "flags": [
+    "F3",
+    "W1"
+   ],
+   "notes": [
+    "F3 solvent formamide vs water",
+    "W1 thione_1a at 0.185 M untested (main input cCMP 0.022 M)",
+    "W1 arabino_aminooxazoline at 0.108 M untested (main input cCMP 0.022 M)",
+    "W1 ribo_aminooxazoline at 0.0792 M untested (main input cCMP 0.022 M)"
+   ]
+  },
+  {
+   "handoff": "C7->C8",
+   "verdict": "broken",
+   "flags": [
+    "F4",
+    "F6",
+    "W1"
+   ],
+   "notes": [
+    "F4 cAMP not produced earlier nor a feedstock/stream species",
+    "F6 cUMP purified by the source, no selective_separation",
+    "F4 cGMP not produced earlier nor a feedstock/stream species",
+    "F6 cCMP purified by the source, no selective_separation",
+    "W1 thione_1a at 0.185 M untested (main input cAMP 0 M)",
+    "W1 arabino_aminooxazoline at 0.108 M untested (main input cAMP 0 M)",
+    "W1 ribo_aminooxazoline at 0.0792 M untested (main input cAMP 0 M)"
+   ]
+  }
+ ],
+ "P1a": [
+  {
+   "handoff": "C3->C4",
+   "verdict": "broken",
+   "flags": [
+    "F1"
+   ],
+   "notes": [
+    "F1 pH 9 after hand-off, step needs 10.5"
+   ]
+  }
+ ],
+ "P1b": [
+  {
+   "handoff": "C3->C4",
+   "verdict": "unverified",
+   "flags": [],
+   "notes": []
+  }
+ ],
+ "P1c": [
+  {
+   "handoff": "C3->C4",
+   "verdict": "unverified",
+   "flags": [
+    "W3"
+   ],
+   "notes": []
+  }
+ ],
+ "P2a": [
+  {
+   "handoff": "C5->C6",
+   "verdict": "broken",
+   "flags": [
+    "F6"
+   ],
+   "notes": [
+    "F6 anhydrocytidine purified by the source, no selective_separation"
+   ]
+  },
+  {
+   "handoff": "C6->C7",
+   "verdict": "broken",
+   "flags": [
+    "F3",
+    "F7",
+    "W1"
+   ],
+   "notes": [
+    "F7 rehydration: pH 7.0 not between nan and 7.0",
+    "F3 solvent dry vs water",
+    "W1 thione_1a at 0.185 M untested (main input cCMP 0.022 M)",
+    "W1 arabino_aminooxazoline at 0.108 M untested (main input cCMP 0.022 M)",
+    "W1 ribo_aminooxazoline at 0.0792 M untested (main input cCMP 0.022 M)"
+   ]
+  }
+ ],
+ "P2b": [
+  {
+   "handoff": "C5->C6",
+   "verdict": "blocked_by_missing_step",
+   "flags": [
+    "W3"
+   ],
+   "notes": []
+  },
+  {
+   "handoff": "C6->C7",
+   "verdict": "broken",
+   "flags": [
+    "F3",
+    "F7"
+   ],
+   "notes": [
+    "F7 rehydration: pH 7.0 not between nan and 7.0",
+    "F3 solvent dry vs water"
+   ]
+  }
+ ],
+ "P3": [
+  {
+   "handoff": "C7->C8",
+   "verdict": "broken",
+   "flags": [
+    "F4",
+    "F5",
+    "F6",
+    "W3"
+   ],
+   "notes": [
+    "F4 cAMP not produced earlier nor a feedstock/stream species",
+    "F5 cUMP: available 0 M vs used 0.0125 M",
+    "F6 cUMP purified by the source, no selective_separation",
+    "F4 cGMP not produced earlier nor a feedstock/stream species"
+   ]
+  }
+ ],
+ "P4": [
+  {
+   "handoff": "C1->C2",
+   "verdict": "broken",
+   "flags": [
+    "F1",
+    "F4"
+   ],
+   "notes": [
+    "F1 pH 7 after hand-off, step needs 0",
+    "F4 glycolaldehyde not produced earlier nor a feedstock/stream species"
+   ]
+  }
+ ],
+ "P5": [
+  {
+   "handoff": "C1->C2",
+   "verdict": "unverified",
+   "flags": [],
+   "notes": []
+  },
+  {
+   "handoff": "C2->C3",
+   "verdict": "broken",
+   "flags": [
+    "F5"
+   ],
+   "notes": [
+    "F5 glyceraldehyde: available 0 M vs used 0.5 M"
+   ]
+  }
+ ],
+ "P6_2.5": [
+  {
+   "handoff": "V1->V2",
+   "verdict": "blocked_by_missing_step",
+   "flags": [],
+   "notes": []
+  }
+ ],
+ "P6_1000.0": [
+  {
+   "handoff": "V1->V2",
+   "verdict": "blocked_by_missing_step",
+   "flags": [],
+   "notes": []
+  }
+ ]
+}

@@ -1,0 +1,880 @@
+{
+ "n_handoffs": 22,
+ "verdict_flips": 2,
+ "flip_fraction": 0.09090909090909091,
+ "hard_code_set_differs": 5,
+ "kappa": 0.8218623481781376,
+ "rt_summary": {
+  "cyanosulfidic": {
+   "n_steps": 10,
+   "n_handoffs": 9,
+   "n_unexplained": 9,
+   "n_hard_fail_handoffs": 6,
+   "n_blocked_by_missing": 3,
+   "n_unverified": 0,
+   "n_continuous": 0,
+   "n_warnings": 5,
+   "n_unassessed_checks": 43,
+   "n_demonstrated": 1,
+   "n_demonstrated_purified": 5,
+   "n_missing": 2,
+   "n_unread": 2,
+   "hard_fail_codes": [
+    "F1",
+    "F3",
+    "F4",
+    "F6",
+    "F7"
+   ],
+   "entry_flags": [],
+   "continuous": false,
+   "scorer_raw": {
+    "n_hard_fail_handoffs": 9,
+    "n_warnings": 5,
+    "n_missing_steps": 4,
+    "n_purified_steps": 5
+   },
+   "stages_with_yield": [
+    "S1",
+    "S2",
+    "S3"
+   ],
+   "stages_missing": [
+    "S4",
+    "S5"
+   ]
+  },
+  "alkaline_vent": {
+   "n_steps": 6,
+   "n_handoffs": 5,
+   "n_unexplained": 5,
+   "n_hard_fail_handoffs": 0,
+   "n_blocked_by_missing": 5,
+   "n_unverified": 0,
+   "n_continuous": 0,
+   "n_warnings": 0,
+   "n_unassessed_checks": 33,
+   "n_demonstrated": 1,
+   "n_demonstrated_purified": 0,
+   "n_missing": 5,
+   "n_unread": 0,
+   "hard_fail_codes": [],
+   "entry_flags": [],
+   "continuous": false,
+   "scorer_raw": {
+    "n_hard_fail_handoffs": 5,
+    "n_warnings": 0,
+    "n_missing_steps": 5,
+    "n_purified_steps": 0
+   },
+   "stages_with_yield": [
+    "S1"
+   ],
+   "stages_missing": [
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ]
+  },
+  "warm_pond": {
+   "n_steps": 5,
+   "n_handoffs": 4,
+   "n_unexplained": 4,
+   "n_hard_fail_handoffs": 1,
+   "n_blocked_by_missing": 3,
+   "n_unverified": 0,
+   "n_continuous": 0,
+   "n_warnings": 0,
+   "n_unassessed_checks": 25,
+   "n_demonstrated": 0,
+   "n_demonstrated_purified": 1,
+   "n_missing": 3,
+   "n_unread": 1,
+   "hard_fail_codes": [
+    "F4",
+    "F6"
+   ],
+   "entry_flags": [],
+   "continuous": false,
+   "scorer_raw": {
+    "n_hard_fail_handoffs": 4,
+    "n_warnings": 0,
+    "n_missing_steps": 4,
+    "n_purified_steps": 1
+   },
+   "stages_with_yield": [
+    "S3"
+   ],
+   "stages_missing": [
+    "S2",
+    "S4",
+    "S5"
+   ]
+  },
+  "ice_rna": {
+   "n_steps": 5,
+   "n_handoffs": 4,
+   "n_unexplained": 4,
+   "n_hard_fail_handoffs": 2,
+   "n_blocked_by_missing": 2,
+   "n_unverified": 0,
+   "n_continuous": 0,
+   "n_warnings": 1,
+   "n_unassessed_checks": 23,
+   "n_demonstrated": 0,
+   "n_demonstrated_purified": 2,
+   "n_missing": 3,
+   "n_unread": 0,
+   "hard_fail_codes": [
+    "F4",
+    "F6"
+   ],
+   "entry_flags": [],
+   "continuous": false,
+   "scorer_raw": {
+    "n_hard_fail_handoffs": 4,
+    "n_warnings": 1,
+    "n_missing_steps": 3,
+    "n_purified_steps": 2
+   },
+   "stages_with_yield": [
+    "S4"
+   ],
+   "stages_missing": [
+    "S2",
+    "S3",
+    "S5"
+   ]
+  }
+ },
+ "orig_summary": {
+  "cyanosulfidic": {
+   "n_steps": 10,
+   "n_handoffs": 9,
+   "n_unexplained": 8,
+   "n_hard_fail_handoffs": 5,
+   "n_blocked_by_missing": 3,
+   "n_unverified": 1,
+   "n_continuous": 0,
+   "n_warnings": 4,
+   "n_unassessed_checks": 45,
+   "n_demonstrated": 1,
+   "n_demonstrated_purified": 5,
+   "n_missing": 2,
+   "n_unread": 2,
+   "hard_fail_codes": [
+    "F3",
+    "F4",
+    "F6"
+   ],
+   "entry_flags": [],
+   "continuous": false,
+   "scorer_raw": {
+    "n_hard_fail_handoffs": 8,
+    "n_warnings": 4,
+    "n_missing_steps": 4,
+    "n_purified_steps": 5
+   },
+   "stages_with_yield": [
+    "S1",
+    "S2",
+    "S3"
+   ],
+   "stages_missing": [
+    "S4",
+    "S5"
+   ]
+  },
+  "alkaline_vent": {
+   "n_steps": 6,
+   "n_handoffs": 5,
+   "n_unexplained": 5,
+   "n_hard_fail_handoffs": 0,
+   "n_blocked_by_missing": 5,
+   "n_unverified": 0,
+   "n_continuous": 0,
+   "n_warnings": 0,
+   "n_unassessed_checks": 33,
+   "n_demonstrated": 1,
+   "n_demonstrated_purified": 0,
+   "n_missing": 5,
+   "n_unread": 0,
+   "hard_fail_codes": [],
+   "entry_flags": [],
+   "continuous": false,
+   "scorer_raw": {
+    "n_hard_fail_handoffs": 5,
+    "n_warnings": 0,
+    "n_missing_steps": 5,
+    "n_purified_steps": 0
+   },
+   "stages_with_yield": [
+    "S1"
+   ],
+   "stages_missing": [
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ]
+  },
+  "warm_pond": {
+   "n_steps": 5,
+   "n_handoffs": 4,
+   "n_unexplained": 4,
+   "n_hard_fail_handoffs": 2,
+   "n_blocked_by_missing": 2,
+   "n_unverified": 0,
+   "n_continuous": 0,
+   "n_warnings": 0,
+   "n_unassessed_checks": 27,
+   "n_demonstrated": 0,
+   "n_demonstrated_purified": 1,
+   "n_missing": 3,
+   "n_unread": 1,
+   "hard_fail_codes": [
+    "F4",
+    "F6"
+   ],
+   "entry_flags": [
+    "F4"
+   ],
+   "continuous": false,
+   "scorer_raw": {
+    "n_hard_fail_handoffs": 5,
+    "n_warnings": 0,
+    "n_missing_steps": 4,
+    "n_purified_steps": 1
+   },
+   "stages_with_yield": [
+    "S3"
+   ],
+   "stages_missing": [
+    "S2",
+    "S4",
+    "S5"
+   ]
+  },
+  "ice_rna": {
+   "n_steps": 5,
+   "n_handoffs": 4,
+   "n_unexplained": 4,
+   "n_hard_fail_handoffs": 2,
+   "n_blocked_by_missing": 2,
+   "n_unverified": 0,
+   "n_continuous": 0,
+   "n_warnings": 1,
+   "n_unassessed_checks": 25,
+   "n_demonstrated": 0,
+   "n_demonstrated_purified": 2,
+   "n_missing": 3,
+   "n_unread": 0,
+   "hard_fail_codes": [
+    "F4",
+    "F6"
+   ],
+   "entry_flags": [
+    "F4"
+   ],
+   "continuous": false,
+   "scorer_raw": {
+    "n_hard_fail_handoffs": 5,
+    "n_warnings": 1,
+    "n_missing_steps": 3,
+    "n_purified_steps": 2
+   },
+   "stages_with_yield": [
+    "S4"
+   ],
+   "stages_missing": [
+    "S2",
+    "S3",
+    "S5"
+   ]
+  }
+ },
+ "rows": [
+  {
+   "route": "cyanosulfidic",
+   "handoff": "C1->C2",
+   "orig": "broken",
+   "rt": "broken",
+   "orig_hard": [
+    "F4"
+   ],
+   "rt_hard": [
+    "F1",
+    "F4"
+   ],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [
+    "F4 glycolaldehyde not produced earlier nor a feedstock/stream species"
+   ],
+   "rt_notes": [
+    "F1 pH 7 after hand-off, step needs 0.3",
+    "F4 glycolaldehyde not produced earlier nor a feedstock/stream species"
+   ],
+   "orig_procs": [
+    "heating"
+   ],
+   "rt_procs": [
+    "uv_irradiation",
+    "heating"
+   ]
+  },
+  {
+   "route": "cyanosulfidic",
+   "handoff": "C2->C3",
+   "orig": "broken",
+   "rt": "broken",
+   "orig_hard": [
+    "F4"
+   ],
+   "rt_hard": [
+    "F4"
+   ],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [
+    "F4 glyceraldehyde not produced earlier nor a feedstock/stream species"
+   ],
+   "rt_notes": [
+    "F4 glyceraldehyde not produced earlier nor a feedstock/stream species"
+   ],
+   "orig_procs": [
+    "selective_separation",
+    "drying",
+    "rehydration",
+    "evaporation",
+    "heating"
+   ],
+   "rt_procs": [
+    "selective_separation",
+    "rehydration",
+    "heating"
+   ]
+  },
+  {
+   "route": "cyanosulfidic",
+   "handoff": "C3->C4",
+   "orig": "unverified",
+   "rt": "broken",
+   "orig_hard": [],
+   "rt_hard": [
+    "F1"
+   ],
+   "orig_warn": [],
+   "rt_warn": [
+    "W3"
+   ],
+   "orig_notes": [],
+   "rt_notes": [
+    "F1 pH 9 after hand-off, step needs 10.5"
+   ],
+   "orig_procs": [
+    "selective_separation",
+    "cooling",
+    "gas_exchange"
+   ],
+   "rt_procs": [
+    "selective_separation",
+    "rehydration",
+    "cooling",
+    "gas_exchange"
+   ]
+  },
+  {
+   "route": "cyanosulfidic",
+   "handoff": "C4->C5",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [
+    "W1"
+   ],
+   "rt_warn": [
+    "W1"
+   ],
+   "orig_notes": [
+    "W1 thione_1a at 0.185 M untested (main input arabino_aminooxazoline 0.108 M)",
+    "W1 ribo_aminooxazoline at 0.0792 M untested (main input arabino_aminooxazoline 0.108 M)"
+   ],
+   "rt_notes": [
+    "W1 thione_1a at 0.0925 M untested (main input arabino_aminooxazoline 0.113 M)",
+    "W1 ribo_aminooxazoline at 0.0825 M untested (main input arabino_aminooxazoline 0.113 M)"
+   ],
+   "orig_procs": [
+    "gas_exchange"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "cyanosulfidic",
+   "handoff": "C5->C6",
+   "orig": "broken",
+   "rt": "broken",
+   "orig_hard": [
+    "F3",
+    "F6"
+   ],
+   "rt_hard": [
+    "F3",
+    "F6"
+   ],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [
+    "F3 solvent dry vs formamide",
+    "F6 anhydrocytidine purified by the source, no selective_separation"
+   ],
+   "rt_notes": [
+    "F3 solvent dry vs formamide",
+    "F6 anhydrocytidine purified by the source, no selective_separation"
+   ],
+   "orig_procs": [
+    "drying",
+    "transport",
+    "heating"
+   ],
+   "rt_procs": [
+    "transport",
+    "drying",
+    "heating"
+   ]
+  },
+  {
+   "route": "cyanosulfidic",
+   "handoff": "C6->C7",
+   "orig": "broken",
+   "rt": "broken",
+   "orig_hard": [
+    "F3"
+   ],
+   "rt_hard": [
+    "F3",
+    "F7"
+   ],
+   "orig_warn": [
+    "W1"
+   ],
+   "rt_warn": [
+    "W1"
+   ],
+   "orig_notes": [
+    "F3 solvent formamide vs water",
+    "W1 thione_1a at 0.185 M untested (main input cCMP 0.022 M)",
+    "W1 arabino_aminooxazoline at 0.108 M untested (main input cCMP 0.022 M)",
+    "W1 ribo_aminooxazoline at 0.0792 M untested (main input cCMP 0.022 M)"
+   ],
+   "rt_notes": [
+    "F7 rehydration: pH nan not between nan and 7.0",
+    "F3 solvent formamide vs water",
+    "W1 thione_1a at 0.0925 M untested (main input cytidine_cyclic_phosphate 0.022 M)",
+    "W1 arabino_aminooxazoline at 0.113 M untested (main input cytidine_cyclic_phosphate 0.022 M)",
+    "W1 ribo_aminooxazoline at 0.0825 M untested (main input cytidine_cyclic_phosphate 0.022 M)"
+   ],
+   "orig_procs": [
+    "transport"
+   ],
+   "rt_procs": [
+    "rehydration",
+    "cooling",
+    "transport",
+    "uv_irradiation"
+   ]
+  },
+  {
+   "route": "cyanosulfidic",
+   "handoff": "C7->C8",
+   "orig": "broken",
+   "rt": "broken",
+   "orig_hard": [
+    "F4",
+    "F6"
+   ],
+   "rt_hard": [
+    "F4"
+   ],
+   "orig_warn": [
+    "W1"
+   ],
+   "rt_warn": [
+    "W1"
+   ],
+   "orig_notes": [
+    "F4 cAMP not produced earlier nor a feedstock/stream species",
+    "F6 cUMP purified by the source, no selective_separation",
+    "F4 cGMP not produced earlier nor a feedstock/stream species",
+    "F6 cCMP purified by the source, no selective_separation",
+    "W1 thione_1a at 0.185 M untested (main input cAMP 0 M)",
+    "W1 arabino_aminooxazoline at 0.108 M untested (main input cAMP 0 M)",
+    "W1 ribo_aminooxazoline at 0.0792 M untested (main input cAMP 0 M)"
+   ],
+   "rt_notes": [
+    "F4 cCMP not produced earlier nor a feedstock/stream species",
+    "F4 cUMP not produced earlier nor a feedstock/stream species",
+    "F4 cAMP not produced earlier nor a feedstock/stream species",
+    "F4 cGMP not produced earlier nor a feedstock/stream species",
+    "W1 thione_1a at 0.0925 M untested (main input cCMP 0 M)",
+    "W1 arabino_aminooxazoline at 0.113 M untested (main input cCMP 0 M)",
+    "W1 ribo_aminooxazoline at 0.0825 M untested (main input cCMP 0 M)"
+   ],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "cyanosulfidic",
+   "handoff": "C8->C9",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [
+    "W1"
+   ],
+   "rt_warn": [
+    "W1"
+   ],
+   "orig_notes": [
+    "W1 thione_1a at 0.185 M untested (main input RNA_oligomers 0.018 M)",
+    "W1 arabino_aminooxazoline at 0.108 M untested (main input RNA_oligomers 0.018 M)",
+    "W1 ribo_aminooxazoline at 0.0792 M untested (main input RNA_oligomers 0.018 M)"
+   ],
+   "rt_notes": [
+    "W1 thione_1a at 0.0925 M untested (main input RNA_oligomers 0.018 M)",
+    "W1 arabino_aminooxazoline at 0.113 M untested (main input RNA_oligomers 0.018 M)",
+    "W1 ribo_aminooxazoline at 0.0825 M untested (main input RNA_oligomers 0.018 M)"
+   ],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "cyanosulfidic",
+   "handoff": "C9->C10",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [],
+   "rt_notes": [],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "alkaline_vent",
+   "handoff": "V1->V2",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [],
+   "rt_notes": [],
+   "orig_procs": [
+    "transport",
+    "thermophoresis"
+   ],
+   "rt_procs": [
+    "transport",
+    "thermophoresis"
+   ]
+  },
+  {
+   "route": "alkaline_vent",
+   "handoff": "V2->V3",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [],
+   "rt_notes": [],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "alkaline_vent",
+   "handoff": "V3->V4",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [],
+   "rt_notes": [],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "alkaline_vent",
+   "handoff": "V4->V5",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [],
+   "rt_notes": [],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "alkaline_vent",
+   "handoff": "V5->V6",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [],
+   "rt_notes": [],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "warm_pond",
+   "handoff": "P0->P1",
+   "orig": "broken",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [
+    "F6"
+   ],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [
+    "F6 AMP_5 purified by the source, no selective_separation",
+    "F6 UMP_5 purified by the source, no selective_separation"
+   ],
+   "rt_notes": [],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "warm_pond",
+   "handoff": "P1->P2",
+   "orig": "broken",
+   "rt": "broken",
+   "orig_hard": [
+    "F4",
+    "F6"
+   ],
+   "rt_hard": [
+    "F4",
+    "F6"
+   ],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [
+    "F6 cAMP purified by the source, no selective_separation",
+    "F6 cUMP purified by the source, no selective_separation",
+    "F4 cGMP not produced earlier nor a feedstock/stream species",
+    "F4 cCMP not produced earlier nor a feedstock/stream species"
+   ],
+   "rt_notes": [
+    "F6 cAMP purified by the source, no selective_separation",
+    "F6 cUMP purified by the source, no selective_separation",
+    "F4 cGMP not produced earlier nor a feedstock/stream species",
+    "F4 cCMP not produced earlier nor a feedstock/stream species"
+   ],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "warm_pond",
+   "handoff": "P2->P3",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [],
+   "rt_notes": [],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "warm_pond",
+   "handoff": "P3->P4",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [],
+   "rt_notes": [],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "ice_rna",
+   "handoff": "I1->I2",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [],
+   "rt_notes": [],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  },
+  {
+   "route": "ice_rna",
+   "handoff": "I2->I3",
+   "orig": "broken",
+   "rt": "broken",
+   "orig_hard": [
+    "F4",
+    "F6"
+   ],
+   "rt_hard": [
+    "F4",
+    "F6"
+   ],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [
+    "F6 QT45_plus purified by the source, no selective_separation",
+    "F6 pppNNN purified by the source, no selective_separation",
+    "F4 primer not produced earlier nor a feedstock/stream species",
+    "F4 hexamer_pppAUUGAU not produced earlier nor a feedstock/stream species"
+   ],
+   "rt_notes": [
+    "F6 QT45 purified by the source, no selective_separation",
+    "F6 pppNNN purified by the source, no selective_separation",
+    "F4 primer_BCy3P10 not produced earlier nor a feedstock/stream species",
+    "F4 QT45_template not produced earlier nor a feedstock/stream species"
+   ],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "freezing_eutectic"
+   ]
+  },
+  {
+   "route": "ice_rna",
+   "handoff": "I3->I4",
+   "orig": "broken",
+   "rt": "broken",
+   "orig_hard": [
+    "F4",
+    "F6"
+   ],
+   "rt_hard": [
+    "F4",
+    "F6"
+   ],
+   "orig_warn": [
+    "W1"
+   ],
+   "rt_warn": [
+    "W1"
+   ],
+   "orig_notes": [
+    "F4 TPR_ribozyme not produced earlier nor a feedstock/stream species",
+    "F6 pppNNN purified by the source, no selective_separation",
+    "F4 primer not produced earlier nor a feedstock/stream species",
+    "F4 short_dsRNA_template not produced earlier nor a feedstock/stream species",
+    "W1 QT45_minus at 1.9e-11 M untested (main input TPR_ribozyme 0 M)",
+    "W1 QT45_plus_copy at 1.4e-11 M untested (main input TPR_ribozyme 0 M)"
+   ],
+   "rt_notes": [
+    "F4 TPR_5TU_t1 not produced earlier nor a feedstock/stream species",
+    "F6 pppNNN purified by the source, no selective_separation",
+    "F4 primers not produced earlier nor a feedstock/stream species",
+    "F4 dsRNA_template not produced earlier nor a feedstock/stream species",
+    "W1 QT45_copies at 1.92e-11 M untested (main input TPR_5TU_t1 0 M)"
+   ],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "heating",
+    "freezing_eutectic"
+   ]
+  },
+  {
+   "route": "ice_rna",
+   "handoff": "I4->I5",
+   "orig": "blocked_by_missing_step",
+   "rt": "blocked_by_missing_step",
+   "orig_hard": [],
+   "rt_hard": [],
+   "orig_warn": [],
+   "rt_warn": [],
+   "orig_notes": [],
+   "rt_notes": [],
+   "orig_procs": [
+    "same_pot"
+   ],
+   "rt_procs": [
+    "same_pot"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "cyanosulfidic": {
+  "A": {
+   "hard": {
+    "real": 7,
+    "null_mean": 6.89,
+    "null_min": 4,
+    "null_max": 9,
+    "p_le": 0.72
+   },
+   "F4": {
+    "real": 3,
+    "null_mean": 5.07,
+    "null_min": 3,
+    "null_max": 8,
+    "p_le": 0.04
+   }
+  },
+  "B": {
+   "hard": {
+    "real": 5,
+    "null_mean": 7.305,
+    "null_min": 5,
+    "null_max": 9,
+    "p_le": 0.04
+   },
+   "F4": {
+    "real": 3,
+    "null_mean": 5.07,
+    "null_min": 3,
+    "null_max": 8,
+    "p_le": 0.04
+   }
+  },
+  "C": {
+   "hard": {
+    "real": 7,
+    "null_mean": 6.78,
+    "null_min": 4,
+    "null_max": 9,
+    "p_le": 0.75
+   },
+   "F4": {
+    "real": 3,
+    "null_mean": 5.07,
+    "null_min": 3,
+    "null_max": 8,
+    "p_le": 0.04
+   }
+  }
+ },
+ "alkaline_vent": {
+  "A": {
+   "hard": {
+    "real": 1,
+    "null_mean": 3.015,
+    "null_min": 1,
+    "null_max": 5,
+    "p_le": 0.01
+   },
+   "F4": {
+    "real": 0,
+    "null_mean": 1.615,
+    "null_min": 0,
+    "null_max": 3,
+    "p_le": 0.05
+   }
+  },
+  "B": {
+   "hard": {
+    "real": 0,
+    "null_mean": 2.985,
+    "null_min": 1,
+    "null_max": 5,
+    "p_le": 0.0
+   },
+   "F4": {
+    "real": 0,
+    "null_mean": 1.615,
+    "null_min": 0,
+    "null_max": 3,
+    "p_le": 0.05
+   }
+  },
+  "C": {
+   "hard": {
+    "real": 0,
+    "null_mean": 1.615,
+    "null_min": 0,
+    "null_max": 3,
+    "p_le": 0.05
+   },
+   "F4": {
+    "real": 0,
+    "null_mean": 1.615,
+    "null_min": 0,
+    "null_max": 3,
+    "p_le": 0.05
+   }
+  }
+ },
+ "warm_pond": {
+  "A": {
+   "hard": {
+    "real": 2,
+    "null_mean": 3.055,
+    "null_min": 2,
+    "null_max": 4,
+    "p_le": 0.135
+   },
+   "F4": {
+    "real": 1,
+    "null_mean": 2.53,
+    "null_min": 1,
+    "null_max": 4,
+    "p_le": 0.05
+   }
+  },
+  "B": {
+   "hard": {
+    "real": 2,
+    "null_mean": 3.055,
+    "null_min": 2,
+    "null_max": 4,
+    "p_le": 0.135
+   },
+   "F4": {
+    "real": 1,
+    "null_mean": 2.53,
+    "null_min": 1,
+    "null_max": 4,
+    "p_le": 0.05
+   }
+  },
+  "C": {
+   "hard": {
+    "real": 2,
+    "null_mean": 3.055,
+    "null_min": 2,
+    "null_max": 4,
+    "p_le": 0.135
+   },
+   "F4": {
+    "real": 1,
+    "null_mean": 2.53,
+    "null_min": 1,
+    "null_max": 4,
+    "p_le": 0.05
+   }
+  }
+ },
+ "ice_rna": {
+  "A": {
+   "hard": {
+    "real": 2,
+    "null_mean": 3.205,
+    "null_min": 2,
+    "null_max": 4,
+    "p_le": 0.165
+   },
+   "F4": {
+    "real": 2,
+    "null_mean": 3.205,
+    "null_min": 2,
+    "null_max": 4,
+    "p_le": 0.165
+   }
+  },
+  "B": {
+   "hard": {
+    "real": 2,
+    "null_mean": 3.205,
+    "null_min": 2,
+    "null_max": 4,
+    "p_le": 0.165
+   },
+   "F4": {
+    "real": 2,
+    "null_mean": 3.205,
+    "null_min": 2,
+    "null_max": 4,
+    "p_le": 0.165
+   }
+  },
+  "C": {
+   "hard": {
+    "real": 2,
+    "null_mean": 3.205,
+    "null_min": 2,
+    "null_max": 4,
+    "p_le": 0.165
+   },
+   "F4": {
+    "real": 2,
+    "null_mean": 3.205,
+    "null_min": 2,
+    "null_max": 4,
+    "p_le": 0.165
+   }
+  }
+ },
+ "cyanosulfidic_demonstrated_only_all_perms": {
+  "steps": [
+   "C1",
+   "C2",
+   "C3",
+   "C4",
+   "C6",
+   "C8"
+  ],
+  "C": {
+   "hard": {
+    "real": 5,
+    "null_mean": 4.833101529902643,
+    "null_min": 4,
+    "null_max": 5,
+    "p_le": 1.0
+   },
+   "F4": {
+    "real": 4,
+    "null_mean": 3.666203059805285,
+    "null_min": 3,
+    "null_max": 5,
+    "p_le": 0.9165507649513213
+   }
+  }
+ }
+}

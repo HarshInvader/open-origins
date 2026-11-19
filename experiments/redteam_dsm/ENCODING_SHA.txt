@@ -1,0 +1,1 @@
+e2182a1ff1e8bf4b9e12bf6b5eb8a5c6447f5512524be6277e00908abc794f2b  experiments/redteam_dsm/steps_rt.py  rt-27  2026-11-19T05:43:44Z  written blind, before opening experiments/dsm_route/* or docs/prereg/dsm_route_score.md

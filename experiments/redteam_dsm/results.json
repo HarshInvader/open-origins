@@ -1,0 +1,1650 @@
+{
+  "task": 27,
+  "rule_sha256": "bfa572ed574fe6da17482750f4003d338718a856356ad594f2f02bdd8f61dd77",
+  "planted": "28/28",
+  "runs": {
+    "rt_A_sealed": {
+      "summary": {
+        "n_steps": 6,
+        "n_handoffs": 5,
+        "n_unexplained": 4,
+        "n_hard_fail_handoffs": 4,
+        "n_blocked_by_missing": 0,
+        "n_unverified": 1,
+        "n_continuous": 0,
+        "n_warnings": 2,
+        "n_unassessed_checks": 32,
+        "n_demonstrated": 2,
+        "n_demonstrated_purified": 3,
+        "n_missing": 0,
+        "n_unread": 1,
+        "hard_fail_codes": [
+          "F3",
+          "F4",
+          "F6",
+          "F7"
+        ],
+        "entry_flags": [],
+        "continuous": false,
+        "scorer_raw": {
+          "n_hard_fail_handoffs": 4,
+          "n_warnings": 2,
+          "n_missing_steps": 1,
+          "n_purified_steps": 3
+        },
+        "stages_with_yield": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "stages_missing": []
+      },
+      "handoffs": [
+        {
+          "handoff": "entry->D1",
+          "verdict": "unverified",
+          "flags": [],
+          "notes": [],
+          "unassessed": [
+            [
+              "F5",
+              "HCHO",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "bisulfite",
+              "scenario feedstock with no stated concentration"
+            ]
+          ]
+        },
+        {
+          "handoff": "D1->D2",
+          "verdict": "broken",
+          "flags": [
+            "F4"
+          ],
+          "notes": [
+            "F4 DHA not produced earlier nor a feedstock/stream species"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "HMS",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "carbonate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "borate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D2->D3",
+          "verdict": "broken",
+          "flags": [
+            "F4"
+          ],
+          "notes": [
+            "F4 ribose not produced earlier nor a feedstock/stream species"
+          ],
+          "unassessed": [
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "DAP",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "borate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "phosphate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D3->D4",
+          "verdict": "unverified",
+          "flags": [
+            "W1"
+          ],
+          "notes": [
+            "W1 phosphate at 0.8 M untested (main input RCP 0.0529 M)"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "RCP",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "adenine",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "Ca2+",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D4->D5",
+          "verdict": "broken",
+          "flags": [
+            "F3",
+            "F4",
+            "F7",
+            "W1"
+          ],
+          "notes": [
+            "F7 rehydration: pH nan not between nan and 7.0",
+            "F3 solvent dry vs water",
+            "F4 adenosine not produced earlier nor a feedstock/stream species",
+            "W1 RCP at 0.0529 M untested (main input adenosine 0 M)",
+            "W1 DAP at 0.0194 M untested (main input adenosine 0 M)",
+            "W1 ACP at 0.00253 M untested (main input adenosine 0 M)",
+            "W1 phosphate at 0.8 M untested (main input adenosine 0 M)"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "Ni2+",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "borate",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "urea",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "CTMP",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D5->D6",
+          "verdict": "broken",
+          "flags": [
+            "F3",
+            "F6",
+            "F7"
+          ],
+          "notes": [
+            "F7 rehydration: pH 7.5 not between nan and 7.0",
+            "F3 solvent dry vs water",
+            "F6 ATP purified by the source, no selective_separation"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "ATP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "basalt_glass",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        }
+      ]
+    },
+    "rt_B_nanpatch": {
+      "summary": {
+        "n_steps": 6,
+        "n_handoffs": 5,
+        "n_unexplained": 4,
+        "n_hard_fail_handoffs": 4,
+        "n_blocked_by_missing": 0,
+        "n_unverified": 1,
+        "n_continuous": 0,
+        "n_warnings": 2,
+        "n_unassessed_checks": 31,
+        "n_demonstrated": 2,
+        "n_demonstrated_purified": 3,
+        "n_missing": 0,
+        "n_unread": 1,
+        "hard_fail_codes": [
+          "F4",
+          "F6"
+        ],
+        "entry_flags": [],
+        "continuous": false,
+        "scorer_raw": {
+          "n_hard_fail_handoffs": 4,
+          "n_warnings": 2,
+          "n_missing_steps": 1,
+          "n_purified_steps": 3
+        },
+        "stages_with_yield": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "stages_missing": []
+      },
+      "handoffs": [
+        {
+          "handoff": "entry->D1",
+          "verdict": "unverified",
+          "flags": [],
+          "notes": [],
+          "unassessed": [
+            [
+              "F5",
+              "HCHO",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "bisulfite",
+              "scenario feedstock with no stated concentration"
+            ]
+          ]
+        },
+        {
+          "handoff": "D1->D2",
+          "verdict": "broken",
+          "flags": [
+            "F4"
+          ],
+          "notes": [
+            "F4 DHA not produced earlier nor a feedstock/stream species"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "HMS",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "carbonate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "borate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D2->D3",
+          "verdict": "broken",
+          "flags": [
+            "F4"
+          ],
+          "notes": [
+            "F4 ribose not produced earlier nor a feedstock/stream species"
+          ],
+          "unassessed": [
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "DAP",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "borate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "phosphate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D3->D4",
+          "verdict": "unverified",
+          "flags": [
+            "W1"
+          ],
+          "notes": [
+            "W1 phosphate at 0.8 M untested (main input RCP 0.0529 M)"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "RCP",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "adenine",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "Ca2+",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D4->D5",
+          "verdict": "broken",
+          "flags": [
+            "F4",
+            "W1"
+          ],
+          "notes": [
+            "F4 adenosine not produced earlier nor a feedstock/stream species",
+            "W1 RCP at 0.0265 M untested (main input adenosine 0 M)",
+            "W1 DAP at 0.0097 M untested (main input adenosine 0 M)",
+            "W1 ACP at 0.00127 M untested (main input adenosine 0 M)",
+            "W1 phosphate at 0.4 M untested (main input adenosine 0 M)"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "Ni2+",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "borate",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "urea",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "CTMP",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D5->D6",
+          "verdict": "broken",
+          "flags": [
+            "F6"
+          ],
+          "notes": [
+            "F6 ATP purified by the source, no selective_separation"
+          ],
+          "unassessed": [
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "ATP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "basalt_glass",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        }
+      ]
+    },
+    "orig_dsm_A_sealed": {
+      "summary": {
+        "n_steps": 6,
+        "n_handoffs": 5,
+        "n_unexplained": 4,
+        "n_hard_fail_handoffs": 3,
+        "n_blocked_by_missing": 1,
+        "n_unverified": 1,
+        "n_continuous": 0,
+        "n_warnings": 2,
+        "n_unassessed_checks": 42,
+        "n_demonstrated": 2,
+        "n_demonstrated_purified": 2,
+        "n_missing": 0,
+        "n_unread": 2,
+        "hard_fail_codes": [
+          "F4",
+          "F6",
+          "F7"
+        ],
+        "entry_flags": [],
+        "continuous": false,
+        "scorer_raw": {
+          "n_hard_fail_handoffs": 4,
+          "n_warnings": 2,
+          "n_missing_steps": 2,
+          "n_purified_steps": 2
+        },
+        "stages_with_yield": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "stages_missing": []
+      },
+      "handoffs": [
+        {
+          "handoff": "entry->D1",
+          "verdict": "unverified",
+          "flags": [],
+          "notes": [],
+          "unassessed": [
+            [
+              "F5",
+              "HCHO",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "glycolaldehyde",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "bisulfite",
+              "source concentration not reported"
+            ]
+          ]
+        },
+        {
+          "handoff": "D1->D2",
+          "verdict": "blocked_by_missing_step",
+          "flags": [],
+          "notes": [],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "HMS",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "glycolaldehyde_bisulfite",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "borate",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D2->D3",
+          "verdict": "broken",
+          "flags": [
+            "F6"
+          ],
+          "notes": [
+            "F6 ribose purified by the source, no selective_separation"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T after hand-off not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "ribose",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "DAP",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "borate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "phosphate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D3->D4",
+          "verdict": "unverified",
+          "flags": [
+            "W1"
+          ],
+          "notes": [
+            "W1 phosphate at 0.8 M untested (main input RCP 0.0529 M)"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "adenine",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "Ca2+",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D4->D5",
+          "verdict": "broken",
+          "flags": [
+            "F4",
+            "F7",
+            "W1"
+          ],
+          "notes": [
+            "F7 rehydration: pH nan not between nan and 7.0",
+            "F4 adenosine not produced earlier nor a feedstock/stream species",
+            "W1 RCP at 0.0529 M untested (main input adenosine 0 M)",
+            "W1 DAP at 0.0194 M untested (main input adenosine 0 M)",
+            "W1 phosphate at 0.8 M untested (main input adenosine 0 M)"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T needed not reported"
+            ],
+            [
+              "F3",
+              "",
+              "solvent not stated"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "borate",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "Ni2+",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "CTMP",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "urea",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D5->D6",
+          "verdict": "broken",
+          "flags": [
+            "F6",
+            "F7"
+          ],
+          "notes": [
+            "F7 rehydration: pH nan not between nan and 7.0",
+            "F6 ATP purified by the source, no selective_separation",
+            "F6 UTP purified by the source, no selective_separation",
+            "F6 GTP purified by the source, no selective_separation",
+            "F6 CTP purified by the source, no selective_separation"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T after hand-off not reported"
+            ],
+            [
+              "F3",
+              "",
+              "solvent not stated"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "ATP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "UTP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "GTP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "CTP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "basalt_glass",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        }
+      ]
+    },
+    "orig_dsm_B_nanpatch": {
+      "summary": {
+        "n_steps": 6,
+        "n_handoffs": 5,
+        "n_unexplained": 4,
+        "n_hard_fail_handoffs": 3,
+        "n_blocked_by_missing": 1,
+        "n_unverified": 1,
+        "n_continuous": 0,
+        "n_warnings": 2,
+        "n_unassessed_checks": 41,
+        "n_demonstrated": 2,
+        "n_demonstrated_purified": 2,
+        "n_missing": 0,
+        "n_unread": 2,
+        "hard_fail_codes": [
+          "F4",
+          "F6"
+        ],
+        "entry_flags": [],
+        "continuous": false,
+        "scorer_raw": {
+          "n_hard_fail_handoffs": 4,
+          "n_warnings": 2,
+          "n_missing_steps": 2,
+          "n_purified_steps": 2
+        },
+        "stages_with_yield": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "stages_missing": []
+      },
+      "handoffs": [
+        {
+          "handoff": "entry->D1",
+          "verdict": "unverified",
+          "flags": [],
+          "notes": [],
+          "unassessed": [
+            [
+              "F5",
+              "HCHO",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "glycolaldehyde",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "bisulfite",
+              "source concentration not reported"
+            ]
+          ]
+        },
+        {
+          "handoff": "D1->D2",
+          "verdict": "blocked_by_missing_step",
+          "flags": [],
+          "notes": [],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "HMS",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "glycolaldehyde_bisulfite",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "borate",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D2->D3",
+          "verdict": "broken",
+          "flags": [
+            "F6"
+          ],
+          "notes": [
+            "F6 ribose purified by the source, no selective_separation"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T after hand-off not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "ribose",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "DAP",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "borate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "phosphate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D3->D4",
+          "verdict": "unverified",
+          "flags": [
+            "W1"
+          ],
+          "notes": [
+            "W1 phosphate at 0.8 M untested (main input RCP 0.0529 M)"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "adenine",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "Ca2+",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D4->D5",
+          "verdict": "broken",
+          "flags": [
+            "F4",
+            "W1"
+          ],
+          "notes": [
+            "F4 adenosine not produced earlier nor a feedstock/stream species",
+            "W1 RCP at 0.0265 M untested (main input adenosine 0 M)",
+            "W1 DAP at 0.0097 M untested (main input adenosine 0 M)",
+            "W1 phosphate at 0.4 M untested (main input adenosine 0 M)"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T needed not reported"
+            ],
+            [
+              "F3",
+              "",
+              "solvent not stated"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "borate",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "Ni2+",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "CTMP",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "urea",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D5->D6",
+          "verdict": "broken",
+          "flags": [
+            "F6"
+          ],
+          "notes": [
+            "F6 ATP purified by the source, no selective_separation",
+            "F6 UTP purified by the source, no selective_separation",
+            "F6 GTP purified by the source, no selective_separation",
+            "F6 CTP purified by the source, no selective_separation"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T after hand-off not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "ATP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "UTP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "GTP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "CTP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "basalt_glass",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        }
+      ]
+    },
+    "orig_dsm_b_A_sealed": {
+      "summary": {
+        "n_steps": 5,
+        "n_handoffs": 4,
+        "n_unexplained": 3,
+        "n_hard_fail_handoffs": 2,
+        "n_blocked_by_missing": 1,
+        "n_unverified": 1,
+        "n_continuous": 0,
+        "n_warnings": 1,
+        "n_unassessed_checks": 27,
+        "n_demonstrated": 2,
+        "n_demonstrated_purified": 2,
+        "n_missing": 0,
+        "n_unread": 1,
+        "hard_fail_codes": [
+          "F3",
+          "F4",
+          "F6",
+          "F7"
+        ],
+        "entry_flags": [],
+        "continuous": false,
+        "scorer_raw": {
+          "n_hard_fail_handoffs": 3,
+          "n_warnings": 1,
+          "n_missing_steps": 1,
+          "n_purified_steps": 2
+        },
+        "stages_with_yield": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "stages_missing": []
+      },
+      "handoffs": [
+        {
+          "handoff": "entry->D1",
+          "verdict": "unverified",
+          "flags": [],
+          "notes": [],
+          "unassessed": [
+            [
+              "F5",
+              "HCHO",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "glycolaldehyde",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "bisulfite",
+              "source concentration not reported"
+            ]
+          ]
+        },
+        {
+          "handoff": "D1->D2",
+          "verdict": "blocked_by_missing_step",
+          "flags": [],
+          "notes": [],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "HMS",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "glycolaldehyde_bisulfite",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "borate",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D2->D3",
+          "verdict": "broken",
+          "flags": [
+            "F6"
+          ],
+          "notes": [
+            "F6 ribose purified by the source, no selective_separation"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T after hand-off not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "ribose",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "DAP",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "borate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "phosphate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D3->D4",
+          "verdict": "unverified",
+          "flags": [
+            "W1"
+          ],
+          "notes": [
+            "W1 phosphate at 0.8 M untested (main input RCP 0.0529 M)"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "adenine",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "Ca2+",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D4->P2",
+          "verdict": "broken",
+          "flags": [
+            "F3",
+            "F4",
+            "F6",
+            "F7"
+          ],
+          "notes": [
+            "F7 rehydration: pH nan not between nan and 7.0",
+            "F3 solvent dry vs water",
+            "F6 cAMP purified by the source, no selective_separation",
+            "F4 cUMP not produced earlier nor a feedstock/stream species",
+            "F4 cGMP not produced earlier nor a feedstock/stream species",
+            "F4 cCMP not produced earlier nor a feedstock/stream species"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "cAMP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        }
+      ]
+    },
+    "orig_dsm_b_B_nanpatch": {
+      "summary": {
+        "n_steps": 5,
+        "n_handoffs": 4,
+        "n_unexplained": 3,
+        "n_hard_fail_handoffs": 2,
+        "n_blocked_by_missing": 1,
+        "n_unverified": 1,
+        "n_continuous": 0,
+        "n_warnings": 1,
+        "n_unassessed_checks": 27,
+        "n_demonstrated": 2,
+        "n_demonstrated_purified": 2,
+        "n_missing": 0,
+        "n_unread": 1,
+        "hard_fail_codes": [
+          "F4",
+          "F6"
+        ],
+        "entry_flags": [],
+        "continuous": false,
+        "scorer_raw": {
+          "n_hard_fail_handoffs": 3,
+          "n_warnings": 1,
+          "n_missing_steps": 1,
+          "n_purified_steps": 2
+        },
+        "stages_with_yield": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "stages_missing": []
+      },
+      "handoffs": [
+        {
+          "handoff": "entry->D1",
+          "verdict": "unverified",
+          "flags": [],
+          "notes": [],
+          "unassessed": [
+            [
+              "F5",
+              "HCHO",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "glycolaldehyde",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "bisulfite",
+              "source concentration not reported"
+            ]
+          ]
+        },
+        {
+          "handoff": "D1->D2",
+          "verdict": "blocked_by_missing_step",
+          "flags": [],
+          "notes": [],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "HMS",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "glycolaldehyde_bisulfite",
+              "source concentration not reported"
+            ],
+            [
+              "F5",
+              "borate",
+              "source concentration not reported"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D2->D3",
+          "verdict": "broken",
+          "flags": [
+            "F6"
+          ],
+          "notes": [
+            "F6 ribose purified by the source, no selective_separation"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F2",
+              "",
+              "T after hand-off not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "ribose",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "F5",
+              "DAP",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "borate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "phosphate",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D3->D4",
+          "verdict": "unverified",
+          "flags": [
+            "W1"
+          ],
+          "notes": [
+            "W1 phosphate at 0.8 M untested (main input RCP 0.0529 M)"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH needed not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "adenine",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "F5",
+              "Ca2+",
+              "scenario feedstock with no stated concentration"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        },
+        {
+          "handoff": "D4->P2",
+          "verdict": "broken",
+          "flags": [
+            "F4",
+            "F6"
+          ],
+          "notes": [
+            "F6 cAMP purified by the source, no selective_separation",
+            "F4 cUMP not produced earlier nor a feedstock/stream species",
+            "F4 cGMP not produced earlier nor a feedstock/stream species",
+            "F4 cCMP not produced earlier nor a feedstock/stream species"
+          ],
+          "unassessed": [
+            [
+              "F1",
+              "",
+              "pH after hand-off not reported"
+            ],
+            [
+              "F8",
+              "",
+              "redox class not stated by the source"
+            ],
+            [
+              "F5",
+              "cAMP",
+              "carried concentration unknown (earlier step did not report it)"
+            ],
+            [
+              "W1",
+              "*",
+              "some carried or main-input concentrations unknown"
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}
