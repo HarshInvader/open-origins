@@ -1,0 +1,9 @@
+{
+  "seed": 2,
+  "species_tree": {"speciation": 1.0, "extinction": 0.5, "total_lineages": 60, "tree_height": 1.0},
+  "sampling": {"n_per_domain": 15},
+  "genome": {"initial_genome_size": 40, "duplication": 0.2, "transfer": 1.0, "loss": 1.0,
+             "origination": 5.0, "family_rate_sigma": 0.5},
+  "sequence": {"aa_model": "WAG", "sequence_size": 100, "target_root_to_tip": 2.0,
+               "lineage_sigma": 0.5, "family_sigma": 0.5}
+}
