@@ -1,0 +1,18 @@
+{
+ "_about": "Alt text for news pictures drawn by site/illustrate_news.py, keyed by news id. Used by site/build.py.",
+ "first-bacterium-had-a-full-flagellum": "Illustration: a rod-shaped cell in shallow water with a long wavy tail and ringed motor at its base, above layered rock.",
+ "a-mirror-image-letter-stops-rna-copying": "Illustration: a primer strand copying along a template stops at one flipped, rust-coloured letter, with the next letter waiting unused.",
+ "comets-probably-did-not-deliver-cyanide": "Illustration: a comet breaking into fragments as it falls toward a wide sea with only a small island of land.",
+ "polymerase-ribozyme-copies-at-94-percent": "Illustration: a small RNA hairpin beside a long chain of copied beads, one bead in rust marking an error.",
+ "side-reactions-need-not-doom-cycles": "Illustration: a ring of four molecules forms a cycle; a branch leads to a side product and a teal line leads back into the cycle.",
+ "lifeless-protocells-pass-microfossil-tests": "Illustration: spheres, threads and a lens shape embedded in layered rock, like microfossils.",
+ "impact-model-dates-the-rna-world-window": "Illustration: impactors falling through the sky onto cratered rock, with a small RNA hairpin in the water between them.",
+ "rethinking-alkaline-vents": "Illustration: two short vent chimneys on the seafloor under faint, nearly flat lines suggesting a weak gradient.",
+ "first-structures-of-polymerase-ribozymes": "Illustration: a curved RNA shape wraps like a hand around a double strand and one incoming letter.",
+ "archaeal-ancestor-was-a-methanogen": "Illustration: a branching tree rooted in rock, with bubbles of gas rising from its base.",
+ "assembly-index-from-flight-mass-spectra": "Illustration: a mass spectrum of vertical peaks above layered rock, with a teal line sloping across the peaks.",
+ "luca-enzyme-set-was-incomplete": "Illustration: a grid of pale tiles with several gaps filled by rust-coloured metal diamonds.",
+ "volcanic-rocks-supply-phosphite": "Illustration: a volcano beside a shallow lake holding small pale triangles for dissolved phosphorus.",
+ "first-sugar-in-interstellar-space": "Illustration: a faint gas cloud holding a four-bead chain, with a radio dish on the rock below pointing at it.",
+ "noisy-genome-training-reads-ancestral-traits": "Illustration: a tree whose branch tips carry columns of beads, some of them missing or faded."
+}

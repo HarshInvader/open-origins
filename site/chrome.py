@@ -51,6 +51,7 @@ ICONS = {
     "data": _I('<ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/>'),
     "logo": _I('<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 15l3-6 2 4 1.5-2L17 15"/>'),
     "files": _I('<path d="M4 7h6l2 2h8v10H4z"/>'),
+    "library": _I('<path d="M5 4h3v16H5zM10 4h3v16h-3z"/><path d="M15.2 4.8l2.9-.8 3.6 15.4-2.9.8z"/>'),
     "code": _I('<path d="M9 8l-4 4 4 4M15 8l4 4-4 4"/>'),
     "family": _I('<circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.4 3.6 5 3.6 8s-1.1 5.6-3.6 8c-2.5-2.4-3.6-5-3.6-8s1.1-5.6 3.6-8z"/>'),
 }

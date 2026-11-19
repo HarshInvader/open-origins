@@ -12,9 +12,11 @@ Inputs (read-only):
   experiments/qt45_numbers/results_calc.json                  QT45 growth factor (task #2)
   experiments/compat/results.json, planted_cases.csv          compatibility rule control (task #3)
   docs/PAPERS.csv                                             paper ledger (tasks #1, #14)
+  docs/library/library.json                                   paper library (library.html; field_now on the news page)
   docs/prereg/HASHES.txt                                      sealed plans
   board/board.db                                              task board (opened read-only)
   site/assets/news/*.webp                                     news pictures (made by site/illustrate_news.py)
+  site/assets/library/*.webp                                  library topic pictures (made by site/illustrate_news.py)
 """
 import csv, html, importlib.util, json, re, shutil, sqlite3, sys, time
 from html.parser import HTMLParser
@@ -66,7 +68,10 @@ def logo(cls="wordmark", show_mark=True):
 
 C = json.loads((SITE / "content.json").read_text())
 F = json.loads((SITE / "findings.json").read_text())
-NEWS = sorted(json.loads((SITE / "news.json").read_text())["items"], key=lambda n: n["date"], reverse=True)
+NEWS_JSON = json.loads((SITE / "news.json").read_text())
+NEWS = sorted(NEWS_JSON["items"], key=lambda n: n["date"], reverse=True)
+_LIBF = ROOT / "docs" / "library" / "library.json"
+LIB = json.loads(_LIBF.read_text())["papers"] if _LIBF.exists() else []
 MAP = json.loads((EXP / "pathway_map" / "map.json").read_text())
 CALC = json.loads((EXP / "qt45_numbers" / "results_calc.json").read_text())
 COMPAT = json.loads((EXP / "compat" / "results.json").read_text())
@@ -94,7 +99,7 @@ N_CLAIMED = sum(1 for t in TASKS if t["status"] == "claimed")
 N_OPEN = sum(1 for t in TASKS if t["status"] == "open")
 
 PAGES = [("findings.html", "Findings"), ("map.html", "Pathway map"), ("theories.html", "Theories"), ("approach.html", "Approach"),
-         ("tracker.html", "Tracker"), ("news.html", "News"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources")]
+         ("tracker.html", "Tracker"), ("news.html", "News"), ("library.html", "Library"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources")]
 
 
 def md(s):
@@ -114,6 +119,7 @@ NAV_GROUPS = (
                   ("theories.html", "Theories", "The proposed origins we score", "theory"),
                   ("approach.html", "Approach", "How every idea gets tested", "approach"),
                   ("news.html", "News", "New papers, summarised", "news"),
+                  ("library.html", "Library", "Every paper we read, with notes", "library"),
                   ("tracker.html", "Tracker", "Progress and the live task board", "tracker"))),
     ("Resources", (("data.html", "Open data", "Every origin-of-life dataset, used or not", "data"),
                    ("resources.html#h-logo", "Logo", "Free to download", "logo"),
@@ -454,6 +460,8 @@ def page_tracker():
 
 
 # ---------------------------------------------------------------- news
+_ALTF = SITE / "assets" / "news" / "alt.json"
+NEWS_ALT = json.loads(_ALTF.read_text()) if _ALTF.exists() else {}
 STATUS_WORD = {"planned": "Planned test", "context": "Background", "running": "Running", "done": "Tested"}
 
 
@@ -461,7 +469,8 @@ def thumb(n, cls="nthumb", eager=False):
     p = SITE / "assets" / "news" / f"{n['id']}.webp"
     if not p.exists():
         return ""
-    return (f'<img class="{cls}" src="assets/news/{e(n["id"])}.webp" width="900" height="600" alt="Illustration for: {e(n["head"])}"'
+    alt = NEWS_ALT.get(n["id"]) or f"Illustration for: {n['head']}"
+    return (f'<img class="{cls}" src="assets/news/{e(n["id"])}.webp" width="900" height="600" alt="{e(alt)}"'
             f'{"" if eager else " loading=lazy"} decoding="async">')
 
 
@@ -518,7 +527,7 @@ def page_news():
     head = page_head("News", "New research on how life began, and what we take from each paper",
                      f"The latest papers and the landmark ones, each in a sentence, in plain words or in full detail. {n_plan} of the {len(NEWS)} feed a test we have planned. "
                      "Every source was checked against its DOI.", [("latest", "Latest"), ("landmarks", "Landmarks")])
-    head = head.replace("</nav></div>", '</nav><p class="illustration-note">Pictures are illustrations drawn for this site, not figures from the papers.</p><div class="actions"><a class="btn" href="news.xml">Follow the feed (RSS)</a></div></div>', 1)
+    head = head.replace("</nav></div>", '</nav><p class="illustration-note">Pictures are illustrations drawn for this site, not figures from the papers.</p><div class="actions"><a class="btn" href="news.xml">Follow the feed (RSS)</a><a class="btn" href="library.html">Browse the paper library</a></div></div>', 1)
     zoom = ('<div class="zoombar" role="group" aria-label="How much detail"><div class="zoom-controls"><span>Detail</span>'
             '<button type="button" data-zoom="gist" aria-pressed="true">In a sentence</button><button type="button" data-zoom="plain" aria-pressed="false">Plain words</button>'
             '<button type="button" data-zoom="tech" aria-pressed="false">Technical</button></div></div>')
@@ -527,7 +536,100 @@ def page_news():
           f'<h2 id="landmarks">The papers that set the terms of the question</h2><div class="ngrid">{land}</div></div></section>')
     _filt, _form = news_tools(NEWS, json.loads((ROOT / "site" / "news.json").read_text()).get("topics", []), "origins", "Open Origins")
     s1 = s1.replace('<section class="block', '<section data-newsblock class="newsblock block', 1); s2 = s2.replace('<section class="block', '<section data-newsblock class="newsblock block', 1)
-    return head + f'<div class="wrap news-tools">{_form}{_filt}</div>' + f'<div class="news-feeds">{zoom}{s1}{s2}</div>' + NEWS_TOOLS_JS
+    return head + field_now() + f'<div class="wrap news-tools">{_form}{_filt}</div>' + f'<div class="news-feeds">{zoom}{s1}{s2}</div>' + NEWS_TOOLS_JS
+
+
+def field_now():
+    fn = NEWS_JSON.get("field_now")
+    if not fn:
+        return ""
+    lib = {p["id"]: p for p in LIB}
+    cards = []
+    for f in fn["fronts"]:
+        refs = ", ".join(f'<a href="library.html#{e(i)}">{e(lib[i]["authors"].split(",")[0].split()[0])} {e(str(lib[i]["year"]))}</a>' for i in f["library_ids"] if i in lib)
+        cards.append(f'<li class="front"><h3>{e(f["title"])}</h3><p>{md(f["what"])}</p><p class="front-refs"><span>Papers:</span> {refs}</p></li>')
+    return (f'<section class="block wrap field-now" aria-labelledby="h-field-now"><p class="rail"><span>00</span>The field now</p><div class="content">'
+            f'<h2 id="h-field-now">Where the field stands</h2><p class="note">Updated {news_date(fn["updated"])}. A short summary drawn from the papers in our '
+            f'<a href="library.html">library</a>; each front links to the papers behind it.</p><ol class="fronts">{"".join(cards)}</ol></div></section>')
+
+
+# ---------------------------------------------------------------- library
+def topic_slug(t):
+    return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
+
+
+def lib_card(p, news_of):
+    rel = p.get("relevance", "")
+    depth = "Full text read" if p.get("read_depth") == "full" else "Abstract only"
+    pic = SITE / "assets" / "library" / f"{topic_slug(p['topic'])}.webp"
+    img = (f'<img class="lthumb" src="assets/library/{topic_slug(p["topic"])}.webp" width="900" height="600" alt="" loading="lazy" decoding="async">'
+           if pic.exists() else "")
+    touches = " ".join(f'<span class="ltask">{e(t)}</span>' for t in p.get("touches", []))
+    link = f'<a href="{e(p["url"])}">{e(p["venue"] or "Source")}</a>' if p.get("url") else e(p.get("venue", ""))
+    rows = [("The question", p.get("question")), ("What they tried", p.get("tried")), ("Method and data", p.get("method_data")),
+            ("Key results", p.get("key_results")), ("Limits", p.get("limits")), ("Ideas for us", p.get("ideas_for_us")),
+            ("Changes a current plan", p.get("changes_plan"))]
+    dl = "".join(f'<dt>{e(k)}</dt><dd>{md(str(v))}</dd>' for k, v in rows if v)
+    extra = []
+    if p.get("source_opened"):
+        extra.append(f'Read from: {e(p["source_opened"])}.')
+    if p.get("imported"):
+        extra.append("Imported from our paper ledger (docs/PAPERS.csv).")
+    if not p.get("verified"):
+        extra.append("Citation details not yet checked against the DOI record (unverified).")
+    if p["id"] in news_of:
+        extra.append(f'<a href="news-{e(news_of[p["id"]])}.html">Our news summary</a>.')
+    lead = p.get("question") or p.get("key_results") or ""
+    lead = lead if len(lead) < 260 else lead[:250].rsplit(" ", 1)[0] + "…"
+    hay = " ".join(str(p.get(k, "")) for k in ("title", "authors", "venue", "key_results", "ideas_for_us", "tried")).lower()
+    return (f'<article class="lcard" id="{e(p["id"])}" data-topic="{e(p["topic"])}" data-rel="{e(rel)}" data-q="{e(hay)}">{img}<div class="lbody">'
+            f'<p class="nmeta"><span class="nkind">{e(p.get("kind", "Paper"))}</span><span>{e(str(p.get("year", "")))}</span>'
+            f'<span class="lrel lrel-{e(rel)}">{e(rel.capitalize())}</span><span class="ldepth">{depth}</span></p>'
+            f'<h3 class="lh">{e(p["title"])}</h3><p class="nsrc">{e(p["authors"])} · {link}</p><p class="llead">{md(lead)}</p>'
+            f'<p class="ltasks">{touches}</p><details><summary>Our analysis</summary><dl class="ldl">{dl}</dl><p class="note">{" ".join(extra)}</p></details></div></article>')
+
+
+LIB_JS = r"""<script>(function(){
+var f=document.querySelector('.lfilter'),r=document.querySelector('.lrelf'),q=document.getElementById('lsearch'),n=document.getElementById('lcount');
+var t='',rel='';
+function apply(){var s=(q.value||'').toLowerCase().trim(),k=0;document.querySelectorAll('.lcard').forEach(function(c){
+var ok=(!t||c.getAttribute('data-topic')===t)&&(!rel||c.getAttribute('data-rel')===rel)&&(!s||c.getAttribute('data-q').indexOf(s)>=0);c.hidden=!ok;if(ok)k++;});
+n.textContent=k+(k===1?' paper':' papers');}
+function grp(g,set){g.addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;set(b.getAttribute('data-t'));
+g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});apply();});}
+grp(f,function(v){t=v});grp(r,function(v){rel=v});q.addEventListener('input',apply);
+if(location.hash){var el=document.getElementById(location.hash.slice(1));if(el){var d=el.querySelector('details');if(d)d.open=true;}}
+apply();})();</script>"""
+
+
+def page_library():
+    topics = NEWS_JSON.get("topics", [])
+    topics = topics + sorted({p["topic"] for p in LIB} - set(topics))
+    news_of = {}
+    for n in NEWS:
+        for i in n.get("library_ids", []):
+            news_of.setdefault(i, n["id"])
+        for p in LIB:
+            if p.get("doi") and p["doi"].lower() in n.get("url", "").lower():
+                news_of.setdefault(p["id"], n["id"])
+    n_full = sum(1 for p in LIB if p.get("read_depth") == "full")
+    head = page_head("Library", "Every paper we have read, with what it means for our tests",
+                     f"{len(LIB)} papers on how life began. We read {n_full} in full and the rest from the abstract. Each card says what the authors asked and found, "
+                     "the limits, and what we could test with it. Filter by topic or search.", side="")
+    head = head.replace("</p></div></section>", '</p><div class="actions"><a class="btn" href="news.html">Back to News</a>'
+                        f'<a class="btn" href="{REPO}/blob/main/docs/library/IDEAS.md">Ideas from the library</a></div></div></section>', 1)
+    count = {t: sum(1 for p in LIB if p["topic"] == t) for t in topics}
+    btns = f'<button type="button" data-t="" aria-pressed="true">All <span>{len(LIB)}</span></button>' + "".join(
+        f'<button type="button" data-t="{e(t)}" aria-pressed="false">{e(t)} <span>{count[t]}</span></button>' for t in topics if count[t])
+    rels = '<button type="button" data-t="" aria-pressed="true">Any</button>' + "".join(
+        f'<button type="button" data-t="{k}" aria-pressed="false">{k.capitalize()}</button>' for k in ("core", "useful", "context"))
+    tools = (f'<div class="wrap ltools"><label class="vh" for="lsearch">Search the library</label><input id="lsearch" type="search" placeholder="Search titles, authors, results" autocomplete="off">'
+             f'<div class="nfilter lfilter" role="group" aria-label="Topic">{btns}</div><div class="nfilter lrelf" role="group" aria-label="How much it matters to us">'
+             f'<span class="lflab">Relevance</span>{rels}</div><p class="note" aria-live="polite"><span id="lcount">{len(LIB)} papers</span>. '
+             'Core: bears directly on a current study. Useful: feeds a step, a table or a planned test. Context: background.</p></div>')
+    order = {"core": 0, "useful": 1, "context": 2}
+    cards = "".join(lib_card(p, news_of) for p in sorted(LIB, key=lambda p: (order.get(p.get("relevance"), 3), -int(str(p.get("year", 0))[:4] or 0), p["id"])))
+    return head + tools + f'<section class="block wrap libblock" aria-label="Papers"><div class="lgrid">{cards}</div></section>' + LIB_JS
 
 
 def news_article(n, prev, nxt):
@@ -762,7 +864,10 @@ def main():
     (DIST / "assets" / "downloads" / "open-origins-wordmark.svg").write_text(wordmark_svg())
     news_src = SITE / "assets" / "news"
     if news_src.exists():
-        shutil.copytree(news_src, DIST / "assets" / "news")
+        shutil.copytree(news_src, DIST / "assets" / "news", ignore=shutil.ignore_patterns("*.json"))
+    lib_src = SITE / "assets" / "library"
+    if lib_src.exists():
+        shutil.copytree(lib_src, DIST / "assets" / "library", ignore=shutil.ignore_patterns("*.json"))
     for n, src, _ in DATA_FILES:
         shutil.copy2(src, DIST / "data" / n)
     desc = C["goal"]
@@ -773,6 +878,7 @@ def main():
     render("approach.html", f"Approach · {C['name']}", C["approach_lede"], "approach.html", page_approach())
     render("tracker.html", f"Tracker · {C['name']}", "The live task board.", "tracker.html", page_tracker())
     render("news.html", f"News · {C['name']}", "New research on how life began, summarised.", "news.html", page_news())
+    render("library.html", f"Library · {C['name']}", "Every paper Open Origins has read, with notes on what it means for our tests.", "library.html", page_library())
     render("contribute.html", f"Contribute · {C['name']}", "Open tasks for AI agents, and asks for wet labs and data holders.", "contribute.html", page_contribute())
     render("data.html", f"Data · {C['name']}", "Every open dataset on the origin of life, its terms, and whether we use it.", "data.html", page_data())
     render("resources.html", f"Resources · {C['name']}", "Logos, research files and data downloads.", "resources.html", page_resources())
