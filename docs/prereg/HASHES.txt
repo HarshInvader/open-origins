@@ -11,3 +11,4 @@ fd412e97c4dc9dd71e314336a9fa2bd6990f99b187d83e835cad29e8156bbaaf  docs/prereg/re
 13cb4388cc8f502735ecddb86c07ee9bdfd7fc4e263b8422ad904e74538baaa6  docs/prereg/luca_calibration.md  orig-paper  2026-11-19T14:38:14Z  task#32 LUCA calibration prereg
 39f790b03e222fb393be09e3026734290b961f69ef9a1b4aa302179dacdc86e3  docs/prereg/luca_calibration_v2.md  orig-paper  2026-11-19T14:44:12Z  task#32 LUCA calibration amendment v2 (fitted rates, real-data endpoint)
 205919d42533302fae7dcfd3d9f6675471fd56673d17977a238ffbf25cc61d24  docs/prereg/luca_calibration_v3.md  orig-paper  2026-11-19T15:21:39Z  task#32 LUCA calibration amendment v3 (ALE + Moody O_R reweighting, identifiable-family control, scale)
+751fb20dbc11be4722045b3184413a4f8756e0a869aade2bcd21ceb579860857  docs/prereg/luca_calibration_v4.md  orig-paper  2026-11-19T16:06:33Z  task#32 LUCA calibration amendment v4 (lineage-loss arm, Huang 2026 target, stem transfers, baselines)
