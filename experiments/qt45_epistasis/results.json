@@ -1,0 +1,628 @@
+{
+ "n_singles": 132,
+ "n_doubles": 8346,
+ "n_informative": 4914,
+ "seed": 20261119,
+ "kill": [
+  "planted check below pre-set power"
+ ],
+ "residual_sd_informative": 1.252172831669475,
+ "plant": {
+  "hits_per_rep": [
+   6,
+   4,
+   5,
+   7,
+   4,
+   4,
+   6,
+   5,
+   4,
+   3
+  ],
+  "reps_passing": 5,
+  "chance_expectation": 0.202,
+  "passes": false
+ },
+ "heldout": {
+  "all": {
+   "n": 1669,
+   "additive": 0.6547772813228363,
+   "nonlinear": 0.9095615660040824,
+   "pairs": 0.9100650035036586
+  },
+  "informative": {
+   "n": 983,
+   "additive": 0.8066833956818151,
+   "nonlinear": 0.8544468104136379,
+   "pairs": 0.8567088332141661
+  },
+  "n_pair_terms": 18
+ },
+ "all_pairs_top40": [
+  {
+   "pair": "C11-T35",
+   "i": 11,
+   "j": 35,
+   "n": 3,
+   "mean_epistasis": 5.123,
+   "t": 2.79,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "published"
+  },
+  {
+   "pair": "C30-A33",
+   "i": 30,
+   "j": 33,
+   "n": 3,
+   "mean_epistasis": 3.198,
+   "t": 3.07,
+   "p": 0.0009995002498750624,
+   "q": 0.0326,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C8-G39",
+   "i": 8,
+   "j": 39,
+   "n": 9,
+   "mean_epistasis": 3.141,
+   "t": 4.79,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "published"
+  },
+  {
+   "pair": "C21-A22",
+   "i": 21,
+   "j": 22,
+   "n": 6,
+   "mean_epistasis": 3.031,
+   "t": 3.31,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "G7-C40",
+   "i": 7,
+   "j": 40,
+   "n": 9,
+   "mean_epistasis": 2.91,
+   "t": 3.58,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "published"
+  },
+  {
+   "pair": "A20-C21",
+   "i": 20,
+   "j": 21,
+   "n": 6,
+   "mean_epistasis": 2.719,
+   "t": 2.24,
+   "p": 0.001999000499750125,
+   "q": 0.0478,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "A28-C30",
+   "i": 28,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 2.438,
+   "t": 4.98,
+   "p": 0.0014992503748125937,
+   "q": 0.0414,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "A22-T23",
+   "i": 22,
+   "j": 23,
+   "n": 5,
+   "mean_epistasis": 2.379,
+   "t": 2.04,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "G39-G43",
+   "i": 39,
+   "j": 43,
+   "n": 9,
+   "mean_epistasis": 2.316,
+   "t": 4.32,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C30-G37",
+   "i": 30,
+   "j": 37,
+   "n": 3,
+   "mean_epistasis": 2.15,
+   "t": 2.91,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C30-G39",
+   "i": 30,
+   "j": 39,
+   "n": 3,
+   "mean_epistasis": 2.038,
+   "t": 20.57,
+   "p": 0.00399800099950025,
+   "q": 0.0755,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C11-C30",
+   "i": 11,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 2.028,
+   "t": 5.69,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "A20-T23",
+   "i": 20,
+   "j": 23,
+   "n": 5,
+   "mean_epistasis": 2.021,
+   "t": 2.54,
+   "p": 0.0014992503748125937,
+   "q": 0.0414,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "T23-A33",
+   "i": 23,
+   "j": 33,
+   "n": 9,
+   "mean_epistasis": 1.986,
+   "t": 6.39,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "T16-C30",
+   "i": 16,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 1.947,
+   "t": 2.1,
+   "p": 0.00399800099950025,
+   "q": 0.0755,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "A9-C30",
+   "i": 9,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 1.937,
+   "t": 2.94,
+   "p": 0.001999000499750125,
+   "q": 0.0478,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "A26-C30",
+   "i": 26,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 1.936,
+   "t": 2.34,
+   "p": 0.00399800099950025,
+   "q": 0.0755,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C30-A38",
+   "i": 30,
+   "j": 38,
+   "n": 3,
+   "mean_epistasis": 1.903,
+   "t": 2.5,
+   "p": 0.004497751124437781,
+   "q": 0.0828,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "G37-A38",
+   "i": 37,
+   "j": 38,
+   "n": 7,
+   "mean_epistasis": 1.887,
+   "t": 4.76,
+   "p": 0.008995502248875561,
+   "q": 0.1318,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C41-C42",
+   "i": 41,
+   "j": 42,
+   "n": 9,
+   "mean_epistasis": 1.793,
+   "t": 2.27,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "T23-C30",
+   "i": 23,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 1.677,
+   "t": 7.62,
+   "p": 0.014492753623188406,
+   "q": 0.1601,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "G6-C41",
+   "i": 6,
+   "j": 41,
+   "n": 9,
+   "mean_epistasis": 1.632,
+   "t": 2.0,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "published"
+  },
+  {
+   "pair": "C3-G39",
+   "i": 3,
+   "j": 39,
+   "n": 9,
+   "mean_epistasis": 1.581,
+   "t": 8.46,
+   "p": 0.012993503248375811,
+   "q": 0.1581,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "T16-A34",
+   "i": 16,
+   "j": 34,
+   "n": 3,
+   "mean_epistasis": 1.547,
+   "t": 0.83,
+   "p": 0.014492753623188406,
+   "q": 0.1601,
+   "label": "published"
+  },
+  {
+   "pair": "G15-C30",
+   "i": 15,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 1.485,
+   "t": 3.5,
+   "p": 0.010494752623688156,
+   "q": 0.1449,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C13-T23",
+   "i": 13,
+   "j": 23,
+   "n": 9,
+   "mean_epistasis": 1.484,
+   "t": 10.16,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C21-T23",
+   "i": 21,
+   "j": 23,
+   "n": 9,
+   "mean_epistasis": 1.482,
+   "t": 10.78,
+   "p": 0.0024987506246876563,
+   "q": 0.0561,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C21-G39",
+   "i": 21,
+   "j": 39,
+   "n": 9,
+   "mean_epistasis": 1.47,
+   "t": 6.44,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "G2-T23",
+   "i": 2,
+   "j": 23,
+   "n": 9,
+   "mean_epistasis": 1.449,
+   "t": 8.14,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "T23-C44",
+   "i": 23,
+   "j": 44,
+   "n": 9,
+   "mean_epistasis": 1.396,
+   "t": 9.98,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C3-T23",
+   "i": 3,
+   "j": 23,
+   "n": 9,
+   "mean_epistasis": 1.359,
+   "t": 13.43,
+   "p": 0.0009995002498750624,
+   "q": 0.0326,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "A4-T23",
+   "i": 4,
+   "j": 23,
+   "n": 9,
+   "mean_epistasis": 1.356,
+   "t": 8.53,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "T23-A34",
+   "i": 23,
+   "j": 34,
+   "n": 6,
+   "mean_epistasis": 1.33,
+   "t": 5.94,
+   "p": 0.0004997501249375312,
+   "q": 0.0199,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C11-T23",
+   "i": 11,
+   "j": 23,
+   "n": 9,
+   "mean_epistasis": 1.325,
+   "t": 3.13,
+   "p": 0.0014992503748125937,
+   "q": 0.0414,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "C8-C30",
+   "i": 8,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 1.317,
+   "t": 6.35,
+   "p": 0.02448775612193903,
+   "q": 0.2144,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "G7-C21",
+   "i": 7,
+   "j": 21,
+   "n": 9,
+   "mean_epistasis": 1.311,
+   "t": 8.31,
+   "p": 0.0009995002498750624,
+   "q": 0.0326,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "G5-C30",
+   "i": 5,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 1.186,
+   "t": 7.89,
+   "p": 0.06896551724137931,
+   "q": 0.3641,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "G7-C30",
+   "i": 7,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 1.151,
+   "t": 5.52,
+   "p": 0.03398300849575212,
+   "q": 0.2773,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "G15-T23",
+   "i": 15,
+   "j": 23,
+   "n": 9,
+   "mean_epistasis": 1.137,
+   "t": 4.14,
+   "p": 0.0024987506246876563,
+   "q": 0.0561,
+   "label": "WC-capable"
+  },
+  {
+   "pair": "A4-C30",
+   "i": 4,
+   "j": 30,
+   "n": 3,
+   "mean_epistasis": 1.129,
+   "t": 8.56,
+   "p": 0.07946026986506746,
+   "q": 0.368,
+   "label": "WC-capable"
+  }
+ ],
+ "published_pairs": {
+  "G6-C41": {
+   "rank": 22,
+   "mean": 1.632,
+   "n": 9,
+   "q": 0.0199
+  },
+  "C11-T35": {
+   "rank": 1,
+   "mean": 5.123,
+   "n": 3,
+   "q": 0.0199
+  },
+  "C8-G39": {
+   "rank": 3,
+   "mean": 3.141,
+   "n": 9,
+   "q": 0.0199
+  },
+  "T16-A34": {
+   "rank": 24,
+   "mean": 1.547,
+   "n": 3,
+   "q": 0.1601
+  },
+  "G7-C40": {
+   "rank": 5,
+   "mean": 2.91,
+   "n": 9,
+   "q": 0.0199
+  }
+ },
+ "published_median_mean_epistasis": 2.9101538219628345,
+ "sealed_top10_nonWC": [
+  {
+   "pair": "G10-A38",
+   "i": 10,
+   "j": 38,
+   "n": 3,
+   "mean_epistasis": 0.26,
+   "t": 3.57,
+   "p": 0.1904047976011994,
+   "q": 0.5327,
+   "label": "non-WC"
+  }
+ ],
+ "n_triples_considered": 1450,
+ "sealed_triples": [
+  {
+   "triple": "G6T C41T C42A",
+   "predicted_fitness": 4.526,
+   "constituent_double_fitness": [
+    0.565,
+    -0.142,
+    0.664
+   ]
+  },
+  {
+   "triple": "G7T C21T C40T",
+   "predicted_fitness": 4.03,
+   "constituent_double_fitness": [
+    0.218,
+    -1.371,
+    1.186
+   ]
+  },
+  {
+   "triple": "C41T C42A G43T",
+   "predicted_fitness": 3.987,
+   "constituent_double_fitness": [
+    0.664,
+    1.591,
+    0.026
+   ]
+  },
+  {
+   "triple": "G6T C41T G43T",
+   "predicted_fitness": 3.892,
+   "constituent_double_fitness": [
+    0.565,
+    0.841,
+    1.591
+   ]
+  },
+  {
+   "triple": "C41T C42A C44T",
+   "predicted_fitness": 3.732,
+   "constituent_double_fitness": [
+    0.664,
+    1.714,
+    1.075
+   ]
+  },
+  {
+   "triple": "G6T C41T C44T",
+   "predicted_fitness": 3.686,
+   "constituent_double_fitness": [
+    0.565,
+    0.503,
+    1.714
+   ]
+  },
+  {
+   "triple": "G7T C40T C44T",
+   "predicted_fitness": 3.586,
+   "constituent_double_fitness": [
+    -1.371,
+    -1.52,
+    -0.473
+   ]
+  },
+  {
+   "triple": "G7T C40T G43T",
+   "predicted_fitness": 3.586,
+   "constituent_double_fitness": [
+    -1.371,
+    -0.498,
+    1.819
+   ]
+  },
+  {
+   "triple": "C13A T23G C44T",
+   "predicted_fitness": 3.556,
+   "constituent_double_fitness": [
+    0.519,
+    1.621,
+    0.814
+   ]
+  },
+  {
+   "triple": "G7T C13A C40T",
+   "predicted_fitness": 3.365,
+   "constituent_double_fitness": [
+    -3.286,
+    -1.371,
+    0.108
+   ]
+  }
+ ],
+ "complete10": {
+  "n_doubles": 7212,
+  "top10_overlap": 10,
+  "nonWC_top10_overlap": 0
+ }
+}
