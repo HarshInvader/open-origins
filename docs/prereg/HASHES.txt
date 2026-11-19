@@ -9,3 +9,4 @@ b60f5f12adf90262ae8a1cd5dc0e6b88b6bb2274ea4e62cd02a49cbb04d9609d  docs/prereg/as
 c3097e59134e5d7251948fea3c1df2c5d4b02e7c48763946dbf82c376ef18f15  docs/prereg/qt45_epistasis.md  qt45  2026-11-19T06:05:54Z  task#30 QT45 epistasis -> contacts + fitter triples
 fd412e97c4dc9dd71e314336a9fa2bd6990f99b187d83e835cad29e8156bbaaf  docs/prereg/reporting_audit.md  audit  2026-11-19T06:14:47Z  task#31 reporting audit, 40 prebiotic + 20 BJOC
 13cb4388cc8f502735ecddb86c07ee9bdfd7fc4e263b8422ad904e74538baaa6  docs/prereg/luca_calibration.md  orig-paper  2026-11-19T14:38:14Z  task#32 LUCA calibration prereg
+39f790b03e222fb393be09e3026734290b961f69ef9a1b4aa302179dacdc86e3  docs/prereg/luca_calibration_v2.md  orig-paper  2026-11-19T14:44:12Z  task#32 LUCA calibration amendment v2 (fitted rates, real-data endpoint)
