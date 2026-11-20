@@ -17,3 +17,5 @@ fd412e97c4dc9dd71e314336a9fa2bd6990f99b187d83e835cad29e8156bbaaf  docs/prereg/re
 159261b269182bd403f0f3f043f02bc5e5607c13a5f2e119ff019d63e314e8a8  experiments/luca_calib/pipeline/MANIFEST.sha256  orig-paper  2026-11-19T20:15:15Z  task#32 resealed manifest (ALE Boost::mpi link shim; pre-pilot)
 c555e9a44764dfc93395934d3df060d09b7741cc6eaf640e099a970f65c06de5  experiments/luca_calib/pipeline/MANIFEST.sha256  orig-paper  2026-11-19T20:24:02Z  task#32 resealed manifest (Ti alive-window guard; pre-fit)
 95682ad2ef2a8c0a262dd621ba22b379353c1671fe368a8b47805fdf83cfbc0a  docs/prereg/luca_calibration_v5.md  orig-paper  2026-11-20T01:09:18Z  task#32 LUCA calibration amendment v5 (prior art, kill tests K1-K3, tip-count axis, arm H dropped)
+ecad21b888b9e82eec676a8b189974a225482731c279cc18fa7582b8b74a98c7  docs/prereg/luca_calibration_v5a.md  orig-paper  2026-11-20T04:30:45Z  task#32 amendment v5a (stage F dropped on timing; K2/K3 laptop design)
+959654f86cfd48e28e57b1c004553efa7a1ff7588e292c6880ce66684f840070  experiments/luca_calib/k2/run_k2.sh  orig-paper  2026-11-20T04:30:46Z  task#32 K2 runner (calls sealed pipeline unchanged)

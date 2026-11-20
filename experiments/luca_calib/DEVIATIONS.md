@@ -41,3 +41,8 @@ Written before the pilot, as v3 and v4 require. None of these changes a predicti
    - Test on seeds 100, 105, 107, 109 and 115: 3–6 leaves shortened, at most 1 removed, and the extant tree was rebuilt exactly.
    - The ale_smoke stage ran before this fix. It is plumbing only and is not rerun.
    - The manifest was resealed.
+10. **Stage F not run; K2 and K3 scaled down (prereg v5a, 2026-11-20).**
+    - One Gm run at the v3 scale takes about 5 h or more at background priority, so stage F would take more than a week.
+    - v5's fallback T* (loss 1, transfer/loss 0.2) is used now, on timing alone.
+    - K2 and K3 use 200 root families. Their origination rate is fitted once on a small tree.
+    - The seqscale step is skipped. Details are in `docs/prereg/luca_calibration_v5a.md`.
