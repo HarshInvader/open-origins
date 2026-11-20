@@ -705,6 +705,23 @@
   },
   "items": [
     {
+      "id": "vent-walls-pass-electrons-not-ions",
+      "section": "latest",
+      "date": "2026-11-10",
+      "kind": "Paper",
+      "head": "Vent minerals carry electrons easily but ions slowly, so charge balance may limit carbon reduction at vents (Altair, Hudson et al.)",
+      "who": "Altair, Lindenfelser, Galante, Varela, De Decker, Hudson",
+      "venue": "Chemical Communications",
+      "url": "https://doi.org/10.1039/d6cc04072a",
+      "verified": true,
+      "gist": "Measured on the same samples, synthetic vent minerals conduct electrons tens of thousands of times better than ions.",
+      "plain": "One idea for how life began places it at alkaline vents on the early sea floor. Thin mineral walls kept warm alkaline fluid apart from a more acidic ocean, and electrons crossing those walls could turn carbon dioxide into organic molecules. But every electron that crosses needs a matching ion to keep the charges balanced. This team measured both on synthetic vent minerals. Electrons moved easily and ions moved far more slowly, so ions, not electrons, may set the pace.",
+      "tech": "FeS, Fe(Ni)S and green rust made by co-precipitation, centrifuged to pastes, hydrated with ocean-analogue fluid; 0.108 cm3 between graphite electrodes. Two-electrode potentiostatic impedance spectroscopy at open circuit, 1 Hz to 1 MHz, 10 mV, room temperature; equivalent-circuit fits with 2-15% parameter error. Electronic conductivity 1.5e-2, 1.2e-2 and 6.7e-3 S/cm; ionic 4.97e-7, 2.37e-8 and 8.12e-9 S/cm (FeS, Fe(Ni)S, green rust). Living membranes, from the literature: about 5e-10 electronic and 1.27e-8 ionic. No CO2 reduction was measured, no pH gradient was applied, and pastes are not chimney walls. Short communication, read in full (open access).",
+      "borrow": "For the vent route step table (task #4) we split charge balance across the wall from electron transfer and record it as its own step, with these conductivities and their caveats. A vent route that needs sustained CO2 reduction across a mineral wall now has one more hand-off to explain.",
+      "status": "planned",
+      "topic": "Vents and first cells"
+    },
+    {
       "id": "first-bacterium-had-a-full-flagellum",
       "section": "latest",
       "date": "2026-11-13",

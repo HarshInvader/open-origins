@@ -575,7 +575,25 @@ TOPIC_DRAW = {"rna-world": t_rna, "building-blocks": t_blocks, "from-space": t_s
               "telling-life-apart": t_life, "luca-and-the-tree-of-life": t_luca}
 
 
+def vent_wall(seed):
+    im, d, rng = base(seed, water=0.1, rock=0.82)
+    d.rectangle((840, 200, 960, 960), fill=BA, outline=INK, width=6)  # the mineral wall
+    for k in range(9):
+        y = 240 + k * 80
+        d.line([(840, y), (960, y + 20)], fill=(120, 80, 55), width=3)
+    for i, y in enumerate((300, 420, 540, 660)):  # electrons: a quick straight run through the wall
+        d.line([(560, y), (1240, y)], fill=INK, width=5)
+        d.polygon([(1240, y - 14), (1268, y), (1240, y + 14)], fill=INK)
+    for x, y in [(520, 760), (600, 820), (680, 780), (760, 840)]:  # ions: queued on one side
+        circ(d, x, y, 26, fill=SURF, outline=INK, width=5)
+    circ(d, 900, 800, 26, fill=SURF, outline=MUTED, width=4)  # one ion stuck inside the wall
+    accent(d, [(490, 900), (500, 910), (780, 910), (790, 900)])  # bracket the queue
+    return im
+
+
+
 DRAW = {
+    "vent-walls-pass-electrons-not-ions": vent_wall,
     "assembly-theory-collapses-to-dictionary-compression": assembly,
     "de-novo-protocell-membranes-without-a-template": protocell,
     "all-five-nucleobases-in-ryugu": ryugu,
