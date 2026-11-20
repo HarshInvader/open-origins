@@ -10,6 +10,8 @@ Date: 2026-11-19. Sources were opened through Crossref, PMC (efetch full-text XM
 
 That disagreement is the strongest motivation for this study, and also its main competitive risk.
 
+**Update 2026-11-20 (prior-art review; prereg v5).** The claim that this "simulates genomes at LUCA depth" needs narrowing, because Coleman et al. 2021 already ran Zombi simulations with ALE for root position and DTL counts (see their entry below). What is new is narrower: the first known-truth test of whether Moody's root-weighted posterior probabilities, summed or thresholded, recover a planted root gene set when gene trees come from saturated sequences with ghost donors. At 80-320 tips this cannot settle the Csűrös-Szöllősi dispute. A "corrected LUCA size" is not a headline.
+
 ## What exists
 
 ### Verified prior-work references
@@ -50,10 +52,19 @@ Zombi includes a `SpeciesSampler.py` for taxon subsampling.
   - The "45" presumably counts confident families rather than summing PPs. We did not open the SI.
 - **Szöllősi & Williams, "Ancestral gene content estimates under gain-loss-duplication depend on the chosen observation threshold"**, PNAS 123(31):e2618431123, 2026 (PMC13438450). This is a letter. It shows that GLD root size depends on Ω_min and calls the profile-method bias "opposite to the conservatism of reconciliation methods". There is no ALE simulation.
 - **Gagnon & Csűrös, reply**, PNAS 2026, doi:10.1073/pnas.2619901123 (PMC13438522). It restates that "large-scale reconciliations ... hallucinate lateral gene transfers because of weak phylogenetic signal" and cites Moody. There is no ALE simulation.
-- **Coleman et al. 2021, "A rooted phylogeny resolves early bacterial evolution"**, Science 372:eabe0511, doi:10.1126/science.abe0511. We opened the bioRxiv version, 10.1101/2020.07.15.205187 (first 100k characters).
-  - It introduced per-COG-category root origination, which Moody reuses.
+- **Coleman et al. 2021, "A rooted phylogeny resolves early bacterial evolution"**, Science 372:eabe0511, doi:10.1126/science.abe0511.
+  - **Correction (2026-11-20).** The 2026-11-19 entry said "no new simulations". That was wrong: it read only the bioRxiv v1 preprint, which has no Zombi section. The published version (main text: https://ssolo.web.elte.hu/Coleman_2021.pdf) did simulate:
+    - "we simulated gene family evolution using Zombi (78) combined with rejection sampling to obtain sets of simulated gene families similar to the real data in terms of inferred DTL events";
+    - root inference was robust to taxon sampling and to the share of extinct lineages (fig. S2);
+    - D, T and L counts were accurately recovered (figs. S3-S8).
+  - **Their figshare deposit** (doi:10.6084/m9.figshare.12651074, opened 2026-11-20):
+    - `ExperimentExtinctions`: about 1,000 Zombi runs (30-tip trees with extinction, 100 families each), reconciled with default ALEml_undated on **true** pruned gene trees;
+    - `TableSimulations.tsv`: simulated against inferred D/T/L/S per family.
+    - Neither the deposit index nor the main text scores root gene content or root origination probabilities against the truth.
+  - **SI not opened:** science.org and the Bristol portal returned 403 to an automated client. Whether the SI scores root content is **unverified**.
+  - It introduced the root-weight reweighting (`O_R_Optimization.py`, per COG category) that Moody reuses.
   - It estimated LBCA at 1,292.6-2,142.9 COG members and 1.6-2.69 Mb by regression on modern genomes (r = 0.96).
-  - We saw **no new simulations** in the text read. It cites earlier ALE simulations for root robustness.
+  - **Consequence for novelty:** replicating DTL recovery or root robustness adds nothing new; they are replication checks at most (prereg v5). What remains new is narrower: a known-truth test of the root-weighted, summed or thresholded root probabilities, on inferred gene trees with ghost donors.
 - **Williams et al. 2017, "Integrative modeling of gene and genome evolution roots the archaeal tree of life"**, PNAS 114:E4602, doi:10.1073/pnas.1618463114 (PMC5468678).
   - Its simulations (in the SI, unread) cover **root position** only.
   - Its ancestral genome size (archaeal root about 1,090) was corrected using extinction probabilities ("41% ... have since gone extinct").
