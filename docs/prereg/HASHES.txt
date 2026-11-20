@@ -16,3 +16,4 @@ fd412e97c4dc9dd71e314336a9fa2bd6990f99b187d83e835cad29e8156bbaaf  docs/prereg/re
 2dba6dddf58c6015e2b00953b3cd688244c76e568ceb0a03e86ca8b6ef0026b7  experiments/luca_calib/pipeline/MANIFEST.sha256  orig-paper  2026-11-19T17:13:40Z  task#32 resealed manifest (Origins lock, 3 workers, memory guard; pre-pilot)
 159261b269182bd403f0f3f043f02bc5e5607c13a5f2e119ff019d63e314e8a8  experiments/luca_calib/pipeline/MANIFEST.sha256  orig-paper  2026-11-19T20:15:15Z  task#32 resealed manifest (ALE Boost::mpi link shim; pre-pilot)
 c555e9a44764dfc93395934d3df060d09b7741cc6eaf640e099a970f65c06de5  experiments/luca_calib/pipeline/MANIFEST.sha256  orig-paper  2026-11-19T20:24:02Z  task#32 resealed manifest (Ti alive-window guard; pre-fit)
+95682ad2ef2a8c0a262dd621ba22b379353c1671fe368a8b47805fdf83cfbc0a  docs/prereg/luca_calibration_v5.md  orig-paper  2026-11-20T01:09:18Z  task#32 LUCA calibration amendment v5 (prior art, kill tests K1-K3, tip-count axis, arm H dropped)
