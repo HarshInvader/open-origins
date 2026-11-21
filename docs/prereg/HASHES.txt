@@ -19,3 +19,5 @@ c555e9a44764dfc93395934d3df060d09b7741cc6eaf640e099a970f65c06de5  experiments/lu
 95682ad2ef2a8c0a262dd621ba22b379353c1671fe368a8b47805fdf83cfbc0a  docs/prereg/luca_calibration_v5.md  orig-paper  2026-11-20T01:09:18Z  task#32 LUCA calibration amendment v5 (prior art, kill tests K1-K3, tip-count axis, arm H dropped)
 ecad21b888b9e82eec676a8b189974a225482731c279cc18fa7582b8b74a98c7  docs/prereg/luca_calibration_v5a.md  orig-paper  2026-11-20T04:30:45Z  task#32 amendment v5a (stage F dropped on timing; K2/K3 laptop design)
 959654f86cfd48e28e57b1c004553efa7a1ff7588e292c6880ce66684f840070  experiments/luca_calib/k2/run_k2.sh  orig-paper  2026-11-20T04:30:46Z  task#32 K2 runner (calls sealed pipeline unchanged)
+b37a26d7351802db272be3a580e8b1275e35ddfb2fbc7f83c2b670fd0a7b9144  docs/prereg/luca_calibration_v5b.md  orig-paper  2026-11-21T07:39:41Z  task#32 amendment v5b (origination fixed 40, tips 20-80, rule at 80 tips)
+8fbe486912e73c78a732347252b7c9e2192d5cb8d70ed8bcdcf876242011cc10  experiments/luca_calib/k2/run_k2.sh  orig-paper  2026-11-21T07:39:41Z  task#32 amendment v5b (origination fixed 40, tips 20-80, rule at 80 tips)
