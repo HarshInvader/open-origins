@@ -1,0 +1,126 @@
+{
+  "E": 168.7415724782084,
+  "R": 0.9374531804344912,
+  "baselines": {
+    "B1": {
+      "called": 76,
+      "false_share": 0.0,
+      "precision": 1.0,
+      "recall": 0.4222222222222222,
+      "tp": 76
+    },
+    "B2": {
+      "called": 242,
+      "false_share": 0.3305785123966942,
+      "precision": 0.6694214876033058,
+      "recall": 0.9,
+      "tp": 162
+    },
+    "higher_taxa_sizes": {
+      "A": [
+        15,
+        9,
+        2,
+        2,
+        7,
+        5
+      ],
+      "B": [
+        4,
+        6,
+        2,
+        10,
+        8,
+        10
+      ]
+    }
+  },
+  "calibration": [
+    {
+      "bin": "0.00-0.20",
+      "mean_pp": 0.005197567107683194,
+      "n": 782,
+      "n_luca": 27,
+      "share_luca": 0.034526854219948847
+    },
+    {
+      "bin": "0.20-0.40",
+      "mean_pp": 0.287681875,
+      "n": 24,
+      "n_luca": 1,
+      "share_luca": 0.041666666666666664
+    },
+    {
+      "bin": "0.40-0.60",
+      "mean_pp": 0.4875067333333333,
+      "n": 15,
+      "n_luca": 3,
+      "share_luca": 0.2
+    },
+    {
+      "bin": "0.60-0.80",
+      "mean_pp": 0.7177084615384615,
+      "n": 13,
+      "n_luca": 7,
+      "share_luca": 0.5384615384615384
+    },
+    {
+      "bin": "0.80-1.00",
+      "mean_pp": 0.9800687430555555,
+      "n": 144,
+      "n_luca": 142,
+      "share_luca": 0.9861111111111112
+    },
+    {
+      "bin": "0.40-0.60",
+      "mean_pp": 0.4875067333333333,
+      "n": 15,
+      "n_luca": 3,
+      "share_luca": 0.2
+    }
+  ],
+  "gate_v3": {
+    "R_all_luca_not_gating": 0.9374531804344912,
+    "n_identifiable_luca": 162,
+    "pass": false,
+    "t50_called": 162,
+    "t50_false_share": 0.06172839506172839,
+    "t50_recall_identifiable": 0.8827160493827161,
+    "t50_tp_identifiable": 143
+  },
+  "n_families": 978,
+  "pp_column": "pp",
+  "tiers": {
+    "T50": {
+      "called": 162,
+      "false_share": 0.06172839506172845,
+      "precision": 0.9382716049382716,
+      "recall": 0.8444444444444444,
+      "tp": 152
+    },
+    "T50d": {
+      "called": 147,
+      "false_share": 0.027210884353741527,
+      "precision": 0.9727891156462585,
+      "recall": 0.7944444444444444,
+      "tp": 143
+    },
+    "T75": {
+      "called": 150,
+      "false_share": 0.026666666666666616,
+      "precision": 0.9733333333333334,
+      "recall": 0.8111111111111111,
+      "tp": 146
+    },
+    "T75d": {
+      "called": 142,
+      "false_share": 0.021126760563380254,
+      "precision": 0.9788732394366197,
+      "recall": 0.7722222222222223,
+      "tp": 139
+    }
+  },
+  "true_luca_in_both_domains": 162,
+  "true_luca_reconcilable": 177,
+  "true_luca_size": 180
+}

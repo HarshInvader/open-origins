@@ -1,0 +1,126 @@
+{
+  "E": 105.57548554262335,
+  "R": 0.5898071818023651,
+  "baselines": {
+    "B1": {
+      "called": 56,
+      "false_share": 0.0,
+      "precision": 1.0,
+      "recall": 0.3128491620111732,
+      "tp": 56
+    },
+    "B2": {
+      "called": 218,
+      "false_share": 0.22935779816513757,
+      "precision": 0.7706422018348624,
+      "recall": 0.9385474860335196,
+      "tp": 168
+    },
+    "higher_taxa_sizes": {
+      "A": [
+        28,
+        15,
+        2,
+        13,
+        11,
+        11
+      ],
+      "B": [
+        6,
+        6,
+        1,
+        20,
+        14,
+        33
+      ]
+    }
+  },
+  "calibration": [
+    {
+      "bin": "0.00-0.20",
+      "mean_pp": 0.0013901039032558529,
+      "n": 1420,
+      "n_luca": 66,
+      "share_luca": 0.04647887323943662
+    },
+    {
+      "bin": "0.20-0.40",
+      "mean_pp": 0.29976533333333333,
+      "n": 3,
+      "n_luca": 3,
+      "share_luca": 1.0
+    },
+    {
+      "bin": "0.40-0.60",
+      "mean_pp": 0.50410425,
+      "n": 4,
+      "n_luca": 4,
+      "share_luca": 1.0
+    },
+    {
+      "bin": "0.60-0.80",
+      "mean_pp": 0.717658888888889,
+      "n": 9,
+      "n_luca": 9,
+      "share_luca": 1.0
+    },
+    {
+      "bin": "0.80-1.00",
+      "mean_pp": 0.9714112886597938,
+      "n": 97,
+      "n_luca": 97,
+      "share_luca": 1.0
+    },
+    {
+      "bin": "0.40-0.60",
+      "mean_pp": 0.50410425,
+      "n": 4,
+      "n_luca": 4,
+      "share_luca": 1.0
+    }
+  ],
+  "gate_v3": {
+    "R_all_luca_not_gating": 0.5898071818023651,
+    "n_identifiable_luca": 168,
+    "pass": false,
+    "t50_called": 107,
+    "t50_false_share": 0.0,
+    "t50_recall_identifiable": 0.6369047619047619,
+    "t50_tp_identifiable": 107
+  },
+  "n_families": 1533,
+  "pp_column": "pp_flat",
+  "tiers": {
+    "T50": {
+      "called": 107,
+      "false_share": 0.0,
+      "precision": 1.0,
+      "recall": 0.5977653631284916,
+      "tp": 107
+    },
+    "T50d": {
+      "called": 107,
+      "false_share": 0.0,
+      "precision": 1.0,
+      "recall": 0.5977653631284916,
+      "tp": 107
+    },
+    "T75": {
+      "called": 99,
+      "false_share": 0.0,
+      "precision": 1.0,
+      "recall": 0.553072625698324,
+      "tp": 99
+    },
+    "T75d": {
+      "called": 99,
+      "false_share": 0.0,
+      "precision": 1.0,
+      "recall": 0.553072625698324,
+      "tp": 99
+    }
+  },
+  "true_luca_in_both_domains": 168,
+  "true_luca_reconcilable": 177,
+  "true_luca_size": 179
+}
