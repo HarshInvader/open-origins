@@ -87,3 +87,21 @@ Ranked by how much each one would tell us per unit of work, and by whether it be
 - **What's untested.** How much enantiomeric excess the copying step can tolerate. The abstracts give no numbers, so the full texts are needed first.
 - **Open data.** None yet.
 - **Current study.** Pathway map. Low cost.
+
+## Added 2026-11-21 (paper watch)
+
+### 9. Charge balance as its own step in the vent route (bears on #4)
+
+- **Source.** Altair, Hudson et al. 2026, Chem Commun, doi:10.1039/d6cc04072a (full text).
+- **The idea.** Electrons cross synthetic vent minerals about 10^4 to 10^6 times more easily than ions (e.g. FeS 1.5e-2 vs 4.97e-7 S/cm). Score "ions keep up with electrons across the wall" as a separate hand-off in the vent step table.
+- **What's untested.** Whether any published vent CO2-reduction experiment ran long enough, with a real gradient, for ionic transport to limit it.
+- **Open data.** The paper's conductivities; published vent-reactor yields for comparison.
+- **Current study.** Step table B3 / #4. Low cost.
+
+### 10. Nucleotide condensates as a compartment and a hydrolysis escape (bears on B3, #4/#5)
+
+- **Source.** Hauf, Dindo et al. 2026, bioRxiv, doi:10.64898/2026.11.18.767475 (abstract only; preprint).
+- **The idea.** Polymer-free nucleotide condensates reportedly keep RNA intact for days in acid and push a hammerhead ribozyme toward religation. Add them as a scored option for the compartment step and for the RNA-hydrolysis hand-off in the pond route.
+- **What's untested.** Whether the nucleotide, divalent-cation and diol concentrations they need fit our supply rows. The full text is needed first (bioRxiv blocked our client).
+- **Open data.** None yet.
+- **Current study.** Pathway map. Score as "preprint, one lab" until replicated.

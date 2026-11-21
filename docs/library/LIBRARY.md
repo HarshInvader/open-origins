@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-19. 150 papers: 95 read in full, 55 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-21. 152 papers: 96 read in full, 56 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -10,12 +10,13 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 - [Building blocks](#building-blocks) (17)
 - [From space](#from-space) (12)
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (37)
-- [RNA world](#rna-world) (37)
+- [RNA world](#rna-world) (38)
 - [Telling life apart](#telling-life-apart) (20)
-- [Vents and first cells](#vents-and-first-cells) (27)
+- [Vents and first cells](#vents-and-first-cells) (28)
 
 ## Papers that bear on a current study's plan
 
+- **altair-2026-vent-mineral-conductivity** (#4): Adds a separate charge-balance step to the vent route table (#4); not a change to the scoring rule.
 - **baidya-2026-mafic-rocks-phosphite** (#4, #5, #20, #21): The pathway map's phosphorus supply step for the pond and vent routes can now be scored with measured rock phosphite shares and modeled concentrations (up to 67 µM in a UV-shielded lake) instead of meteoritic phosphide only. This is a step-table update, not a change to the scoring rule.
 - **anslow-2026-comets-unlikely-hcn** (#5, #17, #20): If any of our pathway step tables credits comets as an HCN source for the pond or cyanosulfidic route, that source should be removed or marked as a rare early-Hadean event, since median successful deliveries onto land are zero.
 - **huang-2026-laca-methanogen-reconciliation** (#32, #9, #10): Does not pre-empt #32: no simulation calibration of deep-node PPs is reported, and LACA content is a raw PP threshold count. The sealed v3 amendment varies rates per family (lognormal, sigma 0.5) but keeps them equal across lineages. Huang et al. show that lineage-specific loss (DPANN 0.40-0.45 vs 0.26-0.27 elsewhere) changes deep-node inference, so a sensitivity arm with clade-varying loss in the Zombi truth model is worth a new sealed amendment. Their LACA per-family PPs (Zenodo 18701544) are a second application target.
@@ -761,6 +762,17 @@ Gianni, Kwok, Wan, Goeij, Clifton, Colizzi, Attwater, Holliger (2026). *Science 
 - **Limits.** Plan's second-hand '0.02% over 72 days' is wrong: the abstract gives ~0.2% yield. Online 2026-02-12. Full text: Both strands made in separate, primer-extension reactions (not a closed self-replication cycle); the self (+) copy needed one defined hexamer besides triplets; conditions pH 9, -7 C frozen, ribozyme in 10-fold excess; yields 0.24% (-) and 0.17% (+).
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L2/L3; content.json; news.json.
 
+### Unexpected properties of nucleotide condensates could facilitate the RNA world
+
+Hauf S, Baidya L, Nakamura R, Fine JL, Guyen HT, Moses A, Dindo M (2026). *bioRxiv (19 Nov 2026)*. [doi:10.64898/2026.11.18.767475](https://doi.org/10.64898/2026.11.18.767475). `hauf-2026-nucleotide-condensates` · useful · abstract only · touches B3, #4, #5
+
+- **Question.** Can a compartment built from nucleotides themselves, with no polymer, protect RNA and reshape its chemistry in a way that helps the RNA world?
+- **Tried.** Liquid condensates of nucleotides (such as ATP) with divalent cations and a short alcohol or diol act as the first compartment, before membranes.
+- **Method and data.** Condensate formation from nucleotides, divalent cations and short-chain alcohols or diols in water; RNA and DNA uptake; RNA and a phosphate-ester model substrate under acid; hammerhead ribozyme at neutral pH; coarse-grained simulations; phospholipid organisation at the droplet surface.
+- **Key results.** (abstract only) Condensates form spontaneously without any polymer and concentrate RNA and DNA. RNA survives for days inside them under acidic conditions that rapidly hydrolyse it in bulk; a phosphate-ester model substrate shows the same, which the authors read as suppressed backbone cleavage. Simulations suggest magnesium-phosphate bridging and a strongly water-depleted interior. At neutral pH the hammerhead ribozyme shifts from cleavage toward religation. Droplets organise phospholipids at their surface.
+- **Limits.** Preprint, not peer reviewed. Abstract only: the full text returned a bot block (403), so no rates, concentrations or alcohol levels were seen. Needs millimolar-scale nucleotides plus an alcohol or diol; whether such conditions are plausible on early Earth is not shown in the abstract.
+- **Ideas for us.** In the step tables (B3), add a nucleotide-condensate option to the compartment step and to the RNA-hydrolysis hand-off of the pond route, scored as 'preprint, one lab' until replicated. Record what nucleotide and diol concentrations it needs once the full text is readable, and check them against the phosphate and nucleotide supply rows.
+
 ### Enhanced Fidelity and Sequence Generality of an RNA Polymerase Ribozyme
 
 Horning DP, Nasser S, Joyce GF (2026). *bioRxiv*. [doi:10.64898/2026.10.18.759947](https://doi.org/10.64898/2026.10.18.759947). `horning-2026-polymerase-fidelity` · useful · abstract only · in news · touches #2, #18, #12
@@ -1311,6 +1323,18 @@ Tutolo BM (2026). *Proceedings of the National Academy of Sciences*. [doi:10.107
 - **Limits.** (abstract only) Arguments and numbers behind each claim not read; vent proponents may dispute them.
 - **Ideas for us.** For #4/#5: audit the vent step table for any step that assumes (a) a strong pH gradient at hydrothermal temperature, (b) FeS mineral membranes or catalysts in Lost City-type vents, or (c) abiotic long-chain hydrocarbon or fatty-acid supply. Score a 'Tutolo variant' of the route with those steps failing and report how route odds change.
 - **Changes a current plan.** #4/#5: if the vent step table assumes FeS catalysts, a strong pH gradient at hydrothermal temperature, or vent-made fatty acids for membranes, add a scored variant where these fail; three of those assumptions are challenged here (abstract only).
+
+### Transport dynamics across prebiotic hydrothermal mineral barriers: comparison with contemporary proton motive pathways
+
+Altair T, Lindenfelser E, Galante D, Varela H, De Decker Y, Hudson R (2026). *Chemical Communications*. [doi:10.1039/d6cc04072a](https://doi.org/10.1039/d6cc04072a). `altair-2026-vent-mineral-conductivity` · useful · full text · in news · touches #4
+
+- **Question.** Do vent-type iron minerals conduct ions as well as electrons, so that charge can stay balanced while electrons cross a mineral wall to reduce CO2?
+- **Tried.** Electron transfer across vent walls may be fast, but each electron needs a matching ion; ionic conduction could be the bottleneck.
+- **Method and data.** FeS, Fe(Ni)S and green rust made by co-precipitation, centrifuged to pastes, hydrated with ocean-analogue fluid (0.108 cm3 between graphite electrodes). Two-electrode impedance spectroscopy at open circuit, 1 Hz-1 MHz, 10 mV, room temperature; equivalent-circuit fits (2-15% parameter error).
+- **Key results.** Electronic conductivity 1.5e-2, 1.2e-2 and 6.7e-3 S/cm; ionic 4.97e-7, 2.37e-8 and 8.12e-9 S/cm (FeS, Fe(Ni)S, green rust). Living membranes from the literature: about 5e-10 electronic and 1.27e-8 ionic.
+- **Limits.** No CO2 reduction measured, no pH gradient applied, pastes are not chimney walls, room temperature only. Short communication.
+- **Ideas for us.** In the vent route step table (#4), split charge balance across the wall from electron transfer and score it as its own step with these conductivities and caveats.
+- **Changes a current plan.** Adds a separate charge-balance step to the vent route table (#4); not a change to the scoring rule.
 
 ### Growth of fatty acid vesicles coupled with amino acid sequences of peptides toward evolvable protocells
 
