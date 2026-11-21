@@ -33,7 +33,10 @@ step() {  # step <name> <cmd...>
   [ -f "$OUT/$name.done" ] && { say "skip $name"; return 0; }
   mem_wait; say "start $name"; echo "+ $*" >> "$LOG"
   local t0=$SECONDS
-  if "$@" >> "$LOG" 2>&1; then
+  "$@" >> "$LOG" 2>&1; local rc=$?
+  # v5b/DEVIATIONS 11: run_ale exits 3 when ALEobserve overflows on very large families; those get PP 0 and stay in the true count
+  if [ $rc -eq 0 ] || { [ $rc -eq 3 ] && [[ "$name" == *_ale_true ]]; }; then
+    [ $rc -eq 3 ] && say "$name: some families failed in ALE (scored PP 0)"
     printf "%s\t%d\t%s\n" "$name" $((SECONDS - t0)) "$(date '+%F %T')" >> "$TIMES"
     echo "$((SECONDS - t0))s" > "$OUT/$name.done"; say "done $name in $((SECONDS - t0))s"
   else

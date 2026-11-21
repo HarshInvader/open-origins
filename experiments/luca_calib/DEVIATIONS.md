@@ -46,3 +46,6 @@ Written before the pilot, as v3 and v4 require. None of these changes a predicti
     - v5's fallback T* (loss 1, transfer/loss 0.2) is used now, on timing alone.
     - K2 and K3 use 200 root families. Their origination rate is fitted once on a small tree.
     - The seqscale step is skipped. Details are in `docs/prereg/luca_calibration_v5a.md`.
+
+## 11. ALE overflow on very large families (2026-11-21, before any K2 score was read)
+In K2 cell n20_t0.4, ALEobserve crashed on 2 of 386 families (166 and 527 gene copies): Boost `double_factorial` / `tgamma` overflow, a known size limit of ALE. `run_ale.py` (sealed) already writes PP 0 for such families and exits 3. The K2 runner now accepts exit 3 for ALE steps. Those families keep PP 0 and stay in the true count, which can only lower R. The number of failed families per cell is reported. Decided from the error log only; no score, PP or root-family identity was looked at.
