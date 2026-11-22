@@ -592,7 +592,26 @@ def vent_wall(seed):
 
 
 
+def stalled_copies(seed):
+    """Three copies grow along templates; the two with an early rust mistake stall short, the clean one finishes."""
+    im, d, rng = base(seed, water=0.1, rock=0.82)
+    for k, (err, length) in enumerate(((None, 12), (3, 5), (2, 4))):
+        y = 230 + k * 190
+        d.line([(360, y), (1440, y)], fill=INK, width=8)  # template
+        for i in range(12):
+            d.line([(400 + i * 88, y), (400 + i * 88, y + 40)], fill=MUTED, width=3)
+        pts = [(400 + i * 88, y + 62) for i in range(length)]
+        for a, b in zip(pts, pts[1:]):
+            d.line([a, b], fill=INK, width=5)
+        for i, (x, yy) in enumerate(pts):
+            bad = err is not None and i >= err
+            circ(d, x, yy, 17, fill=RUST if bad else SURF, outline=INK, width=4)
+    accent(d, [(1490, 250), (1520, 292), (1490, 334)])  # mark the one finished copy
+    return im
+
+
 DRAW = {
+    "early-mistakes-stall-rna-copies": stalled_copies,
     "vent-walls-pass-electrons-not-ions": vent_wall,
     "assembly-theory-collapses-to-dictionary-compression": assembly,
     "de-novo-protocell-membranes-without-a-template": protocell,
