@@ -26,3 +26,5 @@ d81f40745628633fe3281cddec4c78c88246928509853ced9cc6e4bd4542b458  experiments/lu
 aae2f45723e9fbe88a99caf61d54bc9a54b98e0cadcee745ea120488e27be58b  experiments/luca_calib/k3/setup_remote.sh  orig-paper  2026-11-22T15:31:21Z  task#32 K3 AWS scripts (v5c)
 a1ad10dbcf91ba924da03761ecb540617656c04d02d83c011d8f3178f813fe5c  experiments/luca_calib/k3/run_k3.sh  orig-paper  2026-11-22T15:31:21Z  task#32 K3 AWS scripts (v5c)
 d77423d34b8ce66f2b930b1e57ded868f5fe9007c2a3158f00842040ad87fd3f  experiments/luca_calib/k3/k3_score.py  orig-paper  2026-11-22T15:31:21Z  task#32 K3 AWS scripts (v5c)
+4622306ba5ea42f175a41695647afccf23ec624cd34e4d74db454f73cb52f573  experiments/luca_calib/k3/run_k3.sh  orig-paper  2026-11-22T15:50:41Z  task#32 K3 script fix (DEVIATIONS 12-13)
+1d54c599a0b18cfc575736d8c070e307a5ac8a4a833207b83f5a9b43e116b32c  experiments/luca_calib/k3/setup_remote.sh  orig-paper  2026-11-22T15:50:41Z  task#32 K3 script fix (DEVIATIONS 12-13)

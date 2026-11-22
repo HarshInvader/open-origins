@@ -49,3 +49,11 @@ Written before the pilot, as v3 and v4 require. None of these changes a predicti
 
 ## 11. ALE overflow on very large families (2026-11-21, before any K2 score was read)
 In K2 cell n20_t0.4, ALEobserve crashed on 2 of 386 families (166 and 527 gene copies): Boost `double_factorial` / `tgamma` overflow, a known size limit of ALE. `run_ale.py` (sealed) already writes PP 0 for such families and exits 3. The K2 runner now accepts exit 3 for ALE steps. Those families keep PP 0 and stay in the true count, which can only lower R. The number of failed families per cell is reported. Decided from the error log only; no score, PP or root-family identity was looked at.
+
+## 12. ALE large-family crashes are specific to the laptop build (2026-11-22, before any K3 score)
+The Linux x86-64 build on AWS (g++ 13.3, Boost 1.83; BUILD_INFO_aws.txt) was checked against the laptop build on K2's n40_t0.4 true trees. Flat root PPs agree to 3e-18 on all 528 families both completed. The 15 families that crashed ALEobserve on the laptop (macOS arm64, where `long double` is 64-bit, so Boost `tgamma` overflows sooner) run fine on Linux, where `long double` is 80-bit. So DEVIATIONS 11's crashes come from the laptop platform, not from ALE as Moody et al. would have run it. K3 therefore re-runs the true-tree arm on Linux for every cell. The laptop K2 results are kept as `ale_true_laptop`. The K2 verdict (R = 0.751) is superseded by the Linux true-tree R for the same simulation, which will be reported alongside it.
+
+## 13. K3 setup fixes (2026-11-22, before any K3 score)
+- `setup_remote.sh` stopped at the IQ-TREE symlink step (pipefail on `ls`). It now continues, and it installs Zombi's `networkx` and `pyvolve` and the `biopython` versions the laptop uses.
+- `run_k3.sh`: seed lanes failed at start (unbound variable), so lanes can now be started separately (`LANES`). Seeds 2 and 3 started about 3 minutes after seed 1 and n40.
+- `verify.sh` cannot check prereg hashes on the machine (docs/ not copied). The pipeline manifest was checked there with `sha256sum -c`: all files OK.

@@ -11,17 +11,22 @@ step() { local lane=$1 name=$2; shift 2; [ -f "$R/$name.done" ] && return 0
     echo "[$(date '+%F %T')] done $name $((SECONDS-t0))s rc$rc" >> "$R/$lane.log"
   else echo "[$(date '+%F %T')] FAILED $name rc$rc" >> "$R/$lane.log"; return 1; fi; }
 inferred() { local lane=$1 tag=$2 d=$3 w=$4
+  # v5c / DEVIATIONS 12: re-run the true-tree arm on Linux (the laptop's arm64 ALE crashed on large families)
+  if [ -d $d/ale_true ] && [ ! -f $d/ale_true/.linux ] && [ ! -d $d/ale_true_laptop ]; then mv $d/ale_true $d/ale_true_laptop; fi
+  [ -f $d/ale_true/.linux ] || { step $lane ${tag}_ale_true $PY $P/run_ale.py $d --trees true --workers $w --no-nice && touch $d/ale_true/.linux; } &&
+  step $lane ${tag}_score_true $PY $P/score.py $d --run ale_true --out-dir $R/$tag/score --quiet &&
   step $lane ${tag}_infer $PY $P/infer_trees.py $d --workers $w &&
   step $lane ${tag}_ale_inf $PY $P/run_ale.py $d --trees inferred --workers $w --no-nice &&
   step $lane ${tag}_score_inf $PY $P/score.py $d --run ale_inferred --out-dir $R/$tag/score --quiet; }
-seed() { local s=$1 w=$2 d=$R/s$s/sim
+seed() { local s=$1 w=$2; local d=$R/s$s/sim
   step s$s s${s}_simulate $PY $P/simulate.py $d $P/configs/v3_base.json --force --su-workers $w "${COMMON[@]}" --set seed=$s &&
-  step s$s s${s}_ale_true $PY $P/run_ale.py $d --trees true --workers $w --no-nice &&
-  step s$s s${s}_score_true $PY $P/score.py $d --run ale_true --out-dir $R/s$s/score --quiet &&
   inferred s$s s$s $d $w; }
 bash $P/local/verify.sh > "$R/verify.log" 2>&1; echo "verify rc $?" >> "$R/verify.log"
-inferred s1 s1 ~/luca_calib/results/k2/n80_t0.4/sim 12 &
-seed 2 8 &
-seed 3 8 &
-inferred n40 n40 ~/luca_calib/results/k2/n40_t0.4/sim 4 &
+LANES="${LANES:-s1 s2 s3 n40}"
+for l in $LANES; do case $l in
+  s1) inferred s1 s1 ~/luca_calib/results/k2/n80_t0.4/sim 12 & ;;
+  s2) seed 2 8 & ;;
+  s3) seed 3 8 & ;;
+  n40) inferred n40 n40 ~/luca_calib/results/k2/n40_t0.4/sim 4 & ;;
+esac; done
 wait; echo "[$(date '+%F %T')] K3 ALL DONE" >> "$R/main.log"
