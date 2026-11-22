@@ -23,3 +23,6 @@ b37a26d7351802db272be3a580e8b1275e35ddfb2fbc7f83c2b670fd0a7b9144  docs/prereg/lu
 8fbe486912e73c78a732347252b7c9e2192d5cb8d70ed8bcdcf876242011cc10  experiments/luca_calib/k2/run_k2.sh  orig-paper  2026-11-21T07:39:41Z  task#32 amendment v5b (origination fixed 40, tips 20-80, rule at 80 tips)
 d81f40745628633fe3281cddec4c78c88246928509853ced9cc6e4bd4542b458  experiments/luca_calib/k2/run_k2.sh  orig-paper  2026-11-21T08:25:57Z  task#32 K2 runner accepts ALE exit 3 (DEVIATIONS 11)
 8912c8bcdec98b23a3381cc84828233399bc5fac0a4c2ae66741db98b5d35e22  docs/prereg/luca_calibration_v5c.md  orig-paper  2026-11-22T15:30:18Z  task#32 amendment v5c (K3 + replicates on AWS)
+aae2f45723e9fbe88a99caf61d54bc9a54b98e0cadcee745ea120488e27be58b  experiments/luca_calib/k3/setup_remote.sh  orig-paper  2026-11-22T15:31:21Z  task#32 K3 AWS scripts (v5c)
+a1ad10dbcf91ba924da03761ecb540617656c04d02d83c011d8f3178f813fe5c  experiments/luca_calib/k3/run_k3.sh  orig-paper  2026-11-22T15:31:21Z  task#32 K3 AWS scripts (v5c)
+d77423d34b8ce66f2b930b1e57ded868f5fe9007c2a3158f00842040ad87fd3f  experiments/luca_calib/k3/k3_score.py  orig-paper  2026-11-22T15:31:21Z  task#32 K3 AWS scripts (v5c)
