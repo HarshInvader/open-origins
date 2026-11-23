@@ -32,3 +32,4 @@ d77423d34b8ce66f2b930b1e57ded868f5fe9007c2a3158f00842040ad87fd3f  experiments/lu
 2bc3ff6fc159300535b10aec2d8dcd756e9643be7c8a9bde3c95f46a1aba9fe5  experiments/luca_calib/k4/run_k4.sh  orig-paper  2026-11-23T05:58:22Z  task#32 amendment v5d (K4 tip scaling + worst case, AWS)
 b6981b2e38de16d0dfad17e45377a63d3af86972fed43643a6834a14da46a7db  experiments/luca_calib/k3/setup_remote.sh  orig-paper  2026-11-23T06:03:15Z  task#32 K3 rerun fixes (DEVIATIONS 14)
 5d22638965104305d05e5abd7b5aeeedb7a340e231f8bdac803d938d54b973cd  experiments/luca_calib/k3/run_k3.sh  orig-paper  2026-11-23T06:03:15Z  task#32 K3 rerun fixes (DEVIATIONS 14)
+2bcc7cd082805fde7c6642c03e213bbc6bd8d88a500fbc1f470b9f5a19948218  docs/prereg/luca_calibration_v5e.md  orig-paper  2026-11-23T06:08:35Z  task#32 amendment v5e (K4 inconclusive zones + calibration measures; Fable review)
