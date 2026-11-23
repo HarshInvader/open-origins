@@ -64,3 +64,7 @@ f3370bc34fc65754f2680b183e31e934a07f7a3384538c1819ab3220f7c7a7a4  experiments/t1
 624d2d6a9c82733d8991fdab0f95624dce43b9d86e7b3a43560065ba5b6c4660  experiments/t1_vent_exergonic/data/wimmer2021_core_reactions.tsv  orig-paper  2026-11-23T23:13:34Z  T1 vent exergonicity specificity prereg seal
 ee5f8f45faf7e7453d05cfe92242f09c39cd127082bb1c2db510ac4605f6d89a  experiments/t1_vent_exergonic/requirements.lock.txt  orig-paper  2026-11-23T23:13:34Z  T1 vent exergonicity specificity prereg seal
 352fb65d9f316c6f1437d79e6c8d83bf543dd4ee60a23917f19eecbb8e35eb61  experiments/t1_vent_exergonic/scripts_out/t1_planted.json  orig-paper  2026-11-23T23:13:34Z  T1 vent exergonicity specificity prereg seal
+6c4888ba22bff4b1dcd8e9a2907ca73a316a86c7441a648366a31a75e7bb2e45  experiments/t1_vent_exergonic/scripts/t1_analysis.py  orig-paper  2026-11-23T23:19:43Z  T1 deviation T1-1 (D4 applied to gate), before gate rerun
+90f1ebfe13a252979c5c66124d08f1a18c92f1359734974321899deb47535519  experiments/t1_vent_exergonic/DEVIATIONS.md  orig-paper  2026-11-23T23:19:43Z  T1 deviation T1-1 (D4 applied to gate), before gate rerun
+f6510848d1faac39f5249c23f1296e88b10a4a9500782c29678a8fdbdd330199  experiments/t1_vent_exergonic/scripts/gate_diagnose.py  orig-paper  2026-11-23T23:19:43Z  T1 deviation T1-1 (D4 applied to gate), before gate rerun
+7677b95743867ea2b62cedf2eafca10e626cf0e25440a3094a43456765cf45ef  experiments/t1_vent_exergonic/scripts/zero_check.py  orig-paper  2026-11-23T23:19:43Z  T1 deviation T1-1 (D4 applied to gate), before gate rerun

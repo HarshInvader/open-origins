@@ -1,0 +1,76 @@
+{
+ "n_bad": 37,
+ "bad_ids": [
+  "R00177",
+  "R01071",
+  "R01230",
+  "R01231",
+  "R03098",
+  "R03165",
+  "R03194",
+  "R03459",
+  "R03472",
+  "R03947",
+  "R04035",
+  "R04037",
+  "R04208",
+  "R04463",
+  "R04558",
+  "R05221",
+  "R05222",
+  "R05223",
+  "R05225",
+  "R05808",
+  "R05809",
+  "R05810",
+  "R05812",
+  "R05814",
+  "R05815",
+  "R06558",
+  "R07302",
+  "R07476",
+  "R07772",
+  "R07773",
+  "R07774",
+  "R07775",
+  "R09398",
+  "R09726",
+  "R09977",
+  "R10935",
+  "R12026"
+ ],
+ "per_sheet": {
+  "Summary": {},
+  "A": {
+   "bad|some_zero": 37,
+   "good|all_zero": 1,
+   "good|no_zero": 229,
+   "good|some_zero": 84
+  },
+  "B": {
+   "bad|some_zero": 37,
+   "good|no_zero": 266,
+   "good|some_zero": 48
+  },
+  "C": {
+   "bad|some_zero": 37,
+   "good|no_zero": 277,
+   "good|some_zero": 37
+  },
+  "D": {
+   "bad|some_zero": 37,
+   "good|no_zero": 283,
+   "good|some_zero": 31
+  },
+  "E": {
+   "bad|some_zero": 37,
+   "good|no_zero": 296,
+   "good|some_zero": 18
+  },
+  "F": {
+   "bad|some_zero": 37,
+   "good|no_zero": 239,
+   "good|some_zero": 75
+  }
+ }
+}

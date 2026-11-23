@@ -515,11 +515,12 @@ def gate():
         seen = collections.Counter()
         ours_all, pairs, theirs_all = {}, [], []
         for j, i in enumerate(ok):
-            ours_all[i] = dg(mu[ci_][j], meta[i][2], meta[i][3], t, cr, cp)
+            if sig[j] < CFG['sigma_max_kJ']:  # DEVIATION T1-1: D4 computability applied to the gate too
+                ours_all[i] = dg(mu[ci_][j], meta[i][2], meta[i][3], t, cr, cp)
         for i, r in enumerate(core):
             k = seen[r['reaction_id']]; seen[r['reaction_id']] += 1
             tv = theirs.get(r['reaction_id'], [None] * (k + 1))[k]
-            if tv is not None:
+            if tv is not None and i in ours_all:  # DEVIATION T1-1: compare on D4-computable reactions only
                 theirs_all.append(tv)
                 if i in ours_all:
                     pairs.append((ours_all[i], tv))
@@ -548,7 +549,7 @@ def gate():
             for i, r in enumerate(core):
                 k = seen[r['reaction_id']]; seen[r['reaction_id']] += 1
                 tv = theirs.get(r['reaction_id'], [None] * (k + 1))[k]
-                if tv is not None and i in pos:
+                if tv is not None and i in pos and sig[pos[i]] < CFG['sigma_max_kJ']:  # DEVIATION T1-1
                     pairs.append((dg(m2[0][pos[i]], meta[i][2], meta[i][3], t, CFG['c_equal_M'], CFG['c_equal_M']), tv))
             a = np.array(pairs)
             diag[variant] = {'pearson_r': float(np.corrcoef(a[:, 0], a[:, 1])[0, 1]),

@@ -1,0 +1,52 @@
+{
+ "versions": {
+  "equilibrator-api": "0.8.1",
+  "equilibrator-cache": "0.8.1",
+  "equilibrator-cache-data": "0.1.0",
+  "component-contribution": "0.8.0"
+ },
+ "cfg": {
+  "transform_temperature": "by_gate",
+  "gas_rule": "aqueous",
+  "compound_tier": "bundled"
+ },
+ "n_parsed_balanced": 351,
+ "n_sigma_ok": 314,
+ "cells": [
+  {
+   "sheet": "A",
+   "pH": 7,
+   "T_C": 25,
+   "n_theirs": 351,
+   "n_ours": 351,
+   "n_both": 351,
+   "pearson_r": 0.11738836007878575,
+   "share_ours_intersection": 72.93447293447294,
+   "share_theirs_intersection": 77.49287749287748,
+   "share_ours_all": 72.93447293447294,
+   "share_theirs_all": 77.49287749287748,
+   "max_abs_diff_kJ": 4126.087373830485,
+   "pass": false
+  }
+ ],
+ "d2_diagnostic": {
+  "cell": [
+   "A",
+   7,
+   80
+  ],
+  "T": {
+   "pearson_r": 0.12025517132830191,
+   "mean_abs_diff_kJ": 71.28880113245019,
+   "n": 351
+  },
+  "298.15": {
+   "pearson_r": 0.11737246419062548,
+   "mean_abs_diff_kJ": 75.51896345239419,
+   "n": 351
+  },
+  "chosen": "T"
+ },
+ "pass": false,
+ "script_sha256": "07ea92d20c5851aafd3f1819609409795dfe1ad36a889947e7ac575cda70518d"
+}

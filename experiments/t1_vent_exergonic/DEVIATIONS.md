@@ -1,0 +1,9 @@
+# T1 deviations from the sealed prereg (docs/prereg/t1_vent_exergonic.md, sealed in ff2efbe)
+
+## T1-1 (2026-11-23): the gate ignored the D4 computability rule
+- **What happened.** The sealed `gate()` compared our ΔG with Wimmer's Table 3 on all 351 reactions. The prereg defines computable as "parsed, balanced, and σ(ΔG′°) < 100 kJ/mol" (D4), and every share in the arms uses that rule; the gate code did not. The gate failed with Pearson r = 0.117 (`scripts_out/t1_gate_original_noD4.json`).
+- **Diagnosis** (`scripts/gate_diagnose.py`, `scripts/zero_check.py`; both read only the gate target, Table 3, and compute no arm statistic):
+  - **Which reactions.** 37 reactions have σ ≥ 100 kJ/mol (eQuilibrator cannot estimate them). For all 37, Wimmer's Table 3 lists "Uncertainty" 100,000–400,000 and ΔG = 0 at every pH and temperature in every sheet. These are placeholders, and our point estimates for them are meaningless (up to 4,126 kJ/mol).
+  - **The other 314.** On the remaining reactions our ΔG matches theirs with Pearson r = 0.99999 (median |difference| 0.04 kJ/mol), and the exergonic shares are identical (74.84% and 74.84%).
+- **Change.** In `gate()`, both the pass test and the D2 diagnostic now use D4-computable reactions only. These are the three lines marked `DEVIATION T1-1`. Nothing else changed: the thresholds, the arms and the real-mode code are untouched. The new script hash is recorded in HASHES.txt.
+- **Post-hoc finding, not part of any arm.** Wimmer et al. define exergonic as ΔG ≤ 0, so their 37 placeholder zeros are counted as exergonic. At pH 7, 25 °C and 1 mM, this turns 235 of 314 computable reactions (74.8%) into 272 of 351 (77.5%), which is their reported "77%". Their 95–97% headline under the gradient is affected in the same direction but by less; we have not recomputed it.
