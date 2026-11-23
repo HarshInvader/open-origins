@@ -164,3 +164,4 @@ Owner asked for the draft `docs/paper/luca_root_weight_preprint.md` to be made r
   - the regime mismatch is added to the abstract and the limits.
 - **Left open:** a regime-matched simulation, in which the flat prior recovers about 3% of the true root. Until that exists, K2-K4 are self-consistency checks in an easier regime and do not validate 2,600.
 - **Next:** one outside expert read by email (owner's step 2). Posting stays with the owner.
+- **Expert read requested (2026-11-23).** One email went to Gergely Szöllősi (OIST), using the address on an official OIST page. It asked whether the decomposition is correct, and whether there is a reason to trust the maximum-likelihood root weight that we missed. The draft is kept privately. No follow-up before 3 Dec.
