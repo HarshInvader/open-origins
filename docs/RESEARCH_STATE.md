@@ -268,3 +268,19 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
      - the K5 realism bound;
      - a red-team of the RAF and assembly-index results;
      - the purine:pyrimidine vs ammonia prediction.
+
+### 2026-11-23: T2 result (asteroid amino acids vs genetic-code order)
+- **Status.** Prereg sealed in f963a82. The power declaration (7cc5256) came before the real run, and the result is in 60486b9. Details: `experiments/t2_code_order/T2_RESULTS.md`.
+- **Sealed verdict: cannot decide by design.** Ryugu A0106 reports only 9 of the 20 protein amino acids, so neither verdict reaches the 50% planted-power bar there.
+- **The data.** Both returned samples meet the kill thresholds: partial τ (abundance vs Wehbi LUCA usage, controlling for molecular weight) is −0.02 for Bennu and −0.16 for Ryugu, with upper bounds 0.27 and 0.26.
+  - A kill happens by chance in ≤ 5% of runs at a planted strength of 0.4 or more. So a moderate or strong availability effect beyond size is disfavoured. A weak one is not excluded.
+  - Murchison (exploratory, and contamination-prone) gives raw τ = 0.46, which falls to a partial τ of 0.25 (p = 0.17) once molecular weight is controlled.
+- **What would decide it:** more reported Ryugu amino acids (C0107, Parker 2023; the publisher blocks automated access), or Bennu analyses with lower detection limits.
+- **Library.** Wehbi 2024, Glavin 2025, Higgs & Pudritz 2009 (arXiv) and Naraoka 2023 (HAL) were read and still need adding to library.json and the site.
+
+### 2026-11-23: T1 design fixes from the planted control
+- **Specificity ceiling.** At the vent cell with the gradient, the null is about 87% exergonic, so the core–null gap saturates at about 12 points even at a −60 kJ/mol shift. It could never reach the plan's 15. The decision moves to equal concentrations.
+- **Setting window.** The window criterion is non-discriminating: the peak falls in the vent window in 86% of draws under the null, because with Q < 1, hotter is always more exergonic. The decision now uses the contrast only.
+- **Direction arm.** It works as intended: kill when the gradient alone makes the share, support at −60.
+- **Next.** An agent is applying these changes and fixing decisions D1–D15. I seal once its planted rerun is in.
+- **K6.** 90 of 800 families are done. Laptop load is about 15, so a 30-family batch takes about an hour, and chunks run one batch at a time.
