@@ -167,7 +167,7 @@ def simulate_family(S, rng, rates, lin0, t0, x_stem=0.0):
             if kind == "D":
                 rec = c.lin
             elif kind == "T":
-                cand = [n for n in alive if n != c.lin]
+                cand = sorted(n for n in alive if n != c.lin)  # sorted: set order varies per process
                 if not cand:
                     continue
                 rec = cand[int(rng.integers(len(cand)))]
