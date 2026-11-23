@@ -90,6 +90,16 @@ The first c7a.8xlarge spot machine was gone about 9.5 h into its 24 h booking (s
 - AWS reclaimed origins-k3b (spot, "no capacity") at 08:50 UTC, 3 h before its booked end.
   - The last pull (about 07:55) had the true-tree arms of seeds 2-3 and K4 n160 (scored). It did not have the seed 2-3 inferred-tree output, which was then in its last few IQ-TREE runs.
   - K4 n320 was still simulating and is lost.
-- Seeds 2-3 are re-run from scratch on origins-k3c (c7a.8xlarge, 5 h, $5.12 booked; $45.42 of $50 for the month). The scripts are unchanged and the seeds are the same, so the simulations are the same. This time results are pulled every 10 minutes.
+- Seeds 2-3 are re-run from scratch on origins-k3c (c7a.8xlarge, 5 h, $5.12 booked; $45.42 of $50 for the month). The scripts and seeds are unchanged. This time results are pulled every 10 minutes.
 - K4: under v5d, the scaling rule is applied at n160, labelled as such; n320 is reported as not run.
 - K4 n160: ALE failed on 1 of 1,411 families (family 46, a root family with 1,853 genes). Under the v5e completion clause the cell is inconclusive. R is reported with the failed family counted both ways (1.100 / 1.105).
+- **Third machine lost:** origins-k3c was reclaimed at 09:20 UTC after about 30 minutes, during simulation. One last attempt runs on a different instance family (origins-k3d, c6a.8xlarge, 5 h, $3.55 booked; month $48.97 of $50), with the same scripts and seeds. The ALE build is compiled fresh on that machine (Linux x86-64, as DEVIATIONS 12 requires).
+- **Correction (11:30 UTC):** resimulating with the same seed does *not* reproduce the earlier world. On origins-k3d, seed 2 has 980 sampled families (548 for IQ-TREE) against 971 (545) before, and seed 3 has 928 (530) against 893 (496). Simulation is not bit-reproducible across machines. The earlier statement in DEVIATIONS 14 and 17 that the rerun gives "the same simulations" was wrong. Consequences:
+  - Seeds 2 and 3 are scored as new pairs: the true and inferred arms from the same origins-k3d simulation. R*_inf, Q and the v5c decision use only these pairs.
+  - The earlier true-tree values for seeds 2-3 (R 1.058, 0.995, from origins-k3b) come from different realizations. They are reported separately as extra true-tree replicates.
+  - K5 used origins-k3b's seed 3 world, consistently in all its arms, so K5 is unaffected.
+  - Seed 1's earlier re-run reproduced R exactly because it reused the same simulation directory and re-ran only ALE.
+- **Seed 2 resumed with more workers (11:28 UTC):** seed 2's IQ-TREE step was projected to end just after the machine's automatic shutdown. Its run (16 workers) was stopped and resumed with `k3/infer_trees_resume.py`, using 28 workers.
+  - The resume script is `pipeline/infer_trees.py` with two changes: it keeps the output directory, and it skips families whose IQ-TREE run had already completed (`.iqtree` report present, `.ufboot` passing the leaf check).
+  - Each family gets the identical IQ-TREE command (`-T 1`, the same `-seed`), so its trees do not depend on the worker count.
+  - 159 families had completed; the in-flight ones were killed and re-run from the start.

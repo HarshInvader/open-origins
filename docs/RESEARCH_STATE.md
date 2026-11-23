@@ -126,3 +126,12 @@ Checked by a subagent; every source was opened. Davín 2018, Berkemer & McGlynn 
 - **Our contrast:** the preprint *assumes* deep-node reconciliation false-negative rates of 0.5-0.9. In K3's known-truth simulations, missed root mass is 0.07-0.13 of the true count, on both true and inferred trees.
   - Our setting is idealized (correct model, 40-80 genomes per domain), so this is a contrast in one regime, not a refutation.
 - **Decision:** we may say that no known-truth calibration test of root-presence posteriors was found among the papers checked. No broader novelty claim.
+
+### 2026-11-23: K3 after three spot reclaims (Fable)
+- **Situation:** AWS reclaimed the c7a.8xlarge spot machine three times (at 9.5 h, at 3 h, and at 30 min), each time before the seed 2-3 inferred arms finished. $4.58 of booked headroom was left under the $50 cap.
+- **Advice:** do not spend the last of the cap on a fourth spot attempt today. Report "verdict not reached", then finish on on-demand when the cap resets on 1 Dec. One more attempt is defensible only under a deadline, in a different pool.
+  - **Wording if it fails:** "K3 verdict not reached. The sealed rule requires the mean R*_inf over seeds 1-3; only seed 1 completed (1.044). Seeds 2-3 inferred arms were lost to spot reclaims, unrelated to results. Seed 1 and n40 (1.036) are descriptive only."
+  - Never put three-seed true-tree numbers beside a one-seed inferred number. Seeds 2-3 averaging above 1.353 or below 0.678 would still flip the verdict.
+- **Decision:** one last attempt, on a different instance family (c6a.8xlarge, us-east-1d, 5 h, $3.55 booked; month $48.97 of $50).
+  - Reason: the owner asked for a paper today and the coordinator asked for K3 to be closed tonight, which is the deadline case.
+  - If this attempt is also reclaimed: stop, use Fable's wording, and finish in December.
