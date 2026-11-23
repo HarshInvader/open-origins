@@ -1,0 +1,141 @@
+# Source: Glavin et al. 2025 Nat. Astron. 9:199-210, doi:10.1038/s41550-024-02472-9, Extended Data Table 3,
+#   transcribed by hand from the full-resolution image (static-content.springer.com, CC BY article).
+#   Only the protein amino acid rows are kept (Gly, Ala, Ser, Asp, Thr, Glu, Val, Leu, Ile; OPA/NAC cannot
+#   label secondary amines so Pro is absent; the other protein amino acids are not in this table).
+# Title (verbatim): "Free and total amino acid abundances, as measured by LC-FD/ToF-MS and LC-FD/HRMS, in the
+#   hot-water extract of Bennu (OREX-803001-0), compared with selected CCs and Ryugu (A0106)"
+# Methods (verbatim): "40% of the water extract desalted by cation exchange chromatography followed by
+#   o-phthaldialdehyde/N-acetyl-l-cysteine (OPA/NAC) derivatization and analysis using both LC-FD/ToF-MS and
+#   [LC-FD/HRMS] to determine the free amino acid abundances in the extract. The other 40% was dried, acid-hydrolysed
+#   under 6 M HCl vapour at 150 °C for 3 h and then desalted to determine the average total (free + bound) amino
+#   acid abundances using both LC-FD/ToF-MS and LC-FD/HRMS."
+# Footnote a (verbatim, abridged): "The reported uncertainties in the individual amino acid concentrations in
+#   OREX-803001-0 and Murchison are based on the averages of three or six individual measurements (n) from both
+#   instruments with a standard error, δx = σx·(n)^-1/2." Ryugu A0106 was extracted at 105 °C for 20 h.
+# Abbreviations (verbatim): "tr. = trace, amino acid tentatively identified above background but was below the
+#   limit of quantitation; n.r. = not reported; n.d. = not determined".
+# Printed sums of C2-C6 amino acids (all, incl. non-protein): Bennu free 45 ± 1, total 70 ± 2; Murchison free
+#   101 ± 2, total 253 ± 7; Tarda 37 ± 1; Orgueil 71 ± 10; Ryugu 15 ± 3.
+# Each enantiomer is a separate row; D+L sums are not formed here (a prereg decision).
+# sha256 raw/glavin_springer_tables/41550_2024_2472_Tab3_ESM.jpg = 3aae8ea223753e6232d83d65caa9d483d5867a972cebf8e376e1dfa3d5a279eb
+# sha256 raw/glavin_pmc_html/article.html = 0691df415175b3ce7011f38e73c50075c4f255088e6bccb04242f629486cd966
+aa1	aa3	enantiomer	sample	fraction	cell_as_printed	value	error_se	units	detection_limit	status	n	note	source_table
+G	Gly	achiral	Bennu_OREX-803001-0	free	33 ± 1	33	1	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+G	Gly	achiral	Bennu_OREX-803001-0	total	44 ± 1	44	1	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+G	Gly	achiral	Murchison_CM2	free	28 ± 1	28	1	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+G	Gly	achiral	Murchison_CM2	total	80 ± 2	80	2	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+G	Gly	achiral	Tarda_C2ung	total	11.2 ± 0.5	11.2	0.5	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+G	Gly	achiral	Orgueil_CI1	total	11.5 ± 6.0	11.5	6.0	nmol g-1		quantified		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+G	Gly	achiral	Ryugu_A0106	total	0.46 ± 0.05	0.46	0.05	nmol g-1		quantified		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+A	Ala	D	Bennu_OREX-803001-0	free	2.8 ± 0.4	2.8	0.4	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+A	Ala	D	Bennu_OREX-803001-0	total	4.0 ± 0.6	4.0	0.6	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+A	Ala	D	Murchison_CM2	free	4.5 ± 0.6	4.5	0.6	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+A	Ala	D	Murchison_CM2	total	8.5 ± 1.2	8.5	1.2	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+A	Ala	D	Tarda_C2ung	total	0.93 ± 0.04	0.93	0.04	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+A	Ala	D	Orgueil_CI1	total	0.90 ± 0.19	0.90	0.19	nmol g-1		quantified		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+A	Ala	D	Ryugu_A0106	total	0.025 ± 0.006	0.025	0.006	nmol g-1		quantified		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+A	Ala	L	Bennu_OREX-803001-0	free	2.6 ± 0.4	2.6	0.4	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+A	Ala	L	Bennu_OREX-803001-0	total	3.9 ± 0.6	3.9	0.6	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+A	Ala	L	Murchison_CM2	free	4.2 ± 0.6	4.2	0.6	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+A	Ala	L	Murchison_CM2	total	11.5 ± 1.5	11.5	1.5	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+A	Ala	L	Tarda_C2ung	total	1.62 ± 0.06	1.62	0.06	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+A	Ala	L	Orgueil_CI1	total	1.1 ± 0.3	1.1	0.3	nmol g-1		quantified		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+A	Ala	L	Ryugu_A0106	total	<0.44			nmol g-1	0.44	below_detection_limit		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+S	Ser	D	Bennu_OREX-803001-0	free	0.21 ± 0.09	0.21	0.09	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+S	Ser	D	Bennu_OREX-803001-0	total	0.18 ± 0.03	0.18	0.03	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+S	Ser	D	Murchison_CM2	free	0.38 ± 0.07	0.38	0.07	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+S	Ser	D	Murchison_CM2	total	0.54 ± 0.08	0.54	0.08	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+S	Ser	D	Tarda_C2ung	total	0.21 ± 0.01	0.21	0.01	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+S	Ser	D	Orgueil_CI1	total	<0.01			nmol g-1	0.01	below_detection_limit		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+S	Ser	D	Ryugu_A0106	total	0.06 ± 0.01	0.06	0.01	nmol g-1		quantified		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+S	Ser	L	Bennu_OREX-803001-0	free	0.24 ± 0.01	0.24	0.01	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+S	Ser	L	Bennu_OREX-803001-0	total	≤0.7	0.7		nmol g-1		upper_limit_not_blank_corrected	6	footnote d: "Non-blank corrected value given as an upper limit for the concentration in the sample extract due to peak areas near background levels and ambiguity associated with the procedural blank contribution to the sample peak. Values included in the sum."	Glavin 2025 Extended Data Table 3
+S	Ser	L	Murchison_CM2	free	0.4 ± 0.1	0.4	0.1	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+S	Ser	L	Murchison_CM2	total	3.6 ± 0.6	3.6	0.6	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+S	Ser	L	Tarda_C2ung	total	0.78 ± 0.03	0.78	0.03	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+S	Ser	L	Orgueil_CI1	total	<0.01			nmol g-1	0.01	below_detection_limit		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+S	Ser	L	Ryugu_A0106	total	0.18 ± 0.03	0.18	0.03	nmol g-1		quantified		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+D	Asp	D	Bennu_OREX-803001-0	free	0.94 ± 0.12	0.94	0.12	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+D	Asp	D	Bennu_OREX-803001-0	total	1.35 ± 0.14	1.35	0.14	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+D	Asp	D	Murchison_CM2	free	0.69 ± 0.11	0.69	0.11	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+D	Asp	D	Murchison_CM2	total	2.4 ± 0.3	2.4	0.3	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+D	Asp	D	Tarda_C2ung	total	0.42 ± 0.01	0.42	0.01	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+D	Asp	D	Orgueil_CI1	total	0.41 ± 0.23	0.41	0.23	nmol g-1		quantified		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+D	Asp	D	Ryugu_A0106	total	<0.06			nmol g-1	0.06	below_detection_limit		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+D	Asp	L	Bennu_OREX-803001-0	free	0.79 ± 0.16	0.79	0.16	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+D	Asp	L	Bennu_OREX-803001-0	total	1.22 ± 0.12	1.22	0.12	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+D	Asp	L	Murchison_CM2	free	0.73 ± 0.15	0.73	0.15	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+D	Asp	L	Murchison_CM2	total	5.1 ± 0.6	5.1	0.6	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+D	Asp	L	Tarda_C2ung	total	0.95 ± 0.03	0.95	0.03	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+D	Asp	L	Orgueil_CI1	total	0.41 ± 0.21	0.41	0.21	nmol g-1		quantified		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+D	Asp	L	Ryugu_A0106	total	0.02 ± 0.01	0.02	0.01	nmol g-1		quantified		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+T	Thr	D	Bennu_OREX-803001-0	free	<1			nmol g-1	1	below_detection_limit	6		Glavin 2025 Extended Data Table 3
+T	Thr	D	Bennu_OREX-803001-0	total	<0.2			nmol g-1	0.2	below_detection_limit	6		Glavin 2025 Extended Data Table 3
+T	Thr	D	Murchison_CM2	free	<0.2			nmol g-1	0.2	below_detection_limit	6		Glavin 2025 Extended Data Table 3
+T	Thr	D	Murchison_CM2	total	1.2 ± 0.4	1.2	0.4	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+T	Thr	D	Tarda_C2ung	total	n.d.			nmol g-1		not_determined			Glavin 2025 Extended Data Table 3
+T	Thr	D	Orgueil_CI1	total	n.r.			nmol g-1		not_reported		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+T	Thr	D	Ryugu_A0106	total	<0.02			nmol g-1	0.02	below_detection_limit		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+T	Thr	L	Bennu_OREX-803001-0	free	<1			nmol g-1	1	below_detection_limit	6		Glavin 2025 Extended Data Table 3
+T	Thr	L	Bennu_OREX-803001-0	total	<0.2			nmol g-1	0.2	below_detection_limit	6		Glavin 2025 Extended Data Table 3
+T	Thr	L	Murchison_CM2	free	<1			nmol g-1	1	below_detection_limit	6		Glavin 2025 Extended Data Table 3
+T	Thr	L	Murchison_CM2	total	13 ± 4	13	4	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+T	Thr	L	Tarda_C2ung	total	n.d.			nmol g-1		not_determined			Glavin 2025 Extended Data Table 3
+T	Thr	L	Orgueil_CI1	total	n.r.			nmol g-1		not_reported		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+T	Thr	L	Ryugu_A0106	total	<0.04			nmol g-1	0.04	below_detection_limit		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+E	Glu	D	Bennu_OREX-803001-0	free	0.08 ± 0.02	0.08	0.02	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+E	Glu	D	Bennu_OREX-803001-0	total	0.79 ± 0.06	0.79	0.06	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+E	Glu	D	Murchison_CM2	free	0.64 ± 0.07	0.64	0.07	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+E	Glu	D	Murchison_CM2	total	3.5 ± 0.3	3.5	0.3	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+E	Glu	D	Tarda_C2ung	total	0.79 ± 0.04	0.79	0.04	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+E	Glu	D	Orgueil_CI1	total	0.32 ± 0.11	0.32	0.11	nmol g-1		quantified		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+E	Glu	D	Ryugu_A0106	total	<0.03			nmol g-1	0.03	below_detection_limit		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+E	Glu	L	Bennu_OREX-803001-0	free	0.07 ± 0.01	0.07	0.01	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+E	Glu	L	Bennu_OREX-803001-0	total	≤0.8	0.8		nmol g-1		upper_limit_not_blank_corrected	6	footnote d: "Non-blank corrected value given as an upper limit for the concentration in the sample extract due to peak areas near background levels and ambiguity associated with the procedural blank contribution to the sample peak. Values included in the sum."	Glavin 2025 Extended Data Table 3
+E	Glu	L	Murchison_CM2	free	0.85 ± 0.11	0.85	0.11	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+E	Glu	L	Murchison_CM2	total	10.6 ± 1.1	10.6	1.1	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+E	Glu	L	Tarda_C2ung	total	7.04 ± 0.14	7.04	0.14	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+E	Glu	L	Orgueil_CI1	total	0.56 ± 0.15	0.56	0.15	nmol g-1		quantified		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+E	Glu	L	Ryugu_A0106	total	<0.03			nmol g-1	0.03	below_detection_limit		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+V	Val	D	Bennu_OREX-803001-0	free	0.08 ± 0.01	0.08	0.01	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+V	Val	D	Bennu_OREX-803001-0	total	0.16 ± 0.01	0.16	0.01	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+V	Val	D	Murchison_CM2	free	0.93 ± 0.09	0.93	0.09	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+V	Val	D	Murchison_CM2	total	1.64 ± 0.04	1.64	0.04	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+V	Val	D	Tarda_C2ung	total	0.05 ± 0.01	0.05	0.01	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+V	Val	D	Orgueil_CI1	total	0.19 ± 0.05	0.19	0.05	nmol g-1		quantified		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+V	Val	D	Ryugu_A0106	total	<0.07 (0.026)f			nmol g-1	0.07	below_detection_limit		parenthetical 0.026 nmol g-1 = footnote f: "Single measurement made by 3D HPLC with UV fluorescence detection from ref. 20" (Naraoka et al. 2023); footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+V	Val	L	Bennu_OREX-803001-0	free	0.09 ± 0.01	0.09	0.01	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+V	Val	L	Bennu_OREX-803001-0	total	0.32 ± 0.06	0.32	0.06	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+V	Val	L	Murchison_CM2	free	1.0 ± 0.1	1.0	0.1	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+V	Val	L	Murchison_CM2	total	4.3 ± 0.2	4.3	0.2	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+V	Val	L	Tarda_C2ung	total	0.81 ± 0.01	0.81	0.01	nmol g-1		quantified			Glavin 2025 Extended Data Table 3
+V	Val	L	Orgueil_CI1	total	0.48 ± 0.02	0.48	0.02	nmol g-1		quantified		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+V	Val	L	Ryugu_A0106	total	<0.06 (0.056)f			nmol g-1	0.06	below_detection_limit		parenthetical 0.056 nmol g-1 = footnote f: "Single measurement made by 3D HPLC with UV fluorescence detection from ref. 20" (Naraoka et al. 2023); footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+L	Leu	D	Bennu_OREX-803001-0	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = "trace, amino acid tentatively identified above background but was below the limit of quantitation"	Glavin 2025 Extended Data Table 3
+L	Leu	D	Bennu_OREX-803001-0	total	0.09 ± 0.01	0.09	0.01	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 3
+L	Leu	D	Murchison_CM2	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 3
+L	Leu	D	Murchison_CM2	total	0.9 ± 0.2	0.9	0.2	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 3
+L	Leu	D	Tarda_C2ung	total	n.d.			nmol g-1		not_determined			Glavin 2025 Extended Data Table 3
+L	Leu	D	Orgueil_CI1	total	n.r.			nmol g-1		not_reported		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+L	Leu	D	Ryugu_A0106	total	<0.05			nmol g-1	0.05	below_detection_limit		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+L	Leu	L	Bennu_OREX-803001-0	free	<0.3			nmol g-1	0.3	below_detection_limit	3		Glavin 2025 Extended Data Table 3
+L	Leu	L	Bennu_OREX-803001-0	total	<0.3			nmol g-1	0.3	below_detection_limit	3		Glavin 2025 Extended Data Table 3
+L	Leu	L	Murchison_CM2	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 3
+L	Leu	L	Murchison_CM2	total	1.3 ± 0.5	1.3	0.5	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 3
+L	Leu	L	Tarda_C2ung	total	n.d.			nmol g-1		not_determined			Glavin 2025 Extended Data Table 3
+L	Leu	L	Orgueil_CI1	total	n.r.			nmol g-1		not_reported		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+L	Leu	L	Ryugu_A0106	total	<0.06			nmol g-1	0.06	below_detection_limit		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+I	Ile	D	Bennu_OREX-803001-0	free	tr.			nmol g-1		trace_below_quantitation	6	tr. = "trace, amino acid tentatively identified above background but was below the limit of quantitation"	Glavin 2025 Extended Data Table 3
+I	Ile	D	Bennu_OREX-803001-0	total	0.069 ± 0.005	0.069	0.005	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+I	Ile	D	Murchison_CM2	free	0.25 ± 0.05	0.25	0.05	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+I	Ile	D	Murchison_CM2	total	0.4 ± 0.1	0.4	0.1	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+I	Ile	D	Tarda_C2ung	total	n.d.			nmol g-1		not_determined			Glavin 2025 Extended Data Table 3
+I	Ile	D	Orgueil_CI1	total	n.r.			nmol g-1		not_reported		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+I	Ile	D	Ryugu_A0106	total	<0.04			nmol g-1	0.04	below_detection_limit		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3
+I	Ile	L	Bennu_OREX-803001-0	free	<0.1			nmol g-1	0.1	below_detection_limit	6		Glavin 2025 Extended Data Table 3
+I	Ile	L	Bennu_OREX-803001-0	total	≤0.4	0.4		nmol g-1		upper_limit_not_blank_corrected	6	footnote d: "Non-blank corrected value given as an upper limit for the concentration in the sample extract due to peak areas near background levels and ambiguity associated with the procedural blank contribution to the sample peak. Values included in the sum."	Glavin 2025 Extended Data Table 3
+I	Ile	L	Murchison_CM2	free	0.24 ± 0.02	0.24	0.02	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+I	Ile	L	Murchison_CM2	total	2.3 ± 0.2	2.3	0.2	nmol g-1		quantified	6		Glavin 2025 Extended Data Table 3
+I	Ile	L	Tarda_C2ung	total	n.d.			nmol g-1		not_determined			Glavin 2025 Extended Data Table 3
+I	Ile	L	Orgueil_CI1	total	n.r.			nmol g-1		not_reported		footnote b: "Data from ref. 59."	Glavin 2025 Extended Data Table 3
+I	Ile	L	Ryugu_A0106	total	<0.04			nmol g-1	0.04	below_detection_limit		footnote c: "Data from ref. 27, unless otherwise noted." (Parker et al. 2023)	Glavin 2025 Extended Data Table 3

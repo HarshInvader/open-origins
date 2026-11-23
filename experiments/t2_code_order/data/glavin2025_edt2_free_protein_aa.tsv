@@ -1,0 +1,120 @@
+# Source: Glavin et al. 2025 Nat. Astron. 9:199-210, doi:10.1038/s41550-024-02472-9, Extended Data Table 2,
+#   transcribed by hand from the full-resolution image (static-content.springer.com, CC BY article).
+# Title (verbatim): "Blank-subtracted free abundances of ammonia, amines, and amino acids, as measured by
+#   LC-FD/ToF-MS, in the hot-water extract of Bennu (OREX-803001-0), compared with selected CCs and Ryugu (A0106)"
+# Footnote a (verbatim, abridged only by ellipsis): "Hot-water extracts (100oC for 24 h) of the Bennu aggregate
+#   subsample (OREX-803001-0; 25.6 mg), the CM2 Murchison meteorite (University of Chicago at Illinois; 26.3 mg), the
+#   C2 ungrouped Tarda meteorite (Roberto Vargas, RV; 723 mg), and Ryugu (A0106; 13.08 mg extracted in water at
+#   105oC for 20 h) were analyzed directly after AccQ·Tag derivatization ... Values are the average of three
+#   measurements (n = 3) with a standard error, δx = σx·(n)^-1/2."
+# Abbreviations (verbatim): "n.r. = not reported; n.d. = not determined; tr. = amino acid was tentatively
+#   identified at trace levels but was below the limit of quantitation."
+# All protein amino acids are D+L combined ("D,L-") except glycine (achiral). Free = not acid-hydrolysed.
+# error = standard error as printed. detection_limit = the number after "<" where printed; no explicit LOD
+#   is printed for "tr." cells.
+# Printed sums: Bennu 11.9 ± 0.5; Murchison 17.8 ± 1.3; Tarda 11.5 ± 0.8; Orgueil 6.3 ± 1.4; Ryugu 2.59 ± 0.05.
+# Cross-check: SI Table 12 (AccQ·TAG column) marks Phe detected, Asn and Tyr "tentative", Met/Gln/Trp/Lys/Arg/His/Cys
+#   not detected; EDT2 prints Phe as "tr.".
+# sha256 raw/glavin_springer_tables/41550_2024_2472_Tab2_ESM.jpg = 482b9e11b620aaf8e5375b6c5301b861f82ef2e168fc6828a2f11616b64887e8
+# sha256 raw/glavin_europepmc_supp/x/41550_2024_2472_MOESM1_ESM.pdf (SI) = 44e9327556195f9d908744b1a85ea7a5fe8dbda7c60c790f3339256b39c012b8
+aa1	aa3	enantiomer	sample	fraction	cell_as_printed	value	error_se	units	detection_limit	status	n	note	source_table
+H	His	D+L	Bennu_OREX-803001-0	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+H	His	D+L	Murchison_CM2	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+H	His	D+L	Tarda_C2ung	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+H	His	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+H	His	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+N	Asn	D+L	Bennu_OREX-803001-0	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+N	Asn	D+L	Murchison_CM2	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+N	Asn	D+L	Tarda_C2ung	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+N	Asn	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+N	Asn	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+Q	Gln	D+L	Bennu_OREX-803001-0	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+Q	Gln	D+L	Murchison_CM2	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+Q	Gln	D+L	Tarda_C2ung	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+Q	Gln	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+Q	Gln	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+S	Ser	D+L	Bennu_OREX-803001-0	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+S	Ser	D+L	Murchison_CM2	free	0.14 ± 0.05	0.14	0.05	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+S	Ser	D+L	Tarda_C2ung	free	1.70 ± 0.06	1.70	0.06	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+S	Ser	D+L	Orgueil_CI1	free	0.10 ± 0.03	0.10	0.03	nmol g-1		quantified		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+S	Ser	D+L	Ryugu_A0106	free	0.52 ± 0.03	0.52	0.03	nmol g-1		quantified		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+R	Arg	D+L	Bennu_OREX-803001-0	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+R	Arg	D+L	Murchison_CM2	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+R	Arg	D+L	Tarda_C2ung	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+R	Arg	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+R	Arg	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+G	Gly	D+L	Bennu_OREX-803001-0	free	10.1 ± 0.5	10.1	0.5	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+G	Gly	D+L	Murchison_CM2	free	11.1 ± 1.2	11.1	1.2	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+G	Gly	D+L	Tarda_C2ung	free	7.2 ± 0.8	7.2	0.8	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+G	Gly	D+L	Orgueil_CI1	free	4.0 ± 1.3	4.0	1.3	nmol g-1		quantified		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+G	Gly	D+L	Ryugu_A0106	free	1.62 ± 0.04	1.62	0.04	nmol g-1		quantified		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+D	Asp	D+L	Bennu_OREX-803001-0	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+D	Asp	D+L	Murchison_CM2	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+D	Asp	D+L	Tarda_C2ung	free	0.9 ± 0.2	0.9	0.2	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+D	Asp	D+L	Orgueil_CI1	free	0.89 ± 0.48	0.89	0.48	nmol g-1		quantified		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+D	Asp	D+L	Ryugu_A0106	free	0.25 ± 0.02	0.25	0.02	nmol g-1		quantified		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+E	Glu	D+L	Bennu_OREX-803001-0	free	0.01 ± 0.01	0.01	0.01	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+E	Glu	D+L	Murchison_CM2	free	0.23 ± 0.02	0.23	0.02	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+E	Glu	D+L	Tarda_C2ung	free	0.29 ± 0.02	0.29	0.02	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+E	Glu	D+L	Orgueil_CI1	free	0.12 ± 0.07	0.12	0.07	nmol g-1		quantified		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+E	Glu	D+L	Ryugu_A0106	free	0.033 ± 0.001	0.033	0.001	nmol g-1		quantified		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+T	Thr	D+L	Bennu_OREX-803001-0	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+T	Thr	D+L	Murchison_CM2	free	0.28 ± 0.02	0.28	0.02	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+T	Thr	D+L	Tarda_C2ung	free	0.32 ± 0.01	0.32	0.01	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+T	Thr	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+T	Thr	D+L	Ryugu_A0106	free	<0.1			nmol g-1	0.1	below_detection_limit		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+A	Ala	D+L	Bennu_OREX-803001-0	free	1.60 ± 0.03	1.60	0.03	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+A	Ala	D+L	Murchison_CM2	free	4.1 ± 0.4	4.1	0.4	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+A	Ala	D+L	Tarda_C2ung	free	0.15 ± 0.04	0.15	0.04	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+A	Ala	D+L	Orgueil_CI1	free	1.13 ± 0.25	1.13	0.25	nmol g-1		quantified		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+A	Ala	D+L	Ryugu_A0106	free	0.17 ± 0.01	0.17	0.01	nmol g-1		quantified		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+P	Pro	D+L	Bennu_OREX-803001-0	free	0.11 ± 0.01	0.11	0.01	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+P	Pro	D+L	Murchison_CM2	free	0.89 ± 0.07	0.89	0.07	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+P	Pro	D+L	Tarda_C2ung	free	0.25 ± 0.03	0.25	0.03	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+P	Pro	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+P	Pro	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+C	Cys	D+L	Bennu_OREX-803001-0	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+C	Cys	D+L	Murchison_CM2	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+C	Cys	D+L	Tarda_C2ung	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+C	Cys	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+C	Cys	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+Y	Tyr	D+L	Bennu_OREX-803001-0	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+Y	Tyr	D+L	Murchison_CM2	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+Y	Tyr	D+L	Tarda_C2ung	free	0.14 ± 0.12	0.14	0.12	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+Y	Tyr	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+Y	Tyr	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+K	Lys	D+L	Bennu_OREX-803001-0	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+K	Lys	D+L	Murchison_CM2	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+K	Lys	D+L	Tarda_C2ung	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+K	Lys	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+K	Lys	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+M	Met	D+L	Bennu_OREX-803001-0	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+M	Met	D+L	Murchison_CM2	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+M	Met	D+L	Tarda_C2ung	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+M	Met	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+M	Met	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+V	Val	D+L	Bennu_OREX-803001-0	free	0.081 ± 0.004	0.081	0.004	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+V	Val	D+L	Murchison_CM2	free	0.81 ± 0.06	0.81	0.06	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+V	Val	D+L	Tarda_C2ung	free	0.26 ± 0.01	0.26	0.01	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+V	Val	D+L	Orgueil_CI1	free	0.04 ± 0.01	0.04	0.01	nmol g-1		quantified		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+V	Val	D+L	Ryugu_A0106	free	<0.2			nmol g-1	0.2	below_detection_limit		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+L	Leu	D+L	Bennu_OREX-803001-0	free	0.036 ± 0.003	0.036	0.003	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+L	Leu	D+L	Murchison_CM2	free	0.13 ± 0.02	0.13	0.02	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+L	Leu	D+L	Tarda_C2ung	free	0.17 ± 0.01	0.17	0.01	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+L	Leu	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+L	Leu	D+L	Ryugu_A0106	free	<0.2			nmol g-1	0.2	below_detection_limit		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+I	Ile	D+L	Bennu_OREX-803001-0	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+I	Ile	D+L	Murchison_CM2	free	0.10 ± 0.01	0.10	0.01	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+I	Ile	D+L	Tarda_C2ung	free	0.14 ± 0.01	0.14	0.01	nmol g-1		quantified	3		Glavin 2025 Extended Data Table 2
+I	Ile	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+I	Ile	D+L	Ryugu_A0106	free	<0.1			nmol g-1	0.1	below_detection_limit		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+F	Phe	D+L	Bennu_OREX-803001-0	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+F	Phe	D+L	Murchison_CM2	free	tr.			nmol g-1		trace_below_quantitation	3	tr. = tentatively identified at trace levels, below limit of quantitation; main text: "near the 0.1 nmol g-1 detection limit" (Met/Tyr/Asn sentence)	Glavin 2025 Extended Data Table 2
+F	Phe	D+L	Tarda_C2ung	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+F	Phe	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+F	Phe	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2
+W	Trp	D+L	Bennu_OREX-803001-0	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+W	Trp	D+L	Murchison_CM2	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+W	Trp	D+L	Tarda_C2ung	free	<0.1			nmol g-1	0.1	below_detection_limit	3		Glavin 2025 Extended Data Table 2
+W	Trp	D+L	Orgueil_CI1	free	n.r.			nmol g-1		not_reported		Orgueil free protein AA from Glavin ref. 62	Glavin 2025 Extended Data Table 2
+W	Trp	D+L	Ryugu_A0106	free	n.r.			nmol g-1		not_reported		Ryugu column from Parker et al. 2023 GCA 347:42-57 (Glavin ref. 27)	Glavin 2025 Extended Data Table 2

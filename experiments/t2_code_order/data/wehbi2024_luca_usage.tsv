@@ -1,0 +1,35 @@
+# Source: Wehbi et al. 2024 PNAS 121:e2410311121, doi:10.1073/pnas.2410311121, Table 1 (PMC11670089 HTML).
+# Table 1 title (verbatim): "LUCA and pre-LUCA clans' ancestral amino acid frequencies are divided by post-LUCA
+#   clan's ancestral amino acid frequencies to produce measures of relative usage"
+# Paper (verbatim): "we recommend using the LUCA amino acid enrichment values plotted on the y-axis of Fig. 4A,
+#   which can be found together with their SE in Table 1." Higher = earlier recruitment.
+# Paper (verbatim): "We use enrichment in LUCA to reclassify VGIMTAHEPC as early and depletion to classify
+#   KSDLNRFYQW as late."
+# Units: dimensionless ratio. Table 1 prints 3 significant figures (ties A=T=1.07, C=P=1.01).
+# *_recomputed columns: weighted means of Dataset S2 (Clan_data_ancestralAAC.csv) by Clan_Conlength, LUCA (n=309
+#   clans) or preLUCA (n=136) over postLUCA (n=1232), mirroring AncientAminoAcidUsageAnalysis.R lines 96-101;
+#   they round to Table 1 for all 20 amino acids (checked in build script). Script: scripts/wehbi_recompute.py.
+# sha256 raw/wehbi_pmc_html/article.html = 645d831410e0229b632e9f97378143cc2bec048daff1d87cce00694459a138cb
+# sha256 raw/wehbi_europepmc_supp/x/pnas.2410311121.sd02.csv = f5b2699ade2cc6f4aae4d3d70b7eb817ae5a77cc2691b9b7000a47ccf8a9ea61
+# Detection limit / non-detects: not applicable.
+aa1	aa3	luca_usage	luca_usage_se	preluca_usage	preluca_usage_se	luca_usage_recomputed	preluca_usage_recomputed	wehbi_class	source
+V	Val	1.12	0.0241	1.04	0.0205	1.123311	1.042291	early	Wehbi 2024 Table 1; recomputed from Dataset S2
+G	Gly	1.11	0.0283	1.09	0.0241	1.112440	1.094342	early	Wehbi 2024 Table 1; recomputed from Dataset S2
+I	Ile	1.1	0.0325	1.07	0.0351	1.102413	1.072530	early	Wehbi 2024 Table 1; recomputed from Dataset S2
+M	Met	1.08	0.0386	1.1	0.0383	1.075397	1.097083	early	Wehbi 2024 Table 1; recomputed from Dataset S2
+A	Ala	1.07	0.0317	1.03	0.0297	1.067205	1.033942	early	Wehbi 2024 Table 1; recomputed from Dataset S2
+T	Thr	1.07	0.0369	1.05	0.0362	1.074117	1.048781	early	Wehbi 2024 Table 1; recomputed from Dataset S2
+H	His	1.04	0.0416	1.17	0.0486	1.042509	1.165811	early	Wehbi 2024 Table 1; recomputed from Dataset S2
+E	Glu	1.03	0.0357	0.911	0.0357	1.026453	0.910510	early	Wehbi 2024 Table 1; recomputed from Dataset S2
+C	Cys	1.01	0.0722	1.03	0.0844	1.005173	1.033910	early	Wehbi 2024 Table 1; recomputed from Dataset S2
+P	Pro	1.01	0.0282	1.04	0.0255	1.006178	1.035073	early	Wehbi 2024 Table 1; recomputed from Dataset S2
+K	Lys	0.974	0.038	0.901	0.0334	0.974053	0.901123	late	Wehbi 2024 Table 1; recomputed from Dataset S2
+S	Ser	0.972	0.0265	1.02	0.0239	0.972318	1.024272	late	Wehbi 2024 Table 1; recomputed from Dataset S2
+D	Asp	0.968	0.027	0.988	0.0363	0.968352	0.987576	late	Wehbi 2024 Table 1; recomputed from Dataset S2
+L	Leu	0.942	0.0256	0.962	0.032	0.942389	0.962310	late	Wehbi 2024 Table 1; recomputed from Dataset S2
+N	Asn	0.934	0.0374	0.996	0.0432	0.933587	0.996125	late	Wehbi 2024 Table 1; recomputed from Dataset S2
+R	Arg	0.916	0.0265	0.915	0.0271	0.916216	0.914650	late	Wehbi 2024 Table 1; recomputed from Dataset S2
+F	Phe	0.895	0.032	1.02	0.0394	0.894589	1.017656	late	Wehbi 2024 Table 1; recomputed from Dataset S2
+Y	Tyr	0.858	0.0341	0.982	0.0309	0.857667	0.982282	late	Wehbi 2024 Table 1; recomputed from Dataset S2
+Q	Gln	0.827	0.031	0.847	0.0304	0.827267	0.847277	late	Wehbi 2024 Table 1; recomputed from Dataset S2
+W	Trp	0.649	0.0476	0.865	0.0526	0.648609	0.865124	late	Wehbi 2024 Table 1; recomputed from Dataset S2

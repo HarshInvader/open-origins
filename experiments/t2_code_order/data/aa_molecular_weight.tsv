@@ -1,0 +1,29 @@
+# molecular_weight_da_wehbi: column MolecularWeightsDa of AminoAcid_properties.csv in
+#   github.com/sawsanwehbi/Pfam-age-classification at commit tree 01219d85bfcaec82df0b80c0c24d031416e6dd96;
+#   this is the covariate Wehbi regress on (script line 155: lm(ancient_clanConusage ~ MolecularWeightsDa)).
+#   Integer Da; ties I=L=131, K=Q=146.
+# molecular_weight_da_hp2009: Higgs & Pudritz 2009 Table 2 column MW ("molecular weight in Da"), arXiv:0904.0402.
+# sha256 raw/wehbi_github_01219d8/AminoAcid_properties.csv = 7bbbd8c1730d0374358db2a88576dbbfe3cc29a3303253377ad9ad61d961ce74
+# sha256 raw/higgs_pudritz_arxiv_0904.0402/0904.0402.pdf = 9384eefe8492fb2ff715f5c780b34de903f9694ea8332a445887e4022542bcfd
+# Units: Da (g/mol), free amino acid (not residue) mass.
+aa1	aa3	molecular_weight_da_wehbi	molecular_weight_da_hp2009
+G	Gly	75	75.1
+A	Ala	89	89.1
+S	Ser	105	105.1
+D	Asp	133	133.1
+T	Thr	119	119.1
+E	Glu	147	147.1
+V	Val	117	117.1
+L	Leu	131	131.2
+I	Ile	131	131.2
+P	Pro	115	115.1
+K	Lys	146	146.2
+F	Phe	165	165.2
+R	Arg	174	174.2
+H	His	155	155.2
+N	Asn	132	132.1
+Q	Gln	146	146.1
+C	Cys	121	121.2
+Y	Tyr	181	181.2
+M	Met	149	149.2
+W	Trp	204	204.2

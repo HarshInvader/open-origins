@@ -1,0 +1,33 @@
+# Source: Higgs & Pudritz 2009 Astrobiology 9:483-490, doi:10.1089/ast.2008.0280; legal copy arXiv:0904.0402
+#   (submitted version), Table 2, transcribed via pdftotext.
+# Caption (verbatim): "Thermodynamic and evolutionary properties of amino acids. Robs = ranking derived from Table
+#   1; Rcode = ranking from Trifonov (2004); Crel = mean relative concentration from Table 1; ΔGsurf and ΔGhydro =
+#   free energies of formation in kJ/mol (Amend and Shock, 1998); ATP cost of synthesis (Akashi and Gojobori,
+#   2002); MW = molecular weight in Da."
+# Robs method (verbatim): "amino acids were ranked according to each criterion in Table 1 ... All the remaining
+#   amino acids are not observed, and are given an equal bottom rank ... The mean of these ranks from the 12
+#   observations is termed Robs." Table 1 meteorite columns: M1 Murchison (H2O extract, Engel & Nagy 1982),
+#   M2 Murray (Cronin & Moore 1971), M3 Yamato (hydrolysed, Shimoyama 1979); Gly = 1.0 normalisation.
+# Lower Robs = more abundant prebiotically = proposed earlier. Not the Wehbi order; kept as prior art/comparator.
+# sha256 raw/higgs_pudritz_arxiv_0904.0402/0904.0402.pdf = 9384eefe8492fb2ff715f5c780b34de903f9694ea8332a445887e4022542bcfd
+aa1	aa3	Robs	Rcode_trifonov2004	Crel	dG_surf_kJmol	dG_hydro_kJmol	ATP_cost	MW_da
+G	Gly	1.1	3.5	1.0000	80.49	14.89	11.7	75.1
+A	Ala	2.8	4.0	0.4970	113.66	-12.12	11.7	89.1
+D	Asp	4.3	6.0	0.1633	146.74	32.78	12.7	133.1
+E	Glu	6.8	8.1	0.1153	172.13	-1.43	15.3	147.1
+V	Val	8.5	6.3	0.0724	178.00	-70.12	23.3	117.1
+S	Ser	8.6	7.6	0.0286	173.73	69.47	11.7	105.1
+I	Ile	9.1	11.4	0.0226	213.93	-96.4	32.3	131.2
+L	Leu	9.4	9.9	0.0116	205.03	-105.53	27.3	131.2
+P	Pro	10.0	7.3	0.0437	192.83	-38.75	20.3	115.1
+T	Thr	11.7	9.4	0.0008	216.50	53.51	18.7	119.1
+K	Lys	12.6	13.3	0	258.56	-28.33	30.3	146.2
+F	Phe	13.2	14.4	0	303.64	-114.54	52.0	165.2
+R	Arg	13.3	11.0	0	409.46	197.52	27.3	174.2
+H	His	13.3	13.0	0	350.52	154.48	38.3	155.2
+N	Asn	14.2	11.3	0	201.56	83.53	14.7	132.1
+Q	Gln	14.2	11.4	0	223.36	44.04	16.3	146.1
+C	Cys	14.2	13.8	0	224.67	60.24	24.7	121.2
+Y	Tyr	14.2	15.2	0	334.20	-59.53	50.0	181.2
+M	Met	14.2	15.4	0	113.22	-174.71	34.3	149.2
+W	Trp	14.2	16.5	0	431.17	-38.99	74.3	204.2
