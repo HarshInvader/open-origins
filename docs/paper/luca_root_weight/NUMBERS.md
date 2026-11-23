@@ -11,3 +11,4 @@ All paths are relative to `experiments/luca_calib/`.
 | R 1.100 at 160 genomes | `K4_RESULTS.md`; `results/k4/k4_report.json` |
 | Table 4, H, flat-prior H, stem transfer 115-600×, burst 28-80×, crossings 4.0-6.9, +26% genome size | `K5_RESULTS.md`; `results/k5/k5_report.json` |
 | Multipliers 1.4-1.9; flat share 46-76% of the true ancestor | ratios computed from the K2-K4 tables above (fitted Σ PP / flat Σ PP) |
+| Identity ΣPP = F·w/(w+N−1); 17% root share | `results/k1/k1_ci.json` (F, O_hat, S_hat per run) |

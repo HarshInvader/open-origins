@@ -182,3 +182,32 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   - a limits line said 1.5-1.9×, now 1.4-1.9×;
   - the "calibrated posterior" reading in K3_RESULTS is corrected the same way.
 - **Unchanged:** the verdict "revise", and the email already sent. The email does not mention calibration or the 3% figure.
+
+### 2026-11-23: second independent audit of the LaTeX preprint (Fable)
+- **Verdict:** not publishable in a journal as is.
+  - Odds as is: bioRxiv about 90% once a named human author is listed; PCI Evol Biol about 15%; a GBE/MBE short paper about 10%; NEE Matters Arising under 5%.
+  - The arithmetic is right. But the framing "34 against 1,291" is a straw man, because the default prior is itself a strong prior: 1/1,399 of originations at the root. The simulations also test an easier regime.
+- **Checked against our own files before acting:**
+  - Confirmed: the identity ΣPP = F·ŵ/(ŵ+N−1) at the ML weight, exact in all five runs (`results/k1/k1_ci.json`). The count is F times the fitted root-origination share, about 17%.
+  - Confirmed: "no failures on Linux" was wrong. K4 had 1 of 1,411 and K5 had 4 of 899.
+  - Confirmed: K5 seed 2 was stopped by its planted check and was not reported. Table 4's seed-3 big world is an earlier simulation (184 families).
+  - Confirmed: K2_RESULTS already noted the tree-size confound (79-639 branches against 1,399), but the paper did not.
+  - Confirmed: the "three or more categories skipped" sentence applied to no family (all 7,456 were scored).
+  - Partly wrong: "1,290.6 against the published 1,298.25". 1,290.6 is the sum of Moody's deposited PPs. 1,298.25 is the mean KO count of their sampled genomes, a different quantity. The wording was clarified.
+  - Not verified by us: Fable's quick dose-response numbers (206 / 768 / 1,218 / 1,942 at w = 10 / 100 / 290 / 1,000) and its ~3-family flat-prior sum for translation families. Not used in the paper.
+  - New prior art, opened by us: Szöllősi & Williams 2026 PNAS letter (doi:10.1073/pnas.2618431123) and the reply by Gagnon & Csűrös (doi:10.1073/pnas.2619901123). Both concern the archaeal ancestor and the observation threshold; neither discusses the root weight or Moody's LUCA. Novelty holds; both are cited as context.
+- **Done:**
+  - New title, the identity added as Eq. 2, and the default prior explained as non-neutral.
+  - All factual fixes above.
+  - Two references added; 8 of 8 resolve on Crossref.
+- **Ranked additions (Fable; not yet run):**
+  1. Dose-response figure of the count against w.
+  2. Histogram of root odds, real against simulated.
+  3. Real-data controls: does any w separate universal families (ribosomal proteins, aminoacyl-tRNA synthetases) from late, oxygen-dependent ones?
+  4. Propagate to proteins by rerunning Moody's LOESS.
+  5. Read Csűrös's SI (it returned 403 to the reviewer).
+  6. Families dropped between the FASTA set (9,371) and the scored set (7,456).
+  7. Regime-matched simulation (weeks).
+  8. A realism bound for K5.
+  - Not worth doing: more easy-regime seeds, the 320-genome rerun, tighter K5 matching, Count or Wagner comparisons.
+- **Decision:** fix every confirmed error now. Propose additions 1-6 (about 2-3 days, laptop only) to the owner before any posting. Item 7 decides whether this becomes a result.
