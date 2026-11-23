@@ -28,3 +28,5 @@ a1ad10dbcf91ba924da03761ecb540617656c04d02d83c011d8f3178f813fe5c  experiments/lu
 d77423d34b8ce66f2b930b1e57ded868f5fe9007c2a3158f00842040ad87fd3f  experiments/luca_calib/k3/k3_score.py  orig-paper  2026-11-22T15:31:21Z  task#32 K3 AWS scripts (v5c)
 4622306ba5ea42f175a41695647afccf23ec624cd34e4d74db454f73cb52f573  experiments/luca_calib/k3/run_k3.sh  orig-paper  2026-11-22T15:50:41Z  task#32 K3 script fix (DEVIATIONS 12-13)
 1d54c599a0b18cfc575736d8c070e307a5ac8a4a833207b83f5a9b43e116b32c  experiments/luca_calib/k3/setup_remote.sh  orig-paper  2026-11-22T15:50:41Z  task#32 K3 script fix (DEVIATIONS 12-13)
+17ed82bf8ae36dbdae4ab7bf1890108a1f7b295d8e47a984aaa998b7dde29a82  docs/prereg/luca_calibration_v5d.md  orig-paper  2026-11-23T05:58:22Z  task#32 amendment v5d (K4 tip scaling + worst case, AWS)
+2bc3ff6fc159300535b10aec2d8dcd756e9643be7c8a9bde3c95f46a1aba9fe5  experiments/luca_calib/k4/run_k4.sh  orig-paper  2026-11-23T05:58:22Z  task#32 amendment v5d (K4 tip scaling + worst case, AWS)

@@ -25,8 +25,8 @@ bash $P/local/verify.sh > "$R/verify.log" 2>&1; echo "verify rc $?" >> "$R/verif
 LANES="${LANES:-s1 s2 s3 n40}"
 for l in $LANES; do case $l in
   s1) inferred s1 s1 ~/luca_calib/results/k2/n80_t0.4/sim 12 & ;;
-  s2) seed 2 8 & ;;
-  s3) seed 3 8 & ;;
+  s2) seed 2 ${SEED_W:-8} & ;;
+  s3) seed 3 ${SEED_W:-8} & ;;
   n40) inferred n40 n40 ~/luca_calib/results/k2/n40_t0.4/sim 4 & ;;
 esac; done
 wait; echo "[$(date '+%F %T')] K3 ALL DONE" >> "$R/main.log"
