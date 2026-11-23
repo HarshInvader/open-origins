@@ -248,3 +248,23 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Not done:**
   - Bremer 2022 and Williams 2023 GBE are not added, because neither was read.
   - The Csűrös SI (Fig. S41) needs a person to open it in a browser. The automated fetch was blocked, and we don't work around blocks.
+
+### 2026-11-23: K6 sealed and running; origin-of-life routes ranked
+- **K6 (prereg v8, sealed in 208991c).** Does the LUCA count stay the same when Moody et al.'s own method runs on their 65-genome subsample instead of 700 genomes?
+  - We run our pipeline (IQ-TREE LG+F+G4 with 1,000 UFBoot, then ALE and Moody's reweighting) on a seeded random sample of 800 of the 5,122 families with at least 2 sequences.
+  - A full run would take about 140 CPU-hours and more disk than the laptop has.
+  - **Disclosed before sealing.** Moody's deposited subsample PPs give about 2× the 700-genome ΣPP. Their trimmed alignments are short: median 175 columns, and 47 for families with 100 or more sequences.
+  - **Smoke test, 10 families.** The pipeline works end to end. Two IQ-TREE runs failed when the disk briefly filled, so the driver now retries failed families twice. Families with 50–60 sequences take 12–16 minutes each.
+  - **Running.** Seven chunks of 120 families under the Origins lock, each resumable. The driver deletes tree files after each batch.
+- **Origin-of-life routes** are mapped and ranked in `docs/plans/origin_routes_2026-11-23.md`. Each route has its riskiest claim that open data can check.
+- **Queue (ranked):**
+  1. **K6** primary readout, then the half-taxa jackknife (3 draws). Update the LUCA preprint if the result is decisive.
+  2. **T1: is the vent exergonicity of LUCA's metabolism specific?** (Wimmer 2021.) This is the top origin-of-life test. Blocker: the 1.3 GB eQuilibrator cache won't fit on the disk now (about 3 GB free). Next step: check whether `equilibrator-api` can run on a smaller compound set; otherwise run it on AWS after 1 December. Seal before computing any ΔG.
+  3. **T2: do asteroid amino-acid abundances predict the order in which amino acids entered the genetic code?** (Wehbi 2024 vs Bennu/Ryugu.) Takes minutes. Needs the Wehbi per-amino-acid values and Glavin's tables; Higgs & Pudritz 2009 must be read first.
+  4. **T3: RNA persistence budget** per setting (MARHYS, USGS). The rate laws must be confirmed from legal copies first.
+  5. **Backups:**
+     - the acetogen call against w and 65 vs 700 genomes;
+     - Huang 2026 root-weight dependence;
+     - the K5 realism bound;
+     - a red-team of the RAF and assembly-index results;
+     - the purine:pyrimidine vs ammonia prediction.
