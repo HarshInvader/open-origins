@@ -134,4 +134,8 @@ The positive control passed (R = 1.075). Without stem traffic the pipeline separ
 - The decomposition assumes the deposited consensus files hold the root posterior under the category weights, as the scripts imply. We could not access the `.uml_rec` files.
 
 ## Data and code
-`experiments/luca_calib/` (pipeline manifest sha256 c555e9a4…), `docs/prereg/HASHES.txt`, `experiments/luca_calib/DEVIATIONS.md`.
+Repository: https://github.com/HarshInvader/open-origins
+
+- Pipeline: `experiments/luca_calib/` (manifest sha256 c555e9a4…)
+- Pre-registration hashes: `docs/prereg/HASHES.txt`
+- Deviations: `experiments/luca_calib/DEVIATIONS.md`
