@@ -1,0 +1,27 @@
+{
+ "versions": {
+  "equilibrator-api": "0.8.1",
+  "equilibrator-cache": "0.8.1",
+  "equilibrator-cache-data": "0.1.0",
+  "component-contribution": "0.8.0"
+ },
+ "meta": [
+  [
+   true,
+   "ok",
+   1.0,
+   2.0
+  ]
+ ],
+ "dg0_pH7_25": [
+  -27.36519874790435
+ ],
+ "dg0_pH9_80": [
+  -49.121408093690555
+ ],
+ "sigma": 0.3042778552991022,
+ "dg_equal_1mM_pH7_25": -44.48922725519452,
+ "dg_gradient_pH9_80": -96.44820631767922,
+ "dg_gradient_pH9_80_reversed": 55.882379268546075,
+ "script_sha256": "451ac9bea391ef956dcc2d7fd3238786b1380654c86053cac0a1baafc09988c0"
+}

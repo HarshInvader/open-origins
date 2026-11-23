@@ -57,3 +57,10 @@ d73c1e0afa5e85dbf58176b3d3cce4a5ca75e559b7b579369777c842a6164228  experiments/t2
 8dfe336f1b0db89fae65654bccd383233b7bc9d37de72b257f797aea24fab9f7  experiments/t2_code_order/data/glavin2025_edt3_free_total_protein_aa.tsv  orig-paper  2026-11-23T19:57:37Z  T2 code-order vs asteroid abundance prereg seal
 5d544039fad5958d0b50fbecd966477e25495b85d6fc090ab7c7a80021694d03  experiments/t2_code_order/data/higgs_pudritz2009_table2.tsv  orig-paper  2026-11-23T19:57:37Z  T2 code-order vs asteroid abundance prereg seal
 da4c2a78eaedea09ae490378618f968fe01897f224bfc89707fc5d83063cb8e8  experiments/t2_code_order/data/wehbi2024_luca_usage.tsv  orig-paper  2026-11-23T19:57:37Z  T2 code-order vs asteroid abundance prereg seal
+f930c933d01389eaafb574e5714f50463b5de07b66761157a83dd40b363e6bbd  docs/prereg/t1_vent_exergonic.md  orig-paper  2026-11-23T23:13:34Z  T1 vent exergonicity specificity prereg seal
+07ea92d20c5851aafd3f1819609409795dfe1ad36a889947e7ac575cda70518d  experiments/t1_vent_exergonic/scripts/t1_analysis.py  orig-paper  2026-11-23T23:13:34Z  T1 vent exergonicity specificity prereg seal
+28d1b891b75cb499909fbc1fe9f8f50d328c20c736914d40d1fc7a58e7a688e8  experiments/t1_vent_exergonic/data/rhea_null_pool.tsv  orig-paper  2026-11-23T23:13:34Z  T1 vent exergonicity specificity prereg seal
+f3370bc34fc65754f2680b183e31e934a07f7a3384538c1819ab3220f7c7a7a4  experiments/t1_vent_exergonic/data/s4_null_pool.tsv  orig-paper  2026-11-23T23:13:34Z  T1 vent exergonicity specificity prereg seal
+624d2d6a9c82733d8991fdab0f95624dce43b9d86e7b3a43560065ba5b6c4660  experiments/t1_vent_exergonic/data/wimmer2021_core_reactions.tsv  orig-paper  2026-11-23T23:13:34Z  T1 vent exergonicity specificity prereg seal
+ee5f8f45faf7e7453d05cfe92242f09c39cd127082bb1c2db510ac4605f6d89a  experiments/t1_vent_exergonic/requirements.lock.txt  orig-paper  2026-11-23T23:13:34Z  T1 vent exergonicity specificity prereg seal
+352fb65d9f316c6f1437d79e6c8d83bf543dd4ee60a23917f19eecbb8e35eb61  experiments/t1_vent_exergonic/scripts_out/t1_planted.json  orig-paper  2026-11-23T23:13:34Z  T1 vent exergonicity specificity prereg seal
