@@ -1,9 +1,9 @@
 # One fitted parameter sets the size of LUCA's reconstructed genome
 
-**Draft preprint, 2026-11-21. Not submitted.** Open Origins project. All code, data, pre-registrations and their SHA-256 hashes are in this repository (`docs/prereg/`, `experiments/luca_calib/`).
+**Draft preprint, 2026-11-21, corrected 2026-11-23. Not submitted.** Open Origins project. All code, data, pre-registrations and their SHA-256 hashes are in this repository (`docs/prereg/`, `experiments/luca_calib/`).
 
 ## Abstract
-Moody et al. (2024) estimated that the last universal common ancestor (LUCA) carried about 2,600 proteins. They got there by summing, over KEGG families, the posterior probability that each family was present at the root of a 700-genome tree. Those probabilities come from ALE reconciliations reweighted by a root-origination weight fitted by maximum likelihood (Coleman et al. 2021). We inverted Moody et al.'s deposited per-family probabilities to recover each family's flat-prior root odds, then recomputed the sum under alternative root weights. With their fitted weights, the sum is 1,290.6 expected families across the 7,456 families scored, reproducing their deposited total. Under ALE's default uniform root prior (w = 1), the same reconciliations give 33.9. One global weight (w ≈ 290) gives 1,270. Relaxing the per-category bounds gives 1,286. So about 97% of the summed LUCA size depends on one estimated quantity. The data support that weight strongly (ΔlogL = 1,169 against w = 1), so this is not a prior artefact. It does, however, move the open question to whether the maximum-likelihood root weight is calibrated. In a known-truth simulation with ALE on true gene trees (20-80 genomes per domain, two transfer rates), the fitted weight recovered the planted root set to within 0.91-1.08 of the true count, once families on which ALE crashed were set aside. The flat prior recovered only 46-60%. As scored under our pre-registered rule, the estimate fell to 0.75 of the truth at the largest cell. All of that shortfall came from ALEobserve overflowing on very large families, every one of which was a true root family. So the root reweighting is not the weak point at these settings; gene-tree error is the remaining open test.
+Moody et al. (2024) estimated that the last universal common ancestor (LUCA) carried about 2,600 proteins. They got there by summing, over KEGG families, the posterior probability that each family was present at the root of a 700-genome tree. Those probabilities come from ALE reconciliations reweighted by a root-origination weight fitted by maximum likelihood (Coleman et al. 2021). We inverted Moody et al.'s deposited per-family probabilities to recover each family's flat-prior root odds, then recomputed the sum under alternative root weights. With their fitted weights, the sum is 1,290.6 expected families across the 7,456 families scored, reproducing their deposited total. Under ALE's default uniform root prior (w = 1), the same reconciliations give 33.9. One global weight (w ≈ 290) gives 1,270. Relaxing the per-category bounds gives 1,286. So about 97% of the summed LUCA size depends on one estimated quantity. The data support that weight strongly (ΔlogL = 1,169 against w = 1), so this is not a prior artefact. It does, however, move the open question to whether the maximum-likelihood root weight is calibrated. In known-truth simulations (Zombi; ALE with the fitted weight), the sum recovered the planted root set to within 0.91-1.10 of the true count with true gene trees, and to within 1.02-1.04 with inferred gene trees (seed 1 and a 40-genome cell). The flat prior recovered only 46-72%. An apparent failure at our largest pre-registered cell (0.75) was a numerical overflow specific to the macOS arm64 build of ALE. The same reconciliations on a Linux x86-64 build give 1.087.
 
 ## 1. Background
 - Moody et al. 2024, *Nat Ecol Evol* 8:1654-1666, doi:10.1038/s41559-024-02461-1. 700 genomes, ALE reconciliations of KEGG and COG families, root-origination reweighting by `O_R_Optimization.py`. Their robustness checks were empirical, not known-truth simulations of root content.
@@ -45,21 +45,23 @@ Zombi simulates a species tree, then genome evolution with origination, duplicat
 | 40 | 0.4 | 180 | 168.7 | 0.937 | 108.6 | 0.603 | 4.31 | 15 | 1.023 |
 | 80 | 0.2 | 179 | 146.0 | 0.816 | 105.6 | 0.590 | 4.26 | 34 | 1.007 |
 | **80** | **0.4** | **189** | **141.9** | **0.751** | 87.4 | 0.463 | 4.21 | 57 | 1.075 |
+| 80, Linux build | 0.4 | 189 | 205.4 | 1.087 | 135.3 | 0.716 | 4.59 | 0 | 1.087 |
 
-At the decision cell (80, 0.4): PP ≥ 0.5 calls 135 families, 120 true (recall 0.63, false share 0.11); PP ≥ 0.75 calls 121, 113 true (recall 0.60, false share 0.07). Families with PP 0.8-1.0: 119, of which 95% are true root families.
+The "crashed" families were crashes of the macOS arm64 ALE build, which has a 64-bit long double; Boost's tgamma/double_factorial overflow on very large families. The Linux x86-64 build (80-bit long double) completes every family, and its PPs agree with the macOS build to within 3e-18 wherever both finish (DEVIATIONS 11-12). The bottom row is the decision cell re-run on Linux. The rows above it are the laptop runs as pre-registered.
+
+The rest of this paragraph uses the laptop run, decision cell (80, 0.4). (80, 0.4): PP ≥ 0.5 calls 135 families, 120 true (recall 0.63, false share 0.11); PP ≥ 0.75 calls 121, 113 true (recall 0.60, false share 0.07). Families with PP 0.8-1.0: 119, of which 95% are true root families.
 
 
 
 ## 4. Discussion
-- **Pre-registered verdict:** R = 0.751 at the decision cell, outside 0.8-1.25, so "dead before the grid".
-- **Why, found after reading the scores:** the shortfall is entirely ALE crashing on large families (57/57 true root families). Without them, R = 1.075. The verdict reflects a software limit, not a bias in the reweighting.
+- **Pre-registered verdict, as scored on the laptop:** R = 0.751 at the decision cell, outside 0.8-1.25, so "dead before the grid".
+- **Why that verdict is superseded:** the shortfall came entirely from ALE crashing on large families (57 of 57 were true root families). We traced the crash to the macOS arm64 build (DEVIATIONS 12). On Linux the same cell gives R = 1.087, inside the band. The laptop verdict reflects a platform-specific numerical limit, not a bias in the reweighting.
 - **What this means for LUCA:** with perfect gene trees, Moody et al.'s reweighting is roughly calibrated, and needed. Critiques of their LUCA size (e.g. Csűrös 2026) would have to rest on gene-tree error or model misfit, not on the root-weight step. That is what K3 tests.
-- **Practical warning:** ALEobserve fails on very large families, and those are disproportionately ancient. Pipelines that drop or zero such families will undercount the root genome.
+- **Practical warning (narrowed):** builds of ALE on platforms where `long double` is 64-bit (e.g. macOS arm64) overflow on very large families, and those families are disproportionately ancient. A pipeline that silently drops or zeroes them undercounts the root genome. Moody et al. ran on Linux clusters, where this does not occur.
 
 ## 5. Limits
 - Simulated genomes are smaller (200 root families) and have fewer rare families than real ones (origination 40 instead of the 512 needed to match Moody et al.'s genome-to-pan-genome ratio, on laptop time limits).
-- Simulation uses true gene trees; inferred-tree error (K3) is not yet tested.
-- One seed per cell; no replicates.
+- Inferred-tree error (K3) is reported separately (`experiments/luca_calib/K3_RESULTS.md`, pending seeds 2 and 3).
 - The decomposition assumes the deposited consensus files hold the root posterior under the category weights, as the scripts imply. We could not access the `.uml_rec` files.
 
 ## Data and code
