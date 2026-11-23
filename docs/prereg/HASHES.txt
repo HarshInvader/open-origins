@@ -35,3 +35,5 @@ b6981b2e38de16d0dfad17e45377a63d3af86972fed43643a6834a14da46a7db  experiments/lu
 2bcc7cd082805fde7c6642c03e213bbc6bd8d88a500fbc1f470b9f5a19948218  docs/prereg/luca_calibration_v5e.md  orig-paper  2026-11-23T06:08:35Z  task#32 amendment v5e (K4 inconclusive zones + calibration measures; Fable review)
 d8a0a7b3a496fa4228dfa5bc2ef5c78ee36bb0d2ce1cef2beb829e27057b6f01  docs/prereg/luca_calibration_v6.md  orig-paper  2026-11-23T06:25:20Z  task#32 K5 two-worlds prereg v6 (Fable review x2)
 dbc99e941a44f8ada9d76207cf2038cd013a3eff5f48d72db9b83d2c000c1422  experiments/luca_calib/k5/stemsim.py  orig-paper  2026-11-23T06:25:20Z  task#32 K5 two-worlds prereg v6 (Fable review x2)
+ec8c9210685e29f1b3f7e5d3e92deef7646b9d30e65d1f22f6140d3cf0fc3fb1  experiments/luca_calib/k5/stemsim.py  orig-paper  2026-11-23T06:28:28Z  task#32 K5 stemsim determinism fix (DEVIATIONS 16)
+16fd4b8bb4fab4658829819deeb697231cdfb53c02eb8d6a365f1a6c6a5ef45b  experiments/luca_calib/k5/run_k5.sh  orig-paper  2026-11-23T06:30:08Z  task#32 K5 remote runner (cells from sealed tuning rule)

@@ -66,3 +66,22 @@ The first c7a.8xlarge spot machine was gone about 9.5 h into its 24 h booking (s
 - **Change:** the n160 and n320 lanes (true trees, v5d/v5e decision cells) were restarted unchanged on origins-k3b with `LANES="n160 n320" bash k4/run_k4.sh`.
 - **Dropped:** w80, a robustness check only under v5e. A relaunch would need about $10 of the $9.70 left in the booked budget.
 - **Timing:** v5d's fallback still applies; if n320 does not finish before the machine's auto-termination, n160 is scored.
+
+## 16. K5: stemsim determinism fix after sealing; seed 2 stopped by its planted check (2026-11-23, before any tuning output or PP was read)
+- **Bug:** stemsim drew ordinary-transfer recipients from an unsorted Python set. With hash randomization (`python -I`), set order changes between processes, so runs could not be repeated exactly.
+  - **Fix:** the candidates are now sorted, matching how the stem-transfer candidates were already drawn. The model is unchanged; only reproducibility is.
+  - The stemsim hash is resealed in HASHES.txt. A repeat run now gives identical output.
+- **Planted checks with the fixed code:**
+
+  | Seed | Births | KS D: genes / occupancy / domain A / domain B | Critical value |
+  |---|---|---|---|
+  | 1 | root | 0.048 / 0.055 / 0.048 / 0.070 | 0.111 |
+  | 1 | mid | 0.018 / 0.023 / 0.055 / 0.034 | 0.097 |
+  | 2 | root | 0.097 / **0.120** / 0.088 / 0.078 | 0.111 |
+  | 2 | mid | 0.030 / 0.037 / 0.047 / 0.046 | 0.089 |
+  | 3 | root | 0.067 / 0.053 / 0.035 / 0.057 | 0.111 |
+  | 3 | mid | 0.077 / 0.073 / 0.019 / 0.066 | 0.095 |
+
+- **Seed 2 stopped:** its root-birth occupancy check fails (0.120 against 0.111), so under v6 K5 stops for seed 2. K5 runs on seeds 1 and 3, and a λ level is read only if both match.
+- **Red-team note, not a rule change:** these are 24 tests at α = 0.05, so about one failure is expected even from a perfect simulator. On seed 2, stemsim's root families are about 4% less widespread than Zombi's (mean occupancy 81.3 against 84.8). One possible cause is Zombi's genome-size floor, which stemsim lacks.
+- **Process note:** tuning was first started as six detached processes. That broke the 3-worker cap and the no-detach rule. They were killed before finishing, their output was deleted unread, and tuning was rerun as a tracked job with 3 at a time.
