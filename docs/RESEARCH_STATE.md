@@ -211,3 +211,16 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   8. A realism bound for K5.
   - Not worth doing: more easy-regime seeds, the 320-genome rerun, tighter K5 matching, Count or Wagner comparisons.
 - **Decision:** fix every confirmed error now. Propose additions 1-6 (about 2-3 days, laptop only) to the owner before any posting. Item 7 decides whether this becomes a result.
+
+### 2026-11-23: real-data checks, additions 1–6 (prereg v7, sealed in 9a090d7)
+- **Owner approval:** the owner approved additions 1–6 ("go ahead ... use aws if u need"). Everything ran on the laptop in under 4 minutes; no AWS was used.
+- **Pre-registered verdicts:**
+  - **Controls (3):** verdict (c), no window. There are 50 near-universal ribosome/tRNA-charging families and 12 photosystem families.
+    - With one shared weight, the ancient set reaches a mean PP of 0.9 only at w ≥ 43,000; the young set stays ≤ 0.1 only up to w ≈ 3,200. At the fitted w, the ancient set's mean is 0.31.
+    - Post hoc, with Moody's own per-category PPs: the ancient set's mean is 0.52. L22, L18 and S4 have PP 0.04, while PsaB (in no archaeon) has 0.89.
+  - **Bayes factor (2):** 75% of real families have BF < 1 (median 0.18). 82% sit in [0.01, 10], against 11% and 20% of simulated root and non-root families. The weight-free count is 1,439, with a bracket of 954–1,916. It transfers poorly from the simulations, so it is reported only as a bracket.
+  - **LOESS (4):** the gate passed (2,659 against 2,657). Proteins are 1,546 at w = 100, 2,638 at ŵ and 4,249 at w = 1,000.
+  - **Unscored families (6):** no undercount flag. Post hoc: 18 of the 20 largest families are unscored, including 20 universal ones. That is at most +20 families, under 2%.
+  - **Csűrös SI (5):** the SI is hosted only on pnas.org, which returns 403, so we stopped there.
+- **Paper:** two new Results subsections, Figures 1–3, a new Methods subsection, an updated abstract and discussion, and NUMBERS.md. One error was caught before commit: a family name written from memory (ATP synthase β) was not in the dropped list. It was replaced with names fetched from KEGG.
+- **Reading:** the real-data checks strengthen the paper's core claim. Per-family evidence is weak, and the weight decides most families. They do not show the total is wrong. Item 7, a regime-matched simulation, is still the deciding test.

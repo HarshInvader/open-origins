@@ -1,6 +1,6 @@
 # The LUCA gene count of Moody et al. (2024) depends almost entirely on one fitted weight
 
-**Draft preprint, 2026-11-23. Not submitted.** Markdown copy; the source of truth is the LaTeX in `luca_root_weight/` (`main.tex`, `main.pdf`). Open Origins, an independent open-science project. All code, data, pre-registrations and their SHA-256 hashes are public (see Data and code).
+**Draft preprint, 2026-11-23. Not submitted.** Markdown copy; the source of truth is the LaTeX in `luca_root_weight/` (`main.tex`, `main.pdf`). Open Origins, an independent open-science project. All code, data, pre-registrations and their SHA-256 hashes are public (see Data and code). **This copy predates the real-data checks added on 2026-11-23 (Sections 2.3–2.4 and Figures 1–3 of the PDF); read `main.pdf`.**
 
 ## Abstract
 Moody et al. (2024) estimated that the last universal common ancestor (LUCA) had about 2,600 genes. Their estimate adds up, over 7,467 gene families, the probability that each family was present in LUCA. These probabilities come from gene-tree reconciliations, scaled by a root weight fitted to the data.

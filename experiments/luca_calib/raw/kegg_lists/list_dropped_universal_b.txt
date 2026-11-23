@@ -1,0 +1,10 @@
+K02016	ABC.FEV.S; iron complex transport system substrate-binding protein
+K02033	ABC.PE.P; peptide/nickel transport system permease protein
+K02034	ABC.PE.P1; peptide/nickel transport system permease protein
+K02035	ABC.PE.S; peptide/nickel transport system substrate-binding protein
+K03574	mutT, NUDT15, MTH2; 8-oxo-dGTP diphosphatase [EC:3.6.1.55]
+K03671	TXN, trxA; thioredoxin
+K03789	rimI; [ribosomal protein S18]-alanine N-acetyltransferase / [ribosomal protein L31]-L-lysine N-acetyltransferase [EC:2.3.1.266 2.3.1.338]
+K07025	K07025; putative hydrolase of the HAD superfamily
+K07090	K07090; uncharacterized protein
+K13993	HSP20; HSP20 family protein

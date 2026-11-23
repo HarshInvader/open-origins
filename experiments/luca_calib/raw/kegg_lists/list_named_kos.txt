@@ -1,0 +1,11 @@
+K02890	RP-L22, MRPL22, rplV; large subunit ribosomal protein L22
+K02881	RP-L18, MRPL18, rplR; large subunit ribosomal protein L18
+K02986	RP-S4, NAM9, rpsD; small subunit ribosomal protein S4
+K01883	CARS, cysS; cysteinyl-tRNA synthetase [EC:6.1.1.16]
+K01874	MARS, metG; methionyl-tRNA synthetase [EC:6.1.1.10]
+K02435	gatC, GATC; aspartyl-tRNA(Asn)/glutamyl-tRNA(Gln) amidotransferase subunit C [EC:6.3.5.6 6.3.5.7]
+K01885	EARS, gltX; glutamyl-tRNA synthetase [EC:6.1.1.17]
+K02864	RP-L10, MRPL10, rplJ; large subunit ribosomal protein L10
+K02690	psaB; photosystem I P700 chlorophyll a apoprotein A2 [EC:1.97.1.12]
+K02689	psaA; photosystem I P700 chlorophyll a apoprotein A1 [EC:1.97.1.12]
+K02703	psbA; photosystem II P680 reaction center D1 protein [EC:1.10.3.9]

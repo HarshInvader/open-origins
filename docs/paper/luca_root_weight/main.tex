@@ -8,6 +8,7 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{lineno}
 \usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage{threeparttable}
 \usepackage{enumitem}
 \setlist{itemsep=2pt,topsep=4pt}
@@ -29,7 +30,7 @@
 
 \begin{abstract}
 \noindent
-\citet{moody2024} estimated that the last universal common ancestor (LUCA) had about 2,600 genes. Their estimate adds up, over about 7,500 gene families, the probability that each family was present in LUCA. These probabilities come from gene-tree reconciliations, scaled by a root weight fitted to the data. We show that this weight sets the count. At the maximum-likelihood weight, the expected count equals the number of families times the fitted prior share of families that originated at the root (17\%). From Moody et al.'s deposited results we recovered each family's probability under ALE's default prior, which places 0.07\% of originations at the root: the same reconciliations then give 34 families instead of 1,291. The data favour the fitted weight strongly, by about 1,100 log-likelihood units, and its 95\% interval moves the count only between 1,238 and 1,347. The estimate is therefore precise, but its accuracy depends on whether ALE's model is right about real gene families, which the likelihood cannot show. We tested the method on simulated genomes with a known ancestor, under pre-registered rules. The first test failed; we traced the failure to a numerical bug in one build of the reconciliation software. With a correct build the method recovered the planted ancestor within the pre-registered band, from both true and inferred gene trees (0.96 to 1.11 of the true count). In these simulations, however, the weight multiplied the count by only 1.4 to 1.9, far from the factor of 38 it applies to the real data. In a simulated world with a small ancestor and intense early gene exchange between the two domains, the method reported an ancestor as large as a big one. These tests neither validate nor refute the 2,600-gene estimate. The deciding test is a simulation in the regime of the real data, where the weight does most of the work.
+\citet{moody2024} estimated that the last universal common ancestor (LUCA) had about 2,600 genes. Their estimate adds up, over about 7,500 gene families, the probability that each family was present in LUCA. These probabilities come from gene-tree reconciliations, scaled by a root weight fitted to the data. We show that this weight sets the count. At the maximum-likelihood weight, the expected count equals the number of families times the fitted prior share of families that originated at the root (17\%). From Moody et al.'s deposited results we recovered each family's probability under ALE's default prior, which places 0.07\% of originations at the root: the same reconciliations then give 34 families instead of 1,291. The data favour the fitted weight strongly, by about 1,100 log-likelihood units, and its 95\% interval moves the count only between 1,238 and 1,347. The estimate is therefore precise, but its accuracy depends on whether ALE's model is right about real gene families, which the likelihood cannot show. Three pre-registered checks on the real data point to weak per-family evidence. For 82\% of families the reconciliations shift the odds of a root origin by a factor between 0.01 and 10, against 11--20\% of simulated families. No single weight gives near-universal ribosomal and tRNA-charging families a mean probability of 0.9 while keeping photosystem families below 0.1. At Moody et al.'s own weights, several ribosomal proteins found in over 93\% of genomes score 0.04, while a photosystem~I protein found in no archaeon scores 0.89. We tested the method on simulated genomes with a known ancestor, under pre-registered rules. The first test failed; we traced the failure to a numerical bug in one build of the reconciliation software. With a correct build the method recovered the planted ancestor within the pre-registered band, from both true and inferred gene trees (0.96 to 1.11 of the true count). In these simulations, however, the weight multiplied the count by only 1.4 to 1.9, far from the factor of 38 it applies to the real data. In a simulated world with a small ancestor and intense early gene exchange between the two domains, the method reported an ancestor as large as a big one. These tests neither validate nor refute the 2,600-gene estimate. The deciding test is a simulation in the regime of the real data, where the weight does most of the work.
 \end{abstract}
 
 \section{Introduction}
@@ -45,9 +46,14 @@
 
 \paragraph{The weight.} ALE's default prior treats the root like any other branch when a family first appears. \citet{coleman2021} introduced a weight, $w$, that makes a family more or less likely to have originated at the root. \citet{moody2024} fitted $w$ by maximum likelihood, separately for each functional category of genes. A larger $w$ raises every family's probability of being in LUCA.
 
-\paragraph{Why this could matter.} Maximum likelihood finds the weight that fits the data best under ALE's model. If the model fits real gene families poorly, the best-fitting weight can still be wrong, and a wrong weight carries straight into the count. Others have pointed at this sensitivity. \citet{csuros2026} states that Moody et al.'s reconciliations result in ``a last universal common ancestor (LUCA) with only 45 genes'' (his SI Fig.~S41); his main text does not give the derivation, and we have not read his SI. \citet{szollosi2026} report that, for an archaeal root, not optimising the root weight ``greatly reduced'' the number of root families. In a related exchange on gene-count models, \citet{szollosi2026letter} showed that the reconstructed size of the archaeal ancestor changes 2.6-fold with one modelling choice, a minimum family size, with no plateau; \citet{gagnon2026} replied that the threshold guards against model misfit. Neither paper measures how much of Moody et al.'s count the root weight carries, and neither tests whether the fitted weight recovers a known ancestor.
+\paragraph{Why this could matter.} Maximum likelihood finds the weight that fits the data best under ALE's model. If the model fits real gene families poorly, the best-fitting weight can still be wrong, and a wrong weight carries straight into the count. Others have pointed at this sensitivity. \citet{csuros2026} states that Moody et al.'s reconciliations result in ``a last universal common ancestor (LUCA) with only 45 genes'' (his SI Fig.~S41); his main text does not give the derivation, and we could not access his SI, which is hosted only on the publisher's site. \citet{szollosi2026} report that, for an archaeal root, not optimising the root weight ``greatly reduced'' the number of root families. In a related exchange on gene-count models, \citet{szollosi2026letter} showed that the reconstructed size of the archaeal ancestor changes 2.6-fold with one modelling choice, a minimum family size, with no plateau; \citet{gagnon2026} replied that the threshold guards against model misfit. Neither paper measures how much of Moody et al.'s count the root weight carries, and neither tests whether the fitted weight recovers a known ancestor.
 
-\paragraph{What we did.} We make two contributions. First, an exact decomposition of Moody et al.'s count into the evidence from the reconciliations and the contribution of the fitted weight (Section~\ref{sec:decomp}). Second, pre-registered tests on simulated genomes with a known ancestor, asking whether the fitted weight recovers it (Sections~\ref{sec:sim}--\ref{sec:stem}). We did not recompute the final 2,600-protein figure, which follows from the family count by Moody et al.'s regression.
+\paragraph{What we did.} We make three contributions.
+\begin{enumerate}
+  \item An exact decomposition of Moody et al.'s count into the evidence from the reconciliations and the contribution of the fitted weight, carried through to the protein count by Moody et al.'s own regression (Section~\ref{sec:decomp}).
+  \item Pre-registered checks of the per-family probabilities on the real data, against known-ancient and known-young families (Sections~\ref{sec:controls}--\ref{sec:bf}).
+  \item Pre-registered tests on simulated genomes with a known ancestor, asking whether the fitted weight recovers it (Sections~\ref{sec:sim}--\ref{sec:stem}).
+\end{enumerate}
 
 \section{Results}
 
@@ -84,10 +90,47 @@ Default prior ($w = 1$) & 33.9 & 1 & 2 \\
 \end{tabular}
 \end{table}
 
+The count has no plateau in $w$ (Figure~\ref{fig:dose}a). A weight of 100 gives 830 families and a weight of 1,000 gives 2,022. Carried through Moody et al.'s regression of protein count on family count, these give 1,546 and 4,249 proteins, against 2,638 at the fitted weight (Figure~\ref{fig:dose}b). Our reimplementation of that regression reproduces their figure: it predicts 2,659 proteins at their family count of 1,298.25, against their 2,657.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_dose.pdf}
+\caption{The count follows the root weight. (a) Expected number of LUCA families (sum of PPs; line, median over Moody et al.'s five runs; band, range over runs) and the number with $\PP \ge 0.5$, for one weight applied to all families. The top axis gives the share of originations the prior places at the root. Dashed line: the fitted weight ($\hat w \approx 293$, a prior root share of 17\%). (b) The protein count predicted from the family count in (a) by our reimplementation of Moody et al.'s LOESS regression on 700 modern genomes. Counts below the smallest modern genome in that set (161 families) are not predicted.}
+\label{fig:dose}
+\end{figure}
+
 \subsection{The data pin the weight down tightly}
 The count is not an artefact of an arbitrary choice. The data reject the default prior: across the five runs the log-likelihood rises by 1,089--1,166 units from $w = 1$ to the best-fitting shared weight. The 95\% likelihood interval for the shared weight is narrow ($\log w$ of 5.58--5.77 in every run), and across it the count stays between 1,238 and 1,347.
 
-The estimate is therefore precise. Precision is not accuracy. The likelihood shows which weight fits best under ALE's model; it cannot show whether that weight recovers the true ancestor when the model is wrong about real families. Only a test with a known answer can.
+The estimate is therefore precise. Precision is not accuracy. The likelihood shows which weight fits best under ALE's model; it cannot show whether that weight recovers the true ancestor when the model is wrong about real families. A test with a known answer is needed. The next two sections use real families whose answer is known; the rest use simulations.
+
+\subsection{No single weight separates known-ancient from known-young families}\label{sec:controls}
+If the per-family probabilities were calibrated, some weight would give families that every biologist places in LUCA a high probability and families that arose long after LUCA a low one. We pre-registered this check. As known-ancient families we took the 50 scored families in KEGG's ribosome and aminoacyl-tRNA biosynthesis maps that occur in at least half of the archaeal and half of the bacterial genomes. As known-young families we took the 12 scored families in KEGG's photosystem~I and II modules, since oxygenic photosynthesis arose within bacteria. The rule asked for a weight at which the ancient set averages $\PP \ge 0.9$ and the young set $\PP \le 0.1$.
+
+There is no such weight (Figure~\ref{fig:controls}), so the pre-registered verdict is that these probabilities cannot separate the two sets at any single weight. The ancient set reaches a mean of 0.9 only above $w \approx 43{,}000$, where the prior places 97\% of originations at the root. The young set stays below 0.1 only up to $w \approx 3{,}200$. At the fitted weight the ancient set averages 0.31.
+
+Moody et al.\ fitted a separate weight for each functional category, and translation families received some of the largest. We therefore also read their own deposited probabilities (a check added after the pre-registered one). The ancient set then averages 0.52; 28 of the 50 families reach 0.5 and 8 reach 0.9. The large-subunit ribosomal proteins L22 and L18 and the small-subunit protein S4 each occur in 93--95\% of archaeal and 99--100\% of bacterial genomes, yet each has $\PP = 0.04$. Among the photosystem families, eleven score below 0.01, but the photosystem~I core protein PsaB, found in no archaeal genome and in 4\% of bacterial ones, scores 0.89. The sum over all families can still be right if such errors cancel, as they partly did in our simulations (Section~\ref{sec:sim}). But individual probabilities on real data are not reliable at either end.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.68\textwidth]{figures/fig3_controls.pdf}
+\caption{Known-ancient and known-young families under one shared weight. Mean $\PP$ (per-family median over runs) of 50 near-universal ribosome and tRNA-charging families and of 12 photosystem families. Shaded bands: the pre-registered targets ($\ge 0.9$ for the ancient set, $\le 0.1$ for the young set). No weight meets both. Dashed line: the fitted weight.}
+\label{fig:controls}
+\end{figure}
+
+\subsection{Most real families carry weak evidence about the root}\label{sec:bf}
+The weight multiplies everyone's odds equally, so what separates families is the evidence from the reconciliation. We measured it as a Bayes factor, $r(N-1)$: the factor by which the gene trees change the odds that a family originated at the root rather than on an average other branch. Unlike the probability, it does not depend on the prior or on tree size, so it can be compared directly between the real data and our simulations.
+
+The evidence in the real data is weak (Figure~\ref{fig:bf}). For 75\% of real families the Bayes factor is below 1, with a median of 0.18. For 82\%, it lies between 0.01 and 10. In our simulations, families that truly originated at the root had a median Bayes factor of about 1,800, and most other families fell below $10^{-4}$. Only 11\% and 20\% of them, respectively, fell between 0.01 and 10. In the simulations, the reconciliations sort most families decisively and the weight only adjusts the total. In the real data, most families sit in the zone where the weight decides.
+
+As pre-registered, we also counted real families above the Bayes factor that best classified the simulated families (2.2; balanced accuracy 0.92 in the simulations). This gives 1,439 families, and 954--1,916 across the thresholds of individual simulations. This count does not use the weight, and it brackets Moody et al.'s 1,291. However, the threshold falls where real families are dense and simulated ones sparse, so it transfers poorly. We report the count as a bracket, not as an estimate.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.68\textwidth]{figures/fig2_bf.pdf}
+\caption{Evidence for a root origin in real and simulated families. Distribution of the $\log_{10}$ Bayes factor $r(N-1)$ for the 7,456 real families (median over runs) and for families from all 16 of our simulations with true gene trees, split by whether they truly originated at the root. Values below $-4$ are not drawn; the legend gives their share. Dashed line: the threshold that best classifies the simulated families.}
+\label{fig:bf}
+\end{figure}
 
 \subsection{In simulations, the method recovers a known ancestor}\label{sec:sim}
 We simulated genome evolution with Zombi \citep{davin2020} from an ancestor of 200 gene families, then ran Moody et al.'s pipeline: ALE reconciliation followed by a fitted root weight. We score each run by $R$, the expected count divided by the true number of ancestral families still present in the sampled genomes. $R = 1$ is perfect; the pre-registered pass band was 0.8 to 1.25.
@@ -139,7 +182,7 @@ The right total partly comes from errors that cancel. Probability placed on fami
 \subsection{The simulations are an easier case than the real data}\label{sec:regime}
 In every simulation that tested recovery, the reconciliations alone already did most of the work. Under the default prior the simulated count was 46--76\% of the true ancestor, and the fitted weight then multiplied it by only 1.4 to 1.9. In the real data, the default-prior count is 2.6\% of Moody et al.'s fitted count, and the weight multiplies it by 38.
 
-Part of this gap is tree size. The default prior spreads origins over $2n - 1$ branches: 79--639 in our simulations against 1,399 in Moody et al.'s tree. So the multiplier is expected to grow with the number of genomes, and the two numbers are not directly comparable.
+Part of this gap is tree size. The default prior spreads origins over $2n - 1$ branches: 79--639 in our simulations against 1,399 in Moody et al.'s tree. So the multiplier is expected to grow with the number of genomes, and the two numbers are not directly comparable. The Bayes factor removes this effect, and it shows the same gap (Section~\ref{sec:bf}). Simulated families carry decisive evidence one way or the other; most real families do not.
 
 Our tests therefore show the fitted weight working when it makes a small correction, in simulations closely matched to ALE's model. They say nothing about a 38-fold correction. The real gene families behave differently under ALE's model from our simulated ones. That is consistent with the model misfit \citet{csuros2026} argues for, but our tests do not examine it.
 
@@ -169,11 +212,13 @@ This result has three limits. The adversary is extreme: stem transfer was 115--6
 
 \paragraph{The count is a fitted weight times weak evidence.} At the fitted weight, Moody et al.'s family count is the number of families times a fitted share of root originations (17\%). The gene trees alone, under ALE's default prior, support only 34 families. The data support the fitted share strongly. The open question is whether ALE's model describes real gene families well enough for that share to be accurate.
 
+\paragraph{On the real data, the per-family probabilities are unreliable.} Near-universal ribosomal proteins can score 0.04 and a photosystem protein absent from archaea 0.89, and no single weight separates the two sets. Three quarters of real families carry evidence against a root origin, mostly weak. Moody et al.'s count is therefore best read as a fitted share of root originations applied to many weakly informative families, not as a sum of confident calls. A list of ``LUCA genes'' drawn from these probabilities, family by family, should be treated with more caution than the total.
+
 \paragraph{Our tests check self-consistency, not the real estimate.} In simulations the fitted weight recovers a known ancestor from true and from inferred gene trees, but there it makes a correction of under two-fold, not 38-fold. Our tests therefore neither validate nor refute the 2,600-gene estimate.
 
 \paragraph{The method has a blind spot.} Gene trees cannot separate ``present in LUCA'' from ``born just after LUCA and exchanged early between the domains''. If early exchange was intense, the method would report a large LUCA either way.
 
-\paragraph{A practical warning for ALE users.} ALE builds with a 64-bit \texttt{long double}, such as those for Apple-silicon Macs, fail on very large gene families, and those families are disproportionately ancient. A pipeline that drops them silently will undercount the ancestor. The Linux x86-64 build, the platform Moody et al.\ used, failed far less often in our runs, but not never: 1 of 1,411 families at 160 genomes per domain (the largest, a true ancestral family) and 4 of 899 in one small-ancestor world. Pipelines should report every failed family.
+\paragraph{A practical warning for ALE users.} ALE builds with a 64-bit \texttt{long double}, such as those for Apple-silicon Macs, fail on very large gene families, and those families are disproportionately ancient. A pipeline that drops them silently will undercount the ancestor. The Linux x86-64 build, the platform Moody et al.\ used, failed far less often in our runs, but not never: 1 of 1,411 families at 160 genomes per domain (the largest, a true ancestral family) and 4 of 899 in one small-ancestor world. Pipelines should report every failed family. In Moody et al.'s deposited results, 18 of the 20 largest families with sequence files, and 27 of the 41 with at least 1,000 sequences, have no probability in any of the five runs (a check added after our pre-registered one). Twenty of these occur in at least half of the archaeal and half of the bacterial genomes. Among them are GMP synthase, thioredoxin and several ABC transporter families. We do not know whether they were excluded by design or failed. Even if all twenty were in LUCA they would add at most 20 families, under 2\% of the count, so the pre-registered rule did not flag an undercount. Of the 1,915 unscored families in all, 1,653 have three or fewer sequences; the smallest scored family has four.
 
 \paragraph{Two tests would settle more.} The first is a simulation in the regime of the real data, where the evidence alone gives only a few percent of the fitted count. This needs more genomes, many more rare families and realistic alignment lengths. If the fitted weight still recovers the ancestor there, that supports Moody et al.; if it does not, it undermines the estimate. The second is a bound on how intense early exchange would need to be, compared with the inter-domain transfer that Moody et al.'s own reconciliations imply.
 
@@ -183,6 +228,16 @@ This result has three limits. The adversary is extreme: stem transfer was 115--6
 
 \subsection{Decomposition}
 Moody et al.'s reweighting changes only the root prior, by $w = \exp(O_R)$. For families assigned to one functional category, $r = \PP / ((1 - \PP)\,w)$. For families in two categories, where the deposited $\PP$ is the mean over both weights, we solved for $r$ by bisection. All 7,456 families common to the five runs were scored. We used the five deposited runs (files \texttt{kegg\{1-5\}\_cons.txt} and \texttt{KEGG\{1-5\}\_OR.csv}, figshare 24428659), took the median over runs for each family, and summed. A planted check on synthetic files recovered both sums to 12 significant figures. The likelihood interval used the same likelihood as Moody et al.'s fitting script. The analysis was pre-registered before it was run.
+
+\subsection{Checks on the real data}
+These checks were pre-registered (\texttt{docs/prereg/luca\_realdata\_v7.md}) after the KEGG lists were downloaded and before any of them was matched to a probability. The scope was one weight shared by all families, with per-family medians over the five runs.
+\begin{itemize}
+  \item \textbf{Control sets.} Family lists for maps map03010 and map00970 and modules M00161 and M00163 came from the KEGG REST service on 23 November 2026. Domain occupancy is the share of Moody et al.'s 350 archaeal and 350 bacterial genomes that carry the family in its sequence file.
+  \item \textbf{Bayes factors in simulations.} For simulated families, $r$ came from the default-prior probability, and $N$ from the sampled species tree. Families that ALE did not complete were excluded.
+  \item \textbf{Threshold.} The threshold maximised balanced accuracy over all simulated families pooled.
+  \item \textbf{Protein regression.} We reimplemented R's \texttt{loess} with its defaults (span 0.75, local quadratic, tricube weights), fitted on Moody et al.'s table of 700 genomes. The pre-registered gate, agreement within 1\% with their 2,657 proteins, was passed.
+  \item \textbf{Unscored families.} We compared the families with a sequence file but no probability against the scored ones, under a pre-registered rule. The size ranking and the per-family readings of Moody et al.'s own probabilities were added afterwards and are labelled as such in the text.
+\end{itemize}
 
 \subsection{Simulations with true gene trees}
 Zombi simulated a species tree, then genome evolution along the complete tree including extinct lineages, from an ancestor of 200 families. Rates were duplication 0.2, transfer 0.2 or 0.4, loss 1.0 and origination 40, with lognormal per-family rates ($\sigma = 0.5$). We sampled 20, 40 or 80 genomes per domain. Each family's true gene tree was reconciled with ALE against the sampled species tree, followed by Moody et al.'s root reweighting with one global $O_R$ in $[1, 20]$. The pre-registered decision was that $R$ outside 0.8--1.25 at 80 genomes per domain and transfer 0.4 means the estimator is biased even without gene-tree error. All amendments made before the decision were based on timing or crash logs, before any score was read.
