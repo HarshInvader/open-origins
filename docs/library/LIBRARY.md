@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-23. 157 papers: 101 read in full, 56 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-23. 159 papers: 101 read in full, 58 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -9,10 +9,10 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 ## Topics
 - [Building blocks](#building-blocks) (17)
 - [From space](#from-space) (12)
-- [LUCA and the tree of life](#luca-and-the-tree-of-life) (42)
+- [LUCA and the tree of life](#luca-and-the-tree-of-life) (43)
 - [RNA world](#rna-world) (38)
 - [Telling life apart](#telling-life-apart) (20)
-- [Vents and first cells](#vents-and-first-cells) (28)
+- [Vents and first cells](#vents-and-first-cells) (29)
 
 ## Papers that bear on a current study's plan
 
@@ -675,6 +675,17 @@ Liu M, Moody ERR, Blades F, Puente-Lelievre C, Chen KE, Stephens EJ, Michie KA, 
 - **Key results.** Bacterial and archaeal COMMD-like proteins form homo-oligomeric rings of eight or ten subunits. Closest relatives of eukaryotic COMMD are in Myxococcota bacteria; COMMD genes likely came from one bacterial gene acquired early in eukaryotic evolution and duplicated.
 - **Limits.** (abstract only) About eukaryote origins, not LUCA.
 - **Ideas for us.** Shows the 3Di structural alphabet helping deep phylogenies (also used by Wehbi et al.); an option for gene trees of very divergent families if #32 ever needs real-data gene trees.
+
+### Kinetic windows for abiogenesis
+
+Mojzsis SJ, Medvegy A, Kremer B (2026). *bioRxiv (preprint)*. [doi:10.64898/2026.11.20.768022](https://doi.org/10.64898/2026.11.20.768022). `mojzsis-2026-kinetic-windows-abiogenesis` · context · abstract only · touches #32
+
+- **Question.** How long could the step from non-living chemistry to life have taken on the Hadean Earth, and do Earth's conditions stand out from other Solar System candidates?
+- **Tried.** Parameterise 'kinetic windows' for abiogenesis between the end of heavy late accretion (about 4.4 Ga) and the earliest evidence for life and LUCA.
+- **Method and data.** Synthesis and parameterisation of the published timeline: late accretion, molecular-clock LUCA ages, isotopic and morphological biosignatures, and planetary conditions (water, wet-dry cycling, crustal recycling, element supply, concentration). Details of the model are not in the abstract.
+- **Key results.** Restates a LUCA median age near 4.2 Ga from molecular clocks; cryptic isotopic biosignatures as old as 4.1 Ga in Hadean zircons, more robust ones at about 3.83 Ga; microfossils and microbial structures around 3.5 Ga. Concludes an RNA and RNP world before LUCA could have lasted less than 130 Myr, and that an RNA-only biosphere would eventually have gone extinct had DNA life not arisen. (abstract only)
+- **Limits.** Preprint, abstract only: the bioRxiv JATS file returned HTTP 429 (rate limit) and was not retried around. The 130 Myr bound repeats the authors' own Abramov et al. 2026 result and depends on taking a ~4.2 Ga LUCA as given; it inherits the clock uncertainty. Mostly qualitative argument.
+- **Ideas for us.** Context for #32. The 'under 130 Myr' window is a ceiling built on a ~4.2 Ga LUCA with a large genome. If #32 shows the LUCA size estimate is prior-dominated, the 'compressed time' argument loses one support; note the dependency when we write up K5. No new test.
 
 ### Archaeal Genes Code for GGDEF Domain Proteins With Diguanylate Cyclase Activity
 
@@ -1461,6 +1472,17 @@ Khanal, Fracassi, Harjung, Burkart, Devaraj (2026). *Nature Communications 17:69
 - **Key results.** Lipid bilayer vesicles form de novo, without pre-existing membranes, from acetate and cysteine; lipid tails are built by soluble enzymes; glycolipid compartments hold proton gradients.
 - **Limits.** Uses enzymes, so it addresses membrane heredity, not a prebiotic route. Full text: Soluble enzymes are modern purified ones (E. coli ACS, human ACC, C. glutamicum FAS) fed ATP, CoA, NADPH, HCO3-; headgroup attached non-enzymatically by native chemical ligation; the glycolipid used a synthetic galactosaminothiol headgroup; it lost 19 +/- 7% of the pH gradient over 12 h vs 83% for the cysteine lipid.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+
+### Hydrothermal minerals expand the accessible prebiotic chemical space: Insights from computational reaction networks
+
+Li C, Guo J, An S, Bai X, Li Y (2026). *PNAS Nexus*. [doi:10.1093/pnasnexus/pgag405](https://doi.org/10.1093/pnasnexus/pgag405). `li-2026-mineral-crn-hydrothermal` · useful · abstract only · touches #4, #6, #23
+
+- **Question.** How do hydrothermal minerals change what a prebiotic reaction network can make?
+- **Tried.** Add experimentally reported mineral-promoted reactions to a classical prebiotic reaction network and compare reachable targets and route lengths with and without minerals.
+- **Method and data.** Six-layer computational mineral-promoted chemical reaction network (M-CRN); machine-learning-assisted pathway enumeration plus thermodynamic assessment; targets are 26 intermediates of five proposed primordial metabolic cycles and 10 amino acids.
+- **Key results.** The M-CRN holds 114,476 molecules. Against the network without minerals it gives more than twice as many enumerated pathways for 12 targets, reaches 14 targets that were otherwise unreachable, and shortens routes to 4 targets. Metal sulfides broaden the carbon sources for fixation and chain elongation; under modelled Miller-type conditions mineral-promoted reactions are more frequent than the corresponding non-mineral ones. (abstract only)
+- **Limits.** Abstract only: the OUP article page and PDF returned HTTP 403 and Europe PMC was down (503). Adding reactions to a network always adds pathways, so 'more routes' needs a null: a size-matched set of random added reactions. Reachability is not yield; concentrations and rates are not modelled per the abstract.
+- **Ideas for us.** Same shape of claim as Xavier 2020 and Goldford 2017, where our #6 RAF null found the headline inside its null. Test: if their network and mineral reaction list are deposited, add an equal number of degree-matched random reactions and ask whether the mineral set reaches more targets than chance (the #6/#23 null). For the vent step table (#4), metal-sulfide carbon-fixation rows could cite it, scored 'computational only'.
 
 ### The diverse effects of side reactions on the persistence of autocatalytic cycles
 

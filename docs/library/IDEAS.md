@@ -105,3 +105,13 @@ Ranked by how much each one would tell us per unit of work, and by whether it be
 - **What's untested.** Whether the nucleotide, divalent-cation and diol concentrations they need fit our supply rows. The full text is needed first (bioRxiv blocked our client).
 - **Open data.** None yet.
 - **Current study.** Pathway map. Score as "preprint, one lab" until replicated.
+
+## Added 2026-11-23 (paper watch)
+
+### 11. A size-matched null for "minerals expand prebiotic chemistry" (bears on #6/#23, #4)
+
+- **Source.** Li, Guo et al. 2026, PNAS Nexus, doi:10.1093/pnasnexus/pgag405 (abstract only). Adding mineral-promoted reactions to a 114,476-molecule network more than doubled the pathways to 12 targets and reached 14 targets that were otherwise unreachable.
+- **The idea.** Adding reactions always adds routes. Add the same number of random, degree-matched reactions instead of the mineral set, and ask whether the mineral set reaches more targets than that null. This is the same null our #6 RAF test applied to Xavier 2020.
+- **What's untested.** Whether the mineral effect beats a size-matched random addition.
+- **Open data.** Needs their network and the list of mineral reactions; check the full text and supplement for a deposit first.
+- **Current study.** No change to K5. A cheap follow-on to #6/#23 if the data are deposited.

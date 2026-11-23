@@ -4690,6 +4690,66 @@
    "source_opened": "Crossref metadata",
    "changes_plan": "",
    "imported": true
+  },
+  {
+   "id": "mojzsis-2026-kinetic-windows-abiogenesis",
+   "title": "Kinetic windows for abiogenesis",
+   "authors": "Mojzsis SJ, Medvegy A, Kremer B",
+   "year": 2026,
+   "venue": "bioRxiv (preprint)",
+   "doi": "10.64898/2026.11.20.768022",
+   "url": "https://doi.org/10.64898/2026.11.20.768022",
+   "kind": "Preprint",
+   "topic": "LUCA and the tree of life",
+   "read_depth": "abstract",
+   "question": "How long could the step from non-living chemistry to life have taken on the Hadean Earth, and do Earth's conditions stand out from other Solar System candidates?",
+   "tried": "Parameterise 'kinetic windows' for abiogenesis between the end of heavy late accretion (about 4.4 Ga) and the earliest evidence for life and LUCA.",
+   "method_data": "Synthesis and parameterisation of the published timeline: late accretion, molecular-clock LUCA ages, isotopic and morphological biosignatures, and planetary conditions (water, wet-dry cycling, crustal recycling, element supply, concentration). Details of the model are not in the abstract.",
+   "key_results": "Restates a LUCA median age near 4.2 Ga from molecular clocks; cryptic isotopic biosignatures as old as 4.1 Ga in Hadean zircons, more robust ones at about 3.83 Ga; microfossils and microbial structures around 3.5 Ga. Concludes an RNA and RNP world before LUCA could have lasted less than 130 Myr, and that an RNA-only biosphere would eventually have gone extinct had DNA life not arisen. (abstract only)",
+   "limits": "Preprint, abstract only: the bioRxiv JATS file returned HTTP 429 (rate limit) and was not retried around. The 130 Myr bound repeats the authors' own Abramov et al. 2026 result and depends on taking a ~4.2 Ga LUCA as given; it inherits the clock uncertainty. Mostly qualitative argument.",
+   "ideas_for_us": "Context for #32. The 'under 130 Myr' window is a ceiling built on a ~4.2 Ga LUCA with a large genome. If #32 shows the LUCA size estimate is prior-dominated, the 'compressed time' argument loses one support; note the dependency when we write up K5. No new test.",
+   "touches": [
+    "#32"
+   ],
+   "relevance": "context",
+   "in_news": false,
+   "added": "2026-11-23",
+   "verified": true,
+   "date": "2026-11-23",
+   "source_opened": "api.biorxiv.org record (abstract, licence CC BY); JATS full text returned 429",
+   "changes_plan": "",
+   "imported": false
+  },
+  {
+   "id": "li-2026-mineral-crn-hydrothermal",
+   "title": "Hydrothermal minerals expand the accessible prebiotic chemical space: Insights from computational reaction networks",
+   "authors": "Li C, Guo J, An S, Bai X, Li Y",
+   "year": 2026,
+   "venue": "PNAS Nexus",
+   "doi": "10.1093/pnasnexus/pgag405",
+   "url": "https://doi.org/10.1093/pnasnexus/pgag405",
+   "kind": "Paper",
+   "topic": "Vents and first cells",
+   "read_depth": "abstract",
+   "question": "How do hydrothermal minerals change what a prebiotic reaction network can make?",
+   "tried": "Add experimentally reported mineral-promoted reactions to a classical prebiotic reaction network and compare reachable targets and route lengths with and without minerals.",
+   "method_data": "Six-layer computational mineral-promoted chemical reaction network (M-CRN); machine-learning-assisted pathway enumeration plus thermodynamic assessment; targets are 26 intermediates of five proposed primordial metabolic cycles and 10 amino acids.",
+   "key_results": "The M-CRN holds 114,476 molecules. Against the network without minerals it gives more than twice as many enumerated pathways for 12 targets, reaches 14 targets that were otherwise unreachable, and shortens routes to 4 targets. Metal sulfides broaden the carbon sources for fixation and chain elongation; under modelled Miller-type conditions mineral-promoted reactions are more frequent than the corresponding non-mineral ones. (abstract only)",
+   "limits": "Abstract only: the OUP article page and PDF returned HTTP 403 and Europe PMC was down (503). Adding reactions to a network always adds pathways, so 'more routes' needs a null: a size-matched set of random added reactions. Reachability is not yield; concentrations and rates are not modelled per the abstract.",
+   "ideas_for_us": "Same shape of claim as Xavier 2020 and Goldford 2017, where our #6 RAF null found the headline inside its null. Test: if their network and mineral reaction list are deposited, add an equal number of degree-matched random reactions and ask whether the mineral set reaches more targets than chance (the #6/#23 null). For the vent step table (#4), metal-sulfide carbon-fixation rows could cite it, scored 'computational only'.",
+   "touches": [
+    "#4",
+    "#6",
+    "#23"
+   ],
+   "relevance": "useful",
+   "in_news": false,
+   "added": "2026-11-23",
+   "verified": true,
+   "date": "2026-11-23",
+   "source_opened": "Crossref metadata and deposited abstract (licence CC BY-NC); publisher page and PDF returned 403",
+   "changes_plan": "",
+   "imported": false
   }
  ]
 }
