@@ -85,3 +85,11 @@ The first c7a.8xlarge spot machine was gone about 9.5 h into its 24 h booking (s
 - **Seed 2 stopped:** its root-birth occupancy check fails (0.120 against 0.111), so under v6 K5 stops for seed 2. K5 runs on seeds 1 and 3, and a λ level is read only if both match.
 - **Red-team note, not a rule change:** these are 24 tests at α = 0.05, so about one failure is expected even from a perfect simulator. On seed 2, stemsim's root families are about 4% less widespread than Zombi's (mean occupancy 81.3 against 84.8). One possible cause is Zombi's genome-size floor, which stemsim lacks.
 - **Process note:** tuning was first started as six detached processes. That broke the 3-worker cap and the no-detach rule. They were killed before finishing, their output was deleted unread, and tuning was rerun as a tracked job with 3 at a time.
+
+## 17. Second K3 machine lost; seeds 2-3 inferred arms re-run; K4 n320 not run (2026-11-23, before any seed 2-3 inferred score was read)
+- AWS reclaimed origins-k3b (spot, "no capacity") at 08:50 UTC, 3 h before its booked end.
+  - The last pull (about 07:55) had the true-tree arms of seeds 2-3 and K4 n160 (scored). It did not have the seed 2-3 inferred-tree output, which was then in its last few IQ-TREE runs.
+  - K4 n320 was still simulating and is lost.
+- Seeds 2-3 are re-run from scratch on origins-k3c (c7a.8xlarge, 5 h, $5.12 booked; $45.42 of $50 for the month). The scripts are unchanged and the seeds are the same, so the simulations are the same. This time results are pulled every 10 minutes.
+- K4: under v5d, the scaling rule is applied at n160, labelled as such; n320 is reported as not run.
+- K4 n160: ALE failed on 1 of 1,411 families (family 46, a root family with 1,853 genes). Under the v5e completion clause the cell is inconclusive. R is reported with the failed family counted both ways (1.100 / 1.105).

@@ -118,3 +118,11 @@ Checked by a subagent; every source was opened. Davín 2018, Berkemer & McGlynn 
   - The topology split does not separate stem-born families from root families.
   - The site entry uses Fable's cautious wording.
   - Not run yet: a realism bound (stem exchange against the inter-domain transfer implied by Moody's reconciliations), and a tight match under a new prereg.
+
+### 2026-11-23: prior-art check resolved (Szöllősi et al. 2026)
+- **Sources:** bioRxiv still returns 429 on the full text, so I did not retry. The abstract was re-read through the bioRxiv API (v1 and v2), alongside our existing library entry `szollosi-2026-gene-content-grammar`, which covers the first 100k characters read on 2026-11-19.
+- **What it does:** the preprint tests its denoiser on real GTDB genomes with errors injected on purpose (false negatives 0-0.9, false positives 0.01). It holds out whole phyla for testing. It does not simulate evolution and run reconciliation against a known ancestor.
+- **The unverified ECE claim:** the "ECE ≈ 0.24 for raw reconciliation" figure from the earlier search summary does not appear in anything we have read. It is treated as unsupported.
+- **Our contrast:** the preprint *assumes* deep-node reconciliation false-negative rates of 0.5-0.9. In K3's known-truth simulations, missed root mass is 0.07-0.13 of the true count, on both true and inferred trees.
+  - Our setting is idealized (correct model, 40-80 genomes per domain), so this is a contrast in one regime, not a refutation.
+- **Decision:** we may say that no known-truth calibration test of root-presence posteriors was found among the papers checked. No broader novelty claim.
