@@ -95,3 +95,10 @@ Decision log for the main study. Each entry gives the advice we got (Fable, per 
 - The origins-k4 spot machine was reclaimed about 5 minutes into simulating; nothing had been scored.
 - The n160 and n320 true-tree lanes were restarted on the K3 machine (origins-k3b), which had spare cores.
 - w80, which v5e relabelled a robustness check, was dropped to stay inside the budget. That is $40.30 booked of $50, against estimates; actual spend is lower. See DEVIATIONS 15.
+
+### 2026-11-23: prior art for the calibration finding
+Checked by a subagent; every source was opened. Davín 2018, Berkemer & McGlynn 2020, Menet 2022, Williams 2017, Williams 2023, Morel 2024 (AleRax), Tricou 2022, Szöllősi 2013, Moody 2024, Coleman 2021 and Gàlvez-Morante 2024 (Dollo) were checked. None measures per-family root-presence accuracy, or the calibration of root posteriors, on known-truth reconciliation simulations.
+- **Closest work:** Szöllősi, Spang, Boussau and Williams 2026 (bioRxiv 10.64898/2026.09.03.749268). It reports reliability and ECE for a denoiser on artificially corrupted extant genomes, and it *assumes* deep-node reconciliation errors are mostly false negatives.
+  - A search-engine summary credits it with an ECE of about 0.24 for raw reconciliation output. **This is not verified.** bioRxiv returned 429, and the full text has not been read.
+  - Our K3 ECE is 0.01-0.03 on known-truth simulations, with about 9% false calls at PP ≥ 0.5.
+- **Decision:** do not claim novelty until that preprint's full text is read. Adding the new papers to the library.

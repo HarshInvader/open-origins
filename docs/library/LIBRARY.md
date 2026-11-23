@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-21. 152 papers: 96 read in full, 56 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-23. 157 papers: 101 read in full, 56 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -9,7 +9,7 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 ## Topics
 - [Building blocks](#building-blocks) (17)
 - [From space](#from-space) (12)
-- [LUCA and the tree of life](#luca-and-the-tree-of-life) (37)
+- [LUCA and the tree of life](#luca-and-the-tree-of-life) (42)
 - [RNA world](#rna-world) (38)
 - [Telling life apart](#telling-life-apart) (20)
 - [Vents and first cells](#vents-and-first-cells) (28)
@@ -378,6 +378,17 @@ Szöllősi GJ, Williams TA (2026). *PNAS 123(31):e2618431123*. [doi:10.1073/pnas
 - **Limits.** A letter; no simulation of reconciliation accuracy.
 - **Ideas for us.** Both sides assert the sign of the bias without a planted answer; #32 provides one for the reconciliation side.
 
+### Dollo Parsimony Overestimates Ancestral Gene Content Reconstructions
+
+Gàlvez-Morante A, Guéguen L, Natsidis P, Telford MJ, Richter DJ (2024). *Genome Biol Evol (2024), evae062*. [doi:10.1093/gbe/evae062](https://pmc.ncbi.nlm.nih.gov/articles/PMC10995720/). `galvez-morante-2024-dollo-overestimates` · core · full text · touches #32
+
+- **Question.** Does Dollo parsimony give accurate ancestral gene counts?
+- **Tried.** Compare reconstructed ancestral gene totals with the truth in simulations.
+- **Method and data.** Simulated gene content with a known ancestor; Dollo parsimony and other counting methods.
+- **Key results.** Dollo parsimony overestimates ancestral gene content. Accuracy is judged on totals per node, not on individual families.
+- **Limits.** Does not test reconciliation methods such as ALE, and does not check calibration of per-family probabilities.
+- **Ideas for us.** Closest known-truth test of ancestral gene content. Ours differs: it scores ALE root posteriors family by family, with a reliability curve and ECE.
+
 ### AleRax: a tool for gene and species tree co-estimation and reconciliation under a probabilistic model of gene duplication, transfer, and loss
 
 Morel B, Williams TA, Stamatakis A, Szöllősi GJ (2024). *Bioinformatics 40(4)*. [doi:10.1093/bioinformatics/btae162](https://doi.org/10.1093/bioinformatics/btae162). `morel-2024-alerax` · core · full text · touches #32
@@ -504,6 +515,17 @@ Moody, Alvarez-Carretero, Mahendrarajah, ... Lenton, Donoghue (2024). *Nature Ec
 - **Limits.** Correct. Full text: Point estimates are 2.75 Mb (2.49-2.99) and 2,657 proteins (2,451-2,855), from integrating gene-presence probabilities, many of them low; the age rests on five pre-LUCA paralogues and narrows to 4.18-4.33 Ga under a different clock model.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s4; content.json; news.json.
 
+### Parameter Estimation and Species Tree Rooting Using ALE and GeneRax
+
+Williams TA, Davín AA, Morel B, Szánthó LL, Spang A, Stamatakis A, Hugenholtz P, Szöllősi GJ (2023). *Genome Biol Evol (2023), evad134*. [doi:10.1093/gbe/evad134](https://pmc.ncbi.nlm.nih.gov/articles/PMC10373948/). `williams-2023-ale-generax-rooting` · useful · full text · touches #32
+
+- **Question.** How well do ALE and GeneRax estimate model parameters and find the root of the species tree?
+- **Tried.** Tests ALE and GeneRax on simulated and real data, focusing on rooting.
+- **Method and data.** Simulations with a known root, and real datasets.
+- **Key results.** The true root was recovered in 19 of 20 simulated replicates.
+- **Limits.** Tests root position, not which gene families were present at the root.
+- **Ideas for us.** Prior-art check for K3: the closest simulation work tests rooting, not root gene content.
+
 ### The power and limitations of species tree-aware phylogenetics
 
 Williams TA, Davín AA, Morel B, ... Szöllősi GJ (2023). *bioRxiv*. [doi:10.1101/2023.03.17.533068](https://doi.org/10.1101/2023.03.17.533068). `williams-2023-species-tree-aware` · useful · full text · touches #32
@@ -534,6 +556,28 @@ Coleman GA, Davín AA, Mahendrarajah TA, ... Williams TA (2021). *Science 372:ea
 - **Key results.** LBCA estimated at 1,292.6-2,142.9 COG members and 1.6-2.69 Mb by regression on modern genomes (r = 0.96). Introduced per-category root origination reused by Moody.
 - **Limits.** No new simulations seen in the text read.
 - **Ideas for us.** Per-category origination is a factor to include in #32's grid.
+
+### A New Analysis of Archaea-Bacteria Domain Separation: Variable Phylogenetic Distance and the Tempo of Early Evolution
+
+Berkemer SJ, McGlynn SE (2020). *Mol Biol Evol (2020)*. [doi:10.1093/molbev/msaa089](https://pmc.ncbi.nlm.nih.gov/articles/PMC7403611/). `berkemer-2020-domain-separation` · useful · full text · touches #32
+
+- **Question.** Which protein families sit deep enough to have been in LUCA, judged by the archaea-bacteria distance in each family's tree?
+- **Tried.** Rank families by how cleanly and deeply their trees split into archaea and bacteria.
+- **Method and data.** Gene trees of universal families from real genomes, with a label-shuffling null.
+- **Key results.** A distance-based LUCA candidate list. On error, only a null: 'False positives happen by chance more often when there are less sequences'.
+- **Limits.** No known-truth simulation, so no measured accuracy for individual LUCA calls.
+- **Ideas for us.** Prior-art check for K3: no per-family root-call accuracy.
+
+### Gene transfers can date the tree of life
+
+Davín AA, Tannier E, Williams TA, Boussau B, Daubin V, Szöllősi GJ (2018). *Nat Ecol Evol (2018)*. [doi:10.1038/s41559-018-0525-3](https://pmc.ncbi.nlm.nih.gov/articles/PMC5912509/). `davin-2018-transfers-date-tree` · useful · full text · touches #32
+
+- **Question.** Can the direction of gene transfers between lineages be used to order the branches of the tree of life in time?
+- **Tried.** Use ALE-inferred transfers (donor must be older than or as old as recipient) as relative dating constraints.
+- **Method and data.** ALE reconciliations on real genomes plus Zombi simulations of transfers.
+- **Key results.** Transfers carry real time information. On error, it says only that 'spurious gene transfer inferences do occur with ALE, albeit at a low rate'.
+- **Limits.** Checks transfer-based dating, not which families were present at the root; no per-family root-presence accuracy.
+- **Ideas for us.** Prior-art check for our K3 calibration finding: does not quantify per-family root calls.
 
 ### Integrative modeling of gene and genome evolution roots the archaeal tree of life
 
@@ -719,6 +763,17 @@ Dombrowski N, Williams TA, Sun J, ... Spang A (2020). *Nature Communications*. [
 - **Key results.** No simulation of ancestral content found in the full text.
 - **Limits.** Not a reconstruction-accuracy test.
 - **Ideas for us.** Context for the clade-varying loss rates in Huang 2026.
+
+### Phylogenetic reconciliation
+
+Menet H, Daubin V, Tannier E (2022). *PLoS Comput Biol (2022), e1010621*. [doi:10.1371/journal.pcbi.1010621](https://pmc.ncbi.nlm.nih.gov/articles/PMC9632901/). `menet-2022-reconciliation-review` · background · full text · touches #32
+
+- **Question.** What reconciliation methods exist, and what can they tell us?
+- **Tried.** A review of reconciliation models and tools (DTL, ALE and others).
+- **Method and data.** Literature review.
+- **Key results.** Discusses biases near the root in words; reports no benchmark.
+- **Limits.** No new data, and no measured accuracy for root gene content.
+- **Ideas for us.** Background reading on reconciliation; prior-art check for K3.
 
 ## RNA world
 

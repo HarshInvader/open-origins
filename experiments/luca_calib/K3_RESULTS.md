@@ -1,6 +1,6 @@
 # K3 results: does the LUCA estimate survive gene-tree error? (prereg v5c, measures from v5e)
 
-**Status, 2026-11-23 06:50 UTC: partial.** Seed 1 is complete in both arms. Seeds 2 and 3 have finished the true-tree arm; their inferred-tree arms are running on AWS. The sealed verdict is the mean R*_inf over the three seeds and will be filled in when they finish. Numbers come from `k3/k3_report.py` (output: `results/k3/k3_report.json`).
+**Status, 2026-11-23 06:35 UTC: partial.** Seed 1 is complete in both arms. Seeds 2 and 3 have finished the true-tree arm; their inferred-tree arms are running on AWS. The sealed verdict is the mean R*_inf over the three seeds and will be filled in when they finish. Numbers come from `k3/k3_report.py` (output: `results/k3/k3_report.json`).
 
 ## Setup
 - **Simulation:** Zombi, 80 genomes per domain, transfer 0.4, origination 40, 200 initial families, seeds 1-3.
