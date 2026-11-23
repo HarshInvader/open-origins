@@ -32,7 +32,7 @@
   },
   "lambda": 4.0,
   "seed": 1,
-  "source": "/Users/harsha/Desktop/Personal/open-origins/experiments/luca_calib/results/k2/n80_t0.4/sim",
+  "source": "experiments/luca_calib/results/k2/n80_t0.4/sim",
   "status": "matched",
   "stem_length": 0.07118386,
   "stems_n_lineages": [
