@@ -135,3 +135,32 @@ Checked by a subagent; every source was opened. Davín 2018, Berkemer & McGlynn 
 - **Decision:** one last attempt, on a different instance family (c6a.8xlarge, us-east-1d, 5 h, $3.55 booked; month $48.97 of $50).
   - Reason: the owner asked for a paper today and the coordinator asked for K3 to be closed tonight, which is the deadline case.
   - If this attempt is also reclaimed: stop, use Fable's wording, and finish in December.
+
+### 2026-11-23: independent read of the preprint draft (Fable)
+Owner asked for the draft `docs/paper/luca_root_weight_preprint.md` to be made ready for a possible bioRxiv post. A fresh Fable agent saw only the draft and the papers, and opened the full texts itself.
+- **(a) Already published?** Partly anticipated, qualitatively.
+  - Csűrös 2026 (PNAS) states that Moody et al.'s reconciliations imply "a LUCA with only 45 genes" (SI Fig. S41). The main text gives no derivation and no mechanism.
+  - Szöllősi et al. 2026 (bioRxiv) note that non-ML root origination greatly reduces root families, in an archaeal-root context.
+  - Not found anywhere: the exact decomposition (ΣPP 1,290.6 against 33.9 under a flat prior, a 38× multiplier), or a known-truth test of root gene-content recovery.
+- **(b) Strongest objection:** the simulations are in a different regime from the real data. The flat prior recovers 46-76% of the true root there, against about 3% in Moody's data; the prior multiplier is 1.4-1.9 there, against 38. A referee would say the simulations do not test the regime the real estimate lives in.
+- **(c) Overreaches found:**
+  - the title;
+  - the "97%" framing;
+  - the post-hoc 0.91-1.10 band;
+  - K3 called "calibrated" (the mid PP bins are over-confident);
+  - K4 "twice the size";
+  - K5 "It could not";
+  - a sentence on what Csűrös's view "would have to rest" on;
+  - a range given as 46-72 that should be 46-76.
+- **(d) Verdict: revise.**
+- **Decision:** the core result is not already published, so proceed. Every overreach was fixed:
+  - new title, "an exact decomposition and pre-registered simulation tests";
+  - the 95% profile interval for O_R (5.58-5.77, ΣPP 1,238-1,347) is added;
+  - the pre-registered K2 failure is stated first;
+  - K3 is described as within the pre-registered band, with the offsetting errors and mid-bin over-confidence stated;
+  - K4 is reported as inconclusive;
+  - K5 is described as loosely matched, with transfer over 100× background and the built-in identifiability limit;
+  - Csűrös and Szöllősi are credited, and the novelty claim is narrowed to the exact decomposition and the known-truth tests;
+  - the regime mismatch is added to the abstract and the limits.
+- **Left open:** a regime-matched simulation, in which the flat prior recovers about 3% of the true root. Until that exists, K2-K4 are self-consistency checks in an easier regime and do not validate 2,600.
+- **Next:** one outside expert read by email (owner's step 2). Posting stays with the owner.
