@@ -33,3 +33,5 @@ d77423d34b8ce66f2b930b1e57ded868f5fe9007c2a3158f00842040ad87fd3f  experiments/lu
 b6981b2e38de16d0dfad17e45377a63d3af86972fed43643a6834a14da46a7db  experiments/luca_calib/k3/setup_remote.sh  orig-paper  2026-11-23T06:03:15Z  task#32 K3 rerun fixes (DEVIATIONS 14)
 5d22638965104305d05e5abd7b5aeeedb7a340e231f8bdac803d938d54b973cd  experiments/luca_calib/k3/run_k3.sh  orig-paper  2026-11-23T06:03:15Z  task#32 K3 rerun fixes (DEVIATIONS 14)
 2bcc7cd082805fde7c6642c03e213bbc6bd8d88a500fbc1f470b9f5a19948218  docs/prereg/luca_calibration_v5e.md  orig-paper  2026-11-23T06:08:35Z  task#32 amendment v5e (K4 inconclusive zones + calibration measures; Fable review)
+d8a0a7b3a496fa4228dfa5bc2ef5c78ee36bb0d2ce1cef2beb829e27057b6f01  docs/prereg/luca_calibration_v6.md  orig-paper  2026-11-23T06:25:20Z  task#32 K5 two-worlds prereg v6 (Fable review x2)
+dbc99e941a44f8ada9d76207cf2038cd013a3eff5f48d72db9b83d2c000c1422  experiments/luca_calib/k5/stemsim.py  orig-paper  2026-11-23T06:25:20Z  task#32 K5 two-worlds prereg v6 (Fable review x2)

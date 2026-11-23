@@ -62,3 +62,36 @@ Decision log for the main study. Each entry gives the advice we got (Fable, per 
   - Run with true trees first, on the laptop under the Origins lock.
   - Plan: build and test the stem-rate writer, tune the small world to match on phyletic summaries only (no PP), seal the prereg, then run.
   - Stop rule: if K5 passes, close the LUCA-size angle and pivot.
+
+### 2026-11-23: K5 design (Fable, two rounds)
+
+**Round 1: how to simulate the small world.**
+- **Advice:**
+  - Use Zombi Gm superposition (option B): the K3 world, a few root families, plus stem-born families.
+  - Reuse K3 seeds 1-3 as the big world, so the two worlds are paired.
+  - Match on phyletic summaries with fixed tolerances.
+  - Report absolute ΣPP, not only R.
+  - Flagged threat: a transfer boost applied over the whole tree is a weaker adversary than one applied only on the stems.
+- **Decision:** adopted, with one change. Stem-born families are simulated by our own per-family simulator (`k5/stemsim.py`, Zombi Gm rules), not by a second Zombi run.
+  - The stems hold only 0.071 of 87.8 units of tree length. Stem-only origination in Zombi would need about 220,000 families.
+  - stemsim can also apply the extra transfer on the stems only, which removes the flagged threat.
+  - Removing root families from the K3 world is valid because Gm families are independent.
+
+**Round 2: review of the prereg draft.**
+- **Advice:** do not seal yet.
+  - The two stems coexist only during [0.1013, 0.1073] on seed 1, so a stem-to-stem-only target almost never exists. The planned λ ladder would really have been {0, 0.03, 0.12}.
+  - Add a control world (N = 0) and judge the excess over it, because background false mass alone gives R_small of about 2.
+  - Pick N closest on row 2, not the smallest matching N.
+  - Require tight matching before claiming "cannot discriminate".
+  - Require all seeds on the same side, and require the top rung for "discriminates".
+  - Pair families across λ.
+  - Add a planted check for mid-tree births and an ALE positive control.
+- **Decision:** all adopted.
+  - The target is now any lineage in the other domain's clade.
+  - Both planted checks pass.
+  - Sealed as v6 (sha d8a0a7b3…, with stemsim.py dbc99e94…).
+
+### 2026-11-23: K4 machine lost
+- The origins-k4 spot machine was reclaimed about 5 minutes into simulating; nothing had been scored.
+- The n160 and n320 true-tree lanes were restarted on the K3 machine (origins-k3b), which had spare cores.
+- w80, which v5e relabelled a robustness check, was dropped to stay inside the budget. That is $40.30 booked of $50, against estimates; actual spend is lower. See DEVIATIONS 15.

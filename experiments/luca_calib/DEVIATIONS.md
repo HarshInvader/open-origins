@@ -60,3 +60,9 @@ The Linux x86-64 build on AWS (g++ 13.3, Boost 1.83; BUILD_INFO_aws.txt) was che
 
 ## 14. First K3 machine lost; seeds 2-3 re-run (2026-11-23, before any K3 inferred score for seeds 2-3)
 The first c7a.8xlarge spot machine was gone about 9.5 h into its 24 h booking (spot reclaim; disk deleted). Seed 1, n40 and the true-tree scores of seeds 2-3 had been pulled before. Seeds 2-3 are re-run from scratch on a second machine (same seeds, so the same simulations), with 16 workers per lane (`SEED_W`), and results are pulled every 4 minutes. `setup_remote.sh` now tolerates the IQ-TREE link already existing.
+
+## 15. K4 machine lost; n160 and n320 moved to the K3 machine; w80 dropped (2026-11-23, before any K4 score)
+- **What happened:** the origins-k4 spot instance (c7a.4xlarge) was reclaimed by AWS (`Server.SpotInstanceTermination`) during the first simulation step, so no K4 output existed.
+- **Change:** the n160 and n320 lanes (true trees, v5d/v5e decision cells) were restarted unchanged on origins-k3b with `LANES="n160 n320" bash k4/run_k4.sh`.
+- **Dropped:** w80, a robustness check only under v5e. A relaunch would need about $10 of the $9.70 left in the booked budget.
+- **Timing:** v5d's fallback still applies; if n320 does not finish before the machine's auto-termination, n160 is scored.
