@@ -1,0 +1,296 @@
+{
+ "big": {
+  "s1": {
+   "true_root": 189,
+   "sum_pp": 205.53629381671527,
+   "R": 1.0874936180778585,
+   "sum_pp_flat": 135.3818415529759,
+   "prior_multiplier": 1.5181969122224372,
+   "O_R": 4.593185279317606,
+   "split": {
+    "root": 176.35796388559993,
+    "stem_born": 0,
+    "other": 29.178329931115194
+   },
+   "n_ale": 867,
+   "n_failed": 0,
+   "failed_root": 0,
+   "completion": 1.0,
+   "R_failed_as_1": 1.0874936180778585,
+   "ECE": 0.021379808323777578
+  },
+  "s3": {
+   "true_root": 184,
+   "sum_pp": 183.02069657392244,
+   "R": 0.9946776987713176,
+   "sum_pp_flat": 120.30303715071258,
+   "prior_multiplier": 1.5213306405942084,
+   "O_R": 4.395674533860606,
+   "split": {
+    "root": 162.53818958000008,
+    "stem_born": 0,
+    "other": 20.482506993922225
+   },
+   "n_ale": 893,
+   "n_failed": 0,
+   "failed_root": 0,
+   "completion": 1.0,
+   "R_failed_as_1": 0.9946776987713176,
+   "ECE": 0.011923302828754614
+  }
+ },
+ "worlds": {
+  "s1_ctrl": {
+   "true_root": 20,
+   "sum_pp": 25.795997238074833,
+   "R": 1.2897998619037416,
+   "sum_pp_flat": 14.549526783716836,
+   "prior_multiplier": 1.7729784357622222,
+   "O_R": 2.496531301455582,
+   "split": {
+    "root": 17.2051342,
+    "stem_born": 0,
+    "other": 8.59086303807483
+   },
+   "n_ale": 700,
+   "n_failed": 0,
+   "failed_root": 0,
+   "completion": 1.0,
+   "R_failed_as_1": 1.2897998619037416,
+   "ECE": 0.010150673197249743,
+   "world": {
+    "lambda": 0.0,
+    "x_stem": 0.0,
+    "n_stem_born": 0,
+    "stem_born_present": 0,
+    "stem_born_ge2": 0,
+    "events": {
+     "D": 0,
+     "L": 0,
+     "T": 0,
+     "Tstem": 0,
+     "Xnone": 0
+    },
+    "true_luca_new": 0,
+    "rootctrl": false
+   },
+   "H": 0.12550580123371363,
+   "R_minus_Rctrl": 0.0
+  },
+  "s1_lam1": {
+   "true_root": 20,
+   "sum_pp": 248.82246693618353,
+   "R": 12.441123346809176,
+   "sum_pp_flat": 108.17957982321697,
+   "prior_multiplier": 2.3000872007711615,
+   "O_R": 4.72873219538635,
+   "split": {
+    "root": 19.046999000000007,
+    "stem_born": 198.54474702001292,
+    "other": 31.230720916170526
+   },
+   "n_ale": 948,
+   "n_failed": 0,
+   "failed_root": 0,
+   "completion": 1.0,
+   "R_failed_as_1": 12.441123346809176,
+   "n_stem_born": 350,
+   "stem_present": 251,
+   "Tstem_per_family": 1.4914285714285713,
+   "stem_pp_ge_0.5": 209,
+   "ECE": 0.24137391027023578,
+   "world": {
+    "lambda": 1.0,
+    "x_stem": 60.515762691471636,
+    "n_stem_born": 350,
+    "stem_born_present": 251,
+    "stem_born_ge2": 248,
+    "events": {
+     "D": 3013,
+     "L": 13172,
+     "T": 7013,
+     "Tstem": 522,
+     "Xnone": 0
+    },
+    "true_luca_new": 0,
+    "rootctrl": false
+   },
+   "H": 1.210601117280378,
+   "R_minus_Rctrl": 11.151323484905435
+  },
+  "s1_lam4": {
+   "true_root": 20,
+   "sum_pp": 208.9247495236381,
+   "R": 10.446237476181905,
+   "sum_pp_flat": 79.00512621791682,
+   "prior_multiplier": 2.644445487592399,
+   "O_R": 4.573367397284329,
+   "split": {
+    "root": 18.953621000000002,
+    "stem_born": 161.08464471000588,
+    "other": 28.88648381363222
+   },
+   "n_ale": 899,
+   "n_failed": 4,
+   "failed_root": 0,
+   "completion": 0.9955506117908788,
+   "R_failed_as_1": 10.646237476181906,
+   "n_stem_born": 225,
+   "stem_present": 199,
+   "Tstem_per_family": 6.902222222222222,
+   "stem_pp_ge_0.5": 170,
+   "ECE": 0.21108910561300348,
+   "world": {
+    "lambda": 4.0,
+    "x_stem": 242.06305076588654,
+    "n_stem_born": 225,
+    "stem_born_present": 199,
+    "stem_born_ge2": 199,
+    "events": {
+     "D": 6826,
+     "L": 29470,
+     "T": 15321,
+     "Tstem": 1553,
+     "Xnone": 0
+    },
+    "true_luca_new": 0,
+    "rootctrl": false
+   },
+   "H": 1.0164859239407344,
+   "R_minus_Rctrl": 9.156437614278163
+  },
+  "s1_rootctrl": {
+   "true_root": 184,
+   "sum_pp": 197.8303856157719,
+   "R": 1.0751651392161516,
+   "sum_pp_flat": 125.6570805410769,
+   "prior_multiplier": 1.5743671965313708,
+   "O_R": 4.542111252145823,
+   "split": {
+    "root": 168.62200636400001,
+    "stem_born": 167.892297364,
+    "other": 28.430458251771938
+   },
+   "n_ale": 864,
+   "n_failed": 0,
+   "failed_root": 0,
+   "completion": 1.0,
+   "R_failed_as_1": 1.0751651392161516,
+   "n_stem_born": 200,
+   "stem_present": 182,
+   "Tstem_per_family": 0.0,
+   "stem_pp_ge_0.5": 170,
+   "ECE": 0.017164798166402748,
+   "world": {
+    "lambda": 0.0,
+    "x_stem": 0.0,
+    "n_stem_born": 0,
+    "stem_born_present": 182,
+    "stem_born_ge2": 182,
+    "events": {
+     "D": 2994,
+     "L": 11035,
+     "T": 5964,
+     "Tstem": 0,
+     "Xnone": 0
+    },
+    "true_luca_new": 182,
+    "rootctrl": true
+   }
+  },
+  "s3_ctrl": {
+   "true_root": 20,
+   "sum_pp": 24.347660767614816,
+   "R": 1.2173830383807407,
+   "sum_pp_flat": 15.390413061012563,
+   "prior_multiplier": 1.58200177416245,
+   "O_R": 2.3921798521740563,
+   "split": {
+    "root": 17.516670800000004,
+    "stem_born": 0,
+    "other": 6.830989967614811
+   },
+   "n_ale": 732,
+   "n_failed": 0,
+   "failed_root": 0,
+   "completion": 1.0,
+   "R_failed_as_1": 1.2173830383807407,
+   "ECE": 0.008230006513134977,
+   "world": {
+    "lambda": 0.0,
+    "x_stem": 0.0,
+    "n_stem_born": 0,
+    "stem_born_present": 0,
+    "stem_born_ge2": 0,
+    "events": {
+     "D": 0,
+     "L": 0,
+     "T": 0,
+     "Tstem": 0,
+     "Xnone": 0
+    },
+    "true_luca_new": 0,
+    "rootctrl": false
+   },
+   "H": 0.13303228117581087,
+   "R_minus_Rctrl": 0.0
+  },
+  "s3_lam4": {
+   "true_root": 20,
+   "sum_pp": 228.8179015106878,
+   "R": 11.440895075534389,
+   "sum_pp_flat": 95.92615316947278,
+   "prior_multiplier": 2.385354712457145,
+   "O_R": 4.601218402964641,
+   "split": {
+    "root": 18.987706,
+    "stem_born": 187.22591212001646,
+    "other": 22.604283390671267
+   },
+   "n_ale": 957,
+   "n_failed": 0,
+   "failed_root": 0,
+   "completion": 1.0,
+   "R_failed_as_1": 11.440895075534389,
+   "n_stem_born": 275,
+   "stem_present": 231,
+   "Tstem_per_family": 3.9709090909090907,
+   "stem_pp_ge_0.5": 195,
+   "ECE": 0.21820052404460583,
+   "world": {
+    "lambda": 4.0,
+    "x_stem": 46.26900083878259,
+    "n_stem_born": 275,
+    "stem_born_present": 231,
+    "stem_born_ge2": 225,
+    "events": {
+     "D": 3080,
+     "L": 12387,
+     "T": 7442,
+     "Tstem": 1092,
+     "Xnone": 0
+    },
+    "true_luca_new": 0,
+    "rootctrl": false
+   },
+   "H": 1.2502296504934771,
+   "R_minus_Rctrl": 10.223512037153649
+  }
+ },
+ "decision_v6": {
+  "positive_control_R": 1.0751651392161516,
+  "positive_control_pass": true,
+  "lambda": 4,
+  "H": [
+   1.0164859239407344,
+   1.2502296504934771
+  ],
+  "mean_H": 1.133357787217106,
+  "R_minus_Rctrl": [
+   9.156437614278163,
+   10.223512037153649
+  ],
+  "mean_R_minus_Rctrl": 9.689974825715906,
+  "verdict": "cannot discriminate in a loosely matched world (no read seed is tightly matched)"
+ }
+}

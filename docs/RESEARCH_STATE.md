@@ -102,3 +102,19 @@ Checked by a subagent; every source was opened. Davín 2018, Berkemer & McGlynn 
   - A search-engine summary credits it with an ECE of about 0.24 for raw reconciliation output. **This is not verified.** bioRxiv returned 429, and the full text has not been read.
   - Our K3 ECE is 0.01-0.03 on known-truth simulations, with about 9% false calls at PP ≥ 0.5.
 - **Decision:** do not claim novelty until that preprint's full text is read. Adding the new papers to the library.
+
+### 2026-11-23: K5 result and how to read it (Fable)
+- **Sealed verdict (v6):** "cannot discriminate in a loosely matched world".
+  - λ = 4 was read on seeds 1 and 3. Mean H is 1.13; mean R_small − R_ctrl is 9.7.
+  - The positive control passes (R 1.075).
+  - Full write-up: `experiments/luca_calib/K5_RESULTS.md`.
+- **Advice:** the rule was applied correctly.
+  - Publish it as a sealed result, not as the headline. The match is loose: s1 also misses row 6 (+72%) and s3 misses row 3 (+7%).
+  - The adversary is strong, with stem transfer 115-600× background.
+  - λ = 0 being unmatched favours Moody et al. and must be reported with equal weight.
+  - Two free follow-ups: a topology split, and H under the flat prior.
+- **Decision:** adopted. Both follow-ups were run and are labelled post hoc.
+  - Flat-prior H is 0.58 and 0.80 (controls 0.11-0.13).
+  - The topology split does not separate stem-born families from root families.
+  - The site entry uses Fable's cautious wording.
+  - Not run yet: a realism bound (stem exchange against the inter-domain transfer implied by Moody's reconciliations), and a tight match under a new prereg.
