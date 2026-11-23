@@ -12,7 +12,7 @@
    "body": "One checks whether the LUCA estimate holds as trees grow to more genomes; the other runs the hardest setting we could build. Both plans and their pass marks were fingerprinted before any run.",
    "link": "https://github.com/HarshInvader/open-origins/blob/main/docs/prereg/luca_calibration_v5d.md"},
   {"date": "2026-11-22", "kind": "result", "title": "Right total, some wrong genes",
-   "body": "In the same test, 10 to 18% of the probability the method placed on LUCA genes sat on genes that were not really there, and a similar share of real LUCA genes was missed, so the count comes out about right. The probabilities are well calibrated (a gene given 0.9 is in LUCA about 90% of the time), so this is expected spread, not a hidden bias.",
+   "body": "In the same test, 10 to 18% of the probability the method placed on LUCA genes sat on genes that were not really there, and a similar share of real LUCA genes was missed, so the count comes out about right. The probabilities are only roughly calibrated: of genes given more than 0.8, between 88% and 97% were really in LUCA, and mid-range probabilities miss in both directions. So the right total comes partly from errors that cancel.",
    "link": "https://github.com/HarshInvader/open-origins/tree/main/experiments/luca_calib"},
   {"date": "2026-11-22", "kind": "correction", "title": "Yesterday's failed test was a laptop crash",
    "body": "The gene-tree program crashed on large gene families on the Mac, and every crash hid a real LUCA gene. On Linux the same simulation gives 1.09 instead of 0.75, inside the pass range, so the failed verdict no longer stands.",
