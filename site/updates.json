@@ -1,4 +1,7 @@
 [
+  {"date": "2026-11-23", "kind": "result", "title": "The method could not tell a small LUCA from a big one when early genes moved between domains very often",
+   "body": "In a preregistered simulation, a first genome ten times smaller, padded with gene families born just after the root that crossed between bacteria and archaea 4 to 7 times each, scored as large as the real-size one (2 seeds, loosely matched). This matters only if early exchange was about 100 times today's rate or more, which this does not show; without that exchange the small world could not be made to resemble the big one.",
+   "link": "https://github.com/HarshInvader/open-origins/blob/main/experiments/luca_calib/K5_RESULTS.md"},
   {"date": "2026-11-23", "kind": "sealed", "title": "Next two LUCA tests written down before running",
    "body": "One checks whether the LUCA estimate holds as trees grow to more genomes; the other runs the hardest setting we could build. Both plans and their pass marks were fingerprinted before any run.",
    "link": "https://github.com/HarshInvader/open-origins/blob/main/docs/prereg/luca_calibration_v5d.md"},
