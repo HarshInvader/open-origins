@@ -224,3 +224,27 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   - **Csűrös SI (5):** the SI is hosted only on pnas.org, which returns 403, so we stopped there.
 - **Paper:** two new Results subsections, Figures 1–3, a new Methods subsection, an updated abstract and discussion, and NUMBERS.md. One error was caught before commit: a family name written from memory (ATP synthase β) was not in the dropped list. It was replaced with names fetched from KEGG.
 - **Reading:** the real-data checks strengthen the paper's core claim. Per-family evidence is weak, and the weight decides most families. They do not show the total is wrong. Item 7, a regime-matched simulation, is still the deciding test.
+
+### 2026-11-23: owner direction and the working queue
+- **Owner direction:** never stop and never wait on data. The Szöllősi email is a side bet; the inbox shows no reply yet. When data or compute is missing, reason from first principles. Borrow methods from Bayesian model checking, calibration in ML and weather forecasting, and astrobiology. Recombine data we already have, and run the strongest test on the laptop. AWS has about $1 left until 1 December.
+- **Queue (ranked; updated as results come in):**
+  1. **Cold audit of the LUCA preprint.** A Fable agent is running; every finding will be fixed.
+  2. **Calibration of the root weight in the real-data regime (item 7).** A Fable agent is designing laptop options. Run it only if it is cheap and decisive. Seal the pre-registration, then run the kill test first under the Origins lock.
+  3. **Origin-of-life routes (the project's real goal).** A Fable agent is mapping the routes: RNA world, metabolism first, vents, surface ponds, lipid world, the cyanosulfidic network and others. For each it will name the riskiest claim that open data can check, then rank the tests. The top test gets sealed and run, kill test first.
+  4. **Backup Origins studies** from the item-7 design agent, to be merged with item 3's ranking.
+
+### 2026-11-23: cold audit of the preprint (Fable) and fixes
+- **Verdict:** revise, then post. Every numerical claim was checked against our files (`results/realdata/audit_checks.json`), and all held.
+- **Fixed:**
+  - **One counting convention.** Per-run sums, reported as the median and range over runs. The default-prior count is about 40, not 34, and the multiplier is about 32, not 38.
+  - **Title.** "Is set by" became "is a fitted root-origination share applied to weakly informative gene families".
+  - **Labels.** The real-data checks are now called "pre-specified", with the seal-to-run timing stated. The 0.01–10 band is labelled post hoc.
+  - **Run-to-run instability added.** 810 families differ by more than 0.5 between runs, and L22 ranges from 0.001 to 0.89.
+  - **Control section reframed.** The ranking works (AUC 0.93), but the calls are too low. The young-set limit was driven by PsaB alone.
+  - **Direction of error.** A new paragraph says it is unknown: the controls suggest an undercount, while the early-exchange simulation suggests inflation.
+  - **Bayes-factor count.** The "brackets Moody" claim is removed. The threshold rises with tree size.
+  - **Smaller fixes.** The circular "reproduces 1,290.6" claim is removed. The identity is scoped to the shared-weight refit. The Table 3 R* definition is explained. The likelihood interval is stated per run.
+  - **Citations.** Williams et al. 2023 added (deep-node underestimation; already in the library). The Csűrös SI wording changed to "could not retrieve".
+- **Not done:**
+  - Bremer 2022 and Williams 2023 GBE are not added, because neither was read.
+  - The Csűrös SI (Fig. S41) needs a person to open it in a browser. The automated fetch was blocked, and we don't work around blocks.

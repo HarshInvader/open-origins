@@ -41,3 +41,23 @@ Script: `experiments/luca_calib/realdata/r_analyses.py`. Figures: `figures/make_
 | 20 universal unscored; names | `dropped.missing.n_universal`; raw/kegg_lists/list_dropped_universal_{a,b}.txt |
 | pre-registered flag: no undercount | `dropped.flag_undercount` false (ratio universal 0.38, ratio median size 0.05) |
 | Csűrös SI not reachable | PMC article links SI only to pnas.org; pnas.org returned 403 |
+
+## After the cold audit (2026-11-23): one convention, run instability
+Source: `experiments/luca_calib/results/realdata/audit_checks.json` (script `realdata/audit_checks.py`). Counts are per-run sums; the text gives the median (range) over 5 runs. These replace the per-family-median sums (33.9, 1,290.6, 1,270.0, 684, 1,118) used before.
+
+| Number in text | Field |
+|---|---|
+| deposited 1,310 (1,293–1,319); ≥0.75 728 (699–740); ≥0.5 1,139 (1,127–1,147) | `moody_sums`, `moody_ge75`, `moody_ge50` |
+| shared weight 1,290 (1,280–1,305); 659 (651–690); 1,082 (1,066–1,103) | `shared_sums`, `shared_ge75`, `shared_ge50` |
+| default prior 40.8 (39.4–41.4); 1; 3 (2–5) | `flat_sums`, `flat_ge75`, `flat_ge50` |
+| multiplier about 32; 3.1% | `multiplier_moody_over_flat` (31.7–32.8); 40.8/1,310 |
+| reported mean 1,298 | Moody et al. (LUCA_PPs.csv sums to 1,297.2: `luca_pps_sum`) |
+| 810 families differ by > 0.5; 332 of 684 are ≥ 0.75 in every run | `spread_gt05`; `all_runs_ge75_of_med_ge75`, `med_ge75` |
+| 40 of 50 ancient differ by > 0.5 | `pos_spread_gt05` |
+| L22 per run 0.04, 0.38, 0.006, 0.001, 0.89; PsaB 0.84–0.91; PsaA 0.002 | `per_run` |
+| AUC 93% | `auc_moody` 0.932 |
+| young-set limit without PsaB about 19,000 | `w_max_neg_without_psab` |
+| BF > 1 / 10 / 100: 1,841 / 749 / 123 | `bf_gt1`, `bf_gt10`, `bf_gt100` |
+| inferred-tree band shares 13–14% and 17–20% | `k3_inferred_band_share` |
+| per-sim threshold about 2–3 at ≤319 branches, 10 at 639 | `realdata_v7.json` `bf.per_sim` (k4 n160 log10 1.009) |
+| log w 5.61–5.77 in run 1 | `results/k1/k1_ci.json` run 1 O_lo/O_hi |
