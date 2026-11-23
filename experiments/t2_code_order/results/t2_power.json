@@ -1,0 +1,78 @@
+{
+ "mode": "power",
+ "seed": 20261123,
+ "power": {
+  "Bennu": {
+   "n": 20,
+   "n_censored": 14,
+   "by_planted_strength": {
+    "0.0": {
+     "mean_partial_tau": 0.05974206372997784,
+     "P_support": 0.0075,
+     "P_kill": 0.5975,
+     "P_inconclusive": 0.395
+    },
+    "0.2": {
+     "mean_partial_tau": 0.19706445936447,
+     "P_support": 0.0675,
+     "P_kill": 0.2225,
+     "P_inconclusive": 0.71
+    },
+    "0.4": {
+     "mean_partial_tau": 0.3052633076764436,
+     "P_support": 0.2,
+     "P_kill": 0.0475,
+     "P_inconclusive": 0.7525
+    },
+    "0.6": {
+     "mean_partial_tau": 0.39616892521365527,
+     "P_support": 0.45,
+     "P_kill": 0.015,
+     "P_inconclusive": 0.535
+    },
+    "0.8": {
+     "mean_partial_tau": 0.450302680764655,
+     "P_support": 0.645,
+     "P_kill": 0.0,
+     "P_inconclusive": 0.355
+    }
+   }
+  },
+  "Ryugu": {
+   "n": 9,
+   "n_censored": 4,
+   "by_planted_strength": {
+    "0.0": {
+     "mean_partial_tau": 0.04041389592434601,
+     "P_support": 0.015,
+     "P_kill": 0.255,
+     "P_inconclusive": 0.73
+    },
+    "0.2": {
+     "mean_partial_tau": 0.27396349928134434,
+     "P_support": 0.06,
+     "P_kill": 0.0675,
+     "P_inconclusive": 0.8725
+    },
+    "0.4": {
+     "mean_partial_tau": 0.4081019825672753,
+     "P_support": 0.1125,
+     "P_kill": 0.015,
+     "P_inconclusive": 0.8725
+    },
+    "0.6": {
+     "mean_partial_tau": 0.5616110317020123,
+     "P_support": 0.2725,
+     "P_kill": 0.0025,
+     "P_inconclusive": 0.725
+    },
+    "0.8": {
+     "mean_partial_tau": 0.6501168544048401,
+     "P_support": 0.47,
+     "P_kill": 0.0,
+     "P_inconclusive": 0.53
+    }
+   }
+  }
+ }
+}
