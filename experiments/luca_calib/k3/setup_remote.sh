@@ -7,7 +7,7 @@ cd ~ && curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xj
 ~/bin/micromamba create -y -q -p ~/mamba/envs/phylo -c conda-forge -c bioconda python=3.11 ete3=3.1.3 numpy scipy six bayesian-optimization=1.4.3 networkx=3.6.1 "iqtree>=3"
 ~/mamba/envs/phylo/bin/pip install -q pyvolve==1.1.0 biopython==1.88
 IQ=$(ls ~/mamba/envs/phylo/bin/iqtree3 ~/mamba/envs/phylo/bin/iqtree2 ~/mamba/envs/phylo/bin/iqtree 2>/dev/null | head -1 || true)
-[ "$IQ" = "$HOME/mamba/envs/phylo/bin/iqtree3" ] || ln -sf "$IQ" ~/mamba/envs/phylo/bin/iqtree3
+[ "$IQ" = "$HOME/mamba/envs/phylo/bin/iqtree3" ] || ln -sf "$IQ" ~/mamba/envs/phylo/bin/iqtree3 || true
 cd ~/luca_calib
 cmake -S ext/ale -B ext/ale_build -DCMAKE_BUILD_TYPE=Distribution -DALE_ENV_PREFIX=/usr \
   -DCMAKE_PROJECT_ale_INCLUDE="$PWD/pipeline/local/ale_boost_shim.cmake" -DCMAKE_POLICY_VERSION_MINIMUM=3.5

@@ -57,3 +57,6 @@ The Linux x86-64 build on AWS (g++ 13.3, Boost 1.83; BUILD_INFO_aws.txt) was che
 - `setup_remote.sh` stopped at the IQ-TREE symlink step (pipefail on `ls`). It now continues, and it installs Zombi's `networkx` and `pyvolve` and the `biopython` versions the laptop uses.
 - `run_k3.sh`: seed lanes failed at start (unbound variable), so lanes can now be started separately (`LANES`). Seeds 2 and 3 started about 3 minutes after seed 1 and n40.
 - `verify.sh` cannot check prereg hashes on the machine (docs/ not copied). The pipeline manifest was checked there with `sha256sum -c`: all files OK.
+
+## 14. First K3 machine lost; seeds 2-3 re-run (2026-11-23, before any K3 inferred score for seeds 2-3)
+The first c7a.8xlarge spot machine was gone about 9.5 h into its 24 h booking (spot reclaim; disk deleted). Seed 1, n40 and the true-tree scores of seeds 2-3 had been pulled before. Seeds 2-3 are re-run from scratch on a second machine (same seeds, so the same simulations), with 16 workers per lane (`SEED_W`), and results are pulled every 4 minutes. `setup_remote.sh` now tolerates the IQ-TREE link already existing.
