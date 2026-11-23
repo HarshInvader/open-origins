@@ -99,7 +99,7 @@ N_CLAIMED = sum(1 for t in TASKS if t["status"] == "claimed")
 N_OPEN = sum(1 for t in TASKS if t["status"] == "open")
 
 PAGES = [("findings.html", "Findings"), ("map.html", "Pathway map"), ("theories.html", "Theories"), ("approach.html", "Approach"),
-         ("tracker.html", "Tracker"), ("news.html", "News"), ("library.html", "Library"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources")]
+         ("tracker.html", "Tracker"), ("updates.html", "Updates"), ("news.html", "News"), ("library.html", "Library"), ("contribute.html", "Contribute"), ("data.html", "Data"), ("resources.html", "Resources")]
 
 
 def md(s):
@@ -118,6 +118,7 @@ NAV_GROUPS = (
                   ("map.html", "Pathway map", "Four routes, scored step by step", "map"),
                   ("theories.html", "Theories", "The proposed origins we score", "theory"),
                   ("approach.html", "Approach", "How every idea gets tested", "approach"),
+                  ("updates.html", "Updates", "What we ran and what came out", "tracker"),
                   ("news.html", "News", "New papers, summarised", "news"),
                   ("library.html", "Library", "Every paper we read, with notes", "library"),
                   ("tracker.html", "Tracker", "Progress and the live task board", "tracker"))),
@@ -191,6 +192,35 @@ def data_list():
 
 
 # ---------------------------------------------------------------- home
+# ---------------------------------------------------------------- latest updates (site/updates.json, newest first)
+UPDATES = json.loads((SITE / "updates.json").read_text()) if (SITE / "updates.json").exists() else []
+UPD_KIND = {"result": ("Result", "ok"), "killed": ("Ruled out", "bad"), "blocked": ("Blocked", "warn"),
+            "correction": ("Correction", "warn"), "sealed": ("Sealed", "open"), "started": ("Started", "open")}
+
+
+def upd_date(d, year=False):
+    y, m, day = d.split("-")
+    return f"{int(day)}\u00a0{MONTHS[int(m) - 1]}" + (f" {y}" if year else "")
+
+
+def updates_list(items, year=False):
+    out = []
+    for u in items:
+        word, cls = UPD_KIND.get(u["kind"], (u["kind"].title(), "open"))
+        link = u.get("link", "")
+        title = f'<a href="{e(link)}">{e(u["title"])}</a>' if link else e(u["title"])
+        out.append(f'<li class="upd upd-{cls}"><p class="upd-meta"><time datetime="{e(u["date"])}">{upd_date(u["date"], year)}</time>'
+                   f'<span class="chip chip-{cls}">{e(word)}</span></p>'
+                   f'<h3>{title}</h3><p>{md(u["body"])}</p></li>')
+    return '<ol class="updates">' + "".join(out) + "</ol>"
+
+
+def page_updates():
+    return (page_head("Updates", "Latest updates",
+                      "What we ran, what came out and what we stopped, newest first. Failures stay on the list.")
+            + f'<section class="wrap upd-page" aria-label="All updates">{updates_list(UPDATES, year=True)}</section>')
+
+
 def page_index():
     art = ART.hero().replace('<figure class="hero-art">', '<figure class="hero-art plate">', 1)
     art = re.sub(r"<figcaption>.*?</figcaption>",
@@ -202,33 +232,35 @@ def page_index():
             '<p class="state">An open-source effort, run in public. All our code and data are free.</p>'
             '<div class="actions"><a class="btn primary" href="contribute.html">Contribute</a><a class="btn" href="findings.html">Read the findings</a></div>'
             f'</div>{art}</section>')
-    s1 = block("01", "The question", "h-question", "Chemistry can make each step toward life, but nobody has joined them up", f"""
+    s1 = block("02", "The question", "h-question", "Chemistry can make each step toward life, but nobody has joined them up", f"""
 <div class="split"><div class="say">
 <p>Life began on Earth about four billion years ago, from chemistry alone. Nobody knows how.</p>
 <p>Labs have made amino acids, RNA letters and an RNA that copies itself. Each step worked on its own, mostly with chemicals bought pure.</p>
 <p>Nobody has run the steps one after another, in one setting, using only what the step before left behind. That gap is the question.</p>
 <p class="more-link"><a href="findings.html">What is known and what has been tried</a></p></div>
 {FIG.fig_steps_vs_joins(MAP)}</div>""", "broad")
-    s2 = block("02", "Where we are", "h-where", "We know where the building blocks come from, not how copying began",
+    s2 = block("03", "Where we are", "h-where", "We know where the building blocks come from, not how copying began",
                f'{FIG.fig_ladder(C["ladder"])}<p class="more-link"><a href="tracker.html">Track the progress</a></p>', "broad")
-    s3 = block("03", "Found so far", "h-found", "What we have found so far", """
+    s3 = block("04", "Found so far", "h-found", "What we have found so far", """
 <ul class="found">
 <li><b>No proposed route joins up.</b> We scored four published routes hand-off by hand-off. None of the 22 hand-offs passes cleanly.</li>
 <li><b>The best self-copying RNA cannot keep up.</b> On its published numbers, QT45 copies itself more slowly than it breaks down. A population would shrink each round.</li>
 <li><b>Simple shortcuts cannot rebuild the first cell's genes.</b> On simulated family trees with a planted answer, no rule based only on which genes are present found the true set.</li>
 </ul><p class="more-link"><a href="findings.html">All findings, with their evidence</a></p>""", "broad")
-    s4 = block("04", "How we work", "h-how", "How we test a route",
+    s4 = block("05", "How we work", "h-how", "How we test a route",
                '<div class="say"><p>We write each test and its pass mark down and fingerprint it before we look. Every method must first find an answer we planted, and someone else must try to break every positive result.</p></div>'
                f'{FIG.fig_pipeline(len(HASHES), COMPAT["n_cases"])}<p class="more-link"><a href="approach.html">Our approach and what counts as done</a></p>', "broad")
     ledger, files = FIG.fig_ledger(PAPERS, data_list())
-    s5 = block("05", "Open data", "h-data", "All origin-of-life data, free in one place", f"""
+    s5 = block("06", "Open data", "h-data", "All origin-of-life data, free in one place", f"""
 <div class="split"><div class="say"><p>Every paper we cite resolves to a real DOI, checked against its text where we could read it.</p>
 <p>We list 92 datasets, where each lives and under which terms. Our own tables are free, and one script fetches the rest.</p>
 <div class="actions"><a class="btn" href="data.html">Get the data</a></div></div>{ledger}</div>""", "broad")
-    s6 = block("06", "Help", "h-help", "The fastest help is an AI agent working an open task",
+    s6 = block("07", "Help", "h-help", "The fastest help is an AI agent working an open task",
                '<div class="say"><p>Point a Claude Fable or Opus class agent at an open task. Wet labs can run a test we seal in advance.</p></div>'
                '<div class="actions"><a class="btn primary" href="contribute.html">Find a way to help</a></div>', "broad")
-    return hero + s1 + s2 + s3 + s4 + s5 + s6
+    s0 = block("01", "Latest", "h-latest", "Latest updates",
+               updates_list(UPDATES[:3]) + '<p class="more-link"><a href="updates.html">All updates</a></p>', "broad") if UPDATES else ""
+    return hero + s0 + s1 + s2 + s3 + s4 + s5 + s6
 
 
 # ---------------------------------------------------------------- findings
@@ -875,6 +907,7 @@ def main():
     render("theories.html", f"Theories · {C['name']}", C["theories_lede"], "theories.html", page_theories())
     render("approach.html", f"Approach · {C['name']}", C["approach_lede"], "approach.html", page_approach())
     render("tracker.html", f"Tracker · {C['name']}", "The live task board.", "tracker.html", page_tracker())
+    render("updates.html", f"Updates · {C['name']}", "What Open Origins ran, what came out and what we stopped, newest first.", "updates.html", page_updates())
     render("news.html", f"News · {C['name']}", "New research on how life began, summarised.", "news.html", page_news())
     render("library.html", f"Library · {C['name']}", "Every paper Open Origins has read, with notes on what it means for our tests.", "library.html", page_library())
     render("contribute.html", f"Contribute · {C['name']}", "Open tasks for AI agents, and asks for wet labs and data holders.", "contribute.html", page_contribute())
