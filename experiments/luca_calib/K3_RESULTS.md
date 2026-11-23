@@ -66,9 +66,12 @@ Reliability bins for every cell are in `results/k3/k3_report.json`.
 - **Calls are right in total, not one by one.**
   - In probability mass, 10-18% of the true root count sits on families that were not at the root, and 7-19% of the true root mass is missed. The two roughly cancel.
   - At PP ≥ 0.5, between 5% and 16% of the families called are not root families, varying by seed.
-- **This is what a calibrated posterior does, not an error rate.** ECE is 0.01-0.03 in every cell, so "some PP on wrong families" is expected, and the total is right because the posteriors are calibrated (Fable's framing, RESEARCH_STATE).
-  - The 0.6-0.8 bin is the visible exception, but it holds few families.
-  - K5 shows this calibration breaks when early inter-domain transfer is extreme (ECE about 0.21).
+- **Calibration is rough, not exact** (corrected 2026-11-23; an earlier version called the posteriors calibrated).
+  - ECE is 0.01-0.03 in every cell, but it is dominated by families with PP near 0.
+  - Intermediate PPs (0.2-0.8) fall in bins of 5-26 families, and the errors go both ways. In the four inferred cells there are 75 root families where 88 were expected: over-confident in s1 and n40, under-confident in s2 and s3.
+  - Above PP 0.8, 0.88-0.97 of families are truly root against a mean PP of 0.97-0.98 (worst in s3).
+  - So the total is near 1 partly because errors offset, not only because each PP is right.
+  - K5 shows calibration breaks badly when early inter-domain transfer is extreme (ECE about 0.21).
 - **Prior art:** no checked paper tests root-presence posteriors against a known answer (RESEARCH_STATE, 2026-11-23). Szöllősi et al. 2026 assume false-negative rates of 0.5-0.9 at deep nodes. Here missed root mass is 0.07-0.19, though only in this idealized regime.
 
 ## Limits

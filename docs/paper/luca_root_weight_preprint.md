@@ -15,7 +15,7 @@ So the estimate is not a prior artefact, but it depends almost entirely on wheth
 
 The simulations sit in an easier regime than the real data. The default prior already recovers 46-76% of the planted root, and the fitted weight adds a factor of 1.4-1.9, against 38 in the real data. Within that regime:
 - **True gene trees.** Our pre-registered test first failed (R = 0.751 against a 0.8-1.25 band). We traced this to a numerical overflow in the macOS arm64 build of ALE, which silently loses the largest, mostly ancestral, families. On a Linux build the same reconciliations give R = 1.087.
-- **Inferred gene trees** (157 sites, simulated under WAG, inferred under LG+G4): the mean over three seeds is 1.01 (0.96-1.04). This comes from false and missed root mass that roughly offset. PPs near 0 and 1 are well calibrated, but intermediate PPs are over-confident.
+- **Inferred gene trees** (157 sites, simulated under WAG, inferred under LG+G4): the mean over three seeds is 1.01 (0.96-1.04). This comes from false and missed root mass that roughly offset. Individual PPs are only roughly calibrated (Section 3.3).
 - **160 genomes per domain:** one cell gave R = 1.10, formally inconclusive under our own rule.
 - **Small LUCA plus early transfer:** in two loosely matched worlds, a 20-family root padded with families born on the domain stems and exchanged between domains at more than 100 times background scored as large as a 190-family root.
 
@@ -97,7 +97,10 @@ The rest of this paragraph uses the laptop run, decision cell (80, 0.4). (80, 0.
 Mean R*_inf over seeds 1-3 is 1.009 (0.96-1.04), so the pre-registered verdict is "survives", and ALE completed every family. Read it with care:
 - **With true trees, R* runs high** (1.04-1.11).
 - **Inferred trees lower it by 5-8%** by missing root mass (0.11-0.19 of the true count), while false mass on non-root families stays at 0.10-0.17. The total lands near 1 because these two errors roughly offset, not because individual calls are right.
-- **Calibration** (ECE 0.01-0.03) is dominated by the many families with PP near 0. PPs near 0 and 1 are calibrated, but intermediate PPs are over-confident. For seed 1 inferred, families with PP 0.6-0.8 (n = 18) are truly root only 50% of the time.
+- **Calibration is rough, not exact.** ECE (0.01-0.03) is dominated by the many families with PP near 0, so it flatters the fit.
+  - Intermediate PPs (0.2-0.8) fall in bins of 5-26 families, and the errors go both ways. Across the four inferred cells, those families have an expected 88 root families against 75 observed: over-confident in seed 1 and n40, under-confident in seeds 2 and 3.
+  - Families with PP above 0.8 have a mean PP of 0.97-0.98, but only 0.88-0.97 of them are truly root (worst in seed 3, 0.88).
+  - Per-cell bins are in `results/k3/k3_report.json`.
 - **R\* counts only families completed in both arms** (all of them here).
 - **This is a closely matched setting:** 157-site WAG alignments inferred under LG+G4. Real alignments, models and family sizes are not matched.
 
@@ -116,16 +119,16 @@ The positive control passed (R = 1.075). Without stem traffic the pipeline separ
 
 ## 4. Discussion
 - **The count is a weight estimate.** Moody et al.'s expected family count is, to a close approximation, the product of weak flat-prior evidence and a fitted root weight. The data support that weight strongly, and its sampling uncertainty is small. The open question is whether it is *accurate*, which the likelihood cannot answer.
-- **Our simulations are only a self-consistency check.** In them the fitted weight recovers a planted root within the pre-registered band, with true and with inferred gene trees, after a build-specific crash was fixed. But the flat prior already recovers about half the planted root there, and the weight carries a factor under 2. In the real data it carries a factor of about 38. The real families behave differently under ALE's model than our simulated root families. That is consistent with the model misfit Csűrös (2026) argues for, and our K2-K4 do not test it.
+- **Our simulations are only a self-consistency check.** In them the fitted weight recovers a planted root within the pre-registered band, with true and with inferred gene trees, after a build-specific crash was fixed. But the flat prior already gives 53-72% of the fitted count there (46-76% of the planted root), and the weight multiplies it by under 2. In the real data the flat prior gives 2.6% of the fitted count, so the weight multiplies it by about 38. The real families behave differently under ALE's model than our simulated root families. That is consistent with the model misfit Csűrös (2026) argues for, and our K2-K4 do not test it.
 - **Where the method can be fooled (K5).** Gene trees cannot separate "present at the root" from "born just after the root and moved early between the domains". If early inter-domain exchange was extremely intense, the method would report a large LUCA either way. We do not show that it was. A realism bound against the inter-domain transfer implied by Moody et al.'s own reconciliations is the next test.
 - **A practical warning.** Builds of ALE where `long double` is 64-bit (e.g. macOS arm64) fail on very large families, and those families are disproportionately ancient. A pipeline that silently drops them undercounts the root genome. On Linux x86-64 this did not occur in our runs, and Moody et al. ran on Linux clusters.
-- **Next:** a simulation tuned so that the flat prior recovers only a few percent of the root, as in the real data (more genomes, origination near 512, realistic family sizes and alignment lengths).
+- **Next:** a simulation tuned so that the flat prior gives only a few percent of the fitted count, as in the real data (more genomes, origination near 512, realistic family sizes and alignment lengths).
 
 ## 5. Limits
 - Simulated genomes are smaller (200 root families) and have fewer rare families than real ones (origination 40 instead of the 512 needed to match Moody et al.'s genome-to-pan-genome ratio, on laptop time limits).
-- Prior multiplier: 1.5-1.9× in our simulations against about 38× in the real data. The real analysis leans much harder on the fitted weight than any world we simulated.
+- Prior multiplier: 1.4-1.9× in our simulations against about 38× in the real data. The real analysis leans much harder on the fitted weight than any world we simulated.
 - One model class: ALE's model and Zombi's simulator are closely matched. K5 used our own stem simulator, checked by planted tests and a positive control.
-- Regime: in our simulations the flat prior recovers 46-76% of the root, against about 3% implied in the real data (33.9 / 1,290.6). Sequences are 157 sites under WAG, inferred under LG+G4.
+- Regime: in our simulations the flat-prior count is 53-72% of the fitted count, against 2.6% in the real data (33.9 / 1,290.6). We cannot say what share of the real root the flat prior recovers, because the real root is unknown. Sequences are 157 sites under WAG, inferred under LG+G4.
 - Few replicates: K3 three seeds, K4 and K5 one and two. Simulations are not bit-reproducible across machines (DEVIATIONS 17); the verdicts use paired arms from the same world.
 - Full results: `K3_RESULTS.md`, `K4_RESULTS.md`, `K5_RESULTS.md` in `experiments/luca_calib/`.
 - The decomposition assumes the deposited consensus files hold the root posterior under the category weights, as the scripts imply. We could not access the `.uml_rec` files.

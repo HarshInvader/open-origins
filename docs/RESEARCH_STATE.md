@@ -165,3 +165,20 @@ Owner asked for the draft `docs/paper/luca_root_weight_preprint.md` to be made r
 - **Left open:** a regime-matched simulation, in which the flat prior recovers about 3% of the true root. Until that exists, K2-K4 are self-consistency checks in an easier regime and do not validate 2,600.
 - **Next:** one outside expert read by email (owner's step 2). Posting stays with the owner.
 - **Expert read requested (2026-11-23).** One email went to Gergely Szöllősi (OIST), using the address on an official OIST page. It asked whether the decomposition is correct, and whether there is a reason to trust the maximum-likelihood root weight that we missed. The draft is kept privately. No follow-up before 3 Dec.
+
+### 2026-11-23: checking the Fable review against our own files
+The owner asked whether Fable's review was right. Each of its numeric claims was checked against `K2`-`K5` results and `results/k3/k3_report.json`.
+- **Correct:**
+  - the multiplier contrast (1.4-1.9 in the simulations, from 1.38-1.89 across K2-K4, against 38.1 = 1,290.6 / 33.9);
+  - the flat-prior share of the planted root (46-76%: 0.463 to 0.763);
+  - that K2's pre-registered verdict failed (R 0.751);
+  - K4 inconclusive;
+  - K5's adversary strength;
+  - the core novelty finding.
+- **Two errors, fixed in the draft:**
+  1. *Apples against oranges in the regime objection.* The "~3% in the real data" figure is the flat count as a share of the *fitted* count (33.9 / 1,290.6). It is not a share of the true root, which is unknown. The like-for-like simulation figure is 53-72% of the fitted count. The objection stands, but it is now stated this way.
+  2. *Calibration.* Fable said PPs near 0 and 1 are well calibrated and intermediate PPs are over-confident, generalising from one bin (s1 inferred, PP 0.6-0.8, n = 18). Across the four inferred cells, the mid-bin errors go both ways: s1 and n40 are over-confident, s2 and s3 under-confident (75 root families against 88 expected, pooled). The top bin is also off in s3 (0.88 truly root against a mean PP of 0.97).
+- **Also changed:**
+  - a limits line said 1.5-1.9×, now 1.4-1.9×;
+  - the "calibrated posterior" reading in K3_RESULTS is corrected the same way.
+- **Unchanged:** the verdict "revise", and the email already sent. The email does not mention calibration or the 3% figure.
