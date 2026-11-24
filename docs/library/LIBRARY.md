@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-24. 195 papers: 138 read in full, 57 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-24. 199 papers: 139 read in full, 60 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -10,7 +10,7 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 - [Building blocks](#building-blocks) (21)
 - [From space](#from-space) (12)
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (44)
-- [RNA world](#rna-world) (51)
+- [RNA world](#rna-world) (55)
 - [Telling life apart](#telling-life-apart) (20)
 - [Vents and first cells](#vents-and-first-cells) (47)
 
@@ -856,6 +856,17 @@ Schwintek P, et al. (2025). *eLife*. [doi:10.7554/eLife.100152](https://doi.org/
 - **Limits.** The paper does not print the potassium value it used. Setting potassium to 1 mM reproduces both printed numbers exactly in our check, but that is our back-calculation, not something the paper states. It covers one lab condition.
 - **Ideas for us.** T3 (not decidable, see T3_STATUS.md). This is the copy-time versus break-time comparison that T3 wanted to run across many natural settings, done for a single lab setting. It was the second open source for the rate law and a check on our code.
 
+### RNA sequence to structure analysis from comprehensive pairwise mutagenesis of multiple self-cleaving ribozymes
+
+Roberts JM, Beck JD, Pollock TB, Bendixsen DP, Hayden EJ (2023). *eLife 12:e80360*. [doi:10.7554/elife.80360](https://doi.org/10.7554/elife.80360). `roberts-2023-ribozyme-double-mutant-scans` · core · full text
+
+- **Question.** Do complete single- and double-mutant activity maps of self-cleaving ribozymes carry their structure, including tertiary contacts?
+- **Tried.** Measure the cleavage of every single and double mutant of five ribozymes (CPEB3, HDV, hammerhead, hairpin, twister) by sequencing, and read structure from epistasis heat maps.
+- **Method and data.** Co-transcriptional self-cleavage, fraction cleaved from read counts, three replicates; epistasis as log(RA_ij / (RA_i RA_j)). Data and code at GitLab, archived at swh:1:rev:7be31e58784ab6ffe5f15790ebbda98279af84d2 (also holds a hatchet ribozyme not in the paper).
+- **Key results.** Base-paired regions show anti-diagonal lines of strong positive epistasis, and disrupting fewer base pairs gives higher epistasis. Hairpin loops A and B show positive epistasis; the hammerhead loop-loop contact does not ('double mutants do not show positive epistasis').
+- **Limits.** Tertiary contacts are shown by heat maps and by region, with no score of contacts against non-contact pairs matched on separation and single-mutant effects. The paper says CPEB3 has no crystal structure; one exists (PDB 7QR3, 2022).
+- **Ideas for us.** T11 (sealed, 2026-11-24, experiments/t11_ribozyme_epistasis/T11_RESULTS.md): we scored contacts against matched non-contacts with a noise-scaled epistasis z. Base pairs: pooled Δ 0.44 (0.33-0.50), so the method works. Tertiary contacts: Δ 0.11 (-0.02 to 0.23), inconclusive. The faint, consistent signal (about AUC 0.6 in every ribozyme with harmful singles) is real-looking but not established. This gives our QT45 study (#30) its missing positive control.
+
 ### In search of the RNA world on Mars
 
 Mojarro A, Jin L, Szostak JW, Head JW, Zuber MT (2021). *Geobiology 19:307-321*. [doi:10.1111/gbi.12433](https://doi.org/10.1111/gbi.12433). `mojarro-2021-rna-world-mars` · core · full text
@@ -1124,6 +1135,17 @@ Tjhung, Shokhirev, Horning, Joyce (2020). *PNAS 117:2906-2913*. [doi:10.1073/pna
 - **Limits.** Full text: Fidelity is 96% per nucleotide on an easy template but only 83% (plus 1.7% insertions) on the hardest ligase fragment; the polymerase also made the complement of each strand.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
 
+### Accurate inference of the full base-pairing structure of RNA by deep mutational scanning and covariation-induced deviation of activity
+
+Zhang Z, Xiong P, Zhang T, Wang J, Zhan J, Zhou Y (2020). *Nucleic Acids Res. 48:1451-1465*. [doi:10.1093/nar/gkz1192](https://doi.org/10.1093/nar/gkz1192). `zhang-2020-coda-base-pairs-from-mutants` · useful · abstract only
+
+- **Question.** Can base pairs, including pseudoknots and lone pairs, be inferred from single-to-triple mutant fitness data?
+- **Tried.** Fit a support-vector model of double-mutant activity from the two singles, and call base pairs from the deviations.
+- **Method and data.** Deep mutational scans of an RNA and of a 48-nt twister fragment (PDB 4OJI).
+- **Key results.** 'a library of <5 x 10^4 single-to-triple mutants is sufficient to infer 25 of 26 base pairs'; the twister ribozyme at 100% precision 'with only noncanonical base pairs as false negatives'.
+- **Limits.** Target is base pairs, scored by precision against the native list, with no null matched on separation or single effects. Non-canonical contacts are the misses. Read: abstract, CODA methods and the twister section.
+- **Ideas for us.** T11 (sealed, 2026-11-24, experiments/t11_ribozyme_epistasis/T11_RESULTS.md): prior art. Base pairs from mutant scans are established, so T11 uses them only as a positive control and tests non-base-pair contacts. Their global fit of doubles from singles is the same idea as our isotonic fit.
+
 ### Mapping a Systematic Ribozyme Fitness Landscape Reveals a Frustrated Evolutionary Network for Self-Aminoacylating RNA
 
 Pressman, Liu, Janzen, Blanco et al. (2019). *JACS 141:6213-6223*. [doi:10.1021/jacs.8b13298](https://doi.org/10.1021/jacs.8b13298). `pressman-2019-rna-world` · useful · full text · touches #2, #18, #12, #30
@@ -1362,6 +1384,28 @@ Matsubara YJ, Ameta S, Thutupalli S, Nghe P, Krishna S (2022). *arXiv:2211.03155
 - **Key results.** Abstract: multistable autocatalytic reaction networks can maintain heritable compositional states across a broad class of growth-division regimes.
 - **Limits.** Read as abstract only. Theory; it does not reanalyse the 2021 droplet data.
 - **Ideas for us.** Prior art for T8: the closest related work, not a reanalysis.
+
+### Comprehensive sequence-to-function mapping of cofactor-dependent RNA catalysis in the glmS ribozyme
+
+Andreasson JOL, Savinov A, Block SM, Greenleaf WJ (2020). *Nat. Commun. 11:1663*. [doi:10.1038/s41467-020-15540-1](https://doi.org/10.1038/s41467-020-15540-1). `andreasson-2020-glms-double-mutant-rescue` · background · abstract only
+
+- **Question.** Which double mutants of the glmS ribozyme rescue the activity of a harmful single mutant, and what does that say about its structure?
+- **Tried.** Measure cleavage rates of many glmS variants on a sequencing chip and look for rescue interactions.
+- **Method and data.** High-throughput kinetics of glmS variants; a rescue is kobs(double)/kobs(single) > 1.
+- **Key results.** G26 mutations rescue both members of the G7-C52 pair, a tertiary interaction; no rescues were seen within the 27*28-45 base triple at the active site.
+- **Limits.** Contacts are discussed case by case, with no systematic score. Read: the double-mutant rescue section only.
+- **Ideas for us.** T11 (sealed, 2026-11-24, experiments/t11_ribozyme_epistasis/T11_RESULTS.md): prior art and a warning. Contacts at catalytic positions may never be rescued because their identity matters for chemistry, one reason a tertiary signal in epistasis would be small, as T11 found (Δ 0.11).
+
+### Hatchet ribozyme structure and implications for cleavage mechanism
+
+Zheng L, Falschlunger C, Huang K, Mairhofer E, Yuan S, Wang J, Patel DJ, Micura R, et al. (2019). *PNAS 116:10783-10791*. [doi:10.1073/pnas.1902413116](https://doi.org/10.1073/pnas.1902413116). `zheng-2019-hatchet-ribozyme-structure` · background · abstract only
+
+- **Question.** What is the crystal structure of the hatchet self-cleaving ribozyme?
+- **Tried.** Solve the crystal structure of the hatchet ribozyme product.
+- **Method and data.** X-ray crystallography (PDB 6JQ5).
+- **Key results.** 'Two hatchet ribozyme product molecules form a dimer through swapping of the 3' ends of the pairing strand', probably helped by the palindromic A67-U70.
+- **Limits.** The dimer swap means a monomer's contacts have to be stitched from two chains.
+- **Ideas for us.** T11 (sealed, 2026-11-24, experiments/t11_ribozyme_epistasis/T11_RESULTS.md): source of the hatchet contact map (monomer stitched from chains A and B, palindrome dropped). Hatchet's single mutants were near-neutral in the Roberts deposit, so it failed T11's base-pair check and did not count.
 
 ## Telling life apart
 
