@@ -1,18 +1,18 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-24. 187 papers: 130 read in full, 57 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-24. 195 papers: 138 read in full, 57 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
 Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, searchable, is `library.html` on the project site.
 
 ## Topics
-- [Building blocks](#building-blocks) (18)
+- [Building blocks](#building-blocks) (21)
 - [From space](#from-space) (12)
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (44)
-- [RNA world](#rna-world) (50)
+- [RNA world](#rna-world) (51)
 - [Telling life apart](#telling-life-apart) (20)
-- [Vents and first cells](#vents-and-first-cells) (43)
+- [Vents and first cells](#vents-and-first-cells) (47)
 
 ## Papers that bear on a current study's plan
 
@@ -94,6 +94,28 @@ Zheng X, Chen F, Zhang M, Yu S, Xie S, Zhao Y, Ying J (2026). *Communications Ch
 - **Limits.** Yields are very low (0.0424% for dialanine). CAP was only confirmed qualitatively when made from urea and phosphate. The paper assumes concentrated phosphate and urea in a pond, which runs into the phosphorus problem it acknowledges.
 - **Ideas for us.** Add a CAP peptide step to the pond route (#5) with its measured yield and its three required inputs (urea, phosphate, Mg2+), then test with our compatibility rule whether it can share a pond with a nucleotide step that also uses urea and phosphate (e.g. Gull et al. 2026) without a purification hand-off.
 
+### Large closed-basin lakes sustainably supplied phosphate during the origins of life
+
+Walton CR, Hao J, Schönbächler M, Shorttle O (2025). *Science Advances 11:eadq0027*. [doi:10.1126/sciadv.adq0027](https://doi.org/10.1126/sciadv.adq0027). `walton-2025-closed-basin-phosphate` · useful · full text
+
+- **Question.** Could closed-basin lakes keep high phosphate at steady state while phosphate is being used up?
+- **Tried.** Build a steady-state phosphate budget for closed-basin lakes, with Mono Lake, California, as the case study, and compare lake classes by size and inflow.
+- **Method and data.** Steady-state P budget with inflow, recycling and abiotic sinks; modern lake data.
+- **Key results.** Mono Lake keeps just below 1 mM dissolved phosphate through the year, well mixed, while supporting productivity of about 100 mM C per m2 per day. Smaller closed basins can swing from about 1 mM to orders of magnitude lower with the seasons. When abiotic sinks start depends largely on how carbonate-rich and divalent-cation-poor the lake is.
+- **Limits.** A phosphate budget only; no ion-window or membrane modelling.
+- **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): prior art. Its sink rule depends on divalent cations, the same ions T7 tracks, but it does not follow an evaporation path against a vesicle window.
+
+### Biogeochemical explanations for the world's most phosphate-rich lake, an origin-of-life analog
+
+Haas S, Sinclair KP, Catling DC (2024). *Communications Earth & Environment 5:28*. [doi:10.1038/s43247-023-01192-8](https://doi.org/10.1038/s43247-023-01192-8). `haas-2024-last-chance-lake-phosphate` · useful · full text
+
+- **Question.** Why does Last Chance Lake hold so much dissolved phosphate?
+- **Tried.** Test explanations by studying phosphorus and nitrogen cycling in Last Chance Lake and Goodenough Lake, Canada: sediment mineralogy, phosphorus sinks and N2-fixation rates.
+- **Method and data.** Field sampling of water and sediment in two soda lakes; sediment calcium mineralogy; N2-fixation measurements.
+- **Key results.** No geochemical phosphorus precipitation was found; sedimentary calcium is in dolomite rather than apatite; N2 fixation, probably suppressed by high salinity, is too low to create much biological phosphate demand. Last Chance Lake reaches 37 mM phosphate, the highest known natural level. Plagioclase weathering gives Na-HCO3-CO3 water from which calcite precipitates early and completely on evaporation.
+- **Limits.** Two modern lakes on basalt. About phosphate, not membranes or RNA copying.
+- **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): prior art for calcite removing Ca early on evaporation of basalt-derived water. T7 tests whether the same route works for hot-spring water and still leaves the vesicle window open.
+
 ### Emergence of Homochirality via Template-Directed Ligation in an RNA Reactor
 
 Laurent, Goppel, Lacoste, Gerland (2024). *PRX Life 2:013015*. [doi:10.1103/prxlife.2.013015](https://doi.org/10.1103/prxlife.2.013015). `laurent-2024-homochirality` · useful · full text · touches #4
@@ -120,6 +142,17 @@ Ritson, Sutherland (2023). *Nature Chemistry 15:1470-1477*. [doi:10.1038/s41557-
 - **Key results.** Thiophosphate photochemistry gives prebiotic access to sugars and terpenoid precursors.
 - **Limits.** Details not checked. Full text: UV/HCN photochemistry; tetroses and pentoses form without running on to higher sugars; the terpenoid precursors are the C5 alcohols (dimethylallyl and isopentenyl alcohol), not the phosphorylated IPP/DMAPP.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+
+### A carbonate-rich lake solution to the phosphate problem of the origin of life
+
+Toner JD, Catling DC (2020). *PNAS 117:883-888*. [doi:10.1073/pnas.1916109117](https://doi.org/10.1073/pnas.1916109117). `toner-catling-2020-carbonate-lake-phosphate` · useful · full text
+
+- **Question.** Can carbonate-rich lakes hold the high phosphate levels that prebiotic syntheses use, when most natural waters lose phosphate to apatite?
+- **Tried.** Model evaporation and steady-state inflow of carbonate-rich waters with PHREEQC, tracking how calcium is taken up in carbonates instead of apatite.
+- **Method and data.** PHREEQC with the phreeqc.dat database; evaporation and steady-state lake models; comparison with measured phosphate in carbonate-rich lakes (Fig. 1).
+- **Key results.** Modern carbonate-rich lakes could hold up to about 0.1 molal phosphate at steady state with evaporation and inflow, because calcium is locked in carbonates. Evaporation without inflow can reach more than 1 molal. On evaporation, Ca and Mg precipitate as carbonates and silicates and the brine becomes Na-HCO3-CO3 rich. Under early CO2-rich air the brines would be buffered to pH 6.5-9.
+- **Limits.** About phosphate, not membranes or RNA. The authors name the problem that high salt destabilises lipid vesicles and inhibits RNA oligomerisation, and call it potentially resolvable without testing it.
+- **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): the mechanism T7 asks about (carbonate strips Ca on evaporation). T7 applies it to Yellowstone spring waters and scores the path against the vesicle and RNA windows, which this paper does not do.
 
 ### Synthetic connectivity, emergence, and self-regeneration in the network of prebiotic chemistry
 
@@ -1308,6 +1341,17 @@ Vázquez-Salazar A (2026). *Trends in Biochemical Sciences*. [doi:10.1016/j.tibs
 - **Limits.** (abstract only) Review.
 - **Ideas for us.** Its 'testable benchmarks' map onto our step-table hand-offs.
 
+### Origin of the RNA World in Cold Hadean Geothermal Fields Enriched in Zinc and Potassium: Abiogenesis as a Positive Fallout from the Moon-Forming Impact?
+
+Mulkidjanian AY, Dibrova DV, Bychkov AY (2025). *Life 15:399*. [doi:10.3390/life15030399](https://doi.org/10.3390/life15030399). `mulkidjanian-2025-zinc-potassium-geothermal` · background · full text
+
+- **Question.** Could fallout of zinc and potassium after the Moon-forming impact have made Hadean geothermal fields where RNA-like molecules arose?
+- **Tried.** Estimate the moderately volatile elements that fell onto the early protocrust after the impact and argue how geothermal fluids venting through that layer would make organics.
+- **Method and data.** Calculations of moderately volatile element fallout and a reasoned scenario for vapour-condensate pools.
+- **Key results.** The authors calculate that the top layer of the protocrust could have held up to 10^19 kg of metallic zinc. They propose that pools of geothermal vapour condensate selected low-volatile, mineral-affine, radiation-resistant, nitrogen-rich, polymerisable molecules.
+- **Limits.** A hypothesis paper. It does not model an evaporation path against a vesicle window.
+- **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): opened during the prior-art search and found not relevant; not cited for any claim.
+
 ### Conditions for Darwinian evolution in compartmentalized autocatalytic reaction networks
 
 Matsubara YJ, Ameta S, Thutupalli S, Nghe P, Krishna S (2022). *arXiv:2211.03155*. https://arxiv.org/abs/2211.03155. `matsubara-2022-darwinian-autocatalytic-compartments` · background · abstract only · touches #4
@@ -1555,7 +1599,7 @@ Cary FCA, Deamer DW, Damer BF, Fagents SA, Ruttenberg KC, Donachie SP (2024). *L
 - **Method and data.** Authors and title confirmed against the local XML copy. Spring list from Deamer 2019 and Wu 2013 (not opened by us).
 - **Key results.** 'Mass flocculation of lipid vesicles occurs beyond about 1.9 mM of Ca, Fe, and Mg'. Order of harm Ca > Fe > Mg. Without a wet-dry cycle vesicles appear only at 0 to 0.5 mM calcium. Natural hot springs are listed as 0.01 to 0.45 mM Ca, 0.001 to 0.12 mM Mg and 0.0004 to 0.6123 mM Fe(II).
 - **Limits.** Vesicle side only: about eight named springs, no database and no RNA condition. The spring list comes from papers we could not open.
-- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): the closest work to the vesicle half of T4 and the source of our 1.9 mM calcium limit and 0.5 mM strict limit. T4 extends this to 660 Yellowstone thermal-water rows and the vent database.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): the closest work to the vesicle half of T4 and the source of our 1.9 mM calcium limit and 0.5 mM strict limit. T4 extends this to 660 Yellowstone thermal-water rows and the vent database. T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): source of the 1.9 mM calcium limit in the vesicle window, and of the statement that evaporation raises cations in pools, which T7 models with mineral precipitation.
 
 ### Natural soda lakes provide compatible conditions for RNA and membrane function that could have enabled the origin of life
 
@@ -1566,7 +1610,7 @@ Cohen ZR, Ding D, Zhou L, DasGupta S, Haas S, Sinclair KP, Todd ZR, Black RA, Sz
 - **Method and data.** Lab reactions at room temperature with real lake water. Authors and title confirmed against the local XML copy in experiments/t4_vesicle_rna_window/raw/lit.
 - **Key results.** Nonenzymatic primer extension ran at rates comparable to the standard lab condition (50 mM MgCl2, pH 8). A ligase ribozyme worked after the pH was lowered from about 10 to 9 (60% in 20 h at 1.2 mM Mg in lab buffer; 32% and 11% in lake water). Primers were not seen to break after 72 hours in lake water. Vesicles of 1:1 decanoic acid and decanol kept their dye in lake water, but only if formed first in dilute water.
 - **Limits.** Two lakes only. They write that it is 'unclear' whether hot springs or vents can support RNA too, which suggests a special role for soda lakes. The one-nucleotide rates are in a figure only, and the primer length is not stated in the text.
-- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): the one direct measurement of RNA lasting in field water, and the best known-answer check for the rate law (our law gives 1.66% breakage per link against their quoted about 1%). Their idea that low divalent cations offset high pH rests on the part of the law we could not confirm below 5 mM magnesium. T4 (descriptive, see T4_STATUS.md): the claim T4 looks at. T4 extends this two-lake joint test to a database of natural waters, and finds hot-spring and vent chemistry almost never meets both windows.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): the one direct measurement of RNA lasting in field water, and the best known-answer check for the rate law (our law gives 1.66% breakage per link against their quoted about 1%). Their idea that low divalent cations offset high pH rests on the part of the law we could not confirm below 5 mM magnesium. T4 (descriptive, see T4_STATUS.md): the claim T4 looks at. T4 extends this two-lake joint test to a database of natural waters, and finds hot-spring and vent chemistry almost never meets both windows. T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): the soda-lake route (carbonate removes Ca while about 1 mM Mg stays) that T7 tests on Yellowstone spring water. It works for only a few percent of waters, mostly near-neutral to alkaline and Mg-rich, Na-poor ones.
 
 ### Non-enzymatic template-directed RNA synthesis inside model protocells
 
@@ -1630,6 +1674,17 @@ Ekosso C, Liu H, Glagovich A, Rogers A, Strober LN, Schrier J, Maurer S (2026). 
 - **Key results.** Share of samples with no vesicles: DS 46%, DDS 31%, DDP 24%. DS vs DDS outcomes agree in about 66% of conditions (63 of 96); DDS vs DDP agree in about 61%, with 22 conditions where only DDP formed vesicles and 15 where only DDS did. DDP-containing samples formed vesicles at pH as low as 2.28. DDP membranes were least permeable to dithionite. Compositions with the least anionic surfactant (E to H) rarely formed vesicles.
 - **Limits.** Abstract says more vesicles at low pH and high ionic strength, while the conclusions say vesicle formation was generally favored at higher pH, especially for sulfates; the trend is headgroup-specific. Divalent cations were not varied separately from sea salt. Alkyl sulfates and phosphates as prebiotic amphiphiles are assumed, not sourced.
 - **Ideas for us.** For the compatibility rule: their per-sample vesicle counts (Zenodo 10.5281/zenodo.17612643; code github.com/mfbliposome/Environmental_stability) give a ready table of membrane formation vs pH and sea salt we can use to check whether our rule's membrane-environment calls match data. T4 (descriptive, see T4_STATUS.md): the T4 prior-art pass only skimmed it and found no database of natural waters, so it does not do T4's joint count. T4 (descriptive, see T4_STATUS.md): the T4 prior-art pass only skimmed it and found no database of natural waters, so it does not do T4's joint count.
+
+### Halite crystallization at Sfax solar salterns, Tunisia, driven by brine geochemistry and biogeochemical interactions
+
+Gharsalli N, Mhiri N, Yaich C, Karray F (2026). *Frontiers in Microbiology 17:1843317*. [doi:10.3389/fmicb.2026.1843317](https://doi.org/10.3389/fmicb.2026.1843317). `gharsalli-2026-sfax-saltern-halite` · useful · full text
+
+- **Question.** How do brine geochemistry and halophilic microbes shape halite crystallisation along the evaporation gradient of a seawater-fed saltern?
+- **Tried.** Analyse 26 brines along the Sfax saltern gradient, isolate halophilic archaea from three basins, and run crystallisation experiments with increasing biomass inoculum against abiotic controls.
+- **Method and data.** Major-ion geochemistry of 26 brine samples (mean salinity about 28-570 g/L); enrichment cultures from surface and bottom brines; controlled halite crystallisation with 25-75% inoculum.
+- **Key results.** The brines follow a marine evaporation sequence. Calcium rises linearly with the potassium-based concentration factor (FC) to about 5 times seawater, then falls sharply as gypsum precipitation intensifies (FC 5-8). Halite starts forming around FC 11. Three Halorubrum species were isolated from cultures tolerating up to 280 g/L; surface-brine cultures gave 5.550 +/- 0.127 g of halite-dominated precipitate after 10 days at 25% inoculum.
+- **Limits.** One saltern, a field sequence rather than a controlled evaporation. The concentration factor is based on potassium. Most of the paper is about microbes and crystal form, not the ion path.
+- **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): the halite bound in the seawater gate. T7's check G3 (halite onset CF between 9.5 and 13.0) brackets this field value; T7 got 11.10.
 
 ### Bridging two theoretical frameworks of autocatalysis: RAF sets and stoichiometric autocatalysis
 
@@ -1753,6 +1808,17 @@ Nan, Luo, Tran, Fahrenbach, ... Van Kranendonk (2024). *Nature Communications 15
 - **Limits.** Terrestrial hot-spring analogue, not a vent. Author correction 10.1038/s41467-024-55040-0. Full text: Gas-phase flow reactor at 80-120 C and ambient pressure, FeS on SiO2 doped with Ti, Ni, Mn or Co (10%); rates in umol/g/min; authors flag uncertainty over how persistent H2, CO2, heat and light were. Article has a later correction (Nat Commun 15:10644).
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
 
+### Groundwater-Driven Evolution of Prebiotic Alkaline Lake Environments
+
+Tutolo BM, Perrin R, Lauer R, Bossaer S, Tosca NJ, Hutchings A, Sevgen S, Nightingale M, Ilg D, Mott EB, Wilson T (2024). *Life 14:1624*. [doi:10.3390/life14121624](https://doi.org/10.3390/life14121624). `tutolo-2024-groundwater-alkaline-lakes` · useful · full text
+
+- **Question.** How do physical processes (evaporation, groundwater inflow, mixing) drive the chemistry of prebiotic alkaline lakes?
+- **Tried.** Study the neighbouring Last Chance and Goodenough Lakes, British Columbia, with near-surface geophysics, aqueous geochemistry and hydrogeologic modelling.
+- **Method and data.** Near-surface geophysics, water chemistry and hydrogeologic models of two small alkaline lakes with contrasting evaporation.
+- **Key results.** Extreme phosphate enrichment needs a lake that is geomorphologically prone to evaporation. The density contrast between evaporated brines and inflowing groundwater drives Rayleigh-Taylor instabilities and vigorous surface-subsurface mixing, which the authors offer as a way to reconcile conflicting needs of UV light, salinity, metals and pH.
+- **Limits.** Two lakes. The authors note that the evaporation that raises phosphate also raises other solutes and may inhibit some lipid membranes, but they do not test a vesicle or RNA window.
+- **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): prior art. It raises the salt-versus-membrane conflict for evaporating lakes; T7 tests that conflict along modelled paths for hot-spring water.
+
 ### Non-enzymatic oligonucleotide ligation in coacervate protocells sustains compartment-content coupling
 
 Fraccia, Martin (2023). *Nature Communications 14:2606*. [doi:10.1038/s41467-023-38163-8](https://doi.org/10.1038/s41467-023-38163-8). `fraccia-2023-lipid-world` · useful · full text · touches #4, #5
@@ -1761,6 +1827,17 @@ Fraccia, Martin (2023). *Nature Communications 14:2606*. [doi:10.1038/s41467-023
 - **Key results.** Non-enzymatic oligonucleotide ligation in coacervate protocells sustains compartment-content coupling.
 - **Limits.** Coacervates, not lipid vesicles; details not checked. Full text: DNA (Drew-Dickerson dodecamer) ligated with carbodiimide activation in coacervates made with a synthetic azobenzene photoswitch; not a prebiotic chemistry, and the genotype-phenotype link is proposed, not shown across sequences.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+
+### A Comprehensive Methodology for Monitoring Evaporitic Mineral Precipitation and Hydrochemical Evolution of Saline Lakes: The Case of Lake Magadi Soda Brine (East African Rift Valley, Kenya)
+
+Getenet M, García-Ruiz JM, Otálora F, Emmerling F, Al-Sabbagh D, Verdugo-Escamilla C (2022). *Crystal Growth & Design 22:2307-2317*. [doi:10.1021/acs.cgd.1c01391](https://doi.org/10.1021/acs.cgd.1c01391). `getenet-2022-magadi-evaporation` · useful · full text
+
+- **Question.** In what order do minerals precipitate as Lake Magadi soda brine evaporates, and how does the brine chemistry change along the way?
+- **Tried.** Evaporate Lake Magadi brine in acoustically levitated droplets watched by video microscopy and synchrotron X-ray diffraction, characterise the minerals ex situ, and compare with a thermodynamic evaporation model.
+- **Method and data.** In situ video microscopy and synchrotron XRD of levitated droplets; ex situ Raman, XRD and SEM; PHREEQC 3.4 with the Pitzer database for speciation, evaporation and precipitation, starting from a measured brine (Table 1).
+- **Key results.** Model path by concentration factor (CF): amorphous silica supersaturates at CF 3; nahcolite precipitates between CF 6.2 and 16.4; calcite starts dissolving and gaylussite forms at CF 8.6 until 11.5, then pirssonite; trona first at CF 9.7; halite from CF 32. pH falls slightly from 9.8 to 9.4 up to CF 6.4. Alkaline-earth carbonates and fluorite are predicted first, then siliceous sediments; halite/villiaumite, thermonatrite and sylvite follow trona. The experiments reproduce the mineral assemblages seen in the lake.
+- **Limits.** One brine from one lake. The authors note that predicted and measured sulfate and phosphate disagree, which they read as biological cycling. Sylvite and glaserite are predicted near complete dryness but not reported in the basin.
+- **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): the gate. T7 reran this published PHREEQC + Pitzer path from the Table 1 brine and had to match it within a factor of 1.3: nahcolite onset CF 6.25 (published 6.2), trona 9.70 (9.7), halite 28.0 (32), amorphous silica 3.08 (3.0), and the small pH drop; 5 of 5 checks passed.
 
 ### Influence of Metal Ions on Model Protoamphiphilic Vesicular Systems: Insights from Laboratory and Analogue Studies
 
@@ -1793,7 +1870,7 @@ Damer B, Deamer D (2020). *Astrobiology 20:429-452*. [doi:10.1089/ast.2019.2045]
 - **Method and data.** Review article. Title and authors confirmed against the local XML copy.
 - **Key results.** Writes that the much higher ionic solutes of seawater inhibit membrane self-assembly, which is not a problem in low-salt hot spring water (citing Milshteyn 2018). Also writes that the ionic solutes of hydrothermal fields rise 100-fold or more as most of the water is lost to the air.
 - **Limits.** A case for a setting, not a measurement. The 100-fold concentration on drying is stated, not tested.
-- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): the 100-fold drying idea is the evaporation path that T4 leaves as an open follow-up, since it needs a mineral-saturation model.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): the 100-fold drying idea is the evaporation path that T4 leaves as an open follow-up, since it needs a mineral-saturation model. T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): the linear 100-fold drying statement that T7 replaces with a mineral-saturation evaporation path. Followed that way, Yellowstone waters seldom reach both windows (2.8% of USGS rows on the primary path, 99% interval 0.3-9.4%).
 
 ### CO 2 reduction driven by a pH gradient
 
@@ -1833,7 +1910,7 @@ Milshteyn D, Damer B, Havig J, Deamer D (2018). *Life 8:11*. [doi:10.3390/life80
 - **Method and data.** Authors and title confirmed against the local XML copy. Table 2 lists spring chemistry.
 - **Key results.** 'The dilute ionic solutes of hydrothermal water are not a barrier to vesicle assembly' and 'none of the amphiphilic compounds formed membranes in seawater'. Lauric acid with its monoglyceride formed membranes at both pH values. Table 2 gives Mammoth Hot Springs calcium at about 7.6 mM.
 - **Limits.** Two pools and one seawater sample. The Mammoth calcium of 7.6 mM is ten times the 'under 0.7 mM' that a later paper from the same group (Cary 2024) gives for natural springs.
-- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): the 'hot-spring water allows vesicles, seawater does not' result is established for a handful of waters. Because membranes formed at pH 3.3, T4 checks every pH-dependent result again with the pH limits removed.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): the 'hot-spring water allows vesicles, seawater does not' result is established for a handful of waters. Because membranes formed at pH 3.3, T4 checks every pH-dependent result again with the pH limits removed. T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): source of the pH 3.0 floor on the lenient windows (vesicles at pH 3.3) and of the Table 3 seawater used in the gate.
 
 ### Remnants of an Ancient Metabolism without Phosphate
 
@@ -1975,3 +2052,14 @@ Martin WF, Hoffmann NK, Schlikker ML (2026). *Trends in Microbiology*. [doi:10.1
 - **Key results.** Native metals in the lab fix CO2, replace hydrogenases, the acetyl-CoA pathway to pyruvate, Krebs cycle steps, amino acid syntheses, NADH and ferredoxin; Pd0 with phosphite phosphorylates organics. Free energy of hydrolysis cited as -43 kJ/mol for acetyl phosphate vs -31 kJ/mol for ADP to AMP. Redox potentials cited: H2 -414 mV (about -800 mV at pH 10), Fe0 -470 mV, Ni0 -260 mV, phosphite -690 mV.
 - **Limits.** Review by the main proponents; the authors argue these reactions need no gradient, which sidesteps but does not answer Tutolo's critique of vent gradients.
 - **Ideas for us.** For #28 (strata vs metal catalysis, negative): the review's list of metal-replaceable reactions could be cross-checked against our metal-catalysis labels. For #4/#5: native-metal steps are candidates for vent steps that survive the Tutolo variant.
+
+### Experimental and Numerical Modeling of Liposome Congregation in Meteorite Craters of Early Earth
+
+Subbotin VM, Turner BA, Davies BA, Lopez AG, Fiksel G (2026). *Life 16:542*. [doi:10.3390/life16040542](https://doi.org/10.3390/life16040542). `subbotin-2026-liposome-craters` · background · full text
+
+- **Question.** Could gravity and earthquakes gather liposomes on the floors of early-Earth meteorite craters?
+- **Tried.** Build a model crater that undergoes sudden, repetitive displacements matched to earthquake ground motion, and simulate the same numerically, to see whether liposome-sized particles collect at the crater floor.
+- **Method and data.** Bench crater with a spherical-cap shape (sphere radius 200 mm), displacements and velocities matched to earthquake data; numerical simulations with 350 um particles.
+- **Key results.** The experiments and simulations show particles gathering at the floor of a bowl-shaped crater, especially with periodic seismic disturbance.
+- **Limits.** The simulations use 350 um particles; the authors note that realistic 350 nm liposomes would take about six orders of magnitude longer, and fluid motion is not included.
+- **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): opened during the prior-art search and found not relevant (evaporation appears only in a list of settings); not cited for any claim.
