@@ -1,18 +1,18 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-23. 159 papers: 101 read in full, 58 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-24. 162 papers: 106 read in full, 56 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
 Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, searchable, is `library.html` on the project site.
 
 ## Topics
-- [Building blocks](#building-blocks) (17)
+- [Building blocks](#building-blocks) (18)
 - [From space](#from-space) (12)
-- [LUCA and the tree of life](#luca-and-the-tree-of-life) (43)
+- [LUCA and the tree of life](#luca-and-the-tree-of-life) (44)
 - [RNA world](#rna-world) (38)
 - [Telling life apart](#telling-life-apart) (20)
-- [Vents and first cells](#vents-and-first-cells) (29)
+- [Vents and first cells](#vents-and-first-cells) (30)
 
 ## Papers that bear on a current study's plan
 
@@ -157,6 +157,17 @@ Ritson, Sutherland (2012). *Nature Chemistry 4:895-899*. [doi:10.1038/nchem.1467
 - **Limits.** Added by orig-3 for the pathway map (task #4). Concentrations and temperature are in the SI (not read).
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in experiments/pathway_map.
 
+### A thermodynamic basis for prebiotic amino acid synthesis and the nature of the first genetic code
+
+Higgs PG, Pudritz RE (2009). *Astrobiology 9:483-490*. [doi:10.1089/ast.2008.0280](https://doi.org/10.1089/ast.2008.0280). `higgs-pudritz-2009-code-thermodynamics` · useful · full text · touches #19
+
+- **Question.** Do the amino acids that are easiest to make abiotically match the ones that entered the genetic code first?
+- **Tried.** Combine amino-acid frequencies from discharge experiments, hydrothermal-vent simulations and meteorites into one ranking, then compare it with free energies of formation and with a consensus code order.
+- **Method and data.** Table 1 of 12 abiotic sources (meteorites, spark discharge and others); Table 2 with observed rank, code rank (Trifonov 2004), relative concentration, free energy of formation (Amend and Shock 1998), ATP cost and molecular weight.
+- **Key results.** Ten of the 20 protein amino acids form in Miller-type discharge experiments. Across discharge, vent and meteorite sources these ten early amino acids fall in one consistent order of decreasing abundance, which thermodynamics predicts. The authors argue the first proteins reflected these abundances and the other ten were added later, stepwise.
+- **Limits.** The consensus order they compare with has since been revised (Wehbi 2024). Amino acids never observed share one bottom rank. Abundance and molecular weight are strongly linked, which our T2 controls for.
+- **Ideas for us.** Prior art behind T2. Our partial correlation, controlling for molecular weight, finds no abundance effect in the returned asteroid samples; Murchison's raw association falls from 0.46 to 0.25 once weight is controlled.
+
 ### Synthesis of activated pyrimidine ribonucleotides in prebiotically plausible conditions
 
 Powner, Gerland, Sutherland (2009). *Nature 459:239-242*. [doi:10.1038/nature08013](https://doi.org/10.1038/nature08013). `powner-2009-cyanosulfidic` · useful · abstract only · in news · touches #4, #5
@@ -253,12 +264,14 @@ Furukawa, Sunami, Takano, Koga et al. (2025). *Nature Geoscience 19:19-24*. [doi
 
 ### Abundant ammonia and nitrogen-rich soluble organic matter in samples from asteroid (101955) Bennu
 
-Glavin, Dworkin, Alexander, Aponte et al. (62 authors) (2025). *Nature Astronomy 9:199-210*. [doi:10.1038/s41550-024-02472-9](https://doi.org/10.1038/s41550-024-02472-9). `glavin-2025-l0-samples` · useful · abstract only · in news · touches #11, #19
+Glavin, Dworkin, Alexander, Aponte et al. (62 authors) (2025). *Nature Astronomy 9:199-210*. [doi:10.1038/s41550-024-02472-9](https://doi.org/10.1038/s41550-024-02472-9). `glavin-2025-l0-samples` · useful · full text · in news · touches #11, #19
 
+- **Question.** What soluble organic matter, including amino acids, is in the first Bennu samples?
 - **Tried.** L0 samples
+- **Method and data.** Hot-water extracts analysed by LC-FD/ToF-MS and LC-FD/HRMS; Extended Data Tables 2 and 3 compare Bennu OREX-803001-0 with Murchison, Tarda, Orgueil and Ryugu A0106.
 - **Key results.** Bennu: 33 amino acids (14 of the 20 protein ones), all five nucleobases, ~10,000 N-bearing species, abundant ammonia; chiral non-protein amino acids racemic or near racemic.
-- **Limits.** (abstract only) News text said 'the amino acids are racemic' and 'uncontaminated'; paper says chiral non-protein amino acids racemic, plus racemic Ala and Asp, and samples pristine.
-- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L0; content.json; news.json.
+- **Limits.** News text said 'the amino acids are racemic' and 'uncontaminated'; paper says chiral non-protein amino acids racemic, plus racemic Ala and Asp, and samples pristine. Of the 20 protein amino acids, 14 are below detection in Bennu's Extended Data Table 2, and Asn, Gln and Cys are lost to hot-water extraction.
+- **Ideas for us.** Source of the abundances for T2 (transcribed in experiments/t2_code_order/data). In T2, abundance did not predict genetic-code order beyond molecular weight.
 
 ### An evaporite sequence from ancient brine recorded in Bennu samples
 
@@ -271,12 +284,12 @@ McCoy, Russell, Zega et al. (2025). *Nature 637:1072-1077*. [doi:10.1038/s41586-
 
 ### Soluble organic molecules in samples of the carbonaceous asteroid (162173) Ryugu
 
-Naraoka, Takano, Dworkin, Oba et al. (2023). *Science 379:eabn9033*. [doi:10.1126/science.abn9033](https://doi.org/10.1126/science.abn9033). `naraoka-2023-l0-samples` · useful · abstract only · touches #11, #19
+Naraoka, Takano, Dworkin, Oba et al. (2023). *Science 379:eabn9033*. [doi:10.1126/science.abn9033](https://doi.org/10.1126/science.abn9033). `naraoka-2023-l0-samples` · useful · full text · touches #11, #19
 
 - **Tried.** L0 samples
-- **Key results.** Soluble organic molecules in Ryugu samples.
-- **Limits.** (abstract only) Details not checked. Full text not read: Green OA copy at hal.science is behind an anti-bot (Anubis) gate that refused automated access; publisher copy closed; not in Europe PMC.
-- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+- **Key results.** Ryugu sample A0106 contains amino acids, amines and other soluble organics. The authors note L-excesses (for example in valine) and write that contamination is the likely source of non-racemic valine in the A0106 extract.
+- **Limits.** Read the HAL copy (hal-04208565, submitted manuscript); Table S3 is not in that copy. Glycine in A0106 differs about tenfold between methods (~0.6 nmol/g by LC-FD/HRMS vs 5.6 nmol/g by 3D-HPLC/FD).
+- **Ideas for us.** Used in T2 to choose D+L abundance (not L alone) because of contamination. The alternative Ryugu sample C0107 (Parker 2023) would make T2 decidable but could not be opened.
 
 ### Uracil in the carbonaceous asteroid (162173) Ryugu
 
@@ -514,6 +527,17 @@ Moody, Alvarez-Carretero, Mahendrarajah, ... Lenton, Donoghue (2024). *Nature Ec
 - **Key results.** LUCA ~4.2 Ga (4.09-4.33); genome >=2.5 Mb, ~2,600 proteins; prokaryote-grade anaerobic acetogen with an early immune system, part of an ecosystem.
 - **Limits.** Correct. Full text: Point estimates are 2.75 Mb (2.49-2.99) and 2,657 proteins (2,451-2,855), from integrating gene-presence probabilities, many of them low; the age rests on five pre-LUCA paralogues and narrows to 4.18-4.33 Ga under a different clock model.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s4; content.json; news.json.
+
+### Order of amino acid recruitment into the genetic code resolved by last universal common ancestor's protein domains
+
+Wehbi S, Wheeler A, Morel B, Manepalli N, Minh BQ, Lauretta DS, Masel J (2024). *PNAS 121:e2410311121*. [doi:10.1073/pnas.2410311121](https://doi.org/10.1073/pnas.2410311121). `wehbi-2024-genetic-code-order` · useful · full text · touches #19
+
+- **Question.** In what order did amino acids enter the genetic code, judged from protein domains that already existed in LUCA?
+- **Tried.** Compare ancestral amino-acid frequencies of LUCA and pre-LUCA protein-domain clans with those of post-LUCA clans; enrichment in LUCA means earlier recruitment.
+- **Method and data.** Pfam clans dated by phylogeny; ancestral sequence reconstruction; per-amino-acid relative usage with SE (Table 1); code and amino-acid properties on GitHub (sawsanwehbi/Pfam-age-classification).
+- **Key results.** Early (enriched in LUCA): V G I M T A H E P C. Late (depleted): K S D L N R F Y Q W. Molecular size explains much of the older consensus order.
+- **Limits.** Usage ratios are printed to 3 significant figures, so some amino acids tie. The order is inferred from protein sequences, not from chemistry.
+- **Ideas for us.** Used as the outcome in T2 (does asteroid abundance predict this order beyond molecular weight?). Answer: no detectable effect in Bennu or Ryugu, though the sealed test could not decide formally (experiments/t2_code_order/T2_RESULTS.md).
 
 ### Parameter Estimation and Species Tree Rooting Using ALE and GeneRax
 
@@ -1561,6 +1585,17 @@ Fraccia, Martin (2023). *Nature Communications 14:2606*. [doi:10.1038/s41467-023
 - **Key results.** Non-enzymatic oligonucleotide ligation in coacervate protocells sustains compartment-content coupling.
 - **Limits.** Coacervates, not lipid vesicles; details not checked. Full text: DNA (Drew-Dickerson dodecamer) ligated with carbodiimide activation in coacervates made with a synthetic azobenzene photoswitch; not a prebiotic chemistry, and the genotype-phenotype link is proposed, not shown across sequences.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+
+### Energy at Origins: Favorable Thermodynamics of Biosynthetic Reactions in the Last Universal Common Ancestor (LUCA)
+
+Wimmer JLE, Xavier JC, Vieira AdN, Pereira DPH, Leidner J, Sousa FL, Kleinermanns K, Preiner M, Martin WF (2021). *Frontiers in Microbiology 12:793664*. [doi:10.3389/fmicb.2021.793664](https://doi.org/10.3389/fmicb.2021.793664). `wimmer-2021-luca-exergonic-vents` · useful · full text · touches #4
+
+- **Question.** Are the reactions of LUCA's core biosynthesis downhill (exergonic) under alkaline hydrothermal vent conditions?
+- **Tried.** Take 402 core biosynthetic reactions hand-polarised toward synthesis, compute their free energy with eQuilibrator over a grid of pH and temperature, and count the share that is exergonic.
+- **Method and data.** eQuilibrator component contribution; reactant and product concentrations 1 mM, or products 100-fold below reactants; pH and temperature grid; supplementary tables of reactions and free energies.
+- **Key results.** About 77% of the scored reactions are exergonic at 1 mM, and 95-98% with a 100-fold product gradient. The share is highest around pH 9 and 80 C, which the authors read as matching Lost City-type vents.
+- **Limits.** Our T1 test (sealed, 2026-11-24) found the result is not specific: with the same gradient, 62% of the core run backwards is still exergonic; at equal concentrations the core is 8-11 points less exergonic than matched non-core reactions; vent and pond do not differ beyond the null. Their 77% also counts 37 reactions whose free energy could not be estimated (entered as 0) as exergonic; on the 314 computable reactions the share is 74.8%.
+- **Ideas for us.** Done as T1 (experiments/t1_vent_exergonic/T1_RESULTS.md). The general lesson: a share of exergonic reactions needs a reversed and a matched-null control before it says anything about a setting.
 
 ### CO 2 reduction driven by a pH gradient
 
