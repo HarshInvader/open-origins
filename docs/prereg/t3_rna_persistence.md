@@ -184,7 +184,9 @@ So the row stays **unexplained**. It is a disclosed gate failure. The gate rule 
 
 ## Gate 2: validity of the rate law outside Mg 5–10 mM
 
-Full rule: `experiments/t3_rna_persistence/GATE2_RULE.md`. It was written before any measured rate was scored. The result goes in `GATE2_RESULT.md`.
+Full rule: `experiments/t3_rna_persistence/GATE2_RULE.md`, sealed in commit e7cc89e before any measured rate was scored. Result: `GATE2_RESULT.md`.
+
+**Result (2026-11-24): high range PASS, low range FAIL.** Tier A Mg range is now 5–55 mM (strict reading 5–50 mM). In the high range the law runs a little steep: median e is +0.09 (nominal) and +0.11 (free), largest 0.26. In the low range the free-Mg convention fails (median |e| 0.26, largest 0.31).
 
 - **Data.** Mojarro et al. 2021, Table 1 (PMC8248371, CC BY): measured cleavage of one RNA linkage at 75 °C, Mg 0–50 mM, pH 3.2–9.
 - **Seen so far.** Conditions and table layout only, with one disclosed leak: the Figure 3 caption gives the rate at 50 mM Mg, pH 6.7. That row is removed.
@@ -298,7 +300,13 @@ What the table says:
 - **D3, pH.** MARHYS merged column `pH`, applied as printed, treated as a 25 °C bench value. No in-situ correction. Sensitivity arm ± 0.5, sealed. USGS field pH; lab pH only if field pH is empty.
 - **D4, monovalent salt.** [M+] = [Na⁺] + [K⁺], following Schwintek et al. MARHYS `Na` is the merged column (priority Nacalc, then Nameas, per the file). Two rules that must agree: (a) as measured; (b) floored at 0.14 M.
 - **D5, Mg.** F_Mg = max(1, 69.3 [Mg]^0.80 × 3.57 [M+]^(−0.419)). At Mg = 0 the term is 1.
-- **D6, confirmed range (tier A).** 5 ≤ T ≤ 45 °C, 6 ≤ pH ≤ 9.5, **5 ≤ Mg ≤ 10 mM**. The Mg range is the only fitted range confirmed from an opened source: "The above equation was parametrized from measurements with [Mg2+] concentrations between 0.005 and 0.01 M" (Wayment-Steele 2021). The T and pH ranges are where opened sources have used the law, not fitted ranges. The control must also have Mg in 5–10 mM and pH in 6–9.5. Rows outside are reported in tier B only.
+- **D6, confirmed range (tier A).** 5 ≤ T ≤ 45 °C, 6 ≤ pH ≤ 9.5, **5 ≤ Mg ≤ 55 mM**.
+  - 5–10 mM is the fitted range: "The above equation was parametrized from measurements with [Mg2+] concentrations between 0.005 and 0.01 M" (Wayment-Steele 2021).
+  - 10–55 mM comes from Gate 2: the high range passed. 55 mM is the highest tested row (50 mM) plus the declared 10% margin.
+  - Strict reading: cap at 50 mM. The output prints, for every setting, whether the control and how many tier A rows lie at or below 50 mM. Both readings are reported.
+  - Below 5 mM: Gate 2 failed. Those rows stay "extrapolated, reported only".
+  - The T and pH ranges are where opened sources have used the law, not fitted ranges. Gate 2 does not change them.
+  - The control must also have Mg in 5–55 mM and pH in 6–9.5.
 - **D7, tier B limits.** 5 ≤ pH ≤ 11. The law has no acid term, and it bends near the 2′-OH pKa of 13.7 (Emilsson et al. 2003, opened).
 - **D8, units.** MARHYS mmol/kg is taken as mmol/L. USGS mg/L is divided by atomic mass (Mg 24.305, K 39.098, Na 22.990).
 - **D9, non-detects and gaps.** "<x" enters as x/2. Rows missing T, pH, Mg, K or Na are dropped and counted. Seawater control rows need pH, Mg, K and Na but not T (88 rows, 40 areas).
@@ -334,10 +342,11 @@ Closed in round 2: old items 3 (gate row: declared exception), 4 (Horning & Joyc
 
 Still open:
 
-- **A. Tier A may be empty. This is the main blocker.** Round 3: Gate 2 above now decides the Mg range. The text below is the problem it answers. Seawater is expected to hold far more than 10 mM Mg, and fresh stream water far less than 5 mM. I did not read the values, so this is expectation, not a count. If it holds, both controls are outside the confirmed range and every setting returns "cannot decide by design". The study would then be honest and empty. Ways out, for the coordinator to choose before sealing:
-  1. Get Li & Breaker 1999 and replace D6 with the true fitted ranges and uncertainties. Best option.
-  2. Seal as is and accept that the likely outcome is "cannot decide", with tier B reported as extrapolation.
-  3. Allow one blind count: rows per setting inside D6, and whether each control is inside. Counts only, declared here first.
+- **A. Mg range: partly settled by Gate 2.** Tier A now covers Mg 5–55 mM. What remains:
+  1. The seawater control is expected near 53 mM. That is inside 55 mM and outside the strict 50 mM. Both readings are printed. The coordinator decides which one carries the verdict.
+  2. The stream-water control stays outside tier A. So hot springs and lakes against stream water return "cannot decide by design". Against seawater they can be decided, but seawater is an odd control for a spring.
+  3. Vent rows must still have T in 5–45 °C and Mg in 5–55 mM. How many do is not known. No in-range count has been taken.
+  4. The planted check was run before this change. Its synthetic rows and control sit at 7.5 mM, inside both the old and new range, so its numbers do not change.
 - **B. Li & Breaker 1999** (doi:10.1021/ja990592p). Not opened; to be requested. Unpaywall lists it as closed. No repository copy found.
 - **C. Diehl & Bach 2020** (doi:10.1029/2020GC009385). Not opened; to be requested. It is open access (CC BY) but the Wiley server answered 403 to the script, and I did not work around it. A person can open it in a browser. Needed to confirm at what temperature pH was measured and how EM rows are built. Until then the trap section rests on the file's own documentation rows.
 - **D. Deamer, Damer & Kompanichenko 2019.** Not opened; to be requested. Needed to quote C-spring.

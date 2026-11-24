@@ -295,3 +295,15 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Post hoc.** Wimmer's 77% counts 37 reactions they could not estimate (entered as ΔG = 0) as exergonic. On the 314 reactions that can be computed, the share is 74.8%.
 - **Next.** Library entry for Wimmer 2021. Consider writing T1 up as a short note together with the K-series, once K6 is in. T3 (RNA persistence) is next in the queue.
 - **K6.** Chunk q_aa finished (120 of 800 families; O_R 5.09 on that subset). q_ab is running under the Origins lock.
+
+### 2026-11-24: T3 stopped before sealing; K6 operations change
+- **T3 (RNA persistence per setting): cannot be decided with open field data.** Details: `experiments/t3_rna_persistence/T3_STATUS.md`. No field statistic was computed.
+  - **Redesign.** The plan's "share of samples with L* < 45 nt" would have measured temperature only. The draft moved to a chemistry contrast in which temperature cancels, plus a guard for MARHYS endmember rows, which are by definition Mg = 0.
+  - **Gate 2 (sealed in e7cc89e, then scored).** The Li & Breaker Mg term holds from 10 to 50 mM against Mojarro 2021 (within 1.3× at the median, slightly steep). It fails below 5 mM.
+  - **Declared blind count.** All 710 Yellowstone rows have Mg < 5 mM. The in-range vent rows are seawater-dominated mixtures. The study would be empty or tautological, so it was not sealed.
+  - **Reportable.** Claims that RNA is stable in Mg-poor natural water (e.g. Cohen 2024, soda lakes) rest on an untested part of the rate law. A low-Mg cleavage calibration would unlock T3; it is a good lab request.
+- **K6 operations (OPS-1, OPS-2 in `experiments/luca_calib/k6/OPERATIONS.md`; method unchanged).**
+  - Chunks are now 10 families.
+  - The 5 families with ≥ 100 sequences run in a resumable IQ-TREE queue.
+  - Finished trees from killed chunks are salvaged through the same `run_ale.py`.
+- **Next.** Route 6 (lipid / compartment-first): do vesicle-compatible and RNA-compatible Mg windows overlap in real fluids? It uses the same MARHYS and USGS data and needs no rate law.

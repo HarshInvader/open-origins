@@ -3,6 +3,7 @@
 
 Modes
   gate     lab conditions printed in opened papers only. Reads no field file.
+  gate2    blind validity test of the Mg term (rule sealed in GATE2_RULE.md before scoring).
   planted  synthetic worlds on the real cluster structure (data/structure_counts.json:
            counts and labels only). Reads no measured field value.
   real     the sealed analysis on field rows. Refuses to run unless docs/prereg/HASHES.txt
@@ -24,8 +25,9 @@ CFG = {
     'mg_pref': 69.3, 'mg_exp': 0.80, 'k_pref': 3.57, 'k_exp': -0.419,
     # D4 monovalent rules
     'salt_floor_b': 0.14, 'salt_min_a': 1e-4,
-    # D6 confirmed range (decision tier A). Mg 5-10 mM is the only fitted range confirmed from an opened source.
-    'T_range': (5.0, 45.0), 'pH_range': (6.0, 9.5), 'Mg_range': (0.005, 0.010),
+    # D6 confirmed range (decision tier A). Mg 5-10 mM is the fitted range; Gate 2 (GATE2_RESULT.md) extends the upper end:
+    # high range PASS -> 55 mM (50 mM tested + 10% declared margin); strict reading 50 mM is reported beside it. Low range FAIL.
+    'T_range': (5.0, 45.0), 'pH_range': (6.0, 9.5), 'Mg_range': (0.005, 0.055), 'Mg_strict_max': 0.050,
     # D7 reported-only tier: pH floor (no acid term in the law) and ceiling (pKa 13.7; kept well below)
     'pH_report_range': (5.0, 11.0),
     # D12 thresholds
@@ -132,6 +134,7 @@ def analyse(rows, ctrl, claim, n_boot, rng, em_rows=None, sw=None, c=CFG):
     A = [r for r in rows if in_range(r)]
     B = [r for r in rows if reportable(r)]
     out['n_in_range'] = len(A); out['n_reportable'] = len(B); out['control_in_range'] = ctrl_ok
+    out['strict_50mM'] = {'control_inside': ctrl['Mg'] <= c['Mg_strict_max'], 'rows_inside': sum(1 for r in A if r['Mg'] <= c['Mg_strict_max'])}
 
     def vec(rs, **kw):
         return [sum(contrast_parts(r, ctrl, **kw)) for r in rs]
@@ -468,10 +471,61 @@ def cmd_real(loadcheck=False):
     return 0
 
 
+# ----------------------------------------------------------------------------- gate 2 (rule: GATE2_RULE.md)
+
+def cmd_gate2():
+    x = open(os.path.join(EXP, 'raw', 'mojarro2021', 'PMC8248371.xml'), encoding='utf-8').read()
+    strip = lambda t: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', t)).strip()
+    tw = re.findall(r'<table-wrap.*?</table-wrap>', x, re.S)[0]
+    pHs = (3.2, 5.4, 6.7, 8.0, 9.0)
+    block = None; k = {}; sem = {}
+    for tr in re.findall(r'<tr.*?</tr>', tw, re.S)[2:]:
+        cells = [strip(c) for c in re.findall(r'<t[hd][^>]*>(.*?)</t[hd]>', tr, re.S)]
+        if len(cells) < 16:
+            block = cells[0]; continue
+        if block.startswith('[Mg') or block.startswith('Negative'):
+            mg = float(cells[0].replace('mM', ''))
+            for j, pH in enumerate(pHs):
+                k[(mg, pH)] = float(cells[1 + 3 * j]) * 1e-2 / 60      # per linkage per min
+                sem[(mg, pH)] = float(cells[2 + 3 * j]) * 1e-3 / 60
+    print('extracted (k per linkage per min; SEM):')
+    for mg in (0, 2.5, 5, 10, 25, 50):
+        print('  Mg %4s mM ' % mg + '  '.join('pH %s: %.3e (%.1e)' % (p, k[(mg, p)], sem[(mg, p)]) for p in pHs))
+    sets = {'in_range_check': [(5, p) for p in (6.7, 8.0, 9.0)], 'low': [(2.5, p) for p in (6.7, 8.0, 9.0)],
+            'high': [(25, p) for p in (6.7, 8.0, 9.0)] + [(50, 8.0), (50, 9.0)]}
+    tol, hard = math.log10(1.5), math.log10(2)
+    summ = {}
+    for conv, off in (('nominal', 0.0), ('free', 1.0)):
+        for name, rows in sets.items():
+            es = []
+            for mg, p in rows:
+                rp = ((mg - off) / (10 - off)) ** CFG['mg_exp']; rm = k[(mg, p)] / k[(10, p)]
+                e = math.log10(rp / rm); es.append(e)
+                print(f'  {conv:8s} {name:15s} Mg {mg:4} pH {p}: R_pred {rp:.3f} R_meas {rm:.3f} e {e:+.3f}')
+            a = [abs(e) for e in es]
+            summ[(conv, name)] = dict(med=statistics.median(es), medabs=statistics.median(a), mx=max(a), share=sum(1 for v in a if v <= tol) / len(a))
+            print(f'  {conv:8s} {name:15s} median e {summ[(conv,name)]["med"]:+.3f}  median|e| {summ[(conv,name)]["medabs"]:.3f}  max|e| {max(a):.3f}  share<=0.176 {summ[(conv,name)]["share"]:.2f}')
+    step0 = any(summ[(c, 'in_range_check')]['medabs'] <= tol for c in ('nominal', 'free'))
+    print('STEP 0:', 'testable' if step0 else 'UNTESTABLE (both ranges FAIL)')
+    for name in ('low', 'high'):
+        ok = step0 and all(summ[(c, name)]['medabs'] <= tol and summ[(c, name)]['mx'] <= hard for c in ('nominal', 'free'))
+        print(f'{name.upper()} RANGE:', 'PASS' if ok else 'FAIL')
+    print('reported only:')
+    for p in (3.2, 5.4):
+        print('  pH %s ratios to 10 mM: ' % p + ', '.join('%s mM %.3f' % (mg, k[(mg, p)] / k[(10, p)]) for mg in (2.5, 5, 25, 50)))
+    print('  removed row 50 mM pH 6.7: R_meas %.3f (R_pred nominal %.3f, free %.3f)' % (k[(50, 6.7)] / k[(10, 6.7)], 5 ** 0.8, (49 / 9) ** 0.8))
+    for p in (6.7, 8.0, 9.0):
+        pred0 = 10 ** (-log10_F(0.010, 0.25))
+        print('  0 mM / 10 mM at pH %s: measured %.3f; law with [M+] = 0.25 M assumed %.3f' % (p, k[(0, p)] / k[(10, p)], pred0))
+        print('  absolute, 10 mM pH %s, 75 C, [M+] 0.25 M assumed: law %.3e measured %.3e' % (p, 10 ** log10_k(75, p, 0.010, 0.25, literal=True), k[(10, p)]))
+    return 0
+
+
 if __name__ == '__main__':
     mode = sys.argv[1] if len(sys.argv) > 1 else ''
     if mode == 'gate': sys.exit(cmd_gate())
     if mode == 'planted': sys.exit(cmd_planted())
+    if mode == 'gate2': sys.exit(cmd_gate2())
     if mode == 'real': sys.exit(cmd_real())
     if mode == 'loadcheck': sys.exit(cmd_real(loadcheck=True))
     print(__doc__); sys.exit(1)
