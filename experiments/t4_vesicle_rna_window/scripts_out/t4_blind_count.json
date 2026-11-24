@@ -1,0 +1,1777 @@
+{
+ "note": "Margins only. The joint count A-and-B is never computed in this mode.",
+ "dropped": {
+  "marhys4": {
+   "EM|V1_basalt_ridge": 631,
+   "EM|V4_sediment": 56,
+   "EM|V5_other": 22,
+   "EM|V3_arc_backarc": 253,
+   "EM|V2b_ultramafic_other": 57,
+   "EM|V2a_alkaline_serpentinite": 44,
+   "HF|V1_basalt_ridge": 1898,
+   "HF|V4_sediment": 82,
+   "HF|V5_other": 167,
+   "HF|V3_arc_backarc": 807,
+   "HF|V2b_ultramafic_other": 145,
+   "HF|V2a_alkaline_serpentinite": 118,
+   "SW|SW": 303
+  },
+  "usgs": {
+   "river, stream, or creek": 9,
+   "thermal water": 21,
+   "lake": 2,
+   "overflow": 9,
+   "snow": 2
+  }
+ },
+ "classes": {
+  "marhys:EM|V1_basalt_ridge": {
+   "rows": 323,
+   "clusters": 35,
+   "rows_with_Fe": 300,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      7,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      6,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    0,
+    0
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "marhys:EM|V2a_alkaline_serpentinite": {
+   "rows": 3,
+   "clusters": 3,
+   "rows_with_Fe": 0,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    1,
+    1
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "marhys:EM|V2b_ultramafic_other": {
+   "rows": 19,
+   "clusters": 4,
+   "rows_with_Fe": 16,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    1,
+    1
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "marhys:EM|V3_arc_backarc": {
+   "rows": 154,
+   "clusters": 35,
+   "rows_with_Fe": 116,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      2,
+      2
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      3,
+      3
+     ],
+     "A_R1": [
+      1,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      3,
+      2
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    3,
+    2
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "marhys:EM|V4_sediment": {
+   "rows": 37,
+   "clusters": 5,
+   "rows_with_Fe": 35,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    0,
+    0
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "marhys:EM|V5_other": {
+   "rows": 1,
+   "clusters": 1,
+   "rows_with_Fe": 1,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    0,
+    0
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "marhys:HF|V1_basalt_ridge": {
+   "rows": 717,
+   "clusters": 29,
+   "rows_with_Fe": 592,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      32,
+      8
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      1,
+      1
+     ],
+     "A_R1": [
+      32,
+      8
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      136,
+      17
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      136,
+      17
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      1,
+      1
+     ],
+     "A_R1": [
+      239,
+      23
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      624,
+      29
+     ],
+     "A_R50": [
+      1,
+      1
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    700,
+    29
+   ],
+   "Mg_ge_R50": [
+    77,
+    16
+   ]
+  },
+  "marhys:HF|V2a_alkaline_serpentinite": {
+   "rows": 10,
+   "clusters": 2,
+   "rows_with_Fe": 6,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      5,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      5,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      7,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      7,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      8,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      8,
+      2
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    9,
+    2
+   ],
+   "Mg_ge_R50": [
+    1,
+    1
+   ]
+  },
+  "marhys:HF|V2b_ultramafic_other": {
+   "rows": 163,
+   "clusters": 4,
+   "rows_with_Fe": 104,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      18,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      18,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      43,
+      3
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      43,
+      3
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      78,
+      3
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      152,
+      4
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    160,
+    4
+   ],
+   "Mg_ge_R50": [
+    8,
+    2
+   ]
+  },
+  "marhys:HF|V3_arc_backarc": {
+   "rows": 544,
+   "clusters": 39,
+   "rows_with_Fe": 423,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      40,
+      14
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      40,
+      14
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      2,
+      1
+     ],
+     "A_R1": [
+      99,
+      21
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      1,
+      1
+     ],
+     "A_R1": [
+      99,
+      21
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      11,
+      1
+     ],
+     "A_R1": [
+      177,
+      27
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      425,
+      37
+     ],
+     "A_R50": [
+      2,
+      2
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    515,
+    39
+   ],
+   "Mg_ge_R50": [
+    92,
+    19
+   ]
+  },
+  "marhys:HF|V4_sediment": {
+   "rows": 111,
+   "clusters": 3,
+   "rows_with_Fe": 95,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      14,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      14,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      32,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      32,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      41,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      97,
+      3
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    108,
+    3
+   ],
+   "Mg_ge_R50": [
+    11,
+    2
+   ]
+  },
+  "marhys:HF|V5_other": {
+   "rows": 27,
+   "clusters": 5,
+   "rows_with_Fe": 23,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      2,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      2,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      2,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      6,
+      3
+     ],
+     "A_R50": [
+      1,
+      1
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    26,
+    4
+   ],
+   "Mg_ge_R50": [
+    21,
+    3
+   ]
+  },
+  "marhys:SW|SW": {
+   "rows": 86,
+   "clusters": 39,
+   "rows_with_Fe": 28,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      1,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      1,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      1,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      9,
+      3
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    84,
+    39
+   ],
+   "Mg_ge_R50": [
+    75,
+    39
+   ]
+  },
+  "usgs:drillhole": {
+   "rows": 7,
+   "clusters": 1,
+   "rows_with_Fe": 7,
+   "windows": {
+    "P_strict": {
+     "B": [
+      1,
+      1
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      1,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      7,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      7,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      1,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      7,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    0,
+    0
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "usgs:lake": {
+   "rows": 15,
+   "clusters": 5,
+   "rows_with_Fe": 0,
+   "windows": {
+    "P_strict": {
+     "B": [
+      11,
+      5
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      11,
+      5
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      15,
+      5
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      13,
+      5
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      11,
+      5
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      15,
+      5
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    0,
+    0
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "usgs:overflow": {
+   "rows": 67,
+   "clusters": 7,
+   "rows_with_Fe": 65,
+   "windows": {
+    "P_strict": {
+     "B": [
+      62,
+      5
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      62,
+      5
+     ],
+     "A_R1": [
+      3,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      64,
+      6
+     ],
+     "A_R1": [
+      3,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      63,
+      5
+     ],
+     "A_R1": [
+      3,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      63,
+      5
+     ],
+     "A_R1": [
+      3,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      64,
+      6
+     ],
+     "A_R1": [
+      3,
+      1
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      3,
+      1
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    3,
+    1
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "usgs:river, stream, or creek": {
+   "rows": 50,
+   "clusters": 19,
+   "rows_with_Fe": 22,
+   "windows": {
+    "P_strict": {
+     "B": [
+      30,
+      15
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      35,
+      16
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      50,
+      19
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      39,
+      17
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      30,
+      15
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      50,
+      19
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    0,
+    0
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "usgs:seep": {
+   "rows": 3,
+   "clusters": 1,
+   "rows_with_Fe": 0,
+   "windows": {
+    "P_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      3,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      3,
+      1
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      0,
+      0
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    0,
+    0
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  },
+  "usgs:thermal water": {
+   "rows": 660,
+   "clusters": 40,
+   "rows_with_Fe": 612,
+   "windows": {
+    "P_strict": {
+     "B": [
+      167,
+      21
+     ],
+     "A_R1": "empty by definition",
+     "A_R50": "empty by definition"
+    },
+    "P_lenient": {
+     "B": [
+      168,
+      21
+     ],
+     "A_R1": [
+      5,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "P_lenient_nopH": {
+     "B": [
+      649,
+      37
+     ],
+     "A_R1": [
+      5,
+      2
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M": {
+     "B": [
+      218,
+      26
+     ],
+     "A_R1": [
+      8,
+      3
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_strict": {
+     "B": [
+      167,
+      21
+     ],
+     "A_R1": [
+      8,
+      3
+     ],
+     "A_R50": "empty by definition"
+    },
+    "M_lenient": {
+     "B": [
+      649,
+      37
+     ],
+     "A_R1": [
+      9,
+      3
+     ],
+     "A_R50": "empty by definition"
+    },
+    "J_alk": {
+     "B": [
+      0,
+      0
+     ],
+     "A_R1": [
+      9,
+      3
+     ],
+     "A_R50": [
+      0,
+      0
+     ]
+    }
+   },
+   "Mg_ge_R1": [
+    9,
+    3
+   ],
+   "Mg_ge_R50": [
+    0,
+    0
+   ]
+  }
+ }
+}

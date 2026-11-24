@@ -1,0 +1,357 @@
+{
+ "runs": 200,
+ "n_boot": 200,
+ "cells": [
+  {
+   "structure": "usgs:thermal water",
+   "rule": "share",
+   "world": "W0 Mg-poor",
+   "expected": "U supported; label Mg-poor",
+   "killed": 0.0,
+   "supported": 1.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 0.0,
+   "labels": {
+    "Mg-poor: the Mg band alone decides": 1.0
+   }
+  },
+  {
+   "structure": "usgs:thermal water",
+   "rule": "share",
+   "world": "W1 window common",
+   "expected": "U killed",
+   "killed": 0.99,
+   "supported": 0.0,
+   "inconclusive": 0.005,
+   "not_reported": 0.005,
+   "cannot": 0.0,
+   "labels": {
+    "no covariation shown": 0.955,
+    "fragile: strict window": 0.005,
+    "covariation opens the window": 0.035
+   }
+  },
+  {
+   "structure": "usgs:thermal water",
+   "rule": "share",
+   "world": "W2 covariation closes",
+   "expected": "U supported; label covariation",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 1.0,
+   "cannot": 0.0,
+   "labels": {
+    "window-dependent": 1.0
+   }
+  },
+  {
+   "structure": "usgs:thermal water",
+   "rule": "share",
+   "world": "W3 window rare (2.5%)",
+   "expected": "inconclusive",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 1.0,
+   "not_reported": 0.0,
+   "cannot": 0.0,
+   "labels": {}
+  },
+  {
+   "structure": "usgs:thermal water",
+   "rule": "share",
+   "world": "W3b window at 5%",
+   "expected": "no support",
+   "killed": 0.12,
+   "supported": 0.0,
+   "inconclusive": 0.865,
+   "not_reported": 0.015,
+   "cannot": 0.0,
+   "labels": {
+    "no covariation shown": 0.115,
+    "fragile: strict window": 0.015,
+    "covariation opens the window": 0.005
+   }
+  },
+  {
+   "structure": "usgs:thermal water",
+   "rule": "share",
+   "world": "W4 two areas only",
+   "expected": "no kill",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 1.0,
+   "not_reported": 0.0,
+   "cannot": 0.0,
+   "labels": {}
+  },
+  {
+   "structure": "usgs:thermal water",
+   "rule": "share",
+   "world": "W5 pH edge",
+   "expected": "not reported as support (window-dependent)",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 1.0,
+   "cannot": 0.0,
+   "labels": {
+    "window-dependent": 1.0
+   }
+  },
+  {
+   "structure": "usgs:thermal water",
+   "rule": "share",
+   "world": "W6 Mg 5-9 mM",
+   "expected": "not reported as support (window-dependent)",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 1.0,
+   "cannot": 0.0,
+   "labels": {
+    "window-dependent": 1.0
+   }
+  },
+  {
+   "structure": "usgs:thermal water",
+   "rule": "share",
+   "world": "W7 calcium closes",
+   "expected": "U supported; label covariation",
+   "killed": 0.0,
+   "supported": 1.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 0.0,
+   "labels": {
+    "covariation closes the window": 0.945,
+    "no covariation shown": 0.055
+   }
+  },
+  {
+   "structure": "marhys:HF|V1_basalt_ridge",
+   "rule": "cond",
+   "world": "W0 Mg-poor",
+   "expected": "U supported; label Mg-poor",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V1_basalt_ridge",
+   "rule": "cond",
+   "world": "W1 window common",
+   "expected": "U killed",
+   "killed": 0.975,
+   "supported": 0.0,
+   "inconclusive": 0.025,
+   "not_reported": 0.0,
+   "cannot": 0.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V1_basalt_ridge",
+   "rule": "cond",
+   "world": "W2 covariation closes",
+   "expected": "U supported; label covariation",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 1.0,
+   "cannot": 0.0,
+   "labels": {
+    "window-dependent": 1.0
+   }
+  },
+  {
+   "structure": "marhys:HF|V1_basalt_ridge",
+   "rule": "cond",
+   "world": "W3 window rare (2.5%)",
+   "expected": "inconclusive",
+   "killed": 0.025,
+   "supported": 0.0,
+   "inconclusive": 0.95,
+   "not_reported": 0.025,
+   "cannot": 0.0,
+   "labels": {
+    "fragile: strict window": 0.025
+   }
+  },
+  {
+   "structure": "marhys:HF|V1_basalt_ridge",
+   "rule": "cond",
+   "world": "W3b window at 5%",
+   "expected": "no support",
+   "killed": 0.08,
+   "supported": 0.0,
+   "inconclusive": 0.905,
+   "not_reported": 0.015,
+   "cannot": 0.0,
+   "labels": {
+    "fragile: strict window": 0.015
+   }
+  },
+  {
+   "structure": "marhys:HF|V1_basalt_ridge",
+   "rule": "cond",
+   "world": "W4 two areas only",
+   "expected": "no kill",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V1_basalt_ridge",
+   "rule": "cond",
+   "world": "W5 pH edge",
+   "expected": "not reported as support (window-dependent)",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 1.0,
+   "cannot": 0.0,
+   "labels": {
+    "window-dependent": 1.0
+   }
+  },
+  {
+   "structure": "marhys:HF|V1_basalt_ridge",
+   "rule": "cond",
+   "world": "W6 Mg 5-9 mM",
+   "expected": "not reported as support (window-dependent)",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V1_basalt_ridge",
+   "rule": "cond",
+   "world": "W7 calcium closes",
+   "expected": "U supported; label covariation",
+   "killed": 0.0,
+   "supported": 1.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 0.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V2b_ultramafic_other",
+   "rule": "cond",
+   "world": "W0 Mg-poor",
+   "expected": "U supported; label Mg-poor",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V2b_ultramafic_other",
+   "rule": "cond",
+   "world": "W1 window common",
+   "expected": "U killed",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V2b_ultramafic_other",
+   "rule": "cond",
+   "world": "W2 covariation closes",
+   "expected": "U supported; label covariation",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V2b_ultramafic_other",
+   "rule": "cond",
+   "world": "W3 window rare (2.5%)",
+   "expected": "inconclusive",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V2b_ultramafic_other",
+   "rule": "cond",
+   "world": "W3b window at 5%",
+   "expected": "no support",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V2b_ultramafic_other",
+   "rule": "cond",
+   "world": "W4 two areas only",
+   "expected": "no kill",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V2b_ultramafic_other",
+   "rule": "cond",
+   "world": "W5 pH edge",
+   "expected": "not reported as support (window-dependent)",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V2b_ultramafic_other",
+   "rule": "cond",
+   "world": "W6 Mg 5-9 mM",
+   "expected": "not reported as support (window-dependent)",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  },
+  {
+   "structure": "marhys:HF|V2b_ultramafic_other",
+   "rule": "cond",
+   "world": "W7 calcium closes",
+   "expected": "U supported; label covariation",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 1.0,
+   "labels": {}
+  }
+ ]
+}

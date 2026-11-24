@@ -307,3 +307,9 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   - The 5 families with ≥ 100 sequences run in a resumable IQ-TREE queue.
   - Finished trees from killed chunks are salvaged through the same `run_ale.py`.
 - **Next.** Route 6 (lipid / compartment-first): do vesicle-compatible and RNA-compatible Mg windows overlap in real fluids? It uses the same MARHYS and USGS data and needs no rate law.
+
+### 2026-11-24: T4 (vesicle and RNA windows in real waters): descriptive only
+- **Not sealed.** The declared blind count's margins already fix every arm, so it is reported as description and labelled not blind (`experiments/t4_vesicle_rna_window/T4_STATUS.md`).
+- **Finding.** In Yellowstone, at most 1.2% of 660 thermal-water rows (3 of 40 areas) could be in both the mixed-amphiphile vesicle window and the RNA Mg minimum. In MARHYS vent rows, almost none pass the vesicle Ca, salt and pH limits.
+- **Pure fatty acid against ribozyme Mg** is empty by definition. That is a known lab fact.
+- **Pattern across T3 and T4.** Open field-chemistry databases are too Mg-poor (springs) or too hot, salty or seawater-mixed (vents) to decide claims made at lab conditions. Next: a fresh Fable plan for studies whose decidability is checked by a blind count *before* design.
