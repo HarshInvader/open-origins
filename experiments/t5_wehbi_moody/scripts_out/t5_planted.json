@@ -1,0 +1,323 @@
+{
+ "clans": 1463,
+ "kill_reachable": true,
+ "mode": "planted",
+ "nboot": 2000,
+ "pfams": 3669,
+ "rows": [
+  {
+   "family": "pp_side",
+   "mean_A": 84.59,
+   "mean_B": 84.2,
+   "mean_G": 0.39,
+   "mean_G_finebins": 0.38,
+   "mean_G_hi": 2.55,
+   "mean_G_lo": -1.78,
+   "rates": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "w=0.00",
+   "sd_G": 1.2
+  },
+  {
+   "family": "pp_side",
+   "mean_A": 85.77,
+   "mean_B": 83.82,
+   "mean_G": 1.96,
+   "mean_G_finebins": 1.94,
+   "mean_G_hi": 4.09,
+   "mean_G_lo": -0.16,
+   "rates": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "w=0.10",
+   "sd_G": 1.35
+  },
+  {
+   "family": "pp_side",
+   "mean_A": 87.14,
+   "mean_B": 83.03,
+   "mean_G": 4.11,
+   "mean_G_finebins": 4.09,
+   "mean_G_hi": 6.25,
+   "mean_G_lo": 2.01,
+   "rates": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "w=0.20",
+   "sd_G": 1.33
+  },
+  {
+   "family": "pp_side",
+   "mean_A": 88.65,
+   "mean_B": 81.74,
+   "mean_G": 6.91,
+   "mean_G_finebins": 6.86,
+   "mean_G_hi": 9.15,
+   "mean_G_lo": 4.77,
+   "rates": {
+    "kill": 0.98,
+    "partly_informative": 0.02,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 0.9875,
+    "partly_informative": 0.0125,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "w=0.30",
+   "sd_G": 1.46
+  },
+  {
+   "family": "pp_side",
+   "mean_A": 89.88,
+   "mean_B": 78.62,
+   "mean_G": 11.26,
+   "mean_G_finebins": 11.07,
+   "mean_G_hi": 13.85,
+   "mean_G_lo": 8.82,
+   "rates": {
+    "kill": 0.24,
+    "partly_informative": 0.76,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 0.2775,
+    "partly_informative": 0.7225,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "w=0.40",
+   "sd_G": 1.93
+  },
+  {
+   "family": "pp_side",
+   "mean_A": 90.22,
+   "mean_B": 71.15,
+   "mean_G": 19.07,
+   "mean_G_finebins": 18.45,
+   "mean_G_hi": 22.54,
+   "mean_G_lo": 15.71,
+   "rates": {
+    "kill": 0.0,
+    "partly_informative": 1.0,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 0.0,
+    "partly_informative": 1.0,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "w=0.50",
+   "sd_G": 2.2
+  },
+  {
+   "family": "pp_side",
+   "mean_A": 87.93,
+   "mean_B": 47.84,
+   "mean_G": 40.09,
+   "mean_G_finebins": 39.09,
+   "mean_G_hi": 44.74,
+   "mean_G_lo": 35.37,
+   "rates": {
+    "kill": 0.0,
+    "partly_informative": 0.0,
+    "support": 1.0
+   },
+   "rates_finebins": {
+    "kill": 0.0,
+    "partly_informative": 0.0,
+    "support": 1.0
+   },
+   "reps": 400,
+   "scenario": "w=0.75",
+   "sd_G": 1.43
+  },
+  {
+   "family": "pp_side",
+   "mean_A": 86.0,
+   "mean_B": 35.85,
+   "mean_G": 50.15,
+   "mean_G_finebins": 49.16,
+   "mean_G_hi": 54.54,
+   "mean_G_lo": 45.7,
+   "rates": {
+    "kill": 0.0,
+    "partly_informative": 0.0,
+    "support": 1.0
+   },
+   "rates_finebins": {
+    "kill": 0.0,
+    "partly_informative": 0.0,
+    "support": 1.0
+   },
+   "reps": 400,
+   "scenario": "w=1.00",
+   "sd_G": 0.22
+  },
+  {
+   "family": "label_side",
+   "mean_A": 84.63,
+   "mean_B": 84.3,
+   "mean_G": 0.33,
+   "mean_G_finebins": 0.32,
+   "mean_G_hi": 2.44,
+   "mean_G_lo": -1.79,
+   "rates": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "f=0.00",
+   "sd_G": 1.04
+  },
+  {
+   "family": "label_side",
+   "mean_A": 85.81,
+   "mean_B": 83.88,
+   "mean_G": 1.93,
+   "mean_G_finebins": 1.92,
+   "mean_G_hi": 4.06,
+   "mean_G_lo": -0.17,
+   "rates": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "f=0.10",
+   "sd_G": 1.03
+  },
+  {
+   "family": "label_side",
+   "mean_A": 87.09,
+   "mean_B": 83.64,
+   "mean_G": 3.44,
+   "mean_G_finebins": 3.43,
+   "mean_G_hi": 5.6,
+   "mean_G_lo": 1.35,
+   "rates": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "f=0.20",
+   "sd_G": 1.02
+  },
+  {
+   "family": "label_side",
+   "mean_A": 88.68,
+   "mean_B": 83.35,
+   "mean_G": 5.33,
+   "mean_G_finebins": 5.32,
+   "mean_G_hi": 7.53,
+   "mean_G_lo": 3.25,
+   "rates": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 1.0,
+    "partly_informative": 0.0,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "f=0.30",
+   "sd_G": 0.96
+  },
+  {
+   "family": "label_side",
+   "mean_A": 91.45,
+   "mean_B": 82.71,
+   "mean_G": 8.74,
+   "mean_G_finebins": 8.73,
+   "mean_G_hi": 11.01,
+   "mean_G_lo": 6.65,
+   "rates": {
+    "kill": 0.885,
+    "partly_informative": 0.115,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 0.8875,
+    "partly_informative": 0.1125,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "f=0.50",
+   "sd_G": 1.03
+  },
+  {
+   "family": "label_side",
+   "mean_A": 100.0,
+   "mean_B": 80.98,
+   "mean_G": 19.02,
+   "mean_G_finebins": 19.0,
+   "mean_G_hi": 21.62,
+   "mean_G_lo": 16.76,
+   "rates": {
+    "kill": 0.0,
+    "partly_informative": 1.0,
+    "support": 0.0
+   },
+   "rates_finebins": {
+    "kill": 0.0,
+    "partly_informative": 1.0,
+    "support": 0.0
+   },
+   "reps": 400,
+   "scenario": "f=1.00",
+   "sd_G": 1.41
+  }
+ ],
+ "script_sha256": "f80a19691c19d2cdc592bd17361ed06ad763514bd8bbf46076558651a11eb53f",
+ "seed": [
+  20261125,
+  2
+ ],
+ "support_reachable": true
+}

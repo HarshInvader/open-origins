@@ -1,0 +1,160 @@
+{
+ "A_at_0.75": 80.483,
+ "A_hits": 845,
+ "A_mean_share_of_cogs_over_0.5": 30.719,
+ "A_percent": 88.667,
+ "A_present": 953,
+ "absent": {
+  "old": 16,
+  "post": 339
+ },
+ "alternatives_rejected": {
+  "sd1_MEAN_OF_MEDIANS": {
+   "A": 90.66,
+   "flags_matched": 867,
+   "n_present": 953
+  },
+  "sd1_ML_median": {
+   "A": 94.86,
+   "flags_matched": 810,
+   "n_present": 953
+  },
+  "sd2_cog_pp_repo_file": {
+   "A": 80.3,
+   "flags_matched": 706,
+   "n_present": 949
+  }
+ },
+ "breadth_counts_fine_bins": [
+  {
+   "bin": "1",
+   "old": 40,
+   "post": 439
+  },
+  {
+   "bin": "2",
+   "old": 52,
+   "post": 393
+  },
+  {
+   "bin": "3",
+   "old": 65,
+   "post": 320
+  },
+  {
+   "bin": "4",
+   "old": 53,
+   "post": 230
+  },
+  {
+   "bin": "5-8",
+   "old": 179,
+   "post": 537
+  },
+  {
+   "bin": "9-16",
+   "old": 202,
+   "post": 368
+  },
+  {
+   "bin": "17-32",
+   "old": 176,
+   "post": 250
+  },
+  {
+   "bin": "33-64",
+   "old": 106,
+   "post": 134
+  },
+  {
+   "bin": "65+",
+   "old": 80,
+   "post": 45
+  }
+ ],
+ "breadth_counts_s1_bins": [
+  {
+   "bin": "1",
+   "old": 40,
+   "post": 439
+  },
+  {
+   "bin": "2",
+   "old": 52,
+   "post": 393
+  },
+  {
+   "bin": "3",
+   "old": 65,
+   "post": 320
+  },
+  {
+   "bin": "4",
+   "old": 53,
+   "post": 230
+  },
+  {
+   "bin": "5-8",
+   "old": 179,
+   "post": 537
+  },
+  {
+   "bin": "9-16",
+   "old": 202,
+   "post": 368
+  },
+  {
+   "bin": "17+",
+   "old": 362,
+   "post": 429
+  }
+ ],
+ "by_class": {
+  "LUCA": [
+   747,
+   853
+  ],
+  "preLUCA": [
+   98,
+   100
+  ]
+ },
+ "clans_among_present": 1463,
+ "flags_matched": 969,
+ "flags_total": 969,
+ "floor_unrestricted_shuffle": {
+  "mean": 84.507,
+  "n": 2000,
+  "p2.5": 81.952,
+  "p97.5": 86.884
+ },
+ "floor_within_size_decile": {
+  "max": 90.976,
+  "mean": 87.128,
+  "n": 2000,
+  "p2.5": 85.1,
+  "p97.5": 89.087,
+  "p_floor_ge_A": 0.07846076961519241
+ },
+ "from_their_flags": [
+  845,
+  953,
+  88.667
+ ],
+ "gate_pass": true,
+ "map": {
+  "cogs": 3356,
+  "cogs_with_a_pp": 3161
+ },
+ "mode": "gate",
+ "old_absent_from_map": 16,
+ "present": {
+  "old": 953,
+  "post": 2716
+ },
+ "published_percent": 88.6,
+ "seed": [
+  20261125,
+  1
+ ]
+}

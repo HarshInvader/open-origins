@@ -68,3 +68,8 @@ ee5f8f45faf7e7453d05cfe92242f09c39cd127082bb1c2db510ac4605f6d89a  experiments/t1
 90f1ebfe13a252979c5c66124d08f1a18c92f1359734974321899deb47535519  experiments/t1_vent_exergonic/DEVIATIONS.md  orig-paper  2026-11-23T23:19:43Z  T1 deviation T1-1 (D4 applied to gate), before gate rerun
 f6510848d1faac39f5249c23f1296e88b10a4a9500782c29678a8fdbdd330199  experiments/t1_vent_exergonic/scripts/gate_diagnose.py  orig-paper  2026-11-23T23:19:43Z  T1 deviation T1-1 (D4 applied to gate), before gate rerun
 7677b95743867ea2b62cedf2eafca10e626cf0e25440a3094a43456765cf45ef  experiments/t1_vent_exergonic/scripts/zero_check.py  orig-paper  2026-11-23T23:19:43Z  T1 deviation T1-1 (D4 applied to gate), before gate rerun
+98d1a86c0b3c5fc22e584fdfc8bf359af6fab53b911edb5f52f6dd05884d97dd  docs/prereg/t5_wehbi_moody_base_rate.md  orig-paper  2026-11-24T18:03:10Z  T5 Wehbi-Moody base-rate prereg seal
+f80a19691c19d2cdc592bd17361ed06ad763514bd8bbf46076558651a11eb53f  experiments/t5_wehbi_moody/scripts/t5_analysis.py  orig-paper  2026-11-24T18:03:10Z  T5 Wehbi-Moody base-rate prereg seal
+6483d807da9189990b7bfeb346d13ac8d2a00d5b0298e6f93fac9a8054fe62ac  experiments/t5_wehbi_moody/scripts/build_map.py  orig-paper  2026-11-24T18:03:10Z  T5 Wehbi-Moody base-rate prereg seal
+77ddeb5dee9a8289a43085547d4784c12547a20a7a143985934959a42c1810ad  experiments/t5_wehbi_moody/scripts_out/t5_gate.json  orig-paper  2026-11-24T18:03:10Z  T5 Wehbi-Moody base-rate prereg seal
+59fcdd026b3fa07ed76c4072638b699950214a8df53981eca89c870b53cb5b9b  experiments/t5_wehbi_moody/scripts_out/t5_planted.json  orig-paper  2026-11-24T18:03:10Z  T5 Wehbi-Moody base-rate prereg seal
