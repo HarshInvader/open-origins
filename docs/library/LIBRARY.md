@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-24. 162 papers: 106 read in full, 56 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-24. 185 papers: 129 read in full, 56 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -10,9 +10,9 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 - [Building blocks](#building-blocks) (18)
 - [From space](#from-space) (12)
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (44)
-- [RNA world](#rna-world) (38)
+- [RNA world](#rna-world) (48)
 - [Telling life apart](#telling-life-apart) (20)
-- [Vents and first cells](#vents-and-first-cells) (30)
+- [Vents and first cells](#vents-and-first-cells) (43)
 
 ## Papers that bear on a current study's plan
 
@@ -812,6 +812,50 @@ Menet H, Daubin V, Tannier E (2022). *PLoS Comput Biol (2022), e1010621*. [doi:1
 
 ## RNA world
 
+### Prebiotic gas flow environment enables isothermal nucleic acid replication
+
+Schwintek P, et al. (2025). *eLife*. [doi:10.7554/eLife.100152](https://doi.org/10.7554/eLife.100152). `schwintek-2025-gas-flow-replication` · core · full text
+
+- **Question.** Can a heated pore with gas flowing through it copy nucleic acids at one steady temperature, and do the copies outlast the breakage?
+- **Tried.** Run copying in a gas-flow setting, then compare how long a copy takes with how long RNA lasts, using the Li and Breaker break-rate law.
+- **Method and data.** Appendix 8, equation 19 repeats the Li and Breaker law (magnesium, salt, pH, temperature, length). It uses sodium in the experiment but assumes the potassium correction would be similar. Worked example for a 24-mer at 45 C, pH 7, 50 to 200 micromolar magnesium.
+- **Key results.** For a 24-mer at 45 C they print 8.917e-6 per minute (200 micromolar Mg) and 3.231e-5 per minute (1 mM Mg), a break time near 2,000 hours. They state that copying with plausible machinery 'out-competes' hydrolysis in their settings. They quote a nonenzymatic copy rate of 1 per hour (from Walton 2019) and a ribozyme rate of 72 per hour.
+- **Limits.** The paper does not print the potassium value it used. Setting potassium to 1 mM reproduces both printed numbers exactly in our check, but that is our back-calculation, not something the paper states. It covers one lab condition.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md). This is the copy-time versus break-time comparison that T3 wanted to run across many natural settings, done for a single lab setting. It was the second open source for the rate law and a check on our code.
+
+### In search of the RNA world on Mars
+
+Mojarro A, Jin L, Szostak JW, Head JW, Zuber MT (2021). *Geobiology 19:307-321*. [doi:10.1111/gbi.12433](https://doi.org/10.1111/gbi.12433). `mojarro-2021-rna-world-mars` · core · full text
+
+- **Question.** How do metals and pH change how fast a single RNA link breaks, in solutions like those of early Mars?
+- **Tried.** Measure cleavage of one RNA linkage across pH 3.2 to 9 with magnesium, iron(II) and manganese(II) up to 50 mM.
+- **Method and data.** Measured cleavage in the lab (PMC8248371, CC BY 4.0). Title and authors confirmed against the local XML copy in experiments/t3_rna_persistence/raw/mojarro2021.
+- **Key results.** Metals speed up cleavage at nearly every pH. Cleavage with magnesium is slowest at pH 5.4. At pH 3.2, more metal means slower cleavage. Iron(II) and manganese(II) cleave faster than magnesium at pH 5.4 to 8.
+- **Limits.** One RNA linkage, not a full strand. In our check the pH dependence was not steady between pH 6.7 and 9, and the buffer changed between those columns (MES to Tris), so this may be a buffer effect.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): the independent data set we used for Gate 2. The Li and Breaker magnesium term passed from 10 to 50 mM (slightly too steep) and failed below 5 mM, and that failure is why T3 could not be run on natural waters. The law has no iron or manganese term although vent fluids are rich in both.
+
+### Theoretical basis for stabilizing messenger RNA through secondary structure design
+
+Wayment-Steele HK, Kim DS, Choe CA, et al. (2021). *Nucleic Acids Research 49:10604-10617*. [doi:10.1093/nar/gkab764](https://doi.org/10.1093/nar/gkab764). `wayment-steele-2021-mrna-hydrolysis-model` · core · full text
+
+- **Question.** How fast does an RNA strand break by hydrolysis, and how much does folding protect it?
+- **Tried.** Write down one equation for the break rate of each RNA link, built from the Li and Breaker 1999 measurements, and use it to design mRNA that lasts longer in storage.
+- **Method and data.** Methods section 'Quantitative model for RNA hydrolysis'. The rate per link depends on pH, temperature, potassium and magnesium, from a reference point of pH 6, 23 C and 3.17 M potassium. It was fitted with 5 to 10 mM magnesium. Table 1 prints worked rates for storage conditions.
+- **Key results.** Gives the rate law that T3 coded: a base rate of 1.3e-9 per minute per link at pH 6 and 23 C, about tenfold faster per pH unit and about tenfold faster per 14 C. They multiply by length and by the unpaired fraction (0.4) to get a rate per molecule.
+- **Limits.** The equation prints 3.16 M in one place and 3.17 M in the sentence after, and the paper does not say why. Their own text says the fit used 5 to 10 mM magnesium and that with no magnesium the last two terms are dropped. Our code matched 5 of the 6 rates in their Table 1 within 1%; the sixth (in vitro transcription, 37 C, pH 7.6, 14 mM Mg) came out 2.2 times lower than printed and we could not find the cause.
+- **Ideas for us.** T3 (RNA persistence per origin setting; not decidable, see T3_STATUS.md). This is the second open copy of the Li and Breaker law, so T3 could use it without the paywalled original. It also gave T3 a published table to test the code against.
+
+### Primordial ocean chemistry and its compatibility with the RNA world
+
+Kua J, Bada JL (2011). *Origins of Life and Evolution of Biospheres 41:553-558*. [doi:10.1007/s11084-011-9250-5](https://doi.org/10.1007/s11084-011-9250-5). `kua-bada-2011-ocean-chemistry-rna-world` · core · full text
+
+- **Question.** Across proposed origin settings, how long does RNA last, judged from pH and temperature?
+- **Tried.** Take published break rates for the RNA backbone (from a 13-mer oligo-U, pH 2 to 12, at 35 and 90 C) and compare five pH values: 3.5 (acidic vent), 5.4, 6.7, 8 and 10 (alkaline vent such as Lost City).
+- **Method and data.** pH and temperature only. Phosphodiester data from Linjalahti and Mikkola 2007 (not opened by us).
+- **Key results.** Half-lives at 25 C of 2, 29, 51, 32 and 2 years at pH 3.5, 5.4, 6.7, 8 and 10. 'Even the lower temperature alkaline hydrothermal vents would show half-lives of less than a day at 75 C.'
+- **Limits.** No magnesium term (one sentence only notes that Li and Breaker measured faster cleavage with magnesium), no salt term and no field-water database. The article page was readable without a login; the library lists it as closed access.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): the nearest earlier study. It settles the temperature and pH part, so the open part for T3 was only the field chemistry (pH, magnesium, salt in measured waters).
+
 ### Nonenzymatic, Prebiotic Aminoacylation Couples Chirality of RNA and Protein
 
 Davisson JA, Kalb EM, Lin S, Lee J, Knudson IJ, Schepartz A, Engelhart AE, et al. (2026). *ACS Omega*. [doi:10.1021/acsomega.5c11196](https://doi.org/10.1021/acsomega.5c11196). `davisson-2026-aminoacylation-chirality` · useful · abstract only · touches #4
@@ -850,7 +894,7 @@ Gianni, Kwok, Wan, Goeij, Clifton, Colizzi, Attwater, Holliger (2026). *Science 
 - **Tried.** RNA world
 - **Key results.** QT45, a 45-nt polymerase ribozyme from random pools, copies RNA from triplet substrates in mildly alkaline eutectic ice; made its complementary strand (94.1% per-nt fidelity, random triplets) and itself (defined triplets), each at ~0.2% yield in 72 days.
 - **Limits.** Plan's second-hand '0.02% over 72 days' is wrong: the abstract gives ~0.2% yield. Online 2026-02-12. Full text: Both strands made in separate, primer-extension reactions (not a closed self-replication cycle); the self (+) copy needed one defined hexamer besides triplets; conditions pH 9, -7 C frozen, ribozyme in 10-fold excess; yields 0.24% (-) and 0.17% (+).
-- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L2/L3; content.json; news.json.
+- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L2/L3; content.json; news.json. T3 (not decidable, see T3_STATUS.md): one ligation step of QT51 runs at 0.06 per minute (-7 C frozen, pH 9, 50 mM Mg); QT45 half-life about 117 days (R18 about 16 days); our own analysis found decay about 210 times faster than synthesis for QT45. A one-step rate does not match the 0.2% full-length yield in 72 days. T3 (not decidable, see T3_STATUS.md): one ligation step of QT51 runs at 0.06 per minute (-7 C frozen, pH 9, 50 mM Mg); QT45 half-life about 117 days (R18 about 16 days); our own analysis found decay about 210 times faster than synthesis for QT45. A one-step rate does not match the 0.2% full-length yield in 72 days.
 
 ### Unexpected properties of nucleotide condensates could facilitate the RNA world
 
@@ -913,7 +957,7 @@ Attwater, Augustin, Curran, Kwok, Ohlendorf, Gianni, Holliger (2025). *Nature Ch
 - **Tried.** RNA world
 - **Key results.** Triplet substrates trap separated strands; with coupled pH and freeze-thaw cycles a polymerase ribozyme replicates both strands of dsRNAs exponentially, including a fragment of the ribozyme itself; open-ended runs from random pools gave replicating sequences or drifting diverse pools.
 - **Limits.** Contradicts site text 'no exponential growth yet' for RNA world. Not whole-ribozyme self-replication, not scenario feedstocks. Full text: Amplification is modest and short-lived (e.g. 9- and 31-fold overall for a defined duplex; 1.2-1.38-fold per cycle for ~4 cycles before plateau); the ribozyme itself is supplied, and only a fragment of it is replicated.
-- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv). T3 (not decidable, see T3_STATUS.md): 1.2 to 1.38-fold gain per pH and freeze-thaw cycle (synthesis at -7 C, pH 9, 1 mM Mg; strand separation at pH 3.6, 80 C). No per-nucleotide rate was found. T3 (not decidable, see T3_STATUS.md): 1.2 to 1.38-fold gain per pH and freeze-thaw cycle (synthesis at -7 C, pH 9, 1 mM Mg; strand separation at pH 3.6, 80 C). No per-nucleotide rate was found.
 
 ### High-Yield Prebiotic Polymerization of 2′,3′-Cyclic Nucleotides under Wet–Dry Cycling
 
@@ -987,6 +1031,17 @@ Papastavrou, Horning, Joyce (2024). *PNAS 121:e2321592121*. [doi:10.1073/pnas.23
 - **Limits.** Plan verified citation only; details now checked. Full text: Fidelity 89.1% (71-89) vs 81.4% (52-2) for reciprocal synthesis of a modified hammerhead (27 nt copied, primers supply the rest); 8 rounds per lineage with reverse transcription, PCR and transcription by protein enzymes between rounds; the polymerase itself did not evolve.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L4; content.json map.
 
+### Goldilocks and RNA: where Mg2+ concentration is just right
+
+Guth-Metzler R, et al. (2023). *Nucleic Acids Research 51:3529-3539*. [doi:10.1093/nar/gkad124](https://doi.org/10.1093/nar/gkad124). `guth-metzler-2023-goldilocks-magnesium` · useful · abstract only
+
+- **Question.** Does magnesium only damage RNA, or can it also protect it?
+- **Tried.** Measure how long folded and unfolded RNAs last at different magnesium levels.
+- **Method and data.** Measured at 65 C, pH 7.1, 180 mM NaCl.
+- **Key results.** Magnesium both cleaves RNA and protects it by folding it. Folded RNAs show a lifetime peak at an intermediate magnesium level.
+- **Limits.** Only the abstract and methods were read.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): the Li and Breaker law is for unfolded RNA, so a folded ribozyme or a duplex lasts longer and T3 would give only a lower bound on lifetime for structured RNA.
+
 ### Template-Directed Replication and Chiral Resolution during Wet–Dry Cycling in Hydrothermal Pools
 
 Ross, Deamer (2023). *Life 13:1749*. [doi:10.3390/life13081749](https://doi.org/10.3390/life13081749). `ross-2023-wet-dry-cycling` · useful · full text · touches #4, #5, #17
@@ -1004,6 +1059,17 @@ Ianeselli, Atienza, Kudella, Gerland, Mast, Braun (2022). *Nature Physics 18:579
 - **Key results.** Water cycles in a Hadean CO2 atmosphere drive the evolution of long DNA.
 - **Limits.** Pre-2023 context; details not checked. Full text: Replication was done by Taq DNA polymerase ('to mimic a sped-up RNA world'), not non-enzymatically; dew from 0.1-1 bar CO2 at pH ~4 melted strands 30 K below bulk Tm; >1,000-nt AT-rich strands emerged.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+
+### Nucleic acid catalysis under potential prebiotic conditions
+
+Le Vay K, Mutschler H (2020). *Chemistry - An Asian Journal 15:214-230*. [doi:10.1002/asia.201901205](https://doi.org/10.1002/asia.201901205). `le-vay-mutschler-2020-catalysis-prebiotic-conditions` · useful · full text
+
+- **Question.** Which ribozyme and DNAzyme reactions could work under conditions the early Earth might have offered?
+- **Tried.** A review of nucleic acid catalysis against pH, temperature, metal ions and other prebiotic conditions.
+- **Method and data.** Review article.
+- **Key results.** States that environments with a lot of magnesium and high temperature, such as hydrothermal vents, are unsuitable for RNA-based scenarios, citing Li and Breaker for half-lives of minutes. Cites Martin and Russell 2003 as the vent scenario.
+- **Limits.** Assumes vents are rich in magnesium. It does not check that against measured vent fluids.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): states the vent verdict outright, so the hot-vent result is not new. Field data could check its magnesium premise, but our blind count found that the measured vent rows in range are mostly entrained seawater.
 
 ### An RNA polymerase ribozyme that synthesizes its own ancestor
 
@@ -1023,6 +1089,17 @@ Pressman, Liu, Janzen, Blanco et al. (2019). *JACS 141:6213-6223*. [doi:10.1021/
 - **Limits.** Plan's year and journal correct; DOI found here. Full text: Near-complete coverage of a central 21-nt region only; three ribozyme families separated by low-activity valleys, so the landscape is frustrated and global optimisation is blocked.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s5 (memory).
 
+### Template-Directed Catalysis of a Multistep Reaction Pathway for Nonenzymatic RNA Primer Extension
+
+Walton T, Pazienza L, Szostak JW (2019). *Biochemistry 58:755-762*. [doi:10.1021/acs.biochem.8b01156](https://doi.org/10.1021/acs.biochem.8b01156). `walton-2019-nonenzymatic-extension-rates` · useful · full text
+
+- **Question.** How fast does nonenzymatic copying add a nucleotide to an RNA primer?
+- **Tried.** Measure one-nucleotide extension with 2-aminoimidazole-activated G, alone or with an activated helper next to it.
+- **Method and data.** 100 mM MgCl2, 250 mM NaCl, 100 mM Tris at pH 8; detection limit 0.01 per hour. PRIOR_ART gives authors, journal, pages and doi but no title.
+- **Key results.** The rate levels off at 3.7 per hour with activated G alone, and at 27 per hour with an activated helper (a bridged dinucleotide or OAt-G).
+- **Limits.** Measured in lab buffer at pH 8 with 100 mM magnesium, far from natural waters. A one-nucleotide rate is not a full-length copying rate.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): source of the nonenzymatic copy rate used to set against the break rate. A lab rate used for a field sample is only an upper bound on copying. T4 (descriptive, see T4_STATUS.md): the 27 per hour at 100 mM magnesium is the best-case row of the RNA side.
+
 ### Ribozyme-catalysed RNA synthesis using triplet building blocks
 
 Attwater, Raguram, Morgunov, Gianni, Holliger (2018). *eLife 7:e35255*. [doi:10.7554/eLife.35255](https://doi.org/10.7554/eLife.35255). `attwater-2018-rna-world` · useful · full text · touches #2, #18, #12, #30
@@ -1034,12 +1111,12 @@ Attwater, Raguram, Morgunov, Gianni, Holliger (2018). *eLife 7:e35255*. [doi:10.
 
 ### Amplification of RNA by an RNA polymerase ribozyme
 
-Horning, Joyce (2016). *PNAS 113:9786-9791*. [doi:10.1073/pnas.1610103113](https://doi.org/10.1073/pnas.1610103113). `horning-2016-rna-world` · useful · abstract only · touches #2, #18, #12, #30
+Horning, Joyce (2016). *PNAS 113:9786-9791*. [doi:10.1073/pnas.1610103113](https://doi.org/10.1073/pnas.1610103113). `horning-2016-rna-world` · useful · full text · touches #2, #18, #12, #30
 
 - **Tried.** RNA world
 - **Key results.** Evolved polymerase ribozyme makes aptamers, ribozymes and (low yield) tRNA and amplifies short RNA templates >10,000-fold in an RNA-catalysed PCR.
-- **Limits.** (abstract only) Full text not read: Europe PMC copy exists (PMC5024611), but the fetch was stopped by an automated content-safety filter in the reading tool; not retried.
-- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+- **Limits.** Read in full for T3. The 24-3 polymerase averaged 1.2 nucleotides per minute (72 per hour) at 200 mM MgCl2, pH 8.3 and 17 C; the wild type was 0.012 and tC19Z 0.005 per minute. Lab buffer with very high magnesium.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): source of the ribozyme copy rate (72 per hour). A rate measured at 200 mM Mg is an upper bound for natural waters. T4 (descriptive, see T4_STATUS.md): the 200 mM Mg row on the RNA side.
 
 ### High‐Throughput Mutational Analysis of a Twister Ribozyme
 
@@ -1049,6 +1126,17 @@ Kobori, Yokobayashi (2016). *Angew. Chem. Int. Ed. 55:10354-10357*. [doi:10.1002
 - **Key results.** High-throughput mutational analysis of a twister ribozyme.
 - **Limits.** Plan's memory citation confirmed. Full text: All 10,296 single and double mutants of the 54-nt Osa-1-4 twister ribozyme assayed by deep sequencing of co-transcriptional self-cleavage; highly robust (71% of single, 30% of double mutants keep >20% relative activity); semiquantitative, single 2 h time point.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s5 (memory).
+
+### Primordial soup or vinaigrette: did the RNA world evolve at acidic pH?
+
+Bernhardt HS, Tate WP (2012). *Biology Direct 7:4*. [doi:10.1186/1745-6150-7-4](https://doi.org/10.1186/1745-6150-7-4). `bernhardt-tate-2012-acidic-rna-world` · useful · full text
+
+- **Question.** At what acidity does RNA last longest, and what does that say about where the RNA world could have started?
+- **Tried.** Review how fast RNA breaks at different pH and temperature, and argue from that against alkaline settings.
+- **Method and data.** Argument from published break rates using pH and temperature only.
+- **Key results.** RNA is most stable at pH 4 to 5 and unstable at alkaline pH. They argue against an RNA world in alkaline vents such as Lost City.
+- **Limits.** Uses pH and temperature only: no magnesium, no field-water database, no copying rate.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): the qualitative result that alkaline vents are bad for RNA is already stated here, so T3 would only repeat it for hot vents. It also shows the Li and Breaker law has no acid term, so it would call acid springs safe.
 
 ### Ribozyme-Catalyzed Transcription of an Active Ribozyme
 
@@ -1067,6 +1155,28 @@ Lincoln, Joyce (2009). *Science 323:1229-1232*. [doi:10.1126/science.1167856](ht
 - **Key results.** Cross-replicating RNA ligases amplify exponentially without proteins, doubling time ~1 h.
 - **Limits.** Full text: Each ligase is made by joining two pre-made RNA oligonucleotide substrates (not mononucleotides) at 42 C; growth needs a continuous supply of those substrates; >10^8-fold over 30 h by serial transfer; heritable information limited to 2 loci with 12 alleles each.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+
+### A common speed limit for RNA-cleaving ribozymes and deoxyribozymes
+
+Breaker RR, Emilsson GM, Lazarev D, Nakamura S, Puskarz IJ, Roth A, Sudarsan N (2003). *RNA 9:949-957*. [doi:10.1261/rna.5670703](https://pmc.ncbi.nlm.nih.gov/articles/PMC1370461/). `breaker-2003-speed-limit-ribozymes` · useful · full text
+
+- **Question.** Is there a ceiling on how fast RNA-cutting ribozymes and DNA enzymes can work?
+- **Tried.** Compare the rates of many catalysts with the uncatalysed rate.
+- **Method and data.** Used by us only for one quoted number.
+- **Key results.** Quotes the uncatalysed rate as about 1e-8 per minute under near-physiological conditions (pH 7.0, 250 mM potassium, 5 mM magnesium, 23 C), citing Li and Breaker 1999.
+- **Limits.** Only the quoted passage is recorded here. Authors, DOI and title beyond what PRIOR_ART gives were not confirmed.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): cross-check of the rate law. Our coded law gives 1.60e-8 per minute at those conditions, close to the quoted figure (Gate 3).
+
+### Ribozyme speed limits
+
+Emilsson GM, Nakamura S, Roth A, Breaker RR (2003). *RNA 9:907-918*. [doi:10.1261/rna.5680603](https://pmc.ncbi.nlm.nih.gov/articles/PMC1370456/). `emilsson-2003-ribozyme-speed-limits` · useful · full text
+
+- **Question.** What limits how fast a ribozyme can cut RNA?
+- **Tried.** Work out the pH dependence and maximum rate of RNA cleavage.
+- **Method and data.** Used by us only for a few quoted numbers.
+- **Key results.** The 2'-OH pKa is 13.7 at 23 C and 250 mM potassium; the maximum rate is about 0.02 per minute; under basic pH the log rate rises with a slope of one.
+- **Limits.** Only the quoted passages are recorded here. Authors, DOI and the full title were not confirmed.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): used for the pH ceiling of the upper tier of the rate calculation.
 
 ### RNA-Catalyzed RNA Polymerization: Accurate and General RNA-Templated Primer Extension
 
@@ -1414,6 +1524,50 @@ Tutolo BM (2026). *Proceedings of the National Academy of Sciences*. [doi:10.107
 - **Ideas for us.** For #4/#5: audit the vent step table for any step that assumes (a) a strong pH gradient at hydrothermal temperature, (b) FeS mineral membranes or catalysts in Lost City-type vents, or (c) abiotic long-chain hydrocarbon or fatty-acid supply. Score a 'Tutolo variant' of the route with those steps failing and report how route odds change.
 - **Changes a current plan.** #4/#5: if the vent step table assumes FeS catalysts, a strong pH gradient at hydrothermal temperature, or vent-made fatty acids for membranes, add a scored variant where these fail; three of those assumptions are challenged here (abstract only).
 
+### Could Life Have Started on Mars? Planetary Conditions That Assemble and Destroy Protocells
+
+Cary FCA, Deamer DW, Damer BF, Fagents SA, Ruttenberg KC, Donachie SP (2024). *Life 14:415*. [doi:10.3390/life14030415](https://doi.org/10.3390/life14030415). `cary-2024-life-on-mars-protocells` · core · full text
+
+- **Question.** At what cation level do fatty-acid vesicles flocculate, and do natural hot springs stay below it?
+- **Tried.** Measure when lauric acid with monolaurin vesicles clump with calcium, iron(II) or magnesium at pH 7.5 (also pH 5.5), then compare with a short list of hot-spring analyses taken from other papers.
+- **Method and data.** Authors and title confirmed against the local XML copy. Spring list from Deamer 2019 and Wu 2013 (not opened by us).
+- **Key results.** 'Mass flocculation of lipid vesicles occurs beyond about 1.9 mM of Ca, Fe, and Mg'. Order of harm Ca > Fe > Mg. Without a wet-dry cycle vesicles appear only at 0 to 0.5 mM calcium. Natural hot springs are listed as 0.01 to 0.45 mM Ca, 0.001 to 0.12 mM Mg and 0.0004 to 0.6123 mM Fe(II).
+- **Limits.** Vesicle side only: about eight named springs, no database and no RNA condition. The spring list comes from papers we could not open.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): the closest work to the vesicle half of T4 and the source of our 1.9 mM calcium limit and 0.5 mM strict limit. T4 extends this to 660 Yellowstone thermal-water rows and the vent database.
+
+### Natural soda lakes provide compatible conditions for RNA and membrane function that could have enabled the origin of life
+
+Cohen ZR, Ding D, Zhou L, DasGupta S, Haas S, Sinclair KP, Todd ZR, Black RA, Szostak JW, Catling DC (2024). *PNAS Nexus 3:pgae084*. [doi:10.1093/pnasnexus/pgae084](https://doi.org/10.1093/pnasnexus/pgae084). `cohen-2024-soda-lakes-rna-membranes` · core · full text
+
+- **Question.** Can RNA copying, a ribozyme and fatty-acid vesicles all work in real soda-lake water?
+- **Tried.** Run the three tests in water from two Canadian soda lakes (Last Chance Lake and Goodenough Lake), with about 1 M sodium, about 1 mM magnesium and pH near 10.
+- **Method and data.** Lab reactions at room temperature with real lake water. Authors and title confirmed against the local XML copy in experiments/t4_vesicle_rna_window/raw/lit.
+- **Key results.** Nonenzymatic primer extension ran at rates comparable to the standard lab condition (50 mM MgCl2, pH 8). A ligase ribozyme worked after the pH was lowered from about 10 to 9 (60% in 20 h at 1.2 mM Mg in lab buffer; 32% and 11% in lake water). Primers were not seen to break after 72 hours in lake water. Vesicles of 1:1 decanoic acid and decanol kept their dye in lake water, but only if formed first in dilute water.
+- **Limits.** Two lakes only. They write that it is 'unclear' whether hot springs or vents can support RNA too, which suggests a special role for soda lakes. The one-nucleotide rates are in a figure only, and the primer length is not stated in the text.
+- **Ideas for us.** T3 (not decidable, see T3_STATUS.md): the one direct measurement of RNA lasting in field water, and the best known-answer check for the rate law (our law gives 1.66% breakage per link against their quoted about 1%). Their idea that low divalent cations offset high pH rests on the part of the law we could not confirm below 5 mM magnesium. T4 (descriptive, see T4_STATUS.md): the claim T4 looks at. T4 extends this two-lake joint test to a database of natural waters, and finds hot-spring and vent chemistry almost never meets both windows.
+
+### Non-enzymatic template-directed RNA synthesis inside model protocells
+
+Adamala K, Szostak JW (2013). *Science 342:1098-1100*. [doi:10.1126/science.1241888](https://doi.org/10.1126/science.1241888). `adamala-szostak-2013-copying-inside-protocells` · core · full text
+
+- **Question.** Can RNA copying run inside fatty-acid vesicles, given that magnesium breaks the vesicles?
+- **Tried.** Use citrate to hold the magnesium that copying needs, and copy RNA inside vesicles.
+- **Method and data.** Author manuscript (PMC4104020). Title and authors confirmed against the saved PMC page.
+- **Key results.** Copying at 50 mM Mg with 2-MeImpG ran at 1.4 per hour, against 0.03 per hour with no Mg. They write that both ribozyme and nonenzymatic copying 'require high (50-200 mM) concentrations of Mg2+', which fatty-acid vesicles cannot tolerate; citrate is their fix.
+- **Limits.** Relies on citrate as a chelator, which is a lab device; it does not say whether natural waters supply anything similar.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): states the incompatibility T4 counts. Every vesicle window against the 50 mM Mg need is empty by definition, so T4 cannot test it. Open follow-up: whether local chelators open the window in nature.
+
+### RNA Catalysis in Model Protocell Vesicles
+
+Chen IA, Salehi-Ashtiani K, Szostak JW (2005). *Journal of the American Chemical Society 127:13213*. [doi:10.1021/ja051784p](https://doi.org/10.1021/ja051784p). `chen-2005-rna-catalysis-protocell-vesicles` · core · full text
+
+- **Question.** How much magnesium can fatty-acid vesicles take, and can a ribozyme work inside them?
+- **Tried.** Measure dye leakage and cloudiness of myristoleate vesicles with and without their monoglyceride at rising magnesium, and run a hammerhead ribozyme at 1 and 4 mM Mg.
+- **Method and data.** 0.2 M bicine at pH 8.5; leakage read within 1 hour (Table 1). Hammerhead rates in Table 2. Authors and title checked against the local XML copy.
+- **Key results.** Pure myristoleic acid fails at 0.5 mM Mg by leakage (1 mM by cloudiness). With 4:1 monomyristolein, 2 and 3 mM; with 2:1, 4 and 6 mM. The hammerhead ran at 1.3 and 7.9 per minute free (1 and 4 mM Mg) and 0.4 and 1.7 per minute inside vesicles.
+- **Limits.** Lab bicine buffer, not natural water. The decanoic acid limits (under 1.5 mM MgCl2, about 0.2 M NaCl) are quoted from Monnard 2002, which was not opened.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): source of the 0.5 and 4 mM magnesium limits for the pure-acid and mixed vesicle windows. Together with the 50 mM or more that standard RNA copying needs, it makes the empty overlap a matter of the numbers alone.
+
 ### Transport dynamics across prebiotic hydrothermal mineral barriers: comparison with contemporary proton motive pathways
 
 Altair T, Lindenfelser E, Galante D, Varela H, De Decker Y, Hudson R (2026). *Chemical Communications*. [doi:10.1039/d6cc04072a](https://doi.org/10.1039/d6cc04072a). `altair-2026-vent-mineral-conductivity` · useful · full text · in news · touches #4
@@ -1453,7 +1607,7 @@ Ekosso C, Liu H, Glagovich A, Rogers A, Strober LN, Schrier J, Maurer S (2026). 
 - **Method and data.** Opentrons sample prep, confocal microscopy with Nile Red; 8 compositions x 4 pH conditions x 3 media (ultrapure water, sea salt, sea salt plus a Murchison-inspired organic soup); critical vesicle concentration (CVC) for composition B; dithionite permeability.
 - **Key results.** Share of samples with no vesicles: DS 46%, DDS 31%, DDP 24%. DS vs DDS outcomes agree in about 66% of conditions (63 of 96); DDS vs DDP agree in about 61%, with 22 conditions where only DDP formed vesicles and 15 where only DDS did. DDP-containing samples formed vesicles at pH as low as 2.28. DDP membranes were least permeable to dithionite. Compositions with the least anionic surfactant (E to H) rarely formed vesicles.
 - **Limits.** Abstract says more vesicles at low pH and high ionic strength, while the conclusions say vesicle formation was generally favored at higher pH, especially for sulfates; the trend is headgroup-specific. Divalent cations were not varied separately from sea salt. Alkyl sulfates and phosphates as prebiotic amphiphiles are assumed, not sourced.
-- **Ideas for us.** For the compatibility rule: their per-sample vesicle counts (Zenodo 10.5281/zenodo.17612643; code github.com/mfbliposome/Environmental_stability) give a ready table of membrane formation vs pH and sea salt we can use to check whether our rule's membrane-environment calls match data.
+- **Ideas for us.** For the compatibility rule: their per-sample vesicle counts (Zenodo 10.5281/zenodo.17612643; code github.com/mfbliposome/Environmental_stability) give a ready table of membrane formation vs pH and sea salt we can use to check whether our rule's membrane-environment calls match data. T4 (descriptive, see T4_STATUS.md): the T4 prior-art pass only skimmed it and found no database of natural waters, so it does not do T4's joint count. T4 (descriptive, see T4_STATUS.md): the T4 prior-art pass only skimmed it and found no database of natural waters, so it does not do T4's joint count.
 
 ### Bridging two theoretical frameworks of autocatalysis: RAF sets and stoichiometric autocatalysis
 
@@ -1586,6 +1740,17 @@ Fraccia, Martin (2023). *Nature Communications 14:2606*. [doi:10.1038/s41467-023
 - **Limits.** Coacervates, not lipid vesicles; details not checked. Full text: DNA (Drew-Dickerson dodecamer) ligated with carbodiimide activation in coacervates made with a synthetic azobenzene photoswitch; not a prebiotic chemistry, and the genotype-phenotype link is proposed, not shown across sequences.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
 
+### Influence of Metal Ions on Model Protoamphiphilic Vesicular Systems: Insights from Laboratory and Analogue Studies
+
+Joshi MP, Steller L, Van Kranendonk MJ, Rajamani S (2021). *Life 11:1413*. [doi:10.3390/life11121413](https://doi.org/10.3390/life11121413). `joshi-2021-metal-ions-protoamphiphiles` · useful · full text
+
+- **Question.** How much magnesium and sodium can vesicles made of N-oleoyl glycine take?
+- **Tried.** Raise magnesium and sodium in vesicles of N-oleoyl glycine (not a fatty acid) and test two New Zealand pools.
+- **Method and data.** 6 mM lipid in acetate at pH 5 and 60 C. Authors and title confirmed against the local XML copy; the two other names on the XML are editors.
+- **Key results.** Vesicles hold to 5 mM Mg and aggregate from 7 mM; with a monoglyceride they hold to 7 mM and aggregate from 11 mM. Sodium holds to 300 to 400 mM.
+- **Limits.** A different amphiphile from the fatty acids in the rest of T4, and only two pools.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): extra evidence on the magnesium and salt limits of vesicles, consistent with the 4 to 10 mM limits of mixed systems.
+
 ### Energy at Origins: Favorable Thermodynamics of Biosynthetic Reactions in the Last Universal Common Ancestor (LUCA)
 
 Wimmer JLE, Xavier JC, Vieira AdN, Pereira DPH, Leidner J, Sousa FL, Kleinermanns K, Preiner M, Martin WF (2021). *Frontiers in Microbiology 12:793664*. [doi:10.3389/fmicb.2021.793664](https://doi.org/10.3389/fmicb.2021.793664). `wimmer-2021-luca-exergonic-vents` · useful · full text · touches #4
@@ -1596,6 +1761,17 @@ Wimmer JLE, Xavier JC, Vieira AdN, Pereira DPH, Leidner J, Sousa FL, Kleinermann
 - **Key results.** About 77% of the scored reactions are exergonic at 1 mM, and 95-98% with a 100-fold product gradient. The share is highest around pH 9 and 80 C, which the authors read as matching Lost City-type vents.
 - **Limits.** Our T1 test (sealed, 2026-11-24) found the result is not specific: with the same gradient, 62% of the core run backwards is still exergonic; at equal concentrations the core is 8-11 points less exergonic than matched non-core reactions; vent and pond do not differ beyond the null. Their 77% also counts 37 reactions whose free energy could not be estimated (entered as 0) as exergonic; on the 314 computable reactions the share is 74.8%.
 - **Ideas for us.** Done as T1 (experiments/t1_vent_exergonic/T1_RESULTS.md). The general lesson: a share of exergonic reactions needs a reversed and a matched-null control before it says anything about a setting.
+
+### The Hot Spring Hypothesis for an Origin of Life
+
+Damer B, Deamer D (2020). *Astrobiology 20:429-452*. [doi:10.1089/ast.2019.2045](https://doi.org/10.1089/ast.2019.2045). `damer-deamer-2020-hot-spring-hypothesis` · useful · full text
+
+- **Question.** Why might freshwater hot springs, rather than the sea, be where life began?
+- **Tried.** A review that sets out the case for land-based hot-spring fields with cycles of wetting and drying.
+- **Method and data.** Review article. Title and authors confirmed against the local XML copy.
+- **Key results.** Writes that the much higher ionic solutes of seawater inhibit membrane self-assembly, which is not a problem in low-salt hot spring water (citing Milshteyn 2018). Also writes that the ionic solutes of hydrothermal fields rise 100-fold or more as most of the water is lost to the air.
+- **Limits.** A case for a setting, not a measurement. The 100-fold concentration on drying is stated, not tested.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): the 100-fold drying idea is the evaporation path that T4 leaves as an open follow-up, since it needs a mineral-saturation model.
 
 ### CO 2 reduction driven by a pH gradient
 
@@ -1615,6 +1791,28 @@ Xavier, Hordijk, Kauffman, Steel, Martin (2020). *Proc. R. Soc. B 287:20192377*.
 - **Limits.** (abstract only) Correct.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s3; content.json.
 
+### Promotion of protocell self-assembly from mixed amphiphiles at the origin of life
+
+Jordan SF, Rammu H, Zheludev IN, Hartley AM, Maréchal A, Lane N (2019). *Nature Ecology & Evolution 3:1705*. [doi:10.1038/s41559-019-1015-y](https://doi.org/10.1038/s41559-019-1015-y). `jordan-2019-mixed-amphiphile-protocells` · useful · full text
+
+- **Question.** Do mixtures of fatty acids and alcohols form vesicles in warm, alkaline, salty conditions like those of alkaline vents?
+- **Tried.** Mix C10 to C15 acids with 1-alkanols and test pH, salt, magnesium and calcium limits, at 70 C.
+- **Method and data.** Read as the accepted manuscript from University College London. Title and author list confirmed against page 1 of the saved PDF. No field water used.
+- **Key results.** 'Warm (70 C), alkaline (pH 12) solutions equivalent to those found in modern alkaline hydrothermal vents actively promote vesicle formation.' At pH about 12, vesicles held with NaCl 100 to 600 mM, MgCl2 10 to 50 mM and CaCl2 1 to 10 mM each alone. At pH 7 or 9 there were none with 20 mM MgCl2 or 5 mM CaCl2. With two isoprenoids added, they held in 600 mM NaCl, 50 mM Mg and 10 mM Ca together.
+- **Limits.** Lab mixtures only: no natural water and no RNA condition. Journal details are from PRIOR_ART.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): source of the pH, salt and alkaline-mixture limits in our mixed-amphiphile windows. The window coded for pH 11.5 and above is the reported-only 'J-alk' window.
+
+### Amphiphilic Compounds Assemble into Membranous Vesicles in Hydrothermal Hot Spring Water but Not in Seawater
+
+Milshteyn D, Damer B, Havig J, Deamer D (2018). *Life 8:11*. [doi:10.3390/life8020011](https://doi.org/10.3390/life8020011). `milshteyn-2018-vesicles-hot-spring-water` · useful · full text
+
+- **Question.** Do fatty-acid-type compounds form membrane vesicles in real hot-spring water?
+- **Tried.** Try several amphiphiles in water from two Yellowstone pools (pH 3.3 and pH 7.9) and in Santa Cruz seawater.
+- **Method and data.** Authors and title confirmed against the local XML copy. Table 2 lists spring chemistry.
+- **Key results.** 'The dilute ionic solutes of hydrothermal water are not a barrier to vesicle assembly' and 'none of the amphiphilic compounds formed membranes in seawater'. Lauric acid with its monoglyceride formed membranes at both pH values. Table 2 gives Mammoth Hot Springs calcium at about 7.6 mM.
+- **Limits.** Two pools and one seawater sample. The Mammoth calcium of 7.6 mM is ten times the 'under 0.7 mM' that a later paper from the same group (Cary 2024) gives for natural springs.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): the 'hot-spring water allows vesicles, seawater does not' result is established for a handful of waters. Because membranes formed at pH 3.3, T4 checks every pH-dependent result again with the pH limits removed.
+
 ### Remnants of an Ancient Metabolism without Phosphate
 
 Goldford, Hartman, Smith, Segre (2017). *Cell 168:1126-1134*. [doi:10.1016/j.cell.2017.02.001](https://doi.org/10.1016/j.cell.2017.02.001). `goldford-2017-raf` · useful · abstract only · touches #6, #8, #23
@@ -1623,6 +1821,61 @@ Goldford, Hartman, Smith, Segre (2017). *Cell 168:1126-1134*. [doi:10.1016/j.cel
 - **Key results.** Remnants of an ancient metabolism without phosphate (network expansion).
 - **Limits.** (abstract only) Real; details not checked. Full text not read: Listed as hybrid OA but cell.com PDF/full text and ScienceDirect returned HTTP 403 to automated fetch; no PMC copy.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s4 (memory).
+
+### Formation and Stability of Prebiotically Relevant Vesicular Systems in Terrestrial Geothermal Environments
+
+Joshi MP, Samanta A, Tripathy GR, Rajamani S (2017). *Life 7:51*. [doi:10.3390/life7040051](https://doi.org/10.3390/life7040051). `joshi-2017-vesicles-geothermal-waters` · useful · full text
+
+- **Question.** Which amphiphile mixtures form vesicles in real geothermal spring water?
+- **Tried.** Try several acid, alcohol and monoglyceride mixtures in water from three hot springs in Ladakh, and in bicine buffer for comparison.
+- **Method and data.** Authors and title confirmed against the local XML copy.
+- **Key results.** In the three spring waters only the acid plus monoglyceride mixtures formed vesicles. The other systems formed vesicles only in bicine buffer. Oleic acid alone, and oleic acid with oleyl alcohol, did not form vesicles in spring water though they did in buffer.
+- **Limits.** Three springs. Shows that results from lab buffer can fail in natural water.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): a caution that a water can sit inside every lab limit and still not give vesicles, so any window count from buffer experiments is an upper bound.
+
+### The Impact of Salts on Single Chain Amphiphile Membranes and Implications for the Location of the Origin of Life
+
+Maurer S (2017). *Life 7:44*. [doi:10.3390/life7040044](https://doi.org/10.3390/life7040044). `maurer-2017-salts-single-chain-amphiphiles` · useful · full text
+
+- **Question.** How do salts affect membranes made of single-chain amphiphiles, and what does that say about where life began?
+- **Tried.** A review of the salt limits of fatty-acid and related membranes.
+- **Method and data.** Review article. Title and author confirmed against the local XML copy.
+- **Key results.** Decanoate salts out near 200 mM NaCl.
+- **Limits.** A review statement. T4 recorded this one number only.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): source of the 200 mM monovalent limit for pure-acid vesicles.
+
+### Collaboration between primitive cell membranes and soluble catalysts
+
+Adamala KP, Engelhart AE, Szostak JW (2016). *Nature Communications 7:11041*. [doi:10.1038/ncomms11041](https://doi.org/10.1038/ncomms11041). `adamala-2016-membranes-soluble-catalysts` · useful · full text
+
+- **Question.** Can membranes made with a monoglyceride keep their contents at the magnesium level a ribozyme needs?
+- **Tried.** Compare oleate vesicles with and without 15 mol% glycerol monooleate at 10 mM Mg, and run a ribozyme inside.
+- **Method and data.** Authors and title confirmed against the local XML copy.
+- **Key results.** Pure oleate leaks at 10 mM Mg: 21% of the dye and 37% of an oligonucleotide kept after 24 hours. With 15 mol% monoglyceride it holds 85% of the dye and 92% of the oligonucleotide, and a ribozyme ran inside at 15 mM Mg at 0.24 per hour against 0.50 per hour with no vesicles.
+- **Limits.** Lab buffers, not natural waters.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): the 10 mM Mg limit behind the lenient mixed-vesicle window.
+
+### Reconciling Ligase Ribozyme Activity with Fatty Acid Vesicle Stability
+
+Anella F, Danelon C (2014). *Life 4:929-943*. [doi:10.3390/life4040929](https://doi.org/10.3390/life4040929). `anella-danelon-2014-ligase-ribozyme-vesicles` · useful · full text
+
+- **Question.** Can a ligase ribozyme work at a magnesium level low enough for fatty-acid vesicles to survive?
+- **Tried.** Test the R8-9 ligase ribozyme at 1 to 8 mM Mg alongside pure myristoleate vesicles.
+- **Method and data.** 5 mM lipid, 30 mM Tris at pH 7.7, 100 mM NaCl and 1 mM EDTA. Authors and title confirmed against the local XML copy.
+- **Key results.** Half-maximal activity at 8.0 mM Mg after 15 minutes, falling to 2.0 mM after 24 hours; at 1 mM, 16% after 48 hours. Pure myristoleate vesicles were stable with a working ribozyme at about 2 mM Mg. They note enzyme-free RNA synthesis usually needs over 50 mM Mg.
+- **Limits.** The buffer holds 1 mM EDTA, which binds some magnesium, so the free level is lower than the added level.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): source of the lenient pure-acid window (about 2 mM Mg) and one of the cases where the RNA side works near 1 to 2 mM.
+
+### Thermostability of model protocell membranes
+
+Mansy SS, Szostak JW (2008). *PNAS 105:13351*. [doi:10.1073/pnas.0805086105](https://doi.org/10.1073/pnas.0805086105). `mansy-szostak-2008-thermostability-protocells` · useful · full text
+
+- **Question.** How hot can model protocell membranes get before they fall apart?
+- **Tried.** Heat fatty-acid vesicles of several compositions and check that they stay intact and keep their contents.
+- **Method and data.** Read from the saved PMC page (PMC2528865). Title and authors confirmed against its metadata.
+- **Key results.** A 2:1 myristoleic acid to monomyristolein mixture 'remained completely stable to 100 C'; pure C16:1 and C18:1 acids were 'completely stable to 90 C' (1 hour). The mixed system tolerates 'up to 4 mM Mg2+'.
+- **Limits.** Lab buffer, one-hour heating.
+- **Ideas for us.** T4 (descriptive, see T4_STATUS.md): temperature is not a limit in these sources, so T4 has no temperature condition. The 4 mM Mg figure supports the mixed-vesicle window.
 
 ### Selection for propagule formation in prebiotic chemical ecosystems
 
