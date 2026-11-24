@@ -340,3 +340,14 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Re-run noise.** Re-running alone changes the call at 0.5 for 11.2% of single-KO families (r = 0.80).
 - **For K6 and the preprint.** Keep the KO-level unit. Treat the ~11% re-run call flip as a floor on per-family trust; this supports reporting LUCA content as a weighted sum rather than as a list.
 - **Next.** Route 6 kill test (evaporation path, T4 follow-up 1). Then S3 (Ameta 2021 noise null).
+
+### 2026-11-24: T8 result (Ameta 2021 growth-variation trade-off vs droplet noise): kill
+- **Sealed in d479750, real run done.** Details: `experiments/t8_ameta_noise/T8_RESULTS.md`.
+- **Gate.** The paper's Fisher test reproduces exactly (OR 0.086, p 1.62e-3).
+- **Numbers.** 1,093 additions with at least 5 droplets on both sides, correlations within size strata:
+  - yield vs perturbation −0.114;
+  - yield vs split-half noise (nothing added) −0.154;
+  - partial correlation given noise −0.057 [−0.121, 0.010].
+- **Verdict.** Both kill arms hold. High-yield networks look stable because their droplets are less noisy.
+- **Caveats.** The floor-based noise measure gives "partly" (−0.07). The paper's own subset, the 41 of its 162 pairs with enough droplets, still shows −0.65 after adjustment. That subset is small and selected, reported only.
+- **Next.** T7 (Route 6 evaporation) is being set up; then S4 (Moody age prior) or S5 (DPANN completeness).
