@@ -1,0 +1,317 @@
+{
+ "note": "Margins only. No evaporation path is computed and no window is evaluated in this mode.",
+ "inputs": {
+  "usgs": {
+   "path": "experiments/t3_rna_persistence/raw/usgs_ynp_p92xkju7/YNP_WQ.csv",
+   "sha256": "084cb39954ae8cf5740302ded09faaef4a81d90dbeeb399718f848187d7e7911"
+  },
+  "hist": {
+   "path": "experiments/t3_rna_persistence/raw/usgs_ynp_historic_p9ksevi1/Yellowstone_Water_Chemistry_1883-2021.csv",
+   "sha256": "cee22209d5a350ed10af3bb54ee84a1525202f05b50537708eaf7677296b7e90"
+  }
+ },
+ "engine": {
+  "phreeqpython": "1.6.2",
+  "pitzer_dat_sha256": "eb5051704fad461c4e5325721afc7b9025fad7c2906f72ed48ae182aa2c1a5c9"
+ },
+ "usgs": {
+  "margins": {
+   "thermal water": {
+    "rows": 681,
+    "has_pH": 670,
+    "has_T": 613,
+    "has_Ca": 663,
+    "has_Mg": 663,
+    "has_Na": 663,
+    "has_K": 663,
+    "has_Cl": 663,
+    "has_SO4": 663,
+    "has_SiO2": 663,
+    "has_F": 661,
+    "complete": 597,
+    "has_Alk": 307,
+    "incomplete": 84
+   },
+   "river, stream, or creek": {
+    "rows": 59,
+    "has_pH": 50,
+    "has_T": 41,
+    "has_Ca": 51,
+    "has_Mg": 51,
+    "has_Na": 51,
+    "has_K": 51,
+    "has_Alk": 44,
+    "has_Cl": 51,
+    "has_SO4": 51,
+    "has_SiO2": 51,
+    "has_F": 51,
+    "complete": 37,
+    "incomplete": 22
+   },
+   "drillhole": {
+    "rows": 7,
+    "has_pH": 7,
+    "has_Ca": 7,
+    "has_Mg": 7,
+    "has_Na": 7,
+    "has_K": 7,
+    "has_Alk": 7,
+    "has_Cl": 7,
+    "has_SO4": 7,
+    "has_SiO2": 7,
+    "has_F": 7,
+    "incomplete": 2,
+    "has_T": 5,
+    "complete": 5
+   },
+   "overflow": {
+    "rows": 76,
+    "has_pH": 67,
+    "has_T": 45,
+    "has_Ca": 67,
+    "has_Mg": 67,
+    "has_Na": 67,
+    "has_K": 67,
+    "has_Alk": 67,
+    "has_Cl": 67,
+    "has_SO4": 67,
+    "has_SiO2": 67,
+    "has_F": 67,
+    "complete": 45,
+    "incomplete": 31
+   },
+   "lake": {
+    "rows": 17,
+    "has_Ca": 17,
+    "has_Mg": 17,
+    "has_Na": 17,
+    "has_K": 17,
+    "has_Alk": 17,
+    "has_Cl": 17,
+    "has_SO4": 17,
+    "has_SiO2": 17,
+    "has_F": 17,
+    "incomplete": 2,
+    "has_pH": 15,
+    "has_T": 15,
+    "complete": 15
+   },
+   "seep": {
+    "rows": 3,
+    "has_pH": 3,
+    "has_T": 3,
+    "has_Ca": 3,
+    "has_Mg": 3,
+    "has_Na": 3,
+    "has_K": 3,
+    "has_Alk": 3,
+    "has_Cl": 3,
+    "has_SO4": 3,
+    "has_SiO2": 3,
+    "has_F": 3,
+    "complete": 3
+   },
+   "snow": {
+    "rows": 2,
+    "incomplete": 2
+   }
+  },
+  "complete_then_cbe": {
+   "drillhole": {
+    "complete": 5,
+    "complete_areas": 1,
+    "cbe_le_10": 5,
+    "cbe_le_10_areas": 1,
+    "cbe_le_20": 5,
+    "acid_rows_alk_set_0": 0,
+    "F_missing_set_0": 0
+   },
+   "lake": {
+    "complete": 15,
+    "complete_areas": 5,
+    "cbe_le_10": 14,
+    "cbe_le_10_areas": 5,
+    "cbe_le_20": 15,
+    "acid_rows_alk_set_0": 0,
+    "F_missing_set_0": 0
+   },
+   "overflow": {
+    "complete": 45,
+    "complete_areas": 6,
+    "cbe_le_10": 45,
+    "cbe_le_10_areas": 6,
+    "cbe_le_20": 45,
+    "acid_rows_alk_set_0": 0,
+    "F_missing_set_0": 0
+   },
+   "river, stream, or creek": {
+    "complete": 37,
+    "complete_areas": 15,
+    "cbe_le_10": 35,
+    "cbe_le_10_areas": 14,
+    "cbe_le_20": 37,
+    "acid_rows_alk_set_0": 5,
+    "F_missing_set_0": 0
+   },
+   "seep": {
+    "complete": 3,
+    "complete_areas": 1,
+    "cbe_le_10": 3,
+    "cbe_le_10_areas": 1,
+    "cbe_le_20": 3,
+    "acid_rows_alk_set_0": 0,
+    "F_missing_set_0": 0
+   },
+   "thermal water": {
+    "complete": 597,
+    "complete_areas": 39,
+    "cbe_le_10": 528,
+    "cbe_le_10_areas": 37,
+    "cbe_le_20": 581,
+    "acid_rows_alk_set_0": 261,
+    "F_missing_set_0": 2
+   }
+  }
+ },
+ "hist": {
+  "margins": {
+   "thermal water source": {
+    "rows": 2731,
+    "has_T": 2332,
+    "has_Ca": 1974,
+    "has_Mg": 1891,
+    "has_Na": 2259,
+    "has_K": 2260,
+    "has_Cl": 2431,
+    "has_SiO2": 2193,
+    "incomplete": 1847,
+    "has_pH": 2423,
+    "has_SO4": 2155,
+    "complete": 884,
+    "dropped_2009_or_later_or_undated": 848,
+    "has_F": 1957,
+    "has_Alk": 589
+   },
+   "river, stream, or creek": {
+    "rows": 749,
+    "has_pH": 320,
+    "has_Ca": 333,
+    "has_Mg": 330,
+    "has_Na": 338,
+    "has_K": 322,
+    "has_Cl": 378,
+    "has_SO4": 352,
+    "has_SiO2": 345,
+    "incomplete": 671,
+    "has_T": 429,
+    "complete": 78,
+    "dropped_2009_or_later_or_undated": 63,
+    "has_F": 250,
+    "has_Alk": 79
+   },
+   "lake": {
+    "rows": 270,
+    "has_Ca": 189,
+    "has_Mg": 188,
+    "has_Na": 189,
+    "has_K": 189,
+    "has_Cl": 216,
+    "has_SO4": 197,
+    "has_SiO2": 255,
+    "incomplete": 255,
+    "has_pH": 214,
+    "has_T": 143,
+    "has_F": 154,
+    "has_Alk": 12,
+    "complete": 15,
+    "dropped_2009_or_later_or_undated": 16
+   },
+   "drillhole": {
+    "rows": 89,
+    "has_T": 75,
+    "incomplete": 87,
+    "has_pH": 75,
+    "has_Ca": 59,
+    "has_Mg": 59,
+    "has_Na": 73,
+    "has_K": 73,
+    "has_Cl": 71,
+    "has_SO4": 71,
+    "has_SiO2": 71,
+    "has_F": 69,
+    "complete": 2,
+    "dropped_2009_or_later_or_undated": 16,
+    "has_Alk": 3
+   },
+   "precipitation": {
+    "rows": 45,
+    "incomplete": 45,
+    "dropped_2009_or_later_or_undated": 1
+   },
+   "overflow": {
+    "rows": 17,
+    "has_pH": 16,
+    "has_T": 16,
+    "has_Ca": 16,
+    "has_Mg": 16,
+    "has_Na": 16,
+    "has_K": 16,
+    "has_Alk": 14,
+    "has_Cl": 16,
+    "has_SO4": 16,
+    "has_SiO2": 16,
+    "has_F": 16,
+    "complete": 16,
+    "incomplete": 1,
+    "dropped_2009_or_later_or_undated": 73
+   }
+  },
+  "complete_then_cbe": {
+   "drillhole": {
+    "complete": 2,
+    "complete_areas": 2,
+    "cbe_le_10": 2,
+    "cbe_le_10_areas": 2,
+    "cbe_le_20": 2,
+    "acid_rows_alk_set_0": 1,
+    "F_missing_set_0": 0
+   },
+   "lake": {
+    "complete": 15,
+    "complete_areas": 7,
+    "cbe_le_10": 11,
+    "cbe_le_10_areas": 6,
+    "cbe_le_20": 13,
+    "acid_rows_alk_set_0": 3,
+    "F_missing_set_0": 0
+   },
+   "overflow": {
+    "complete": 16,
+    "complete_areas": 2,
+    "cbe_le_10": 16,
+    "cbe_le_10_areas": 2,
+    "cbe_le_20": 16,
+    "acid_rows_alk_set_0": 2,
+    "F_missing_set_0": 0
+   },
+   "river, stream, or creek": {
+    "complete": 78,
+    "complete_areas": 10,
+    "cbe_le_10": 54,
+    "cbe_le_10_areas": 9,
+    "cbe_le_20": 65,
+    "acid_rows_alk_set_0": 20,
+    "F_missing_set_0": 1
+   },
+   "thermal water source": {
+    "complete": 884,
+    "complete_areas": 38,
+    "cbe_le_10": 749,
+    "cbe_le_10_areas": 34,
+    "cbe_le_20": 785,
+    "acid_rows_alk_set_0": 318,
+    "F_missing_set_0": 7
+   }
+  }
+ }
+}

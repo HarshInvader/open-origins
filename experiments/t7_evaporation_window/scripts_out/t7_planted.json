@@ -1,0 +1,225 @@
+{
+ "templates": {
+  "pass": {
+   "primary_M": 1.0,
+   "strict_Mstrict": 1.0,
+   "generous_any_Mlenient": 1.0,
+   "failed_paths": 0
+  },
+  "fail_ca": {
+   "primary_M": 0.0,
+   "strict_Mstrict": 0.0,
+   "generous_any_Mlenient": 0.0,
+   "failed_paths": 0
+  },
+  "fail_acid": {
+   "primary_M": 0.0,
+   "strict_Mstrict": 0.0,
+   "generous_any_Mlenient": 0.0,
+   "failed_paths": 0
+  },
+  "fail_salt": {
+   "primary_M": 0.0,
+   "strict_Mstrict": 0.0,
+   "generous_any_Mlenient": 0.0,
+   "failed_paths": 0
+  },
+  "sep": {
+   "primary_M": 0.0,
+   "strict_Mstrict": 0.0,
+   "generous_any_Mlenient": 1.0,
+   "failed_paths": 0
+  },
+  "strict": {
+   "primary_M": 1.0,
+   "strict_Mstrict": 0.0,
+   "generous_any_Mlenient": 1.0,
+   "failed_paths": 0
+  }
+ },
+ "templates_as_designed": true,
+ "runs": 200,
+ "n_boot": 400,
+ "cells": [
+  {
+   "structure": "usgs:thermal water",
+   "world": "P0 none pass",
+   "expected": "H killed",
+   "killed": 1.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 0.0
+  },
+  {
+   "structure": "usgs:thermal water",
+   "world": "P1 window common (30%)",
+   "expected": "H supported",
+   "killed": 0.0,
+   "supported": 1.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 0.0
+  },
+  {
+   "structure": "usgs:thermal water",
+   "world": "P2 on the bar (5%)",
+   "expected": "kills and supports both rare (false-call rates)",
+   "killed": 0.02,
+   "supported": 0.0,
+   "inconclusive": 0.975,
+   "not_reported": 0.005,
+   "cannot": 0.0
+  },
+  {
+   "structure": "usgs:thermal water",
+   "world": "P3 rare (1%)",
+   "expected": "mostly H killed",
+   "killed": 0.965,
+   "supported": 0.0,
+   "inconclusive": 0.035,
+   "not_reported": 0.0,
+   "cannot": 0.0
+  },
+  {
+   "structure": "usgs:thermal water",
+   "world": "P4 below the bar (2.5%)",
+   "expected": "kill power below the bar",
+   "killed": 0.415,
+   "supported": 0.0,
+   "inconclusive": 0.57,
+   "not_reported": 0.015,
+   "cannot": 0.0
+  },
+  {
+   "structure": "usgs:thermal water",
+   "world": "P5 above the bar (12%)",
+   "expected": "support power above the bar",
+   "killed": 0.0,
+   "supported": 0.48,
+   "inconclusive": 0.445,
+   "not_reported": 0.075,
+   "cannot": 0.0
+  },
+  {
+   "structure": "usgs:thermal water",
+   "world": "P6 sepiolite decides (25%)",
+   "expected": "not reported as a kill",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 1.0,
+   "cannot": 0.0
+  },
+  {
+   "structure": "usgs:thermal water",
+   "world": "P7 strict closes it (30%)",
+   "expected": "not reported as support",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 1.0,
+   "cannot": 0.0
+  },
+  {
+   "structure": "usgs:thermal water",
+   "world": "P8 two areas only",
+   "expected": "no support",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 1.0,
+   "not_reported": 0.0,
+   "cannot": 0.0
+  },
+  {
+   "structure": "hist:thermal water source",
+   "world": "P0 none pass",
+   "expected": "H killed",
+   "killed": 1.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 0.0,
+   "cannot": 0.0
+  },
+  {
+   "structure": "hist:thermal water source",
+   "world": "P1 window common (30%)",
+   "expected": "H supported",
+   "killed": 0.0,
+   "supported": 0.995,
+   "inconclusive": 0.005,
+   "not_reported": 0.0,
+   "cannot": 0.0
+  },
+  {
+   "structure": "hist:thermal water source",
+   "world": "P2 on the bar (5%)",
+   "expected": "kills and supports both rare (false-call rates)",
+   "killed": 0.035,
+   "supported": 0.005,
+   "inconclusive": 0.945,
+   "not_reported": 0.015,
+   "cannot": 0.0
+  },
+  {
+   "structure": "hist:thermal water source",
+   "world": "P3 rare (1%)",
+   "expected": "mostly H killed",
+   "killed": 0.925,
+   "supported": 0.0,
+   "inconclusive": 0.065,
+   "not_reported": 0.01,
+   "cannot": 0.0
+  },
+  {
+   "structure": "hist:thermal water source",
+   "world": "P4 below the bar (2.5%)",
+   "expected": "kill power below the bar",
+   "killed": 0.48,
+   "supported": 0.0,
+   "inconclusive": 0.505,
+   "not_reported": 0.015,
+   "cannot": 0.0
+  },
+  {
+   "structure": "hist:thermal water source",
+   "world": "P5 above the bar (12%)",
+   "expected": "support power above the bar",
+   "killed": 0.0,
+   "supported": 0.505,
+   "inconclusive": 0.475,
+   "not_reported": 0.02,
+   "cannot": 0.0
+  },
+  {
+   "structure": "hist:thermal water source",
+   "world": "P6 sepiolite decides (25%)",
+   "expected": "not reported as a kill",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 1.0,
+   "cannot": 0.0
+  },
+  {
+   "structure": "hist:thermal water source",
+   "world": "P7 strict closes it (30%)",
+   "expected": "not reported as support",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 0.0,
+   "not_reported": 1.0,
+   "cannot": 0.0
+  },
+  {
+   "structure": "hist:thermal water source",
+   "world": "P8 two areas only",
+   "expected": "no support",
+   "killed": 0.0,
+   "supported": 0.0,
+   "inconclusive": 1.0,
+   "not_reported": 0.0,
+   "cannot": 0.0
+  }
+ ]
+}
