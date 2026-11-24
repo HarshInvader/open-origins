@@ -1,0 +1,22 @@
+{
+ "all_as_expected": true,
+ "expected": {
+  "kill_by_P1": "kill",
+  "kill_by_P2": "kill",
+  "partly_one_clock": "partly",
+  "stuck_chain": "undecided",
+  "support": "support"
+ },
+ "got": {
+  "kill_by_P1": "kill",
+  "kill_by_P2": "kill",
+  "partly_one_clock": "partly",
+  "stuck_chain": "undecided",
+  "support": "support"
+ },
+ "mode": "planted",
+ "seed": [
+  20261124,
+  2
+ ]
+}

@@ -372,3 +372,10 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Reported only.** Near-neutral waters (pH ≥ 4.5): 5.6%. Strict minerals: 0.2%.
 - **Reading.** Evaporation does not generally solve the Mg problem for lipid-first ponds. A few special waters (near-neutral, Mg-richer, Na-poor) could. Route 6 is not killed; it is narrowed to those waters.
 - **Next.** S4 (Moody age prior) is in setup: prior art, PAML build and timing. A second hot-spring province would narrow T7.
+
+### 2026-11-24: T10 (S4, is Moody's 4.2 Ga LUCA set by the prior?) parked until 1 December
+- **Setup done, not sealed.** See `experiments/t10_luca_age_prior/T10_STATUS.md`.
+- **Prior art.** It does not settle the question. No one has moved the 4.52 Ga maximum or the rate prior on Moody's data.
+- **Why parked.** One full MCMCtree chain is 28–42 laptop CPU-days. The cheapest decisive kill test (P1 under both clocks, 4 chains at 2M iterations) is about 95 core-hours, roughly $1–2 on spot, which is over this month's remaining cap.
+- **Next for S4.** Run it after 1 December, or on the laptop if a normal-priority timing run shows it fits.
+- **Study list.** S6 (ribozyme epistasis vs tertiary contacts) and S7 (Attwater exponential, gate first) remain. Next: S6.

@@ -1,0 +1,16 @@
+{
+ "run_dir": "R0_GBM_ud2_c1_t1pct",
+ "returncode": -9,
+ "killed_at_limit": true,
+ "wall_s": 842.8,
+ "cpu_s_last": 311.63,
+ "events": [
+  {
+   "wall_s": 3.01,
+   "cpu_s": 1.48,
+   "samples": 0
+  }
+ ],
+ "error_lines": [],
+ "finished_line_seen": false
+}

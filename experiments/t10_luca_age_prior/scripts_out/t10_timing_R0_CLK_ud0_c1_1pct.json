@@ -1,0 +1,106 @@
+{
+ "run_dir": "R0_CLK_ud0_c1",
+ "returncode": 0,
+ "killed_at_limit": false,
+ "wall_s": 60.4,
+ "cpu_s_last": 0.0,
+ "events": [
+  {
+   "wall_s": 2.02,
+   "cpu_s": 0.01,
+   "samples": 0
+  },
+  {
+   "wall_s": 8.06,
+   "cpu_s": 0.3,
+   "samples": 1
+  },
+  {
+   "wall_s": 20.14,
+   "cpu_s": 0.5,
+   "samples": 3
+  },
+  {
+   "wall_s": 22.15,
+   "cpu_s": 0.58,
+   "samples": 4
+  },
+  {
+   "wall_s": 28.19,
+   "cpu_s": 0.81,
+   "samples": 6
+  },
+  {
+   "wall_s": 34.24,
+   "cpu_s": 1.43,
+   "samples": 12
+  },
+  {
+   "wall_s": 36.25,
+   "cpu_s": 3.03,
+   "samples": 25
+  },
+  {
+   "wall_s": 38.27,
+   "cpu_s": 4.81,
+   "samples": 42
+  },
+  {
+   "wall_s": 40.28,
+   "cpu_s": 5.81,
+   "samples": 51
+  },
+  {
+   "wall_s": 42.3,
+   "cpu_s": 7.25,
+   "samples": 65
+  },
+  {
+   "wall_s": 44.31,
+   "cpu_s": 8.83,
+   "samples": 81
+  },
+  {
+   "wall_s": 46.33,
+   "cpu_s": 10.55,
+   "samples": 95
+  },
+  {
+   "wall_s": 48.34,
+   "cpu_s": 12.2,
+   "samples": 111
+  },
+  {
+   "wall_s": 50.36,
+   "cpu_s": 13.99,
+   "samples": 127
+  },
+  {
+   "wall_s": 52.37,
+   "cpu_s": 15.76,
+   "samples": 142
+  },
+  {
+   "wall_s": 54.38,
+   "cpu_s": 17.52,
+   "samples": 159
+  },
+  {
+   "wall_s": 56.4,
+   "cpu_s": 19.27,
+   "samples": 174
+  },
+  {
+   "wall_s": 58.41,
+   "cpu_s": 21.04,
+   "samples": 191
+  },
+  {
+   "wall_s": 60.42,
+   "cpu_s": 0.0,
+   "samples": 201
+  }
+ ],
+ "error_lines": [],
+ "finished_line_seen": true
+}

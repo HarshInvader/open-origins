@@ -1,0 +1,53 @@
+{
+ "note": "Timing only. No node age was read from any usedata=2 run. All runs under `taskpolicy -b nice -n 20`, single-threaded, while other jobs loaded the machine (load average 8 to 97).",
+ "build": {
+  "paml_src_tarball": "codeload.github.com/abacus-gene/paml/tar.gz/refs/tags/4.10.7",
+  "tarball_sha256": "0f29e768b3797b69eadc6332c3d046d8727702052d56c3b729883626c0a5a4e3",
+  "make": "make mcmctree CFLAGS=\"-O3 -Wall -Wno-unused-result -Wmemset-elt-size -D_FORTIFY_SOURCE=0\"",
+  "compiler": "Apple clang 21.0.0",
+  "why_fortify_off": "default build aborts (SIGTRAP, __chk_fail_overlap) in treesub.c copy_to_Sptree: strcpy(stree->nodes[j].name, com.spname[j]) with source and destination the same buffer; a self-copy, harmless with fortify off",
+  "mcmctree_sha256": "15244a2a3e40a804a36c8b85d430e0f1c9de0253632b955434351bdcc07f2ae6"
+ },
+ "per_1000_iterations": {
+  "R0_GBM_usedata2": {
+   "cpu_s": 182.0,
+   "wall_s": 521.5,
+   "iterations_timed": 790
+  },
+  "R0_ILN_usedata2": {
+   "cpu_s": 119.5,
+   "wall_s": 382.7,
+   "iterations_timed": 760
+  },
+  "R0_CLK_usedata0_twin": {
+   "cpu_s": 0.11,
+   "wall_s": "0.13 to 0.30",
+   "iterations_timed": "4 x 201000 (1% chains, completed)"
+  },
+  "R0_GBM_usedata0": {
+   "cpu_s": 2.97,
+   "wall_s": 7.84,
+   "iterations_timed": 58000
+  }
+ },
+ "full_chain_iterations": 20100000,
+ "projection_one_full_chain_laptop_throttled": {
+  "GBM": {
+   "cpu_days": 42.3,
+   "wall_days": 121
+  },
+  "ILN": {
+   "cpu_days": 27.8,
+   "wall_days": 89
+  },
+  "CLK_twin": {
+   "cpu_min": 37,
+   "wall_min": "45 to 100"
+  }
+ },
+ "published_HPC_chain_times_from_repo_logs": {
+  "ILN_r1": "217:41:02 (h:m:s) for 20.1M iterations = 39 s per 1000",
+  "GBM_r1": "50% at 129:29:01, no 100% line before the 240 h job limit; about 46 s per 1000",
+  "prior_CLK_r1": "31:46 (m:s)"
+ }
+}

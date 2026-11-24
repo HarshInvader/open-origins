@@ -1,0 +1,11 @@
+{
+ "mode": "inputs",
+ "sha256": {
+  "cache/paml/paml-4.10.7-src.tar.gz": "0f29e768b3797b69eadc6332c3d046d8727702052d56c3b729883626c0a5a4e3",
+  "cache/paml/paml-4.10.7/src/mcmctree": "15244a2a3e40a804a36c8b85d430e0f1c9de0253632b955434351bdcc07f2ae6",
+  "raw/00_data_formatting__01_inp_data__LUCAdup_246sp_allcb_calib_MCMCtree.tree": "825e294e14bb31a35bfad914f6bc945275e0d9747b64b88fe25f79717a108009",
+  "raw/01_PAML__00_CODEML__out_CODEML__Hessian__1__in.BV": "551789b8986c5ea4f909e0d9d56585a77cdd2289b714fdbd159ca2757a8cf672",
+  "raw/01_PAML__02_MCMCtree__calib_files__Calibnodes.csv": "9c42775d23c37db2fe8a2842f5c1bc7a14f1660e25faeccb4c252247b2a92e25",
+  "raw/01_PAML__02_MCMCtree__dummy_aln__dummy_aln.aln": "281865574bb3d1cc45b94f14509c32cad577c843b5f571fb75b8acc2e083b3ed"
+ }
+}
