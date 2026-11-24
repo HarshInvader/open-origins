@@ -526,7 +526,7 @@ Moody, Alvarez-Carretero, Mahendrarajah, ... Lenton, Donoghue (2024). *Nature Ec
 - **Tried.** LUCA
 - **Key results.** LUCA ~4.2 Ga (4.09-4.33); genome >=2.5 Mb, ~2,600 proteins; prokaryote-grade anaerobic acetogen with an early immune system, part of an ecosystem.
 - **Limits.** Correct. Full text: Point estimates are 2.75 Mb (2.49-2.99) and 2,657 proteins (2,451-2,855), from integrating gene-presence probabilities, many of them low; the age rests on five pre-LUCA paralogues and narrows to 4.18-4.33 Ga under a different clock model.
-- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s4; content.json; news.json.
+- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s4; content.json; news.json. T6 (sealed, 2026-11-24, experiments/t6_moody_ko_cog/T6_RESULTS.md): their COG analysis, run to recover LUCA families split across KEGG families, rescues 23 of 433 eligible merged COGs, no more than a plain re-run does (ratio 0.66, 95% interval 0.40 to 1.08). Merging more often drops a family a member KO placed in LUCA (46% against 15%). Re-running alone changes the LUCA call at 0.5 for 11.2% of single-KO families.
 
 ### Order of amino acid recruitment into the genetic code resolved by last universal common ancestor's protein domains
 
@@ -537,7 +537,7 @@ Wehbi S, Wheeler A, Morel B, Manepalli N, Minh BQ, Lauretta DS, Masel J (2024). 
 - **Method and data.** Pfam clans dated by phylogeny; ancestral sequence reconstruction; per-amino-acid relative usage with SE (Table 1); code and amino-acid properties on GitHub (sawsanwehbi/Pfam-age-classification).
 - **Key results.** Early (enriched in LUCA): V G I M T A H E P C. Late (depleted): K S D L N R F Y Q W. Molecular size explains much of the older consensus order.
 - **Limits.** Usage ratios are printed to 3 significant figures, so some amino acids tie. The order is inferred from protein sequences, not from chemistry.
-- **Ideas for us.** Used as the outcome in T2 (does asteroid abundance predict this order beyond molecular weight?). Answer: no detectable effect in Bennu or Ryugu, though the sealed test could not decide formally (experiments/t2_code_order/T2_RESULTS.md).
+- **Ideas for us.** Used as the outcome in T2 (does asteroid abundance predict this order beyond molecular weight?). Answer: no detectable effect in Bennu or Ryugu, though the sealed test could not decide formally (experiments/t2_code_order/T2_RESULTS.md). T5 (sealed, 2026-11-24, experiments/t5_wehbi_moody/T5_RESULTS.md): their '88.6% agreement with Moody' is mostly a base rate. Post-LUCA Pfams matched on how many COGs they map to agree 80.6% of the time; the gap is 8.1 points (5.6 to 10.5).
 
 ### Parameter Estimation and Species Tree Rooting Using ALE and GeneRax
 
