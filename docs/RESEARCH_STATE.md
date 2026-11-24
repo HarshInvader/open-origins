@@ -313,3 +313,12 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Finding.** In Yellowstone, at most 1.2% of 660 thermal-water rows (3 of 40 areas) could be in both the mixed-amphiphile vesicle window and the RNA Mg minimum. In MARHYS vent rows, almost none pass the vesicle Ca, salt and pH limits.
 - **Pure fatty acid against ribozyme Mg** is empty by definition. That is a known lab fact.
 - **Pattern across T3 and T4.** Open field-chemistry databases are too Mg-poor (springs) or too hot, salty or seawater-mixed (vents) to decide claims made at lab conditions. Next: a fresh Fable plan for studies whose decidability is checked by a blind count *before* design.
+
+### 2026-11-24: new study list (Fable) and T5 started
+- **Plan.** `docs/plans/next_studies_2026-11-24.md` (e87847a) ranks seven studies. Each was checked to be decidable on deposited data before any outcome was read. They move away from field geochemistry and toward deposited phylogenomic and lab datasets.
+- **T5 = S1.** Is Wehbi 2024's "88.6% of LUCA Pfams agree with Moody" more than a breadth effect?
+  - Old Pfams map to a median of 4 Moody COGs, young ones to 2.
+  - Test: A (LUCA/pre-LUCA) against B (breadth-matched LBCA/LACA), bootstrapped over clans.
+  - Kill: G < 10 points with the upper bound < 20. Support: G ≥ 30 with the lower bound > 20.
+- **Status.** An agent is setting up the gate (reproduce 88.6% and their flags) and the planted check. B is not computed before the seal.
+- **Library.** 23 papers from T3/T4 added (1950ff6, 185 total, live).
