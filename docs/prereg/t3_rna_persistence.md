@@ -182,6 +182,31 @@ Gates 1–5 use lab numbers from opened papers only. Run 2026-11-24 with `nice p
 
 So the row stays **unexplained**. It is a disclosed gate failure. The gate rule is: G1 passes if the other five rows are within 2% and row 5 is within 1% of the disclosed −54.5%. This tolerance holds only because it is declared here, before sealing. Note the row lies at 14 mM, outside the confirmed range of D6, so it does not touch tier A.
 
+## Gate 2: validity of the rate law outside Mg 5–10 mM
+
+Full rule: `experiments/t3_rna_persistence/GATE2_RULE.md`. It was written before any measured rate was scored. The result goes in `GATE2_RESULT.md`.
+
+- **Data.** Mojarro et al. 2021, Table 1 (PMC8248371, CC BY): measured cleavage of one RNA linkage at 75 °C, Mg 0–50 mM, pH 3.2–9.
+- **Seen so far.** Conditions and table layout only, with one disclosed leak: the Figure 3 caption gives the rate at 50 mM Mg, pH 6.7. That row is removed.
+- **Test.** A ratio within each pH column: R = k(Mg) / k(10 mM). Temperature, pH drift, buffer and substrate cancel. Prediction: R = (Mg / 10 mM)^0.80. Scored at pH 6.7, 8 and 9.
+- **Mg conventions.** Nominal, and nominal minus 1 mM for the EDTA in the buffer. Both are sealed.
+- **Metric.** e = log10(R_pred / R_meas) per row. Median signed e, median |e|, largest |e|.
+- **Step 0.** The 5 mM rows must agree (median |e| ≤ 0.176). If not, the gate is UNTESTABLE and counts as FAIL.
+- **Pass rule, separately for Mg < 5 mM (3 rows) and Mg > 10 mM (5 rows).** PASS needs median |e| ≤ 0.176 and no row above 0.301, under both Mg conventions. Otherwise FAIL.
+- **Effect on D6.**
+
+  | Outcome | Tier A Mg range |
+  |---|---|
+  | both FAIL, or UNTESTABLE | 5–10 mM (no change) |
+  | low PASS only | 2.5–10 mM |
+  | high PASS only | 5–55 mM |
+  | both PASS | 2.5–55 mM |
+
+- The 55 mM bound is 50 mM (the highest tested row) plus 10%, chosen because seawater is expected near 53 mM. The coordinator may strike the margin.
+- The stream-water control stays outside tier A under every outcome.
+- Under FAIL the range stays "extrapolated, reported only", with the signed error quoted as the direction of bias.
+- Limits: one paper, 8 scored rows, 75 °C, one linkage with DNA neighbours, no added monovalent salt.
+
 ## Planted power check (synthetic only)
 
 Run 2026-11-24: `nice -n 15 python3 -I scripts/t3_analysis.py planted`. Single process, 4.5 minutes.
@@ -309,7 +334,7 @@ Closed in round 2: old items 3 (gate row: declared exception), 4 (Horning & Joyc
 
 Still open:
 
-- **A. Tier A may be empty. This is the main blocker.** Seawater is expected to hold far more than 10 mM Mg, and fresh stream water far less than 5 mM. I did not read the values, so this is expectation, not a count. If it holds, both controls are outside the confirmed range and every setting returns "cannot decide by design". The study would then be honest and empty. Ways out, for the coordinator to choose before sealing:
+- **A. Tier A may be empty. This is the main blocker.** Round 3: Gate 2 above now decides the Mg range. The text below is the problem it answers. Seawater is expected to hold far more than 10 mM Mg, and fresh stream water far less than 5 mM. I did not read the values, so this is expectation, not a count. If it holds, both controls are outside the confirmed range and every setting returns "cannot decide by design". The study would then be honest and empty. Ways out, for the coordinator to choose before sealing:
   1. Get Li & Breaker 1999 and replace D6 with the true fitted ranges and uncertainties. Best option.
   2. Seal as is and accept that the likely outcome is "cannot decide", with tier B reported as extrapolation.
   3. Allow one blind count: rows per setting inside D6, and whether each control is inside. Counts only, declared here first.
