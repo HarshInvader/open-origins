@@ -361,3 +361,14 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Reading.** Incompleteness inflates *tip* losses: arm A slope 0.81, and the DPANN tip excess is fully predicted by completeness. The deep-branch excess remains, so it is not an incompleteness artefact. This leans toward Huang's biological reading.
 - **For K6.** Read tip losses from MAG-rich trees with care; deep-branch contrasts are sturdier.
 - **Next.** T7 result; then S4 (Moody age prior; needs MCMCtree; timing first) or S6.
+
+### 2026-11-24: T7 result (Route 6: evaporating Yellowstone waters into a joint vesicle and RNA window): inconclusive
+- **Sealed in 32876f0, run detached (restarts had killed it three times).** Details: `experiments/t7_evaporation_window/T7_RESULTS.md`.
+- **Numbers.**
+  - USGS mixed arm: 15 of 528 waters (6 of 37 areas) pass, S = 2.8% (0.3–9.4%). This is below the 5% bar, but the interval crosses it, so the verdict is inconclusive.
+  - Historic set: 1.3% (0.1–7.3%).
+  - Pure fatty acid: 0.6%. That would be a kill on the primary path, but the open-air path with generous minerals opens it (6.3%).
+- **Mechanism.** Half the waters never reach 1 mM Mg before salt stops the path (Yellowstone water has little Mg relative to Na). Most others fail on Ca + pH.
+- **Reported only.** Near-neutral waters (pH ≥ 4.5): 5.6%. Strict minerals: 0.2%.
+- **Reading.** Evaporation does not generally solve the Mg problem for lipid-first ponds. A few special waters (near-neutral, Mg-richer, Na-poor) could. Route 6 is not killed; it is narrowed to those waters.
+- **Next.** S4 (Moody age prior) is in setup: prior art, PAML build and timing. A second hot-spring province would narrow T7.
