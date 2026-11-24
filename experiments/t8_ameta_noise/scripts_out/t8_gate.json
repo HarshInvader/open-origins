@@ -1,0 +1,113 @@
+{
+ "mode": "gate",
+ "script_sha256": "18ffe6a283b2da6af11e62eac39b5595aedd82fbecfde85bfd1ef924f7d84d0e",
+ "networks": 1837,
+ "droplets": 20039,
+ "droplets_matched_to_a_network": 20039,
+ "frac_and_umi_sheets_same_filled_cells": true,
+ "networks_whose_droplet_count_equals_listed_replicates": 1836,
+ "networks_with_count_mismatch": [
+  {
+   "species": [
+    "AC",
+    "AG",
+    "CA",
+    "CC",
+    "CU",
+    "UU",
+    "UG",
+    "GU"
+   ],
+   "droplets": 3,
+   "listed": 2
+  }
+ ],
+ "droplet_runs_in_file_order": 1838,
+ "max_abs_dev_network_fraction_vs_mean_of_droplets": 0.04166666666666666,
+ "share_network_cells_within_1.01e-4": 0.9993718592964824,
+ "max_abs_dev_droplet_fraction_vs_umi_share": 5.000000000002225e-05,
+ "droplet_umi_total_quantiles_0_10_50_90_100": [
+  20.0,
+  30.0,
+  110.0,
+  542.0,
+  16931.0
+ ],
+ "pairs_all": 4589,
+ "pairs_G_size_ge2": 4534,
+ "pairs_primary_minrep5_size_ge2": 1093,
+ "primary_distinct_G": 386,
+ "primary_pairs_by_G_size": {
+  "2": 131,
+  "3": 232,
+  "4": 161,
+  "5": 166,
+  "6": 111,
+  "7": 44,
+  "8": 19,
+  "9": 37,
+  "10": 33,
+  "11": 43,
+  "12": 50,
+  "13": 37,
+  "14": 23,
+  "15": 6
+ },
+ "fig2d_pairs": 162,
+ "fig2d_distinct_G": 82,
+ "fisher": {
+  "mean_of_droplets": {
+   "table [[hiP&hiY, hiP&loY],[loP&hiY, loP&loY]]": [
+    [
+     1,
+     52
+    ],
+    [
+     20,
+     89
+    ]
+   ],
+   "sample_odds_ratio": 0.08557692307692308,
+   "conditional_mle_odds_ratio": 0.0863913113203976,
+   "conditional_95ci_two_sided": [
+    0.0020264622995937653,
+    0.5721520627540042
+   ],
+   "woolf_95ci_on_sample_odds_ratio": [
+    0.011157604141639074,
+    0.6563604220357107
+   ],
+   "one_sided_fisher_p_less": 0.0016228116503828095,
+   "pass_N": true,
+   "pass_or_lt_0.1": true,
+   "pass_p_1.6e-3_to_2_sig_fig": true
+  },
+  "network_sheet_rounded": {
+   "table [[hiP&hiY, hiP&loY],[loP&hiY, loP&loY]]": [
+    [
+     1,
+     52
+    ],
+    [
+     20,
+     89
+    ]
+   ],
+   "sample_odds_ratio": 0.08557692307692308,
+   "conditional_mle_odds_ratio": 0.0863913113203976,
+   "conditional_95ci_two_sided": [
+    0.0020264622995937653,
+    0.5721520627540042
+   ],
+   "woolf_95ci_on_sample_odds_ratio": [
+    0.011157604141639074,
+    0.6563604220357107
+   ],
+   "one_sided_fisher_p_less": 0.0016228116503828095,
+   "pass_N": true,
+   "pass_or_lt_0.1": true,
+   "pass_p_1.6e-3_to_2_sig_fig": true
+  }
+ },
+ "gate_pass": true
+}
