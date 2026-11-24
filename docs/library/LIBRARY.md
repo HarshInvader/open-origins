@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-24. 185 papers: 129 read in full, 56 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-24. 187 papers: 130 read in full, 57 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -10,7 +10,7 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 - [Building blocks](#building-blocks) (18)
 - [From space](#from-space) (12)
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (44)
-- [RNA world](#rna-world) (48)
+- [RNA world](#rna-world) (50)
 - [Telling life apart](#telling-life-apart) (20)
 - [Vents and first cells](#vents-and-first-cells) (43)
 
@@ -1060,6 +1060,17 @@ Ianeselli, Atienza, Kudella, Gerland, Mast, Braun (2022). *Nature Physics 18:579
 - **Limits.** Pre-2023 context; details not checked. Full text: Replication was done by Taq DNA polymerase ('to mimic a sped-up RNA world'), not non-enzymatically; dew from 0.1-1 bar CO2 at pH ~4 melted strands 30 K below bulk Tm; >1,000-nt AT-rich strands emerged.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
 
+### Darwinian properties and their trade-offs in autocatalytic RNA reaction networks
+
+Ameta S, Arsène S, Foulon S, Saudemont B, Clifton BE, Griffiths AD, Nghe P (2021). *Nature Communications 12:842*. [doi:10.1038/s41467-021-21000-1](https://doi.org/10.1038/s41467-021-21000-1). `ameta-2021-darwinian-rna-networks` · useful · full text · touches #4
+
+- **Question.** Do networks of self-assembling Azoarcus ribozyme fragments show heritable, selectable properties, and do growth and variability trade off?
+- **Tried.** Assemble many combinations of up to 16 ribozyme fragment species in microfluidic droplets, count each species by sequencing (UMIs), and compare networks that differ by one added species.
+- **Method and data.** Droplet microfluidics with barcoded sequencing; yield per droplet from ribozyme UMIs scaled by reporter UMIs; perturbation = L1 distance between renormalised species fractions of G and G plus one species; Supplementary Data 2 (1,837 networks, 20,039 droplets); code on Zenodo/GitHub.
+- **Key results.** Networks show growth, variation and heritable composition. Adding a species can switch composition. The authors report that high-yield networks are less perturbable, a trade-off between growth and variation (Fisher test on 162 pairs, odds ratio < 0.1, p = 1.6e-3).
+- **Limits.** Our T8 (sealed, 2026-11-24): the Fisher test reproduces exactly, but across 1,093 additions with at least 5 droplets per side the yield-perturbation correlation (-0.11) is no stronger than yield against each network's own split-half noise (-0.15); given noise it is -0.06 (-0.12 to 0.01). Low-yield droplets are noisier. In the paper's own subset (41 pairs with enough droplets) a strong effect remains, but that subset is small and selected.
+- **Ideas for us.** Done as T8 (experiments/t8_ameta_noise/T8_RESULTS.md). The lesson: a composition change measured from counts needs a same-sample noise null before it is read against a count-derived quantity like yield.
+
 ### Nucleic acid catalysis under potential prebiotic conditions
 
 Le Vay K, Mutschler H (2020). *Chemistry - An Asian Journal 15:214-230*. [doi:10.1002/asia.201901205](https://doi.org/10.1002/asia.201901205). `le-vay-mutschler-2020-catalysis-prebiotic-conditions` · useful · full text
@@ -1296,6 +1307,17 @@ Vázquez-Salazar A (2026). *Trends in Biochemical Sciences*. [doi:10.1016/j.tibs
 - **Key results.** Lists measurable constraints: coupling activation with copying, wet-dry and freeze-thaw effects on polymer growth, compartment retention and parasite control, polymerase fidelity and processivity.
 - **Limits.** (abstract only) Review.
 - **Ideas for us.** Its 'testable benchmarks' map onto our step-table hand-offs.
+
+### Conditions for Darwinian evolution in compartmentalized autocatalytic reaction networks
+
+Matsubara YJ, Ameta S, Thutupalli S, Nghe P, Krishna S (2022). *arXiv:2211.03155*. https://arxiv.org/abs/2211.03155. `matsubara-2022-darwinian-autocatalytic-compartments` · background · abstract only · touches #4
+
+- **Question.** Under what growth and division regimes can compartmentalised autocatalytic networks evolve?
+- **Tried.** Theory and simulation of multistable autocatalytic networks in dividing compartments.
+- **Method and data.** Mathematical models of reaction networks under growth-division cycles.
+- **Key results.** Abstract: multistable autocatalytic reaction networks can maintain heritable compositional states across a broad class of growth-division regimes.
+- **Limits.** Read as abstract only. Theory; it does not reanalyse the 2021 droplet data.
+- **Ideas for us.** Prior art for T8: the closest related work, not a reanalysis.
 
 ## Telling life apart
 
