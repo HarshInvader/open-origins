@@ -329,3 +329,14 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Reading.** The published validation is mostly a base rate. A Pfam "agrees" if any of its COGs has PP > 0.5, and old Pfams map to twice as many COGs. Shuffling PP within COG size gives A = 87.2%.
 - **Caveat.** A small real age signal remains (G about 8, 7–13 across variants; p ≈ 0.0005 against the shuffle). Pre-LUCA Pfams have the smallest gap (3.7), and LACA Pfams match LUCA's rate.
 - **Next.** S2 (Moody KO vs COG merging, against a re-run-noise null). A note to the Wehbi/Masel authors is for the owner to decide.
+
+### 2026-11-24: T6 result (Moody KO vs COG merging): kill, and merging loses more than it gains
+- **Sealed in 95e2a3e, real run done.** Details: `experiments/t6_moody_ko_cog/T6_RESULTS.md`.
+- **Numbers.**
+  - 23 of 433 eligible merge COGs are rescued (every member KO < 0.5, COG ≥ 0.75). That is 1.9% of the merge group; support needed 5%.
+  - The matched re-run flip rate is 8.1%.
+  - The ratio is 0.66 [0.40, 1.08]. Kill needed a lower bound ≤ 2. No variant reaches 2, and COGs with 3+ KOs give 0.30.
+- **Stronger reading.** Look at COGs whose best KO is ≥ 0.75. The COG falls below 0.5 in 46% of merge COGs, against 15% of single-KO COGs. The mean COG PP is 0.096 below the best member. Moody's COG analysis does not recover LUCA families that KO splitting hid; it drops them more often.
+- **Re-run noise.** Re-running alone changes the call at 0.5 for 11.2% of single-KO families (r = 0.80).
+- **For K6 and the preprint.** Keep the KO-level unit. Treat the ~11% re-run call flip as a floor on per-family trust; this supports reporting LUCA content as a weighted sum rather than as a list.
+- **Next.** Route 6 kill test (evaporation path, T4 follow-up 1). Then S3 (Ameta 2021 noise null).
