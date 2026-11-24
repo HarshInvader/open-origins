@@ -95,3 +95,12 @@ fbd5d2f4d6ecbcd8142c0533dad8138772a4b8f265acba058cfe8ebef19a3916  experiments/t7
 b07f5cf76f1b9a290e914b6a9ff5eee32ed6db29e19c4928d65f1e78fafe557e  experiments/t7_evaporation_window/scripts_out/t7_planted.json  orig-paper  2026-11-24T19:50:02Z  T7 evaporation-window prereg seal
 d8edfffdca18878d247dc1719dc97f0d6d2ead4bbbafd3a67e0b949eeb2a0e14  experiments/t7_evaporation_window/scripts_out/t7_dryrun_permuted.json  orig-paper  2026-11-24T19:50:02Z  T7 evaporation-window prereg seal
 92ba49cc80cbb746c4e09f93dbba3d2b5b5fc94d2e90aeedda9cd1da6e7934b8  experiments/t7_evaporation_window/scripts_out/t7_blind_count.json  orig-paper  2026-11-24T19:50:02Z  T7 evaporation-window prereg seal
+e0985840a82736440aad77c4e5fc0e5fcade026a26240a8f046ec34978259e41  docs/prereg/t9_dpann_completeness.md  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
+4082c2d2bbc87dbdfe9fd368ae59bd247d7389d16d39a5748f523d3191b6d0db  experiments/t9_dpann_completeness/PRIOR_ART.md  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
+e7b00f68c11989c9006907cc8c92fd704af0a1513b061f100583bcdd95894975  experiments/t9_dpann_completeness/scripts/t9_analysis.py  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
+31a6244aeab07e590a5d5fa448ba0e28de5c3323c65f0eb3eddb4bbcb235cac5  experiments/t9_dpann_completeness/scripts/xlsx_to_tsv.py  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
+9ee910dc15d0a69c0b5a8fb915d5d72f790afc082f233d54f7c96941e8625982  experiments/t9_dpann_completeness/scripts/xml2txt.py  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
+3ddd7da4c472569134aecd40ab690dc1651f9d590de5e13eef7f93abc5b28477  experiments/t9_dpann_completeness/data/t9_structure.tsv  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
+c9769696e9f8133dd5aa56397430cff86f8f8fd692a8193700b3ea7fa015cb3a  experiments/t9_dpann_completeness/scripts_out/t9_gate.json  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
+65017c14e25678ce36f5bfc31a6d1e9c6345ed2ad853998616babcc752e01a50  experiments/t9_dpann_completeness/scripts_out/t9_planted.json  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
+7bc701500e973c0a9da4eb4fc4e068d6da72582f5faaced6ecf9173c4fde8648  experiments/t9_dpann_completeness/scripts_out/t9_dryrun_shuffled_labels.json  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal

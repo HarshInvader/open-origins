@@ -1,0 +1,467 @@
+{
+ "mode": "gate",
+ "inputs_sha256": {
+  "sd1": "fd9767fe177f9a29309adc68e7fc35c89cd18389e3c7fecd1520e86940608524",
+  "sd10": "c405af80c41526ca1e9348050b6ab15df67db0277f76b0b00986fb64255e0e98",
+  "sd20": "da0bd267bbb977d15001eedf0708a34161b32df8bccb77279fabe1f2017c4ec0",
+  "sd33": "c565ab0b094c491fe1264db5bc1bdac32125914b848ddb18442a60db525bece8",
+  "ev_E": "5173c698353fc66ef746347fe1f49501a87a2de4a4a28f3cb58e0765359ffe56",
+  "tr_E": "97009007b4a205a52f84b1d0eb0e7de85223302e5a9e2f774e69a170c370cf7e",
+  "st_E": "872e0ae2ff2153fb2c1ddd9ba41e6861f46f283d0afd76403e3133068f1b4e4d",
+  "mp_E": "c8ca0b4bb20340b57be1b668cd993ada38ecbefd08379a60ac20fda3e0c3124f",
+  "ev_M": "a2d24df401868ffc5485f5d417378883488730f8bf0ec9f0a4d58d04e3a2ad2e",
+  "tr_M": "1eba48f214bd025ba4179ce67f33d62ff64953b101ab909fa8444b60a7e158cd",
+  "st_M": "9e2141b051ee85d6a4459efce9b4cd6e098e60c13586524daf1e57c20183c632",
+  "mp_M": "4078e23fc18844af9ecf8b07740b3321f3d969e57c7ff77c626d3f0af4642d13"
+ },
+ "n_nodes": 513,
+ "n_tips": 257,
+ "sd1_focal_rows": 257,
+ "tips_found_in_sd1_focal": 257,
+ "tips_with_checkm2": 257,
+ "event_header": [
+  "species_label",
+  "speciations",
+  "duplications",
+  "losses",
+  "transfers",
+  "presence",
+  "origination",
+  "copies",
+  "singletons",
+  "receiving_transfers",
+  "verticality"
+ ],
+ "event_rows": 513,
+ "labels_event_eq_tree": true,
+ "starting_tree_same_topology_E": true,
+ "distinct_DTL_triplets_E": 24,
+ "params_3x_triplets": 72,
+ "published_parameters": 72,
+ "distinct_origination_values_E": 4,
+ "rate_classes_E": [
+  {
+   "class": 0,
+   "branches": 13,
+   "tips": 1,
+   "dpann_branches": 13,
+   "named_nodes": [
+    "DPANN",
+    "UnCl2",
+    "Cluster2"
+   ]
+  },
+  {
+   "class": 1,
+   "branches": 5,
+   "tips": 3,
+   "dpann_branches": 5,
+   "named_nodes": [
+    "Nanoarchaeota"
+   ]
+  },
+  {
+   "class": 2,
+   "branches": 3,
+   "tips": 2,
+   "dpann_branches": 3,
+   "named_nodes": [
+    "UBA10117"
+   ]
+  },
+  {
+   "class": 3,
+   "branches": 5,
+   "tips": 3,
+   "dpann_branches": 5,
+   "named_nodes": [
+    "Nanohaloarchaeota"
+   ]
+  },
+  {
+   "class": 4,
+   "branches": 7,
+   "tips": 4,
+   "dpann_branches": 7,
+   "named_nodes": [
+    "Parva_related"
+   ]
+  },
+  {
+   "class": 5,
+   "branches": 9,
+   "tips": 5,
+   "dpann_branches": 9,
+   "named_nodes": [
+    "Aenigmatarchaeota"
+   ]
+  },
+  {
+   "class": 6,
+   "branches": 3,
+   "tips": 2,
+   "dpann_branches": 3,
+   "named_nodes": [
+    "Undinarchaeota"
+   ]
+  },
+  {
+   "class": 7,
+   "branches": 9,
+   "tips": 5,
+   "dpann_branches": 9,
+   "named_nodes": [
+    "Iainarchaeota"
+   ]
+  },
+  {
+   "class": 8,
+   "branches": 5,
+   "tips": 3,
+   "dpann_branches": 5,
+   "named_nodes": [
+    "SpSt1190"
+   ]
+  },
+  {
+   "class": 9,
+   "branches": 39,
+   "tips": 20,
+   "dpann_branches": 39,
+   "named_nodes": [
+    "Woesearchaeota"
+   ]
+  },
+  {
+   "class": 10,
+   "branches": 3,
+   "tips": 2,
+   "dpann_branches": 3,
+   "named_nodes": [
+    "PWEA01"
+   ]
+  },
+  {
+   "class": 11,
+   "branches": 3,
+   "tips": 2,
+   "dpann_branches": 3,
+   "named_nodes": [
+    "Micra5"
+   ]
+  },
+  {
+   "class": 12,
+   "branches": 23,
+   "tips": 12,
+   "dpann_branches": 23,
+   "named_nodes": [
+    "Pacearchaeota"
+   ]
+  },
+  {
+   "class": 13,
+   "branches": 6,
+   "tips": 0,
+   "dpann_branches": 0,
+   "named_nodes": [
+    "Eury",
+    "HalobacThermopl",
+    "TackA",
+    "TACA"
+   ]
+  },
+  {
+   "class": 14,
+   "branches": 3,
+   "tips": 2,
+   "dpann_branches": 3,
+   "named_nodes": [
+    "EX4484_52"
+   ]
+  },
+  {
+   "class": 15,
+   "branches": 67,
+   "tips": 34,
+   "dpann_branches": 0,
+   "named_nodes": [
+    "Thermoplasmatota"
+   ]
+  },
+  {
+   "class": 16,
+   "branches": 121,
+   "tips": 61,
+   "dpann_branches": 0,
+   "named_nodes": [
+    "TAC"
+   ]
+  },
+  {
+   "class": 17,
+   "branches": 15,
+   "tips": 8,
+   "dpann_branches": 15,
+   "named_nodes": [
+    "Micrarchaeota"
+   ]
+  },
+  {
+   "class": 18,
+   "branches": 41,
+   "tips": 21,
+   "dpann_branches": 0,
+   "named_nodes": [
+    "MHH"
+   ]
+  },
+  {
+   "class": 19,
+   "branches": 5,
+   "tips": 3,
+   "dpann_branches": 0,
+   "named_nodes": [
+    "Korarchaeota"
+   ]
+  },
+  {
+   "class": 20,
+   "branches": 81,
+   "tips": 41,
+   "dpann_branches": 0,
+   "named_nodes": [
+    "Halobacteriota"
+   ]
+  },
+  {
+   "class": 21,
+   "branches": 5,
+   "tips": 3,
+   "dpann_branches": 5,
+   "named_nodes": [
+    "Altarchaeota"
+   ]
+  },
+  {
+   "class": 22,
+   "branches": 39,
+   "tips": 20,
+   "dpann_branches": 0,
+   "named_nodes": [
+    "Asgard"
+   ]
+  },
+  {
+   "class": 23,
+   "branches": 3,
+   "tips": 0,
+   "dpann_branches": 3,
+   "named_nodes": [
+    "Cluster1",
+    "MicraDia"
+   ]
+  }
+ ],
+ "BIC_DPANN_L_Cluster2root_recomputed": 3284636.6,
+ "BIC_DTL_br3_Euryroot_recomputed": 3264897.58,
+ "BIC_models": [
+  "global",
+  "DPANN_L",
+  "DPANN_DL",
+  "DPANN_TL",
+  "DPANN_DTL",
+  "DTL_br1",
+  "DTL_br1_O",
+  "DTL_br2",
+  "DTL_br3"
+ ],
+ "BIC_cells_checked": 135,
+ "BIC_max_abs_diff": 4.190951585769653e-09,
+ "BIC_published_text": {
+  "DPANN_L": 3284636.6,
+  "DTL_br3_81par": 3264897.57
+ },
+ "sd33_parameter_counts": {
+  "global": "3",
+  "DPANN_L": "4",
+  "DPANN_TL": "5",
+  "DPANN_DL": "5",
+  "DPANN_DTL": "6",
+  "DTL_br1": "21",
+  "DTL_br1_O": "25",
+  "DTL_br2": "72",
+  "DTL_br3": "81"
+ },
+ "fig2_group_nodes": {
+  "MHH": {
+   "published": 41,
+   "tree": 41
+  },
+  "Halobacteriota": {
+   "published": 81,
+   "tree": 81
+  },
+  "Thermoplasmatota": {
+   "published": 67,
+   "tree": 67
+  },
+  "Korarchaeota": {
+   "published": 5,
+   "tree": 5
+  },
+  "TAC": {
+   "published": 121,
+   "tree": 121
+  },
+  "Asgard": {
+   "published": 39,
+   "tree": 39
+  },
+  "Cluster1": {
+   "published": 35,
+   "tree": 35
+  },
+  "Undinarchaeota": {
+   "published": 3,
+   "tree": 3
+  },
+  "Cluster2": {
+   "published": 113,
+   "tree": 113
+  }
+ },
+ "dpann_tips": 77,
+ "dpann_internal_nonroot_branches": 76,
+ "other_internal_nonroot_branches": 179,
+ "dpann_tip_phyla_gtdb202": {
+  "Micrarchaeota": 8,
+  "Iainarchaeota": 7,
+  "Altarchaeota": 3,
+  "Undinarchaeota": 2,
+  "Aenigmatarchaeota": 3,
+  "QMZS01": 1,
+  "Aenigmatarchaeota_A": 1,
+  "PWEA01": 2,
+  "EX4484-52": 2,
+  "Nanohaloarchaeota": 3,
+  "SpSt-1190": 3,
+  "Nanoarchaeota": 42
+ },
+ "other_tip_phyla_gtdb202": {
+  "Halobacteriota": 41,
+  "Thermoplasmatota": 34,
+  "Methanobacteriota": 16,
+  "Hydrothermarchaeota": 2,
+  "Hadarchaeota": 3,
+  "Thermoproteota": 64,
+  "Asgardarchaeota": 20
+ },
+ "checkm2_dpann": {
+  "n": 77,
+  "median": 90.84,
+  "below_90": 34,
+  "below_80": 5,
+  "below_70": 2,
+  "min": 57.89
+ },
+ "checkm1_dpann": {
+  "median": 82.4,
+  "below_90": 65
+ },
+ "checkm2_other": {
+  "n": 180,
+  "median": 98.50999999999999,
+  "below_90": 28,
+  "below_80": 12,
+  "below_70": 3,
+  "min": 42.99
+ },
+ "checkm1_other": {
+  "median": 98.13,
+  "below_90": 28
+ },
+ "plan_null_spurious_internal_floor": {
+  "dpann_mean": 0.0036032798911225343,
+  "dpann_max": 0.05427979000000001,
+  "other_mean": 0.0010386366703841706,
+  "other_max": 0.025607699999999987
+ },
+ "internal_depth_bins": {
+  "edges_tips": [
+   2,
+   3,
+   5,
+   9,
+   17,
+   33
+  ],
+  "dpann": [
+   0,
+   27,
+   16,
+   12,
+   11,
+   2,
+   8
+  ],
+  "other": [
+   0,
+   54,
+   49,
+   32,
+   24,
+   9,
+   11
+  ]
+ },
+ "published_value_flags": {
+  "sd20_equals_deposit_E": true,
+  "sd20_rows_E": 513,
+  "LDCA_losses_match_E": true,
+  "UnCl2_losses_match_E": true,
+  "transfers_gt_dups_branches_E": {
+   "count": 502,
+   "published": 507
+  },
+  "transfers_gt_losses_branches_E": {
+   "count": 152,
+   "published": 177
+  },
+  "receiving_transfers_gt_dups_branches_E": {
+   "count": 507,
+   "published": 507
+  },
+  "receiving_transfers_gt_losses_branches_E": {
+   "count": 177,
+   "published": 177
+  },
+  "sd20_equals_deposit_M": true,
+  "sd20_rows_M": 513,
+  "LDCA_losses_match_M": true,
+  "UnCl2_losses_match_M": true,
+  "transfers_gt_dups_branches_M": {
+   "count": 501,
+   "published": 501
+  },
+  "transfers_gt_losses_branches_M": {
+   "count": 101,
+   "published": 154
+  },
+  "receiving_transfers_gt_dups_branches_M": {
+   "count": 508,
+   "published": 501
+  },
+  "receiving_transfers_gt_losses_branches_M": {
+   "count": 154,
+   "published": 154
+  }
+ },
+ "MHH_root": {
+  "distinct_DTL_triplets": 24,
+  "starting_tree_same_topology": true,
+  "dpann_tips": 77,
+  "dpann_internal_nonroot": 76
+ },
+ "not_reproducible": "The DPANN_L loss rates (0.40-0.45 vs 0.26-0.27) are parameters of the 4-parameter model; the deposit holds parameters and event counts only for the 72-parameter model used for ancestral reconstruction."
+}
