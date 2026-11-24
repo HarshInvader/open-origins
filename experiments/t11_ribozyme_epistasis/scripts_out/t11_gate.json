@@ -1,0 +1,242 @@
+{
+ "inputs_sha256": {
+  "HDV": "a6267b417f6315675290628878156237b9b9d5050e807faca41c3678ba56cc18",
+  "Hammerhead": "d85919e5d2438b561549d3a761b4bb36d8528c58520d14ab20de3bb78d16c84b",
+  "Hairpin": "6149e2a75eff2e35f2f4b572fcaff87db4ef8a19b12c5a382c9a9370ade92275",
+  "Hatchet": "4a89503524e752d8b1909d31b5c9987094a1fe3470e54aae5321fa989b3989f5",
+  "Twister": "f2467181555ef5f21d2c8ea9ee175659b4f0d2f09a8e2108d06b1df657d3d52b",
+  "CPEB3": "ab44c25662b1a4dffad631e6f3321d6e9cae2009d8b065a4cfdaa37b133fbb32",
+  "contacts": "3ed1a94a02a9ac8c1f530add799065fc97fc1c1258cb4c81a4b0f700339e0bda"
+ },
+ "ribozymes": {
+  "HDV": {
+   "deciding": true,
+   "pdb": "1DRZ",
+   "length": 87,
+   "mapped_positions": 58,
+   "tertiary_contacts": 22,
+   "kept_by_gate": true,
+   "canonical_pairs_sep_ge4": 19,
+   "singles_observed": 261,
+   "singles_expected": 261,
+   "doubles_observed": 33669,
+   "doubles_expected": 33669,
+   "doubles_with_>=20_reads": 24258,
+   "double_reads_median": 26.0,
+   "double_reads_p5": 11.0,
+   "single_reads_min": 1130.0,
+   "wt_reads": 294518.0,
+   "wt_fc_by_replicate": [
+    0.662,
+    0.718,
+    0.707
+   ],
+   "replicate_noise_tau_logit": 0.10572437016801992,
+   "usable_pairs": {
+    "canonical": {
+     "pairs": 19,
+     "with_>=5_usable_doubles": 17
+    },
+    "tertiary": {
+     "pairs": 22,
+     "with_>=5_usable_doubles": 15
+    },
+    "non_contact": {
+     "pairs": 1349,
+     "with_>=5_usable_doubles": 933
+    }
+   }
+  },
+  "Hammerhead": {
+   "deciding": true,
+   "pdb": "2QUW",
+   "length": 45,
+   "mapped_positions": 44,
+   "tertiary_contacts": 18,
+   "kept_by_gate": true,
+   "canonical_pairs_sep_ge4": 12,
+   "singles_observed": 135,
+   "singles_expected": 135,
+   "doubles_observed": 8910,
+   "doubles_expected": 8910,
+   "doubles_with_>=20_reads": 8910,
+   "double_reads_median": 447.0,
+   "double_reads_p5": 77.0,
+   "single_reads_min": 4965.0,
+   "wt_reads": 662224.0,
+   "wt_fc_by_replicate": [
+    0.296,
+    0.326,
+    0.396
+   ],
+   "replicate_noise_tau_logit": 0.1357552103798391,
+   "usable_pairs": {
+    "canonical": {
+     "pairs": 12,
+     "with_>=5_usable_doubles": 12
+    },
+    "tertiary": {
+     "pairs": 18,
+     "with_>=5_usable_doubles": 18
+    },
+    "non_contact": {
+     "pairs": 726,
+     "with_>=5_usable_doubles": 726
+    }
+   }
+  },
+  "Hairpin": {
+   "deciding": true,
+   "pdb": "1M5K",
+   "length": 71,
+   "mapped_positions": 51,
+   "tertiary_contacts": 27,
+   "kept_by_gate": true,
+   "canonical_pairs_sep_ge4": 12,
+   "singles_observed": 213,
+   "singles_expected": 213,
+   "doubles_observed": 22365,
+   "doubles_expected": 22365,
+   "doubles_with_>=20_reads": 22364,
+   "double_reads_median": 102.0,
+   "double_reads_p5": 52.0,
+   "single_reads_min": 3789.0,
+   "wt_reads": 537106.0,
+   "wt_fc_by_replicate": [
+    0.48,
+    0.542,
+    0.558
+   ],
+   "replicate_noise_tau_logit": 0.15144923291477258,
+   "usable_pairs": {
+    "canonical": {
+     "pairs": 12,
+     "with_>=5_usable_doubles": 12
+    },
+    "tertiary": {
+     "pairs": 27,
+     "with_>=5_usable_doubles": 27
+    },
+    "non_contact": {
+     "pairs": 1039,
+     "with_>=5_usable_doubles": 1039
+    }
+   }
+  },
+  "Hatchet": {
+   "deciding": true,
+   "pdb": "6JQ5",
+   "length": 78,
+   "mapped_positions": 66,
+   "tertiary_contacts": 36,
+   "kept_by_gate": true,
+   "canonical_pairs_sep_ge4": 22,
+   "singles_observed": 234,
+   "singles_expected": 234,
+   "doubles_observed": 27027,
+   "doubles_expected": 27027,
+   "doubles_with_>=20_reads": 27027,
+   "double_reads_median": 103.0,
+   "double_reads_p5": 66.0,
+   "single_reads_min": 5825.0,
+   "wt_reads": 920948.0,
+   "wt_fc_by_replicate": [
+    0.204,
+    0.214,
+    0.219
+   ],
+   "replicate_noise_tau_logit": 0.030526758654606374,
+   "usable_pairs": {
+    "canonical": {
+     "pairs": 22,
+     "with_>=5_usable_doubles": 22
+    },
+    "tertiary": {
+     "pairs": 36,
+     "with_>=5_usable_doubles": 36
+    },
+    "non_contact": {
+     "pairs": 1807,
+     "with_>=5_usable_doubles": 1807
+    }
+   }
+  },
+  "Twister": {
+   "deciding": true,
+   "pdb": "4OJI",
+   "length": 48,
+   "mapped_positions": 46,
+   "tertiary_contacts": 21,
+   "kept_by_gate": true,
+   "canonical_pairs_sep_ge4": 14,
+   "singles_observed": 144,
+   "singles_expected": 144,
+   "doubles_observed": 10152,
+   "doubles_expected": 10152,
+   "doubles_with_>=20_reads": 10152,
+   "double_reads_median": 309.0,
+   "double_reads_p5": 99.0,
+   "single_reads_min": 4718.0,
+   "wt_reads": 1235383.0,
+   "wt_fc_by_replicate": [
+    0.513,
+    0.635,
+    0.652
+   ],
+   "replicate_noise_tau_logit": 0.28066546735306236,
+   "usable_pairs": {
+    "canonical": {
+     "pairs": 14,
+     "with_>=5_usable_doubles": 14
+    },
+    "tertiary": {
+     "pairs": 21,
+     "with_>=5_usable_doubles": 21
+    },
+    "non_contact": {
+     "pairs": 784,
+     "with_>=5_usable_doubles": 784
+    }
+   }
+  },
+  "CPEB3": {
+   "deciding": false,
+   "pdb": "7QR3",
+   "length": 69,
+   "mapped_positions": 54,
+   "tertiary_contacts": 14,
+   "kept_by_gate": false,
+   "canonical_pairs_sep_ge4": 15,
+   "singles_observed": 207,
+   "singles_expected": 207,
+   "doubles_observed": 21114,
+   "doubles_expected": 21114,
+   "doubles_with_>=20_reads": 21114,
+   "double_reads_median": 154.0,
+   "double_reads_p5": 81.0,
+   "single_reads_min": 7244.0,
+   "wt_reads": 1938904.0,
+   "wt_fc_by_replicate": [
+    0.903,
+    0.915,
+    0.892
+   ],
+   "replicate_noise_tau_logit": 0.1612380813910441,
+   "usable_pairs": {
+    "canonical": {
+     "pairs": 15,
+     "with_>=5_usable_doubles": 15
+    },
+    "tertiary": {
+     "pairs": 14,
+     "with_>=5_usable_doubles": 14
+    },
+    "non_contact": {
+     "pairs": 1165,
+     "with_>=5_usable_doubles": 1165
+    }
+   }
+  }
+ },
+ "gate_passed": true
+}

@@ -104,3 +104,12 @@ e7b00f68c11989c9006907cc8c92fd704af0a1513b061f100583bcdd95894975  experiments/t9
 c9769696e9f8133dd5aa56397430cff86f8f8fd692a8193700b3ea7fa015cb3a  experiments/t9_dpann_completeness/scripts_out/t9_gate.json  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
 65017c14e25678ce36f5bfc31a6d1e9c6345ed2ad853998616babcc752e01a50  experiments/t9_dpann_completeness/scripts_out/t9_planted.json  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
 7bc701500e973c0a9da4eb4fc4e068d6da72582f5faaced6ecf9173c4fde8648  experiments/t9_dpann_completeness/scripts_out/t9_dryrun_shuffled_labels.json  orig-paper  2026-11-24T20:23:13Z  T9 DPANN completeness prereg seal
+a38d4be81e3d8e0552463dc55ba537f2ab08b0b45d467f5b6d6ba3920802cd1b  docs/prereg/t11_ribozyme_epistasis.md  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
+e141945edb5c342e9276cb32deed10b0510a38fd3021d262f420711b8ab408ff  experiments/t11_ribozyme_epistasis/PRIOR_ART.md  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
+85b93369106bd7322e5841d542998e5028173c90c9f691b19714186b36400245  experiments/t11_ribozyme_epistasis/scripts/t11_analysis.py  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
+a82cdeea5e21972c041f8c85fb2ec56f4cc9b1d83fa31a17a51c71d02c1c4bf5  experiments/t11_ribozyme_epistasis/scripts/t11_structures.py  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
+6e56948a4ff3121ea4d840898da9cb3637864afb429552b531978072c6b4eadc  experiments/t11_ribozyme_epistasis/scripts/safe_pickle.py  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
+3ed1a94a02a9ac8c1f530add799065fc97fc1c1258cb4c81a4b0f700339e0bda  experiments/t11_ribozyme_epistasis/data/t11_contacts.json  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
+d60b4d22b07745ed9178cf9692a8105f98d2f7bd8d33985c81c5853cec7bf97d  experiments/t11_ribozyme_epistasis/scripts_out/t11_gate.json  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
+0961279a6e0a2583b3848440b004fcfd1d96d4ffcd31290929680129917b979d  experiments/t11_ribozyme_epistasis/scripts_out/t11_planted.json  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
+fa31a5ba2229c74629da8f0bd70658f98e290eec05f8ce0d80253db7240b49a6  experiments/t11_ribozyme_epistasis/scripts_out/t11_dryrun_permuted_labels.json  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
