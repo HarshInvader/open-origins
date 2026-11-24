@@ -1,0 +1,472 @@
+{
+ "cfg": {
+  "k_bg": 1.3e-09,
+  "pH_slope": 0.983,
+  "salt_slope": 0.24,
+  "salt_ref": 3.16,
+  "T_slope": 0.07,
+  "T_ref": 23.0,
+  "mg_pref": 69.3,
+  "mg_exp": 0.8,
+  "k_pref": 3.57,
+  "k_exp": -0.419,
+  "salt_floor_b": 0.14,
+  "salt_min_a": 0.0001,
+  "T_range": [
+   5.0,
+   45.0
+  ],
+  "pH_range": [
+   6.0,
+   9.5
+  ],
+  "Mg_range": [
+   0.005,
+   0.01
+  ],
+  "pH_report_range": [
+   5.0,
+   11.0
+  ],
+  "L_fail": 45,
+  "L_pass": 90,
+  "bar_zero": 0.0,
+  "bar_benign": 0.3,
+  "bar_hostile": 1.0,
+  "k1_fail_share": 0.95,
+  "k1_pass_share": 0.25,
+  "mg_strict_floor": 0.001,
+  "min_rows": 30,
+  "min_clusters": 5,
+  "systems": {
+   "S1_nonenzymatic_helper": 27.0,
+   "S2_nonenzymatic_monomer": 3.7,
+   "S3_ribozyme_24-3": 72.0
+  },
+  "deciding_system": "S3_ribozyme_24-3",
+  "pH_shift": 0.5,
+  "law_rel": 0.15,
+  "mix_fractions": [
+   0.1,
+   0.5,
+   0.9
+  ],
+  "seed": 20261125,
+  "n_boot_real": 10000,
+  "n_boot_planted": 200,
+  "n_planted_runs": 200,
+  "declared_gate_exceptions": [
+   "wayment_steele_table1_row5_ivt_14mM_Mg"
+  ]
+ },
+ "control": {
+  "pH": 7.5,
+  "Mg": 0.0075,
+  "M": 0.5
+ },
+ "worlds": {
+  "P0_null": {
+   "dpH": 0.0,
+   "mgf": 1.0
+  },
+  "P1_hot_only": {
+   "dpH": 0.0,
+   "mgf": 1.0,
+   "T": [
+    85.0,
+    125.0
+   ]
+  },
+  "P1b_warm_in_range": {
+   "dpH": 0.0,
+   "mgf": 1.0,
+   "T": [
+    35.0,
+    45.0
+   ]
+  },
+  "P2_hostile": {
+   "dpH": 1.6,
+   "mgf": 1.0
+  },
+  "P3_mild_hostile": {
+   "dpH": 0.5,
+   "mgf": 1.0
+  },
+  "P4_protective": {
+   "dpH": -1.1,
+   "mgf": 1.0,
+   "em": {
+    "dpH": -1.1
+   }
+  },
+  "P5_Mg_dilution_only": {
+   "dpH": 0.0,
+   "mgf": 0.75,
+   "em": {
+    "dpH": -1.1
+   }
+  },
+  "P6_EM_only_effect": {
+   "dpH": 0.0,
+   "mgf": 1.0,
+   "em": {
+    "dpH": -1.1
+   }
+  }
+ },
+ "results": {
+  "vent_basalt_ridge (29 clusters, 640 rows)|P0_null": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.965,
+   "not reported": 0.035,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge (29 clusters, 640 rows)|P1_hot_only": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.0,
+   "not reported": 0.0,
+   "cannot": 1.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "temperature only": 200
+   }
+  },
+  "vent_basalt_ridge (29 clusters, 640 rows)|P1b_warm_in_range": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.945,
+   "not reported": 0.055,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge (29 clusters, 640 rows)|P2_hostile": {
+   "kill": 0.0,
+   "support": 0.455,
+   "inconclusive": 0.0,
+   "not reported": 0.545,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge (29 clusters, 640 rows)|P3_mild_hostile": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 1.0,
+   "not reported": 0.0,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge (29 clusters, 640 rows)|P4_protective": {
+   "kill": 1.0,
+   "support": 0.0,
+   "inconclusive": 0.0,
+   "not reported": 0.0,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge (29 clusters, 640 rows)|P5_Mg_dilution_only": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.455,
+   "not reported": 0.545,
+   "cannot": 0.0,
+   "definition_flag": 0.455,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge (29 clusters, 640 rows)|P6_EM_only_effect": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.97,
+   "not reported": 0.03,
+   "cannot": 0.0,
+   "definition_flag": 0.97,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_ultramafic (5 clusters, 147 rows)|P0_null": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.905,
+   "not reported": 0.095,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_ultramafic (5 clusters, 147 rows)|P1_hot_only": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.0,
+   "not reported": 0.0,
+   "cannot": 1.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "temperature only": 200
+   }
+  },
+  "vent_ultramafic (5 clusters, 147 rows)|P1b_warm_in_range": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.915,
+   "not reported": 0.085,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_ultramafic (5 clusters, 147 rows)|P2_hostile": {
+   "kill": 0.0,
+   "support": 0.355,
+   "inconclusive": 0.0,
+   "not reported": 0.61,
+   "cannot": 0.035,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_ultramafic (5 clusters, 147 rows)|P3_mild_hostile": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 1.0,
+   "not reported": 0.0,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_ultramafic (5 clusters, 147 rows)|P4_protective": {
+   "kill": 0.955,
+   "support": 0.0,
+   "inconclusive": 0.0,
+   "not reported": 0.0,
+   "cannot": 0.045,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_ultramafic (5 clusters, 147 rows)|P5_Mg_dilution_only": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.63,
+   "not reported": 0.325,
+   "cannot": 0.045,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_ultramafic (5 clusters, 147 rows)|P6_EM_only_effect": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.915,
+   "not reported": 0.085,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "hot_springs (39 clusters, 605 rows)|P0_null": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.98,
+   "not reported": 0.02,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "hot_springs (39 clusters, 605 rows)|P1_hot_only": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.0,
+   "not reported": 0.0,
+   "cannot": 1.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "temperature only": 200
+   }
+  },
+  "hot_springs (39 clusters, 605 rows)|P1b_warm_in_range": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.955,
+   "not reported": 0.045,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "hot_springs (39 clusters, 605 rows)|P2_hostile": {
+   "kill": 0.0,
+   "support": 0.505,
+   "inconclusive": 0.0,
+   "not reported": 0.495,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "hot_springs (39 clusters, 605 rows)|P3_mild_hostile": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 1.0,
+   "not reported": 0.0,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "hot_springs (39 clusters, 605 rows)|P4_protective": {
+   "kill": 1.0,
+   "support": 0.0,
+   "inconclusive": 0.0,
+   "not reported": 0.0,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "hot_springs (39 clusters, 605 rows)|P5_Mg_dilution_only": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.38,
+   "not reported": 0.62,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "hot_springs (39 clusters, 605 rows)|P6_EM_only_effect": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.965,
+   "not reported": 0.035,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge thinned to 10% in range|P0_null": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.98,
+   "not reported": 0.02,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge thinned to 10% in range|P1_hot_only": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.0,
+   "not reported": 0.0,
+   "cannot": 1.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "temperature only": 200
+   }
+  },
+  "vent_basalt_ridge thinned to 10% in range|P1b_warm_in_range": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.96,
+   "not reported": 0.04,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge thinned to 10% in range|P2_hostile": {
+   "kill": 0.0,
+   "support": 0.39,
+   "inconclusive": 0.0,
+   "not reported": 0.61,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge thinned to 10% in range|P3_mild_hostile": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 1.0,
+   "not reported": 0.0,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge thinned to 10% in range|P4_protective": {
+   "kill": 1.0,
+   "support": 0.0,
+   "inconclusive": 0.0,
+   "not reported": 0.0,
+   "cannot": 0.0,
+   "definition_flag": 0.0,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge thinned to 10% in range|P5_Mg_dilution_only": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.55,
+   "not reported": 0.45,
+   "cannot": 0.0,
+   "definition_flag": 0.55,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  },
+  "vent_basalt_ridge thinned to 10% in range|P6_EM_only_effect": {
+   "kill": 0.0,
+   "support": 0.0,
+   "inconclusive": 0.945,
+   "not reported": 0.055,
+   "cannot": 0.0,
+   "definition_flag": 0.945,
+   "K1_extrapolated_labels": {
+    "does not fail": 200
+   }
+  }
+ }
+}
