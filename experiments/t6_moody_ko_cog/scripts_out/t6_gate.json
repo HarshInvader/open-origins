@@ -1,0 +1,112 @@
+{
+ "blind_counts": {
+  "kos_without_a_pp": 1898,
+  "median_size_eligible": {
+   "merge": 233.0,
+   "retest": 82.0
+  },
+  "merge_cogs_with_a_member_without_pp": 492,
+  "merge_eligible": 433,
+  "merge_eligible_by_x_bin": [
+   241,
+   65,
+   47,
+   50,
+   30
+  ],
+  "merge_eligible_by_x_bin_and_size_third": [
+   109,
+   83,
+   49,
+   16,
+   19,
+   30,
+   8,
+   16,
+   23,
+   7,
+   17,
+   26,
+   5,
+   9,
+   16
+  ],
+  "merge_eligible_share_of_merge_group": 0.3605328892589509,
+  "retest_cogs_whose_ko_has_no_pp": 0,
+  "retest_eligible": 1505,
+  "retest_eligible_by_x_bin": [
+   1171,
+   144,
+   75,
+   72,
+   43
+  ],
+  "retest_eligible_by_x_bin_and_size_third": [
+   804,
+   267,
+   100,
+   59,
+   61,
+   24,
+   30,
+   35,
+   10,
+   17,
+   37,
+   18,
+   16,
+   21,
+   6
+  ],
+  "retest_eligible_cog_perc_ge_0.9": 1148,
+  "retest_group_y_equals_x": "under_5_percent",
+  "size_cut_points": [
+   127.0,
+   348.0
+  ],
+  "smallest_retest_stratum_where_merge_present": 6,
+  "strata_with_merge_and_no_retest": 0,
+  "support_needs_rescued_at_least": 61,
+  "what": "KO-side PP and structure only; no COG PP enters these counts",
+  "x_bins": [
+   0.0,
+   0.1,
+   0.2,
+   0.3,
+   0.4,
+   0.5
+  ]
+ },
+ "decision_non_empty": true,
+ "gate_pass": true,
+ "mode": "gate",
+ "published_and_tables": {
+  "kos_probable_and_sampled_flag": 399,
+  "kos_recount_pp_ge_0.75": 682,
+  "published_399": 399,
+  "sd1_distinct_modal_cogs": 3916,
+  "sd1_rows": 9365,
+  "sd1_rows_expected": 9365,
+  "sd2_cogs_all_in_sd1_modal_cog_column": true,
+  "sd2_modal_ko_is_a_member": 3088,
+  "sd2_pp_equals_repo_COG_LUCA_PP_csv": true,
+  "sd2_rows": 3088,
+  "sd2_rows_expected": 3088
+ },
+ "structure": {
+  "largest_n_kos": 40,
+  "merge_cog_seq_set_equals_union_of_kos": 1200,
+  "merge_cogs_whose_kos_share_sequences": 982,
+  "merge_group": 1201,
+  "merge_group_5_or_more_kos": 327,
+  "merge_group_by_n_kos": {
+   "2": 477,
+   "3": 249,
+   "4": 148
+  },
+  "retest_cog_seq_set_equals_ko_set": 1887,
+  "retest_group": 1887,
+  "retest_trimmed_alignment_identical": 1887,
+  "smallest_jaccard": 0.9583333333333334
+ }
+}

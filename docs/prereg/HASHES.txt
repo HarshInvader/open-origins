@@ -73,3 +73,8 @@ f80a19691c19d2cdc592bd17361ed06ad763514bd8bbf46076558651a11eb53f  experiments/t5
 6483d807da9189990b7bfeb346d13ac8d2a00d5b0298e6f93fac9a8054fe62ac  experiments/t5_wehbi_moody/scripts/build_map.py  orig-paper  2026-11-24T18:03:10Z  T5 Wehbi-Moody base-rate prereg seal
 77ddeb5dee9a8289a43085547d4784c12547a20a7a143985934959a42c1810ad  experiments/t5_wehbi_moody/scripts_out/t5_gate.json  orig-paper  2026-11-24T18:03:10Z  T5 Wehbi-Moody base-rate prereg seal
 59fcdd026b3fa07ed76c4072638b699950214a8df53981eca89c870b53cb5b9b  experiments/t5_wehbi_moody/scripts_out/t5_planted.json  orig-paper  2026-11-24T18:03:10Z  T5 Wehbi-Moody base-rate prereg seal
+135ee9fe72b509f29319aba564be332cf732d1b390846b2e004c880a9d7315b8  docs/prereg/t6_moody_ko_vs_cog.md  orig-paper  2026-11-24T18:27:54Z  T6 Moody KO-vs-COG prereg seal
+a07524fae79b445455fbac3fccac3112a87213de9708eb48c6f62b8e3181d89b  experiments/t6_moody_ko_cog/scripts/t6_analysis.py  orig-paper  2026-11-24T18:27:54Z  T6 Moody KO-vs-COG prereg seal
+e90e7f295e209e0af03955a1cd26a375ee3521541b8c976ed062e40d21852ed1  experiments/t6_moody_ko_cog/PRIOR_ART.md  orig-paper  2026-11-24T18:27:54Z  T6 Moody KO-vs-COG prereg seal
+02ed67a600cacc9299457d9a5242552fb5d43392802daba678a96a49f3400e0f  experiments/t6_moody_ko_cog/scripts/build_sets.py  orig-paper  2026-11-24T18:27:54Z  T6 Moody KO-vs-COG prereg seal
+5234bb37261c5c2e0e7bdb4815281289ccefa6d5befea3f6a2e009ad8aea93b6  experiments/t6_moody_ko_cog/data/cog_ko_sets.tsv  orig-paper  2026-11-24T18:27:54Z  T6 Moody KO-vs-COG prereg seal

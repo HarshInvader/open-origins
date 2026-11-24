@@ -1,0 +1,939 @@
+{
+ "kill_reachable": true,
+ "mode": "planted",
+ "ndraw": 4000,
+ "pool_share_ge_0.75": 0.09133520824963172,
+ "primary": "XS",
+ "rows": [
+  {
+   "U": {
+    "mean_flipped": 0.0,
+    "mean_hi": 1030.92,
+    "mean_lo": 0.0,
+    "mean_rescued": 0.0,
+    "median_ratio": 1.57,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 0.0,
+    "mean_hi": 1355.52,
+    "mean_lo": 0.0,
+    "mean_rescued": 0.0,
+    "median_ratio": 1.96,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 0.0,
+    "mean_hi": 1223.49,
+    "mean_lo": 0.0,
+    "mean_rescued": 0.0,
+    "median_ratio": 1.67,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "p": 0.0,
+   "q": 0.0,
+   "reps": 300,
+   "scenario": "null"
+  },
+  {
+   "U": {
+    "mean_flipped": 2.8,
+    "mean_hi": 183.08,
+    "mean_lo": 0.07,
+    "mean_rescued": 0.7,
+    "median_ratio": 0.37,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 2.8,
+    "mean_hi": 255.97,
+    "mean_lo": 0.12,
+    "mean_rescued": 0.7,
+    "median_ratio": 0.79,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 2.8,
+    "mean_hi": 236.99,
+    "mean_lo": 0.1,
+    "mean_rescued": 0.7,
+    "median_ratio": 0.76,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "p": 0.0,
+   "q": 0.02,
+   "reps": 300,
+   "scenario": "null"
+  },
+  {
+   "U": {
+    "mean_flipped": 6.8,
+    "mean_hi": 3.2,
+    "mean_lo": 0.13,
+    "mean_rescued": 2.1,
+    "median_ratio": 0.47,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 6.8,
+    "mean_hi": 6.85,
+    "mean_lo": 0.27,
+    "mean_rescued": 2.1,
+    "median_ratio": 1.01,
+    "rates": {
+     "kill": 0.997,
+     "partly": 0.003,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 6.8,
+    "mean_hi": 7.16,
+    "mean_lo": 0.24,
+    "mean_rescued": 2.1,
+    "median_ratio": 0.96,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "p": 0.0,
+   "q": 0.05,
+   "reps": 300,
+   "scenario": "null"
+  },
+  {
+   "U": {
+    "mean_flipped": 13.8,
+    "mean_hi": 1.36,
+    "mean_lo": 0.15,
+    "mean_rescued": 3.9,
+    "median_ratio": 0.45,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 13.8,
+    "mean_hi": 3.1,
+    "mean_lo": 0.32,
+    "mean_rescued": 3.9,
+    "median_ratio": 0.97,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 13.8,
+    "mean_hi": 3.34,
+    "mean_lo": 0.31,
+    "mean_rescued": 3.9,
+    "median_ratio": 1.0,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "p": 0.0,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "null"
+  },
+  {
+   "U": {
+    "mean_flipped": 27.9,
+    "mean_hi": 0.97,
+    "mean_lo": 0.2,
+    "mean_rescued": 7.9,
+    "median_ratio": 0.46,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 27.9,
+    "mean_hi": 2.19,
+    "mean_lo": 0.44,
+    "mean_rescued": 7.9,
+    "median_ratio": 0.98,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 27.9,
+    "mean_hi": 2.35,
+    "mean_lo": 0.44,
+    "mean_rescued": 7.9,
+    "median_ratio": 1.0,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "p": 0.0,
+   "q": 0.2,
+   "reps": 300,
+   "scenario": "null"
+  },
+  {
+   "U": {
+    "mean_flipped": 54.4,
+    "mean_hi": 0.8,
+    "mean_lo": 0.26,
+    "mean_rescued": 16.0,
+    "median_ratio": 0.46,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 54.4,
+    "mean_hi": 1.78,
+    "mean_lo": 0.58,
+    "mean_rescued": 16.0,
+    "median_ratio": 1.03,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 54.4,
+    "mean_hi": 1.85,
+    "mean_lo": 0.56,
+    "mean_rescued": 16.0,
+    "median_ratio": 1.04,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "p": 0.0,
+   "q": 0.4,
+   "reps": 300,
+   "scenario": "null"
+  },
+  {
+   "U": {
+    "mean_flipped": 14.1,
+    "mean_hi": 3.35,
+    "mean_lo": 0.7,
+    "mean_rescued": 12.6,
+    "median_ratio": 1.41,
+    "rates": {
+     "kill": 0.993,
+     "partly": 0.007,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 14.1,
+    "mean_hi": 7.66,
+    "mean_lo": 1.47,
+    "mean_rescued": 12.6,
+    "median_ratio": 3.08,
+    "rates": {
+     "kill": 0.82,
+     "partly": 0.18,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 14.1,
+    "mean_hi": 8.34,
+    "mean_lo": 1.39,
+    "mean_rescued": 12.6,
+    "median_ratio": 3.06,
+    "rates": {
+     "kill": 0.837,
+     "partly": 0.163,
+     "support": 0.0
+    }
+   },
+   "p": 0.02,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 13.3,
+    "mean_hi": 6.78,
+    "mean_lo": 1.69,
+    "mean_rescued": 25.7,
+    "median_ratio": 3.11,
+    "rates": {
+     "kill": 0.75,
+     "partly": 0.25,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 13.3,
+    "mean_hi": 15.63,
+    "mean_lo": 3.55,
+    "mean_rescued": 25.7,
+    "median_ratio": 6.6,
+    "rates": {
+     "kill": 0.057,
+     "partly": 0.943,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 13.3,
+    "mean_hi": 16.96,
+    "mean_lo": 3.34,
+    "mean_rescued": 25.7,
+    "median_ratio": 7.0,
+    "rates": {
+     "kill": 0.113,
+     "partly": 0.887,
+     "support": 0.0
+    }
+   },
+   "p": 0.05,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 13.8,
+    "mean_hi": 11.05,
+    "mean_lo": 3.13,
+    "mean_rescued": 46.6,
+    "median_ratio": 5.37,
+    "rates": {
+     "kill": 0.067,
+     "partly": 0.907,
+     "support": 0.027
+    }
+   },
+   "X": {
+    "mean_flipped": 13.8,
+    "mean_hi": 25.44,
+    "mean_lo": 6.53,
+    "mean_rescued": 46.6,
+    "median_ratio": 11.72,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.97,
+     "support": 0.03
+    }
+   },
+   "XS": {
+    "mean_flipped": 13.8,
+    "mean_hi": 27.32,
+    "mean_lo": 5.95,
+    "mean_rescued": 46.6,
+    "median_ratio": 11.8,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.97,
+     "support": 0.03
+    }
+   },
+   "p": 0.1,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 13.9,
+    "mean_hi": 16.31,
+    "mean_lo": 4.76,
+    "mean_rescued": 68.9,
+    "median_ratio": 7.81,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.15,
+     "support": 0.85
+    }
+   },
+   "X": {
+    "mean_flipped": 13.9,
+    "mean_hi": 37.3,
+    "mean_lo": 9.89,
+    "mean_rescued": 68.9,
+    "median_ratio": 16.94,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.133,
+     "support": 0.867
+    }
+   },
+   "XS": {
+    "mean_flipped": 13.9,
+    "mean_hi": 41.32,
+    "mean_lo": 9.27,
+    "mean_rescued": 68.9,
+    "median_ratio": 17.78,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.133,
+     "support": 0.867
+    }
+   },
+   "p": 0.15,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 13.8,
+    "mean_hi": 21.53,
+    "mean_lo": 6.34,
+    "mean_rescued": 89.9,
+    "median_ratio": 10.29,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "X": {
+    "mean_flipped": 13.8,
+    "mean_hi": 50.19,
+    "mean_lo": 13.4,
+    "mean_rescued": 89.9,
+    "median_ratio": 22.35,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 13.8,
+    "mean_hi": 54.7,
+    "mean_lo": 12.42,
+    "mean_rescued": 89.9,
+    "median_ratio": 23.36,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "p": 0.2,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 13.5,
+    "mean_hi": 32.67,
+    "mean_lo": 9.73,
+    "mean_rescued": 133.0,
+    "median_ratio": 15.77,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "X": {
+    "mean_flipped": 13.5,
+    "mean_hi": 76.13,
+    "mean_lo": 20.39,
+    "mean_rescued": 133.0,
+    "median_ratio": 33.74,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 13.5,
+    "mean_hi": 84.3,
+    "mean_lo": 18.91,
+    "mean_rescued": 133.0,
+    "median_ratio": 34.99,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "p": 0.3,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 13.8,
+    "mean_hi": 50.28,
+    "mean_lo": 15.74,
+    "mean_rescued": 219.0,
+    "median_ratio": 24.41,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "X": {
+    "mean_flipped": 13.8,
+    "mean_hi": 114.69,
+    "mean_lo": 32.28,
+    "mean_rescued": 219.0,
+    "median_ratio": 53.3,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 13.8,
+    "mean_hi": 124.43,
+    "mean_lo": 29.56,
+    "mean_rescued": 219.0,
+    "median_ratio": 56.05,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "p": 0.5,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 2.7,
+    "mean_hi": 10220.74,
+    "mean_lo": 10.56,
+    "mean_rescued": 44.2,
+    "median_ratio": 24.82,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.987,
+     "support": 0.013
+    }
+   },
+   "X": {
+    "mean_flipped": 2.7,
+    "mean_hi": 13566.97,
+    "mean_lo": 17.97,
+    "mean_rescued": 44.2,
+    "median_ratio": 51.19,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.987,
+     "support": 0.013
+    }
+   },
+   "XS": {
+    "mean_flipped": 2.7,
+    "mean_hi": 12101.55,
+    "mean_lo": 13.19,
+    "mean_rescued": 44.2,
+    "median_ratio": 55.38,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.987,
+     "support": 0.013
+    }
+   },
+   "p": 0.1,
+   "q": 0.02,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 2.8,
+    "mean_hi": 29062.8,
+    "mean_lo": 32.17,
+    "mean_rescued": 130.4,
+    "median_ratio": 70.44,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "X": {
+    "mean_flipped": 2.8,
+    "mean_hi": 36399.72,
+    "mean_lo": 55.09,
+    "mean_rescued": 130.4,
+    "median_ratio": 156.43,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 2.8,
+    "mean_hi": 35552.97,
+    "mean_lo": 40.23,
+    "mean_rescued": 130.4,
+    "median_ratio": 169.0,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "p": 0.3,
+   "q": 0.02,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 55.0,
+    "mean_hi": 5.59,
+    "mean_lo": 3.03,
+    "mean_rescued": 140.7,
+    "median_ratio": 4.02,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.92,
+     "support": 0.08
+    }
+   },
+   "X": {
+    "mean_flipped": 55.0,
+    "mean_hi": 12.7,
+    "mean_lo": 6.61,
+    "mean_rescued": 140.7,
+    "median_ratio": 8.94,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 55.0,
+    "mean_hi": 13.44,
+    "mean_lo": 6.35,
+    "mean_rescued": 140.7,
+    "median_ratio": 8.95,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "p": 0.3,
+   "q": 0.4,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 54.9,
+    "mean_hi": 8.81,
+    "mean_lo": 4.94,
+    "mean_rescued": 225.3,
+    "median_ratio": 6.47,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.01,
+     "support": 0.99
+    }
+   },
+   "X": {
+    "mean_flipped": 54.9,
+    "mean_hi": 19.95,
+    "mean_lo": 10.73,
+    "mean_rescued": 225.3,
+    "median_ratio": 14.31,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 54.9,
+    "mean_hi": 20.93,
+    "mean_lo": 10.12,
+    "mean_rescued": 225.3,
+    "median_ratio": 14.34,
+    "rates": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    }
+   },
+   "p": 0.5,
+   "q": 0.4,
+   "reps": 300,
+   "scenario": "rescue"
+  },
+  {
+   "U": {
+    "mean_flipped": 10.7,
+    "mean_hi": 2.31,
+    "mean_lo": 0.25,
+    "mean_rescued": 4.7,
+    "median_ratio": 0.66,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 10.7,
+    "mean_hi": 4.84,
+    "mean_lo": 0.5,
+    "mean_rescued": 4.7,
+    "median_ratio": 1.27,
+    "rates": {
+     "kill": 0.99,
+     "partly": 0.01,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 10.7,
+    "mean_hi": 4.1,
+    "mean_lo": 0.38,
+    "mean_rescued": 4.7,
+    "median_ratio": 1.04,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "p": 0.0,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "noise_by_size"
+  },
+  {
+   "U": {
+    "mean_flipped": 20.8,
+    "mean_hi": 1.6,
+    "mean_lo": 0.34,
+    "mean_rescued": 9.4,
+    "median_ratio": 0.72,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 20.8,
+    "mean_hi": 3.29,
+    "mean_lo": 0.66,
+    "mean_rescued": 9.4,
+    "median_ratio": 1.39,
+    "rates": {
+     "kill": 0.997,
+     "partly": 0.003,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 20.8,
+    "mean_hi": 2.69,
+    "mean_lo": 0.5,
+    "mean_rescued": 9.4,
+    "median_ratio": 1.11,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "p": 0.0,
+   "q": 0.2,
+   "reps": 300,
+   "scenario": "noise_by_size"
+  },
+  {
+   "U": {
+    "mean_flipped": 42.1,
+    "mean_hi": 1.19,
+    "mean_lo": 0.4,
+    "mean_rescued": 18.2,
+    "median_ratio": 0.68,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 42.1,
+    "mean_hi": 2.42,
+    "mean_lo": 0.79,
+    "mean_rescued": 18.2,
+    "median_ratio": 1.34,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 42.1,
+    "mean_hi": 1.95,
+    "mean_lo": 0.6,
+    "mean_rescued": 18.2,
+    "median_ratio": 1.07,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "p": 0.0,
+   "q": 0.4,
+   "reps": 300,
+   "scenario": "noise_by_size"
+  },
+  {
+   "U": {
+    "mean_flipped": 13.5,
+    "mean_hi": 2.43,
+    "mean_lo": 0.41,
+    "mean_rescued": 8.1,
+    "median_ratio": 0.98,
+    "rates": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 13.5,
+    "mean_hi": 5.53,
+    "mean_lo": 0.87,
+    "mean_rescued": 8.1,
+    "median_ratio": 2.09,
+    "rates": {
+     "kill": 0.973,
+     "partly": 0.027,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 13.5,
+    "mean_hi": 6.04,
+    "mean_lo": 0.84,
+    "mean_rescued": 8.1,
+    "median_ratio": 2.16,
+    "rates": {
+     "kill": 0.98,
+     "partly": 0.02,
+     "support": 0.0
+    }
+   },
+   "p": 2.0,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "noisier_merge"
+  },
+  {
+   "U": {
+    "mean_flipped": 13.7,
+    "mean_hi": 4.37,
+    "mean_lo": 0.95,
+    "mean_rescued": 15.9,
+    "median_ratio": 1.81,
+    "rates": {
+     "kill": 0.987,
+     "partly": 0.013,
+     "support": 0.0
+    }
+   },
+   "X": {
+    "mean_flipped": 13.7,
+    "mean_hi": 9.92,
+    "mean_lo": 2.0,
+    "mean_rescued": 15.9,
+    "median_ratio": 3.87,
+    "rates": {
+     "kill": 0.607,
+     "partly": 0.393,
+     "support": 0.0
+    }
+   },
+   "XS": {
+    "mean_flipped": 13.7,
+    "mean_hi": 10.76,
+    "mean_lo": 1.87,
+    "mean_rescued": 15.9,
+    "median_ratio": 4.02,
+    "rates": {
+     "kill": 0.627,
+     "partly": 0.373,
+     "support": 0.0
+    }
+   },
+   "p": 4.0,
+   "q": 0.1,
+   "reps": 300,
+   "scenario": "noisier_merge"
+  }
+ ],
+ "script_sha256": "a07524fae79b445455fbac3fccac3112a87213de9708eb48c6f62b8e3181d89b",
+ "seed": [
+  20261126,
+  2
+ ],
+ "support_reachable": true
+}
