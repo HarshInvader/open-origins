@@ -379,3 +379,12 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Why parked.** One full MCMCtree chain is 28–42 laptop CPU-days. The cheapest decisive kill test (P1 under both clocks, 4 chains at 2M iterations) is about 95 core-hours, roughly $1–2 on spot, which is over this month's remaining cap.
 - **Next for S4.** Run it after 1 December, or on the laptop if a normal-priority timing run shows it fits.
 - **Study list.** S6 (ribozyme epistasis vs tertiary contacts) and S7 (Attwater exponential, gate first) remain. Next: S6.
+
+### 2026-11-24: new study list (Fable, 2026-11-25 plan)
+- `docs/plans/next_studies_2026-11-25.md` ranks five more studies, each checked to be decidable on deposited data. They move away from LUCA phylogenomics:
+  - **N1 (top).** Janzen 2022: is ribozyme specificity rising with activity a background-floor artefact of an entropy index?
+  - **N2.** Rotrattanadumrong & Yokobayashi 2022: does a ligase neutral network need higher-order epistasis?
+  - **N3.** Peng, Linderoth & Baum 2022: are nested autocatalytic tiers more than rewired networks give?
+  - **N4.** van Duppen 2023: do formose mixtures under flow differ beyond replicate noise?
+  - **N5 (marginal).** Wehbi 2026: is the tryptophan depletion more than scatter?
+- S6 (T11) is in setup. N1 becomes T12.
