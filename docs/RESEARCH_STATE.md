@@ -388,3 +388,12 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   - **N4.** van Duppen 2023: do formose mixtures under flow differ beyond replicate noise?
   - **N5 (marginal).** Wehbi 2026: is the tryptophan depletion more than scatter?
 - S6 (T11) is in setup. N1 becomes T12.
+
+### 2026-11-24: T11 result (S6, epistasis vs tertiary contacts in five ribozymes): inconclusive
+- **Sealed in 288b952 and run.** Details: `experiments/t11_ribozyme_epistasis/T11_RESULTS.md`. Data: Roberts et al. 2023 full double-mutant scans.
+- **Numbers.**
+  - Base pairs, the positive control: pooled matched Δ = 0.44 (0.33–0.50). Four of five ribozymes pass; hatchet fails, as predicted from its near-neutral singles.
+  - Tertiary contacts: Δ = 0.11 (90% interval −0.02 to 0.23). Support missed on the lower bound. Kill missed because 0.15 is not excluded.
+- **Reported only.** Every sensitive ribozyme leans positive (0.07–0.16 under every variant; CPEB3 0.15). Non-contact distance bands show no proximity gradient.
+- **Reading.** Epistasis maps read base pairing almost perfectly and 3D contacts only faintly (matched AUC about 0.6). Our QT45 negative (#30) is what this method should give. It is not evidence against structure.
+- **Next.** N1 (T12, Janzen specificity floor) is in setup. Then N2–N5 and S7.
