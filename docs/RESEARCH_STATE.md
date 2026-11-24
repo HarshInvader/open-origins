@@ -322,3 +322,10 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   - Kill: G < 10 points with the upper bound < 20. Support: G ≥ 30 with the lower bound > 20.
 - **Status.** An agent is setting up the gate (reproduce 88.6% and their flags) and the planted check. B is not computed before the seal.
 - **Library.** 23 papers from T3/T4 added (1950ff6, 185 total, live).
+
+### 2026-11-24: T5 result (Wehbi 88.6% agreement with Moody): kill
+- **Sealed in 2038f94, real run done.** Details: `experiments/t5_wehbi_moody/T5_RESULTS.md`.
+- **Numbers.** A = 88.7% (LUCA/pre-LUCA Pfams, reproducing 88.6%). B = 80.6% (post-LUCA Pfams matched on breadth). G = 8.1 [5.6, 10.5], which meets the kill rule (G < 10 and upper bound < 20).
+- **Reading.** The published validation is mostly a base rate. A Pfam "agrees" if any of its COGs has PP > 0.5, and old Pfams map to twice as many COGs. Shuffling PP within COG size gives A = 87.2%.
+- **Caveat.** A small real age signal remains (G about 8, 7–13 across variants; p ≈ 0.0005 against the shuffle). Pre-LUCA Pfams have the smallest gap (3.7), and LACA Pfams match LUCA's rate.
+- **Next.** S2 (Moody KO vs COG merging, against a re-run-noise null). A note to the Wehbi/Masel authors is for the owner to decide.
