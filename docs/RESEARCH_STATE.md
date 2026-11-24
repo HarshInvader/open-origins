@@ -351,3 +351,13 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Verdict.** Both kill arms hold. High-yield networks look stable because their droplets are less noisy.
 - **Caveats.** The floor-based noise measure gives "partly" (−0.07). The paper's own subset, the 41 of its 162 pairs with enough droplets, still shows −0.65 after adjustment. That subset is small and selected, reported only.
 - **Next.** T7 (Route 6 evaporation) is being set up; then S4 (Moody age prior) or S5 (DPANN completeness).
+
+### 2026-11-24: T7 sealed; T9 result (DPANN loss vs genome completeness): inconclusive, at the edge of support
+- **T7 (Route 6 evaporation path, PHREEQC Pitzer)** was sealed in 32876f0. Its real run (about 30 min) was killed three times by server restarts and is running again. The seal-time decisions are in the prereg.
+- **T9 was sealed in 8325e9e and run.** Details: `experiments/t9_dpann_completeness/T9_RESULTS.md`.
+  - Internal branches with ≥ 3 genomes: DPANN/other loss-fraction ratio 1.37 [1.146, 1.63]. Support needed a lower bound above 1.15, so the verdict is inconclusive by 0.004.
+  - With the MHH root (reported only) the ratio is 1.40 [1.17, 1.66].
+  - Every variant gives 1.30–1.45.
+- **Reading.** Incompleteness inflates *tip* losses: arm A slope 0.81, and the DPANN tip excess is fully predicted by completeness. The deep-branch excess remains, so it is not an incompleteness artefact. This leans toward Huang's biological reading.
+- **For K6.** Read tip losses from MAG-rich trees with care; deep-branch contrasts are sturdier.
+- **Next.** T7 result; then S4 (Moody age prior; needs MCMCtree; timing first) or S6.
