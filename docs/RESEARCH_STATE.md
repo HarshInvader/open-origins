@@ -284,3 +284,14 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Direction arm.** It works as intended: kill when the gradient alone makes the share, support at −60.
 - **Next.** An agent is applying these changes and fixing decisions D1–D15. I seal once its planted rerun is in.
 - **K6.** 90 of 800 families are done. Laptop load is about 15, so a 30-family batch takes about an hour, and chunks run one batch at a time.
+
+### 2026-11-24: T1 result (is LUCA's vent exergonicity specific?)
+- **Status.** Prereg sealed in ff2efbe. Deviation T1-1 (D4 σ filter in the gate) was logged in e5c2d94 before the gate rerun. The gate passed in 259e88b. Details: `experiments/t1_vent_exergonic/T1_RESULTS.md`.
+- **Sealed verdict: uninformative.** All three arms kill, and both null pools agree.
+  - **Direction.** Under the 100-fold gradient at pH 9, 80 °C, the core *reversed* is still 62.1% exergonic (kill ≥ 50). The forward share is 96.5%, which replicates Wimmer.
+  - **Specificity.** At equal concentrations, the core is *less* exergonic than matched non-core reactions: −8.4 points [−15.4, −2.0] against Rhea and −11.0 [−18.1, −4.7] against Xavier S4.
+  - **Setting.** Vent − pond, core − null: +2.2 [0.0, 5.1] for Rhea and −0.3 [−2.5, 2.2] for S4. Planted power was low here, so read it as "no vent preference detected".
+- **Plain reading.** The "LUCA's metabolism runs downhill at vents" number comes from the assumed product gradient. It is not a property of the core or of vents. Matched modern metabolism is at least as downhill.
+- **Post hoc.** Wimmer's 77% counts 37 reactions they could not estimate (entered as ΔG = 0) as exergonic. On the 314 reactions that can be computed, the share is 74.8%.
+- **Next.** Library entry for Wimmer 2021. Consider writing T1 up as a short note together with the K-series, once K6 is in. T3 (RNA persistence) is next in the queue.
+- **K6.** Chunk q_aa finished (120 of 800 families; O_R 5.09 on that subset). q_ab is running under the Origins lock.
