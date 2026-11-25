@@ -134,3 +134,9 @@ f86c871dc6f1ff1076855a66b30bb4bd7ab98411ef24b857d145c70113113db9  experiments/t1
 71665c8775fe1e449ef6eda9862094d3130595164c1613a6644b15f57a8609ff  experiments/t14_autocatalytic_tiers/scripts_out/t14_gate.json  orig-paper  2026-11-25T06:20:53Z  T14 autocatalytic tiers prereg seal
 3cbe50c00bf0b1efb3f934e4f153e0199e4d2dd322192b8238a349bb135ad1b5  experiments/t14_autocatalytic_tiers/scripts_out/t14_planted.json  orig-paper  2026-11-25T06:20:53Z  T14 autocatalytic tiers prereg seal
 2f5c98d94ba5b326703e35d093ee072f9be61908238a95f276c2b0a523272576  experiments/t14_autocatalytic_tiers/scripts_out/t14_dryrun.json  orig-paper  2026-11-25T06:20:53Z  T14 autocatalytic tiers prereg seal
+d7987fad8ba8bad4099d2ceb52e9620fd405c9c7a09e2bb0b6571274db63a21c  docs/prereg/t15_formose_flow_noise.md  orig-paper  2026-11-25T07:10:59Z  T15 formose flow vs repeat noise prereg seal
+b94adc8b9c45b20e93a6b3b92ab3fa25a60df099fa6a6775608c128ca32f5051  experiments/t15_formose_flow_noise/PRIOR_ART.md  orig-paper  2026-11-25T07:10:59Z  T15 formose flow vs repeat noise prereg seal
+047456a0e6e23099783a61338bfa5b37731f3fa627b6d345fa7b02fd955dbc08  experiments/t15_formose_flow_noise/scripts/t15_analysis.py  orig-paper  2026-11-25T07:10:59Z  T15 formose flow vs repeat noise prereg seal
+4a9850d8a398c374832d55b43cc6bae02ea0256fbf1639ea1339753dfca6c920  experiments/t15_formose_flow_noise/scripts_out/t15_gate.json  orig-paper  2026-11-25T07:10:59Z  T15 formose flow vs repeat noise prereg seal
+a0a1fdeabac80f6ea85fae623881bc65e5ab328dbb045a697995457ae2005764  experiments/t15_formose_flow_noise/scripts_out/t15_planted.json  orig-paper  2026-11-25T07:10:59Z  T15 formose flow vs repeat noise prereg seal
+8f6de7a89fb991a88dd2042da7d86c0de19d6e69f4787ade37dd2f33d349209c  experiments/t15_formose_flow_noise/scripts_out/t15_dryrun.json  orig-paper  2026-11-25T07:10:59Z  T15 formose flow vs repeat noise prereg seal

@@ -1,0 +1,152 @@
+{
+ "script_sha256": "047456a0e6e23099783a61338bfa5b37731f3fa627b6d345fa7b02fd955dbc08",
+ "variant": "base",
+ "variant_def": [
+  1.0,
+  1.0,
+  null
+ ],
+ "L": 5,
+ "B": 400,
+ "noise_params": {
+  "3": {
+   "sd": 0.0021640673143363295,
+   "phi": 0.23220214865857763,
+   "sigma_u": 3.43158518909579
+  },
+  "5": {
+   "sd": 0.00011306670696237993,
+   "phi": 0.11813573476063238,
+   "sigma_u": 1.3870685276929573
+  },
+  "7": {
+   "sd": 0.00036909413853298016,
+   "phi": 0.318065581635753,
+   "sigma_u": 9.827266092385655
+  },
+  "11": {
+   "sd": 0.0011925477058532048,
+   "phi": 0.232631710609803,
+   "sigma_u": 1.48245456459542
+  }
+ },
+ "rows": [
+  {
+   "shift_sd": 0.0,
+   "n": 500,
+   "counts": {
+    "plan": {
+     "neither": 476,
+     "kill": 24
+    },
+    "revised": {
+     "kill": 431,
+     "neither": 69
+    }
+   }
+  },
+  {
+   "shift_sd": 1.0,
+   "n": 500,
+   "counts": {
+    "plan": {
+     "neither": 477,
+     "kill": 23
+    },
+    "revised": {
+     "kill": 439,
+     "neither": 61
+    }
+   }
+  },
+  {
+   "shift_sd": 2.0,
+   "n": 500,
+   "counts": {
+    "plan": {
+     "neither": 470,
+     "kill": 30
+    },
+    "revised": {
+     "neither": 136,
+     "kill": 364
+    }
+   }
+  },
+  {
+   "shift_sd": 3.0,
+   "n": 500,
+   "counts": {
+    "plan": {
+     "neither": 478,
+     "support": 1,
+     "kill": 21
+    },
+    "revised": {
+     "kill": 243,
+     "neither": 256,
+     "support": 1
+    }
+   }
+  },
+  {
+   "shift_sd": 5.0,
+   "n": 500,
+   "counts": {
+    "plan": {
+     "neither": 487,
+     "kill": 3,
+     "support": 10
+    },
+    "revised": {
+     "neither": 441,
+     "kill": 49,
+     "support": 10
+    }
+   }
+  },
+  {
+   "shift_sd": 10.0,
+   "n": 500,
+   "counts": {
+    "plan": {
+     "neither": 393,
+     "support": 107
+    },
+    "revised": {
+     "neither": 393,
+     "support": 107
+    }
+   }
+  },
+  {
+   "shift_sd": 20.0,
+   "n": 500,
+   "counts": {
+    "plan": {
+     "support": 362,
+     "neither": 138
+    },
+    "revised": {
+     "support": 362,
+     "neither": 138
+    }
+   }
+  },
+  {
+   "shift_sd": 40.0,
+   "n": 500,
+   "counts": {
+    "plan": {
+     "support": 497,
+     "neither": 3
+    },
+    "revised": {
+     "support": 497,
+     "neither": 3
+    }
+   }
+  }
+ ],
+ "cpu_seconds": 92.028806
+}
