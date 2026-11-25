@@ -227,7 +227,7 @@ def page_index():
                  '<figcaption><span class="cat">Pl. 1 · A stromatolite, cut in half</span>Illustration. Each layer was laid down by a mat of microbes. '
                  'Rocks like this, 3.4 billion years old, are among the oldest signs of life.</figcaption>', art, flags=re.S)
     hero = (f'<section class="hero home-hero wrap" aria-labelledby="claim"><div class="hero-text">'
-            f'<p class="kicker">{e(C["name"])}, an open research group</p>'
+            f'<p class="kicker">{e(C["name"])}, part of <a href="https://opencitizenscience.org/">Open Citizen Science</a></p>'
             '<h1 id="claim">Map and test every route to the origin of life by 2027</h1>'
             '<p class="state">An open-source effort, run in public. All our code and data are free.</p>'
             '<div class="actions"><a class="btn primary" href="contribute.html">Contribute</a><a class="btn" href="findings.html">Read the findings</a></div>'
