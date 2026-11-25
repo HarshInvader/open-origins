@@ -460,6 +460,13 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Ruling.** Kill test failed; F2 re-run not run (failure is systematic bias per the attached diagnostic; precision re-run cannot fix it); no real-data threshold computed.
 - **Status.** Under fallback F2 the real-data verdict would be "not decidable by this method". The next step is a T18b design that keeps the measured pair terms, with its own planted test (including mostly-negative epistasis). Nothing changed in T18's rules.
 
+### 2026-11-25: K7 (K5 realism bound) pilot: reconciliation barely sees stem-to-stem transfer
+- **Record.** `experiments/k7_realism_bound/`, draft prereg `docs/prereg/k7_realism_bound.md` (not sealed). Moody's per-family reconciliations are public (data.bris, doi:10.5523/bris.405xnm7ei36d2cj65nrirg3ip; 77,286 `.uml_rec` files on the focal tree).
+- **Question.** Is K5's adversary (stem transfer 115–600× background) realistic, judged by the stem transfer Moody 2024's own reconciliations imply? At face value their Supplementary Data 5 puts the stems at about background (0.72× and 1.05× the all-node mean).
+- **Pilot (seed 1, planted m = 1–600×).** Neither preregistered measure responds to the planted multiplier. At 600× the families truly crossed between stems 187 times, and ALE inferred about 0.6 stem-donor transfers; the crossings became root presence instead (stem-born families' root presence 0.07 → about 0.2). Planted values sit inside the null spread across tree sizes.
+- **Caveat.** The laptop ALE build crashes on families over 152 genes, which held 77% of the true crossings at 600×, so this is a warning, not a kill. The full planted test (about 4–5 core-hours on Linux) is for the coordinator.
+- **What it means if it holds.** A low stem-transfer ratio in real reconciliations is not evidence against heavy stem exchange, because the method maps that exchange onto LUCA. This is the mechanism behind K5's failure, measured rather than argued.
+
 ### 2026-11-25: new study list U1–U9 (docs/NEW_STUDIES_2026-11-25.md)
 Ranked by how much the result could change a route, times how feasible it is. Each entry gives the quoted claim, a checked data link, the kill and support rules, the null, the power risk and a prior-art scan.
 1. **U1.** Do T14's nested tiers survive an atom-conserving null? (Peng 2022) This is next. The mixing gate comes first.
