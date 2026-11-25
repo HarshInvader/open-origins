@@ -447,7 +447,7 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   - Using all 9 cycles with a plateau term makes it worse.
 - **Noted, no test needed.**
   - The caption's e^0.38x and e^0.20x mean 1.46- and 1.22-fold per cycle, but the text says "1.2- and 1.38-fold".
-  - The deposited "Mean" row is not the mean or median of the three datasets.
+  - The deposited "Mean" row is not the mean or median of the three datasets. **Corrected 2026-11-25 by a fresh recheck:** the Mean rows are geometric means, but the two Dataset 2 rows are swapped between the FITC and Cy5 blocks of SD_Fig3e.xlsx. The fold point (text gives 1 + k, not e^k) was confirmed.
   - Whether to tell the authors is the owner's call.
 - **The study list.** Only N5 (marginal) is left. A new Fable list has been asked for, with the T14 follow-up (an element-balance null for the autocatalytic tiers) as a candidate.
 

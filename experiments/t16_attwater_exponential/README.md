@@ -151,6 +151,25 @@ These two points come from `PRIOR_ART.md`.
 2. **The deposited "Mean" row is not the arithmetic mean, geometric mean or median of the three
    deposited datasets.** It differs by up to 16-31%, 21-27% and 21-66% respectively. The R² values in
    the caption come from fits to the plotted averages.
+   **Corrected 2026-11-25, see below.** This point was wrong as stated.
+
+## Correction (2026-11-25 recheck)
+
+A fresh agent recomputed both reporting points from the raw `SD_Fig3e.xlsx` (Sheet1, C2:L10) and the paper text.
+
+1. **Per-cycle folds: confirmed.** The caption gives "FITC strand = e^0.38x, R2 = 0.997; Cy5 strand =
+   e^0.20x, R2 = 0.984". The text gives "1.2- and 1.38-fold per cycle". The text's numbers equal 1 + k
+   rather than e^k (1.46 and 1.22). Fig. 3c in the same paper converts with e^k correctly.
+2. **The "Mean" row: our earlier claim was wrong.** The Mean rows are geometric means of three datasets,
+   matching to 5e-10. But the Dataset 2 rows are swapped between the two strand blocks:
+   - FITC Mean = geometric mean of FITC Dataset 1, **Cy5 Dataset 2** and FITC Dataset 3;
+   - Cy5 Mean = geometric mean of Cy5 Dataset 1, **FITC Dataset 2** and Cy5 Dataset 3.
+
+   So the plotted average is a geometric mean (the caption says "Average"). Most likely the two Dataset 2
+   rows were swapped in the deposited sheet, or mislabelled. The earlier check compared each Mean row
+   with the datasets under its own strand label, which is why nothing matched. The scatter numbers above
+   use the rows as labelled. Swapping Dataset 2 back would change the per-reaction offsets, but the
+   power-gate conclusion rests on 3 reactions over cycles 0-4 and does not depend on which label a row has.
 
 ## Reproduce
 
