@@ -127,3 +127,10 @@ f8d20c02c14a8aab32cb2c493bd00289eecc732a05b749e6d2aa344db874d9a7  experiments/t1
 f9847c045991a1249d8e6a8625bf4cd8914ade08389204d5d4ee20392d5446fa  experiments/t13_ligase_global_epistasis/scripts_out/t13_gate.json  orig-paper  2026-11-25T01:15:05Z  T13 ligase global epistasis prereg seal
 fff8fe502b95add8d1beca4a6796149e0515d6e978e2c78650c5b6b0d9e75db6  experiments/t13_ligase_global_epistasis/scripts_out/t13_planted.json  orig-paper  2026-11-25T01:15:05Z  T13 ligase global epistasis prereg seal
 4ad13ed49c53c5343e576641b4c3447c49d4299c47a0e287b4da2296f9b2d381  experiments/t13_ligase_global_epistasis/scripts_out/t13_dryrun_permuted_labels.json  orig-paper  2026-11-25T01:15:05Z  T13 ligase global epistasis prereg seal
+c84c93ae10c0a66b3133ab72ba6f45ece530f8868cbe52211c2b0c3ffe233292  docs/prereg/t14_autocatalytic_tiers.md  orig-paper  2026-11-25T06:20:53Z  T14 autocatalytic tiers prereg seal
+f86c871dc6f1ff1076855a66b30bb4bd7ab98411ef24b857d145c70113113db9  experiments/t14_autocatalytic_tiers/PRIOR_ART.md  orig-paper  2026-11-25T06:20:53Z  T14 autocatalytic tiers prereg seal
+48ecdd36d68b3a7a281a56b85755e85c6ee67a0d212b99a0940bb5197cb57f62  experiments/t14_autocatalytic_tiers/scripts/t14_analysis.py  orig-paper  2026-11-25T06:20:53Z  T14 autocatalytic tiers prereg seal
+466965aa53b1d4fbce0f5f238804f2976d4813cc25fdeec99dfc9c18787bce3d  experiments/t14_autocatalytic_tiers/data/food_sets.tsv  orig-paper  2026-11-25T06:20:53Z  T14 autocatalytic tiers prereg seal
+71665c8775fe1e449ef6eda9862094d3130595164c1613a6644b15f57a8609ff  experiments/t14_autocatalytic_tiers/scripts_out/t14_gate.json  orig-paper  2026-11-25T06:20:53Z  T14 autocatalytic tiers prereg seal
+3cbe50c00bf0b1efb3f934e4f153e0199e4d2dd322192b8238a349bb135ad1b5  experiments/t14_autocatalytic_tiers/scripts_out/t14_planted.json  orig-paper  2026-11-25T06:20:53Z  T14 autocatalytic tiers prereg seal
+2f5c98d94ba5b326703e35d093ee072f9be61908238a95f276c2b0a523272576  experiments/t14_autocatalytic_tiers/scripts_out/t14_dryrun.json  orig-paper  2026-11-25T06:20:53Z  T14 autocatalytic tiers prereg seal

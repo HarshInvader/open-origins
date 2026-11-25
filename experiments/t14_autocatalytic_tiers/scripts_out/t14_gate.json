@@ -1,0 +1,194 @@
+{
+ "mode": "gate",
+ "script_sha256": "48ecdd36d68b3a7a281a56b85755e85c6ee67a0d212b99a0940bb5197cb57f62",
+ "gate_inputs": {
+  "raw/plos/S10_Table.xlsx": "c4b8bef5ddc5e9798371d4b73719d471ee5b63a196006c5e98283712c50307cb",
+  "raw/plos/S11_Table.xlsx": "7424e3ce56c3b57c3be8aeccb18506135e62f0fea84ead88db26c2738d97bbe9",
+  "raw/plos/S3_Table.xlsx": "cc8e3ebbe6ec63c04f55042015843fcbfd56aae07535cf866c51237c8b626124"
+ },
+ "bio": {
+  "checks": {
+   "species": [
+    4216,
+    4216,
+    true
+   ],
+   "reactions": [
+    8402,
+    8402,
+    true
+   ],
+   "tier0": [
+    [
+     30,
+     44
+    ],
+    [
+     30,
+     44
+    ],
+    true
+   ],
+   "n_candidates": [
+    4186,
+    4186,
+    true
+   ],
+   "n_seeds_within5pct": [
+    304.0,
+    304,
+    true
+   ],
+   "set_species_within5pct": [
+    [
+     1414,
+     357,
+     301
+    ],
+    [
+     1414,
+     357,
+     301
+    ],
+    true
+   ],
+   "set_reactions": [
+    [
+     4114,
+     916,
+     736
+    ],
+    [
+     4114,
+     916,
+     736
+    ],
+    true
+   ],
+   "clique_sizes": [
+    [
+     3,
+     34,
+     267
+    ],
+    [
+     3,
+     34,
+     267
+    ],
+    true
+   ],
+   "nested_chain": [
+    3,
+    3,
+    true
+   ],
+   "tier0_matches_S10A": [
+    true,
+    true,
+    true
+   ],
+   "supported_list_matches_S11": [
+    304,
+    304,
+    true
+   ],
+   "nine_food_same_tier0": [
+    30,
+    44,
+    true
+   ]
+  },
+  "stats": {
+   "n_seeds": 304.0,
+   "n_sets": 3,
+   "nested_share": 1.0,
+   "largest": 1414
+  },
+  "chain_depth": 3,
+  "seconds_full_scan": 3.39,
+  "cpu_seconds_full_scan": 2.43,
+  "n_distinct_expansions": 2856,
+  "food_missing_from_network": []
+ },
+ "abio": {
+  "checks": {
+   "species": [
+    277,
+    277,
+    true
+   ],
+   "reactions": [
+    717,
+    717,
+    true
+   ],
+   "tier0": [
+    [
+     5,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    true
+   ],
+   "n_candidates": [
+    272,
+    272,
+    true
+   ],
+   "n_seeds_within5pct": [
+    12.0,
+    12,
+    true
+   ],
+   "set_species_within5pct": [
+    [
+     91
+    ],
+    [
+     91
+    ],
+    true
+   ],
+   "set_reactions": [
+    [
+     220
+    ],
+    [
+     220
+    ],
+    true
+   ],
+   "clique_sizes": [
+    [
+     12
+    ],
+    [
+     12
+    ],
+    true
+   ],
+   "supported_list_matches_S3": [
+    12,
+    12,
+    true
+   ]
+  },
+  "stats": {
+   "n_seeds": 12.0,
+   "n_sets": 1,
+   "nested_share": 0.0,
+   "largest": 91
+  },
+  "chain_depth": 1,
+  "seconds_full_scan": 0.11,
+  "cpu_seconds_full_scan": 0.07,
+  "n_distinct_expansions": 241,
+  "food_missing_from_network": []
+ },
+ "fallback_triggered_by_real_scan_time": false,
+ "gate_pass": true
+}

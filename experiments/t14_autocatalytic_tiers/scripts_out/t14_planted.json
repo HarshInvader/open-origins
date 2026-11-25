@@ -1,0 +1,405 @@
+{
+ "rules_applied_by_script_sha256": "48ecdd36d68b3a7a281a56b85755e85c6ee67a0d212b99a0940bb5197cb57f62",
+ "parts_computed_by_script_sha256": [
+  "48ecdd36d68b3a7a281a56b85755e85c6ee67a0d212b99a0940bb5197cb57f62"
+ ],
+ "n_null_per_network": 100,
+ "table": {
+  "dense_planted": {
+   "n_rep": 4,
+   "plan_rule": {
+    "kill": 0,
+    "support": 0,
+    "partly": 4
+   },
+   "hier_rule": {
+    "kill": 0,
+    "support": 4,
+    "partly": 0,
+    "abio_contradicts": 0
+   },
+   "bio_alone_outside_both_ge3": 1,
+   "plan_null_as_written_kill": 0,
+   "per_stat_big": {
+    "n_seeds": {
+     "above": 0,
+     "below": 1,
+     "inside95_swap": 1
+    },
+    "n_sets": {
+     "above": 4,
+     "below": 0,
+     "inside95_swap": 0
+    },
+    "nested_share": {
+     "above": 4,
+     "below": 0,
+     "inside95_swap": 0
+    },
+    "largest": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 4
+    }
+   },
+   "mean_obs_big": {
+    "n_seeds": 730.0,
+    "n_sets": 4.0,
+    "nested_share": 1.0,
+    "largest": 986.0,
+    "chain_depth": 4.0
+   },
+   "mean_null_swap_median_big": {
+    "n_seeds": 756.0,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 999.125
+   },
+   "mean_null_strict_median_big": {
+    "n_seeds": 773.875,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 988.25
+   },
+   "mean_null_swapplan_median_big": {
+    "n_seeds": 0.0,
+    "n_sets": 0.0,
+    "nested_share": 0.0,
+    "largest": 0.0
+   },
+   "mean_obs_small": {
+    "n_seeds": 107.5,
+    "n_sets": 2.0,
+    "nested_share": 0.75,
+    "largest": 235.75
+   },
+   "mean_null_swap_median_small": {
+    "n_seeds": 116.0,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 239.25
+   },
+   "median_null_scan_seconds_big": 0.8049999999999999
+  },
+  "dense_samedeg": {
+   "n_rep": 4,
+   "plan_rule": {
+    "kill": 4,
+    "support": 0,
+    "partly": 0
+   },
+   "hier_rule": {
+    "kill": 4,
+    "support": 0,
+    "partly": 0,
+    "abio_contradicts": 0
+   },
+   "bio_alone_outside_both_ge3": 0,
+   "plan_null_as_written_kill": 0,
+   "per_stat_big": {
+    "n_seeds": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 4
+    },
+    "n_sets": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 4
+    },
+    "nested_share": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 4
+    },
+    "largest": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 4
+    }
+   },
+   "mean_obs_big": {
+    "n_seeds": 759.0,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 1004.5,
+    "chain_depth": 1.0
+   },
+   "mean_null_swap_median_big": {
+    "n_seeds": 756.0,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 998.875
+   },
+   "mean_null_strict_median_big": {
+    "n_seeds": 756.0,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 1004.125
+   },
+   "mean_null_swapplan_median_big": {
+    "n_seeds": 0.0,
+    "n_sets": 0.0,
+    "nested_share": 0.0,
+    "largest": 0.0
+   },
+   "mean_obs_small": {
+    "n_seeds": 115.5,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 238.75
+   },
+   "mean_null_swap_median_small": {
+    "n_seeds": 115.5,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 239.25
+   },
+   "median_null_scan_seconds_big": 0.8624999999999999
+  },
+  "sparse_background": {
+   "n_rep": 10,
+   "plan_rule": {
+    "kill": 9,
+    "support": 0,
+    "partly": 1
+   },
+   "hier_rule": {
+    "kill": 10,
+    "support": 0,
+    "partly": 0,
+    "abio_contradicts": 5
+   },
+   "bio_alone_outside_both_ge3": 0,
+   "plan_null_as_written_kill": 0,
+   "per_stat_big": {
+    "n_seeds": {
+     "above": 0,
+     "below": 5,
+     "inside95_swap": 4
+    },
+    "n_sets": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 10
+    },
+    "nested_share": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 10
+    },
+    "largest": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 9
+    }
+   },
+   "mean_obs_big": {
+    "n_seeds": 289.7,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 410.5,
+    "chain_depth": 1.0
+   },
+   "mean_null_swap_median_big": {
+    "n_seeds": 313.1,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 417.85
+   },
+   "mean_null_strict_median_big": {
+    "n_seeds": 315.25,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 411.65
+   },
+   "mean_null_swapplan_median_big": {
+    "n_seeds": 0.0,
+    "n_sets": 0.0,
+    "nested_share": 0.0,
+    "largest": 0.0
+   },
+   "mean_obs_small": {
+    "n_seeds": 17.1,
+    "n_sets": 0.6,
+    "nested_share": 0.1,
+    "largest": 64.7
+   },
+   "mean_null_swap_median_small": {
+    "n_seeds": 42.9,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 143.8
+   },
+   "median_null_scan_seconds_big": 0.20600000000000002
+  },
+  "sparse_planted": {
+   "n_rep": 10,
+   "plan_rule": {
+    "kill": 0,
+    "support": 0,
+    "partly": 10
+   },
+   "hier_rule": {
+    "kill": 0,
+    "support": 10,
+    "partly": 0,
+    "abio_contradicts": 0
+   },
+   "bio_alone_outside_both_ge3": 2,
+   "plan_null_as_written_kill": 0,
+   "per_stat_big": {
+    "n_seeds": {
+     "above": 0,
+     "below": 2,
+     "inside95_swap": 6
+    },
+    "n_sets": {
+     "above": 10,
+     "below": 0,
+     "inside95_swap": 0
+    },
+    "nested_share": {
+     "above": 10,
+     "below": 0,
+     "inside95_swap": 0
+    },
+    "largest": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 9
+    }
+   },
+   "mean_obs_big": {
+    "n_seeds": 311.7,
+    "n_sets": 4.0,
+    "nested_share": 1.0,
+    "largest": 436.5,
+    "chain_depth": 4.0
+   },
+   "mean_null_swap_median_big": {
+    "n_seeds": 329.5,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 445.55
+   },
+   "mean_null_strict_median_big": {
+    "n_seeds": 331.25,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 439.0
+   },
+   "mean_null_swapplan_median_big": {
+    "n_seeds": 0.0,
+    "n_sets": 0.0,
+    "nested_share": 0.0,
+    "largest": 0.0
+   },
+   "mean_obs_small": {
+    "n_seeds": 23.1,
+    "n_sets": 1.6,
+    "nested_share": 0.26666666666666666,
+    "largest": 68.9
+   },
+   "mean_null_swap_median_small": {
+    "n_seeds": 44.85,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 148.25
+   },
+   "median_null_scan_seconds_big": 0.2265
+  },
+  "sparse_samedeg": {
+   "n_rep": 10,
+   "plan_rule": {
+    "kill": 10,
+    "support": 0,
+    "partly": 0
+   },
+   "hier_rule": {
+    "kill": 10,
+    "support": 0,
+    "partly": 0,
+    "abio_contradicts": 0
+   },
+   "bio_alone_outside_both_ge3": 0,
+   "plan_null_as_written_kill": 0,
+   "per_stat_big": {
+    "n_seeds": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 10
+    },
+    "n_sets": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 10
+    },
+    "nested_share": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 10
+    },
+    "largest": {
+     "above": 0,
+     "below": 0,
+     "inside95_swap": 10
+    }
+   },
+   "mean_obs_big": {
+    "n_seeds": 326.1,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 445.7,
+    "chain_depth": 1.0
+   },
+   "mean_null_swap_median_big": {
+    "n_seeds": 328.2,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 444.95
+   },
+   "mean_null_strict_median_big": {
+    "n_seeds": 328.5,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 445.0
+   },
+   "mean_null_swapplan_median_big": {
+    "n_seeds": 0.0,
+    "n_sets": 0.0,
+    "nested_share": 0.0,
+    "largest": 0.0
+   },
+   "mean_obs_small": {
+    "n_seeds": 43.1,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 143.6
+   },
+   "mean_null_swap_median_small": {
+    "n_seeds": 45.0,
+    "n_sets": 1.0,
+    "nested_share": 0.0,
+    "largest": 148.65
+   },
+   "median_null_scan_seconds_big": 0.23400000000000004
+  }
+ },
+ "parts": [
+  "t14_planted_part_dense_planted_0-1.json",
+  "t14_planted_part_dense_planted_1-2.json",
+  "t14_planted_part_dense_planted_2-3.json",
+  "t14_planted_part_dense_planted_3-4.json",
+  "t14_planted_part_dense_samedeg_0-1.json",
+  "t14_planted_part_dense_samedeg_1-2.json",
+  "t14_planted_part_dense_samedeg_2-3.json",
+  "t14_planted_part_dense_samedeg_3-4.json",
+  "t14_planted_part_sparse_background_0-5.json",
+  "t14_planted_part_sparse_background_5-10.json",
+  "t14_planted_part_sparse_planted_0-5.json",
+  "t14_planted_part_sparse_planted_5-10.json",
+  "t14_planted_part_sparse_samedeg_0-5.json",
+  "t14_planted_part_sparse_samedeg_5-10.json"
+ ]
+}

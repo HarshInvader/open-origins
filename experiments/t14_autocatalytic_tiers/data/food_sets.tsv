@@ -1,0 +1,29 @@
+# Ultimate food sets for T14, taken from the authors' own deposited code, not typed from memory.
+# Biochemical: `input_food_list` in FromSelectedFoodSet_to_LinProg_KEGG.py inside S2 Python Script
+#   (journal.pcbi.1010498.s028.zip), the script that produced S11 Table. Comments are the authors' own.
+#   It lists the paper's nine food species plus six ion/hydrate forms. Paper text (PMC9491600, Sect. 2.3), verbatim:
+#   "we chose {H2, CH4, NO, FeS2, visible light} and {H2O,CO2,NH3,H2S,H2SO4,H2SO3,HSO3−,H3PO4,H4P2O7} as the ultimate food, respectively."
+#   The nine-species file Biochem_ufs.txt (S3 Python Script, journal.pcbi.1010498.s029.zip) gives the same
+#   tier-0 system; the gate checks both against S10 Table (30 species, 44 reactions).
+# Abiotic: `input_food_list` in FromSelectedFoodSet_to_LinProg_Adam.py (same zip), identical to Abiotic_ufs.txt.
+# Columns: network, species_id, authors_comment
+bio	C00001	H2O
+bio	C00080	H(+)
+bio	C01328	OH(-)
+bio	C00014	NH3
+bio	C01342	NH4(+)
+bio	C01358	NH4OH
+bio	C00011	CO2
+bio	C01353	H2CO3
+bio	C00288	HCO3(-)
+bio	C00283	H2S
+bio	C00059	H2SO4
+bio	C00094	H2SO3
+bio	C11481	HSO3(-)
+bio	C00009	H3PO4
+bio	C00013	H4P2O7
+abio	H2	H2
+abio	CH4	CH4
+abio	NO	NO
+abio	FeS2	FeS2
+abio	vVIS	visible light

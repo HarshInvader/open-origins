@@ -1,0 +1,75 @@
+{
+ "mode": "dryrun_standin_one_swap_rewire_blind",
+ "script_sha256": "48ecdd36d68b3a7a281a56b85755e85c6ee67a0d212b99a0940bb5197cb57f62",
+ "verdict": {
+  "verdict": "kill",
+  "kill": true,
+  "support": false,
+  "agreeing_stats": [],
+  "bio_alone_outside_both_ge3": false,
+  "hier": {
+   "verdict": "kill",
+   "kill": true,
+   "support": false,
+   "abio_contradicts": false,
+   "scale_positions_swap": {
+    "n_seeds": 0,
+    "largest": 0
+   }
+  },
+  "primary_rule": "hier",
+  "primary_verdict": "kill"
+ },
+ "per_stat_flags": {
+  "bio": {
+   "n_seeds": {
+    "inside95_swap": true,
+    "out99_both": 0
+   },
+   "n_sets": {
+    "inside95_swap": true,
+    "out99_both": 0
+   },
+   "nested_share": {
+    "inside95_swap": true,
+    "out99_both": 0
+   },
+   "largest": {
+    "inside95_swap": true,
+    "out99_both": 0
+   }
+  },
+  "abio": {
+   "n_seeds": {
+    "inside95_swap": true,
+    "out99_both": 0
+   },
+   "n_sets": {
+    "inside95_swap": true,
+    "out99_both": 0
+   },
+   "nested_share": {
+    "inside95_swap": true,
+    "out99_both": 0
+   },
+   "largest": {
+    "inside95_swap": true,
+    "out99_both": 0
+   }
+  }
+ },
+ "n_inside95_swap": {
+  "bio": 4,
+  "abio": 4
+ },
+ "n_out99_both": {
+  "bio": 0,
+  "abio": 0
+ },
+ "null_scan_cpu_seconds_median": {
+  "bio": 7.57,
+  "abio": 0.04
+ },
+ "fallback": false,
+ "note": "No statistic of the stand-in or of its nulls is printed or saved here; the null draws sit in work/dryrun_blind/ (gitignored) and are the same ensemble as the real nulls."
+}
