@@ -1,0 +1,82 @@
+{
+ "mode": "planted",
+ "seed": [
+  20261125,
+  2
+ ],
+ "nrep": 10,
+ "script_sha256": "f8d20c02c14a8aab32cb2c493bd00289eecc732a05b749e6d2aa344db874d9a7",
+ "scales": {
+  "null_global_curve_pin16": 1.727862926254602,
+  "pairs_flip30": 0.3448890583058528,
+  "third_order_flip30": 1.727862926254602,
+  "pairs_flip15": 0.3448890583058528,
+  "pairs_flip45": 0.3448890583058528
+ },
+ "rows": [
+  {
+   "scenario": "pairs_flip15",
+   "kind": "pair",
+   "scale": 0.1724445291529264,
+   "nrep": 10,
+   "kill_rate": 0.0,
+   "support_rate": 0.0,
+   "recall_G_gen8_mean": 0.7698834136551056,
+   "ap_G_gen8_mean": 0.7557584607411465,
+   "ap_net_gen8_mean": 0.7924878025460986,
+   "ap_GP_gen8_mean": 0.432835873999976,
+   "lift_gen8_mean": 0.03672934180495204,
+   "ap_null_gen8_mean": 0.3300999459077979,
+   "gen8_neutral_frac_mean": 0.2743394648829431,
+   "rho_G_gen8_mean": 0.780217048955834,
+   "recall_G_gen7_mean": 0.991453408762835,
+   "lift_gen7_mean": 0.0013475823457442027,
+   "lift_gen8_max": 0.07543245986416214,
+   "lift_gen8_min": -0.014331722821099069,
+   "recall_G_gen8_min": 0.7579268292682927,
+   "recall_G_gen8_max": 0.7808510638297872,
+   "verdicts": {
+    "kill": 0,
+    "partly": 10,
+    "support": 0
+   },
+   "verdicts_plan_as_written": {
+    "kill": 0,
+    "partly": 10,
+    "support": 0
+   }
+  },
+  {
+   "scenario": "pairs_flip45",
+   "kind": "pair",
+   "scale": 0.5173335874587792,
+   "nrep": 10,
+   "kill_rate": 0.0,
+   "support_rate": 1.0,
+   "recall_G_gen8_mean": 0.8359735078921924,
+   "ap_G_gen8_mean": 0.5985425643412207,
+   "ap_net_gen8_mean": 0.8289621476438633,
+   "ap_GP_gen8_mean": 0.7452132939979328,
+   "lift_gen8_mean": 0.2304195833026427,
+   "ap_null_gen8_mean": 0.3799670276864098,
+   "gen8_neutral_frac_mean": 0.3662541806020067,
+   "rho_G_gen8_mean": 0.4367661811987862,
+   "recall_G_gen7_mean": 0.9871981916305785,
+   "lift_gen7_mean": 0.07173643204925814,
+   "lift_gen8_max": 0.264647193570818,
+   "lift_gen8_min": 0.20997993146203686,
+   "recall_G_gen8_min": 0.8285779502396713,
+   "recall_G_gen8_max": 0.8424297784882393,
+   "verdicts": {
+    "kill": 0,
+    "partly": 0,
+    "support": 10
+   },
+   "verdicts_plan_as_written": {
+    "kill": 0,
+    "partly": 10,
+    "support": 0
+   }
+  }
+ ]
+}

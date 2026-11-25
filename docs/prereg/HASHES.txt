@@ -120,3 +120,10 @@ db025c15ce8b5b5d3f4a61a39a2d365e152ef15cc13fad0f2f0c1ff122f7dfa0  experiments/t1
 a1bfee69b962e14e3185a8858d35255f7bf859407a1e63e3f8d711e792da98c6  experiments/t12_janzen_specificity/scripts_out/t12_gate.json  orig-paper  2026-11-25T00:22:40Z  T12 Janzen specificity prereg seal
 5f6fc43184b8197e21149b4fb4b1de0a435c351181245e106bd1fcdf1ef93dd3  experiments/t12_janzen_specificity/scripts_out/t12_planted.json  orig-paper  2026-11-25T00:22:40Z  T12 Janzen specificity prereg seal
 4fb6d23eb94aa27191d73178396f56820f00651309d4cbdcd0a559b0e01520ce  experiments/t12_janzen_specificity/scripts_out/t12_dryrun_permuted_activity.json  orig-paper  2026-11-25T00:22:40Z  T12 Janzen specificity prereg seal
+92f17063fbfd135bc02a530dd76412dfbc872c8c447aba70196450f481d92748  docs/prereg/t13_ligase_global_epistasis.md  orig-paper  2026-11-25T01:15:05Z  T13 ligase global epistasis prereg seal
+c5a1c6ee3657aeca6dfb8b159ecbfe1114a50aaacef8308ab4922c53ad42dd4c  experiments/t13_ligase_global_epistasis/PRIOR_ART.md  orig-paper  2026-11-25T01:15:05Z  T13 ligase global epistasis prereg seal
+f8d20c02c14a8aab32cb2c493bd00289eecc732a05b749e6d2aa344db874d9a7  experiments/t13_ligase_global_epistasis/scripts/t13_analysis.py  orig-paper  2026-11-25T01:15:05Z  T13 ligase global epistasis prereg seal
+6e86afdf040c3b2e5904a5c07e95794590529e97b1b8ebd786ec7abafb8ec5e4  experiments/t13_ligase_global_epistasis/scripts/zip_fetch.py  orig-paper  2026-11-25T01:15:05Z  T13 ligase global epistasis prereg seal
+f9847c045991a1249d8e6a8625bf4cd8914ade08389204d5d4ee20392d5446fa  experiments/t13_ligase_global_epistasis/scripts_out/t13_gate.json  orig-paper  2026-11-25T01:15:05Z  T13 ligase global epistasis prereg seal
+fff8fe502b95add8d1beca4a6796149e0515d6e978e2c78650c5b6b0d9e75db6  experiments/t13_ligase_global_epistasis/scripts_out/t13_planted.json  orig-paper  2026-11-25T01:15:05Z  T13 ligase global epistasis prereg seal
+4ad13ed49c53c5343e576641b4c3447c49d4299c47a0e287b4da2296f9b2d381  experiments/t13_ligase_global_epistasis/scripts_out/t13_dryrun_permuted_labels.json  orig-paper  2026-11-25T01:15:05Z  T13 ligase global epistasis prereg seal

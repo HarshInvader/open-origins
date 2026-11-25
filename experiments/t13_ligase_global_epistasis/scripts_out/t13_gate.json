@@ -1,0 +1,65 @@
+{
+ "mode": "gate",
+ "script_sha256": "f8d20c02c14a8aab32cb2c493bd00289eecc732a05b749e6d2aa344db874d9a7",
+ "rows_gen1_6": 29887,
+ "unique_sequences_gen1_6": 29887,
+ "authors_split": {
+  "train": 20920,
+  "test": 8967,
+  "published_train": 20920,
+  "published_test": 8967,
+  "match": true
+ },
+ "rows_gen7": 11976,
+ "rows_gen8": 11960,
+ "single_mutants_missing_from_data": 0,
+ "gen8": {
+  "n": 11960,
+  "observed_neutral_frac": 0.2790969899665552,
+  "published_fig3b_observed": 0.28,
+  "also_expected_neutral_frac": 0.0009197324414715719,
+  "share_of_neutral_called_neutral_by_log_additive": 0.0032953864589574597
+ },
+ "gen7_by_algorithm": {
+  "GA only": {
+   "n": 9977,
+   "observed_neutral_frac": 0.7358925528716047,
+   "also_expected_neutral_frac": 0.5830409942868597
+  },
+  "GA with MLP": {
+   "n": 1000,
+   "observed_neutral_frac": 0.888,
+   "also_expected_neutral_frac": 0.68
+  },
+  "GA with MLP and extra recombination": {
+   "n": 999,
+   "observed_neutral_frac": 0.8968968968968969,
+   "also_expected_neutral_frac": 0.4194194194194194
+  }
+ },
+ "gen1": {
+  "n": 10000,
+  "neutral_frac": 0.109,
+  "published_fig5a": 0.11,
+  "r2_fig2c_log_additive_hd_gt1": 0.7549711714241711,
+  "published_text_75_5_percent": 0.755,
+  "n_hd_gt1": 9894,
+  "hd_range": [
+   0,
+   3
+  ]
+ },
+ "wt_mut_library": {
+  "rows": 65536,
+  "neutral_frac": 0.6020355224609375,
+  "published_fig5a": 0.6
+ },
+ "replicate_ceiling": {
+  "n": 65536,
+  "ap_rep1_for_rep2": 0.997302601006306,
+  "rho_rep1_rep2": 0.9832914902520171,
+  "recall_rep1_for_rep2": 0.8452465539292312,
+  "neutral_frac_mean": 0.6020355224609375
+ },
+ "gate_pass": true
+}

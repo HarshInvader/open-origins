@@ -1,0 +1,215 @@
+{
+ "mode": "planted",
+ "seed": [
+  20261125,
+  2
+ ],
+ "nrep": 10,
+ "script_sha256": "f8d20c02c14a8aab32cb2c493bd00289eecc732a05b749e6d2aa344db874d9a7",
+ "scales": {
+  "null_global_curve_pin16": 1.727862926254602,
+  "pairs_flip30": 0.3448890583058528,
+  "third_order_flip30": 1.727862926254602,
+  "pairs_flip15": 0.3448890583058528,
+  "pairs_flip45": 0.3448890583058528
+ },
+ "rows": [
+  {
+   "scenario": "null_global_curve_pin16",
+   "kind": "none_pin16",
+   "scale": 1.727862926254602,
+   "nrep": 10,
+   "kill_rate": 0.7,
+   "support_rate": 0.0,
+   "recall_G_gen8_mean": 0.8197635017517368,
+   "ap_G_gen8_mean": 0.9087344530277136,
+   "ap_net_gen8_mean": 0.6705284024878468,
+   "ap_GP_gen8_mean": 0.13072928531557917,
+   "lift_gen8_mean": -0.23820605053986682,
+   "ap_null_gen8_mean": 0.09161170536298179,
+   "gen8_neutral_frac_mean": 0.05046822742474917,
+   "rho_G_gen8_mean": 0.9240894602996717,
+   "recall_G_gen7_mean": 0.9711337710709167,
+   "lift_gen7_mean": -0.00854251853238842,
+   "lift_gen8_max": -0.1667396101522215,
+   "lift_gen8_min": -0.29250844263995224,
+   "recall_G_gen8_min": 0.7725040916530278,
+   "recall_G_gen8_max": 0.8647260273972602,
+   "verdicts": {
+    "kill": 7,
+    "partly": 3,
+    "support": 0
+   },
+   "verdicts_plan_as_written": {
+    "kill": 7,
+    "partly": 3,
+    "support": 0
+   }
+  },
+  {
+   "scenario": "null_global_curve_pin8",
+   "kind": "none",
+   "scale": 0.0,
+   "nrep": 10,
+   "kill_rate": 1.0,
+   "support_rate": 0.0,
+   "recall_G_gen8_mean": 0.9176323039148697,
+   "ap_G_gen8_mean": 0.9760480397213828,
+   "ap_net_gen8_mean": 0.8700383314394653,
+   "ap_GP_gen8_mean": 0.4123983590038649,
+   "lift_gen8_mean": -0.10600970828191736,
+   "ap_null_gen8_mean": 0.34144389282294235,
+   "gen8_neutral_frac_mean": 0.2653010033444816,
+   "rho_G_gen8_mean": 0.9679767079359582,
+   "recall_G_gen7_mean": 0.9947681808042443,
+   "lift_gen7_mean": -0.0005481991339078562,
+   "lift_gen8_max": -0.07566211755692953,
+   "lift_gen8_min": -0.15131326131897838,
+   "recall_G_gen8_min": 0.8992490613266583,
+   "recall_G_gen8_max": 0.9363579080025205,
+   "verdicts": {
+    "kill": 10,
+    "partly": 0,
+    "support": 0
+   },
+   "verdicts_plan_as_written": {
+    "kill": 10,
+    "partly": 0,
+    "support": 0
+   }
+  },
+  {
+   "scenario": "pairs_flip30",
+   "kind": "pair",
+   "scale": 0.3448890583058528,
+   "nrep": 10,
+   "kill_rate": 0.0,
+   "support_rate": 1.0,
+   "recall_G_gen8_mean": 0.772480962941306,
+   "ap_G_gen8_mean": 0.6335504803922968,
+   "ap_net_gen8_mean": 0.7958936283353737,
+   "ap_GP_gen8_mean": 0.6040575602660306,
+   "lift_gen8_mean": 0.1623431479430769,
+   "ap_null_gen8_mean": 0.3570997331652562,
+   "gen8_neutral_frac_mean": 0.3289130434782609,
+   "rho_G_gen8_mean": 0.5589964703414733,
+   "recall_G_gen7_mean": 0.9885629801198343,
+   "lift_gen7_mean": 0.02946755455107536,
+   "lift_gen8_max": 0.19003248071717327,
+   "lift_gen8_min": 0.10762524429426457,
+   "recall_G_gen8_min": 0.767661310890079,
+   "recall_G_gen8_max": 0.7805372529143436,
+   "verdicts": {
+    "kill": 0,
+    "partly": 0,
+    "support": 10
+   },
+   "verdicts_plan_as_written": {
+    "kill": 0,
+    "partly": 10,
+    "support": 0
+   }
+  },
+  {
+   "scenario": "third_order_flip30",
+   "kind": "triple",
+   "scale": 1.727862926254602,
+   "nrep": 10,
+   "kill_rate": 0.0,
+   "support_rate": 0.0,
+   "recall_G_gen8_mean": 0.6451051528903499,
+   "ap_G_gen8_mean": 0.45375831999950283,
+   "ap_net_gen8_mean": 0.4960750506940855,
+   "ap_GP_gen8_mean": 0.4694175496485326,
+   "lift_gen8_mean": 0.04294859945149522,
+   "ap_null_gen8_mean": 0.30451350693231616,
+   "gen8_neutral_frac_mean": 0.28839464882943144,
+   "rho_G_gen8_mean": 0.29737621142311826,
+   "recall_G_gen7_mean": 0.9932425288775153,
+   "lift_gen7_mean": 0.021773294373423246,
+   "lift_gen8_max": 0.06840589839891953,
+   "lift_gen8_min": 0.011102766768699868,
+   "recall_G_gen8_min": 0.6398963730569949,
+   "recall_G_gen8_max": 0.6502021952628538,
+   "verdicts": {
+    "kill": 0,
+    "partly": 10,
+    "support": 0
+   },
+   "verdicts_plan_as_written": {
+    "kill": 0,
+    "partly": 10,
+    "support": 0
+   }
+  },
+  {
+   "scenario": "pairs_flip15",
+   "kind": "pair",
+   "scale": 0.1724445291529264,
+   "nrep": 10,
+   "kill_rate": 0.0,
+   "support_rate": 0.0,
+   "recall_G_gen8_mean": 0.7698834136551056,
+   "ap_G_gen8_mean": 0.7557584607411465,
+   "ap_net_gen8_mean": 0.7924878025460986,
+   "ap_GP_gen8_mean": 0.432835873999976,
+   "lift_gen8_mean": 0.03672934180495204,
+   "ap_null_gen8_mean": 0.3300999459077979,
+   "gen8_neutral_frac_mean": 0.2743394648829431,
+   "rho_G_gen8_mean": 0.780217048955834,
+   "recall_G_gen7_mean": 0.991453408762835,
+   "lift_gen7_mean": 0.0013475823457442027,
+   "lift_gen8_max": 0.07543245986416214,
+   "lift_gen8_min": -0.014331722821099069,
+   "recall_G_gen8_min": 0.7579268292682927,
+   "recall_G_gen8_max": 0.7808510638297872,
+   "verdicts": {
+    "kill": 0,
+    "partly": 10,
+    "support": 0
+   },
+   "verdicts_plan_as_written": {
+    "kill": 0,
+    "partly": 10,
+    "support": 0
+   }
+  },
+  {
+   "scenario": "pairs_flip45",
+   "kind": "pair",
+   "scale": 0.5173335874587792,
+   "nrep": 10,
+   "kill_rate": 0.0,
+   "support_rate": 1.0,
+   "recall_G_gen8_mean": 0.8359735078921924,
+   "ap_G_gen8_mean": 0.5985425643412207,
+   "ap_net_gen8_mean": 0.8289621476438633,
+   "ap_GP_gen8_mean": 0.7452132939979328,
+   "lift_gen8_mean": 0.2304195833026427,
+   "ap_null_gen8_mean": 0.3799670276864098,
+   "gen8_neutral_frac_mean": 0.3662541806020067,
+   "rho_G_gen8_mean": 0.4367661811987862,
+   "recall_G_gen7_mean": 0.9871981916305785,
+   "lift_gen7_mean": 0.07173643204925814,
+   "lift_gen8_max": 0.264647193570818,
+   "lift_gen8_min": 0.20997993146203686,
+   "recall_G_gen8_min": 0.8285779502396713,
+   "recall_G_gen8_max": 0.8424297784882393,
+   "verdicts": {
+    "kill": 0,
+    "partly": 0,
+    "support": 10
+   },
+   "verdicts_plan_as_written": {
+    "kill": 0,
+    "partly": 10,
+    "support": 0
+   }
+  }
+ ],
+ "merged_from": [
+  "t13_planted_part_0-1.json",
+  "t13_planted_part_2-3.json",
+  "t13_planted_part_4-5.json"
+ ]
+}
