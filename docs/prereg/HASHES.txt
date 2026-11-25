@@ -140,3 +140,9 @@ b94adc8b9c45b20e93a6b3b92ab3fa25a60df099fa6a6775608c128ca32f5051  experiments/t1
 4a9850d8a398c374832d55b43cc6bae02ea0256fbf1639ea1339753dfca6c920  experiments/t15_formose_flow_noise/scripts_out/t15_gate.json  orig-paper  2026-11-25T07:10:59Z  T15 formose flow vs repeat noise prereg seal
 a0a1fdeabac80f6ea85fae623881bc65e5ab328dbb045a697995457ae2005764  experiments/t15_formose_flow_noise/scripts_out/t15_planted.json  orig-paper  2026-11-25T07:10:59Z  T15 formose flow vs repeat noise prereg seal
 8f6de7a89fb991a88dd2042da7d86c0de19d6e69f4787ade37dd2f33d349209c  experiments/t15_formose_flow_noise/scripts_out/t15_dryrun.json  orig-paper  2026-11-25T07:10:59Z  T15 formose flow vs repeat noise prereg seal
+42698dcc635ffb35a6e6b8ad522d8bd027ac85942cd732656b3f24e28a13fe8a  docs/prereg/t17_atom_balanced_tiers.md  orig-paper  2026-11-25T11:26:40Z  T17 atom-balanced tiers prereg seal
+3f5fb5544fc9c1c3d3b575c27f432967f0b305d7640fb46012f41457964bc533  experiments/t17_atom_balanced_tiers/scripts/t17_analysis.py  orig-paper  2026-11-25T11:26:40Z  T17 atom-balanced tiers prereg seal
+59aefce184307938724917c770587e9d9b91611f569dc5168bfe13363c53f4dc  experiments/t17_atom_balanced_tiers/scripts/t17_fetch_kegg.py  orig-paper  2026-11-25T11:26:40Z  T17 atom-balanced tiers prereg seal
+a3f3969dd87536a92369f2a21d1a2715658dba706367cb08760836868cbeb517  experiments/t17_atom_balanced_tiers/scripts_out/t17_gate.json  orig-paper  2026-11-25T11:26:40Z  T17 atom-balanced tiers prereg seal
+a6296df374f5723691e277d648af5cdd00dcde93aa05a6438f87acb3dac4faa8  experiments/t17_atom_balanced_tiers/scripts_out/t17_planted.json  orig-paper  2026-11-25T11:26:40Z  T17 atom-balanced tiers prereg seal
+c6e5a9a4b474ba902be5176a6a8e47dac6a9675f8c8535e387c4541dfb18f35e  experiments/t17_atom_balanced_tiers/raw/kegg/ids.txt  orig-paper  2026-11-25T11:26:40Z  T17 atom-balanced tiers prereg seal
