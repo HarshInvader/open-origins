@@ -1,0 +1,272 @@
+{
+ "build": {
+  "source": "luca_calib/results/k2/n80_t0.4/sim",
+  "seed": 1,
+  "n": 250,
+  "cap": 152,
+  "t_background": 0.4,
+  "tau": 0.016524620289399872,
+  "stem_length": 0.07118386,
+  "base_id": 100000,
+  "rungs": {
+   "1": {
+    "x_stem": 0.4,
+    "lambda_equiv": 0.006609848115759949,
+    "n_present": 138,
+    "n_ge2": 136,
+    "n_run": 128,
+    "n_skipped_over_cap": 8,
+    "Tstem_per_family": 0.0,
+    "true_luca_new": 0,
+    "both_domains": 98,
+    "genes_run_total": 7453,
+    "build_s": 14.5
+   },
+   "50": {
+    "x_stem": 20.0,
+    "lambda_equiv": 0.33049240578799743,
+    "n_present": 160,
+    "n_ge2": 160,
+    "n_run": 151,
+    "n_skipped_over_cap": 9,
+    "Tstem_per_family": 0.452,
+    "true_luca_new": 0,
+    "both_domains": 128,
+    "genes_run_total": 8844,
+    "build_s": 19.5
+   },
+   "150": {
+    "x_stem": 60.0,
+    "lambda_equiv": 0.9914772173639923,
+    "n_present": 179,
+    "n_ge2": 178,
+    "n_run": 138,
+    "n_skipped_over_cap": 40,
+    "Tstem_per_family": 1.444,
+    "true_luca_new": 0,
+    "both_domains": 146,
+    "genes_run_total": 8393,
+    "build_s": 17.5
+   },
+   "600": {
+    "x_stem": 240.0,
+    "lambda_equiv": 3.965908869455969,
+    "n_present": 219,
+    "n_ge2": 219,
+    "n_run": 127,
+    "n_skipped_over_cap": 92,
+    "Tstem_per_family": 6.572,
+    "true_luca_new": 0,
+    "both_domains": 199,
+    "genes_run_total": 8719,
+    "build_s": 165.2
+   }
+  }
+ },
+ "background": {
+  "kept": 1391,
+  "parsed": 696,
+  "missing_uml_rec": 4,
+  "single_gene": 691,
+  "ale_dir": "ale_true"
+ },
+ "control": {
+  "M1": 1.203234226546053,
+  "I_stem": 0.02548387096774191,
+  "I_int": 0.021179476452306962,
+  "M2": 1.5615767469366777,
+  "R_stem": 0.06314152410575427,
+  "R_all": 0.04043446742506769,
+  "n_families": 696,
+  "M1_ci": [
+   0.3104931911830252,
+   2.7382697721552622
+  ],
+  "M2_ci": [
+   0.6933318528541517,
+   2.643963128882788
+  ]
+ },
+ "rungs": {
+  "1": {
+   "x_stem": 0.4,
+   "lambda_equiv": 0.006609848115759949,
+   "n_present": 138,
+   "n_ge2": 136,
+   "n_run": 128,
+   "n_skipped_over_cap": 8,
+   "Tstem_per_family": 0.0,
+   "true_luca_new": 0,
+   "both_domains": 98,
+   "genes_run_total": 7453,
+   "build_s": 14.5,
+   "M1": 1.1204056641418083,
+   "I_stem": 0.022474846465438392,
+   "I_int": 0.02005956162552368,
+   "M2": 1.575252280569844,
+   "R_stem": 0.05568326947637294,
+   "R_all": 0.03534879470622296,
+   "n_families": 760,
+   "M1_ci": [
+    0.44244773937907467,
+    2.022717034367647
+   ],
+   "M2_ci": [
+    0.8250900253561024,
+    2.4547173188988958
+   ],
+   "stem_born_ok": 64,
+   "stem_born_failed": 0,
+   "stem_born_not_done": 0,
+   "subset_n_run": 64,
+   "subset_skipped_over_cap": 2,
+   "stem_born_only": {
+    "M1": 1.1160127781607518,
+    "I_stem": 0.020426092686141005,
+    "I_int": 0.01830274086987094,
+    "M2": 1.8501860578085887,
+    "R_stem": 0.050487540628385695,
+    "R_all": 0.02728781811715981,
+    "n_families": 64
+   },
+   "ale_core_s": 1097.8,
+   "share_stem_donor_ge_0.5": 0.0,
+   "mean_pres_root_stem_born": 0.07468749999999999
+  },
+  "50": {
+   "x_stem": 20.0,
+   "lambda_equiv": 0.33049240578799743,
+   "n_present": 160,
+   "n_ge2": 160,
+   "n_run": 151,
+   "n_skipped_over_cap": 9,
+   "Tstem_per_family": 0.452,
+   "true_luca_new": 0,
+   "both_domains": 128,
+   "genes_run_total": 8844,
+   "build_s": 19.5,
+   "M1": 0.991765779814225,
+   "I_stem": 0.021078020134228187,
+   "I_int": 0.02125302219862483,
+   "M2": 1.9629902066177833,
+   "R_stem": 0.07645569620253165,
+   "R_all": 0.03894858769278539,
+   "n_families": 770,
+   "M1_ci": [
+    0.4984340530454911,
+    1.5932263783068714
+   ],
+   "M2_ci": [
+    1.162187495099804,
+    2.8113855726582715
+   ],
+   "stem_born_ok": 74,
+   "stem_born_failed": 0,
+   "stem_born_not_done": 0,
+   "subset_n_run": 74,
+   "subset_skipped_over_cap": 3,
+   "stem_born_only": {
+    "M1": 0.8875425804532106,
+    "I_stem": 0.018955873213175885,
+    "I_int": 0.021357705681564424,
+    "M2": 2.250552825552825,
+    "R_stem": 0.08288288288288287,
+    "R_all": 0.03682778824021762,
+    "n_families": 74
+   },
+   "ale_core_s": 2067.5,
+   "share_stem_donor_ge_0.5": 0.0,
+   "mean_pres_root_stem_born": 0.23608108108108106
+  },
+  "150": {
+   "x_stem": 60.0,
+   "lambda_equiv": 0.9914772173639923,
+   "n_present": 179,
+   "n_ge2": 178,
+   "n_run": 138,
+   "n_skipped_over_cap": 40,
+   "Tstem_per_family": 1.444,
+   "true_luca_new": 0,
+   "both_domains": 146,
+   "genes_run_total": 8393,
+   "build_s": 17.5,
+   "M1": 0.8285950135546197,
+   "I_stem": 0.01819322459222083,
+   "I_int": 0.021956715035217334,
+   "M2": 1.1145880524978682,
+   "R_stem": 0.04398007532499085,
+   "R_all": 0.03945859210174421,
+   "n_families": 762,
+   "M1_ci": [
+    0.4146502171799869,
+    1.4503150118271808
+   ],
+   "M2_ci": [
+    0.670935031051471,
+    1.6446434439339448
+   ],
+   "stem_born_ok": 66,
+   "stem_born_failed": 0,
+   "stem_born_not_done": 0,
+   "subset_n_run": 66,
+   "subset_skipped_over_cap": 22,
+   "stem_born_only": {
+    "M1": 0.5831008833988787,
+    "I_stem": 0.013552361396303905,
+    "I_int": 0.023241881091497534,
+    "M2": 0.8358681252358939,
+    "R_stem": 0.03169856459330145,
+    "R_all": 0.037922925442761275,
+    "n_families": 66
+   },
+   "ale_core_s": 3197.0,
+   "share_stem_donor_ge_0.5": 0.0,
+   "mean_pres_root_stem_born": 0.20196969696969694
+  },
+  "600": {
+   "x_stem": 240.0,
+   "lambda_equiv": 3.965908869455969,
+   "n_present": 219,
+   "n_ge2": 219,
+   "n_run": 127,
+   "n_skipped_over_cap": 92,
+   "Tstem_per_family": 6.572,
+   "true_luca_new": 0,
+   "both_domains": 199,
+   "genes_run_total": 8719,
+   "build_s": 165.2,
+   "M1": 0.6878807268218748,
+   "I_stem": 0.017672470218614993,
+   "I_int": 0.025691183848491863,
+   "M2": 1.8638570141750364,
+   "R_stem": 0.08557151780137408,
+   "R_all": 0.04591098842378152,
+   "n_families": 759,
+   "M1_ci": [
+    0.31297187764081713,
+    1.2462457709976338
+   ],
+   "M2_ci": [
+    1.151680759108237,
+    2.6983840900425333
+   ],
+   "stem_born_ok": 63,
+   "stem_born_failed": 0,
+   "stem_born_not_done": 0,
+   "subset_n_run": 63,
+   "subset_skipped_over_cap": 46,
+   "stem_born_only": {
+    "M1": 0.37933982439079506,
+    "I_stem": 0.012337519277373879,
+    "I_int": 0.03252365948444104,
+    "M2": 1.8859307077203322,
+    "R_stem": 0.10062630480167012,
+    "R_all": 0.05335631070099324,
+    "n_families": 63
+   },
+   "ale_core_s": 3417.1,
+   "share_stem_donor_ge_0.5": 0.0,
+   "mean_pres_root_stem_born": 0.16365079365079363
+  }
+ }
+}
