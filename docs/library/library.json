@@ -2400,7 +2400,7 @@
    "method_data": "",
    "key_results": "QT45, a 45-nt polymerase ribozyme from random pools, copies RNA from triplet substrates in mildly alkaline eutectic ice; made its complementary strand (94.1% per-nt fidelity, random triplets) and itself (defined triplets), each at ~0.2% yield in 72 days.",
    "limits": "Plan's second-hand '0.02% over 72 days' is wrong: the abstract gives ~0.2% yield. Online 2026-02-12. Full text: Both strands made in separate, primer-extension reactions (not a closed self-replication cycle); the self (+) copy needed one defined hexamer besides triplets; conditions pH 9, -7 C frozen, ribozyme in 10-fold excess; yields 0.24% (-) and 0.17% (+).",
-   "ideas_for_us": "Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L2/L3; content.json; news.json. T3 (not decidable, see T3_STATUS.md): one ligation step of QT51 runs at 0.06 per minute (-7 C frozen, pH 9, 50 mM Mg); QT45 half-life about 117 days (R18 about 16 days); our own analysis found decay about 210 times faster than synthesis for QT45. A one-step rate does not match the 0.2% full-length yield in 72 days. T3 (not decidable, see T3_STATUS.md): one ligation step of QT51 runs at 0.06 per minute (-7 C frozen, pH 9, 50 mM Mg); QT45 half-life about 117 days (R18 about 16 days); our own analysis found decay about 210 times faster than synthesis for QT45. A one-step rate does not match the 0.2% full-length yield in 72 days.",
+   "ideas_for_us": "Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L2/L3; content.json; news.json. T3 (not decidable, see T3_STATUS.md): one ligation step of QT51 runs at 0.06 per minute (-7 C frozen, pH 9, 50 mM Mg); QT45 half-life about 117 days (R18 about 16 days); our own analysis found decay about 210 times faster than synthesis for QT45. A one-step rate does not match the 0.2% full-length yield in 72 days. T3 (not decidable, see T3_STATUS.md): one ligation step of QT51 runs at 0.06 per minute (-7 C frozen, pH 9, 50 mM Mg); QT45 half-life about 117 days (R18 about 16 days); our own analysis found decay about 210 times faster than synthesis for QT45. A one-step rate does not match the 0.2% full-length yield in 72 days. T18 (2026-11-25, experiments/t18_qt45_error_threshold): the authors' replicator-mutator model (fig. S32B) sets every unmeasured double and every genotype with 3+ mutations to a growth rate of 0.01, and at 94.1% fidelity about 89% of offspring per round trip carry 3+ mutations, so that value decides the answer. Our replacement, a global-epistasis curve fitted to singles and doubles, recovered planted thresholds within 3% on noise-only landscapes but missed by about 27% (always low) once pair epistasis was planted, so it failed its kill test before any real-data threshold was computed.",
    "touches": [
     "#2",
     "#18",
@@ -6650,6 +6650,62 @@
    "in_news": false,
    "added": "2026-11-25",
    "verified": true
+  },
+  {
+   "kind": "Paper",
+   "topic": "RNA world",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "changes_plan": "",
+   "touches": [
+    "T18"
+   ],
+   "date": "2026-11-25",
+   "relevance": "core",
+   "id": "szilagyi-2014-local-neutral-networks",
+   "read_depth": "full",
+   "title": "Local Neutral Networks Help Maintain Inaccurately Replicating Ribozymes",
+   "authors": "Szilágyi A, Kun Á, Szathmáry E",
+   "year": 2014,
+   "venue": "PLoS ONE 9 (2014), e109987",
+   "doi": "10.1371/journal.pone.0109987",
+   "url": "https://doi.org/10.1371/journal.pone.0109987",
+   "source_opened": "PMC full text (PMC4192543)",
+   "question": "How much do neutral mutants raise the error threshold of real ribozymes above the single-peak value?",
+   "tried": "Compare genotypic and phenotypic error thresholds for two ribozymes, using computed secondary-structure landscapes.",
+   "method_data": "Neurospora VS and hairpin ribozymes; landscapes from computed secondary structures, solved numerically up to length 16; threshold predicted from the one-step degree of neutrality.",
+   "key_results": "Genotypic vs phenotypic thresholds of 0.033 vs 0.053 (VS) and 0.042 vs 0.144 (hairpin): neutral neighbours relax the threshold.",
+   "limits": "Landscapes are computed structures, not measured fitness, and the ribozymes are not polymerases copying themselves.",
+   "ideas_for_us": "T18 asks the same question of a polymerase's own measured landscape (QT45, singles and doubles). Our planted test showed that pair epistasis, small in any one double, adds up near the threshold and biases a global-curve model low by about 27%."
+  },
+  {
+   "kind": "Paper",
+   "topic": "RNA world",
+   "in_news": false,
+   "added": "2026-11-25",
+   "verified": true,
+   "changes_plan": "",
+   "touches": [
+    "T18"
+   ],
+   "date": "2026-11-25",
+   "relevance": "core",
+   "id": "kun-2005-relaxed-error-threshold",
+   "read_depth": "abstract",
+   "title": "Real ribozymes suggest a relaxed error threshold",
+   "authors": "Kun Á, Santos M, Szathmáry E",
+   "year": 2005,
+   "venue": "Nat Genet 37 (2005), 1008-1011",
+   "doi": "10.1038/ng1621",
+   "url": "https://doi.org/10.1038/ng1621",
+   "source_opened": "Abstract only (Europe PMC); full text paywalled",
+   "question": "Is the error threshold for real ribozymes as harsh as the single-peak Eigen model implies?",
+   "tried": "Comparative analysis of two extensively mutagenized ribozymes.",
+   "method_data": "Mutagenesis data on two ribozymes (named in Szilágyi 2014 as the Neurospora VS and hairpin ribozymes).",
+   "key_results": "With copying fidelity 0.999 per digit the phenotypic error threshold 'rises well above 7,000 nucleotides'.",
+   "limits": "Read from the abstract only. Not a polymerase ribozyme, and not a self-copying system.",
+   "ideas_for_us": "The relaxed-threshold idea that T18 tests on QT45's own landscape."
   }
  ]
 }

@@ -1,0 +1,50 @@
+{
+ "summary": {
+  "A": {
+   "n_rows": 20,
+   "n_censored_true": 0,
+   "n_scored": 20,
+   "n_fit_censored": 0,
+   "n_within_20pct": 20,
+   "median_abs_rel_err": 0.024835912080194256,
+   "mean_rel_err": -0.00345376622496521,
+   "e_true_range": [
+    0.1147625,
+    0.14465
+   ],
+   "criterion": "at least 16 of the first 20 scored replicates within 20%",
+   "first20_within": 20,
+   "passes": true
+  },
+  "B": {
+   "n_rows": 7,
+   "n_censored_true": 1,
+   "n_scored": 6,
+   "n_fit_censored": 0,
+   "n_within_20pct": 1,
+   "median_abs_rel_err": 0.27351883333918103,
+   "mean_rel_err": -0.2736367213745252,
+   "e_true_range": [
+    0.1539,
+    0.21382500000000002
+   ],
+   "iso30_n_within_20pct": 0,
+   "iso30_median_abs_rel_err": 0.31692977006257567,
+   "iso30_mean_rel_err": -0.31750639461852176,
+   "criterion": "at least 16 of the first 20 scored replicates within 20%",
+   "first20_within": 1,
+   "passes": false
+  },
+  "C": {
+   "n_rows": 0,
+   "n_censored_true": 0,
+   "n_scored": 0,
+   "n_fit_censored": 0,
+   "n_within_20pct": 0,
+   "median_abs_rel_err": null,
+   "mean_rel_err": null,
+   "e_true_range": null
+  }
+ },
+ "gate_passes": false
+}

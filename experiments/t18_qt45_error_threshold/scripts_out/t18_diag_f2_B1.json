@@ -1,0 +1,16 @@
+{
+ "rep": 1,
+ "e_true": 0.176425,
+ "e_fit": 0.1361375,
+ "rel_err": -0.22835482499645743,
+ "e_true_without_higher_order_field": 0.173875,
+ "settings": {
+  "N": 20000,
+  "k": 5,
+  "T0": 120,
+  "burn0": 60,
+  "T": 80,
+  "burn": 30,
+  "refine": false
+ }
+}

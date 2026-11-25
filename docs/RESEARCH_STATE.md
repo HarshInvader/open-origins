@@ -451,6 +451,14 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   - Whether to tell the authors is the owner's call.
 - **The study list.** Only N5 (marginal) is left. A new Fable list has been asked for, with the T14 follow-up (an element-balance null for the autocatalytic tiers) as a candidate.
 
+### 2026-11-25: T18 (QT45's error threshold from its own landscape): the method failed its planted kill test; not sealed, no real threshold computed
+- **Record.** `experiments/t18_qt45_error_threshold/README.md`, `PRIOR_ART.md`, prereg draft `docs/prereg/t18_qt45_error_threshold.md` (unsealed).
+- **Prior art.** The QT45 authors (Gianni 2026, fig. S32B) already modelled a quasispecies on this landscape: "<0.5%" active at 94.1% fidelity. They set every unmeasured double and every genotype with 3+ mutations to a growth rate of 0.01. At 94.1% about 89% of offspring per round trip carry 3+ mutations, so that value decides their answer. No threshold, no interval, no planted check. Relaxed-threshold theory (Kun 2005, Szilágyi 2014) has not been applied to a polymerase's own measured landscape.
+- **Fidelity confirmed.** 94.1% per nucleotide (main text, Fig. 4D); the 10.9% perfect-read share implies 94.9%.
+- **Gate passed.** The population estimator lands within 0.07% (single peak), 0.05% (mesa) and 0.7% (site-independent) of exact thresholds.
+- **Kill test failed.** A global-epistasis curve fitted to singles and doubles recovers a planted threshold within 20% on 20/20 noise-only landscapes (median error 2.5%), but on 1/6 landscapes with planted pair and higher-order epistasis (median −27%, always low). The cause is pair epistasis: terms too small to see in one double add up over the 4–6 mutations genotypes carry near the threshold.
+- **Status.** Under fallback F2 the real-data verdict would be "not decidable by this method". The next step is a T18b design that keeps the measured pair terms, with its own planted test (including mostly-negative epistasis). Nothing changed in T18's rules.
+
 ### 2026-11-25: new study list U1–U9 (docs/NEW_STUDIES_2026-11-25.md)
 Ranked by how much the result could change a route, times how feasible it is. Each entry gives the quoted claim, a checked data link, the kill and support rules, the null, the power risk and a prior-art scan.
 1. **U1.** Do T14's nested tiers survive an atom-conserving null? (Peng 2022) This is next. The mixing gate comes first.

@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-25. 229 papers: 159 read in full, 70 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-25. 231 papers: 160 read in full, 71 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -10,7 +10,7 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 - [Building blocks](#building-blocks) (28)
 - [From space](#from-space) (13)
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (45)
-- [RNA world](#rna-world) (68)
+- [RNA world](#rna-world) (70)
 - [Telling life apart](#telling-life-apart) (23)
 - [Vents and first cells](#vents-and-first-cells) (52)
 
@@ -1043,6 +1043,17 @@ Bendixsen DP, Collet J, Østman B, Hayden EJ (2019). *PLoS Biol. 17:e3000300*. [
 - **Limits.** The dual-function count depends on a detection cutoff; neighbour spill-over or a read floor could inflate it.
 - **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md), study U3: is 'over half dual-function' a read floor? Compare the activity calls against a background or spill-over model.
 
+### Local Neutral Networks Help Maintain Inaccurately Replicating Ribozymes
+
+Szilágyi A, Kun Á, Szathmáry E (2014). *PLoS ONE 9 (2014), e109987*. [doi:10.1371/journal.pone.0109987](https://doi.org/10.1371/journal.pone.0109987). `szilagyi-2014-local-neutral-networks` · core · full text · touches T18
+
+- **Question.** How much do neutral mutants raise the error threshold of real ribozymes above the single-peak value?
+- **Tried.** Compare genotypic and phenotypic error thresholds for two ribozymes, using computed secondary-structure landscapes.
+- **Method and data.** Neurospora VS and hairpin ribozymes; landscapes from computed secondary structures, solved numerically up to length 16; threshold predicted from the one-step degree of neutrality.
+- **Key results.** Genotypic vs phenotypic thresholds of 0.033 vs 0.053 (VS) and 0.042 vs 0.144 (hairpin): neutral neighbours relax the threshold.
+- **Limits.** Landscapes are computed structures, not measured fitness, and the ribozymes are not polymerases copying themselves.
+- **Ideas for us.** T18 asks the same question of a polymerase's own measured landscape (QT45, singles and doubles). Our planted test showed that pair epistasis, small in any one double, adds up near the threshold and biases a global-curve model low by about 27%.
+
 ### Primordial ocean chemistry and its compatibility with the RNA world
 
 Kua J, Bada JL (2011). *Origins of Life and Evolution of Biospheres 41:553-558*. [doi:10.1007/s11084-011-9250-5](https://doi.org/10.1007/s11084-011-9250-5). `kua-bada-2011-ocean-chemistry-rna-world` · core · full text
@@ -1053,6 +1064,17 @@ Kua J, Bada JL (2011). *Origins of Life and Evolution of Biospheres 41:553-558*.
 - **Key results.** Half-lives at 25 C of 2, 29, 51, 32 and 2 years at pH 3.5, 5.4, 6.7, 8 and 10. 'Even the lower temperature alkaline hydrothermal vents would show half-lives of less than a day at 75 C.'
 - **Limits.** No magnesium term (one sentence only notes that Li and Breaker measured faster cleavage with magnesium), no salt term and no field-water database. The article page was readable without a login; the library lists it as closed access.
 - **Ideas for us.** T3 (not decidable, see T3_STATUS.md): the nearest earlier study. It settles the temperature and pH part, so the open part for T3 was only the field chemistry (pH, magnesium, salt in measured waters).
+
+### Real ribozymes suggest a relaxed error threshold
+
+Kun Á, Santos M, Szathmáry E (2005). *Nat Genet 37 (2005), 1008-1011*. [doi:10.1038/ng1621](https://doi.org/10.1038/ng1621). `kun-2005-relaxed-error-threshold` · core · abstract only · touches T18
+
+- **Question.** Is the error threshold for real ribozymes as harsh as the single-peak Eigen model implies?
+- **Tried.** Comparative analysis of two extensively mutagenized ribozymes.
+- **Method and data.** Mutagenesis data on two ribozymes (named in Szilágyi 2014 as the Neurospora VS and hairpin ribozymes).
+- **Key results.** With copying fidelity 0.999 per digit the phenotypic error threshold 'rises well above 7,000 nucleotides'.
+- **Limits.** Read from the abstract only. Not a polymerase ribozyme, and not a self-copying system.
+- **Ideas for us.** The relaxed-threshold idea that T18 tests on QT45's own landscape.
 
 ### Nonenzymatic, Prebiotic Aminoacylation Couples Chirality of RNA and Protein
 
@@ -1092,7 +1114,7 @@ Gianni, Kwok, Wan, Goeij, Clifton, Colizzi, Attwater, Holliger (2026). *Science 
 - **Tried.** RNA world
 - **Key results.** QT45, a 45-nt polymerase ribozyme from random pools, copies RNA from triplet substrates in mildly alkaline eutectic ice; made its complementary strand (94.1% per-nt fidelity, random triplets) and itself (defined triplets), each at ~0.2% yield in 72 days.
 - **Limits.** Plan's second-hand '0.02% over 72 days' is wrong: the abstract gives ~0.2% yield. Online 2026-02-12. Full text: Both strands made in separate, primer-extension reactions (not a closed self-replication cycle); the self (+) copy needed one defined hexamer besides triplets; conditions pH 9, -7 C frozen, ribozyme in 10-fold excess; yields 0.24% (-) and 0.17% (+).
-- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L2/L3; content.json; news.json. T3 (not decidable, see T3_STATUS.md): one ligation step of QT51 runs at 0.06 per minute (-7 C frozen, pH 9, 50 mM Mg); QT45 half-life about 117 days (R18 about 16 days); our own analysis found decay about 210 times faster than synthesis for QT45. A one-step rate does not match the 0.2% full-length yield in 72 days. T3 (not decidable, see T3_STATUS.md): one ligation step of QT51 runs at 0.06 per minute (-7 C frozen, pH 9, 50 mM Mg); QT45 half-life about 117 days (R18 about 16 days); our own analysis found decay about 210 times faster than synthesis for QT45. A one-step rate does not match the 0.2% full-length yield in 72 days.
+- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L2/L3; content.json; news.json. T3 (not decidable, see T3_STATUS.md): one ligation step of QT51 runs at 0.06 per minute (-7 C frozen, pH 9, 50 mM Mg); QT45 half-life about 117 days (R18 about 16 days); our own analysis found decay about 210 times faster than synthesis for QT45. A one-step rate does not match the 0.2% full-length yield in 72 days. T3 (not decidable, see T3_STATUS.md): one ligation step of QT51 runs at 0.06 per minute (-7 C frozen, pH 9, 50 mM Mg); QT45 half-life about 117 days (R18 about 16 days); our own analysis found decay about 210 times faster than synthesis for QT45. A one-step rate does not match the 0.2% full-length yield in 72 days. T18 (2026-11-25, experiments/t18_qt45_error_threshold): the authors' replicator-mutator model (fig. S32B) sets every unmeasured double and every genotype with 3+ mutations to a growth rate of 0.01, and at 94.1% fidelity about 89% of offspring per round trip carry 3+ mutations, so that value decides the answer. Our replacement, a global-epistasis curve fitted to singles and doubles, recovered planted thresholds within 3% on noise-only landscapes but missed by about 27% (always low) once pair epistasis was planted, so it failed its kill test before any real-data threshold was computed.
 
 ### Unexpected properties of nucleotide condensates could facilitate the RNA world
 
