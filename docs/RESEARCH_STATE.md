@@ -397,3 +397,15 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Reported only.** Every sensitive ribozyme leans positive (0.07–0.16 under every variant; CPEB3 0.15). Non-contact distance bands show no proximity gradient.
 - **Reading.** Epistasis maps read base pairing almost perfectly and 3D contacts only faintly (matched AUC about 0.6). Our QT45 negative (#30) is what this method should give. It is not evidence against structure.
 - **Next.** N1 (T12, Janzen specificity floor) is in setup. Then N2–N5 and S7.
+
+### 2026-11-24: T12 result (N1, Janzen 2022: does ribozyme specificity rise with activity?): kill of the general claim
+- **Sealed in 65e1b15 and run.** Details: `experiments/t12_janzen_specificity/T12_RESULTS.md`. Before sealing I added one reported-only noise-sensitivity readout (it adds no random draws).
+- **Numbers.** Table 1 was reproduced first. Then the floor was removed (all_sum > 30, r − 1) and shared noise corrected by SIMEX. Per family:
+  - 2.1: R_S −0.41 (−0.52, −0.31), **support**.
+  - 1A.1: −0.25 (−0.53, +0.02), killed because the interval touches 0; underpowered.
+  - 1B.1: −0.05, kill.
+  - 2.2: +0.10, kill.
+  - Overall: kill, 3 of 4 families.
+- **Reported only.** The plan's rule and the uncorrected rule both give "mixed", but both give false support in no-link planted runs. If the real noise were half the deposited bootstrap noise, 1B.1 would reach −0.15. The kill leans partly on the noise assumption.
+- **Reading.** The paper's R of −0.54 to −0.84 is mostly the background floor. "Specificity for free under selection for activity" holds in one family, not as a rule.
+- **Next.** N2 (Rotrattanadumrong & Yokobayashi ligase epistasis) setup. K6 continues.

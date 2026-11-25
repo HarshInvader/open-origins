@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-24. 199 papers: 139 read in full, 60 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-24. 203 papers: 140 read in full, 63 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -10,7 +10,7 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 - [Building blocks](#building-blocks) (21)
 - [From space](#from-space) (12)
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (44)
-- [RNA world](#rna-world) (55)
+- [RNA world](#rna-world) (59)
 - [Telling life apart](#telling-life-apart) (20)
 - [Vents and first cells](#vents-and-first-cells) (47)
 
@@ -867,6 +867,17 @@ Roberts JM, Beck JD, Pollock TB, Bendixsen DP, Hayden EJ (2023). *eLife 12:e8036
 - **Limits.** Tertiary contacts are shown by heat maps and by region, with no score of contacts against non-contact pairs matched on separation and single-mutant effects. The paper says CPEB3 has no crystal structure; one exists (PDB 7QR3, 2022).
 - **Ideas for us.** T11 (sealed, 2026-11-24, experiments/t11_ribozyme_epistasis/T11_RESULTS.md): we scored contacts against matched non-contacts with a noise-scaled epistasis z. Base pairs: pooled Δ 0.44 (0.33-0.50), so the method works. Tertiary contacts: Δ 0.11 (-0.02 to 0.23), inconclusive. The faint, consistent signal (about AUC 0.6 in every ribozyme with harmful singles) is real-looking but not established. This gives our QT45 study (#30) its missing positive control.
 
+### Emergent properties as by-products of prebiotic evolution of aminoacylation ribozymes
+
+Janzen E, Shen Y, Vázquez-Salazar A, Liu Z, Blanco C, Kenchel J, Chen IA (2022). *Nat. Commun. 13:3631*. [doi:10.1038/s41467-022-31387-0](https://doi.org/10.1038/s41467-022-31387-0). `janzen-2022-aminoacylation-ribozyme-specificity` · core · full text
+
+- **Question.** When aminoacylation ribozymes are selected for activity, do other properties, such as substrate specificity, come along as by-products?
+- **Tried.** Measure rates of 1,954 sequences in each of five ribozyme families on six aminoacyl substrates by k-Seq, and correlate total activity with a promiscuity index.
+- **Method and data.** k-Seq kinetics relative to background, per-sequence bootstrap intervals; promiscuity index (normalized entropy of the six rates); data in the supplementary workbook (MOESM3).
+- **Key results.** 'ribozyme activity was positively correlated with specificity'; Table 1 gives Pearson R of -0.54 to -0.84 between activity and promiscuity over all 1,954 sequences per family (p < 1e-95).
+- **Limits.** Rates are relative to background, so inactive sequences read about 1 on every substrate and look perfectly even; total activity and the index share the same noisy cells. Neither is corrected for in Table 1.
+- **Ideas for us.** T12 (sealed, 2026-11-24, experiments/t12_janzen_specificity/T12_RESULTS.md): with the floor removed (all_sum > 30, r - 1) and shared noise corrected by SIMEX, the link holds clearly in family 2.1 only (R_S -0.41, -0.52 to -0.31). 1B.1 (-0.05) and 2.2 (+0.10) lose it; 1A.1 (-0.25) is too small to say. Sealed verdict: kill of the general claim. Gate reproduced Table 1 to 0.0005 first.
+
 ### In search of the RNA world on Mars
 
 Mojarro A, Jin L, Szostak JW, Head JW, Zuber MT (2021). *Geobiology 19:307-321*. [doi:10.1111/gbi.12433](https://doi.org/10.1111/gbi.12433). `mojarro-2021-rna-world-mars` · core · full text
@@ -1114,6 +1125,17 @@ Ameta S, Arsène S, Foulon S, Saudemont B, Clifton BE, Griffiths AD, Nghe P (202
 - **Key results.** Networks show growth, variation and heritable composition. Adding a species can switch composition. The authors report that high-yield networks are less perturbable, a trade-off between growth and variation (Fisher test on 162 pairs, odds ratio < 0.1, p = 1.6e-3).
 - **Limits.** Our T8 (sealed, 2026-11-24): the Fisher test reproduces exactly, but across 1,093 additions with at least 5 droplets per side the yield-perturbation correlation (-0.11) is no stronger than yield against each network's own split-half noise (-0.15); given noise it is -0.06 (-0.12 to 0.01). Low-yield droplets are noisier. In the paper's own subset (41 pairs with enough droplets) a strong effect remains, but that subset is small and selected.
 - **Ideas for us.** Done as T8 (experiments/t8_ameta_noise/T8_RESULTS.md). The lesson: a composition change measured from counts needs a same-sample noise null before it is read against a count-derived quantity like yield.
+
+### Kinetic sequencing (k-Seq) as a massively parallel assay for ribozyme kinetics: utility and critical parameters
+
+Shen Y, Pressman A, Janzen E, Chen IA (2021). *Nucleic Acids Res. 49:e67*. [doi:10.1093/nar/gkab199](https://doi.org/10.1093/nar/gkab199). `shen-2021-kseq-ribozyme-kinetics` · useful · abstract only
+
+- **Question.** How reliable are kinetic parameters measured for many ribozyme sequences at once by sequencing?
+- **Tried.** Characterise k-Seq and its sources of error, and add bootstrapping to quantify uncertainty per sequence.
+- **Method and data.** k-Seq on aminoacylation ribozyme pools.
+- **Key results.** 'Relative abundance, kinetic coefficients, and measurement noise were found to affect the measurement of each sequence. We introduced bootstrapping to robustly quantify the uncertainty in estimating model parameters'.
+- **Limits.** Abstract only. It does not discuss the promiscuity index.
+- **Ideas for us.** T12 (sealed, 2026-11-24, experiments/t12_janzen_specificity/T12_RESULTS.md): source of the per-sequence bootstrap noise that T12's SIMEX correction relies on. If that bootstrap understates the real noise, T12's correction is too weak, which would push toward support, not kill.
 
 ### Nucleic acid catalysis under potential prebiotic conditions
 
@@ -1396,6 +1418,17 @@ Andreasson JOL, Savinov A, Block SM, Greenleaf WJ (2020). *Nat. Commun. 11:1663*
 - **Limits.** Contacts are discussed case by case, with no systematic score. Read: the double-mutant rescue section only.
 - **Ideas for us.** T11 (sealed, 2026-11-24, experiments/t11_ribozyme_epistasis/T11_RESULTS.md): prior art and a warning. Contacts at catalytic positions may never be rescued because their identity matters for chemistry, one reason a tertiary signal in epistasis would be small, as T11 found (Δ 0.11).
 
+### Promiscuous Ribozymes and Their Proposed Role in Prebiotic Evolution
+
+Janzen E, Blanco C, Peng H, Kenchel J, Chen IA (2020). *Chem. Rev. 120:4879-4897*. [doi:10.1021/acs.chemrev.9b00620](https://doi.org/10.1021/acs.chemrev.9b00620). `janzen-2020-promiscuous-ribozymes-review` · background · abstract only
+
+- **Question.** Were early ribozymes more promiscuous than evolved ones, and did that matter for prebiotic evolution?
+- **Tried.** Review promiscuity in natural and in vitro selected ribozymes.
+- **Method and data.** Literature review.
+- **Key results.** 'We suggest that while de novo ribozymes appear to be promiscuous in general, they are not obviously more promiscuous than more highly evolved or active sequences.'
+- **Limits.** Abstract only; a review.
+- **Ideas for us.** T12 (sealed, 2026-11-24, experiments/t12_janzen_specificity/T12_RESULTS.md): the same group's earlier view, that activity and promiscuity are not obviously linked, fits T12 better than the 2022 headline does: after floor and noise correction, only one of four families shows the link.
+
 ### Hatchet ribozyme structure and implications for cleavage mechanism
 
 Zheng L, Falschlunger C, Huang K, Mairhofer E, Yuan S, Wang J, Patel DJ, Micura R, et al. (2019). *PNAS 116:10783-10791*. [doi:10.1073/pnas.1902413116](https://doi.org/10.1073/pnas.1902413116). `zheng-2019-hatchet-ribozyme-structure` · background · abstract only
@@ -1406,6 +1439,17 @@ Zheng L, Falschlunger C, Huang K, Mairhofer E, Yuan S, Wang J, Patel DJ, Micura 
 - **Key results.** 'Two hatchet ribozyme product molecules form a dimer through swapping of the 3' ends of the pairing strand', probably helped by the palindromic A67-U70.
 - **Limits.** The dimer swap means a monomer's contacts have to be stitched from two chains.
 - **Ideas for us.** T11 (sealed, 2026-11-24, experiments/t11_ribozyme_epistasis/T11_RESULTS.md): source of the hatchet contact map (monomer stitched from chains A and B, palindrome dropped). Hatchet's single mutants were near-neutral in the Roberts deposit, so it failed T11's base-pair check and did not count.
+
+### A Quantitative Index of Substrate Promiscuity
+
+Nath A, Atkins WM (2008). *Biochemistry 47:157-166*. [doi:10.1021/bi701448p](https://doi.org/10.1021/bi701448p). `nath-2008-promiscuity-index` · background · abstract only
+
+- **Question.** Can enzyme promiscuity be put on one quantitative scale?
+- **Tried.** Define a promiscuity index from catalytic efficiencies toward a set of substrates.
+- **Method and data.** Normalized entropy of catalytic efficiencies.
+- **Key results.** 'Here we define a quantitative index of promiscuity (I) that can be calculated from the catalytic efficiencies of an enzyme toward a defined set of substrates.'
+- **Limits.** Abstract only. Defined on catalytic efficiencies, which have no floor at 1; applied to rates relative to background it inherits a floor.
+- **Ideas for us.** T12 (sealed, 2026-11-24, experiments/t12_janzen_specificity/T12_RESULTS.md): the index Janzen 2022 uses. Its original form has no background floor, which is why T12 subtracts the background (r - 1) before computing it.
 
 ## Telling life apart
 
