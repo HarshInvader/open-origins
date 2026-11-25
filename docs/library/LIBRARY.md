@@ -1,18 +1,18 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-25. 213 papers: 150 read in full, 63 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-25. 226 papers: 158 read in full, 68 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
 Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, searchable, is `library.html` on the project site.
 
 ## Topics
-- [Building blocks](#building-blocks) (24)
+- [Building blocks](#building-blocks) (28)
 - [From space](#from-space) (12)
-- [LUCA and the tree of life](#luca-and-the-tree-of-life) (44)
-- [RNA world](#rna-world) (63)
-- [Telling life apart](#telling-life-apart) (20)
-- [Vents and first cells](#vents-and-first-cells) (50)
+- [LUCA and the tree of life](#luca-and-the-tree-of-life) (45)
+- [RNA world](#rna-world) (68)
+- [Telling life apart](#telling-life-apart) (21)
+- [Vents and first cells](#vents-and-first-cells) (52)
 
 ## Papers that bear on a current study's plan
 
@@ -165,6 +165,17 @@ Ritson, Sutherland (2023). *Nature Chemistry 15:1470-1477*. [doi:10.1038/s41557-
 - **Limits.** Details not checked. Full text: UV/HCN photochemistry; tetroses and pentoses form without running on to higher sugars; the terpenoid precursors are the C5 alcohols (dimethylallyl and isopentenyl alcohol), not the phosphorylated IPP/DMAPP.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
 
+### Environmental conditions drive self-organization of reaction pathways in a prebiotic reaction network
+
+Robinson WE, Daines E, van Duppen P, de Jong T, Huck WTS (2022). *Nat. Chem. 14:623-631*. [doi:10.1038/s41557-022-00956-7](https://doi.org/10.1038/s41557-022-00956-7). `robinson-2022-formose-self-organization` · useful · abstract only
+
+- **Question.** Does the formose reaction network reorganise in response to environmental conditions?
+- **Tried.** Run the formose reaction in flow under many conditions and analyse product compositions.
+- **Method and data.** Flow formose experiments; data at github.com/huckgroup/formose-2021 and publisher source-data CSVs.
+- **Key results.** 'complex systems of chemical reactions exhibit well-defined self-organization in response to varying environmental conditions'.
+- **Limits.** Abstract only; the main text was not read. Only four condition sets were repeated.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md), study U7: do differences between environments exceed the gap between repeat runs (the T15 method)? The main text must be read legally before sealing.
+
 ### A carbonate-rich lake solution to the phosphate problem of the origin of life
 
 Toner JD, Catling DC (2020). *PNAS 117:883-888*. [doi:10.1073/pnas.1916109117](https://doi.org/10.1073/pnas.1916109117). `toner-catling-2020-carbonate-lake-phosphate` · useful · full text
@@ -273,6 +284,39 @@ de Jong TJ, Demertzi AD, Robinson WE, Huck WTS (2025). *Angew. Chem. Int. Ed. 64
 - **Key results.** Reports that earlier environmental history, transferred through minerals, alters formose pathways; cites the 2023 work as showing outcomes are 'significantly shaped by modulating the concentration of the catalyst Ca(OH)2'.
 - **Limits.** Takes the 2023 result as given; not a reanalysis.
 - **Ideas for us.** T15 (sealed, 2026-11-25, experiments/t15_formose_flow_noise/T15_RESULTS.md): follow-up checked as prior art; does not re-test the 2023 claim.
+
+### A prebiotic basis for ATP as the universal energy currency
+
+Pinna S, Kunz C, Halpern A, Harrison SA, Jordan SF, Ward J, Werner F, Lane N (2022). *PLoS Biol. 20:e3001437*. [doi:10.1371/journal.pbio.3001437](https://doi.org/10.1371/journal.pbio.3001437). `pinna-2022-prebiotic-atp` · background · full text
+
+- **Question.** Why ATP? Can it form prebiotically, and does that single it out from other nucleotides and phosphorylating agents?
+- **Tried.** Test phosphorylation of ADP by acetyl phosphate with different metal ions and diphosphates.
+- **Method and data.** Bench chemistry, N = 3; S1 Data holds the numbers behind every figure.
+- **Key results.** ATP forms from ADP and acetyl phosphate with Fe3+, and not with the other ions or diphosphates tested.
+- **Limits.** Small N, but the effects are all-or-nothing.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md): looked at and not proposed. A reanalysis cannot overturn a yield of about 20% against zero.
+
+### A robotic prebiotic chemist probes long term reactions of complexifying mixtures
+
+Asche S, Cooper GJT, Keenan G, Mathis C, Cronin L (2021). *Nat. Commun. 12:3547*. [doi:10.1038/s41467-021-23828-z](https://doi.org/10.1038/s41467-021-23828-z). `asche-2021-robotic-prebiotic-chemist` · background · full text
+
+- **Question.** Do long-running cycled prebiotic mixtures show selection-like, non-random dynamics?
+- **Tried.** A robot cycles reaction mixtures for weeks and tracks composition by mass spectrometry.
+- **Method and data.** Automated chemistry with mass spectrometry.
+- **Key results.** Reports non-random, recurring compositional patterns; the authors note that repeat runs 'differ'.
+- **Limits.** The authors hedge their own claims ('more research is needed').
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md): looked at and not proposed; there is no sharp claim to test.
+
+### Chemical Ecosystem Selection on Mineral Surfaces Reveals Long-Term Dynamics Consistent with the Spontaneous Emergence of Mutual Catalysis
+
+Vincent L, Berg M, Krismer M, Saghafi ST, Cosby J, Sankari T, Vetsigian K, Cleaves HJ, Baum DA (2019). *Life 9:80*. [doi:10.3390/life9040080](https://doi.org/10.3390/life9040080). `vincent-2019-chemical-ecosystem-selection` · background · full text
+
+- **Question.** Can serial transfer of chemical mixtures on mineral surfaces select for mutual catalysis?
+- **Tried.** Chemical ecosystem selection: repeated transfers on mineral surfaces, tracking composition.
+- **Method and data.** Mass spectrometry over transfers.
+- **Key results.** Long-term dynamics are described as consistent with mutual catalysis; the authors call them 'hints'.
+- **Limits.** The claims are hedged by the authors.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md): looked at and not proposed; there is no sharp claim to test.
 
 ## From space
 
@@ -876,6 +920,17 @@ Menet H, Daubin V, Tannier E (2022). *PLoS Comput Biol (2022), e1010621*. [doi:1
 - **Limits.** No new data, and no measured accuracy for root gene content.
 - **Ideas for us.** Background reading on reconciliation; prior-art check for K3.
 
+### Small-molecule autocatalytic networks are universal metabolic fossils
+
+Xavier JC, Kauffman S (2022). *Philos. Trans. R. Soc. A 380:20210244*. [doi:10.1098/rsta.2021.0244](https://doi.org/10.1098/rsta.2021.0244). `xavier-2022-autocatalytic-metabolic-fossils` · background · abstract only
+
+- **Question.** Do prokaryotic metabolic networks all contain small-molecule autocatalytic sets?
+- **Tried.** Search for RAF sets across prokaryotic metabolic networks.
+- **Method and data.** Metabolic network reconstructions.
+- **Key results.** Reports RAFs in all 6,683 prokaryotic metabolic networks studied.
+- **Limits.** Only the abstract (from Crossref) was read; the publisher page returned 403, so no data deposit could be confirmed.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md): dropped, because the deposit could not be confirmed and it would repeat experiments/raf_null.
+
 ## RNA world
 
 ### Prebiotic gas flow environment enables isothermal nucleic acid replication
@@ -911,6 +966,17 @@ Janzen E, Shen Y, Vázquez-Salazar A, Liu Z, Blanco C, Kenchel J, Chen IA (2022)
 - **Limits.** Rates are relative to background, so inactive sequences read about 1 on every substrate and look perfectly even; total activity and the index share the same noisy cells. Neither is corrected for in Table 1.
 - **Ideas for us.** T12 (sealed, 2026-11-24, experiments/t12_janzen_specificity/T12_RESULTS.md): with the floor removed (all_sum > 30, r - 1) and shared noise corrected by SIMEX, the link holds clearly in family 2.1 only (R_S -0.41, -0.52 to -0.31). 1B.1 (-0.05) and 2.2 (+0.10) lose it; 1A.1 (-0.25) is too small to say. Sealed verdict: kill of the general claim. Gate reproduced Table 1 to 0.0005 first.
 
+### Evolutionary transition from a single RNA replicator to a multiple replicator network
+
+Mizuuchi R, Furubayashi T, Ichihashi N (2022). *Nat. Commun. 13:1460*. [doi:10.1038/s41467-022-29113-x](https://doi.org/10.1038/s41467-022-29113-x). `mizuuchi-2022-replicator-network` · core · full text
+
+- **Question.** Can a single RNA replicator evolve into a network of cooperating replicators?
+- **Tried.** Long-term replication of an RNA replicator, then measure each lineage's replication alone and in pairs.
+- **Method and data.** Fold replication with n = 3 or 4; source data xlsx (sheet 'Fig. 4').
+- **Key results.** 'The final population, comprising five RNA lineages, forms a replicator network with diverse interactions, including cooperation to help the replication of all other members.' Arrows were drawn where average fold replication exceeded 1.5.
+- **Limits.** Network arrows come from a fixed 1.5-fold threshold on means of 3 or 4 replicates, with no test of each arrow.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md), study U6: which arrows survive replicate noise?
+
 ### Experimental exploration of a ribozyme neutral network using evolutionary algorithm and deep learning
 
 Rotrattanadumrong R, Yokobayashi Y (2022). *Nat. Commun. 13:4847*. [doi:10.1038/s41467-022-32538-z](https://doi.org/10.1038/s41467-022-32538-z). `rotrattanadumrong-2022-ligase-neutral-network` · core · full text
@@ -921,6 +987,17 @@ Rotrattanadumrong R, Yokobayashi Y (2022). *Nat. Commun. 13:4847*. [doi:10.1038/
 - **Key results.** Neutral variants found at Hamming distances up to 19. 'In generation 8, almost all neutral mutants identified were expected to be deleterious under the epistasis-free model', read as the network having learned 'higher-order, nonlinear mutational effects'. Generation 8 neutral fraction 0.28.
 - **Limits.** The 'epistasis-free' baseline is multiplicative in activity, which drives far variants to zero; no global-nonlinearity baseline. The authors note that 'Further statistical tests could be performed to remove global nonlinearities'.
 - **Ideas for us.** T13 (sealed, 2026-11-24, experiments/t13_ligase_global_epistasis/T13_RESULTS.md): one additive score through one global curve, fitted on generations 1-6, recalls 80% of neutral variants nearby (held-out, generation 7) but 0.1% in generation 8. A rebuilt network beats it there by only 0.049 AP (support needed 0.10). Verdict 'partly': the additive failure is real, the case for learned higher-order effects is weak. Compare QT45 (#30).
+
+### Encapsulation of ribozymes inside model protocells leads to faster evolutionary adaptation
+
+Lai YC, Liu Z, Chen IA (2021). *Proc. Natl. Acad. Sci. USA 118:e2025054118*. [doi:10.1073/pnas.2025054118](https://doi.org/10.1073/pnas.2025054118). `lai-2021-encapsulation-ribozymes` · core · full text
+
+- **Question.** Does putting ribozymes inside protocells change their fitness landscape and speed up adaptation?
+- **Tried.** Measure the activity of many ribozyme variants with and without encapsulation in vesicles, and compare gains, epistasis and landscape correlation.
+- **Method and data.** Sequencing-based activity of ribozyme variants, inside and outside vesicles; data on Dryad (doi:10.5068/D1PX0K), served openly by Zenodo record 4706159.
+- **Key results.** 'highly active ribozymes benefit disproportionately more from encapsulation'; 'The predominance of |εInV| > |εOutV| indicates greater epistasis when encapsulated'; encapsulated landscapes are 'less-correlated, more-rugged'.
+- **Limits.** If the encapsulated measurement is noisier, larger apparent epistasis and lower correlation follow from noise alone; the paper does not separate the two.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md), study U2: test whether the encapsulation gain and the ruggedness exceed what a difference in measurement noise between the two conditions would produce.
 
 ### In search of the RNA world on Mars
 
@@ -943,6 +1020,17 @@ Wayment-Steele HK, Kim DS, Choe CA, et al. (2021). *Nucleic Acids Research 49:10
 - **Key results.** Gives the rate law that T3 coded: a base rate of 1.3e-9 per minute per link at pH 6 and 23 C, about tenfold faster per pH unit and about tenfold faster per 14 C. They multiply by length and by the unpaired fraction (0.4) to get a rate per molecule.
 - **Limits.** The equation prints 3.16 M in one place and 3.17 M in the sentence after, and the paper does not say why. Their own text says the fit used 5 to 10 mM magnesium and that with no magnesium the last two terms are dropped. Our code matched 5 of the 6 rates in their Table 1 within 1%; the sixth (in vitro transcription, 37 C, pH 7.6, 14 mM Mg) came out 2.2 times lower than printed and we could not find the cause.
 - **Ideas for us.** T3 (RNA persistence per origin setting; not decidable, see T3_STATUS.md). This is the second open copy of the Li and Breaker law, so T3 could use it without the paywalled original. It also gave T3 a published table to test the code against.
+
+### Genotype network intersections promote evolutionary innovation
+
+Bendixsen DP, Collet J, Østman B, Hayden EJ (2019). *PLoS Biol. 17:e3000300*. [doi:10.1371/journal.pbio.3000300](https://doi.org/10.1371/journal.pbio.3000300). `bendixsen-2019-genotype-network-intersections` · core · full text
+
+- **Question.** How many sequences between two ribozymes (HDV and a ligase) can perform both functions?
+- **Tried.** Synthesise all 16,384 genotypes between the two ribozymes and assay both activities by sequencing.
+- **Method and data.** Combinatorial library, sequencing-based activity for both functions; S1 Data xlsx.
+- **Key results.** 'over half the genotypes (9,032) can perform both functions'.
+- **Limits.** The dual-function count depends on a detection cutoff; neighbour spill-over or a read floor could inflate it.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md), study U3: is 'over half dual-function' a read floor? Compare the activity calls against a background or spill-over model.
 
 ### Primordial ocean chemistry and its compatibility with the RNA world
 
@@ -1128,7 +1216,7 @@ Papastavrou, Horning, Joyce (2024). *PNAS 121:e2321592121*. [doi:10.1073/pnas.23
 - **Tried.** RNA world
 - **Key results.** A higher-fidelity polymerase ribozyme propagates a hammerhead ribozyme through rounds of replication and selection; the high-fidelity lineage evolved fitter variants, the low-fidelity lineage lost function.
 - **Limits.** Plan verified citation only; details now checked. Full text: Fidelity 89.1% (71-89) vs 81.4% (52-2) for reciprocal synthesis of a modified hammerhead (27 nt copied, primers supply the rest); 8 rounds per lineage with reverse transcription, PCR and transcription by protein enzymes between rounds; the polymerase itself did not evolve.
-- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L4; content.json map.
+- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L4; content.json map. Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md), study U4: did the low-fidelity lineage lose the hammerhead because of fidelity, or because selection was weaker? There is one lineage per arm, and the arms also differ in Mg2+ (200 against 50 mM). The data are on Dryad (doi:10.5061/dryad.rxwdbrvgs), served openly by Zenodo record 10714366.
 
 ### Discovering pathways through ribozyme fitness landscapes using information theoretic quantification of epistasis
 
@@ -1230,7 +1318,7 @@ Pressman, Liu, Janzen, Blanco et al. (2019). *JACS 141:6213-6223*. [doi:10.1021/
 - **Tried.** RNA world
 - **Key results.** Systematic fitness landscape of self-aminoacylating ribozymes.
 - **Limits.** Plan's year and journal correct; DOI found here. Full text: Near-complete coverage of a central 21-nt region only; three ribozyme families separated by low-activity valleys, so the landscape is frustrated and global optimisation is blocked.
-- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s5 (memory).
+- **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s5 (memory). Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md), study U9 (gate first): is the 'frustrated' landscape real, or a result of which sequences the selection let us see? The data are on Dryad (doi:10.5061/dryad.nm1189t), served openly by Zenodo record 4970564.
 
 ### Template-Directed Catalysis of a Multistep Reaction Pathway for Nonenzymatic RNA Primer Extension
 
@@ -1484,6 +1572,17 @@ Matsubara YJ, Ameta S, Thutupalli S, Nghe P, Krishna S (2022). *arXiv:2211.03155
 - **Limits.** Read as abstract only. Theory; it does not reanalyse the 2021 droplet data.
 - **Ideas for us.** Prior art for T8: the closest related work, not a reanalysis.
 
+### Structured sequences emerge from random pool when replicated by templated ligation
+
+Kudella PW, Tkachenko AV, Salditt A, Maslov S, Braun D (2021). *Proc. Natl. Acad. Sci. USA 118:e2018830118*. [doi:10.1073/pnas.2018830118](https://doi.org/10.1073/pnas.2018830118). `kudella-2021-templated-ligation` · background · full text
+
+- **Question.** Does templated ligation of a random pool produce structured sequences?
+- **Tried.** Replicate random oligonucleotide pools by templated ligation and sequence the products.
+- **Method and data.** Sequencing of ligation products.
+- **Key results.** Structured sequences emerge from a random pool under templated ligation.
+- **Limits.** 'NGS data files are available upon request', so the data are not deposited.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md): a good target for a ligase-bias null, but dropped because the data are not deposited.
+
 ### Comprehensive sequence-to-function mapping of cofactor-dependent RNA catalysis in the glmS ribozyme
 
 Andreasson JOL, Savinov A, Block SM, Greenleaf WJ (2020). *Nat. Commun. 11:1663*. [doi:10.1038/s41467-020-15540-1](https://doi.org/10.1038/s41467-020-15540-1). `andreasson-2020-glms-double-mutant-rescue` · background · abstract only
@@ -1516,6 +1615,17 @@ Zheng L, Falschlunger C, Huang K, Mairhofer E, Yuan S, Wang J, Patel DJ, Micura 
 - **Key results.** 'Two hatchet ribozyme product molecules form a dimer through swapping of the 3' ends of the pairing strand', probably helped by the palindromic A67-U70.
 - **Limits.** The dimer swap means a monomer's contacts have to be stitched from two chains.
 - **Ideas for us.** T11 (sealed, 2026-11-24, experiments/t11_ribozyme_epistasis/T11_RESULTS.md): source of the hatchet contact map (monomer stitched from chains A and B, palindrome dropped). Hatchet's single mutants were near-neutral in the Roberts deposit, so it failed T11's base-pair check and did not count.
+
+### A hierarchical model for evolution of 23S ribosomal RNA
+
+Bokov K, Steinberg SV (2009). *Nature 457:977-980*. [doi:10.1038/nature07749](https://doi.org/10.1038/nature07749). `bokov-2009-23s-rrna-hierarchy` · background · abstract only
+
+- **Question.** Can the A-minor dependencies in 23S rRNA be ordered into a hierarchy that reflects its evolution?
+- **Tried.** Map A-minor interactions between rRNA elements and order them so that no element depends on a later one.
+- **Method and data.** Ribosome structure; the supplementary notes give a random-orientation null.
+- **Key results.** The supplementary notes give the probability of no cycles under random orientation as about 7.5 × 10^-10.
+- **Limits.** Abstract and supplementary PDF read, not the main text.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md): dropped. The authors already ran the random-orientation null we would have run.
 
 ### A Quantitative Index of Substrate Promiscuity
 
@@ -1667,6 +1777,17 @@ Walker, Mathis, Marshall, Cronin (2024). *J. R. Soc. Interface 21:20240367*. [do
 - **Limits.** Plan gave no venue; now identified. Full text: Authors concede the threshold 'might shift with more experimental data' and need not be the same for minerals; in the main text they say heteropolyanions can be isolated in solution but are very labile.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan s3 ('Walker et al. 2024').
 
+### A robust, agnostic molecular biosignature based on machine learning
+
+Cleaves HJ, Hystad G, Prabhu A, Wong ML, Cody GD, Economon S, Hazen RM (2023). *Proc. Natl. Acad. Sci. USA 120:e2307149120*. [doi:10.1073/pnas.2307149120](https://doi.org/10.1073/pnas.2307149120). `cleaves-2023-agnostic-biosignature` · useful · full text
+
+- **Question.** Can machine learning on pyrolysis GC-MS data tell biotic from abiotic samples without assuming any particular biomolecule?
+- **Tried.** Random forest on Pyr-GC-EI-MS features of 134 samples with nested cross-validation.
+- **Method and data.** 134 samples; data on OSF (doi:10.17605/OSF.IO/EMBH8).
+- **Key results.** 'the random forest model correctly predicted the biogenicity of samples with ~90% accuracy'; nested-CV error 10.4%, AUC 91.2%.
+- **Limits.** Related samples (same source or family) may sit on both sides of a split, which would inflate accuracy.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md), study U8 (peripheral): does the accuracy hold when whole sample families are held out?
+
 ### Assembly theory explains and quantifies selection and evolution
 
 Sharma, Czegel, Lachmann, Kempes, Walker, Cronin (2023). *Nature 622:321-328*. [doi:10.1038/s41586-023-06600-9](https://doi.org/10.1038/s41586-023-06600-9). `sharma-2023-assembly-theory` · useful · full text · touches #7, #22
@@ -1786,7 +1907,7 @@ Peng Z, Linderoth J, Baum DA (2022). *PLoS Comput. Biol. 18:e1010498*. [doi:10.1
 - **Method and data.** Network expansion plus a feasibility LP for self-maintenance; reaction tables and Python scripts in the supplement (CC BY).
 - **Key results.** Biochemical: 304 supported seeds in three cliques inducing nested SDASs of 301, 357 and 1,414 species. Abiotic: one SDAS of 91 species. 'the abiotic and biochemical networks share multiple properties, including hierarchically organized SDASs'.
 - **Limits.** No randomised or rewired comparison; the abiotic network has a single SDAS, so it shows no nesting.
-- **Ideas for us.** T14 (sealed, 2026-11-25, experiments/t14_autocatalytic_tiers/T14_RESULTS.md): against 200+200 degree-preserving rewires (tier 0 fixed), the biochemical network's 3 nested sets are never matched (rewired: 1 set, nested share 0). Sealed verdict support. But rewired networks have 3-4x more seeds and a set twice as big: real biochemistry is tiered because its autocatalysis is constrained. A null that keeps element balance is the next test.
+- **Ideas for us.** T14 (sealed, 2026-11-25, experiments/t14_autocatalytic_tiers/T14_RESULTS.md): against 200+200 degree-preserving rewires (tier 0 fixed), the biochemical network's 3 nested sets are never matched (rewired: 1 set, nested share 0). Sealed verdict support. But rewired networks have 3-4x more seeds and a set twice as big: real biochemistry is tiered because its autocatalysis is constrained. A null that keeps element balance is the next test. Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md), study U1 (T17, being set up): do the nested tiers survive a null that keeps every rewired reaction atom-balanced (97% of reactions balance with KEGG formulas)?
 
 ### Non-enzymatic template-directed RNA synthesis inside model protocells
 
@@ -1974,6 +2095,17 @@ Cohen, Todd, Maibaum, Catling et al. (2024). *Langmuir 40:8971-8980*. [doi:10.10
 - **Key results.** Stabilisation of prebiotic vesicles by peptides depends on sequence and chirality.
 - **Limits.** Details not checked. Full text: Read the 2023 preprint, not the published version. Chirality effect is destabilising: heterochiral Leu-Leu (L-D or D-L) shrinks decanoic-acid vesicles and makes them leakier, homochiral does not; 3 of 15 dipeptides (all with leucine) reduce salt-induced flocculation.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+
+### Primitive purine biosynthesis connects ancient geochemistry to modern metabolism
+
+Goldford JE, Smith HB, Longo LM, Wing BA, McGlynn SE (2024). *Nat. Ecol. Evol. 8:999-1009*. [doi:10.1038/s41559-024-02361-4](https://doi.org/10.1038/s41559-024-02361-4). `goldford-2024-primitive-purine-biosynthesis` · useful · abstract only
+
+- **Question.** Can network expansion from geochemical starting points reach modern metabolism, and what enzymes come first?
+- **Tried.** Network expansion of metabolism from simple geochemical seeds.
+- **Method and data.** Network expansion; code at github.com/jgoldford/metabolic-continuity.
+- **Key results.** 'Early phases of the expansion are enriched with enzymes that are metal dependent and structurally symmetric, supporting models of early biochemical evolution.'
+- **Limits.** Abstract only; the main text was not read. Enrichment may reflect which pathways come early rather than reaction-level choices.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md), study U5: a within-pathway permutation at reaction level. The main text must be read legally before sealing.
 
 ### Iron sulfide-catalyzed gaseous CO2 reduction and prebiotic carbon fixation in terrestrial hot springs
 
@@ -2239,6 +2371,17 @@ Martin WF, Hoffmann NK, Schlikker ML (2026). *Trends in Microbiology*. [doi:10.1
 - **Key results.** Native metals in the lab fix CO2, replace hydrogenases, the acetyl-CoA pathway to pyruvate, Krebs cycle steps, amino acid syntheses, NADH and ferredoxin; Pd0 with phosphite phosphorylates organics. Free energy of hydrolysis cited as -43 kJ/mol for acetyl phosphate vs -31 kJ/mol for ADP to AMP. Redox potentials cited: H2 -414 mV (about -800 mV at pH 10), Fe0 -470 mV, Ni0 -260 mV, phosphite -690 mV.
 - **Limits.** Review by the main proponents; the authors argue these reactions need no gradient, which sidesteps but does not answer Tutolo's critique of vent gradients.
 - **Ideas for us.** For #28 (strata vs metal catalysis, negative): the review's list of metal-replaceable reactions could be cross-checked against our metal-catalysis labels. For #4/#5: native-metal steps are candidates for vent steps that survive the Tutolo variant.
+
+### The history of enzyme evolution embedded in metabolism
+
+Corlett T, Smith HB, Smith E, Goldford JE, Longo LM (2026). *Proc. Natl. Acad. Sci. USA 123:e2609531123*. [doi:10.1073/pnas.2609531123](https://doi.org/10.1073/pnas.2609531123). `corlett-2026-enzyme-evolution-metabolism` · background · abstract only
+
+- **Question.** Does the order in which enzyme folds appear in network expansion match their phyletic distribution?
+- **Tried.** Build fold-emergence orderings on the same network expansion as Goldford 2024.
+- **Method and data.** Network expansion and enzyme fold annotations.
+- **Key results.** Orderings are 'broadly concordant with enzyme phyletic distribution'.
+- **Limits.** Abstract only. It does not run a within-pathway permutation.
+- **Ideas for us.** Scouted 2026-11-25 (docs/NEW_STUDIES_2026-11-25.md): prior art for U5. It is the same group's follow-up and does not run the test U5 proposes.
 
 ### Experimental and Numerical Modeling of Liposome Congregation in Meteorite Craters of Early Earth
 
