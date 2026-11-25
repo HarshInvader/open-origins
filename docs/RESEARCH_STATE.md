@@ -409,3 +409,10 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Reported only.** The plan's rule and the uncorrected rule both give "mixed", but both give false support in no-link planted runs. If the real noise were half the deposited bootstrap noise, 1B.1 would reach −0.15. The kill leans partly on the noise assumption.
 - **Reading.** The paper's R of −0.54 to −0.84 is mostly the background floor. "Specificity for free under selection for activity" holds in one family, not as a rule.
 - **Next.** N2 (Rotrattanadumrong & Yokobayashi ligase epistasis) setup. K6 continues.
+
+### 2026-11-24: T13 result (N2, does the ligase neutral network need higher-order epistasis?): partly
+- **Sealed in 0321f9b and run.** Details: `experiments/t13_ligase_global_epistasis/T13_RESULTS.md`. The gate reproduced the authors' split (20,920 / 8,967) and the generation 8 neutral fraction (0.279).
+- **Numbers, generation 8.** One global curve fitted on generations 1–6 recalls 0.1% of the neutral variants, so the kill fails on recall. AP: curve 0.467, network 0.516, null 0.378. The lift is 0.049, below the 0.10 needed for support.
+- **Reported only.** Nearby (held-out generations 1–6 and generation 7), the curve recalls 80% of neutral variants, near the replicate ceiling, and the network adds under 0.10 AP. Pair terms do worse than the curve everywhere.
+- **Reading.** The paper's "an additive model would have called them dead" holds, even with a global curve. "So the network learned higher-order effects" is only weakly supported. Far-away neutral variants are not predictable by any model tested here. With QT45 (#30): "one curve suffices" is a local statement.
+- **Next.** N3 (Peng/Linderoth/Baum autocatalytic tiers) setup. K6 continues.

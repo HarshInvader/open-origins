@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-24. 203 papers: 140 read in full, 63 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-24. 207 papers: 144 read in full, 63 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -10,7 +10,7 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 - [Building blocks](#building-blocks) (21)
 - [From space](#from-space) (12)
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (44)
-- [RNA world](#rna-world) (59)
+- [RNA world](#rna-world) (63)
 - [Telling life apart](#telling-life-apart) (20)
 - [Vents and first cells](#vents-and-first-cells) (47)
 
@@ -878,6 +878,17 @@ Janzen E, Shen Y, Vázquez-Salazar A, Liu Z, Blanco C, Kenchel J, Chen IA (2022)
 - **Limits.** Rates are relative to background, so inactive sequences read about 1 on every substrate and look perfectly even; total activity and the index share the same noisy cells. Neither is corrected for in Table 1.
 - **Ideas for us.** T12 (sealed, 2026-11-24, experiments/t12_janzen_specificity/T12_RESULTS.md): with the floor removed (all_sum > 30, r - 1) and shared noise corrected by SIMEX, the link holds clearly in family 2.1 only (R_S -0.41, -0.52 to -0.31). 1B.1 (-0.05) and 2.2 (+0.10) lose it; 1A.1 (-0.25) is too small to say. Sealed verdict: kill of the general claim. Gate reproduced Table 1 to 0.0005 first.
 
+### Experimental exploration of a ribozyme neutral network using evolutionary algorithm and deep learning
+
+Rotrattanadumrong R, Yokobayashi Y (2022). *Nat. Commun. 13:4847*. [doi:10.1038/s41467-022-32538-z](https://doi.org/10.1038/s41467-022-32538-z). `rotrattanadumrong-2022-ligase-neutral-network` · core · full text
+
+- **Question.** How far does the neutral network of a ligase ribozyme reach, and can a neural network find distant neutral variants?
+- **Tried.** Explore a ligase ribozyme's sequence space for eight generations with a genetic algorithm and an MLP trained on measured activities, plus a complete 2^16 library between two genotypes.
+- **Method and data.** High-throughput ligation assay, two replicates; MLP trained on 20,920 variants from generations 1-6; Walsh-Hadamard analysis of the 2^16 library. Data on Zenodo (doi:10.5281/zenodo.6945203, Apache-2.0).
+- **Key results.** Neutral variants found at Hamming distances up to 19. 'In generation 8, almost all neutral mutants identified were expected to be deleterious under the epistasis-free model', read as the network having learned 'higher-order, nonlinear mutational effects'. Generation 8 neutral fraction 0.28.
+- **Limits.** The 'epistasis-free' baseline is multiplicative in activity, which drives far variants to zero; no global-nonlinearity baseline. The authors note that 'Further statistical tests could be performed to remove global nonlinearities'.
+- **Ideas for us.** T13 (sealed, 2026-11-24, experiments/t13_ligase_global_epistasis/T13_RESULTS.md): one additive score through one global curve, fitted on generations 1-6, recalls 80% of neutral variants nearby (held-out, generation 7) but 0.1% in generation 8. A rebuilt network beats it there by only 0.049 AP (support needed 0.10). Verdict 'partly': the additive failure is real, the case for learned higher-order effects is weak. Compare QT45 (#30).
+
 ### In search of the RNA world on Mars
 
 Mojarro A, Jin L, Szostak JW, Head JW, Zuber MT (2021). *Geobiology 19:307-321*. [doi:10.1111/gbi.12433](https://doi.org/10.1111/gbi.12433). `mojarro-2021-rna-world-mars` · core · full text
@@ -1085,6 +1096,17 @@ Papastavrou, Horning, Joyce (2024). *PNAS 121:e2321592121*. [doi:10.1073/pnas.23
 - **Key results.** A higher-fidelity polymerase ribozyme propagates a hammerhead ribozyme through rounds of replication and selection; the high-fidelity lineage evolved fitter variants, the low-fidelity lineage lost function.
 - **Limits.** Plan verified citation only; details now checked. Full text: Fidelity 89.1% (71-89) vs 81.4% (52-2) for reciprocal synthesis of a modified hammerhead (27 nt copied, primers supply the rest); 8 rounds per lineage with reverse transcription, PCR and transcription by protein enzymes between rounds; the polymerase itself did not evolve.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv); cited in fable_plan L4; content.json map.
+
+### Discovering pathways through ribozyme fitness landscapes using information theoretic quantification of epistasis
+
+Charest N, Shen Y, Lai YC, Chen IA, Shea JE (2023). *RNA 29:1644-1657*. [doi:10.1261/rna.079541.122](https://doi.org/10.1261/rna.079541.122). `charest-2023-ribozyme-landscape-information-epistasis` · useful · full text
+
+- **Question.** Can an information-theoretic measure of epistasis find evolutionary pathways through ribozyme fitness landscapes?
+- **Tried.** Quantify epistasis in ribozyme landscape data with an information-theoretic method and use it to trace pathways.
+- **Method and data.** Re-analysis of published ribozyme fitness landscapes.
+- **Key results.** Argues that simple nonlinear (global-curve) models work 'for relatively simple systems in which there is a largely additive landscape subject to random variation, but not for more complex landscapes', and calls the Rotrattanadumrong MLP a 'black box'.
+- **Limits.** Sets global-curve models aside as a class without fitting one to the ligase data.
+- **Ideas for us.** T13 (sealed, 2026-11-24, experiments/t13_ligase_global_epistasis/T13_RESULTS.md): prior art. T13 fitted the global curve it set aside: on the ligase it works near the training data and fails far from it, so its claim about global curves holds for distant variants and not for nearby ones.
 
 ### Goldilocks and RNA: where Mg2+ concentration is just right
 
@@ -1385,6 +1407,17 @@ Vázquez-Salazar A (2026). *Trends in Biochemical Sciences*. [doi:10.1016/j.tibs
 - **Limits.** (abstract only) Review.
 - **Ideas for us.** Its 'testable benchmarks' map onto our step-table hand-offs.
 
+### Inference and Visualization of Complex Genotype-Phenotype Maps
+
+Martí-Gómez C, Zhou J, Chen WC, Stoltzfus A, Kinney JB, McCandlish DM (2026). *Mol. Biol. Evol. 43:msag023*. [doi:10.1093/molbev/msag023](https://doi.org/10.1093/molbev/msag023). `marti-gomez-2026-gpmap-tools` · background · full text
+
+- **Question.** How can complex genotype-phenotype maps be inferred from data and visualised?
+- **Tried.** Present gpmap-tools, with minimum epistasis interpolation (MEI) and variance-component (VC) regression, and visualisation of landscapes.
+- **Method and data.** Worked examples on short sequence elements such as the Shine-Dalgarno sequence.
+- **Key results.** Tools for inference and visualisation of complete or near-complete genotype-phenotype maps.
+- **Limits.** Its own limitation: MEI and VC regression 'do not explicitly model global or nonspecific epistasis'. It cites the ligase dataset only in an introductory list.
+- **Ideas for us.** T13 (sealed, 2026-11-24, experiments/t13_ligase_global_epistasis/T13_RESULTS.md): checked as prior art; it does not fit a global curve to the ligase data, so it does not settle T13.
+
 ### Origin of the RNA World in Cold Hadean Geothermal Fields Enriched in Zinc and Potassium: Abiogenesis as a Positive Fallout from the Moon-Forming Impact?
 
 Mulkidjanian AY, Dibrova DV, Bychkov AY (2025). *Life 15:399*. [doi:10.3390/life15030399](https://doi.org/10.3390/life15030399). `mulkidjanian-2025-zinc-potassium-geothermal` · background · full text
@@ -1395,6 +1428,17 @@ Mulkidjanian AY, Dibrova DV, Bychkov AY (2025). *Life 15:399*. [doi:10.3390/life
 - **Key results.** The authors calculate that the top layer of the protocrust could have held up to 10^19 kg of metallic zinc. They propose that pools of geothermal vapour condensate selected low-volatile, mineral-affine, radiation-resistant, nitrogen-rich, polymerisable molecules.
 - **Limits.** A hypothesis paper. It does not model an evaporation path against a vesicle window.
 - **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): opened during the prior-art search and found not relevant; not cited for any claim.
+
+### An extension of the Walsh-Hadamard transform to calculate and model epistasis in genetic landscapes of arbitrary shape and complexity
+
+Faure AJ, Lehner B, Miró Pina V, Serrano Colome C, Weghorn D (2024). *PLoS Comput. Biol. 20:e1012132*. [doi:10.1371/journal.pcbi.1012132](https://doi.org/10.1371/journal.pcbi.1012132). `faure-2024-walsh-hadamard-extension` · background · full text
+
+- **Question.** How can epistasis be calculated for landscapes with more than two states per site?
+- **Tried.** Extend the Walsh-Hadamard transform to landscapes of arbitrary shape and apply it to deep mutational scans.
+- **Method and data.** Empirical work on tRNA and protein domain landscapes.
+- **Key results.** A general background-averaged epistasis framework for multi-allelic landscapes.
+- **Limits.** Cites the ligase study only in an introductory list; not applied to it.
+- **Ideas for us.** T13 (sealed, 2026-11-24, experiments/t13_ligase_global_epistasis/T13_RESULTS.md): checked as prior art; it does not test the ligase generation 8 claim.
 
 ### Conditions for Darwinian evolution in compartmentalized autocatalytic reaction networks
 
