@@ -34,3 +34,27 @@ Costs: gate about 15 CPU s; one planted replicate 30 to 80 CPU s; `real` (after 
 
 Kill test failed; F2 re-run not run (failure is systematic bias per the attached diagnostic, `scripts_out/t18_diag_f2_B1.json`; a precision re-run cannot fix it); no real-data threshold computed. In family B the estimate was always low (median −27%, 1/6 within 20%), and a 4× larger population still missed by −23%. More replicates sharpen a biased estimate without removing the bias. The follow-up is T18b, which keeps the measured pair terms. If T18b also fails its planted test, the QT45 threshold line closes.
 
+
+## T18b: pair epistasis kept (prereg `docs/prereg/t18b_qt45_pair_epistasis.md`)
+
+Status: **prereg written, gate run (passed), planted kill test running as a pilot. Not sealed. No real-data threshold, R, growth rate, EB variance τ² or triple fitness has been computed.** This is the last attempt: if T18b fails its planted test, it is reported as failed and there is no T18c.
+
+- **Model.** WT, singles and measured doubles use their measured values. Genotypes with 3 or more mutations are F = g(z₀ + Σ a + Σ Ê_pair), with T18's global curve plus the measured pair terms on the latent scale. The pair terms are shrunk by empirical Bayes: one prior variance τ² by marginal likelihood, and per-double noise from a replicate noise model fitted to the three output replicates' read counts. The 168 unmeasured pairs are set to 0. The threshold uses posterior draws (mean of e\* over 2 planted or 4 real draws), not the posterior mean, because shrinkage removes exactly the variance that raises e\*.
+- **Triple check.** The deposit's reads contain about 105,000 triples with input ≥ 10. The mean triple replication rate predicted by the model is compared with the observed rate, and a gap of more than a factor of 2 flags the model. The triple output counts stay unread until `real`.
+- **Planted families.** A (noise only), B (T18's pair plus higher-order), C (mostly negative pairs), D (mostly positive), E (higher-order only), F (HD ≥ 3 cliff near the authors' 0.01), and S (noise 1.5× the model; stress, reported only). The pass bar is at least 16 of 20 successes in each of A to F. There is no one-sided rule.
+- **Scripts.**
+  - `scripts/t18b_counts.py` streams per-replicate counts from Zenodo with HTTP range requests into gitignored `raw/t18b_counts/` (about 21 MB).
+  - `scripts/t18b_zipdir.py` lists a remote zip's members from its tail.
+  - `scripts/t18b_core.py` holds the noise model, EB pair fit, pair landscape and planted truth.
+  - `scripts/t18b_analysis.py` has the modes `gate`, `planted <fam> <start> <n>`, `planted_merge`, and `real` (which refuses).
+  - All import the unchanged `t18_core.py`.
+- **Outputs.** `scripts_out/t18b_gate.json`, `scripts_out/t18b_planted_rep_<fam>_<rep>.json` (one per replicate), and `scripts_out/t18b_planted.json` (merged by `planted_merge`).
+- **Runtime-only change (2026-11-25, after a server restart killed the first pilot before any replicate finished).** `planted` now writes each replicate to its own JSON as soon as it finishes (atomic rename) and skips replicates whose JSON exists. `planted_merge` reads the per-replicate files. No computation, seed or rule changed: replicates are seeded by family and index.
+- **Cost.** About 10 to 15 CPU min per planted replicate (4 thresholds: truth, 2 posterior draws, posterior mode). The full test (120 replicates) is about 20 to 30 core hours, so a pilot is run (prereg F4): B and E with 5 replicates each, and A, C, D and F with 2 each.
+
+Run (from `experiments/`, as tmux windows on the `ocruns` server):
+
+```
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 taskpolicy -b nice -n 20 t1_vent_exergonic/.venv/bin/python -I t18_qt45_error_threshold/scripts/t18b_analysis.py planted B 0 5 >> t18_qt45_error_threshold/work/t18b_pl_B.log 2>&1
+t1_vent_exergonic/.venv/bin/python -I t18_qt45_error_threshold/scripts/t18b_analysis.py planted_merge
+```
