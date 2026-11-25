@@ -29,3 +29,8 @@ taskpolicy -b nice -n 20 t1_vent_exergonic/.venv/bin/python -I t18_qt45_error_th
 ```
 
 Costs: gate about 15 CPU s; one planted replicate 30 to 80 CPU s; `real` (after the seal) is estimated at 2 to 4 core hours (primary at N = 20,000, 30 bootstrap refits, 9 variants), one process, under 100 MB of memory and under 1 MB of output.
+
+## Ruling on fallback F2 (2026-11-25)
+
+Kill test failed; F2 re-run not run (failure is systematic bias per the attached diagnostic, `scripts_out/t18_diag_f2_B1.json`; a precision re-run cannot fix it); no real-data threshold computed. In family B the estimate was always low (median −27%, 1/6 within 20%), and a 4× larger population still missed by −23%. More replicates sharpen a biased estimate without removing the bias. The follow-up is T18b, which keeps the measured pair terms. If T18b also fails its planted test, the QT45 threshold line closes.
+

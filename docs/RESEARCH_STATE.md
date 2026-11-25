@@ -457,6 +457,7 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Fidelity confirmed.** 94.1% per nucleotide (main text, Fig. 4D); the 10.9% perfect-read share implies 94.9%.
 - **Gate passed.** The population estimator lands within 0.07% (single peak), 0.05% (mesa) and 0.7% (site-independent) of exact thresholds.
 - **Kill test failed.** A global-epistasis curve fitted to singles and doubles recovers a planted threshold within 20% on 20/20 noise-only landscapes (median error 2.5%), but on 1/6 landscapes with planted pair and higher-order epistasis (median −27%, always low). The cause is pair epistasis: terms too small to see in one double add up over the 4–6 mutations genotypes carry near the threshold.
+- **Ruling.** Kill test failed; F2 re-run not run (failure is systematic bias per the attached diagnostic; precision re-run cannot fix it); no real-data threshold computed.
 - **Status.** Under fallback F2 the real-data verdict would be "not decidable by this method". The next step is a T18b design that keeps the measured pair terms, with its own planted test (including mostly-negative epistasis). Nothing changed in T18's rules.
 
 ### 2026-11-25: new study list U1–U9 (docs/NEW_STUDIES_2026-11-25.md)
