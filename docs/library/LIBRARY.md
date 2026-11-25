@@ -1,13 +1,13 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-24. 207 papers: 144 read in full, 63 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-25. 210 papers: 147 read in full, 63 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
 Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, searchable, is `library.html` on the project site.
 
 ## Topics
-- [Building blocks](#building-blocks) (21)
+- [Building blocks](#building-blocks) (24)
 - [From space](#from-space) (12)
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (44)
 - [RNA world](#rna-world) (63)
@@ -26,6 +26,17 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 - **tutolo-2026-rethinking-alkaline-vents** (#4, #5): #4/#5: if the vent step table assumes FeS catalysts, a strong pH gradient at hydrothermal temperature, or vent-made fatty acids for membranes, add a scored variant where these fail; three of those assumptions are challenged here (abstract only).
 
 ## Building blocks
+
+### Dynamic Environmental Conditions Affect the Composition of a Model Prebiotic Reaction Network
+
+van Duppen P, Daines E, Robinson WE, Huck WTS (2023). *J. Am. Chem. Soc. 145:7559-7568*. [doi:10.1021/jacs.3c00908](https://doi.org/10.1021/jacs.3c00908). `van-duppen-2023-formose-dynamic-conditions` · core · full text
+
+- **Question.** Does a fluctuating environment change the products of the formose reaction compared with steady state?
+- **Tried.** Run the formose reaction in a flow reactor at steady state and with oscillating Ca(OH)2 input or flow rate, and compare product concentrations by GC-MS.
+- **Method and data.** 13 flow runs, about 44-51 samples each, ~20 sugars quantified; data and code at github.com/huckgroup/Formose_2022 (BSD-3).
+- **Key results.** 'the product compositions of the formose reaction under dynamic conditions deviate significantly from those under steady state conditions'; p <= 1e-4 for DHA, threose, erythrulose and xylulose in every series.
+- **Limits.** The p-values come from scipy ttest_ind on the serial samples of one run against another (found in the authors' code; the SI does not name the test): samples treated as independent, no run-to-run variance. Two repeat-run pairs in the deposit are never compared.
+- **Ideas for us.** T15 (sealed, 2026-11-25, experiments/t15_formose_flow_noise/T15_RESULTS.md): the median dynamic-vs-steady shift (1-2.4 within-run SD) is smaller than the gap between repeat runs at identical settings (2.7-6 SD for DHA, threose, xylulose; about 14 for erythrulose). Sealed verdict kill: the effect is not shown beyond run-to-run reproducibility. The repeats span days, the comparisons do not, so this is not proof of no effect.
 
 ### Mafic-ultramafic igneous rocks as a source of reactive phosphorus for the origin of life
 
@@ -104,6 +115,17 @@ Walton CR, Hao J, Schönbächler M, Shorttle O (2025). *Science Advances 11:eadq
 - **Key results.** Mono Lake keeps just below 1 mM dissolved phosphate through the year, well mixed, while supporting productivity of about 100 mM C per m2 per day. Smaller closed basins can swing from about 1 mM to orders of magnitude lower with the seasons. When abiotic sinks start depends largely on how carbonate-rich and divalent-cation-poor the lake is.
 - **Limits.** A phosphate budget only; no ion-window or membrane modelling.
 - **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): prior art. Its sink rule depends on divalent cations, the same ions T7 tracks, but it does not follow an evaporation path against a vesicle window.
+
+### Chemical reservoir computation in a self-organizing reaction network
+
+Baltussen MG, de Jong TJ, Duez Q, Robinson WE, Huck WTS (2024). *Nature 631:549-555*. [doi:10.1038/s41586-024-07567-x](https://doi.org/10.1038/s41586-024-07567-x). `baltussen-2024-formose-reservoir-computing` · useful · full text
+
+- **Question.** Can the formose reaction network, driven by input changes, compute like a reservoir computer?
+- **Tried.** Drive the formose reaction in flow with varying inputs and read its outputs by mass spectrometry to perform classification and prediction tasks.
+- **Method and data.** Flow reactor, online mass spectrometry, steady-state output averaged over the final 10-minute sample period.
+- **Key results.** The network performs nonlinear classification and prediction tasks; the outputs are described as 'deterministic' and 'robust against outliers and overfitting'.
+- **Limits.** Builds on van Duppen 2023 without re-testing it; a different measurement setup.
+- **Ideas for us.** T15 (sealed, 2026-11-25, experiments/t15_formose_flow_noise/T15_RESULTS.md): follow-up that takes the 2023 dynamic-conditions result as given. T15 shows that result is not separated from run-to-run noise in its own deposit; this paper's own reproducibility data are separate and were not tested.
 
 ### Biogeochemical explanations for the world's most phosphate-rich lake, an origin-of-life analog
 
@@ -240,6 +262,17 @@ Liu Q, Zhao X, Lee JK, Zare RN (2026). *PNAS 123(42), e2624803123*. [doi:10.1073
 - **Key results.** (abstract only, no numbers given) Ribonucleosides, including cytidine, formed in all compartment types without added catalysts. CO2-based micro/nanobubbles supported sustained cytidine accumulation. Yield depended on compartment size, and oil content in bubbles selectively changed inosine formation.
 - **Limits.** (abstract only) No yields, concentrations or regioisomer and anomer data were visible in what we opened. Starting from free ribose and nucleobases is the step many other routes avoid because it is inefficient in bulk water. Bubble and emulsion settings are hard to map onto a specific early-Earth place.
 - **Ideas for us.** When the full text is readable, extract yields and β-anomer share for cytidine and add an 'interface' variant of the nucleoside step to the pond route table (#5) to see whether it removes a purification hand-off. Until then, list it as an unscored candidate step.
+
+### Environmental History is Transferred via Minerals Altering Formose Reaction Pathways
+
+de Jong TJ, Demertzi AD, Robinson WE, Huck WTS (2025). *Angew. Chem. Int. Ed. 64:e202504659*. [doi:10.1002/anie.202504659](https://doi.org/10.1002/anie.202504659). `de-jong-2025-formose-minerals-history` · background · full text
+
+- **Question.** Can minerals carry the history of past conditions into later formose reaction outcomes?
+- **Tried.** Batch formose reactions with minerals exposed to different earlier conditions.
+- **Method and data.** Batch experiments with minerals.
+- **Key results.** Reports that earlier environmental history, transferred through minerals, alters formose pathways; cites the 2023 work as showing outcomes are 'significantly shaped by modulating the concentration of the catalyst Ca(OH)2'.
+- **Limits.** Takes the 2023 result as given; not a reanalysis.
+- **Ideas for us.** T15 (sealed, 2026-11-25, experiments/t15_formose_flow_noise/T15_RESULTS.md): follow-up checked as prior art; does not re-test the 2023 claim.
 
 ## From space
 

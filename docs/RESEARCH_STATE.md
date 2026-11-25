@@ -416,3 +416,11 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
 - **Reported only.** Nearby (held-out generations 1–6 and generation 7), the curve recalls 80% of neutral variants, near the replicate ceiling, and the network adds under 0.10 AP. Pair terms do worse than the curve everywhere.
 - **Reading.** The paper's "an additive model would have called them dead" holds, even with a global curve. "So the network learned higher-order effects" is only weakly supported. Far-away neutral variants are not predictable by any model tested here. With QT45 (#30): "one curve suffices" is a local statement.
 - **Next.** N3 (Peng/Linderoth/Baum autocatalytic tiers) setup. K6 continues.
+
+### 2026-11-25: T14 sealed and running; T15 result (N4, van Duppen 2023 formose under dynamic flow): kill
+- **T14** (N3, autocatalytic tiers against rewired networks) was sealed in 78bd277. The gate reproduced the paper exactly. `real` is running detached, about 1.7 h.
+- **T15 sealed in 5304720 and run.** Details: `experiments/t15_formose_flow_noise/T15_RESULTS.md`.
+  - **The authors' test.** The published p ≤ 10⁻⁴ come from a pooled t-test on the serial samples of one run against another, with no run-to-run variance (found in their code).
+  - **Numbers.** The median dynamic-vs-steady shift is 0.9–2.4 within-run SD. Repeat runs at identical settings differ by 2.7–6 SD (DHA, threose, xylulose) and about 14 SD (erythrulose). Kill holds in 4 of 4 compounds, and in 3 of 3 without erythrulose.
+  - **Reading.** The flow effect is not shown beyond run-to-run reproducibility. The repeats span days and the comparisons do not, and power is limited, so this is not proof of no effect.
+- **Next.** N5 (marginal, gate first) or S7 (Attwater, gate first). K6 continues.
