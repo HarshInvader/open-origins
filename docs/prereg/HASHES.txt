@@ -113,3 +113,10 @@ a82cdeea5e21972c041f8c85fb2ec56f4cc9b1d83fa31a17a51c71d02c1c4bf5  experiments/t1
 d60b4d22b07745ed9178cf9692a8105f98d2f7bd8d33985c81c5853cec7bf97d  experiments/t11_ribozyme_epistasis/scripts_out/t11_gate.json  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
 0961279a6e0a2583b3848440b004fcfd1d96d4ffcd31290929680129917b979d  experiments/t11_ribozyme_epistasis/scripts_out/t11_planted.json  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
 fa31a5ba2229c74629da8f0bd70658f98e290eec05f8ce0d80253db7240b49a6  experiments/t11_ribozyme_epistasis/scripts_out/t11_dryrun_permuted_labels.json  orig-paper  2026-11-24T23:07:34Z  T11 ribozyme epistasis prereg seal
+63233adfe88069020749aac37002715063e9667dbf33315cf3070468ea6a4f66  docs/prereg/t12_janzen_specificity.md  orig-paper  2026-11-25T00:22:40Z  T12 Janzen specificity prereg seal
+11c79509f28c06795b2a2d7d79f227582d342a2b1be5d77fda39768f68c399b8  experiments/t12_janzen_specificity/PRIOR_ART.md  orig-paper  2026-11-25T00:22:40Z  T12 Janzen specificity prereg seal
+3203b47513504bebfee4c6822821ffb56e509db608f89e25dbe2fadb24890dd5  experiments/t12_janzen_specificity/scripts/t12_analysis.py  orig-paper  2026-11-25T00:22:40Z  T12 Janzen specificity prereg seal
+db025c15ce8b5b5d3f4a61a39a2d365e152ef15cc13fad0f2f0c1ff122f7dfa0  experiments/t12_janzen_specificity/scripts/xlsx_to_tsv.py  orig-paper  2026-11-25T00:22:40Z  T12 Janzen specificity prereg seal
+a1bfee69b962e14e3185a8858d35255f7bf859407a1e63e3f8d711e792da98c6  experiments/t12_janzen_specificity/scripts_out/t12_gate.json  orig-paper  2026-11-25T00:22:40Z  T12 Janzen specificity prereg seal
+5f6fc43184b8197e21149b4fb4b1de0a435c351181245e106bd1fcdf1ef93dd3  experiments/t12_janzen_specificity/scripts_out/t12_planted.json  orig-paper  2026-11-25T00:22:40Z  T12 Janzen specificity prereg seal
+4fb6d23eb94aa27191d73178396f56820f00651309d4cbdcd0a559b0e01520ce  experiments/t12_janzen_specificity/scripts_out/t12_dryrun_permuted_activity.json  orig-paper  2026-11-25T00:22:40Z  T12 Janzen specificity prereg seal

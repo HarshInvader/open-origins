@@ -1,0 +1,2126 @@
+{
+ "mode": "planted",
+ "seed": [
+  20261125,
+  2
+ ],
+ "nrep": 100,
+ "n_null": 200,
+ "B": 60,
+ "K": 20,
+ "script_sha256": "84183003314faac72afb2c0f79cc55c89866b94845deb4ba0a1d585269c3ea85",
+ "eligible": [
+  "Fam1A.1",
+  "Fam1B.1",
+  "Fam2.1",
+  "Fam2.2"
+ ],
+ "rows": [
+  {
+   "scenario": "null, tau 0.7",
+   "index": 0,
+   "gamma": 0.0,
+   "tau": 0.7,
+   "floor_var": true,
+   "noise": "level",
+   "mixture": false,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.99,
+     "partly": 0.0,
+     "support": 0.01
+    },
+    "Fam1B.1": {
+     "kill": 0.92,
+     "partly": 0.0,
+     "support": 0.08
+    },
+    "Fam2.1": {
+     "kill": 0.96,
+     "partly": 0.04,
+     "support": 0.0
+    },
+    "Fam2.2": {
+     "kill": 0.9,
+     "partly": 0.09,
+     "support": 0.01
+    },
+    "Fam3.1": {
+     "kill": 0.92,
+     "partly": 0.0,
+     "support": 0.08
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.13,
+     "partly": 0.63,
+     "support": 0.24
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.42,
+     "support": 0.58
+    },
+    "Fam2.1": {
+     "kill": 0.01,
+     "partly": 0.92,
+     "support": 0.07
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.8,
+     "support": 0.2
+    },
+    "Fam3.1": {
+     "kill": 0.29,
+     "partly": 0.07,
+     "support": 0.64
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.32,
+     "partly": 0.67,
+     "support": 0.01
+    },
+    "Fam1B.1": {
+     "kill": 0.03,
+     "partly": 0.89,
+     "support": 0.08
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.96,
+     "support": 0.04
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.9,
+     "support": 0.1
+    },
+    "Fam3.1": {
+     "kill": 0.02,
+     "partly": 0.9,
+     "support": 0.08
+    }
+   },
+   "primary": {
+    "kill": 0.99,
+    "mixed": 0.01,
+    "support": 0.0
+   },
+   "primary_4of5": {
+    "kill": 0.95,
+    "mixed": 0.05,
+    "support": 0.0
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 0.97,
+    "support": 0.03
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 0.98,
+    "support": 0.02
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.5753020647191015,
+     "R_adj_raw": -0.08124527988587181,
+     "R_simex": 0.03564250676203964,
+     "R_true": 0.004696561379737086,
+     "ci_hi": 0.31312998298185446,
+     "plan_R_adj": -0.23745481696431184,
+     "n_subset": 173.93
+    },
+    "Fam1B.1": {
+     "R_full": -0.6823473373306341,
+     "R_adj_raw": -0.19231439587630025,
+     "R_simex": -0.04326678951828373,
+     "R_true": 0.010155307639357873,
+     "ci_hi": 0.22431757121120097,
+     "plan_R_adj": -0.31301414826238866,
+     "n_subset": 226.64
+    },
+    "Fam2.1": {
+     "R_full": -0.3563486579128153,
+     "R_adj_raw": -0.21061624077955535,
+     "R_simex": -0.026254034791662825,
+     "R_true": 0.011179980614494732,
+     "ci_hi": 0.08368966365165158,
+     "plan_R_adj": -0.252518979393417,
+     "n_subset": 1077.55
+    },
+    "Fam2.2": {
+     "R_full": -0.41267868237503874,
+     "R_adj_raw": -0.22797144036807648,
+     "R_simex": -0.029841542279493153,
+     "R_true": 0.0043394873938668145,
+     "ci_hi": 0.08554610663206098,
+     "plan_R_adj": -0.27424489708160904,
+     "n_subset": 1159.12
+    },
+    "Fam3.1": {
+     "R_full": -0.7015524286906998,
+     "R_adj_raw": -0.2908116363210146,
+     "R_simex": -0.13939493571250436,
+     "R_true": 0.01820090309204096,
+     "ci_hi": 0.4429355309808606,
+     "plan_R_adj": -0.3515565307104134,
+     "n_subset": 64.64
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.1399867888750739,
+    "Fam1B.1": 0.14685021166586387,
+    "Fam2.1": 0.059353713258867534,
+    "Fam2.2": 0.060876416241274635,
+    "Fam3.1": 0.29541155447633355
+   }
+  },
+  {
+   "scenario": "null, tau 1.2",
+   "index": 1,
+   "gamma": 0.0,
+   "tau": 1.2,
+   "floor_var": true,
+   "noise": "level",
+   "mixture": false,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.96,
+     "partly": 0.0,
+     "support": 0.04
+    },
+    "Fam1B.1": {
+     "kill": 0.95,
+     "partly": 0.0,
+     "support": 0.05
+    },
+    "Fam2.1": {
+     "kill": 0.99,
+     "partly": 0.01,
+     "support": 0.0
+    },
+    "Fam2.2": {
+     "kill": 0.96,
+     "partly": 0.04,
+     "support": 0.0
+    },
+    "Fam3.1": {
+     "kill": 0.89,
+     "partly": 0.0,
+     "support": 0.11
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.24,
+     "partly": 0.4,
+     "support": 0.36
+    },
+    "Fam1B.1": {
+     "kill": 0.01,
+     "partly": 0.4,
+     "support": 0.59
+    },
+    "Fam2.1": {
+     "kill": 0.08,
+     "partly": 0.91,
+     "support": 0.01
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.93,
+     "support": 0.07
+    },
+    "Fam3.1": {
+     "kill": 0.5,
+     "partly": 0.07,
+     "support": 0.43
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.34,
+     "partly": 0.62,
+     "support": 0.04
+    },
+    "Fam1B.1": {
+     "kill": 0.1,
+     "partly": 0.85,
+     "support": 0.05
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.99,
+     "support": 0.01
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.96,
+     "support": 0.04
+    },
+    "Fam3.1": {
+     "kill": 0.04,
+     "partly": 0.85,
+     "support": 0.11
+    }
+   },
+   "primary": {
+    "kill": 1.0,
+    "mixed": 0.0,
+    "support": 0.0
+   },
+   "primary_4of5": {
+    "kill": 0.99,
+    "mixed": 0.01,
+    "support": 0.0
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 0.97,
+    "support": 0.03
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 0.98,
+    "support": 0.02
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.5662492243109236,
+     "R_adj_raw": -0.0797034399860044,
+     "R_simex": 0.014012002034596602,
+     "R_true": -0.007842673017064615,
+     "ci_hi": 0.2752703105692542,
+     "plan_R_adj": -0.2740897255430931,
+     "n_subset": 172.81
+    },
+    "Fam1B.1": {
+     "R_full": -0.6668097012176902,
+     "R_adj_raw": -0.14371641303101235,
+     "R_simex": -0.004022324600141857,
+     "R_true": 0.005425199874873653,
+     "ci_hi": 0.2503559110491384,
+     "plan_R_adj": -0.31248380748492627,
+     "n_subset": 225.16
+    },
+    "Fam2.1": {
+     "R_full": -0.3709859485261018,
+     "R_adj_raw": -0.15024500873891675,
+     "R_simex": -0.0005983599905178434,
+     "R_true": 0.008369439818928709,
+     "ci_hi": 0.10017061519639071,
+     "plan_R_adj": -0.23288958150560066,
+     "n_subset": 1072.97
+    },
+    "Fam2.2": {
+     "R_full": -0.4085933296119121,
+     "R_adj_raw": -0.16808760423324626,
+     "R_simex": -0.007127993801459465,
+     "R_true": 0.003796986857001948,
+     "ci_hi": 0.09526540676725391,
+     "plan_R_adj": -0.25267466904338454,
+     "n_subset": 1152.75
+    },
+    "Fam3.1": {
+     "R_full": -0.6975624234148983,
+     "R_adj_raw": -0.2828839816826881,
+     "R_simex": -0.13211561721654203,
+     "R_true": 0.0020256660367696387,
+     "ci_hi": 0.41289274308952023,
+     "plan_R_adj": -0.27136624931934017,
+     "n_subset": 63.46
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.12681723411693047,
+    "Fam1B.1": 0.13860958598218565,
+    "Fam2.1": 0.05156933168841459,
+    "Fam2.2": 0.054730807852124835,
+    "Fam3.1": 0.2729467419314766
+   }
+  },
+  {
+   "scenario": "null, tau 0.4",
+   "index": 2,
+   "gamma": 0.0,
+   "tau": 0.4,
+   "floor_var": true,
+   "noise": "level",
+   "mixture": false,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.98,
+     "partly": 0.0,
+     "support": 0.02
+    },
+    "Fam1B.1": {
+     "kill": 0.9,
+     "partly": 0.0,
+     "support": 0.1
+    },
+    "Fam2.1": {
+     "kill": 0.83,
+     "partly": 0.09,
+     "support": 0.08
+    },
+    "Fam2.2": {
+     "kill": 0.79,
+     "partly": 0.13,
+     "support": 0.08
+    },
+    "Fam3.1": {
+     "kill": 0.92,
+     "partly": 0.0,
+     "support": 0.08
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.11,
+     "partly": 0.76,
+     "support": 0.13
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.34,
+     "support": 0.66
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.62,
+     "support": 0.38
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.38,
+     "support": 0.62
+    },
+    "Fam3.1": {
+     "kill": 0.15,
+     "partly": 0.06,
+     "support": 0.79
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.27,
+     "partly": 0.71,
+     "support": 0.02
+    },
+    "Fam1B.1": {
+     "kill": 0.01,
+     "partly": 0.89,
+     "support": 0.1
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.83,
+     "support": 0.17
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.79,
+     "support": 0.21
+    },
+    "Fam3.1": {
+     "kill": 0.03,
+     "partly": 0.89,
+     "support": 0.08
+    }
+   },
+   "primary": {
+    "kill": 0.97,
+    "mixed": 0.03,
+    "support": 0.0
+   },
+   "primary_4of5": {
+    "kill": 0.93,
+    "mixed": 0.07,
+    "support": 0.0
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 0.78,
+    "support": 0.22
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 0.83,
+    "support": 0.17
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.5910468584142896,
+     "R_adj_raw": -0.09998130741762218,
+     "R_simex": 0.013719738996087139,
+     "R_true": 0.026127127470329,
+     "ci_hi": 0.3084811382748231,
+     "plan_R_adj": -0.23241563390676634,
+     "n_subset": 175.55
+    },
+    "Fam1B.1": {
+     "R_full": -0.697884629248984,
+     "R_adj_raw": -0.21776644223258126,
+     "R_simex": -0.05633283091267976,
+     "R_true": 0.015571498139742236,
+     "ci_hi": 0.2236046327708477,
+     "plan_R_adj": -0.3219212498720694,
+     "n_subset": 228.7
+    },
+    "Fam2.1": {
+     "R_full": -0.34921019860095037,
+     "R_adj_raw": -0.25414867972792154,
+     "R_simex": -0.06845846702706378,
+     "R_true": 0.011090779304652465,
+     "ci_hi": 0.05085649908440365,
+     "plan_R_adj": -0.2906814466079387,
+     "n_subset": 1079.99
+    },
+    "Fam2.2": {
+     "R_full": -0.41000491062992384,
+     "R_adj_raw": -0.2698661328454537,
+     "R_simex": -0.07220857701341364,
+     "R_true": 0.0094095320818612,
+     "ci_hi": 0.04693370460652126,
+     "plan_R_adj": -0.3120259474742743,
+     "n_subset": 1164.21
+    },
+    "Fam3.1": {
+     "R_full": -0.7236523529589806,
+     "R_adj_raw": -0.31871284485158075,
+     "R_simex": -0.19818232976028355,
+     "R_true": -0.0020693032680101898,
+     "ci_hi": 0.3856690237220202,
+     "plan_R_adj": -0.4075659406014475,
+     "n_subset": 65.59
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.1516843066075054,
+    "Fam1B.1": 0.13822955196696188,
+    "Fam2.1": 0.06054699641923007,
+    "Fam2.2": 0.05777425043889179,
+    "Fam3.1": 0.2912611785926645
+   }
+  },
+  {
+   "scenario": "null, no floor variation",
+   "index": 3,
+   "gamma": 0.0,
+   "tau": 0.7,
+   "floor_var": false,
+   "noise": "level",
+   "mixture": false,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.99,
+     "partly": 0.0,
+     "support": 0.01
+    },
+    "Fam1B.1": {
+     "kill": 0.9,
+     "partly": 0.0,
+     "support": 0.1
+    },
+    "Fam2.1": {
+     "kill": 0.87,
+     "partly": 0.08,
+     "support": 0.05
+    },
+    "Fam2.2": {
+     "kill": 0.92,
+     "partly": 0.07,
+     "support": 0.01
+    },
+    "Fam3.1": {
+     "kill": 0.94,
+     "partly": 0.0,
+     "support": 0.06
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.1,
+     "partly": 0.59,
+     "support": 0.31
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.34,
+     "support": 0.66
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.88,
+     "support": 0.12
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.72,
+     "support": 0.28
+    },
+    "Fam3.1": {
+     "kill": 0.23,
+     "partly": 0.07,
+     "support": 0.7
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.29,
+     "partly": 0.7,
+     "support": 0.01
+    },
+    "Fam1B.1": {
+     "kill": 0.03,
+     "partly": 0.87,
+     "support": 0.1
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.87,
+     "support": 0.13
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.92,
+     "support": 0.08
+    },
+    "Fam3.1": {
+     "kill": 0.0,
+     "partly": 0.94,
+     "support": 0.06
+    }
+   },
+   "primary": {
+    "kill": 0.99,
+    "mixed": 0.01,
+    "support": 0.0
+   },
+   "primary_4of5": {
+    "kill": 0.95,
+    "mixed": 0.05,
+    "support": 0.0
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 0.92,
+    "support": 0.08
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 0.93,
+    "support": 0.07
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.5901886580086376,
+     "R_adj_raw": -0.09322773008485358,
+     "R_simex": 0.014877863067532391,
+     "R_true": 0.007498797789282581,
+     "ci_hi": 0.303045207340333,
+     "plan_R_adj": -0.26466606202672655,
+     "n_subset": 174.09
+    },
+    "Fam1B.1": {
+     "R_full": -0.6977483901066084,
+     "R_adj_raw": -0.19118732357082205,
+     "R_simex": -0.04633637089341434,
+     "R_true": 0.0002606787150957886,
+     "ci_hi": 0.2342346299031994,
+     "plan_R_adj": -0.3291773949024024,
+     "n_subset": 227.02
+    },
+    "Fam2.1": {
+     "R_full": -0.3710245362473596,
+     "R_adj_raw": -0.2159151222111646,
+     "R_simex": -0.03224389141818813,
+     "R_true": -0.0012899799967252136,
+     "ci_hi": 0.07563205556137281,
+     "plan_R_adj": -0.265805792358662,
+     "n_subset": 1079.16
+    },
+    "Fam2.2": {
+     "R_full": -0.4150105954298124,
+     "R_adj_raw": -0.2251624350922672,
+     "R_simex": -0.023878341143875687,
+     "R_true": 0.0008047668486545731,
+     "ci_hi": 0.08748080650925512,
+     "plan_R_adj": -0.2813408754106955,
+     "n_subset": 1159.57
+    },
+    "Fam3.1": {
+     "R_full": -0.740791686053432,
+     "R_adj_raw": -0.2902199703459607,
+     "R_simex": -0.13276035166122344,
+     "R_true": 0.007726341017671386,
+     "ci_hi": 0.45050123659303287,
+     "plan_R_adj": -0.3925199966363319,
+     "n_subset": 64.8
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.1498759322519362,
+    "Fam1B.1": 0.15487743569347287,
+    "Fam2.1": 0.06299203174654655,
+    "Fam2.2": 0.058343040804837105,
+    "Fam3.1": 0.25869331810963764
+   }
+  },
+  {
+   "scenario": "null, real per-cell noise",
+   "index": 4,
+   "gamma": 0.0,
+   "tau": 0.7,
+   "floor_var": true,
+   "noise": "cell",
+   "mixture": false,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.97,
+     "partly": 0.0,
+     "support": 0.03
+    },
+    "Fam1B.1": {
+     "kill": 0.99,
+     "partly": 0.0,
+     "support": 0.01
+    },
+    "Fam2.1": {
+     "kill": 0.91,
+     "partly": 0.07,
+     "support": 0.02
+    },
+    "Fam2.2": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    },
+    "Fam3.1": {
+     "kill": 0.93,
+     "partly": 0.0,
+     "support": 0.07
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.62,
+     "partly": 0.37,
+     "support": 0.01
+    },
+    "Fam1B.1": {
+     "kill": 0.23,
+     "partly": 0.73,
+     "support": 0.04
+    },
+    "Fam2.1": {
+     "kill": 0.02,
+     "partly": 0.96,
+     "support": 0.02
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 1.0,
+     "support": 0.0
+    },
+    "Fam3.1": {
+     "kill": 0.79,
+     "partly": 0.07,
+     "support": 0.14
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.59,
+     "partly": 0.38,
+     "support": 0.03
+    },
+    "Fam1B.1": {
+     "kill": 0.49,
+     "partly": 0.5,
+     "support": 0.01
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.91,
+     "support": 0.09
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 1.0,
+     "support": 0.0
+    },
+    "Fam3.1": {
+     "kill": 0.18,
+     "partly": 0.75,
+     "support": 0.07
+    }
+   },
+   "primary": {
+    "kill": 1.0,
+    "mixed": 0.0,
+    "support": 0.0
+   },
+   "primary_4of5": {
+    "kill": 1.0,
+    "mixed": 0.0,
+    "support": 0.0
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.5619557251757186,
+     "R_adj_raw": -0.03265775365639322,
+     "R_simex": -0.02448838943394557,
+     "R_true": 0.007733873900525898,
+     "ci_hi": 0.22999873059235404,
+     "plan_R_adj": -0.14262614592032513,
+     "n_subset": 168.09
+    },
+    "Fam1B.1": {
+     "R_full": -0.6947593340451752,
+     "R_adj_raw": -0.05841245674081266,
+     "R_simex": 0.03313498583163365,
+     "R_true": -0.0006124712287499852,
+     "ci_hi": 0.28623525286042084,
+     "plan_R_adj": -0.17775649344575392,
+     "n_subset": 223.8
+    },
+    "Fam2.1": {
+     "R_full": -0.3367760021754625,
+     "R_adj_raw": -0.18871015109722247,
+     "R_simex": -0.0263280599690217,
+     "R_true": 0.010327535825616524,
+     "ci_hi": 0.08173379621174737,
+     "plan_R_adj": -0.23899844618230875,
+     "n_subset": 1082.37
+    },
+    "Fam2.2": {
+     "R_full": -0.37618135446205336,
+     "R_adj_raw": -0.18278622022838906,
+     "R_simex": 0.013076266932308421,
+     "R_true": 0.008471037513359293,
+     "ci_hi": 0.13036509174779032,
+     "plan_R_adj": -0.24283273651557985,
+     "n_subset": 1174.11
+    },
+    "Fam3.1": {
+     "R_full": -0.6765035899035167,
+     "R_adj_raw": -0.19560274960070512,
+     "R_simex": -0.0662218336321424,
+     "R_true": -0.007718658113172081,
+     "ci_hi": 0.5832214655136192,
+     "plan_R_adj": -0.1699754092430241,
+     "n_subset": 57.63
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.13110374548609552,
+    "Fam1B.1": 0.1313948897729389,
+    "Fam2.1": 0.05417438961379951,
+    "Fam2.2": 0.05012338468121841,
+    "Fam3.1": 0.3684399298545715
+   }
+  },
+  {
+   "scenario": "null, mixture of specialists",
+   "index": 5,
+   "gamma": 0.0,
+   "tau": 0.7,
+   "floor_var": true,
+   "noise": "level",
+   "mixture": true,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.99,
+     "partly": 0.0,
+     "support": 0.01
+    },
+    "Fam1B.1": {
+     "kill": 0.96,
+     "partly": 0.0,
+     "support": 0.04
+    },
+    "Fam2.1": {
+     "kill": 0.99,
+     "partly": 0.01,
+     "support": 0.0
+    },
+    "Fam2.2": {
+     "kill": 1.0,
+     "partly": 0.0,
+     "support": 0.0
+    },
+    "Fam3.1": {
+     "kill": 0.97,
+     "partly": 0.0,
+     "support": 0.03
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.35,
+     "partly": 0.3,
+     "support": 0.35
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.44,
+     "support": 0.56
+    },
+    "Fam2.1": {
+     "kill": 0.5,
+     "partly": 0.3,
+     "support": 0.2
+    },
+    "Fam2.2": {
+     "kill": 0.2,
+     "partly": 0.49,
+     "support": 0.31
+    },
+    "Fam3.1": {
+     "kill": 0.48,
+     "partly": 0.12,
+     "support": 0.4
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.36,
+     "partly": 0.63,
+     "support": 0.01
+    },
+    "Fam1B.1": {
+     "kill": 0.09,
+     "partly": 0.87,
+     "support": 0.04
+    },
+    "Fam2.1": {
+     "kill": 0.02,
+     "partly": 0.97,
+     "support": 0.01
+    },
+    "Fam2.2": {
+     "kill": 0.02,
+     "partly": 0.98,
+     "support": 0.0
+    },
+    "Fam3.1": {
+     "kill": 0.06,
+     "partly": 0.91,
+     "support": 0.03
+    }
+   },
+   "primary": {
+    "kill": 1.0,
+    "mixed": 0.0,
+    "support": 0.0
+   },
+   "primary_4of5": {
+    "kill": 1.0,
+    "mixed": 0.0,
+    "support": 0.0
+   },
+   "plan": {
+    "kill": 0.02,
+    "mixed": 0.89,
+    "support": 0.09
+   },
+   "plan_4of5": {
+    "kill": 0.02,
+    "mixed": 0.95,
+    "support": 0.03
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.5693770280543903,
+     "R_adj_raw": -0.06525363270445003,
+     "R_simex": 0.03175291551627083,
+     "R_true": -0.004711803963206192,
+     "ci_hi": 0.2962743653830018,
+     "plan_R_adj": -0.26755690279974564,
+     "n_subset": 173.44
+    },
+    "Fam1B.1": {
+     "R_full": -0.6558069959603645,
+     "R_adj_raw": -0.14371226947015875,
+     "R_simex": -0.014233963888523023,
+     "R_true": 0.00646848700828519,
+     "ci_hi": 0.23277613832310778,
+     "plan_R_adj": -0.3036802809211939,
+     "n_subset": 225.89
+    },
+    "Fam2.1": {
+     "R_full": -0.3205544642288764,
+     "R_adj_raw": -0.10771826279304798,
+     "R_simex": 0.01549390846673264,
+     "R_true": 4.093933779479655e-05,
+     "ci_hi": 0.10742993844955456,
+     "plan_R_adj": -0.27018105550384575,
+     "n_subset": 1072.98
+    },
+    "Fam2.2": {
+     "R_full": -0.34709835916745185,
+     "R_adj_raw": -0.11241149727503329,
+     "R_simex": 0.030886736088949703,
+     "R_true": 0.003088487908965688,
+     "ci_hi": 0.12520666110426107,
+     "plan_R_adj": -0.28544488109625804,
+     "n_subset": 1152.32
+    },
+    "Fam3.1": {
+     "R_full": -0.6889995738932005,
+     "R_adj_raw": -0.23421985256167155,
+     "R_simex": -0.042559517405123926,
+     "R_true": 0.020691663441744005,
+     "ci_hi": 0.5487823012723586,
+     "plan_R_adj": -0.26437345273212864,
+     "n_subset": 63.0
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.13509063597102536,
+    "Fam1B.1": 0.13587619476408616,
+    "Fam2.1": 0.04653216753167935,
+    "Fam2.2": 0.04830649537567847,
+    "Fam3.1": 0.2778610107242138
+   }
+  },
+  {
+   "scenario": "null, correlated noise within input groups",
+   "index": 6,
+   "gamma": 0.0,
+   "tau": 0.7,
+   "floor_var": true,
+   "noise": "corr",
+   "mixture": false,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.98,
+     "partly": 0.0,
+     "support": 0.02
+    },
+    "Fam1B.1": {
+     "kill": 0.93,
+     "partly": 0.0,
+     "support": 0.07
+    },
+    "Fam2.1": {
+     "kill": 0.94,
+     "partly": 0.03,
+     "support": 0.03
+    },
+    "Fam2.2": {
+     "kill": 0.88,
+     "partly": 0.08,
+     "support": 0.04
+    },
+    "Fam3.1": {
+     "kill": 0.96,
+     "partly": 0.0,
+     "support": 0.04
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.08,
+     "partly": 0.66,
+     "support": 0.26
+    },
+    "Fam1B.1": {
+     "kill": 0.01,
+     "partly": 0.31,
+     "support": 0.68
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.95,
+     "support": 0.05
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.78,
+     "support": 0.22
+    },
+    "Fam3.1": {
+     "kill": 0.32,
+     "partly": 0.05,
+     "support": 0.63
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.27,
+     "partly": 0.71,
+     "support": 0.02
+    },
+    "Fam1B.1": {
+     "kill": 0.02,
+     "partly": 0.91,
+     "support": 0.07
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.94,
+     "support": 0.06
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.88,
+     "support": 0.12
+    },
+    "Fam3.1": {
+     "kill": 0.02,
+     "partly": 0.94,
+     "support": 0.04
+    }
+   },
+   "primary": {
+    "kill": 0.99,
+    "mixed": 0.01,
+    "support": 0.0
+   },
+   "primary_4of5": {
+    "kill": 0.98,
+    "mixed": 0.02,
+    "support": 0.0
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 0.93,
+    "support": 0.07
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 0.94,
+    "support": 0.06
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 1.0,
+    "support": 0.0
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.5750152920145613,
+     "R_adj_raw": -0.09828140753000436,
+     "R_simex": 0.008297792419009875,
+     "R_true": 0.002536191939162964,
+     "ci_hi": 0.2951522348565228,
+     "plan_R_adj": -0.26359378742211514,
+     "n_subset": 174.8
+    },
+    "Fam1B.1": {
+     "R_full": -0.6876987339155001,
+     "R_adj_raw": -0.19088283408833362,
+     "R_simex": -0.033231272635788456,
+     "R_true": 0.005493887633429271,
+     "ci_hi": 0.23151268181889836,
+     "plan_R_adj": -0.331916689772352,
+     "n_subset": 226.54
+    },
+    "Fam2.1": {
+     "R_full": -0.36479371575696357,
+     "R_adj_raw": -0.21581235413890468,
+     "R_simex": -0.03976150733613033,
+     "R_true": 0.0025847208306287086,
+     "ci_hi": 0.07361148082116208,
+     "plan_R_adj": -0.25530503355214573,
+     "n_subset": 1065.74
+    },
+    "Fam2.2": {
+     "R_full": -0.41740214223327643,
+     "R_adj_raw": -0.235195060931592,
+     "R_simex": -0.044217790257427315,
+     "R_true": 0.003380077076536742,
+     "ci_hi": 0.07072503085498368,
+     "plan_R_adj": -0.27445340456529815,
+     "n_subset": 1143.67
+    },
+    "Fam3.1": {
+     "R_full": -0.7058975711182711,
+     "R_adj_raw": -0.2954220764949419,
+     "R_simex": -0.1439357775425062,
+     "R_true": 0.026061671179086632,
+     "ci_hi": 0.44185736274977055,
+     "plan_R_adj": -0.3604824181312163,
+     "n_subset": 66.08
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.13379362681271698,
+    "Fam1B.1": 0.1369104325567329,
+    "Fam2.1": 0.057639996132441494,
+    "Fam2.2": 0.06354550093143842,
+    "Fam3.1": 0.239131595462941
+   }
+  },
+  {
+   "scenario": "link gamma 0.1",
+   "index": 7,
+   "gamma": 0.1,
+   "tau": 0.7,
+   "floor_var": true,
+   "noise": "level",
+   "mixture": false,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.78,
+     "partly": 0.0,
+     "support": 0.22
+    },
+    "Fam1B.1": {
+     "kill": 0.82,
+     "partly": 0.0,
+     "support": 0.18
+    },
+    "Fam2.1": {
+     "kill": 0.32,
+     "partly": 0.38,
+     "support": 0.3
+    },
+    "Fam2.2": {
+     "kill": 0.47,
+     "partly": 0.25,
+     "support": 0.28
+    },
+    "Fam3.1": {
+     "kill": 0.86,
+     "partly": 0.0,
+     "support": 0.14
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.0,
+     "partly": 0.04,
+     "support": 0.96
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.01,
+     "support": 0.99
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.14,
+     "support": 0.86
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.06,
+     "support": 0.94
+    },
+    "Fam3.1": {
+     "kill": 0.11,
+     "partly": 0.07,
+     "support": 0.82
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.02,
+     "partly": 0.76,
+     "support": 0.22
+    },
+    "Fam1B.1": {
+     "kill": 0.01,
+     "partly": 0.81,
+     "support": 0.18
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.32,
+     "support": 0.68
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.47,
+     "support": 0.53
+    },
+    "Fam3.1": {
+     "kill": 0.0,
+     "partly": 0.86,
+     "support": 0.14
+    }
+   },
+   "primary": {
+    "kill": 0.45,
+    "mixed": 0.52,
+    "support": 0.03
+   },
+   "primary_4of5": {
+    "kill": 0.42,
+    "mixed": 0.57,
+    "support": 0.01
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 0.0,
+    "support": 1.0
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 0.05,
+    "support": 0.95
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 0.86,
+    "support": 0.14
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 0.98,
+    "support": 0.02
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.6292023686118314,
+     "R_adj_raw": -0.2046103239822592,
+     "R_simex": -0.11930084735463789,
+     "R_true": -0.16698047620780482,
+     "ci_hi": 0.13478225469127533,
+     "plan_R_adj": -0.4228558378569678,
+     "n_subset": 173.98
+    },
+    "Fam1B.1": {
+     "R_full": -0.7131349476433486,
+     "R_adj_raw": -0.2615819858655663,
+     "R_simex": -0.13065528952329752,
+     "R_true": -0.11788730167273974,
+     "ci_hi": 0.11561324404789489,
+     "plan_R_adj": -0.4421450098590885,
+     "n_subset": 226.68
+    },
+    "Fam2.1": {
+     "R_full": -0.4126918157863794,
+     "R_adj_raw": -0.2787881296135497,
+     "R_simex": -0.12315948692246302,
+     "R_true": -0.10574336633111434,
+     "ci_hi": -0.013962035491477011,
+     "plan_R_adj": -0.3282217190485375,
+     "n_subset": 1075.73
+    },
+    "Fam2.2": {
+     "R_full": -0.4614059087143182,
+     "R_adj_raw": -0.2895183293285734,
+     "R_simex": -0.11326033870631011,
+     "R_true": -0.11244528844021928,
+     "ci_hi": -0.005585476850072744,
+     "plan_R_adj": -0.34674058681815034,
+     "n_subset": 1158.36
+    },
+    "Fam3.1": {
+     "R_full": -0.7334594929736427,
+     "R_adj_raw": -0.3397465996756475,
+     "R_simex": -0.21478329177370678,
+     "R_true": -0.08956346788380949,
+     "ci_hi": 0.3009635968246265,
+     "plan_R_adj": -0.4175458953551917,
+     "n_subset": 66.28
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.1465930194256151,
+    "Fam1B.1": 0.138451062015675,
+    "Fam2.1": 0.05316580516441512,
+    "Fam2.2": 0.0637056310385776,
+    "Fam3.1": 0.23920385224439453
+   }
+  },
+  {
+   "scenario": "link gamma 0.2",
+   "index": 8,
+   "gamma": 0.2,
+   "tau": 0.7,
+   "floor_var": true,
+   "noise": "level",
+   "mixture": false,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.51,
+     "partly": 0.0,
+     "support": 0.49
+    },
+    "Fam1B.1": {
+     "kill": 0.49,
+     "partly": 0.0,
+     "support": 0.51
+    },
+    "Fam2.1": {
+     "kill": 0.03,
+     "partly": 0.06,
+     "support": 0.91
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.05,
+     "support": 0.95
+    },
+    "Fam3.1": {
+     "kill": 0.77,
+     "partly": 0.0,
+     "support": 0.23
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam3.1": {
+     "kill": 0.02,
+     "partly": 0.02,
+     "support": 0.96
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.0,
+     "partly": 0.51,
+     "support": 0.49
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.49,
+     "support": 0.51
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.03,
+     "support": 0.97
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam3.1": {
+     "kill": 0.0,
+     "partly": 0.77,
+     "support": 0.23
+    }
+   },
+   "primary": {
+    "kill": 0.01,
+    "mixed": 0.37,
+    "support": 0.62
+   },
+   "primary_4of5": {
+    "kill": 0.01,
+    "mixed": 0.61,
+    "support": 0.38
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 0.0,
+    "support": 1.0
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 0.0,
+    "support": 1.0
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 0.33,
+    "support": 0.67
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 0.57,
+    "support": 0.43
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.6429612740815646,
+     "R_adj_raw": -0.30547592297280934,
+     "R_simex": -0.24153240799921963,
+     "R_true": -0.28458056859088837,
+     "ci_hi": -0.002584691253036429,
+     "plan_R_adj": -0.5553360263389419,
+     "n_subset": 175.1
+    },
+    "Fam1B.1": {
+     "R_full": -0.7295667652751193,
+     "R_adj_raw": -0.32752152273527096,
+     "R_simex": -0.22098253111424476,
+     "R_true": -0.22248205275505176,
+     "ci_hi": -0.004089711213268249,
+     "plan_R_adj": -0.5459319859664771,
+     "n_subset": 225.41
+    },
+    "Fam2.1": {
+     "R_full": -0.4611218172510896,
+     "R_adj_raw": -0.3481068466577273,
+     "R_simex": -0.22133947470659265,
+     "R_true": -0.20992866736908655,
+     "ci_hi": -0.12106644944753939,
+     "plan_R_adj": -0.40461463177375834,
+     "n_subset": 1076.28
+    },
+    "Fam2.2": {
+     "R_full": -0.523045671834019,
+     "R_adj_raw": -0.3714448599728249,
+     "R_simex": -0.24071551220593118,
+     "R_true": -0.22784187341478165,
+     "ci_hi": -0.135053886898733,
+     "plan_R_adj": -0.4292622661213547,
+     "n_subset": 1155.35
+    },
+    "Fam3.1": {
+     "R_full": -0.7512444281138742,
+     "R_adj_raw": -0.37222591331073906,
+     "R_simex": -0.2755008141435853,
+     "R_true": -0.14357883621542586,
+     "ci_hi": 0.20974982679667517,
+     "plan_R_adj": -0.5103521611957493,
+     "n_subset": 67.62
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.11883927077710496,
+    "Fam1B.1": 0.12337626416652246,
+    "Fam2.1": 0.04944932740683844,
+    "Fam2.2": 0.050754637679212476,
+    "Fam3.1": 0.2391056432446838
+   }
+  },
+  {
+   "scenario": "link gamma 0.4",
+   "index": 9,
+   "gamma": 0.4,
+   "tau": 0.7,
+   "floor_var": true,
+   "noise": "level",
+   "mixture": false,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.23,
+     "partly": 0.0,
+     "support": 0.77
+    },
+    "Fam1B.1": {
+     "kill": 0.27,
+     "partly": 0.0,
+     "support": 0.73
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam3.1": {
+     "kill": 0.76,
+     "partly": 0.0,
+     "support": 0.24
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam3.1": {
+     "kill": 0.01,
+     "partly": 0.0,
+     "support": 0.99
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.0,
+     "partly": 0.23,
+     "support": 0.77
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.27,
+     "support": 0.73
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam3.1": {
+     "kill": 0.0,
+     "partly": 0.76,
+     "support": 0.24
+    }
+   },
+   "primary": {
+    "kill": 0.0,
+    "mixed": 0.07,
+    "support": 0.93
+   },
+   "primary_4of5": {
+    "kill": 0.0,
+    "mixed": 0.36,
+    "support": 0.64
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 0.0,
+    "support": 1.0
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 0.0,
+    "support": 1.0
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 0.07,
+    "support": 0.93
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 0.36,
+    "support": 0.64
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.642905497815622,
+     "R_adj_raw": -0.3728374244802648,
+     "R_simex": -0.3302980158879979,
+     "R_true": -0.3505645677589785,
+     "ci_hi": -0.10872975232893035,
+     "plan_R_adj": -0.6636583302435072,
+     "n_subset": 172.7
+    },
+    "Fam1B.1": {
+     "R_full": -0.744557258288981,
+     "R_adj_raw": -0.36460668007908786,
+     "R_simex": -0.2933242146815783,
+     "R_true": -0.29451872772919235,
+     "ci_hi": -0.07921173809344166,
+     "plan_R_adj": -0.6484622044816792,
+     "n_subset": 224.71
+    },
+    "Fam2.1": {
+     "R_full": -0.5330954325395783,
+     "R_adj_raw": -0.46628133202312294,
+     "R_simex": -0.3854241445239988,
+     "R_true": -0.37856135704100824,
+     "ci_hi": -0.2975558317024416,
+     "plan_R_adj": -0.5268909263074497,
+     "n_subset": 1072.69
+    },
+    "Fam2.2": {
+     "R_full": -0.5941923220878728,
+     "R_adj_raw": -0.49673695930958284,
+     "R_simex": -0.41280362203586335,
+     "R_true": -0.40754780229615456,
+     "ci_hi": -0.3251368236924818,
+     "plan_R_adj": -0.5627836535328281,
+     "n_subset": 1151.66
+    },
+    "Fam3.1": {
+     "R_full": -0.7583754361807032,
+     "R_adj_raw": -0.35934115909067194,
+     "R_simex": -0.22425693952362064,
+     "R_true": -0.2006035077620446,
+     "ci_hi": 0.19749047875997433,
+     "plan_R_adj": -0.5795049734508981,
+     "n_subset": 70.71
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.10538328629191951,
+    "Fam1B.1": 0.10424826582094424,
+    "Fam2.1": 0.039251531966372155,
+    "Fam2.2": 0.0467870447407562,
+    "Fam3.1": 0.2253378618240919
+   }
+  },
+  {
+   "scenario": "link gamma 0.2, real per-cell noise",
+   "index": 10,
+   "gamma": 0.2,
+   "tau": 0.7,
+   "floor_var": true,
+   "noise": "cell",
+   "mixture": false,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.22,
+     "partly": 0.0,
+     "support": 0.78
+    },
+    "Fam1B.1": {
+     "kill": 0.39,
+     "partly": 0.0,
+     "support": 0.61
+    },
+    "Fam2.1": {
+     "kill": 0.02,
+     "partly": 0.07,
+     "support": 0.91
+    },
+    "Fam2.2": {
+     "kill": 0.08,
+     "partly": 0.14,
+     "support": 0.78
+    },
+    "Fam3.1": {
+     "kill": 0.87,
+     "partly": 0.0,
+     "support": 0.13
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam3.1": {
+     "kill": 0.14,
+     "partly": 0.09,
+     "support": 0.77
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.0,
+     "partly": 0.22,
+     "support": 0.78
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.39,
+     "support": 0.61
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.02,
+     "support": 0.98
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.08,
+     "support": 0.92
+    },
+    "Fam3.1": {
+     "kill": 0.04,
+     "partly": 0.83,
+     "support": 0.13
+    }
+   },
+   "primary": {
+    "kill": 0.01,
+    "mixed": 0.2,
+    "support": 0.79
+   },
+   "primary_4of5": {
+    "kill": 0.01,
+    "mixed": 0.58,
+    "support": 0.41
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 0.0,
+    "support": 1.0
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 0.0,
+    "support": 1.0
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 0.11,
+    "support": 0.89
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 0.52,
+    "support": 0.48
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.6498523225897159,
+     "R_adj_raw": -0.29144322241222154,
+     "R_simex": -0.2983924834685792,
+     "R_true": -0.279819092318096,
+     "ci_hi": -0.08311840919984821,
+     "plan_R_adj": -0.5327552982093263,
+     "n_subset": 168.09
+    },
+    "Fam1B.1": {
+     "R_full": -0.7774895346455808,
+     "R_adj_raw": -0.2703399220151411,
+     "R_simex": -0.23378141310133263,
+     "R_true": -0.22051105540354754,
+     "ci_hi": -0.02389776936784548,
+     "plan_R_adj": -0.4888183773338224,
+     "n_subset": 223.52
+    },
+    "Fam2.1": {
+     "R_full": -0.45281032729693643,
+     "R_adj_raw": -0.32696686054866725,
+     "R_simex": -0.22148667606212594,
+     "R_true": -0.20405523164735942,
+     "ci_hi": -0.11621607102214462,
+     "plan_R_adj": -0.38848883024250624,
+     "n_subset": 1080.65
+    },
+    "Fam2.2": {
+     "R_full": -0.49499571940928094,
+     "R_adj_raw": -0.332300665949903,
+     "R_simex": -0.19965524608122684,
+     "R_true": -0.2291788013575257,
+     "ci_hi": -0.08891414609008491,
+     "plan_R_adj": -0.4031514109302617,
+     "n_subset": 1170.62
+    },
+    "Fam3.1": {
+     "R_full": -0.7604541275915178,
+     "R_adj_raw": -0.2865103221502028,
+     "R_simex": -0.1866613666682211,
+     "R_true": -0.15602984767204486,
+     "ci_hi": 0.3697458706592183,
+     "plan_R_adj": -0.39589847513428367,
+     "n_subset": 58.78
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.09529206106083152,
+    "Fam1B.1": 0.11391271557161795,
+    "Fam2.1": 0.052921488702623774,
+    "Fam2.2": 0.05896533304124443,
+    "Fam3.1": 0.2692995665744606
+   }
+  },
+  {
+   "scenario": "link gamma 0.2, mixture of specialists",
+   "index": 11,
+   "gamma": 0.2,
+   "tau": 0.7,
+   "floor_var": true,
+   "noise": "level",
+   "mixture": true,
+   "nrep": 100,
+   "fam_primary": {
+    "Fam1A.1": {
+     "kill": 0.53,
+     "partly": 0.0,
+     "support": 0.47
+    },
+    "Fam1B.1": {
+     "kill": 0.69,
+     "partly": 0.0,
+     "support": 0.31
+    },
+    "Fam2.1": {
+     "kill": 0.28,
+     "partly": 0.53,
+     "support": 0.19
+    },
+    "Fam2.2": {
+     "kill": 0.19,
+     "partly": 0.5,
+     "support": 0.31
+    },
+    "Fam3.1": {
+     "kill": 0.87,
+     "partly": 0.0,
+     "support": 0.13
+    }
+   },
+   "fam_plan": {
+    "Fam1A.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam2.1": {
+     "kill": 0.03,
+     "partly": 0.0,
+     "support": 0.97
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.0,
+     "support": 1.0
+    },
+    "Fam3.1": {
+     "kill": 0.07,
+     "partly": 0.04,
+     "support": 0.89
+    }
+   },
+   "fam_raw_no_simex": {
+    "Fam1A.1": {
+     "kill": 0.0,
+     "partly": 0.53,
+     "support": 0.47
+    },
+    "Fam1B.1": {
+     "kill": 0.0,
+     "partly": 0.69,
+     "support": 0.31
+    },
+    "Fam2.1": {
+     "kill": 0.0,
+     "partly": 0.28,
+     "support": 0.72
+    },
+    "Fam2.2": {
+     "kill": 0.0,
+     "partly": 0.19,
+     "support": 0.81
+    },
+    "Fam3.1": {
+     "kill": 0.02,
+     "partly": 0.85,
+     "support": 0.13
+    }
+   },
+   "primary": {
+    "kill": 0.16,
+    "mixed": 0.75,
+    "support": 0.09
+   },
+   "primary_4of5": {
+    "kill": 0.15,
+    "mixed": 0.85,
+    "support": 0.0
+   },
+   "plan": {
+    "kill": 0.0,
+    "mixed": 0.0,
+    "support": 1.0
+   },
+   "plan_4of5": {
+    "kill": 0.0,
+    "mixed": 0.0,
+    "support": 1.0
+   },
+   "raw_no_simex": {
+    "kill": 0.0,
+    "mixed": 0.62,
+    "support": 0.38
+   },
+   "raw_no_simex_4of5": {
+    "kill": 0.0,
+    "mixed": 0.87,
+    "support": 0.13
+   },
+   "means": {
+    "Fam1A.1": {
+     "R_full": -0.641858040036456,
+     "R_adj_raw": -0.2672598126959818,
+     "R_simex": -0.22278961702433775,
+     "R_true": -0.23068566836532703,
+     "ci_hi": 0.008322642528324244,
+     "plan_R_adj": -0.5440136726089677,
+     "n_subset": 172.46
+    },
+    "Fam1B.1": {
+     "R_full": -0.7201285418392004,
+     "R_adj_raw": -0.2588970057161661,
+     "R_simex": -0.16463955751407228,
+     "R_true": -0.1679509632425323,
+     "ci_hi": 0.062443912820097536,
+     "plan_R_adj": -0.521887209589443,
+     "n_subset": 224.73
+    },
+    "Fam2.1": {
+     "R_full": -0.397272844575504,
+     "R_adj_raw": -0.20754801495277653,
+     "R_simex": -0.11764620334652923,
+     "R_true": -0.12436078478441853,
+     "ci_hi": -0.028851467051947854,
+     "plan_R_adj": -0.388852558269644,
+     "n_subset": 1069.21
+    },
+    "Fam2.2": {
+     "R_full": -0.43291216910020563,
+     "R_adj_raw": -0.22527574809622547,
+     "R_simex": -0.1290918023048776,
+     "R_true": -0.13123457795353968,
+     "ci_hi": -0.04481427722389684,
+     "plan_R_adj": -0.40232385046579366,
+     "n_subset": 1150.71
+    },
+    "Fam3.1": {
+     "R_full": -0.7475889903386153,
+     "R_adj_raw": -0.31338420805301814,
+     "R_simex": -0.18268660644760157,
+     "R_true": -0.13123264023834935,
+     "ci_hi": 0.31174236048637494,
+     "plan_R_adj": -0.4456454861257835,
+     "n_subset": 64.6
+    }
+   },
+   "sd_R_simex": {
+    "Fam1A.1": 0.11156021294070027,
+    "Fam1B.1": 0.1141784559959417,
+    "Fam2.1": 0.04443238785444137,
+    "Fam2.2": 0.0420284358587191,
+    "Fam3.1": 0.23826125773471338
+   }
+  }
+ ],
+ "parts": [
+  "t12_planted_part_0-1-2.json",
+  "t12_planted_part_3-4-5.json",
+  "t12_planted_part_6-7-8.json",
+  "t12_planted_part_9-10-11.json"
+ ]
+}
