@@ -450,3 +450,17 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   - The deposited "Mean" row is not the mean or median of the three datasets.
   - Whether to tell the authors is the owner's call.
 - **The study list.** Only N5 (marginal) is left. A new Fable list has been asked for, with the T14 follow-up (an element-balance null for the autocatalytic tiers) as a candidate.
+
+### 2026-11-25: new study list U1–U9 (docs/NEW_STUDIES_2026-11-25.md)
+Ranked by how much the result could change a route, times how feasible it is. Each entry gives the quoted claim, a checked data link, the kill and support rules, the null, the power risk and a prior-art scan.
+1. **U1.** Do T14's nested tiers survive an atom-conserving null? (Peng 2022) This is next. The mixing gate comes first.
+2. **U2.** Encapsulation gains in ribozymes against the difference in noise between conditions. (Lai 2021, data on Zenodo)
+3. **U3.** Bendixsen 2019: is "over half dual-function" a read floor?
+4. **U4.** Papastavrou 2024: fidelity against selection strength. One lineage per arm is the weak point.
+5. **U5.** Goldford 2024: are metal enzymes enriched early at reaction level, tested with a within-pathway permutation?
+6. **U6.** Mizuuchi 2022: which arrows of the replicator network survive replicate noise?
+7. **U7.** Robinson 2022: formose differences between environments against repeat runs.
+8. **U8.** Cleaves 2023: does the accuracy hold when whole sample families are held out? (peripheral)
+9. **U9.** Pressman 2019: is the frustrated landscape real? (gate first)
+
+U5 and U7 were quoted from abstracts only. Before either is sealed, a legal full text has to be read.
