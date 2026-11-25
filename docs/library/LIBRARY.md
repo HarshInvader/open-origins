@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-25. 226 papers: 158 read in full, 68 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-25. 229 papers: 159 read in full, 70 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -8,10 +8,10 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 
 ## Topics
 - [Building blocks](#building-blocks) (28)
-- [From space](#from-space) (12)
+- [From space](#from-space) (13)
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (45)
 - [RNA world](#rna-world) (68)
-- [Telling life apart](#telling-life-apart) (21)
+- [Telling life apart](#telling-life-apart) (23)
 - [Vents and first cells](#vents-and-first-cells) (52)
 
 ## Papers that bear on a current study's plan
@@ -409,6 +409,17 @@ Oba, Koga, Takano et al. (2023). *Nature Communications 14:1292*. [doi:10.1038/s
 - **Key results.** Uracil in Ryugu.
 - **Limits.** Full text: Uracil found in aqueous extracts of two Ryugu samples (A0106, C0107) at different concentrations; nicotinic acid and imidazoles were also detected; only uracil among nucleobases in this study.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+
+### Updated View on Titan's Habitability: Interior and Surface Aqueous Environments
+
+Gonçalves D, Coelho LF, Miranda C, Martins Z (2026). *arXiv:2611.28186*. [doi:10.48550/arXiv.2611.28186](https://arxiv.org/abs/2611.28186). `goncalves-2026-titan-habitability-review` · context · abstract only
+
+- **Question.** Which of Titan's three water settings is best placed for prebiotic chemistry?
+- **Tried.** A review of the interior ocean, cryovolcanic flows and impact-melt pools, with the limits on each.
+- **Method and data.** Literature review ahead of NASA's Dragonfly mission.
+- **Key results.** The interior likely holds water in contact with organics, but how long it stays liquid is now in question. Cryovolcanic melts carry ammonia but freeze fast. Impact-melt pools are warm and long-lived, but short of ammonia. (abstract only)
+- **Limits.** Review; no new data. Only the abstract was read.
+- **Ideas for us.** Context only. None of our current tasks models Titan.
 
 ### An interstellar energetic and non-aqueous pathway to peptide formation
 
@@ -1685,6 +1696,17 @@ Jirasek M, Sharma A, Wong M, Munro J, Cronin L (2026). *ACS Central Science*. [d
 - **Limits.** Presence/absence only (all detected sequences get copy number 1). Protease ensembles are much smaller than control ensembles, and the paper does not show a size-matched null for ER, so ER may partly track ensemble size. Authors state a low ER alone does not prove selection; thermodynamic sinks or undersampling can also lower it. Tandem spectra available only on request.
 - **Ideas for us.** For #22: test whether ER depends on ensemble size by subsampling the CDI and wet-dry ensembles down to protease-sized sets and recomputing ER; if subsampled controls fall to 0.5 to 0.75, the directedness signal is a size artifact. Source data on Zenodo and github.com/croningp/peptide_selection (MIT license).
 
+### What time is it in Assembly Space? Cronin and Walker's "The Physics of Causation" fails elementary dimensional analysis (Comment on arXiv:2601.00515)
+
+Moriarty P (2026). *arXiv:2611.31339 (cond-mat.stat-mech)*. [doi:10.48550/arXiv.2611.31339](https://arxiv.org/abs/2611.31339). `moriarty-2026-assembly-time-dimensions` · useful · full text · touches #7, #22
+
+- **Question.** Does assembly theory's link between the assembly index and clock time hold up dimensionally?
+- **Tried.** Dimensional analysis of the equations in Cronin and Walker's 'The Physics of Causation' (arXiv:2601.00515v3) that tie assembly steps to continuous time.
+- **Method and data.** Theoretical comment; no data. Checks the dimensions of v(t)=(1+h)^t, the identity Δt=h=1/P and a=t·Δt, and of the Ω prefactor in their 'Assembly' A.
+- **Key results.** No assignment of dimensions to h satisfies their three equations and their definitions. If t is a dimensionless count of steps, the e^a weighting reduces to Bernoulli's compound-interest limit with an implicit rate of 1 per step. The new prefactor Ω, 'measured in kJ mol−1' and set to 1, gives 'total causation' the units of a molar energy, yet it is plotted against an entropy. With no rates, the 'finite time' line between spontaneous and selected objects is not testable.
+- **Limits.** A short critique of one essay. It does not test the assembly index as a biosignature, and it sets aside the compression critiques (Abrahão, Ozelim et al.).
+- **Ideas for us.** Our tasks #7 and #22 treat the assembly index only as a measured number, not as time or causation, so nothing changes there. It adds one more reason to keep a kinetic null: any 'selection threshold' we test should be run against a rate-based model in which high-index molecules form through low barriers.
+
 ### Assembly theory collapses to dictionary compression and is rendered redundant by common statistical algorithms
 
 Ozelim, Uthamacumaran, Abrahao, Hernandez-Orozco et al. (2026). *npj Complexity*. [doi:10.1038/s44260-026-00088-w](https://doi.org/10.1038/s44260-026-00088-w). `ozelim-2026-assembly-theory` · useful · abstract only · in news · touches #7, #22
@@ -1704,6 +1726,17 @@ Pagel S, Sharma A, Cronin L (2026). *Journal of Chemical Information and Modelin
 - **Key results.** Exploration ratio of natural products relative to PubChem decays with depth with beta = 0.499 and k about 0.12. Rebuilt spaces give beta 0.279, 0.374 and 0.508 for fragment-selection exponent s = 0.5, 1, 5, and 0.603, 0.647, 0.688 for contingency loss omega = 17, 19, 21. For Brefelamide, similarity of rebuilt molecules falls from about 0.8 (omega = 1) to about 0.15 (omega = 10) over 10,000 rebuilds. Acetylsalicylic acid: MA 8, assembly depth 6.
 - **Limits.** PubChem stands in for 'all possible' molecules and COCONUT for 'evolved' molecules; COCONUT is far smaller, so a falling ratio with depth could arise from sample size alone. No random-subset null of PubChem is shown. Authors note beta is not a process-specific marker of evolution.
 - **Ideas for us.** For #22 and #28: compute the same per-depth ratio for random PubChem subsets of COCONUT size; if beta for random subsets is near 0.499, the 'selection constant' is a sampling artifact. Also useful as a depth-based feature for #28 strata.
+
+### Scale-Controlled Evaluation of Exact Molecular Assembly Index and Compression Baselines Across 626,131 Natural Products
+
+Tang C (2026). *ChemRxiv (posted 2026-11-25)*. [doi:10.26434/chemrxiv.15012760/v1](https://doi.org/10.26434/chemrxiv.15012760/v1). `tang-2026-exact-ma-626k-natural-products` · useful · abstract only · touches #7, #22
+
+- **Question.** Does the molecular assembly index collapse to string compression on a large set of natural products, and do the exact MA solvers agree?
+- **Tried.** Exact MA for COCONUT 2.0 natural products with two solvers, compared with compression baselines.
+- **Method and data.** 695,133 COCONUT 2.0 structures. assembly-theory 0.6.1 (Rust, tree-nauty branch and bound) and the legacy C++ assemblycpp-v5 on a 122-core cluster. Analysis cohort: 626,131 molecules with 1 ≤ MA ≤ 36.
+- **Key results.** Across 626,161 paired records, Rust and C++ MA correlate at r = 0.9674 (ρ = 0.9664), but the integers agree in only 57.20% (358,168). Rust is lower than C++ in 249,243 pairs and higher in 18,750. (abstract only; the compression comparison is not in the abstract)
+- **Limits.** Abstract only: the ChemRxiv page returned 403. Single author, not peer reviewed. Rust being lower in most disagreements could mean the legacy C++ runs were not exact; the abstract does not say which solver is right.
+- **Ideas for us.** Our task #7 used assembly-theory 0.7.0, which matched reference MA on 1,471 of 1,471 small molecules (heavy atoms ≤ 17). Before any MA work on larger molecules (MA ≥ 15, the region our atlas entry leaves open), rerun a subset of COCONUT molecules on two solvers and use only those where they agree.
 
 ### Assembly theory and its relationship with computational complexity
 

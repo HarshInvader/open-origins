@@ -115,3 +115,13 @@ Ranked by how much each one would tell us per unit of work, and by whether it be
 - **What's untested.** Whether the mineral effect beats a size-matched random addition.
 - **Open data.** Needs their network and the list of mineral reactions; check the full text and supplement for a deposit first.
 - **Current study.** No change to K5. A cheap follow-on to #6/#23 if the data are deposited.
+
+## Added 2026-11-25 (paper watch)
+
+### 12. Two-solver agreement before any assembly-index test on large molecules (bears on #7/#22)
+
+- **Source.** Tang 2026, ChemRxiv, doi:10.26434/chemrxiv.15012760/v1 (abstract only; preprint). On 626,161 COCONUT natural products, the Rust assembly-theory 0.6.1 and the legacy C++ solver correlate at r = 0.9674 but give the same integer MA for only 57.20%.
+- **The idea.** Before reopening the "MA ≥ 15" region that our atlas leaves open, compute MA for a random COCONUT subset with assembly-theory 0.7.0 and a second exact solver, keep only molecules where both agree, and check whether the biotic-vs-abiotic result changes when the disagreeing molecules are dropped.
+- **What's untested.** Whether solver disagreement is concentrated at high MA, where a biosignature threshold would sit.
+- **Open data.** COCONUT 2.0 (open); both solvers are open source.
+- **Current study.** None running. A data-quality gate for any future #7/#22 work on large molecules.
