@@ -2694,7 +2694,7 @@
    "method_data": "",
    "key_results": "Triplet substrates trap separated strands; with coupled pH and freeze-thaw cycles a polymerase ribozyme replicates both strands of dsRNAs exponentially, including a fragment of the ribozyme itself; open-ended runs from random pools gave replicating sequences or drifting diverse pools.",
    "limits": "Contradicts site text 'no exponential growth yet' for RNA world. Not whole-ribozyme self-replication, not scenario feedstocks. Full text: Amplification is modest and short-lived (e.g. 9- and 31-fold overall for a defined duplex; 1.2-1.38-fold per cycle for ~4 cycles before plateau); the ribozyme itself is supplied, and only a fragment of it is replicated.",
-   "ideas_for_us": "Already in the paper ledger (docs/PAPERS.csv). T3 (not decidable, see T3_STATUS.md): 1.2 to 1.38-fold gain per pH and freeze-thaw cycle (synthesis at -7 C, pH 9, 1 mM Mg; strand separation at pH 3.6, 80 C). No per-nucleotide rate was found. T3 (not decidable, see T3_STATUS.md): 1.2 to 1.38-fold gain per pH and freeze-thaw cycle (synthesis at -7 C, pH 9, 1 mM Mg; strand separation at pH 3.6, 80 C). No per-nucleotide rate was found.",
+   "ideas_for_us": "Already in the paper ledger (docs/PAPERS.csv). T3 (not decidable, see T3_STATUS.md): 1.2 to 1.38-fold gain per pH and freeze-thaw cycle (synthesis at -7 C, pH 9, 1 mM Mg; strand separation at pH 3.6, 80 C). No per-nucleotide rate was found. T3 (not decidable, see T3_STATUS.md): 1.2 to 1.38-fold gain per pH and freeze-thaw cycle (synthesis at -7 C, pH 9, 1 mM Mg; strand separation at pH 3.6, 80 C). No per-nucleotide rate was found. T16 (not decidable, 2026-11-25, experiments/t16_attwater_exponential/README.md): is the Fig. 3e growth exponential rather than parabolic or linear? With 3 reactions over cycles 0-4, and scatter that is mostly a constant per-reaction offset, the plan's AICc test reaches support under 1% of the time even if growth is exponential, and would call it 'not exponential' 45-100% of the time, so it was stopped before sealing. Two reporting points, no test needed: the caption's e^0.38x and e^0.20x are 1.46- and 1.22-fold per cycle, while the text says '1.2- and 1.38-fold'; and the deposited 'Mean' row is not the arithmetic mean, geometric mean or median of the three datasets.",
    "touches": [
     "#2",
     "#18",
@@ -2705,7 +2705,7 @@
    "in_news": true,
    "added": "2026-11-19",
    "verified": true,
-   "date": "2026-11-24",
+   "date": "2026-11-25",
    "source_opened": "full text (www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/PMC12226338/unicode)",
    "changes_plan": "",
    "imported": true

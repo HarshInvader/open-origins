@@ -436,3 +436,17 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   - Rewiring makes networks *more* autocatalytic. Real biochemistry is tiered because its autocatalysis is constrained.
   - The abiotic network has a single set, consistent with its null, so the result covers the biochemical half only.
 - **Next.** An element-balance null built from KEGG formulas would separate atom bookkeeping from biochemical organisation. It is a candidate follow-up.
+
+### 2026-11-25: T16 (S7, is Attwater 2025's ribozyme replication exponential?): not decidable, stopped at the power gate
+- **Record.** `experiments/t16_attwater_exponential/README.md`. No growth law was ever fitted to the real data. Only the replicate scatter was read.
+- **Why it stopped.**
+  - The data are 3 reactions over growth cycles 0–4.
+  - 86–92% of the scatter is a constant offset per reaction.
+  - At the published rates, the plan's AICc rule supports "exponential" under 1% of the time even when growth truly is exponential.
+  - Its kill would fire 45–100% of the time on a truly exponential curve.
+  - Using all 9 cycles with a plateau term makes it worse.
+- **Noted, no test needed.**
+  - The caption's e^0.38x and e^0.20x mean 1.46- and 1.22-fold per cycle, but the text says "1.2- and 1.38-fold".
+  - The deposited "Mean" row is not the mean or median of the three datasets.
+  - Whether to tell the authors is the owner's call.
+- **The study list.** Only N5 (marginal) is left. A new Fable list has been asked for, with the T14 follow-up (an element-balance null for the autocatalytic tiers) as a candidate.

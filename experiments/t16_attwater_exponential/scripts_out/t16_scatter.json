@@ -1,0 +1,73 @@
+{
+ "cycles": [
+  0.0,
+  1.0,
+  2.0,
+  3.0,
+  4.0,
+  5.0,
+  6.0,
+  7.0,
+  8.0
+ ],
+ "strands": {
+  "FITC": {
+   "nonpositive_values": 0,
+   "mean_row_vs_rep_avg_max_rel_diff": 0.16034994325968618,
+   "pooled_log_sd_c1_4": 0.32253922010320213,
+   "df_c1_4": 8,
+   "dataset_effect_share_c1_4": 0.9196044554353497,
+   "within_log_sd_c1_4": 0.1056009658664527,
+   "df_within_c1_4": 6,
+   "dataset_offset_sd_c1_4": 0.309302239744293,
+   "ss_share_c1_4": {
+    "dataset_constant": 0.9196044554353497,
+    "dataset_slope": 0.06624112793176755,
+    "residual": 0.014154416632882864
+   },
+   "pooled_log_sd_c1_8": 0.4195299587023054,
+   "df_c1_8": 16,
+   "dataset_effect_share_c1_8": 0.8631097787892192,
+   "within_log_sd_c1_8": 0.1659377379204328,
+   "df_within_c1_8": 14,
+   "dataset_offset_sd_c1_8": 0.3897588613372077,
+   "ss_share_c1_8": {
+    "dataset_constant": 0.8631097787892192,
+    "dataset_slope": 0.08122743262652123,
+    "residual": 0.0556627885842598
+   },
+   "cycle0_max_abs_log_dev": 0.0,
+   "mean_row_vs_geomean_max_rel_diff": 0.2657322411412038,
+   "mean_row_vs_median_max_rel_diff": 0.6564701980582525
+  },
+  "Cy5": {
+   "nonpositive_values": 0,
+   "mean_row_vs_rep_avg_max_rel_diff": 0.31177558447160303,
+   "pooled_log_sd_c1_4": 0.23729495031372208,
+   "df_c1_4": 8,
+   "dataset_effect_share_c1_4": 0.8566550833788082,
+   "within_log_sd_c1_4": 0.10374066149662459,
+   "df_within_c1_4": 6,
+   "dataset_offset_sd_c1_4": 0.2196299155592742,
+   "ss_share_c1_4": {
+    "dataset_constant": 0.8566550833788082,
+    "dataset_slope": 0.13589627002298474,
+    "residual": 0.0074486465982073246
+   },
+   "pooled_log_sd_c1_8": 0.3661605205151935,
+   "df_c1_8": 16,
+   "dataset_effect_share_c1_8": 0.7407016982099333,
+   "within_log_sd_c1_8": 0.1993275489814554,
+   "df_within_c1_8": 14,
+   "dataset_offset_sd_c1_8": 0.31513249431607687,
+   "ss_share_c1_8": {
+    "dataset_constant": 0.7407016982099333,
+    "dataset_slope": 0.06249612119455204,
+    "residual": 0.19680218059551474
+   },
+   "cycle0_max_abs_log_dev": 0.0,
+   "mean_row_vs_geomean_max_rel_diff": 0.20994348774432,
+   "mean_row_vs_median_max_rel_diff": 0.2075164221854304
+  }
+ }
+}
