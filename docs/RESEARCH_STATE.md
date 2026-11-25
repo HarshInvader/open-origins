@@ -424,3 +424,15 @@ The owner asked whether Fable's review was right. Each of its numeric claims was
   - **Numbers.** The median dynamic-vs-steady shift is 0.9–2.4 within-run SD. Repeat runs at identical settings differ by 2.7–6 SD (DHA, threose, xylulose) and about 14 SD (erythrulose). Kill holds in 4 of 4 compounds, and in 3 of 3 without erythrulose.
   - **Reading.** The flow effect is not shown beyond run-to-run reproducibility. The repeats span days and the comparisons do not, and power is limited, so this is not proof of no effect.
 - **Next.** N5 (marginal, gate first) or S7 (Attwater, gate first). K6 continues.
+
+### 2026-11-25: T14 result (N3, Peng/Linderoth/Baum 2022 autocatalytic tiers against rewired networks): support
+- **Sealed in 78bd277 and run** detached, with 200 + 200 rewires and no fallback. Details: `experiments/t14_autocatalytic_tiers/T14_RESULTS.md`.
+- **Numbers.**
+  - The biochemical network has 3 nested sets (nested share 1.0, chain depth 3).
+  - Under both degree-preserving nulls, the rewired copies give 1 set and nested share 0 at every central quantile.
+  - Rewired networks have 3–4× more seeds (median 1,349 swap, 1,003 strict, against 304) and a largest set about 2× bigger.
+- **Reading.**
+  - This is the first support in the series. Nested tiers are a property of the specific chemistry, not of degrees.
+  - Rewiring makes networks *more* autocatalytic. Real biochemistry is tiered because its autocatalysis is constrained.
+  - The abiotic network has a single set, consistent with its null, so the result covers the biochemical half only.
+- **Next.** An element-balance null built from KEGG formulas would separate atom bookkeeping from biochemical organisation. It is a candidate follow-up.

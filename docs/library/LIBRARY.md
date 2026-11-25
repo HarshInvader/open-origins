@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-25. 210 papers: 147 read in full, 63 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-25. 213 papers: 150 read in full, 63 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -12,7 +12,7 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 - [LUCA and the tree of life](#luca-and-the-tree-of-life) (44)
 - [RNA world](#rna-world) (63)
 - [Telling life apart](#telling-life-apart) (20)
-- [Vents and first cells](#vents-and-first-cells) (47)
+- [Vents and first cells](#vents-and-first-cells) (50)
 
 ## Papers that bear on a current study's plan
 
@@ -1777,6 +1777,17 @@ Cohen ZR, Ding D, Zhou L, DasGupta S, Haas S, Sinclair KP, Todd ZR, Black RA, Sz
 - **Limits.** Two lakes only. They write that it is 'unclear' whether hot springs or vents can support RNA too, which suggests a special role for soda lakes. The one-nucleotide rates are in a figure only, and the primer length is not stated in the text.
 - **Ideas for us.** T3 (not decidable, see T3_STATUS.md): the one direct measurement of RNA lasting in field water, and the best known-answer check for the rate law (our law gives 1.66% breakage per link against their quoted about 1%). Their idea that low divalent cations offset high pH rests on the part of the law we could not confirm below 5 mM magnesium. T4 (descriptive, see T4_STATUS.md): the claim T4 looks at. T4 extends this two-lake joint test to a database of natural waters, and finds hot-spring and vent chemistry almost never meets both windows. T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): the soda-lake route (carbonate removes Ca while about 1 mM Mg stays) that T7 tests on Yellowstone spring water. It works for only a few percent of waters, mostly near-neutral to alkaline and Mg-rich, Na-poor ones.
 
+### The hierarchical organization of autocatalytic reaction networks and its relevance to the origin of life
+
+Peng Z, Linderoth J, Baum DA (2022). *PLoS Comput. Biol. 18:e1010498*. [doi:10.1371/journal.pcbi.1010498](https://doi.org/10.1371/journal.pcbi.1010498). `peng-2022-hierarchical-autocatalytic-networks` · core · full text
+
+- **Question.** Do abiotic and biochemical reaction networks contain seed-dependent autocatalytic systems (SDASs), and are they organised in tiers?
+- **Tried.** Expand an abiotic network (277 species, 717 reactions) and a KEGG-derived biochemical network (4,216 species, 8,402 reactions) from fixed food sets, find singleton seeds that induce self-maintaining sets, and compare the sets.
+- **Method and data.** Network expansion plus a feasibility LP for self-maintenance; reaction tables and Python scripts in the supplement (CC BY).
+- **Key results.** Biochemical: 304 supported seeds in three cliques inducing nested SDASs of 301, 357 and 1,414 species. Abiotic: one SDAS of 91 species. 'the abiotic and biochemical networks share multiple properties, including hierarchically organized SDASs'.
+- **Limits.** No randomised or rewired comparison; the abiotic network has a single SDAS, so it shows no nesting.
+- **Ideas for us.** T14 (sealed, 2026-11-25, experiments/t14_autocatalytic_tiers/T14_RESULTS.md): against 200+200 degree-preserving rewires (tier 0 fixed), the biochemical network's 3 nested sets are never matched (rewired: 1 set, nested share 0). Sealed verdict support. But rewired networks have 3-4x more seeds and a set twice as big: real biochemistry is tiered because its autocatalysis is constrained. A null that keeps element balance is the next test.
+
 ### Non-enzymatic template-directed RNA synthesis inside model protocells
 
 Adamala K, Szostak JW (2013). *Science 342:1098-1100*. [doi:10.1126/science.1241888](https://doi.org/10.1126/science.1241888). `adamala-szostak-2013-copying-inside-protocells` · core · full text
@@ -1860,7 +1871,7 @@ Golnik R, Gatter T, Hordijk W, Stadler PF, Vassena N (2026). *Journal of Theoret
 - **Method and data.** Mathematical proof.
 - **Key results.** Under mild and general conditions, any RAF is stoichiometrically autocatalytic (as stated in the abstract).
 - **Limits.** (abstract only) The exact 'mild conditions' were not read. Theory paper, no data.
-- **Ideas for us.** For #6/#23: check our real and null RAFs for stoichiometric autocatalysis. If nearly all null RAFs also pass, then neither definition separates Xavier 2020's RAF from nulls, which strengthens the negative result. Worth reading the full text before using the conditions.
+- **Ideas for us.** For #6/#23: check our real and null RAFs for stoichiometric autocatalysis. If nearly all null RAFs also pass, then neither definition separates Xavier 2020's RAF from nulls, which strengthens the negative result. Worth reading the full text before using the conditions. Checked as prior art for T14 (sealed, 2026-11-25, experiments/t14_autocatalytic_tiers/T14_RESULTS.md): formal theory naming the SDAS concept of Peng 2022; it analyses no randomised network.
 
 ### Metal-catalyzed phosphorylation by phosphite and energy at origins
 
@@ -2141,6 +2152,17 @@ Mansy SS, Szostak JW (2008). *PNAS 105:13351*. [doi:10.1073/pnas.0805086105](htt
 - **Limits.** Lab buffer, one-hour heating.
 - **Ideas for us.** T4 (descriptive, see T4_STATUS.md): temperature is not a limit in these sources, so T4 has no temperature condition. The 4 mM Mg figure supports the mixed-vesicle window.
 
+### Biosynthetic Potentials of Metabolites and Their Hierarchical Organization
+
+Matthäus F, Salazar C, Ebenhöh O (2008). *PLoS Comput. Biol. 4:e1000049*. [doi:10.1371/journal.pcbi.1000049](https://doi.org/10.1371/journal.pcbi.1000049). `matthaus-2008-biosynthetic-potentials-hierarchy` · useful · full text
+
+- **Question.** Are the biosynthetic potentials (scopes) of metabolites in KEGG organised hierarchically?
+- **Tried.** Compute network-expansion scopes from many random seed sets in KEGG and compare them.
+- **Method and data.** Network expansion on KEGG; 1,000 random seed sets per seed size 2-20.
+- **Key results.** 'most of the resulting consensus scopes overlap or are fully contained in others, revealing a hierarchical ordering of metabolites'; concluded to be 'an intrinsic characteristic of the metabolic network itself'.
+- **Limits.** Randomises seed sets, never the network; scopes need no autocatalysis.
+- **Ideas for us.** T14 (sealed, 2026-11-25, experiments/t14_autocatalytic_tiers/T14_RESULTS.md): the closest earlier work. T14 adds the network null it lacked: for SDAS tiers (which also need self-maintenance) the nesting does not survive degree-preserving rewiring, which supports its 'intrinsic' reading for KEGG.
+
 ### Selection for propagule formation in prebiotic chemical ecosystems
 
 Anderson N, Baum D (2026). *bioRxiv (Evolutionary Biology)*. [doi:10.64898/2026.09.08.750225](https://doi.org/10.64898/2026.09.08.750225). `anderson-baum-2026-propagules` · context · abstract only · touches #8
@@ -2228,3 +2250,14 @@ Subbotin VM, Turner BA, Davies BA, Lopez AG, Fiksel G (2026). *Life 16:542*. [do
 - **Key results.** The experiments and simulations show particles gathering at the floor of a bowl-shaped crater, especially with periodic seismic disturbance.
 - **Limits.** The simulations use 350 um particles; the authors note that realistic 350 nm liposomes would take about six orders of magnitude longer, and fluid motion is not included.
 - **Ideas for us.** T7 (inconclusive, see experiments/t7_evaporation_window/T7_RESULTS.md): opened during the prior-art search and found not relevant (evaporation appears only in a list of settings); not cited for any claim.
+
+### Self-generating autocatalytic networks: structural results, algorithms and their relevance to early biochemistry
+
+Huson D, Xavier JC, Steel M (2024). *J. R. Soc. Interface 21:20230732*. [doi:10.1098/rsif.2023.0732](https://doi.org/10.1098/rsif.2023.0732). `huson-2024-self-generating-autocatalytic-networks` · background · full text
+
+- **Question.** What are the structural properties of self-generating autocatalytic (RAF) networks, and how can they be computed?
+- **Tried.** Structural results and algorithms for self-generating autocatalytic networks, with applications to early biochemistry.
+- **Method and data.** Theory and algorithms.
+- **Key results.** Structural and algorithmic results for RAF-type networks; cites Peng 2022 once among 'other recent structural approaches'.
+- **Limits.** No rewiring or null-model test.
+- **Ideas for us.** T14 (sealed, 2026-11-25, experiments/t14_autocatalytic_tiers/T14_RESULTS.md): checked as prior art; it does not test whether SDAS tiers exceed a degree null.

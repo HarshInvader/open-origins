@@ -1,0 +1,362 @@
+{
+ "mode": "real",
+ "script_sha256": "48ecdd36d68b3a7a281a56b85755e85c6ee67a0d212b99a0940bb5197cb57f62",
+ "fallback": false,
+ "verdict": {
+  "verdict": "partly",
+  "kill": false,
+  "support": false,
+  "agreeing_stats": [
+   "n_seeds",
+   "largest"
+  ],
+  "bio_alone_outside_both_ge3": true,
+  "hier": {
+   "verdict": "support",
+   "kill": false,
+   "support": true,
+   "abio_contradicts": false,
+   "scale_positions_swap": {
+    "n_seeds": -1,
+    "largest": -1
+   }
+  },
+  "primary_rule": "hier",
+  "primary_verdict": "support"
+ },
+ "class": {
+  "bio": {
+   "per_stat": {
+    "n_seeds": {
+     "inside95_swap": false,
+     "out99_swap": -1,
+     "out99_strict": -1,
+     "out99_both": -1
+    },
+    "n_sets": {
+     "inside95_swap": false,
+     "out99_swap": 1,
+     "out99_strict": 1,
+     "out99_both": 1
+    },
+    "nested_share": {
+     "inside95_swap": false,
+     "out99_swap": 1,
+     "out99_strict": 1,
+     "out99_both": 1
+    },
+    "largest": {
+     "inside95_swap": false,
+     "out99_swap": -1,
+     "out99_strict": -1,
+     "out99_both": -1
+    }
+   },
+   "n_inside95_swap": 0,
+   "n_out99_both": 4
+  },
+  "abio": {
+   "per_stat": {
+    "n_seeds": {
+     "inside95_swap": false,
+     "out99_swap": -1,
+     "out99_strict": -1,
+     "out99_both": -1
+    },
+    "n_sets": {
+     "inside95_swap": true,
+     "out99_swap": 0,
+     "out99_strict": 0,
+     "out99_both": 0
+    },
+    "nested_share": {
+     "inside95_swap": true,
+     "out99_swap": 0,
+     "out99_strict": 0,
+     "out99_both": 0
+    },
+    "largest": {
+     "inside95_swap": false,
+     "out99_swap": -1,
+     "out99_strict": -1,
+     "out99_both": -1
+    }
+   },
+   "n_inside95_swap": 2,
+   "n_out99_both": 2
+  }
+ },
+ "observed": {
+  "bio": {
+   "n_seeds": 304.0,
+   "n_sets": 3,
+   "nested_share": 1.0,
+   "largest": 1414,
+   "chain_depth": 3,
+   "set_sizes": [
+    [
+     1414,
+     4114,
+     3
+    ],
+    [
+     357,
+     916,
+     34
+    ],
+    [
+     301,
+     736,
+     267
+    ]
+   ]
+  },
+  "abio": {
+   "n_seeds": 12.0,
+   "n_sets": 1,
+   "nested_share": 0.0,
+   "largest": 91,
+   "chain_depth": 1,
+   "set_sizes": [
+    [
+     91,
+     220,
+     12
+    ]
+   ]
+  }
+ },
+ "null_quantiles": {
+  "bio": {
+   "strict": {
+    "n_seeds": [
+     925.965,
+     938.0,
+     1003.0,
+     1049.0,
+     1061.005
+    ],
+    "n_sets": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0049999999999955
+    ],
+    "nested_share": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0049999999999954525
+    ],
+    "largest": [
+     2472.99,
+     2490.0,
+     2550.0,
+     2609.1,
+     2622.005
+    ],
+    "chain_depth": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0049999999999955
+    ]
+   },
+   "swap": {
+    "n_seeds": [
+     1286.995,
+     1294.0,
+     1349.0,
+     1397.05,
+     1406.1949999999997
+    ],
+    "n_sets": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0049999999999955
+    ],
+    "nested_share": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0049999999999954525
+    ],
+    "largest": [
+     3113.945,
+     3136.95,
+     3214.0,
+     3291.025,
+     3323.1749999999997
+    ],
+    "chain_depth": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0049999999999955
+    ]
+   },
+   "swap_plan": {
+    "n_seeds": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_sets": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "nested_share": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "largest": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "chain_depth": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "abio": {
+   "strict": {
+    "n_seeds": [
+     33.98,
+     35.95,
+     45.5,
+     58.0,
+     62.014999999999986
+    ],
+    "n_sets": [
+     1.0,
+     1.0,
+     1.0,
+     2.0,
+     2.0
+    ],
+    "nested_share": [
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "largest": [
+     201.985,
+     203.975,
+     215.0,
+     224.0,
+     226.005
+    ],
+    "chain_depth": [
+     1.0,
+     1.0,
+     1.0,
+     2.0,
+     2.0
+    ]
+   },
+   "swap": {
+    "n_seeds": [
+     50.975,
+     53.0,
+     65.0,
+     74.0,
+     77.0
+    ],
+    "n_sets": [
+     1.0,
+     1.0,
+     1.0,
+     1.0250000000000057,
+     2.0
+    ],
+    "nested_share": [
+     0.0,
+     0.0,
+     0.0,
+     0.025000000000005684,
+     1.0
+    ],
+    "largest": [
+     213.995,
+     214.0,
+     224.0,
+     232.0,
+     236.005
+    ],
+    "chain_depth": [
+     1.0,
+     1.0,
+     1.0,
+     1.0250000000000057,
+     2.0
+    ]
+   },
+   "swap_plan": {
+    "n_seeds": [
+     47.205,
+     54.225,
+     65.0,
+     72.0,
+     72.0
+    ],
+    "n_sets": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.7550000000000026
+    ],
+    "nested_share": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.7550000000000026
+    ],
+    "largest": [
+     215.245,
+     216.0,
+     222.0,
+     230.775,
+     234.02
+    ],
+    "chain_depth": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.7550000000000026
+    ]
+   }
+  }
+ },
+ "plan_rule_with_plan_null_kill": false,
+ "null_scan_cpu_seconds_median": {
+  "bio": 5.255,
+  "abio": 0.04
+ }
+}
