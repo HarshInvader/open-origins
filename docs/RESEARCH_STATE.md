@@ -480,3 +480,24 @@ Ranked by how much the result could change a route, times how feasible it is. Ea
 9. **U9.** Pressman 2019: is the frustrated landscape real? (gate first)
 
 U5 and U7 were quoted from abstracts only. Before either is sealed, a legal full text has to be read.
+
+### 2026-11-26: moved to a new laptop; T18b pilot relaunched; queue re-ranked (Fable)
+- **Environment.** Repo venv `.venv`: Python 3.15.2, numpy 2.5.5, scipy 1.18.1 (the same numpy/scipy as the old `t1_vent_exergonic/.venv`). Every sealed file matches its latest line in `docs/prereg/HASHES.txt`; the older mismatching lines are superseded by logged deviations. IQ-TREE 3.1.4 and the unchanged ALE binaries were restored, and ALE reproduces a stored family's likelihoods exactly (`experiments/luca_calib/k6/OPERATIONS.md`, OPS-3).
+- **T18b.** The old laptop left no finished pilot replicate. The pilot (prereg F4: B and E 0–4; A, C, D and F 0–1) was relaunched at 17:39Z with 3 single-thread workers at nice 20. Before any replicate finished, the rival explanations of a pass or fail were written into `experiments/t18_qt45_error_threshold/README.md`. Open issue: prereg F4 says planted N drops to 3,000 once a replicate takes more than 10 CPU min, but the committed code keeps N = 5,000. The pilot runs as committed; the coordinator decides.
+- **T17 (U1).** It never reached `real`. The blind dry run has 21 of 28 parts; Null A draws 25–200 are missing, and the sealed `dryrun_verdict` refuses until every null is complete. The README now says "sealed". It resumes after the T18b pilot (one heavy job per project).
+- **K6.** 505 of 800 families done. It runs after T17.
+- **Attwater email (T16).** The coordinator approved it on 2026-11-26. The address is from the official UCL profile. The draft is in the hub's `.local`. **Not sent:** AgentMail is not connected in this laptop's executor, so it needs the owner to reconnect the AgentMail integration.
+- **Fable re-rank (2026-11-26).**
+  1. U4 (Papastavrou 2024, CC0 Zenodo 10714366; selection strength vs fidelity in the only lab RNA error-threshold demonstration).
+  2. K7 full planted test (Linux ALE).
+  3. U5 (Goldford 2024; needs a legal full text).
+  4. U2 (Lai 2021).
+  5. U3 (Bendixsen 2019).
+  6. U9, gate only.
+  7. U6, power gate only.
+  - Drop U7 (T15 already makes the point; four repeat sets cannot support) and U8 (peripheral).
+  - Queue advice: T18b pilot verdict, then T17 real (outcomes are kill, partly or not decidable, since support is unreachable by its own prereg), then K7 when Linux is available, then the rest of K6. If the T18b pilot survives, do not automatically spend the 20–30 core-hours of the full test ahead of U4 and K7.
+- **Decision.**
+  - Adopted, with one change: K7 needs Linux ALE. AWS has about $1 left until 1 December, so K6 keeps the laptop slot after T17, and K7 goes first on AWS from 1 December (coordinator approved spot within the cap).
+  - U4 prior art and a data check are prepared now as the light job: low CPU, done alongside.
+  - Fable's idea of a free GitHub-hosted Linux runner for K7 is the owner's call. It is not used.
