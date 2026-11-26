@@ -1,0 +1,98 @@
+{
+ "mode": "dryrun_standin_one_B_rewire_blind",
+ "script_sha256": "3f5fb5544fc9c1c3d3b575c27f432967f0b305d7640fb46012f41457964bc533",
+ "verdict": "kill",
+ "flags": {
+  "A": {
+   "n_seeds": {
+    "inside95": true,
+    "out99": 0
+   },
+   "n_sets": {
+    "inside95": true,
+    "out99": 0
+   },
+   "nested_share": {
+    "inside95": true,
+    "out99": 0
+   },
+   "largest": {
+    "inside95": true,
+    "out99": 0
+   },
+   "chain_depth": {
+    "inside95": true,
+    "out99": 0
+   }
+  },
+  "B": {
+   "n_seeds": {
+    "inside95": false,
+    "out99": 0
+   },
+   "n_sets": {
+    "inside95": true,
+    "out99": 0
+   },
+   "nested_share": {
+    "inside95": true,
+    "out99": 0
+   },
+   "largest": {
+    "inside95": false,
+    "out99": 1
+   },
+   "chain_depth": {
+    "inside95": true,
+    "out99": 0
+   }
+  },
+  "Bconv": {
+   "n_seeds": {
+    "inside95": true,
+    "out99": 0
+   },
+   "n_sets": {
+    "inside95": true,
+    "out99": 0
+   },
+   "nested_share": {
+    "inside95": true,
+    "out99": 0
+   },
+   "largest": {
+    "inside95": false,
+    "out99": 0
+   },
+   "chain_depth": {
+    "inside95": true,
+    "out99": 0
+   }
+  },
+  "C": {
+   "n_seeds": {
+    "inside95": false,
+    "out99": 0
+   },
+   "n_sets": {
+    "inside95": true,
+    "out99": 0
+   },
+   "nested_share": {
+    "inside95": true,
+    "out99": 0
+   },
+   "largest": {
+    "inside95": true,
+    "out99": 0
+   },
+   "chain_depth": {
+    "inside95": true,
+    "out99": 0
+   }
+  }
+ },
+ "null_scan_cpu_seconds_median": 5.77,
+ "fallback": false,
+ "note": "No statistic of the stand-in or its nulls is printed or saved; draws in work/dryrun_blind/."
+}

@@ -1,4 +1,7 @@
 [
+  {"date": "2026-11-26", "kind": "correction", "title": "Our first positive finding did not survive our own harder test",
+   "body": "Last week we found that the layered self-sustaining sets in a map of biochemistry were not reproduced when we shuffled the network at random. We then built a shuffle that keeps every reaction chemically balanced, which the first one did not. Those chemically legal shuffles reproduce the layers exactly: the real network's three nested sets and its depth of three sit right at the middle of what random balanced networks give. So the layering is not evidence about the chemistry of early metabolism, and we have retracted that reading of our own result.",
+   "link": "https://github.com/HarshInvader/open-origins/blob/main/experiments/t17_atom_balanced_tiers/T17_RESULTS.md"},
   {"date": "2026-11-26", "kind": "killed", "title": "QT45's error threshold cannot be pinned down from its measured singles and doubles",
    "body": "Our second method, which keeps the measured pair effects, overestimated the planted threshold in every test landscape with only higher-order epistasis (0 of 5 within 20%), while the first method underestimated it by about 27%. The two reasonable extrapolations bracket the truth from both sides, so we closed this line without computing a real threshold.",
    "link": "https://github.com/HarshInvader/open-origins/blob/main/docs/prereg/t18b_qt45_pair_epistasis.md"},

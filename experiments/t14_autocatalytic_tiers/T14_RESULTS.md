@@ -1,5 +1,7 @@
 # T14 result: KEGG biochemistry's nested autocatalytic tiers are not reproduced by rewired networks; sealed verdict support (biochemical network only)
 
+> **Superseded reading (2026-11-26).** T17 (study U1) re-ran this comparison with nulls that keep every reaction atom balanced. Those nulls reproduce the real network's 3 nested sets, its nested share of 1.0 and its chain depth of 3: every real statistic lies inside the central 95% of all four nulls, and the sealed verdict there is **kill**. The numbers below are correct for T14's degree-preserving nulls, but those nulls break atom balance, so the reading "nested tiers are a property of the specific chemistry" is retracted. See `experiments/t17_atom_balanced_tiers/T17_RESULTS.md`.
+
 Prereg: `docs/prereg/t14_autocatalytic_tiers.md`, sealed in 78bd277 (`HASHES.txt`). Script: `scripts/t14_analysis.py` (sha256 48ecdd36…). Output: `scripts_out/t14_real.json`. Run detached in parts, 200 + 200 rewires per database; the time fallback was not triggered.
 
 ## Claim

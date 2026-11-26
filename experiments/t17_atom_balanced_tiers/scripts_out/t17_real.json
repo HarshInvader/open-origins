@@ -1,0 +1,293 @@
+{
+ "mode": "real",
+ "script_sha256": "3f5fb5544fc9c1c3d3b575c27f432967f0b305d7640fb46012f41457964bc533",
+ "fallback": false,
+ "verdict": {
+  "verdict": "kill",
+  "kill": true,
+  "support": false,
+  "flagged_by_null": {
+   "A": false,
+   "B": false,
+   "Bconv": false,
+   "C": false
+  },
+  "support_c1_reported_only": false,
+  "flagged_by_null_c1_reported_only": {
+   "A": false,
+   "B": false,
+   "Bconv": false,
+   "C": false
+  }
+ },
+ "class": {
+  "A": {
+   "n_seeds": {
+    "inside95": true,
+    "out99": 0
+   },
+   "n_sets": {
+    "inside95": true,
+    "out99": 0
+   },
+   "nested_share": {
+    "inside95": true,
+    "out99": 0
+   },
+   "largest": {
+    "inside95": true,
+    "out99": 0
+   },
+   "chain_depth": {
+    "inside95": true,
+    "out99": 0
+   }
+  },
+  "B": {
+   "n_seeds": {
+    "inside95": true,
+    "out99": 0
+   },
+   "n_sets": {
+    "inside95": true,
+    "out99": 0
+   },
+   "nested_share": {
+    "inside95": true,
+    "out99": 0
+   },
+   "largest": {
+    "inside95": true,
+    "out99": 0
+   },
+   "chain_depth": {
+    "inside95": true,
+    "out99": 0
+   }
+  },
+  "Bconv": {
+   "n_seeds": {
+    "inside95": true,
+    "out99": 0
+   },
+   "n_sets": {
+    "inside95": true,
+    "out99": 0
+   },
+   "nested_share": {
+    "inside95": true,
+    "out99": 0
+   },
+   "largest": {
+    "inside95": true,
+    "out99": 0
+   },
+   "chain_depth": {
+    "inside95": true,
+    "out99": 0
+   }
+  },
+  "C": {
+   "n_seeds": {
+    "inside95": true,
+    "out99": 0
+   },
+   "n_sets": {
+    "inside95": true,
+    "out99": 0
+   },
+   "nested_share": {
+    "inside95": true,
+    "out99": 0
+   },
+   "largest": {
+    "inside95": true,
+    "out99": 0
+   },
+   "chain_depth": {
+    "inside95": true,
+    "out99": 0
+   }
+  }
+ },
+ "observed": {
+  "n_seeds": 304.0,
+  "n_sets": 3,
+  "nested_share": 1.0,
+  "largest": 1414,
+  "chain_depth": 3,
+  "set_sizes": [
+   [
+    1414,
+    4114,
+    3
+   ],
+   [
+    357,
+    916,
+    34
+   ],
+   [
+    301,
+    736,
+    267
+   ]
+  ]
+ },
+ "null_quantiles": {
+  "A": {
+   "n_seeds": [
+    3.98,
+    78.65,
+    411.0,
+    482.0,
+    493.005
+   ],
+   "n_sets": [
+    0.995,
+    1.0,
+    3.0,
+    5.0,
+    5.0049999999999955
+   ],
+   "nested_share": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "largest": [
+    454.715,
+    499.675,
+    1637.5,
+    1830.0,
+    1843.0149999999999
+   ],
+   "chain_depth": [
+    0.995,
+    1.0,
+    3.0,
+    5.0,
+    5.0049999999999955
+   ]
+  },
+  "B": {
+   "n_seeds": [
+    129.985,
+    181.85,
+    456.0,
+    579.125,
+    600.0849999999999
+   ],
+   "n_sets": [
+    1.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0
+   ],
+   "nested_share": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "largest": [
+    413.6,
+    576.675,
+    1569.0,
+    1779.025,
+    1798.1799999999998
+   ],
+   "chain_depth": [
+    1.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0
+   ]
+  },
+  "Bconv": {
+   "n_seeds": [
+    121.435,
+    148.15,
+    452.5,
+    614.15,
+    653.0899999999999
+   ],
+   "n_sets": [
+    1.0,
+    1.0,
+    1.5,
+    3.0,
+    3.0
+   ],
+   "nested_share": [
+    0.0,
+    0.0,
+    0.5,
+    1.0,
+    1.0
+   ],
+   "largest": [
+    1202.56,
+    1278.0,
+    1516.5,
+    1755.4999999999998,
+    1787.1599999999999
+   ],
+   "chain_depth": [
+    1.0,
+    1.0,
+    1.5,
+    3.0,
+    3.0
+   ]
+  },
+  "C": {
+   "n_seeds": [
+    0.0,
+    0.0,
+    357.0,
+    557.025,
+    591.02
+   ],
+   "n_sets": [
+    0.0,
+    0.0,
+    2.0,
+    4.0,
+    5.0
+   ],
+   "nested_share": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "largest": [
+    0.0,
+    0.0,
+    1626.0,
+    1865.05,
+    1876.06
+   ],
+   "chain_depth": [
+    0.0,
+    0.0,
+    2.0,
+    4.0,
+    4.0
+   ]
+  }
+ },
+ "mixing_B_real_draws": {
+  "mean_share_changed": 0.7380242825607064,
+  "mean_jaccard": 0.17492535965673464,
+  "pass": true
+ },
+ "null_scan_cpu_seconds_median": 1.37
+}
