@@ -1,0 +1,57 @@
+{
+ "mode": "t19_gate1_structure_only",
+ "inputs": {
+  "dataset_s4_sha256": "85fc8b6ce32932cf346a2d30a3a6ddc0e6e43b469abdb289a7471098f99b65ff",
+  "formulas_sha256": "c16698c20b4fa32121f11b00f4b1d22831f189fa9063b7c86f8c2155b53c6e70"
+ },
+ "n_reactions": 6039,
+ "n_molecules_in_reactions": 5721,
+ "n_molecules_with_formula": 4441,
+ "molecules_excluded": {
+  "generic_or_unparsed": 878,
+  "no_formula_line": 177,
+  "no_kegg_id": 225
+ },
+ "n_balanced_as_deposited": 4264,
+ "share_balanced": 0.7060771650935586,
+ "reactions_excluded": {
+  "formula_less_molecule": 1632,
+  "unbalanced_as_deposited": 143
+ },
+ "n_movable": 4264,
+ "share_movable": 0.7060771650935586,
+ "n_total_formula_classes": 2833,
+ "class_size_histogram_top": {
+  "1": 2176,
+  "2": 396,
+  "3": 112,
+  "4": 65,
+  "5": 30,
+  "6": 14,
+  "7": 13,
+  "8": 6,
+  "9": 5,
+  "10": 4,
+  "13": 2,
+  "14": 2
+ },
+ "largest_classes": [
+  45,
+  27,
+  26,
+  21,
+  19,
+  18
+ ],
+ "n_movable_in_singleton_class": 2176,
+ "n_real_directed": 9219,
+ "pilot_draws": 20,
+ "mean_share_changed": 0.1689933832302853,
+ "mean_jaccard": 0.7146219514780993,
+ "g1_thresholds": {
+  "min_share_changed": 0.3,
+  "max_jaccard": 0.8
+ },
+ "g1_pass": false,
+ "f1_note": "F1 not triggered"
+}

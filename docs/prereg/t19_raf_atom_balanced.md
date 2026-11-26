@@ -1,6 +1,10 @@
 # Pre-registration: does the Xavier 2020 maxRAF stay below its rewiring null when the null conserves atoms?
 
-Status: **written 2026-11-26, not sealed.** This is a correction run on our own earlier result, prompted by
+Status: **stopped at gate G1 on 2026-11-26; never sealed, never run.** G1 failed: the atom-balanced product
+swap changes only 16.9% of directed reactions, against the 30% required below, because half the movable
+reactions are the only member of their total-formula class. Under the rule fixed below, the study reports
+"not decidable" and the withdrawal of the `raf_null` N1 reading stands as a withdrawal. No maxRAF was
+computed under the new null. Result: `experiments/raf_null/T19_RESULTS.md`. Originally: This is a correction run on our own earlier result, prompted by
 T17. It is sealed only after gates G1 and G2 below have both run and passed; the rules here are fixed first,
 and the gates can only stop the study, never change its decision rule. Study slot: follow-up to the
 `raf_null` task, run number T19.
