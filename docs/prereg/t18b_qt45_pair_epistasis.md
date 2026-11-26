@@ -1,6 +1,6 @@
 # Pre-registration (T18b): QT45's error threshold with its measured pair epistasis kept
 
-Status: **draft, not sealed.** Written 2026-11-25. Everything above "Gate results" was written before the T18b gate ran and before any T18b planted replicate. T18b is the follow-up named in T18's prereg (`docs/prereg/t18_qt45_error_threshold.md`, "Proposed, not adopted", item 1). It is the last attempt: if its planted kill test fails, T18b is reported as failed and there is no T18c (coordinator).
+Status: **failed its planted kill test (pilot, family E 0 of 5); closed under F2, never sealed.** Written 2026-11-25. Everything above "Gate results" was written before the T18b gate ran and before any T18b planted replicate. T18b is the follow-up named in T18's prereg (`docs/prereg/t18_qt45_error_threshold.md`, "Proposed, not adopted", item 1). It is the last attempt: if its planted kill test fails, T18b is reported as failed and there is no T18c (coordinator).
 
 ## Why T18b exists
 
@@ -112,7 +112,28 @@ Output: `scripts_out/t18b_gate.json`. About 2 CPU s.
 
 ## Planted results
 
-Pilot running (F4): B and E with replicates 0–4, and A, C, D and F with 0–1. A replicate costs about 10–15 CPU min, so the full test is about 20–30 core hours. A runtime-only change (per-replicate checkpoint files, skip if present) was made after a server restart killed the first launch before any replicate finished. No computation or rule changed. Results are to be filled after `planted_merge`.
+**Pilot result (F4), merged 2026-11-26 by `planted_merge` (`scripts_out/t18b_planted.json`): T18b FAILED its planted kill test.**
+
+| Family | Replicates | Truth censored (F3) | Scored | Within 20% | Fit censored | Triple flags | Successes | Median relative error (draw mean / posterior mode) | Median τ̂ |
+|---|---|---|---|---|---|---|---|---|---|
+| A, noise only | 0–1 | 0 | 2 | 2 | 0 | 0 | 2 of 2 | +0.4% / +0.8% | 0.005 |
+| B, T18's failing family | 0–4 | 2 | 3 | 1 | 1 | 0 | 1 of 3 | +23% / +9% | 0.232 |
+| C, mostly negative pairs | 0–1 | 0 | 2 | 0 | 0 | 0 | 0 of 2 | +75% / +78% | 0.142 |
+| D, mostly positive pairs | 0–1 | 2 | 0 | — | — | — | not scored | — | — |
+| **E, higher-order only** | 0–4 | 0 | 5 | 0 | **5** | 0 | **0 of 5** | above grid / +42% | 0.159 |
+| F, cliff past 2 mutations | 0–1 | 0 | 2 | 0 | 0 | 2 | 2 of 2 (flagged) | +184% / +171% | 0.225 |
+
+- **Verdict.** Family E has 5 misses, more than the 4 a family may have in its first 20 (P3). By F2, T18b has failed. Nothing is re-run, no rule or model is changed, there is no T18c, and `real` is not written. No threshold was ever computed on the real landscape, and the triple output counts stay unread.
+- **Every miss in A to E errs high.** E's truth is 0.125–0.134. Every one of its 10 posterior-draw thresholds but 2 lies above the grid's upper end (0.25), and the posterior-mode landscape gives 0.178–0.197. C errs +61% and +90%; B's scored replicates err +11%, +35% and above the grid. A, with no epistasis, is recovered within 1%. D's two truths are above the grid (F3), so D is unscored in the pilot.
+- **Which rival explanation fits** (written before any replicate finished; `experiments/t18_qt45_error_threshold/README.md`).
+  - **Rival 1, estimator bias from τ absorbing non-pair epistasis.** It predicted a high bias with a consistent sign, largest in E, with A unbiased. That is what happened: τ̂ in E (0.13–0.22, true pair sd 0) is as large as in B.
+  - **Rival 2, a cliff the triple check cannot see.** It does not apply: F's cliff was flagged in both replicates (T ≈ −4).
+  - **Rival 3, noise model.** It is not implicated: A passes, and S was not run in the pilot.
+  - **Rival 4, false triple flags.** None fired in A to E.
+  - **Bug check.** A rules out a plumbing bug. The posterior-mode landscape is also high in E, so the draw step is not the only cause.
+- **What it means.** Singles and doubles cannot separate pair epistasis from higher-order epistasis or curve shape, and the threshold depends on how that variance is carried to genotypes 4 to 6 mutations out. T18 dropped the pair residuals and erred low (median −27% in B). T18b keeps them and errs high (+40% to beyond +95% in E). Both models fit the same singles and doubles. Under T18b's planted families, the QT45 error threshold is therefore not identifiable from HD ≤ 2 data to within 20%. **The QT45 threshold line is closed.**
+- **Smallest effect the test could catch.** None was attempted on real data. The bracket is the result: on the same synthetic landscapes, the two defensible extrapolations straddle the true e\* by about −27% and +40% or more.
+- **Compute.** 18 replicates at N = 5,000 (D-F4), 2.3–16.6 CPU min each, 3 workers at nice 20 on 2026-11-26.
 
 One observation from profiling, before scoring. In planted B replicate 0 (computed on the planted data, not on real data), τ̂ = 0.246, while the true pair sd is 0.144. The doubles cannot tell pair epistasis apart from the higher-order field or from curve misspecification, so τ absorbs both. Summed over many pairs, this inflates latent variance at high HD, which may push e\* high, especially in family E. This is recorded here before any replicate was scored. It changes no rule.
 

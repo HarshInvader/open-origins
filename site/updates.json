@@ -1,4 +1,7 @@
 [
+  {"date": "2026-11-26", "kind": "killed", "title": "QT45's error threshold cannot be pinned down from its measured singles and doubles",
+   "body": "Our second method, which keeps the measured pair effects, overestimated the planted threshold in every test landscape with only higher-order epistasis (0 of 5 within 20%), while the first method underestimated it by about 27%. The two reasonable extrapolations bracket the truth from both sides, so we closed this line without computing a real threshold.",
+   "link": "https://github.com/HarshInvader/open-origins/blob/main/docs/prereg/t18b_qt45_pair_epistasis.md"},
   {"date": "2026-11-23", "kind": "result", "title": "The LUCA estimate survives realistic gene-tree errors",
    "body": "On three simulations with a known first genome and gene trees inferred the way real studies do, the method recovered 0.96, 1.03 and 1.04 times the true number of genes (mean 1.01), inside our sealed 0.8 to 1.25 pass range. These simulations lean on the fitted weight far less than the real data do, so this does not validate the published 2,600 genes.",
    "link": "https://github.com/HarshInvader/open-origins/blob/main/experiments/luca_calib/K3_RESULTS.md"},

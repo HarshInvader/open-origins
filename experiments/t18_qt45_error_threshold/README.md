@@ -37,7 +37,7 @@ Kill test failed; F2 re-run not run (failure is systematic bias per the attached
 
 ## T18b: pair epistasis kept (prereg `docs/prereg/t18b_qt45_pair_epistasis.md`)
 
-Status: **prereg written, gate run (passed), planted kill test running as a pilot. Not sealed. No real-data threshold, R, growth rate, EB variance τ² or triple fitness has been computed.** This is the last attempt: if T18b fails its planted test, it is reported as failed and there is no T18c.
+Status: **FAILED its planted kill test; the QT45 threshold line is closed (no T18c).** The pilot (2026-11-26) failed family E 0 of 5: every E replicate's threshold came out above the grid, against a truth of about 0.13. The cause is the τ̂ bias named in rival 1 below. Results are in the prereg, "Planted results". No real-data threshold, R, growth rate, τ² or triple fitness was ever computed.
 
 - **Model.** WT, singles and measured doubles use their measured values. Genotypes with 3 or more mutations are F = g(z₀ + Σ a + Σ Ê_pair), with T18's global curve plus the measured pair terms on the latent scale. The pair terms are shrunk by empirical Bayes: one prior variance τ² by marginal likelihood, and per-double noise from a replicate noise model fitted to the three output replicates' read counts. The 168 unmeasured pairs are set to 0. The threshold uses posterior draws (mean of e\* over 2 planted or 4 real draws), not the posterior mean, because shrinkage removes exactly the variance that raises e\*.
 - **Triple check.** The deposit's reads contain about 105,000 triples with input ≥ 10. The mean triple replication rate predicted by the model is compared with the observed rate, and a gap of more than a factor of 2 flags the model. The triple output counts stay unread until `real`.

@@ -53,3 +53,10 @@ Closed routes, each with the effect size the test could have caught. Empty until
 - **What remains.** Exploratory, not sealed: the concentration of the carried product is reported less often in prebiotic papers (59% vs 89%, CI on diff −0.47 to −0.12). The pH gap #29 found sits *between* papers stitched into one route, not within single papers.
 - **Not closed.** The sealed pH item counts a stated buffer pH. A "measured end pH" item, and a cross-paper route audit with fixed step lists, remain open.
 - **Details.** experiments/reporting_audit/RESULTS.md.
+
+## "QT45's error threshold can be read from its single and double mutant landscape" fails its planted test twice (qt45, T18 and T18b)
+- **Test.** We fitted a Bayesian additive-plus-nonlinearity model to Gianni et al. 2026's open singles and doubles (doi:10.1126/science.adt2760; Zenodo 13891380). We then carried the fit to genotypes several mutations away and read off the error rate at which the wild-type class is lost. Before touching the real data, the method had to recover planted thresholds within 20% on synthetic landscapes. T18 dropped the pair residuals; T18b kept them as a learned pair-variance τ².
+- **Result.** T18 erred low: median −27% in its pair-epistasis family. T18b erred high: 0 of 5 in the higher-order-only family, posterior mode +42%, and most draws above the grid. The noise-only family was recovered within 1%. Neither method was run on the real landscape.
+- **What it could catch.** The planted test catches a systematic bias of 20% or more in any family (more than 4 of 20 misses). Both models fit HD ≤ 2 data and bracket the truth from opposite sides by roughly −27% and +40% or more.
+- **Scope.** This closes threshold estimation from HD ≤ 2 data alone. It does not close a threshold estimate with measured triples or deeper mutants, or a direct measurement of the error threshold by serial replication at graded fidelity.
+- **Details.** docs/prereg/t18_qt45_error_threshold.md, docs/prereg/t18b_qt45_pair_epistasis.md, experiments/t18_qt45_error_threshold/.
