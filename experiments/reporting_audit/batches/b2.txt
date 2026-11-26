@@ -1,0 +1,10 @@
+prebiotic PMC11664644 doi:10.1021/acsearthspacechem.4c00114 year:2024 rank:22
+prebiotic PMC7616004 doi:10.1016/j.chempr.2024.02.001 year:2024 rank:23
+prebiotic PMC7547885 doi:10.1021/jacs.6b08801 year:2016 rank:24
+prebiotic PMC8570677 doi:10.1089/ast.2020.2335 year:2021 rank:25
+prebiotic PMC12464751 doi:10.1021/acscentsci.5c00488 year:2025 rank:28
+prebiotic PMC9033569 doi:10.1039/d1ra02379a year:2021 rank:29
+prebiotic PMC7613695 doi:10.1039/d2cp03167a year:2022 rank:30
+comparison PMC4901869 doi:10.3762/bjoc.12.89 year:2016 rank:6
+comparison PMC5082451 doi:10.3762/bjoc.12.210 year:2016 rank:7
+comparison PMC11693970 doi:10.3762/bjoc.20.273 year:2024 rank:8

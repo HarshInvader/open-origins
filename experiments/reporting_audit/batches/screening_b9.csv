@@ -1,0 +1,11 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC12403148,N,E1 perspective/review; no experiments,0
+prebiotic,PMC12430388,N,E2 decomposition of commercial nucleotides and single-step phosphorylation; no hand-off,0
+prebiotic,PMC10873602,N,E2 reversible transamination studied in both directions with commercial reagents; no step-to-step hand-off,0
+prebiotic,PMC10116804,N,E1 computational thermodynamic affinities only,0
+prebiotic,PMC5725419,N,E1 molecular dynamics/quantum calculations only,0
+prebiotic,PMC10104841,N,E2 single AMP polymerisation then precipitation and analysis (RT-qPCR); no reaction hand-off,0
+prebiotic,PMC9241005,Y,eligible; BB synthesis then dry-wet cycles,5
+comparison,PMC8919423,N,E2 single-step hydroacylation; starting materials by literature procedures not reported,0
+comparison,PMC5082602,Y,eligible; multistep rosaprostol synthesis,5
+comparison,PMC11181280,N,E2 photophysical mechanistic study; no reaction hand-off,0

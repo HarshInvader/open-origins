@@ -1,0 +1,182 @@
+{
+  "moody": {
+    "n_genomes": 700,
+    "n_archaea": 350,
+    "n_bacteria": 350,
+    "n_archaea_phyla_named": 27,
+    "n_bacteria_phyla_named": 91,
+    "n_archaea_phyla_ge3": 19,
+    "n_bacteria_phyla_ge3": 19,
+    "n_common_families": 7456,
+    "E_M": 1290.65,
+    "baselines_on_7456": {
+      "B1_all_named_phyla": 871,
+      "B1_phyla_ge3": 519,
+      "B2_gt_1pct_both": 2717,
+      "T75d_gt_1pct_both": 400,
+      "T50d_ge_1g_both": 819,
+      "overlap_B1_T75d": 208,
+      "overlap_B1ge3_T75d": 105,
+      "overlap_B1_T50d": 363
+    },
+    "E_M_strata": {
+      "both_gt_1pct_B2": {
+        "n": 2717,
+        "sum_pp": 738.87,
+        "share_of_E_M": 0.5725,
+        "pp_ge_50": 673,
+        "pp_ge_75": 400
+      },
+      "bacteria_only": {
+        "n": 2972,
+        "sum_pp": 195.56,
+        "share_of_E_M": 0.1515,
+        "pp_ge_50": 124,
+        "pp_ge_75": 81
+      },
+      "both_rare_le_1pct": {
+        "n": 1277,
+        "sum_pp": 185.12,
+        "share_of_E_M": 0.1434,
+        "pp_ge_50": 146,
+        "pp_ge_75": 90
+      },
+      "archaea_only": {
+        "n": 490,
+        "sum_pp": 171.1,
+        "share_of_E_M": 0.1326,
+        "pp_ge_50": 175,
+        "pp_ge_75": 113
+      },
+      "no_fasta": {
+        "n": 0,
+        "sum_pp": 0.0,
+        "share_of_E_M": 0.0,
+        "pp_ge_50": 0,
+        "pp_ge_75": 0
+      }
+    },
+    "pp_bins": {
+      "0.0-0.2": {
+        "n": 5677,
+        "sum_pp": 193.56,
+        "n_single_dom": 3011,
+        "n_b2": 1622,
+        "n_b1": 338
+      },
+      "0.2-0.4": {
+        "n": 507,
+        "sum_pp": 148.45,
+        "n_single_dom": 112,
+        "n_b2": 324,
+        "n_b1": 127
+      },
+      "0.8-1.0": {
+        "n": 573,
+        "sum_pp": 520.87,
+        "n_single_dom": 166,
+        "n_b2": 326,
+        "n_b1": 171
+      },
+      "0.4-0.6": {
+        "n": 315,
+        "sum_pp": 157.63,
+        "n_single_dom": 75,
+        "n_b2": 202,
+        "n_b1": 102
+      },
+      "0.6-0.8": {
+        "n": 384,
+        "sum_pp": 270.13,
+        "n_single_dom": 98,
+        "n_b2": 243,
+        "n_b1": 133
+      }
+    }
+  },
+  "huang": {
+    "root_node": "Node_GCA-000006805.1_AP024487.1_0",
+    "childA": "Eury",
+    "n_childA": 96,
+    "childB": "Node_AP024487.1_GCA-000008085.1_0",
+    "n_childB": 161,
+    "n_dpann": 77,
+    "n_total_families_in_tsv": 7059,
+    "n_root_row_families": 5322,
+    "E_H": 1331.0,
+    "E_H_strata": {
+      "both_gt_1pct": {
+        "n": 3694,
+        "sum_pp": 1280.69,
+        "share_of_E_H": 0.9622,
+        "pp_ge_50": 1219,
+        "pp_ge_75": 810
+      },
+      "childA_only": {
+        "n": 753,
+        "sum_pp": 16.0,
+        "share_of_E_H": 0.012,
+        "pp_ge_50": 3,
+        "pp_ge_75": 1
+      },
+      "childB_only": {
+        "n": 584,
+        "sum_pp": 19.45,
+        "share_of_E_H": 0.0146,
+        "pp_ge_50": 9,
+        "pp_ge_75": 0
+      },
+      "both_rare_le_1pct": {
+        "n": 291,
+        "sum_pp": 14.86,
+        "share_of_E_H": 0.0112,
+        "pp_ge_50": 8,
+        "pp_ge_75": 4
+      },
+      "no_leaves": {
+        "n": 0,
+        "sum_pp": 0.0,
+        "share_of_E_H": 0.0,
+        "pp_ge_50": 0,
+        "pp_ge_75": 0
+      }
+    },
+    "pp_bins": {
+      "0.8-1.0": {
+        "n": 710,
+        "sum_pp": 660.33,
+        "n_single_child": 1,
+        "mean_occ_dpann": 0.3659,
+        "mean_occ_nondpann": 0.5969
+      },
+      "0.4-0.6": {
+        "n": 345,
+        "sum_pp": 171.03,
+        "n_single_child": 16,
+        "mean_occ_dpann": 0.1574,
+        "mean_occ_nondpann": 0.3388
+      },
+      "0.0-0.2": {
+        "n": 3464,
+        "sum_pp": 121.36,
+        "n_single_child": 1292,
+        "mean_occ_dpann": 0.0332,
+        "mean_occ_nondpann": 0.095
+      },
+      "0.6-0.8": {
+        "n": 357,
+        "sum_pp": 251.31,
+        "n_single_child": 6,
+        "mean_occ_dpann": 0.1639,
+        "mean_occ_nondpann": 0.3756
+      },
+      "0.2-0.4": {
+        "n": 446,
+        "sum_pp": 126.97,
+        "n_single_child": 22,
+        "mean_occ_dpann": 0.1047,
+        "mean_occ_nondpann": 0.246
+      }
+    }
+  }
+}

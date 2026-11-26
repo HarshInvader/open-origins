@@ -1,0 +1,11 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC11664644,N,E2: single commercial aminonitrile hydrolysis; no hand-off,0
+prebiotic,PMC7616004,Y,one-pot reductive aldol/amination network,3
+prebiotic,PMC7547885,N,E2: one-pot NCA acylation; Val-NCA synthesis only cited; no reported hand-off,0
+prebiotic,PMC8570677,N,E2: independent photochemistry experiments; no hand-off,0
+prebiotic,PMC12464751,N,E2: wet-dry cycling of purchased cNMPs; no distinct hand-off,0
+prebiotic,PMC9033569,Y,synthesis of di-glycosylated adenine then trans-glycosylation,1
+prebiotic,PMC7613695,N,E2: irradiation only; 2-TO synthesis not reported (literature protocol),0
+comparison,PMC4901869,Y,multistep synthesis,5
+comparison,PMC5082451,Y,sequential arylation,1
+comparison,PMC11693970,Y,six-step benzofluoranthene synthesis,5

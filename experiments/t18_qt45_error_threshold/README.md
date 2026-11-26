@@ -52,9 +52,20 @@ Status: **prereg written, gate run (passed), planted kill test running as a pilo
 - **Runtime-only change (2026-11-25, after a server restart killed the first pilot before any replicate finished).** `planted` now writes each replicate to its own JSON as soon as it finishes (atomic rename) and skips replicates whose JSON exists. `planted_merge` reads the per-replicate files. No computation, seed or rule changed: replicates are seeded by family and index.
 - **Cost.** About 10 to 15 CPU min per planted replicate (4 thresholds: truth, 2 posterior draws, posterior mode). The full test (120 replicates) is about 20 to 30 core hours, so a pilot is run (prereg F4): B and E with 5 replicates each, and A, C, D and F with 2 each.
 
-Run (from `experiments/`, as tmux windows on the `ocruns` server):
+Run (from `experiments/`; on the new laptop (2026-11-26) the venv is the repo's `.venv`, Python 3.15.2 with numpy 2.5.5 and scipy 1.18.1, the same numpy/scipy as the old `t1_vent_exergonic/.venv`, and workers are harness background commands via `work/t18b_worker.sh`, not tmux):
 
 ```
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 taskpolicy -b nice -n 20 t1_vent_exergonic/.venv/bin/python -I t18_qt45_error_threshold/scripts/t18b_analysis.py planted B 0 5 >> t18_qt45_error_threshold/work/t18b_pl_B.log 2>&1
 t1_vent_exergonic/.venv/bin/python -I t18_qt45_error_threshold/scripts/t18b_analysis.py planted_merge
 ```
+
+### Rival explanations for the pilot outcome (written 2026-11-26, before any pilot replicate finished)
+
+No `t18b_planted_rep_*.json` existed when this was written. Each rival predicts a different pattern across families, so the pilot can tell them apart.
+
+1. **Estimator bias from τ absorbing non-pair epistasis.** τ̂ (0.246 in B replicate 0, true pair sd 0.144) soaks up the higher-order field and the curve misspecification. Prediction: e\*_fit is high, with a consistent sign, in E (no true pairs) and to a lesser degree in B, C and D, while A is unbiased. The posterior-mode diagnostic sits closer to the truth than the draw mean.
+2. **Model misspecification at HD ≥ 3 that the triple check cannot see.** Prediction: F misses high *without* a triple flag, while A–E are fine. If F misses but flags, the safeguard works as designed and counts as a success.
+3. **Noise-model problems.** The planted noise is drawn from the method's own noise model, so a wrong noise model cannot fail A–F. It can only show up in S. Prediction if noise matters: S fails while A–F pass. A failure in A, which has no epistasis, would point instead to Monte Carlo noise in the threshold estimator: errors of both signs, shared by the truth run.
+4. **False triple flags.** Planted contamination (10⁻³) or overdispersion makes |T| > 1 on landscapes whose HD ≥ 3 model is right. Prediction: misses in A–E with an accurate e\* but flag = true.
+
+Independent check on the measure. `rel_err` is computed against e\*_true from the same estimator run on the truth. A separate check, T18's G0 analytic tests, has already shown that estimator unbiased. A pass therefore means that the T18b model recovers the planted landscape's threshold, not that the estimator is right. Per the rules, any surprise, for example a family doing better than A, is treated as a bug, leak or artefact until it is ruled out.

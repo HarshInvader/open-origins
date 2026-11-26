@@ -1,0 +1,11 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC10144983,N,E2: single-pot wet-dry reactions of phosphite with additives; no product used as input of a distinct reported step,0
+prebiotic,PMC3676736,N,E2: single reaction (Glu with CDI and salt) analyzed afterwards; no hand-off,0
+prebiotic,PMC7005209,Y,eligible: prebiotic DNA-templated peptide synthesis; starting-material chain S18-S21 then NATS,5
+prebiotic,PMC12519194,Y,eligible: prebiotic depsipeptide dry-down then ester hydrolysis of its product (weak hand-off),1
+prebiotic,PMC8139960,Y,eligible: prebiotic nucleoside repair; photodimer generated and isolated then repaired,1
+prebiotic,PMC8630799,Y,eligible: Strecker aminonitrile synthesis (origin of homochirality); multistep chain,4
+prebiotic,PMC10175494,N,E2: single evaporation reaction of Gly with boric acid; only analysis afterwards,0
+comparison,PMC5727846,Y,eligible: 7-step semisynthesis,5
+comparison,PMC8450941,Y,eligible: trisphaeridine synthesis,4
+comparison,PMC6369998,Y,eligible: star-shaped amino acid synthesis,5

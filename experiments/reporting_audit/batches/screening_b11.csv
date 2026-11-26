@@ -1,0 +1,8 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC8433156,Y,ultraphosphate synthesis then nucleoside phosphorylation framed prebiotic,3
+prebiotic,PMC4959843,Y,nonenzymatic RNA copying; sequential bead primer extension steps,5
+prebiotic,PMC9303611,N,E2: folding of motifs then single peptide-forming reaction with analysis; no reaction-to-reaction hand-off,0
+prebiotic,PMC8979813,Y,transcription of ribozyme strands then ligation assay (borderline),1
+prebiotic,PMC12715642,Y,DKP dehydroalanine synthesis then thioacetate addition; prebiotic amino acid framing,2
+prebiotic,PMC9401002,Y,nitrosation-reduction-ribosylation-heating one-pot sequence to nucleosides/pterins,3
+prebiotic,PMC3424849,Y,aminothiazole synthesis then multicomponent reaction to nucleotide precursors,1

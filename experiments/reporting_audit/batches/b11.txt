@@ -1,0 +1,7 @@
+prebiotic PMC8433156 doi:10.1038/s41467-021-25668-3 year:2021 rank:138
+prebiotic PMC4959843 doi:10.7554/elife.17756 year:2016 rank:139
+prebiotic PMC9303611 doi:10.1002/chem.202104104 year:2022 rank:140
+prebiotic PMC8979813 doi:10.1038/s41557-022-00890-8 year:2022 rank:141
+prebiotic PMC12715642 doi:10.1021/acsbiomedchemau.5c00167 year:2025 rank:142
+prebiotic PMC9401002 doi:10.1002/chem.202200714 year:2022 rank:143
+prebiotic PMC3424849 doi:10.1021/ja306176n year:2012 rank:146

@@ -1,0 +1,10 @@
+prebiotic PMC6310819 doi:10.1073/pnas.1814367115 year:2018 rank:31
+prebiotic PMC9776562 doi:10.1021/acs.langmuir.2c02106 year:2022 rank:32
+prebiotic PMC9233534 doi:10.1089/ast.2022.0027 year:2022 rank:35
+prebiotic PMC9502762 doi:10.3390/membranes12090858 year:2022 rank:36
+prebiotic PMC9296462 doi:10.1038/s41598-022-15753-y year:2022 rank:37
+prebiotic PMC5585222 doi:10.1038/s41467-017-00463-1 year:2017 rank:40
+prebiotic PMC10817532 doi:10.3390/life14010108 year:2024 rank:41
+comparison PMC6774081 doi:10.3762/bjoc.15.219 year:2019 rank:9
+comparison PMC6122332 doi:10.3762/bjoc.14.196 year:2018 rank:10
+comparison PMC4142848 doi:10.3762/bjoc.10.176 year:2014 rank:11

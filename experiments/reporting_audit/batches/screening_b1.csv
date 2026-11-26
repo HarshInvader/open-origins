@@ -1,0 +1,11 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC11897787,Y,catalyst synthesis then used in oligomerization,1
+prebiotic,PMC10817335,N,E2 single irradiation reaction then analysis; no hand-off,0
+prebiotic,PMC9753540,Y,multistep purine analogue synthesis,2
+prebiotic,PMC8851484,Y,aminoacylated RNA ribozyme assembly,4
+prebiotic,PMC9808538,N,E1 hypothesis/perspective; no experiments,0
+prebiotic,PMC2984373,Y,multicomponent then cyanovinylation,1
+prebiotic,PMC5454461,Y,multistep nucleotide synthesis,5
+comparison,PMC8450977,Y,4-step then cyclization,4
+comparison,PMC12667733,Y,SPPS then cyclization then deprotection,3
+comparison,PMC2956404,Y,glycoside synthesis sequence,4

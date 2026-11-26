@@ -1,0 +1,265 @@
+rank,pmcid,stage1,reason
+0,PMC8273163,candidate,
+1,PMC6486662,candidate,
+2,PMC7977168,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+3,PMC9513281,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+4,PMC8708898,excluded,E1 no synthesis (vesicle stability)
+5,PMC12400639,candidate,
+6,PMC12258671,candidate,
+7,PMC6506141,candidate,
+8,PMC6616635,candidate,
+9,PMC11751036,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+10,PMC7567815,candidate,
+11,PMC11897787,candidate,
+12,PMC9689827,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+13,PMC10817335,candidate,
+14,PMC9753540,candidate,
+15,PMC8851484,candidate,
+16,PMC9054371,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+17,PMC9808538,candidate,
+18,PMC9666576,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+19,PMC2984373,candidate,
+20,PMC5454461,candidate,
+21,PMC4192621,excluded,"E3 ribozyme engineering, not prebiotic synthesis"
+22,PMC11664644,candidate,
+23,PMC7616004,candidate,
+24,PMC7547885,candidate,
+25,PMC8570677,candidate,
+26,PMC7492283,excluded,E1 no synthesis (condensates)
+27,PMC6424447,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+28,PMC12464751,candidate,
+29,PMC9033569,candidate,
+30,PMC7613695,candidate,
+31,PMC6310819,candidate,
+32,PMC9776562,candidate,
+33,PMC4669544,excluded,E1 review
+34,PMC9063842,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+35,PMC9233534,candidate,
+36,PMC9502762,candidate,
+37,PMC9296462,candidate,
+38,PMC9158159,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+39,PMC3596326,excluded,E1 phylogenomics
+40,PMC5585222,candidate,
+41,PMC10817532,candidate,
+42,PMC10498504,candidate,
+43,PMC9634692,candidate,
+44,PMC4190651,excluded,E1 no synthesis (vesicle assembly)
+45,PMC5510716,candidate,
+46,PMC6617062,candidate,
+47,PMC9884078,candidate,
+48,PMC12141035,excluded,E1 no synthesis (clay exfoliation)
+49,PMC4037592,candidate,
+50,PMC5357625,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+51,PMC8796310,candidate,
+52,PMC11339926,excluded,E1 account/review
+53,PMC7065162,excluded,E1 review
+54,PMC6585877,candidate,
+55,PMC9169909,candidate,
+56,PMC11575587,candidate,
+57,PMC12703744,candidate,
+58,PMC7826252,candidate,
+59,PMC5940729,candidate,
+60,PMC3548433,candidate,
+61,PMC10144983,candidate,
+62,PMC6294307,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+63,PMC3676736,candidate,
+64,PMC7005209,candidate,
+65,PMC12519194,candidate,
+66,PMC10457594,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+67,PMC5466667,excluded,E1 computational model
+68,PMC8139960,candidate,
+69,PMC11312218,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+70,PMC8630799,candidate,
+71,PMC10175494,candidate,
+72,PMC10144571,excluded,E1 no synthesis (membrane fluorescence)
+73,PMC11934057,candidate,
+74,PMC5868295,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+75,PMC11950863,candidate,
+76,PMC8637514,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+77,PMC9653231,excluded,E1 model
+78,PMC11883738,excluded,E1 review
+79,PMC6172253,candidate,
+80,PMC8200448,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+81,PMC9616438,candidate,
+82,PMC7460143,candidate,
+83,PMC11331521,candidate,
+84,PMC12675756,candidate,
+85,PMC12677900,excluded,E1 review/bioinformatic
+86,PMC12284433,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+87,PMC11962484,candidate,
+88,PMC9696992,candidate,
+89,PMC6981979,excluded,E1 bioinformatic
+90,PMC8707928,excluded,E1 computational
+91,PMC3795680,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+92,PMC7683531,excluded,E1 no synthesis (coacervates)
+93,PMC11181085,candidate,
+94,PMC5770463,candidate,
+95,PMC9869892,excluded,E1 no synthesis (aerosol vesicles)
+96,PMC9586328,candidate,
+97,PMC5418629,excluded,E1 review
+98,PMC12393011,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+99,PMC7468817,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+100,PMC11044211,candidate,
+101,PMC5677017,candidate,
+102,PMC12403148,candidate,
+103,PMC12430388,candidate,
+104,PMC10619131,excluded,E1 structural study
+105,PMC11308367,excluded,E1 review
+106,PMC4931461,excluded,E1 model
+107,PMC10873602,candidate,
+108,PMC12704803,excluded,E1 sample analysis (Bennu)
+109,PMC4187126,excluded,E1 review
+110,PMC7447760,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+111,PMC10116804,candidate,
+112,PMC5725419,candidate,
+113,PMC6900709,excluded,E1 meteorite analysis
+114,PMC5617960,excluded,E1 polymer physical chemistry
+115,PMC12379112,excluded,E1 analytical method
+116,PMC10104841,candidate,
+117,PMC9241005,candidate,
+118,PMC11584652,candidate,
+119,PMC5934683,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+120,PMC9559937,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+121,PMC7699763,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+122,PMC5813326,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+123,PMC12745811,candidate,
+124,PMC8696575,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+125,PMC12756740,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+126,PMC9531788,candidate,
+127,PMC10376402,excluded,E1 ribozyme biochemistry
+128,PMC12257780,excluded,E1 computational
+129,PMC3676737,candidate,
+130,PMC7318430,excluded,E1 model
+131,PMC12560320,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+132,PMC9040849,candidate,
+133,PMC4187136,candidate,
+134,PMC8115318,candidate,
+135,PMC10385479,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+136,PMC12563271,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+137,PMC8260633,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+138,PMC8433156,candidate,
+139,PMC4959843,candidate,
+140,PMC9303611,candidate,
+141,PMC8979813,candidate,
+142,PMC12715642,candidate,
+143,PMC9401002,candidate,
+144,PMC3002371,excluded,E1 hypothesis
+145,PMC10917138,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+146,PMC3424849,candidate,
+147,PMC12056921,candidate,
+148,PMC12170892,candidate,
+149,PMC11672127,candidate,
+150,PMC8395648,excluded,E1 no synthesis (protocell membranes)
+151,PMC3814424,candidate,
+152,PMC9860743,candidate,
+153,PMC5772641,candidate,
+154,PMC11726440,candidate,
+155,PMC10523364,candidate,
+156,PMC7400013,candidate,
+157,PMC9097472,candidate,
+158,PMC4457167,excluded,E1 no synthesis (vesicles)
+159,PMC9881289,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+160,PMC12201655,excluded,E1 model
+161,PMC5492139,candidate,
+162,PMC6007129,candidate,
+163,PMC4279058,candidate,
+164,PMC9147854,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+165,PMC5408343,candidate,
+166,PMC4848480,candidate,
+167,PMC8495861,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+168,PMC6061221,candidate,
+169,PMC9604484,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+170,PMC9605314,candidate,
+171,PMC9100705,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+172,PMC5524942,candidate,
+173,PMC10145665,candidate,
+174,PMC12390845,candidate,
+175,PMC11375777,candidate,
+176,PMC4390841,candidate,
+177,PMC4209460,candidate,
+178,PMC10912936,candidate,
+179,PMC9947100,candidate,
+180,PMC10906254,excluded,E1 computational
+181,PMC8179413,candidate,
+182,PMC11542150,excluded,E1 review
+183,PMC3525015,excluded,E1 no synthesis (phase separation)
+184,PMC12041950,candidate,
+185,PMC6958414,excluded,E1 review/essay
+186,PMC6815252,candidate,
+187,PMC10197134,candidate,
+188,PMC12501131,excluded,E1 phase separation
+189,PMC9303926,candidate,
+190,PMC7235719,candidate,
+191,PMC10533393,candidate,
+192,PMC3510310,excluded,E1 review
+193,PMC10722506,candidate,
+194,PMC11705863,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+195,PMC9299922,candidate,
+196,PMC11367499,candidate,
+197,PMC9641262,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+198,PMC6316189,candidate,
+199,PMC9697242,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+200,PMC10817680,candidate,
+201,PMC8163322,candidate,
+202,PMC12606559,excluded,E1 enzyme kinetics in protocells
+203,PMC9619408,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+204,PMC9352597,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+205,PMC9095695,candidate,
+206,PMC6321417,excluded,E1 hypothesis
+207,PMC10470394,candidate,
+208,PMC11052109,candidate,
+209,PMC4551940,candidate,
+210,PMC6125380,excluded,E1 not OoL
+211,PMC10326239,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+212,PMC4322223,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+213,PMC11551427,candidate,
+214,PMC10355099,candidate,
+215,PMC11525812,excluded,E1 catalysis in coacervates
+216,PMC9959757,candidate,
+217,PMC8876974,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+218,PMC10375532,candidate,
+219,PMC10690765,candidate,
+220,PMC6274258,excluded,E1 hypothesis
+221,PMC5741756,candidate,
+222,PMC7277867,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+223,PMC6274277,excluded,E1 ribozyme network
+224,PMC8837136,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+225,PMC4678426,candidate,
+226,PMC5852748,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+227,PMC7808311,candidate,
+228,PMC5775292,excluded,E1 protein design
+229,PMC12334578,candidate,
+230,PMC10359593,candidate,
+231,PMC9814773,candidate,
+232,PMC9814278,candidate,
+233,PMC7586118,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+234,PMC12540774,excluded,E1 coacervate dynamics
+235,PMC6177409,candidate,
+236,PMC4023395,candidate,
+237,PMC10990939,candidate,
+238,PMC5074369,candidate,
+239,PMC6049501,excluded,E1 review/essay
+240,PMC11457383,excluded,not OoL
+241,PMC5745564,candidate,
+242,PMC6088190,excluded,not OoL
+243,PMC4141154,candidate,
+244,PMC6594999,candidate,
+245,PMC9801502,candidate,
+246,PMC12639454,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+247,PMC8707481,candidate,
+248,PMC8505563,candidate,
+249,PMC4992878,candidate,
+250,PMC10455627,excluded,E1 vesicle evolution
+251,PMC12278338,candidate,
+252,PMC8108281,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+253,PMC10046036,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+254,PMC6789625,excluded,E1 computational
+255,PMC6617172,candidate,
+256,PMC3675118,excluded,E1 mineral analysis
+257,PMC6463137,excluded,E1 simulation
+258,PMC8876357,candidate,
+259,PMC6805814,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+260,PMC8697528,excluded,not OoL
+261,PMC4959688,excluded,not OoL
+262,PMC10285058,excluded,E3 not origin-of-life chemistry (nutrition/microbiome/food/biotech sense of 'prebiotic')
+263,PMC7577264,excluded,E1 model

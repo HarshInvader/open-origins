@@ -1,0 +1,8 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC11584652,N,E2 single photocatalytic reaction then analysis,0
+prebiotic,PMC12745811,Y,eligible,2
+prebiotic,PMC9531788,N,E2 single-step ADP phosphorylation experiments,0
+prebiotic,PMC3676737,N,E2 single-step quartz discharge experiments,0
+prebiotic,PMC9040849,Y,eligible,3
+prebiotic,PMC4187136,N,E2 single-step phosphorylation experiments,0
+prebiotic,PMC8115318,Y,eligible (marginal: SPPS peptides then kinetic resolution),1

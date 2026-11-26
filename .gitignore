@@ -63,3 +63,8 @@ experiments/reporting_audit/texts/
 experiments/luca_calib/ext/
 experiments/luca_calib/smoke/
 experiments/luca_calib/results/
+
+# third-party text (abstracts, page dumps): never commit
+experiments/reporting_audit/abs_prebiotic.*
+experiments/t1_vent_exergonic/scripts_out/wimmer_main.txt
+experiments/t1_vent_exergonic/scripts_out/step6_chebi.tsv

@@ -1,0 +1,11 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC6310819,N,E2: activated monomer prep only cited to prior work; no reported synthesis step feeding primer extension,0
+prebiotic,PMC9776562,Y,eligible; gas-phase glycine CVD on formic-acid-treated silica then hydration,2
+prebiotic,PMC9233534,N,E2: single glass-catalysed RNA synthesis; later steps analytical only,0
+prebiotic,PMC9502762,N,E2: single esterification step then vesicle analysis,0
+prebiotic,PMC9296462,Y,eligible; borate-guided ribose phosphorylation then acid hydrolysis,1
+prebiotic,PMC5585222,Y,eligible; peptide ligation and template-directed replication,2
+prebiotic,PMC10817532,Y,eligible; random peptides and oligonucleotide activation then coupling attempts,3
+comparison,PMC6774081,Y,eligible,5
+comparison,PMC6122332,Y,eligible,2
+comparison,PMC4142848,Y,eligible,5

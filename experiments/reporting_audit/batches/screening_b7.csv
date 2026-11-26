@@ -1,0 +1,11 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC11934057,N,E2: single microdroplet reactions from commercial sugars; no hand-off,0
+prebiotic,PMC11950863,N,E3: ribosome thioester translation framed as biochemistry; prebiotic only as motivation,0
+prebiotic,PMC6172253,Y,eligible,1
+prebiotic,PMC9616438,N,E2: UV photostability measurements; no hand-off,0
+prebiotic,PMC7460143,N,E2: single formose reaction plus analysis,0
+prebiotic,PMC11331521,N,E1: purely computational,0
+prebiotic,PMC12675756,N,E1/E3: analytical study of amino acid aggregates in ice; probe synthesis not prebiotic,0
+comparison,PMC3678503,Y,eligible,5
+comparison,PMC3740604,Y,eligible,3
+comparison,PMC4273274,Y,eligible,5

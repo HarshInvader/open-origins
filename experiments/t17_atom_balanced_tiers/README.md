@@ -1,6 +1,6 @@
 # T17: do KEGG biochemistry's nested autocatalytic tiers survive an atom-conserving null?
 
-Status: **prepared, not sealed.** Gate run; planted check partly run (finishing detached); `real` has not been run and no null of the real network has been scanned. Prereg draft: `docs/prereg/t17_atom_balanced_tiers.md` (not yet in `docs/prereg/HASHES.txt`). Design: section "U1" of `docs/NEW_STUDIES_2026-11-25.md`.
+Status: **sealed 2026-11-25T11:26:40Z** (prereg, scripts, gate, planted and the KEGG id list in `docs/prereg/HASHES.txt`). Blind dry run 21 of 28 parts done (Null A draws 25-200 missing); `dryrun_verdict` and `real` have not run, so no null of the real network has been scanned. The old laptop's runner stopped on 2026-11-25; the run resumes on the new laptop with the same arguments (prereg F2). Prereg: `docs/prereg/t17_atom_balanced_tiers.md`. Design: section "U1" of `docs/NEW_STUDIES_2026-11-25.md`.
 
 ## Question
 

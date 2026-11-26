@@ -1,0 +1,32 @@
+prebiotic PMC8115318 doi:10.1039/d1sc01250a year:2021 handoff:1 | step n product: peptides (PV/PVV) by solid-phase synthesis | step n+1 product: enantioenriched glyceraldehyde by kinetic resolution
+prebiotic PMC9296462 doi:10.1038/s41598-022-15753-y year:2022 handoff:1 | step n product: Dry-down ribosylurea phosphate and ribose phosphate | step n+1 product: Ribose 5'-phosphate after acid hydrolysis
+comparison PMC6774081 doi:10.3762/bjoc.15.219 year:2019 handoff:1 | step n product: TIPS ether 11 | step n+1 product: Silyl enol ether 13 (Birch)
+comparison PMC6774081 doi:10.3762/bjoc.15.219 year:2019 handoff:2 | step n product: Silyl enol ether 13 (Birch) | step n+1 product: Diol 10 (AD-mix)
+comparison PMC6774081 doi:10.3762/bjoc.15.219 year:2019 handoff:3 | step n product: Diol 10 (AD-mix) | step n+1 product: Acetonide 14
+comparison PMC6774081 doi:10.3762/bjoc.15.219 year:2019 handoff:4 | step n product: Acetonide 14 | step n+1 product: Enone 15 (Saegusa)
+comparison PMC6774081 doi:10.3762/bjoc.15.219 year:2019 handoff:5 | step n product: Enone 15 | step n+1 product: Vinyl iodide 16
+prebiotic PMC5510716 doi:10.1039/c7cc00693d year:2017 handoff:1 | step n product: N-acetyl-alpha-cytidine 12 | step n+1 product: Tribenzoyl-alpha-cytidine 13
+prebiotic PMC5510716 doi:10.1039/c7cc00693d year:2017 handoff:2 | step n product: Tribenzoyl-alpha-cytidine 13 | step n+1 product: 5-Bromo tribenzoyl-alpha-cytidine 14
+prebiotic PMC5510716 doi:10.1039/c7cc00693d year:2017 handoff:3 | step n product: 5-Bromo tribenzoyl-alpha-cytidine 14 | step n+1 product: 6-Cyano tribenzoyl-alpha-cytidine 15
+prebiotic PMC5510716 doi:10.1039/c7cc00693d year:2017 handoff:4 | step n product: 6-Cyano tribenzoyl-alpha-cytidine 15 | step n+1 product: Amide acetal 11
+prebiotic PMC9884078 doi:10.1021/acs.jpcb.2c07382 year:2023 handoff:1 | step n product: WD-washed silica pellet | step n+1 product: Poly-Gly on silica (CVD 8 cycles)
+prebiotic PMC9884078 doi:10.1021/acs.jpcb.2c07382 year:2023 handoff:2 | step n product: Poly-Gly on silica (CVD 8 cycles) | step n+1 product: HF-treated poly-Gly on silica
+prebiotic PMC9884078 doi:10.1021/acs.jpcb.2c07382 year:2023 handoff:3 | step n product: HF-treated poly-Gly on silica | step n+1 product: WD-washed poly-Gly on silica
+prebiotic PMC9884078 doi:10.1021/acs.jpcb.2c07382 year:2023 handoff:4 | step n product: WD-washed poly-Gly on silica | step n+1 product: Poly-Gly on silica after further CVD (6 cycles)
+prebiotic PMC9884078 doi:10.1021/acs.jpcb.2c07382 year:2023 handoff:5 | step n product: Poly-Gly on silica after further CVD (6 cycles) | step n+1 product: HF and H/D exchanged poly-Gly
+prebiotic PMC11575587 doi:10.1039/d4sc05362a year:2024 handoff:1 | step n product: G1PA/G2PA mixture (NDI acylation) | step n+1 product: liposomes of PA mixture
+prebiotic PMC11575587 doi:10.1039/d4sc05362a year:2024 handoff:2 | step n product: liposomes of PA mixture | step n+1 product: Mg-enriched DDG1PA liposomes
+prebiotic PMC7826252 doi:10.1093/nar/gkaa1215 year:2021 handoff:1 | step n product: 2AIptG (activated threo-GMP) | step n+1 product: extended RNA primer
+prebiotic PMC3548433 doi:10.1021/ja311164j year:2013 handoff:1 | step n product: Fmoc-3'-NH2-ddG 15 | step n+1 product: Fmoc-ddG-5'-phosphor-2-MeIm 16b
+prebiotic PMC3548433 doi:10.1021/ja311164j year:2013 handoff:2 | step n product: Fmoc-ddG-5'-phosphor-2-MeIm 16b | step n+1 product: 3'-NH2-2-MeImpddG 17b
+prebiotic PMC3548433 doi:10.1021/ja311164j year:2013 handoff:3 | step n product: 3'-NH2-2-MeImpddG 17b | step n+1 product: 3'-NP-DNA extended primer
+comparison PMC4222376 doi:10.3762/bjoc.10.247 year:2014 handoff:1 | step n product: acetamide 5 | step n+1 product: alpha-hemiacetal 6
+comparison PMC4222376 doi:10.3762/bjoc.10.247 year:2014 handoff:2 | step n product: alpha-hemiacetal 6 | step n+1 product: glycosyl phosphodiester 9
+comparison PMC4222376 doi:10.3762/bjoc.10.247 year:2014 handoff:3 | step n product: glycosyl phosphodiester 9 | step n+1 product: alcohol 10
+comparison PMC4222376 doi:10.3762/bjoc.10.247 year:2014 handoff:4 | step n product: alcohol 10 | step n+1 product: spacer-linked monomer 1
+comparison PMC4222376 doi:10.3762/bjoc.10.247 year:2014 handoff:5 | step n product: spacer-linked monomer 1 | step n+1 product: SIDEA-activated ester 11
+comparison PMC5727846 doi:10.3762/bjoc.13.257 year:2017 handoff:1 | step n product: C9-OTBDMS aglycone 5 | step n+1 product: C9/C17-protected aglycone 6
+comparison PMC5727846 doi:10.3762/bjoc.13.257 year:2017 handoff:2 | step n product: C9/C17-protected aglycone 6 | step n+1 product: C17-OTIPS aglycone 7
+comparison PMC5727846 doi:10.3762/bjoc.13.257 year:2017 handoff:3 | step n product: C17-OTIPS aglycone 7 | step n+1 product: Glycosylated analogue 9
+comparison PMC5727846 doi:10.3762/bjoc.13.257 year:2017 handoff:4 | step n product: Glycosylated analogue 9 | step n+1 product: C17-OH analogue 10
+comparison PMC5727846 doi:10.3762/bjoc.13.257 year:2017 handoff:5 | step n product: C17-OH analogue 10 | step n+1 product: Bis-glycosylated analogue 12

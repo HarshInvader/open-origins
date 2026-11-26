@@ -1,0 +1,20 @@
+set,paper_id,pmcid,doi,year,handoff,step_n,step_n1,end_pH,end_T,rt_only,end_conc,solvent,carry,uses_authentic,workup,si_used,evidence
+prebiotic,PMC6486662,PMC6486662,10.1089/ast.2018.1935,2019,1,ribose 1;2-cyclic phosphate,cytidine 2'-phosphate,N,N,0,Y,Y,Y,N,Y,N,Methods: DCC/formamide/NH4OH reflux 10 h (no pH or numeric T); extracted and concentrated; redissolved to 15 mM; nucleobase and CaCl2 added fresh
+prebiotic,PMC12258671,PMC12258671,10.1002/anie.202507248,2025,1,phosphoserine (DAP wet-dry),pyruvate (PSer beta-elimination),E,Y,0,Y,Y,Y,Y,N,Y,Fig1 pD 7.4 end; SI: 0.15 mmol Ser; 70 C; 61% conv; step 2 used commercial O-phospho-DL-serine
+prebiotic,PMC12258671,PMC12258671,10.1002/anie.202507248,2025,2,pyruvate (Cu-catalysed elimination),alpha-ketoglutarate (one-pot),E,Y,0,Y,Y,Y,N,N,N,Fig2: 200 mM PSer water pH 6.5 85 C 3 h 72%; one-pot step makes pyruvate in situ from PSer+Gly fresh
+prebiotic,PMC6506141,PMC6506141,10.1021/jacs.8b12331,2019,1,alpha-hydroxythioacetamide 13,acetaldehyde 14,E,N,1,Y,Y,N,U,N,Y,SI p2: 0.2 mmol in 2 mL pH 8.2 rt; later 13 (0.05 mmol) used with source unclear
+prebiotic,PMC6506141,PMC6506141,10.1021/jacs.8b12331,2019,2,acetaldehyde 14,crotonaldehyde/hexadienal/octatrienal 15-17,E,N,0,Y,Y,N,U,N,Y,SI p2: pH 6.9 254 nm 0.05 mmol 2 mL 63%; temp not stated; homoaldol used 0.5 mmol 14 source not stated
+prebiotic,PMC6506141,PMC6506141,10.1021/jacs.8b12331,2019,3,aldol products 15-17,saturated aldehydes/alcohols/acids,N,N,1,Y,Y,Y,N,Y,Y,SI p2: 0.5 mmol 14 Na2CO3 5 mL water rt 34 d no pH; Raney Ni added to the crude mixture
+prebiotic,PMC6616635,PMC6616635,10.3390/life9020040,2019,1,aminonitrile 3,aminonitrile 1 TFA salt,NA,N,1,Y,Y,Y,N,Y,N,Exp: 0.43 mmol 87% after silica; 3 isolated (30 mg) then TIPSH/TFA in DCM; rt bare
+prebiotic,PMC6616635,PMC6616635,10.3390/life9020040,2019,2,aminonitrile 1 TFA salt (D2O),homocysteine thiolactone 4,E,N,1,N,Y,Y,N,Y,N,Results: D2O solution initial pH ca. 1; then pH fixed at 6 with NaHCO3; no yield for 1
+prebiotic,PMC6616635,PMC6616635,10.3390/life9020040,2019,3,homocysteine thiolactone 4,dihydrothiazine 7,E,N,0,N,Y,N,U,N,N,Results: pH 6 with NaHCO3; no temp or conc; source of 4 in next step unclear
+prebiotic,PMC6616635,PMC6616635,10.3390/life9020040,2019,4,dihydrothiazine 7,nitrile tripeptide 8,E,N,1,N,Y,Y,N,Y,N,Results: pH 6 rt; conversion max 25% no amounts; hydrolysis in same mixture; no purification
+prebiotic,PMC6616635,PMC6616635,10.3390/life9020040,2019,5,nitrile tripeptide 8,aminoacetylated thiolactone 13,E,N,1,N,Y,Y,N,Y,N,Results: 8 generated with 10 eq 5 at pH 6 rt; 13 formed in situ 21% from 4; no amounts
+comparison,PMC6604749,PMC6604749,10.3762/bjoc.15.138,2019,1,5-iodo-2-TMS-selenophene 10,diiodo-bis-TMS-biselenophene 11,NA,N,1,Y,Y,Y,N,Y,N,Exp: 3.4 g 68% after silica; stirred 1 h at rt; 10 isolated 2.0 g used
+comparison,PMC6604749,PMC6604749,10.3762/bjoc.15.138,2019,2,diiodo-bis-TMS-biselenophene 11,bis-TMS DST 12,NA,N,1,Y,Y,Y,N,Y,N,Exp: 1.47 g 59% after silica; rt 18 h; 11 isolated 514 mg used with CuI and K2S
+comparison,PMC6604749,PMC6604749,10.3762/bjoc.15.138,2019,3,bis-TMS DST 12,DST 3,NA,Y,0,Y,Y,Y,N,Y,N,Exp: MeCN 140 C 20 h 331 mg 97%; 12 isolated (153 mg) then TBAF THF
+comparison,PMC6244240,PMC6244240,10.3762/bjoc.14.260,2018,1,TBS ether 17,phthalimide 18,NA,N,1,Y,Y,Y,N,Y,Y,SI: THF; 92% after column; ambient bare; 17 isolated 9.24 g used
+comparison,PMC6244240,PMC6244240,10.3762/bjoc.14.260,2018,2,phthalimide 18,amine S1,NA,N,1,Y,Y,Y,N,Y,Y,SI: 12.9 g 85%; warmed to rt overnight; 18 isolated used
+comparison,PMC6244240,PMC6244240,10.3762/bjoc.14.260,2018,3,amine S1,benzamide 19,NA,N,0,Y,Y,Y,N,Y,Y,SI: MeOH reflux 4 h no numeric T; 6.40 g 82%; S1 isolated used
+comparison,PMC6244240,PMC6244240,10.3762/bjoc.14.260,2018,4,benzamide 19,alcohol 10,NA,Y,0,Y,Y,Y,N,Y,Y,SI: DCM 0 C 90 min; 8.32 g 19 used in next step; chromatography
+comparison,PMC6244240,PMC6244240,10.3762/bjoc.14.260,2018,5,alcohol 10,Mitsunobu product 24,NA,N,1,Y,Y,Y,N,Y,Y,SI: 4.66 g 89% THF; ambient bare; 10 isolated 2.609 g with separately made 23

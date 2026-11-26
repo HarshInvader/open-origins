@@ -1,0 +1,10 @@
+prebiotic PMC10144983 doi:10.3390/life13040920 year:2023 rank:61
+prebiotic PMC3676736 doi:10.1007/s11084-013-9326-5 year:2013 rank:63
+prebiotic PMC7005209 doi:10.3389/fchem.2020.00041 year:2020 rank:64
+prebiotic PMC12519194 doi:10.1073/pnas.2500503122 year:2025 rank:65
+prebiotic PMC8139960 doi:10.1038/s41467-021-23300-y year:2021 rank:68
+prebiotic PMC8630799 doi:10.1021/jacs.1c09253 year:2021 rank:70
+prebiotic PMC10175494 doi:10.1038/s42004-023-00885-7 year:2023 rank:71
+comparison PMC5727846 doi:10.3762/bjoc.13.257 year:2017 rank:18
+comparison PMC8450941 doi:10.3762/bjoc.17.152 year:2021 rank:19
+comparison PMC6369998 doi:10.3762/bjoc.15.33 year:2019 rank:20

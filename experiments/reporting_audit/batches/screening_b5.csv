@@ -1,0 +1,11 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC6585877,N,E1 purely computational (DFTB simulations),0
+prebiotic,PMC9169909,Y,eligible,1
+prebiotic,PMC11575587,Y,eligible,2
+prebiotic,PMC12703744,N,E2 no hand-off (single reactions in coacervates from commercial reagents),0
+prebiotic,PMC7826252,Y,eligible,1
+prebiotic,PMC5940729,Y,eligible,2
+prebiotic,PMC3548433,Y,eligible,3
+comparison,PMC5942382,Y,eligible,2
+comparison,PMC4222376,Y,eligible,5
+comparison,PMC10790658,N,E2 CNT dispersion preparation is physical processing with no reaction hand-off,0

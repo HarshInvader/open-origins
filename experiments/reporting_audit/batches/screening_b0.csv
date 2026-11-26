@@ -1,0 +1,11 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC8273163,N,E2: single-step cyclisations of commercial dipeptides; no hand-off,0
+prebiotic,PMC6486662,Y,eligible,1
+prebiotic,PMC12400639,N,E2: single wet-dry phosphorylation; hydrolysis tests use commercial standards,0
+prebiotic,PMC12258671,Y,eligible,2
+prebiotic,PMC6506141,Y,eligible,3
+prebiotic,PMC6616635,Y,eligible,5
+prebiotic,PMC7567815,N,E2: oligomerisation of commercial monomers; no hand-off,0
+comparison,PMC6604749,Y,eligible,3
+comparison,PMC3740506,N,E2: single-step Pinner reactions; no hand-off,0
+comparison,PMC6244240,Y,eligible,5

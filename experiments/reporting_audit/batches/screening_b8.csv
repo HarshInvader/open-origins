@@ -1,0 +1,11 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC11962484,N,E1 computational only (BOMD simulations),0
+prebiotic,PMC9696992,N,E2 single reaction of glyceraldehyde on goethite then analysis,0
+prebiotic,PMC11181085,N,E2 single irradiation of ices then analysis,0
+prebiotic,PMC5770463,Y,CDI activation then amyloid-templated peptide addition,1
+prebiotic,PMC9586328,Y,borderline E2 droplet-fusion extension of microdroplet dipeptide,1
+prebiotic,PMC11044211,Y,barbitudine nucleoside to BaTP to RNA,3
+prebiotic,PMC5677017,N,E2 one-pot irradiation then analysis,0
+comparison,PMC3201051,Y,bryostatin-like analog total synthesis; scored middle fragment chain (top fragment procedures not in paper or SI),5
+comparison,PMC6444451,Y,solid-phase biaryl bicyclic peptide; scored BPin amino acid prep chain to resin,5
+comparison,PMC5870155,Y,borderline catalyst synthesis then Suzuki use; no SI text; sparse methods,1

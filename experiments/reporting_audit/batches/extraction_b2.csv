@@ -1,0 +1,16 @@
+set,paper_id,pmcid,doi,year,handoff,step_n,step_n1,end_pH,end_T,rt_only,end_conc,solvent,carry,uses_authentic,workup,si_used,evidence
+prebiotic,PMC7616004,PMC7616004,10.1016/j.chempr.2024.02.001,2024,1,maloyl formate,fumaroyl formate,E,Y,0,Y,Y,Y,N,Y,Y,One-pot oxaloacetate/glyoxylate/H2/Ni; pH 8 measured start and end (SI); 22C 72h; maloyl 16.1 mM (SI Table S14); same pot
+prebiotic,PMC7616004,PMC7616004,10.1016/j.chempr.2024.02.001,2024,2,fumaroyl formate,alpha-ketoglutarate,E,Y,0,Y,Y,Y,N,Y,Y,One-pot pH 8 22C 72h; fumaroyl quantified by qNMR in SI tables; reduced in situ by H2; same pot
+prebiotic,PMC7616004,PMC7616004,10.1016/j.chempr.2024.02.001,2024,3,alpha-ketoglutarate,glutamate,E,Y,0,Y,Y,Y,N,Y,Y,One-pot with NH4HCO3 pH 8 22C; aKG 1.2 mM (SI S14); glutamate only trace/GC-MS; in situ amination
+prebiotic,PMC9033569,PMC9033569,10.1039/d1ra02379a,2021,1,di-glycosylated adenine 1,thymine nucleoside 3,NA,Y,0,Y,Y,Y,N,Y,Y,Main: dA + deoxyribose AcOH/MeOH 1:3 40C 72h 50% on 0.57 mmol; SI: solvent evaporated and flash chromatography; used as isomer mixture
+comparison,PMC4901869,PMC4901869,10.3762/bjoc.12.89,2016,1,ribose dipropyl dithioacetal 7,diacetonide dithioacetal 8,N,Y,0,Y,Y,Y,N,Y,Y,Scheme 2a conc HCl/H2O 0C 1.5h no pH; SI: 2.15 g 7.56 mmol 57% filtered washed
+comparison,PMC4901869,PMC4901869,10.3762/bjoc.12.89,2016,2,diacetonide dithioacetal 8,aldehyde 9,NA,Y,0,Y,Y,Y,N,Y,Y,Acetone/DMP/TsOH 23C 2h; SI 6.03 g 16.5 mmol 75% after column
+comparison,PMC4901869,PMC4901869,10.3762/bjoc.12.89,2016,3,aldehyde 9,amine 10 via oxime,N,Y,0,Y,Y,Y,N,Y,Y,I2/NaHCO3 acetone/H2O 10:1 23C; pH not stated; SI 1.32 g 95% no further purification
+comparison,PMC4901869,PMC4901869,10.3762/bjoc.12.89,2016,4,amine 10,pyrimidinyl ribitol 11,NA,Y,0,Y,Y,Y,N,Y,N,Main: LiAlH4 THF 67C 4h; 771 mg 3.33 mmol 83%; chlorouracil 3 commercial
+comparison,PMC4901869,PMC4901869,10.3762/bjoc.12.89,2016,5,pyrimidinyl ribitol 11,deprotected ribitol 12,NA,Y,0,Y,Y,Y,N,Y,N,Main: EtOH 150C 1.5h; 350 mg 1.03 mmol 69% column; then TFA/H2O
+comparison,PMC5082451,PMC5082451,10.3762/bjoc.12.210,2016,1,2-bromo-5-(4-nitrophenyl)thiophene 1,bithiophene 19,NA,Y,0,Y,Y,N,U,Y,Y,SI: DMA 80C 2h 0.156 g 55%; chromatography; main says 1 coupled to give 19 but SI 19 procedure uses nitrile 2 not 1
+comparison,PMC11693970,PMC11693970,10.3762/bjoc.20.273,2024,1,8-methoxy-1-naphthol,acetoxy methoxynaphthalene 24,NA,Y,0,N,Y,Y,N,Y,Y,SI: acetone K2CO3 MeI 23C 23h; crude 1.052 g brown solid used directly; no yield for this step alone
+comparison,PMC11693970,PMC11693970,10.3762/bjoc.20.273,2024,2,acetoxy methoxynaphthalene 24,iodonaphthalene 25,NA,Y,0,Y,Y,Y,N,Y,Y,SI: THF NaH AcCl 0C to 23C 1h; column; 1.183 g 88% over two steps
+comparison,PMC11693970,PMC11693970,10.3762/bjoc.20.273,2024,3,iodonaphthalene 25,boronic ester 26,NA,Y,0,Y,Y,Y,N,Y,Y,SI: CHCl3 NIS 58C 4h; column; 279 mg 88%
+comparison,PMC11693970,PMC11693970,10.3762/bjoc.20.273,2024,4,boronic ester 26,benzo[j]fluoranthene 27,NA,Y,0,Y,Y,Y,N,Y,Y,SI: DMSO B2pin2 Pd KOAc 80C 100 min; column; 282 mg 71%; dibromide 14 separately prepared
+comparison,PMC11693970,PMC11693970,10.3762/bjoc.20.273,2024,5,benzo[j]fluoranthene 27,naphthol 23,NA,Y,0,Y,Y,Y,N,Y,Y,SI: DMSO 120C 24h; column; 19.8 mg 34%; then KOH EtOH/H2O hydrolysis

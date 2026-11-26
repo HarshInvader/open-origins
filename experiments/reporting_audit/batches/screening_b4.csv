@@ -1,0 +1,11 @@
+set,pmcid,eligible,reason,n_handoffs_scored
+prebiotic,PMC10498504,N,E2 no hand-off: single one-pot formose/cyanamide kinetic study with no distinct sequential steps,0
+prebiotic,PMC9634692,Y,eligible,3
+prebiotic,PMC5510716,Y,eligible,4
+prebiotic,PMC6617062,Y,eligible,1
+prebiotic,PMC9884078,Y,eligible,5
+prebiotic,PMC4037592,Y,eligible: only hand-off is SI two-step synthesis of standard 25; main reactions start from commercial materials,1
+prebiotic,PMC8796310,N,E2 no reaction hand-off: vesicle self-assembly then dehydration/rehydration imaging only,0
+comparison,PMC4778503,Y,eligible,5
+comparison,PMC8722398,Y,eligible,5
+comparison,PMC3458728,Y,eligible,5

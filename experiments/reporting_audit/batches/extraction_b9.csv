@@ -1,0 +1,11 @@
+set,paper_id,pmcid,doi,year,handoff,step_n,step_n1,end_pH,end_T,rt_only,end_conc,solvent,carry,uses_authentic,workup,si_used,evidence
+prebiotic,PMC9241005,PMC9241005,10.1021/jacsau.2c00087,2022,1,aD building block (SI synthesis),Depsipeptides from 24h drydown,NA,Y,0,N,Y,Y,N,Y,Y,SI p4: TMG/MeOH 100C 8h; IEX+C18+prep HPLC purity given; no yield; used as 10 mM stock
+prebiotic,PMC9241005,PMC9241005,10.1021/jacsau.2c00087,2022,2,Depsipeptides after dry phase 1,Wet-phase 1 building block recovery,E,Y,0,Y,Y,Y,N,Y,N,Methods: 10 mM 25-150 uL in pH 5.5 TEAOAc; dried 24h 75C; resuspended to 10 mM and sonicated
+prebiotic,PMC9241005,PMC9241005,10.1021/jacsau.2c00087,2022,3,Wet-phase 1 mixture,Depsipeptides after dry phase 2,E,Y,0,Y,Y,Y,N,Y,N,Methods/Fig4: 18h 65C under oil pH 5.5 TEAOAc; buffer replenished; 25 uL removed; 10 mM total BB
+prebiotic,PMC9241005,PMC9241005,10.1021/jacsau.2c00087,2022,4,Depsipeptides after dry phase 2,Wet-phase 2 mixture,E,Y,0,Y,Y,Y,N,Y,N,Same as handoff 2: pH 5.5 TEAOAc 75C 24h dry; rehydrated; aliquot taken for analysis
+prebiotic,PMC9241005,PMC9241005,10.1021/jacsau.2c00087,2022,5,Wet-phase 2 mixture,Depsipeptides after dry phase 3,E,Y,0,Y,Y,Y,N,Y,N,Same as handoff 3: 65C 18h pH 5.5 buffer replenished each cycle; 10 mM total BB
+prebiotic,PMC5082602,PMC5082602,10.3762/bjoc.12.215,2016,1,Enamine 4a (resolved diastereomer),(+)-3 cyclopentanone phosphonate,NA,N,1,Y,Y,Y,N,Y,Y,SI: DCM rt 5 d; 4a 3.4 g 43% isolated by column; then MeOH/H2O Dowex
+prebiotic,PMC5082602,PMC5082602,10.3762/bjoc.12.215,2016,2,(+)-3 cyclopentanone phosphonate,Olefination product 5,N,N,1,Y,Y,Y,N,Y,Y,SI: Dowex 4 drops 3 N HCl MeOH/H2O 5:1 rt overnight no pH value; (+)-3 2.12 g 97% isolated
+prebiotic,PMC5082602,PMC5082602,10.3762/bjoc.12.215,2016,3,Olefination product 5,Reduced ketoester 6,NA,N,1,Y,Y,Y,N,Y,Y,SI: Al2O3/KOH benzene rt 3 h; 5 1.51 g 75% after column; used as E/Z mixture
+prebiotic,PMC5082602,PMC5082602,10.3762/bjoc.12.215,2016,4,Reduced ketoester 6,Ketoacid 7,NA,N,1,Y,Y,Y,N,Y,Y,SI: Te/NaBH4 EtOH 6 h rt then TsOH MeOH overnight; 6 1.23 g 93% isolated
+prebiotic,PMC5082602,PMC5082602,10.3762/bjoc.12.215,2016,5,Ketoacid 7,Rosaprostol 1c,N,Y,0,Y,Y,Y,N,Y,Y,SI: 95% EtOH/1 N NaOH 45C 3 h; acidified with 5% HCl no pH; 7 0.58 g 89% isolated
