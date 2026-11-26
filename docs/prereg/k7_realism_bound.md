@@ -71,3 +71,13 @@ Seed 1 only, rungs m ∈ {1, 50, 150, 600}, N = 250 built; ALE is run only on st
 - Stem-born ALE per world: about 0.9 core-hours at m = 600 and 0.5 at m = 150, from K5's s1 λ4 and λ1 timings; less at lower rungs. About 2 core-hours per seed, 4-5 for two seeds.
 - The seed-1 Linux big-world `ale_true` must be present (K5 re-ran it on AWS) or re-run (about 0.7 core-hours).
 - Moody et al.: about 6.6 GB streamed, a few core-minutes of parsing.
+
+## Run plan for the full planted test (2026-11-26, before any full-test reconciliation)
+- **Where.** On free GitHub-hosted Linux runners, approved by the coordinator at no spend (`experiments/k7_realism_bound/runner/README.md`). Nothing in the method changes. The settings are the prereg's: N = 250, m ∈ {1, 10, 50, 150, 600}, no size cap, `run_family` unchanged, 100 samples, seed 1.
+- **Seed 3's source world.** Its Zombi species-tree files never came back from AWS. They were rebuilt by re-running the seeded species-tree step with K3's settings. The resulting sampled species tree and domains are byte-identical to the stored ones.
+- **Seed 1's background.** Its Linux reconciliations stayed on AWS, so the background is re-run on Linux (the prereg allows this, about 0.7 core-hours).
+- **Gates.**
+  - The runner's ALE must first reproduce 12 stored AWS Linux reconciliations byte for byte.
+  - Every world must match the laptop build exactly.
+  - If either gate fails, the run stops and is reported.
+- **Nothing read.** No full-test measure has been computed or read. The pilot result (seed 1, laptop) is as reported above.

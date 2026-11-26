@@ -68,3 +68,8 @@ experiments/luca_calib/results/
 experiments/reporting_audit/abs_prebiotic.*
 experiments/t1_vent_exergonic/scripts_out/wimmer_main.txt
 experiments/t1_vent_exergonic/scripts_out/step6_chebi.tsv
+
+# K7 GitHub-runner scratch (local tests)
+k7work/
+parts/
+out/

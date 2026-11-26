@@ -1,0 +1,37 @@
+{
+  "genome": {
+    "duplication": 0.2,
+    "duplication_extension": "g:1",
+    "family_rate_sigma": 0.5,
+    "initial_genome_size": 200,
+    "inversion": 0.0,
+    "loss": 1.0,
+    "loss_extension": "g:1",
+    "min_genome_size": 10,
+    "origination": 40,
+    "replacement_transfer": 0.0,
+    "transfer": 0.4,
+    "transfer_extension": "g:1",
+    "transposition": 0.0
+  },
+  "sampling": {
+    "n_per_domain": 80
+  },
+  "seed": 3,
+  "sequence": {
+    "aa_model": "WAG",
+    "family_sigma": 0.5,
+    "lineage_sigma": 0.5,
+    "multiplier_mean_one": true,
+    "sequence_size": 157,
+    "target_root_to_tip": 2.0
+  },
+  "species_tree": {
+    "extinction": 0.5,
+    "max_lineages": 100000,
+    "max_seed_tries": 50,
+    "speciation": 1.0,
+    "total_lineages": 400,
+    "tree_height": 1.0
+  }
+}
