@@ -17,6 +17,7 @@ Closed routes, each with the effect size the test could have caught. Empty until
 
 ## "The 1,335-reaction RAF in anaerobic metabolism is more than an artefact of size and food choice" fails (orig-1, task #6)
 - **Result.** The Xavier et al. 2020 maxRAF reproduces exactly from their dataset S4 (1,335, plus 22 Pooling rows). Degree-preserving rewired networks give 3,394-3,583, with the real value far below (p_lower = 0.001). Degree-matched random food sets give 705-1,403, with the real value inside (p_upper = 0.064).
+- **Caveat added 2026-11-26.** The degree-preserving rewiring does not conserve atom balance, so most of its reactions are chemically impossible, which was already known to distort such comparisons (Basler et al. 2011, doi:10.1093/bioinformatics/btr145). After T17, the side-reading that real metabolism is *less* autocatalytic than same-degree random wiring is withdrawn pending an atom-balanced re-run. The verdict here rests on the degree-matched random food set, which rewires nothing, so it is unaffected.
 - **Detectable.** A maxRAF of 1,404 or more would have been flagged under N3m. Under N1, cores smaller than about 30% of the background maxRAF are not detectable by size (task #8).
 - **Scope.** KEGG-derived network as deposited, one food set. A Rhea-built network is open as task #23.
 - **Details.** experiments/raf_null/RESULTS.md.

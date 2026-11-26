@@ -99,6 +99,49 @@ on disk and before `real_verdict` ran or any real statistic was read.
   shows it separates a planted hierarchy from none; it was not calibrated against a hierarchy weaker
   than the planted one, so a small excess over legal-chemistry nulls would not have been detected.
 
+## Prior art: the principle is 15 years old
+
+Checked after the verdict, by Fable with DOIs opened here. **T17 does not discover that nulls must conserve
+mass; that was established in 2011, and this result should be read as applying a known requirement to a new
+object.**
+
+- **Basler, Ebenhöh, Selbig & Nikoloski 2011**, "Mass-balanced randomization of metabolic networks",
+  *Bioinformatics* 27:1397-1403, doi:10.1093/bioinformatics/btr145 (opened; open access). It gives a
+  polynomial-time algorithm for randomising metabolic networks under mass balance, via mass equivalence
+  classes of compounds, and reports that **99.8% of reactions are unbalanced after switch randomisation**.
+  Our half-reaction swap within formula-difference classes is a cruder relative of that algorithm.
+- **Basler, Grimbs, Ebenhöh, Selbig & Nikoloski 2012**, "Evolutionary significance of metabolic network
+  properties", *J. R. Soc. Interface* 9:1168-1176, doi:10.1098/rsif.2011.0652 (abstract verified via Europe
+  PMC PMC3350727; the publisher blocks automated fetches, so the full text is unverified here). Its abstract
+  lists "hierarchical organization" among the salient structural properties whose evolutionary meaning is
+  unclear, and finds that conclusions change under mass-balanced randomisation: "Contrary to the results from
+  the common Markov-chain switching algorithm…". That is T17's lesson, stated in 2012.
+- **Samal & Martin 2011**, "Randomizing genome-scale metabolic networks", *PLoS ONE* 6:e22295,
+  doi:10.1371/journal.pone.0022295 (opened; open access). Edge exchange "generates fictitious reactions that
+  are biochemically meaningless", so they instead sample from a universe of real reactions. They conclude that
+  global structural properties are "likely to be the consequence of simple biochemical and functional
+  constraints", which is the general form of T17's reading.
+- **Basler & Nikoloski 2011**, *JMassBalance*, doi:10.1093/bioinformatics/btr448 (opened). The tool. Switch
+  randomisation "is unsuitable for metabolic networks, as it does not include physical constraints and
+  generates unrealistic reactions."
+- Related, abstract or metadata only, so unverified: Beber et al. 2012 doi:10.1098/rsif.2012.0490; Papp,
+  Teusink & Notebaart 2009 doi:10.2976/1.3020599; Kim et al. 2019 doi:10.1126/sciadv.aau0149.
+
+**What is left that is new.** A screen of works citing Basler 2011/2012 and Beber 2012 (68 records, titles
+only) and of the Europe PMC citers of Peng et al. found nothing on autocatalytic sets, RAFs or seed-dependent
+sets, and a full-text search pairing autocatalytic-set terms with mass- or atom-balanced randomisation
+returned no hits. So, as far as we checked:
+
+1. This is the first atom-balanced null test of the Peng/Linderoth/Baum nested tiers, and the first showing
+   that atom balance plus degrees plus the food set reproduce them.
+2. It is a worked case where the degree null errs towards a **false positive**. Basler 2012 stressed the
+   opposite direction, that mass-balanced nulls can reveal significance the switching null hides.
+3. The RAF and autocatalytic-set literature (Hordijk, Steel, Kauffman, Xavier) was not systematically read
+   for randomised-network nulls on real metabolism, so claim 1 is "not found", not "does not exist".
+
+T14's error was documented in the literature 15 years before we made it. The lesson for this project is that a
+null model needs a prior-art check of its own, not just the claim under test.
+
 ## Consequence for T14
 
 T14's sealed verdict is not withdrawn as a statement about its own nulls, which it reports correctly. Its
