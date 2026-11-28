@@ -1,6 +1,6 @@
 # Open Origins paper library
 
-Generated from `library.json` on 2026-11-25. 231 papers: 160 read in full, 71 from the abstract only; 64 imported from `docs/PAPERS.csv`.
+Generated from `library.json` on 2026-11-28. 235 papers: 162 read in full, 73 from the abstract only; 64 imported from `docs/PAPERS.csv`.
 
 Relevance: **core** bears directly on a current study; **useful** feeds a step, a table or a planned test; **context** is background. Citations marked (unverified) have not been checked against the DOI record.
 
@@ -8,11 +8,11 @@ Ideas drawn from these papers are in [IDEAS.md](IDEAS.md). The same library, sea
 
 ## Topics
 - [Building blocks](#building-blocks) (28)
-- [From space](#from-space) (13)
-- [LUCA and the tree of life](#luca-and-the-tree-of-life) (45)
-- [RNA world](#rna-world) (70)
+- [From space](#from-space) (14)
+- [LUCA and the tree of life](#luca-and-the-tree-of-life) (46)
+- [RNA world](#rna-world) (71)
 - [Telling life apart](#telling-life-apart) (23)
-- [Vents and first cells](#vents-and-first-cells) (52)
+- [Vents and first cells](#vents-and-first-cells) (53)
 
 ## Papers that bear on a current study's plan
 
@@ -362,6 +362,17 @@ Koga, Oba, Takano, Naraoka et al. (2026). *Nature Astronomy 10:655-663*. [doi:10
 - **Key results.** All five canonical nucleobases in Ryugu; near-equal purines and pyrimidines; purine/pyrimidine ratio falls with ammonia across Ryugu, Bennu and Orgueil.
 - **Limits.** Full text: The ammonia trend is a correlation (R2 = 0.89) across four samples (two Ryugu, Bennu, Orgueil), with ammonia measured in other aggregate samples; the ammonia effect has not been tested experimentally. Murchison is purine-rich and Bennu/Orgueil pyrimidine-rich; nucleobases are at pmol/g levels.
 - **Ideas for us.** Already in the paper ledger (docs/PAPERS.csv).
+
+### Hydrolyzed Hazes on Water-rich Exoplanets: Composition and Prebiotic Chemistry
+
+Pesciotta C, Hörst S, Radke M, Moran S, Blakley B, He C, Vuitton V, Flandinet L (2026). *The Planetary Science Journal 7(11)*. [doi:10.3847/psj/aebf8b](https://doi.org/10.3847/psj/aebf8b). `pesciotta-2026-hydrolyzed-exoplanet-hazes` · useful · full text · touches #5, #20
+
+- **Question.** What happens to the chemistry of photochemical haze on temperate, water-rich sub-Neptunes when it meets liquid water?
+- **Tried.** Expose lab haze analogs to water and look for new oxygenated, prebiotically relevant molecules.
+- **Method and data.** Haze analogs made in the PHAZER chamber (Johns Hopkins) from gas mixtures for 1000x solar metallicity atmospheres at 300 K and 400 K, about 3 mbar; hydrolysed into soluble and insoluble fractions; ESI Orbitrap high-resolution mass spectrometry in positive and negative mode; elemental analysis and van Krevelen diagrams.
+- **Key results.** Thousands of CHNO molecular formulas after hydrolysis. Oxygen weight percent rose significantly in the soluble fraction and moderately in the insoluble one (errors ±2.0-7.2%). Formulas consistent with monosaccharides and derivatives appeared, and few candidate molecules were destroyed. The two planet analogs became more alike after hydrolysis.
+- **Limits.** Formulas only: a mass match is not an identification, and the authors say amino acids, nucleobases and sugars still need confirming with other methods. Two simulated atmospheres, one lab chamber.
+- **Ideas for us.** Context for the delivery side of the pathway map (#5/#20): a haze-plus-water source of oxygenated organics. It enters our tables only once specific molecules are confirmed, not as formula matches.
 
 ### Bio-essential sugars in samples from asteroid Bennu
 
@@ -809,6 +820,17 @@ Doucette A (2026). *Discover Life 56*. [doi:10.1007/s11084-026-09728-6](https://
 - **Key results.** Uses LUCA at about 4.2 Ga, a pre-LUCA window of about 200-300 Myr, and a LUCA genome of about 2,000-2,700 proteins, as inputs to argue for panspermia.
 - **Limits.** Cites Moody et al. as 'Nature, 2023'; the paper is Nature Ecology & Evolution 2024. Relies on contested Mars biosignature claims. No quantitative timescale for building LUCA is derived.
 - **Ideas for us.** A clean example of a downstream argument that depends on LUCA's gene count. If #32's calibrated count differs from about 2,600, it bears directly on this kind of claim.
+
+### Rooting the tree of eukaryotes using ancient gene duplications
+
+Lin C, Kay C, Schick O, Spang A, Szöllősi GJ, Pisani D, Donoghue PCJ, Williams TA (2026). *bioRxiv*. [doi:10.64898/2026.11.20.768066](https://doi.org/10.64898/2026.11.20.768066). `lin-2026-eukaryote-root-gene-duplications` · context · abstract only · touches #32
+
+- **Question.** Where is the root of the eukaryote tree, using a signal that does not depend on distant prokaryote outgroups?
+- **Tried.** Use pre-LECA gene duplications: each paralogue roots its sibling, and the evidence is pooled across families by phylogenetic reconciliation.
+- **Method and data.** 219 pre-LECA duplicate gene families; reconciliation analyses over candidate root positions.
+- **Key results.** Reconciliation rejected most candidate roots. Most analyses favoured a root on or within Metamonada; Discoba, or a deep Opimoda-Diphoda split, were not rejected under some conditions. Metamonada sat basal within each paralogue in about 23-25% of duplicate gene trees, more than other groups.
+- **Limits.** (abstract only) bioRxiv full text returned 429 and was not retried. About LECA, not LUCA. The abstract itself notes possible biases in reconciliation.
+- **Ideas for us.** Same family of methods as #32 (pooling root signal across gene families by reconciliation), from the Williams/Szöllősi groups. Useful as a real-data example of a credible set of roots rather than one root, which is how #32 should report root uncertainty.
 
 ### The prokaryotic origins of the COMMD protein family involved in eukaryotic membrane trafficking
 
@@ -1528,6 +1550,17 @@ Masel J, Douglas J, Wehbi S, McShea HS (2026). *Genetics*. [doi:10.1093/genetics
 - **Limits.** Explicitly a working hypothesis. Order rests on ancestral sequence reconstruction of LUCA-era clans whose LUCA status comes from earlier phylogenetic classification. Read from the preprint; the published version may differ.
 - **Ideas for us.** LUCA-era clan sets used here depend on which families are called LUCA; a calibrated LUCA family set from #32 would change the denominator and numerator they use. Low priority.
 
+### Physico-chemical aspects of protocode mats: a code-first reconstruction
+
+Nesterov-Mueller A, Schmidt D (2026). *BioSystems*. [doi:10.1016/j.biosystems.2026.106032](https://doi.org/10.1016/j.biosystems.2026.106032). `nesterov-mueller-2026-protocode-mats` · context · abstract only · touches #19
+
+- **Question.** Can the origin of the genetic code be tied to a physical, mineral-supported organisation of prebiotic chemistry?
+- **Tried.** The authors' combinatorial fusion cascade splits four protocodes into two mineral-bound 'protomats', anchored by arginine (on smectite) and lysine.
+- **Method and data.** Theoretical reconstruction: a structural model of the arginine protomat and electrostatic and Born-energy estimates.
+- **Key results.** Cellular biosynthesis routes follow the two-way split for 17 of 18 amino acids, with aspartate the only shared node. At 140 mM monovalent salt and half surface coverage, film ordering needs a lateral attraction of at least 5.5 kJ/mol per contact. Born barriers for charged HCO3-, HS-, CN- and NH4+ across the apolar core are 44.9-62.8 kBT at core permittivity 3 (27.7-45.6 kBT with a finite-slab correction).
+- **Limits.** (abstract only; paywalled) A model built on the authors' own framework, with no experiment. The 17-of-18 match is a post hoc fit to a scheme with free choices.
+- **Ideas for us.** None for now. Any genetic-code claim like this would need a null for how often a random two-way split of amino acids matches biosynthesis routes this well (relevant to #19).
+
 ### Structural assemblies for an RNA world
 
 Ren Y, Zhang Z, Chen K, Li M, Xie Y, Bai T, Huang B, Xiao B, et al. (2026). *bioRxiv*. [doi:10.64898/2026.07.01.735769](https://doi.org/10.64898/2026.07.01.735769). `ren-2026-rna-assemblies` · context · abstract only
@@ -2123,6 +2156,17 @@ Unterberger J (2026). *Physical Review E*. [doi:10.1103/wfn7-h898](https://doi.o
 - **Key results.** Networks are small-world; a phase diagram is obtained; autocatalysis and multistationarity appear. No numbers in the abstract.
 - **Limits.** (abstract only) Rules, parameters and phase boundaries not read.
 - **Ideas for us.** For #6/#23: our RAF nulls should include a rule-based random network, not only rewired graphs; this paper is a candidate generator. Check whether code is released before planning.
+
+### Copper derived from deep-sea hydrothermal vent minerals facilitates hydrogen cyanide formation from glycine in alkaline aqueous environment
+
+Yang Z, Li Y, Lu Y, Yamaguchi A, Adachi K, Yamamoto M, Kitadai N, Tagawa S, Hashizume D, Nakamura R (2026). *Communications Chemistry*. [doi:10.1038/s42004-026-02263-5](https://doi.org/10.1038/s42004-026-02263-5). `yang-2026-vent-copper-hcn-from-glycine` · useful · full text · in news · touches #4, #5, #17
+
+- **Question.** Can hydrogen cyanide (HCN) be made in place near deep-sea hydrothermal vents, instead of being supplied from the atmosphere?
+- **Tried.** A copper-rich natural vent chimney mineral oxidises glycine to HCN in alkaline, oxygen-free water, with copper(II) leached from the mineral as the oxidant.
+- **Method and data.** Chimney sample KK805#R02 from the Iheya North Field, Mid-Okinawa Trough (1009.4 m depth), interior only, ground and cleaned in a glovebox. 50 mM glycine with 50 mg chimney powder at pH 12; 13C-labelled glycine to confirm the carbon source; control reactions with CuCl2 and synthetic Cu(Gly)2; two further chimney samples (KK804#R03, KK809#R02) for comparison; ICP-OES and UV-Vis for leached copper.
+- **Key results.** HCN reached 451.42 nM at 25 °C in 24 h; the yield rose threefold at 10 °C. 13C labelling showed the cyanide came from the added glycine. The two other chimney samples, dominated by ZnS, FeS2 and PbS with only minor chalcopyrite, gave no quantifiable cyanide (Welch's ANOVA across the three samples F(2, 3.55) = 389.69, p = 6.94 × 10^-5). The authors conclude the mineral supplies copper(II) as an oxidant rather than acting as a catalyst.
+- **Limits.** One copper-rich chimney worked; two copper-poor ones did not, so the route depends on local copper. pH 12 and 50 mM glycine are high; the authors call yields modest and say they did not simulate high-temperature, high-pressure vent fluid. Free cyanide only (conservative). The sampled vent fluid itself is acidic (pH about 5.0), so the alkaline setting is an analogue, not the sample's own environment. Glycine supply at 50 mM is assumed, not shown.
+- **Ideas for us.** Add a vent-local HCN source row to the step tables of the pathway map (#4/#5), conditional on a copper-bearing sulfide and a glycine supply, with 451 nM per 24 h at pH 12 as the measured ceiling. It sits beside IDEAS #7 (drop comets as a cyanide source): if comets go, this is one of the few non-atmospheric HCN routes left, and its nM output must be compared with the mM levels HCN chemistry usually needs. See IDEAS #13.
 
 ### Carbon Reduction Powered by Natural Electrochemical Gradients under Submarine Hydrothermal Vent Conditions
 

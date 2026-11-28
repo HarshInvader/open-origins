@@ -125,3 +125,13 @@ Ranked by how much each one would tell us per unit of work, and by whether it be
 - **What's untested.** Whether solver disagreement is concentrated at high MA, where a biosignature threshold would sit.
 - **Open data.** COCONUT 2.0 (open); both solvers are open source.
 - **Current study.** None running. A data-quality gate for any future #7/#22 work on large molecules.
+
+## Added 2026-11-28 (paper watch)
+
+### 13. A vent-local cyanide source, scored against what HCN chemistry needs (bears on #4/#5/#17)
+
+- **Source.** Yang et al. 2026, Commun Chem, doi:10.1038/s42004-026-02263-5 (full text). A copper-rich vent chimney mineral turned 50 mM glycine into 451.42 nM HCN in 24 h at pH 12 and 25 °C, three times more at 10 °C. Two copper-poor chimneys made none.
+- **The idea.** Add a conditional HCN row to the pathway-map step tables: "copper-bearing sulfide + glycine supply + alkaline water". Then ask whether any route that needs cyanide closes when this row replaces comet delivery (IDEAS #7) and atmospheric supply is set low.
+- **What's untested.** The gap between nM output and the mM concentrations most cyanosulfidic steps use, and whether a concentrating step (drying, freezing, ferrocyanide salts) can close it at the vent.
+- **Open data.** The paper's tables and SI. No new deposit is needed.
+- **Current study.** The pathway map (#4/#5). It would need a new hashed rule version, not an edit to an existing one.

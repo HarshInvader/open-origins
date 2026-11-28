@@ -610,7 +610,28 @@ def stalled_copies(seed):
     return im
 
 
+def vent_copper(seed):
+    """A chimney with rust copper veins; single beads (glycine) drift out and a few rise as short linked pairs (cyanide)."""
+    im, d, rng = base(seed, water=0.1, rock=0.8)
+    d.polygon([(700, 960), (790, 420), (850, 360), (930, 360), (990, 420), (1080, 960)], fill=BA, outline=INK, width=6)
+    for k in range(6):  # copper veins through the chimney
+        y0 = 460 + k * 80
+        inset = int(90 * (960 - y0) / 540) + 14  # stay inside the sloping walls
+        pts = [(700 + inset + 12, y0), (840, y0 + 30 + rng.randint(-10, 10)), (930, y0 + 10), (1080 - inset - 12, y0 + 30)]
+        d.line(pts, fill=RUST, width=7, joint="curve")
+    for _ in range(9):  # glycine: single beads near the chimney
+        x, y = rng.randint(470, 690), rng.randint(520, 900)
+        circ(d, x, y, 18, fill=SURF, outline=INK, width=4)
+    for x, y in [(1180, 520), (1290, 410), (1210, 300), (1370, 260)]:  # cyanide: short linked pairs drifting up
+        d.line([(x - 26, y), (x + 26, y)], fill=INK, width=5)
+        circ(d, x - 26, y, 15, fill=INK, outline=INK, width=3)
+        circ(d, x + 26, y, 15, fill=SURF, outline=INK, width=4)
+    accent(d, [(1080, 800), (1120, 720), (1135, 640)])  # the path from chimney to the pairs
+    return im
+
+
 DRAW = {
+    "vent-copper-makes-cyanide": vent_copper,
     "early-mistakes-stall-rna-copies": stalled_copies,
     "vent-walls-pass-electrons-not-ions": vent_wall,
     "assembly-theory-collapses-to-dictionary-compression": assembly,

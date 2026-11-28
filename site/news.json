@@ -705,6 +705,23 @@
   },
   "items": [
     {
+      "id": "vent-copper-makes-cyanide",
+      "section": "latest",
+      "date": "2026-11-25",
+      "kind": "Paper",
+      "head": "A copper-rich vent chimney can turn glycine into cyanide in alkaline water, a local source that does not need the atmosphere (Yang, Nakamura et al.)",
+      "who": "Yang Z, Li Y, Lu Y, Yamaguchi A, Adachi K, Yamamoto M, Kitadai N, Tagawa S, Hashizume D, Nakamura R",
+      "venue": "Communications Chemistry",
+      "url": "https://doi.org/10.1038/s42004-026-02263-5",
+      "verified": true,
+      "gist": "Copper leached from a real deep-sea chimney oxidised glycine to hydrogen cyanide at nanomolar levels; chimneys with little copper made none.",
+      "plain": "Hydrogen cyanide is a starting point for many lab recipes that make life's building blocks. Most ideas say it came from the sky: lightning, impacts or upper-air chemistry. That is awkward for the idea that life began at deep-sea vents, far from the air. This team took a piece of a real vent chimney from the seafloor near Okinawa and mixed it with glycine, a simple amino acid, in alkaline, oxygen-free water. Copper from the chimney turned some of the glycine into cyanide. The amounts were tiny, and two chimney pieces with little copper made none. So it is a possible local source, but only where copper is plentiful.",
+      "tech": "Chimney sample KK805#R02 (Iheya North Field, 1009.4 m), interior only, ground under Ar. 50 mM glycine, 50 mg powder, pH 12, anaerobic. Free HCN 451.42 nM at 25 °C after 24 h; about threefold higher at 10 °C. 13C-glycine confirms the carbon source. Copper leaching (ICP-OES, UV-Vis) and HCN from CuCl2 + glycine or synthetic Cu(Gly)2 point to Cu(II) as the oxidant, not mineral catalysis. Two ZnS/FeS2/PbS-dominated chimneys with minor chalcopyrite gave no quantifiable cyanide (Welch's ANOVA F(2, 3.55) = 389.69, p = 6.94e-5). Caveats: one working sample; pH 12 and 50 mM glycine are generous; the sampled vent fluid is about pH 5.0; no high-temperature or high-pressure runs; yields described by the authors as modest.",
+      "borrow": "For the pathway map (tasks #4/#5) we will add a conditional vent HCN row (copper-bearing sulfide, glycine supply, alkaline water) with 451 nM per day as its measured ceiling. Paired with dropping comets as a cyanide source (Anslow et al., already on this page), it lets us test, under a new hashed rule version, whether any cyanide-dependent route still closes at a vent once the nM-to-mM gap is scored (IDEAS #13).",
+      "status": "planned",
+      "topic": "Vents and first cells"
+    },
+    {
       "id": "early-mistakes-stall-rna-copies",
       "section": "latest",
       "date": "2026-11-20",
